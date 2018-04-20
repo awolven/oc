@@ -5,7 +5,7 @@
 %typemap(cin) bool ":int";
 %typemap(cout) bool ":int";
 %typemap(ctype) bool "bool";
-%typemap(out) bool "$result = (bool)$1";
+%typemap(out) bool "$result = (bool)$1;";
 %typemap(lispclass) bool "cl:boolean";
 %typemap(lispclass) float "cl:single-float";
 %typemap(lispclass) double "cl:double-float";

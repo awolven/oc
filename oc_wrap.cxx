@@ -2236,7 +2236,7 @@ EXPORT bool _wrap_TopoDS_Shape_nativeIsSame (TopoDS_Shape *larg1, TopoDS_Shape *
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->IsSame((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2254,7 +2254,7 @@ EXPORT bool _wrap_TopoDS_Shape_IsPartner (TopoDS_Shape *larg1, TopoDS_Shape *lar
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->IsPartner((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2272,7 +2272,7 @@ EXPORT bool _wrap_TopoDS_Shape_nativeIsEqual (TopoDS_Shape *larg1, TopoDS_Shape 
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->IsEqual((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2397,7 +2397,7 @@ EXPORT bool _wrap_TopoDS_Shape_free__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Free();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2428,7 +2428,7 @@ EXPORT bool _wrap_TopoDS_Shape_Locked__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Locked();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2459,7 +2459,7 @@ EXPORT bool _wrap_TopoDS_Shape_Modified__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Modified();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2490,7 +2490,7 @@ EXPORT bool _wrap_TopoDS_Shape_Checked__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Checked();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2521,7 +2521,7 @@ EXPORT bool _wrap_TopoDS_Shape_Orientable__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Orientable();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2552,7 +2552,7 @@ EXPORT bool _wrap_TopoDS_Shape_Closed__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Closed();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2583,7 +2583,7 @@ EXPORT bool _wrap_TopoDS_Shape_Infinite__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Infinite();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2614,7 +2614,7 @@ EXPORT bool _wrap_TopoDS_Shape_Convex__SWIG_0 (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Shape const *)arg1)->Convex();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -2900,7 +2900,7 @@ EXPORT bool _wrap_TopoDS_Iterator_more (TopoDS_Iterator *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopoDS_Iterator const *)arg1)->More();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -3097,7 +3097,7 @@ EXPORT bool _wrap_TopTools_HSequenceOfShape_IsEmpty (TopTools_HSequenceOfShape *
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopTools_HSequenceOfShape const *)arg1)->IsEmpty();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -3444,7 +3444,7 @@ EXPORT bool _wrap_BRep_Tool_degenerated (TopoDS_Edge *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)BRep_Tool::Degenerated((TopoDS_Edge const &)*arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -3460,7 +3460,7 @@ EXPORT bool _wrap_BRep_Tool_SameParameter (TopoDS_Edge *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)BRep_Tool::SameParameter((TopoDS_Edge const &)*arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -3476,7 +3476,7 @@ EXPORT bool _wrap_BRep_Tool_SameRange (TopoDS_Edge *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)BRep_Tool::SameRange((TopoDS_Edge const &)*arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -3496,7 +3496,7 @@ EXPORT bool _wrap_BRep_Tool_hasContinuity (TopoDS_Edge *larg1, TopoDS_Face *larg
   arg3 = larg3;
   try {
     result = (Standard_Boolean)BRep_Tool::HasContinuity((TopoDS_Edge const &)*arg1,(TopoDS_Face const &)*arg2,(TopoDS_Face const &)*arg3);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -3580,7 +3580,7 @@ EXPORT bool _wrap_BRep_Tool_IsClosed (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)BRep_Tool::IsClosed((TopoDS_Shape const &)*arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -4185,7 +4185,7 @@ EXPORT bool _wrap_BRepTools_read__SWIG_0 (TopoDS_Shape *larg1, Standard_CString 
   arg3 = larg3;
   try {
     result = (Standard_Boolean)BRepTools::Read(*arg1,(char const *)arg2,(BRep_Builder const &)*arg3);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -4203,7 +4203,7 @@ EXPORT bool _wrap_BRepTools_write__SWIG_0 (TopoDS_Shape *larg1, Standard_CString
   arg2 = larg2;
   try {
     result = (Standard_Boolean)BRepTools::Write((TopoDS_Shape const &)*arg1,(char const *)arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -4274,7 +4274,7 @@ EXPORT bool _wrap_BRepTools_read__SWIG_1 (TopoDS_Shape *larg1, Standard_IStream 
   arg3 = larg3;
   try {
     result = (Standard_Boolean)BRepTools_read__SWIG_1(*arg1,*arg2,(BRep_Builder const &)*arg3);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -4386,7 +4386,7 @@ EXPORT bool _wrap_BRepTools_WireExplorer_more (BRepTools_WireExplorer *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepTools_WireExplorer const *)arg1)->More();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -4557,7 +4557,7 @@ EXPORT bool _wrap_BRepTools_Quilt_isCopied (BRepTools_Quilt *larg1, TopoDS_Shape
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((BRepTools_Quilt const *)arg1)->IsCopied((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -4639,7 +4639,7 @@ EXPORT bool _wrap_BRepBuilderAPI_Command_isDone (BRepBuilderAPI_Command *larg1) 
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_Command const *)arg1)->IsDone();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -5038,7 +5038,7 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeWire_isDone (BRepBuilderAPI_MakeWire *larg1
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_MakeWire const *)arg1)->IsDone();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -5097,7 +5097,7 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeShell_isDone (BRepBuilderAPI_MakeShell *lar
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_MakeShell const *)arg1)->IsDone();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -5446,7 +5446,7 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeEdge_isDone (BRepBuilderAPI_MakeEdge *larg1
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_MakeEdge const *)arg1)->IsDone();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -5607,7 +5607,7 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeFace_isDone (BRepBuilderAPI_MakeFace *larg1
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_MakeFace const *)arg1)->IsDone();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -5785,7 +5785,7 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeSolid_isDone (BRepBuilderAPI_MakeSolid *lar
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_MakeSolid const *)arg1)->IsDone();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -5803,7 +5803,7 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeSolid_isDeleted (BRepBuilderAPI_MakeSolid *
   arg2 = larg2;
   try {
     result = (Standard_Boolean)(arg1)->IsDeleted((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -6191,7 +6191,7 @@ EXPORT bool _wrap_BRepBuilderAPI_Sewing_isDegenerated (BRepBuilderAPI_Sewing *la
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_Sewing const *)arg1)->IsDegenerated((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -6209,7 +6209,7 @@ EXPORT bool _wrap_BRepBuilderAPI_Sewing_isModified (BRepBuilderAPI_Sewing *larg1
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_Sewing const *)arg1)->IsModified((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -6258,7 +6258,7 @@ EXPORT bool _wrap_BRepBuilderAPI_Sewing_isModifiedSubShape (BRepBuilderAPI_Sewin
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((BRepBuilderAPI_Sewing const *)arg1)->IsModifiedSubShape((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -6568,7 +6568,7 @@ EXPORT bool _wrap_BRepOffsetAPI_NormalProjection_isDone (BRepOffsetAPI_NormalPro
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepOffsetAPI_NormalProjection const *)arg1)->IsDone();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -6656,7 +6656,7 @@ EXPORT bool _wrap_BRepOffsetAPI_NormalProjection_buildWire (BRepOffsetAPI_Normal
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((BRepOffsetAPI_NormalProjection const *)arg1)->BuildWire(*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -7150,7 +7150,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_isDeleted (BRepAlgoAPI_BooleanOpe
   arg2 = larg2;
   try {
     result = (Standard_Boolean)(arg1)->IsDeleted((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -7184,7 +7184,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_hasModified (BRepAlgoAPI_BooleanO
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->HasModified();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -7200,7 +7200,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_hasGenerated (BRepAlgoAPI_Boolean
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->HasGenerated();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -7216,7 +7216,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_hasDeleted (BRepAlgoAPI_BooleanOp
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->HasDeleted();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -7468,7 +7468,7 @@ EXPORT bool _wrap_Poly_Triangulation_hasUVNodes (Poly_Triangulation *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((Poly_Triangulation const *)arg1)->HasUVNodes();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -7828,7 +7828,7 @@ EXPORT bool _wrap_Geom_Curve_isClosed (Handle_Geom_Curve *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_Curve_isClosed(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -7847,7 +7847,7 @@ EXPORT bool _wrap_Geom_Curve_isPeriodic (Handle_Geom_Curve *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_Curve_isPeriodic(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -8059,7 +8059,7 @@ EXPORT bool _wrap_Geom_Surface_isUClosed (Handle_Geom_Surface *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_Surface_isUClosed((Handle_Geom_Surface const *)arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -8078,7 +8078,7 @@ EXPORT bool _wrap_Geom_Surface_isVClosed (Handle_Geom_Surface *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_Surface_isVClosed((Handle_Geom_Surface const *)arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -8213,7 +8213,7 @@ EXPORT bool _wrap_Geom_Surface_isPeriodicU (Handle_Geom_Surface *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_Surface_isPeriodicU(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -8251,7 +8251,7 @@ EXPORT bool _wrap_Geom_Surface_isPeriodicV (Handle_Geom_Surface *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_Surface_isPeriodicV(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -8718,7 +8718,7 @@ EXPORT bool _wrap_Geom_BezierCurve_isPeriodic (Handle_Geom_BezierCurve *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_BezierCurve_isPeriodic(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -8737,7 +8737,7 @@ EXPORT bool _wrap_Geom_BezierCurve_isRational (Handle_Geom_BezierCurve *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_BezierCurve_isRational(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -9212,7 +9212,7 @@ EXPORT bool _wrap_Geom_BSplineCurve_isRational (Handle_Geom_BSplineCurve *larg1)
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_BSplineCurve_isRational((Handle_Geom_BSplineCurve const *)arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -10541,7 +10541,7 @@ EXPORT bool _wrap_Geom_BezierSurface_isRationalU (Handle_Geom_BezierSurface *lar
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_BezierSurface_isRationalU(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -10560,7 +10560,7 @@ EXPORT bool _wrap_Geom_BezierSurface_isRationalV (Handle_Geom_BezierSurface *lar
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_BezierSurface_isRationalV(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -10733,7 +10733,7 @@ EXPORT bool _wrap_Geom_BSplineSurface_isRationalU (Handle_Geom_BSplineSurface *l
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_BSplineSurface_isRationalU(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -10752,7 +10752,7 @@ EXPORT bool _wrap_Geom_BSplineSurface_isRationalV (Handle_Geom_BSplineSurface *l
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom_BSplineSurface_isRationalV(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -12138,7 +12138,7 @@ EXPORT bool _wrap_Geom2d_Curve_isClosed (Handle_Geom2d_Curve *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom2d_Curve_isClosed(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -12157,7 +12157,7 @@ EXPORT bool _wrap_Geom2d_Curve_isPeriodic (Handle_Geom2d_Curve *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Geom2d_Curve_isPeriodic(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -13629,7 +13629,7 @@ EXPORT bool _wrap_Bisector_Curve_isExtendAtStart (Handle_Bisector_Curve *larg1) 
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Bisector_Curve_isExtendAtStart(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -13648,7 +13648,7 @@ EXPORT bool _wrap_Bisector_Curve_isExtendAtEnd (Handle_Bisector_Curve *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)Handle_Bisector_Curve_isExtendAtEnd(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -14115,7 +14115,7 @@ EXPORT bool _wrap_BRepCheck_Analyzer_isValid (BRepCheck_Analyzer *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepCheck_Analyzer const *)arg1)->IsValid();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -14718,7 +14718,7 @@ EXPORT bool _wrap_IGESControl_Writer_write (IGESControl_Writer *larg1, Standard_
   arg2 = larg2;
   try {
     result = (Standard_Boolean)(arg1)->Write(arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -14736,7 +14736,7 @@ EXPORT bool _wrap_IGESControl_Writer_addShape (IGESControl_Writer *larg1, TopoDS
   arg2 = larg2;
   try {
     result = (Standard_Boolean)(arg1)->AddShape((TopoDS_Shape const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -14928,7 +14928,7 @@ EXPORT bool _wrap_ShapeFix_Wireframe_fixWireGaps (ShapeFix_Wireframe *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)(arg1)->FixWireGaps();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -14944,7 +14944,7 @@ EXPORT bool _wrap_ShapeFix_Wireframe_fixSmallEdges (ShapeFix_Wireframe *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)(arg1)->FixSmallEdges();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15028,7 +15028,7 @@ EXPORT bool _wrap_ShapeFix_Wireframe_getDropSmallEdges (ShapeFix_Wireframe *larg
   arg1 = larg1;
   try {
     result = (bool)ShapeFix_Wireframe_getDropSmallEdges(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15091,7 +15091,7 @@ EXPORT bool _wrap_ShapeFix_Shape_perform__SWIG_0 (ShapeFix_Shape *larg1, Handle_
   arg2 = larg2;
   try {
     result = (Standard_Boolean)(arg1)->Perform((Handle_Message_ProgressIndicator const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15107,7 +15107,7 @@ EXPORT bool _wrap_ShapeFix_Shape_perform__SWIG_1 (ShapeFix_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)(arg1)->Perform();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15249,7 +15249,7 @@ EXPORT bool _wrap_ShapeAnalysis_Edge_isClosed3d (ShapeAnalysis_Edge *larg1, Topo
   arg2 = larg2;
   try {
     result = (Standard_Boolean)((ShapeAnalysis_Edge const *)arg1)->IsClosed3d((TopoDS_Edge const &)*arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15269,7 +15269,7 @@ EXPORT bool _wrap_ShapeAnalysis_Edge_hasPCurve (ShapeAnalysis_Edge *larg1, TopoD
   arg3 = larg3;
   try {
     result = (Standard_Boolean)((ShapeAnalysis_Edge const *)arg1)->HasPCurve((TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15289,7 +15289,7 @@ EXPORT bool _wrap_ShapeAnalysis_Edge_IsSeam (ShapeAnalysis_Edge *larg1, TopoDS_E
   arg3 = larg3;
   try {
     result = (Standard_Boolean)((ShapeAnalysis_Edge const *)arg1)->IsSeam((TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15336,7 +15336,7 @@ EXPORT bool _wrap_ShapeAnalysis_Surface_hasSingularities (ShapeAnalysis_Surface 
   arg2 = larg2;
   try {
     result = (Standard_Boolean)(arg1)->HasSingularities(arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15374,7 +15374,7 @@ EXPORT bool _wrap_ShapeAnalysis_Surface_isDegenerated (ShapeAnalysis_Surface *la
   arg3 = larg3;
   try {
     result = (Standard_Boolean)(arg1)->IsDegenerated((gp_Pnt const &)*arg2,arg3);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15549,7 +15549,7 @@ EXPORT bool _wrap_ShapeUpgrade_RemoveInternalWires_perform (ShapeUpgrade_RemoveI
   arg1 = larg1;
   try {
     result = (Standard_Boolean)(arg1)->Perform();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15639,7 +15639,7 @@ EXPORT bool _wrap_ShapeUpgrade_RemoveInternalWires_getRemoveFaceMode (ShapeUpgra
   arg1 = larg1;
   try {
     result = (Standard_Boolean)ShapeUpgrade_RemoveInternalWires_getRemoveFaceMode(arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15686,7 +15686,7 @@ EXPORT bool _wrap_ShapeUpgrade_ShapeDivide_perform__SWIG_0 (ShapeUpgrade_ShapeDi
   arg2 = (bool)larg2;
   try {
     result = (Standard_Boolean)(arg1)->Perform(arg2);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -15702,7 +15702,7 @@ EXPORT bool _wrap_ShapeUpgrade_ShapeDivide_perform__SWIG_1 (ShapeUpgrade_ShapeDi
   arg1 = larg1;
   try {
     result = (Standard_Boolean)(arg1)->Perform();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -16255,7 +16255,7 @@ EXPORT bool _wrap_TopLoc_Location_isIdentity (TopLoc_Location *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)(arg1)->IsIdentity();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -16340,7 +16340,7 @@ EXPORT bool _wrap_TopExp_commonVertex (TopoDS_Edge *larg1, TopoDS_Edge *larg2, T
   arg3 = larg3;
   try {
     result = (Standard_Boolean)TopExp::CommonVertex((TopoDS_Edge const &)*arg1,(TopoDS_Edge const &)*arg2,*arg3);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -16458,7 +16458,7 @@ EXPORT bool _wrap_TopExp_Explorer_more (TopExp_Explorer *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((TopExp_Explorer const *)arg1)->More();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -16531,7 +16531,7 @@ EXPORT bool _wrap_Bnd_Box_isVoid (Bnd_Box *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsVoid();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -17397,7 +17397,7 @@ EXPORT bool _wrap_BRepMesh_IncrementalMesh_isModified (BRepMesh_IncrementalMesh 
   arg1 = larg1;
   try {
     result = (Standard_Boolean)((BRepMesh_IncrementalMesh const *)arg1)->IsModified();
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -17578,7 +17578,7 @@ EXPORT bool _wrap_BRepAlgo_isValid (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)BRepAlgo::IsValid((TopoDS_Shape const &)*arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
@@ -17594,7 +17594,7 @@ EXPORT bool _wrap_BRepAlgo_isTopologicallyValid (TopoDS_Shape *larg1) {
   arg1 = larg1;
   try {
     result = (Standard_Boolean)BRepAlgo::IsTopologicallyValid((TopoDS_Shape const &)*arg1);
-    lresult = (bool)result
+    lresult = (bool)result;
     return lresult;
   } catch (...) {
     return (bool)0;
