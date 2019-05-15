@@ -1,5 +1,8 @@
 (in-package :cl-user)
 
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (ql:quickload :cffi))
+
 #+windows
 (defparameter *foreign-libraries*
   (list
@@ -94,7 +97,7 @@
 
 #+darwin
 (defparameter *lib-path*
-  "../Lib/")
+  "~/occt-build/mac64/clang/libd/" #+ORIG"../Lib/")
 
 (defparameter *lib-extension*
   #+windows ".dll"

@@ -13,6 +13,57 @@
 (defclass ff-pointer-mixin ()
   ((ff-pointer :initarg :ff-pointer :accessor ff-pointer)))
 
+(defmethod oc::ff-pointer ((instance xy))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance vec2d))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance pnt2d))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance xyz))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance pnt))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance dir))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance vec))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance ax1))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance ax2))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance ax3))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance lin))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance circ))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance cone))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance cylinder))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance elips))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance mat))
+  (ptr instance))
+
+(defmethod oc::ff-pointer ((instance trsf))
+  (ptr instance))
+
 (defun ff-pointer-finalize (object deleter)
   #+sbcl
   (let ((pointer (ff-pointer object)))
@@ -21,170 +72,18 @@
 				(values))
 		     :dont-save t)))
 
-(defclass oc:gp_Pnt (ff-pointer-mixin) ())
-(defclass gp_XYZ (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj gp_Pnt) &rest initargs
-				       &key Coord Xp Yp Zp &allow-other-keys)
-  (declare (ignore initargs))
-  (setf (ff-pointer obj)
-	(cond ((and Xp Yp Zp Coord) (error "Ambiguous arguments to overloaded constructor."))
-	      ((and Xp Yp Zp)
-	       (assert (typep Xp 'double-float))
-	       (assert (typep Yp 'double-float))
-	       (assert (typep Zp 'double-float))
-	       (_wrap_new_gp_Pnt__SWIG_2 Xp Yp Zp))
-	      (Coord (assert (typep Coord 'gp_XYZ))
-		     (_wrap_new_gp_Pnt__SWIG_1 (ff-pointer Coord)))
-	      (t (_wrap_new_gp_Pnt__SWIG_0))))
-  (ff-pointer-finalize obj #'_wrap_delete_gp_Pnt)
-  (values))
-
-(defclass oc:gp_Pnt2d (ff-pointer-mixin) ())
-
-(defclass oc:gp_Dir2d (ff-pointer-mixin) ())
-
-(defclass oc:gp_Vec2d (ff-pointer-mixin) ())
-
-(defclass oc:gp_Ax2d (ff-pointer-mixin) ())
-
-(defclass oc:gp_Ax22d (ff-pointer-mixin) ())
-
-(defclass oc:gp_Pln (ff-pointer-mixin) ())
-
-(defclass oc:gp_Vec (ff-pointer-mixin) ())
-
-(defclass oc:gp_Dir (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj gp_Dir) &rest initargs
-				       &key V Coord Xv Yv Zv &allow-other-keys)
-  (declare (ignore initargs))
-  (setf (ff-pointer obj)
-	(cond ((or (and V Coord)
-		   (and V Xv Yv Zv)
-		   (and Coord Xv Yv Zv))
-	       (error "Ambiguous arguments to overloaded constructor."))
-	      ((and Xv Yv Zv)
-	       (assert (typep Xv 'double-float))
-	       (assert (typep Yv 'double-float))
-	       (assert (typep Zv 'double-float))
-	       (_wrap_new_gp_Dir__SWIG_3 Xv Yv Zv))
-	      (Coord (assert (typep Coord 'gp_XYZ))
-		     (_wrap_new_gp_Dir__SWIG_2 (ff-pointer Coord)))
-	      (V (assert (typep V 'gp_Vec))
-		 (_wrap_new_gp_Dir__SWIG_1 (ff-pointer V)))
-	      (t (_wrap_new_gp_Dir__SWIG_0))))
-  (ff-pointer-finalize obj #'_wrap_delete_gp_Dir)
-  (values))
-
-(defclass oc:gp_Ax3 (ff-pointer-mixin) ())
-
-(defclass oc:gp_Ax2 (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj gp_Ax2) &rest initargs &key P N Vx &allow-other-keys)
-  (declare (ignore initargs))
-  (setf (ff-pointer obj)
-	(cond ((and P N Vx)
-	       (assert (typep P 'gp_Pnt))
-	       (assert (typep N 'gp_Dir))
-	       (assert (typep Vx 'gp_Dir))
-	       (_wrap_new_gp_Ax2__SWIG_1 (ff-pointer P) (ff-pointer N) (ff-pointer Vx)))
-	      (t (_wrap_new_gp_Ax2__SWIG_0))))
-  (ff-pointer-finalize obj #'_wrap_delete_gp_Ax2)
-  (values))	 
-
-(defclass oc:gp_Ax1 (ff-pointer-mixin) ())
-
-(defclass oc:gp_Trsf (ff-pointer-mixin) ())
-
-(defclass oc:gp_Trsf2d (ff-pointer-mixin) ())
-
-(defmethod oc:setRotation ((self oc:gp_Trsf) &rest args)
+#+NOTYET
+(defmethod oc:setRotation ((self gp:trsf) &rest args)
   (destructuring-bind (A1 Ang) args
     (oc::_wrap_gp_Trsf_SetRotation (ff-pointer self) (ff-pointer A1) Ang)))
-
-(defmethod oc:setTranslation ((self oc:gp_Trsf) &rest args)
+#+NOTYET
+(defmethod oc:setTranslation ((self gp:trsf) &rest args)
   (destructuring-bind (V) args
     (oc::_wrap_gp_Trsf_SetTranslation (ff-pointer self) (ff-pointer V))))
-
-(defmethod oc:setValues ((self oc:gp_Trsf) &rest args)
+#+NOTYET
+(defmethod oc:setValues ((self gp:trsf) &rest args)
   (destructuring-bind (a11 a12 a13 a14 a21 a22 a23 a24 a31 a32 a33 a34) args
     (oc::_wrap_gp_Trsf_SetValues (ff-pointer self) a11 a12 a13 a14 a21 a22 a23 a24 a31 a32 a33 a34)))
-
-(defclass oc:gp_Circ (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj oc:gp_Circ) &rest initargs &key axis radius &allow-other-keys)
-  (declare (ignore initargs))
-  (assert (typep axis 'oc:gp_Ax2))
-  (assert (typep radius 'double-float))
-  (setf (ff-pointer obj) (oc::_wrap_new_gp_Circ (ff-pointer axis) radius))
-  (ff-pointer-finalize obj #'oc::_wrap_delete_gp_Circ)
-  (values))
-
-(defclass oc:gp_Cone (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj oc:gp_Cone) &rest initargs &key A3 Angle Radius &allow-other-keys)
-  (declare (ignore initargs))
-  (assert (typep A3 'oc:gp_Ax3))
-  (assert (typep Angle 'double-float))
-  (assert (typep Radius 'double-float))
-  (setf (ff-pointer obj) (oc::_wrap_new_gp_Cone (ff-pointer A3) Angle Radius))
-  (ff-pointer-finalize obj #'oc::_wrap_delete_gp_Cone)
-  (values))
-
-(defclass oc:gp_Cylinder (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj oc:gp_Cylinder) &rest initargs &key A3 Radius &allow-other-keys)
-  (declare (ignore initargs))
-  (assert (typep A3 'oc:gp_Ax3))
-  (assert (typep Radius 'double-float))
-  (setf (ff-pointer obj) (oc::_wrap_new_gp_Cylinder (ff-pointer A3) Radius))
-  (ff-pointer-finalize obj #'oc::_wrap_delete_gp_Cylinder)
-  (values))
-
-(defclass oc:gp_Parab (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj oc:gp_Parab) &rest initargs &key A2 Focal D F &allow-other-keys)
-  (declare (ignore initargs))
-  (cond ((and A2 Focal D F) (error "Ambiguous arguments to overloaded constructor."))
-	 ((and A2 Focal)
-	  (assert (typep A2 'oc:gp_Ax2))
-	  (assert (typep Focal 'double-float))
-	  (setf (ff-pointer obj)
-		(oc::_wrap_new_gp_Parab__SWIG_0 (ff-pointer A2) Focal))
-	  (ff-pointer-finalize obj #'oc::_wrap_delete_gp_Parab))
-	 ((and D F)
-	  (assert (typep D 'oc:gp_Ax1))
-	  (assert (typep F 'oc:gp_Pnt))
-	  (setf (ff-pointer obj)
-		(oc::_wrap_new_gp_Parab__SWIG_1 (ff-pointer D) (ff-pointer F)))
-	  (ff-pointer-finalize obj #'oc::_wrap_delete_gp_Parab))
-	 ((or (null A2) (null D) (null Focal) (null F)) (error "Insufficient arguments to constructor.")))
-  (values))
-
-(defclass oc:gp_Hypr (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj oc:gp_Hypr) &rest initargs &key A2 MajorRadius MinorRadius
-									 &allow-other-keys)
-  (declare (ignore initargs))
-  (assert (typep A2 'oc:gp_Ax2))
-  (assert (typep MajorRadius 'double-float))
-  (assert (typep MinorRadius 'double-float))
-  (setf (ff-pointer obj) (oc::_wrap_new_gp_Hypr A2 MajorRadius MinorRadius))
-  (ff-pointer-finalize obj #'oc::_wrap_delete_gp_Hypr)
-  (values))
-
-(defclass oc:gp_Torus (ff-pointer-mixin) ())
-
-(defmethod initialize-instance :after ((obj oc:gp_Torus) &rest initargs &key A3 MajorRadius MinorRadius
-									  &allow-other-keys)
-  (declare (ignore initargs))
-  (assert (typep A3 'oc:gp_Ax3))
-  (assert (typep MajorRadius 'double-float))
-  (assert (typep MinorRadius 'double-float))
-  (setf (ff-pointer obj) (oc::_wrap_new_gp_Torus A3 MajorRadius MinorRadius))
-  (ff-pointer-finalize obj #'oc::_wrap_delete_gp_Torus)
-  (values))
 
 (defclass Geom_Surface (ff-pointer-mixin) ())
 
@@ -237,18 +136,21 @@
 
 (defmacro with-topods-shape (&body ff-call)
   `(let* ((ff-shape ,@ff-call)
-	  (shape-class (case (_wrap_TopoDS_Shape_ShapeType ff-shape)
-			 (:TopAbs_COMPOUND (load-time-value (find-class 'TopoDS_Compound)))
-			 (:TopAbs_COMPSOLID (load-time-value (find-class 'TopoDS_Compsolid)))
-			 (:TopAbs_SOLID (load-time-value (find-class 'TopoDS_Solid)))
-			 (:TopAbs_SHELL (load-time-value (find-class 'TopoDS_Shell)))
-			 (:TopAbs_FACE (load-time-value (find-class 'TopoDS_Face)))
-			 (:TopAbs_WIRE (load-time-value (find-class 'TopoDS_Wire)))
-			 (:TopAbs_EDGE (load-time-value (find-class 'TopoDS_Edge)))
-			 (:TopAbs_VERTEX (load-time-value (find-class 'TopoDS_Vertex)))
-			 (:TopAbs_SHAPE (load-time-value (find-class 'TopoDS_Shape)))))
-	  (shape (allocate-instance shape-class)))
-     (setf (ff-pointer shape) ff-shape)
+	  (shape-class
+	   (if (null-pointer-p ff-shape)
+	       nil
+	       (case (_wrap_TopoDS_Shape_ShapeType ff-shape)
+		 (:TopAbs_COMPOUND (load-time-value (find-class 'TopoDS_Compound)))
+		 (:TopAbs_COMPSOLID (load-time-value (find-class 'TopoDS_Compsolid)))
+		 (:TopAbs_SOLID (load-time-value (find-class 'TopoDS_Solid)))
+		 (:TopAbs_SHELL (load-time-value (find-class 'TopoDS_Shell)))
+		 (:TopAbs_FACE (load-time-value (find-class 'TopoDS_Face)))
+		 (:TopAbs_WIRE (load-time-value (find-class 'TopoDS_Wire)))
+		 (:TopAbs_EDGE (load-time-value (find-class 'TopoDS_Edge)))
+		 (:TopAbs_VERTEX (load-time-value (find-class 'TopoDS_Vertex)))
+		 (:TopAbs_SHAPE (load-time-value (find-class 'TopoDS_Shape))))))
+	  (shape (when shape-class (allocate-instance shape-class))))
+     (when shape-class (setf (ff-pointer shape) ff-shape))
      shape))
 
 (defmethod shape-reversed ((self TopoDS_Shape))
@@ -257,12 +159,13 @@
 (defmethod shape ((self BRepBuilderAPI_MakeShape))
   (with-topods-shape (_wrap_BRepBuilderAPI_MakeShape_shape (ff-pointer self))))
 
+
 (defclass BRepPrimAPI_MakeCone (BRepBuilderAPI_MakeShape) ())
 
 (defmethod initialize-instance :after ((obj BRepPrimAPI_MakeCone) &rest initargs
 				       &key axes baseRadius topRadius height angle &allow-other-keys)
   (declare (ignore initargs))
-  (assert (typep axes 'oc:gp_Ax2))
+  (assert (typep axes 'gp:ax2))
   (assert (typep baseRadius 'double-float))
   (assert (typep topRadius 'double-float))
   (assert (typep height 'double-float))
@@ -279,14 +182,14 @@
   (cond ((and center radius axis R angle1 angle2 angle3)
 	 (error "Ambiguous arguments to overloaded constructor."))
 	((and center radius)
-	 (assert (typep center 'gp_Pnt))
+	 (assert (typep center 'gp:pnt))
 	 (assert (typep radius 'double-float))
 	 (setf (ff-pointer obj)
 	       (_wrap_new_BRepPrimAPI_MakeSphere__SWIG_0 (ff-pointer center) radius))
 	 (ff-pointer-finalize obj #'_wrap_delete_BRepPrimAPI_MakeSphere)
 	 (values))
 	((and axis R angle1 angle2 angle3)
-	 (assert (typep axis 'gp_Ax2))
+	 (assert (typep axis 'gp:ax2))
 	 (assert (typep R 'double-float))
 	 (assert (typep angle1 'double-float))
 	 (assert (typep angle2 'double-float))
@@ -295,6 +198,32 @@
 	 (ff-pointer-finalize obj #'_wrap_delete_BRepPrimAPI_MakeSphere)
 	 (values))
 	(t (error "Insufficient arguments to constructor."))))
+
+(defclass BRepPrimAPI_MakeSweep (BRepBuilderAPI_MakeShape) ())
+
+(defclass BRepPrimAPI_MakePrism (BRepPrimAPI_MakeSweep) ())
+
+(defmethod initialize-instance :after ((object BRepPrimAPI_MakePrism) &rest initargs
+				       &key baseShape extrudeDirection (Copy t) (Canonize t) &allow-other-keys)
+  (let ((pointer
+	 (cond ((and Canonize Copy extrudeDirection baseShape)
+		(_wrap_new_BRepPrimAPI_MakePrism__SWIG_0 (ff-pointer baseShape)
+							 (ptr extrudeDirection)
+							 (if Copy (if (eq Copy 0) 0 1)  0)
+							 (if Canonize (if (eq Canonize 0) 0 1) 0)))
+	       ((and Copy extrudeDirection baseShape)
+		(_wrap_new_BRepPrimAPI_MakePrism__SWIG_1 (ff-pointer baseShape)
+							 (ptr extrudeDirection)
+							 (if Copy (if (eq Copy 0) 0 1)  0)))
+	       ((and extrudeDirection baseShape)
+		(_wrap_new_BRepPrimAPI_MakePrism__SWIG_2 (ff-pointer baseShape) (ptr extrudeDirection)))
+	       (t (error "Invalid arguments for BRepPrimAPI_MakePrism constructor: ~S." initargs)))))
+    (setf (ff-pointer object) pointer)
+    (ff-pointer-finalize object #'_wrap_delete_BRepPrimAPI_MakePrism)
+    (values)))
+							 
+							 
+	   
 
 (defclass TopoDS_Iterator (ff-pointer-mixin) ())
 
@@ -320,7 +249,8 @@
   (values))
 
 (defmethod more-p ((self TopoDS_Iterator))
-  (_wrap_TopoDS_Iterator_More (ff-pointer self)))
+  (if (zerop (_wrap_TopoDS_Iterator_More (ff-pointer self)))
+      nil t))
 
 (defmethod next ((self TopoDS_Iterator))
   (_wrap_TopoDS_Iterator_Next (ff-pointer self)))
@@ -333,7 +263,7 @@
 (defmethod initialize-instance :after ((obj BRepBuilderAPI_MakeVertex) &rest initargs
 				      &key P &allow-other-keys)
   (declare (ignore initargs))
-  (assert (typep P 'gp_Pnt))
+  (assert (typep P 'gp:pnt))
   (setf (ff-pointer obj)
 	(_wrap_new_BRepBuilderAPI_MakeVertex (ff-pointer P)))
   (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_MakeVertex)
@@ -376,6 +306,8 @@
 
 (defclass Geom2d_Curve (Geom2d_Geometry) ())
 
+(defclass BRepBuilderAPI_ModifyShape (BRepBuilderAPI_MakeShape) ())
+
 (defclass BRepBuilderAPI_MakeWire (BRepBuilderAPI_MakeShape) ())
 
 (defmethod add ((self BRepBuilderAPI_MakeWire) (E TopoDS_Edge))
@@ -413,26 +345,26 @@
 		      (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14 (ff-pointer L) param1 param2))
 		     (t (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1 (ff-pointer L)))))
 
-	      ((typep L 'gp_Parab)
+	      ((typep L 'gp:parab)
 	       (cond ((and (typep V1 'TopoDS_Vertex) (typep V2 'TopoDS_Vertex))
 		      (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11 (ff-pointer L) (ff-pointer V1) (ff-pointer V2)))
-		     ((and (typep POINT1 'gp_Pnt) (typep POINT2 'gp_Pnt))
+		     ((and (typep POINT1 'gp:pnt) (typep POINT2 'gp:pnt))
 		      (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10
 		       (ff-pointer L) (ff-pointer POINT1) (ff-pointer POINT2)))
 		     ((and (typep param1 'double-float) (typep param2 'double-float))
 		      (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9 (ff-pointer L) param1 param2))
 		     (t (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8 (ff-pointer L)))))
 	 
-	      ((typep L 'gp_Circ)
+	      ((typep L 'gp:circ)
 	       (cond ((and (typep V1 'TopoDS_Vertex) (typep V2 'TopoDS_Vertex))
 		      (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7 (ff-pointer L) (ff-pointer V1) (ff-pointer V2)))
-		     ((and (typep POINT1 'gp_Pnt) (typep POINT2 'gp_Pnt))
+		     ((and (typep POINT1 'gp:pnt) (typep POINT2 'gp:pnt))
 		      (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6 (ff-pointer L) (ff-pointer POINT1) (ff-pointer POINT2)))
 		     ((and (typep param1 'double-float) (typep param2 'double-float))
 		      (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5 (ff-pointer L) param1 param2))
 		     (t (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4 (ff-pointer L)))))
 	 
-	      ((and (typep POINT1 'gp_Pnt) (typep POINT2 'gp_Pnt))
+	      ((and (typep POINT1 'gp:pnt) (typep POINT2 'gp:pnt))
 	       (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3 (ff-pointer POINT1) (ff-pointer POINT2)))
 	
 	      ((and (typep V1 'TopoDS_Vertex) (typep V2 'TopoDS_Vertex))
@@ -489,7 +421,8 @@
       (_wrap_TopExp_Explorer_init__SWIG_1 (ff-pointer self) (ff-pointer S) ToFind)))
 
 (defmethod more-p ((self TopExp_Explorer))
-  (_wrap_TopExp_Explorer_more (ff-pointer self)))
+  (if (zerop (_wrap_TopExp_Explorer_more (ff-pointer self)))
+      nil t))  
 
 (defmethod current ((self TopExp_Explorer))
   (with-topods-shape (_wrap_TopExp_Explorer_Current (ff-pointer self))))
@@ -577,9 +510,7 @@
     array))
 
 (defmethod get-value ((self TColgp_Array1OfPnt) (index integer))
-  (let ((p (allocate-instance (load-time-value (find-class 'gp_Pnt)))))
-    (setf (ff-pointer p) (_wrap_TColgp_Array1OfPnt_value (ff-pointer self) index))
-    p))
+  (gp::make-pnt :ptr (_wrap_TColgp_Array1OfPnt_value (ff-pointer self) index)))
 
 (defmethod get-lower ((self TColgp_Array1OfPnt))
   (_wrap_TColgp_Array1OfPnt_Lower (ff-pointer self)))
@@ -607,4 +538,183 @@
   (assert (>= 3 index 1))
   (_wrap_Poly_Triangle_value (ff-pointer self) index))
 
+(defclass GC_MakeArcOfCircle (ff-pointer-mixin) ())
 
+(defmethod initialize-instance :after ((obj GC_MakeArcOfCircle) &rest initargs
+				       &key P1 P2 Circ Sense P3 &allow-other-keys)
+  (declare (ignore initargs))
+  (assert (typep P1 'pnt))
+  (assert (typep P2 'pnt))
+  (setf (ff-pointer obj)
+	(cond ((and Circ Sense)
+	       (assert (typep Circ 'circ))
+	       (assert (typep Sense 'integer))
+	       (_wrap_new_GC_MakeArcOfCircle__SWIG_1 Circ (ptr P1) (ptr P2) Sense))
+	      (P3
+	       (assert (typep P3 'pnt))
+	       (_wrap_new_GC_MakeArcOfCircle__SWIG_0 (ptr P1) (ptr P2) (ptr P3)))
+	      (t (error "Insufficient arguments to constructor."))))
+  (ff-pointer-finalize obj #'_wrap_delete_GC_MakeArcOfCircle)
+  (values))
+
+(defclass Geom_Curve (ff-pointer-mixin) ())
+
+(defclass Geom_TrimmedCurve (Geom_Curve) ())
+
+(defmethod value ((self GC_MakeArcOfCircle))
+  (let ((curve (allocate-instance (load-time-value (find-class 'Geom_TrimmedCurve)))))
+    (setf (ff-pointer curve) (_wrap_GC_MakeArcOfCircle_Value (ff-pointer self)))
+    curve))
+
+(defclass GC_MakeSegment (ff-pointer-mixin) ())
+
+(defmethod initialize-instance :after ((obj GC_MakeSegment) &rest initargs
+				       &key P1 P2 &allow-other-keys)
+  (declare (ignore initargs))
+  (assert (typep P1 'pnt))
+  (assert (typep P2 'pnt))
+  (setf (ff-pointer obj) (_wrap_new_GC_MakeSegment__SWIG_0 (ptr p1) (ptr p2)))
+  (ff-pointer-finalize obj #'_wrap_delete_GC_MakeSegment)
+  (values))
+
+(defmethod value ((self GC_MakeSegment))
+  (let ((curve (allocate-instance (load-time-value (find-class 'Geom_TrimmedCurve)))))
+    (setf (ff-pointer curve) (_wrap_GC_MakeSegment_Value (ff-pointer self)))
+    curve))
+
+#+NIL
+(defmethod initialize-instance :after ((obj BRepBuilderAPI_MakeEdge) &rest initargs
+				&key L V1 V2 p1 p2 POINT1 POINT2 S &allow-other-keys)
+  (let ((pointer
+	 (cond ((and L S p2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15 (ff-pointer L)
+							    (ff-pointer S )
+							    p1 p2))
+	       ((and L p1 p2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14 (ff-pointer L) p1 p2))
+	       ((and (typep L 'Geom_Curve) V1 V2 p1 p2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13 (ff-pointer L)
+							    (ff-pointer V1)
+							    (ff-pointer V2)
+							    p1 p2))
+	       ((and (typep L 'Geom_Curve) V1 V2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12 (ff-pointer L)
+							    (ff-pointer V1)
+							    (ff-pointer V2)))
+	       ((and (typep L 'gp:parab) V1 V2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11 (ptr L)
+							    (ff-pointer V1)
+							    (ff-pointer V2)))
+	       ((and (typep L 'gp:parab) POINT1 POINT2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10 (ptr L)
+							    (ptr POINT1) (ptr POINT2)))
+	       ((and (typep L 'gp:parab) p1 p2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9 (ptr L) p1 p2))
+	       ((typep L 'gp:parab)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8 (ptr L)))
+	       ((and (typep L 'gp:circ) V1 V2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7 (ptr L) (ff-pointer V1) (ff-pointer V2)))
+	       ((and (typep L 'gp:circ) POINT1 POINT2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6 (ptr L) (ptr POINT1) (ptr POINT2)))
+	       ((and (typep L 'gp:circ) p1 p2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5 (ptr L) p1 p2))
+	       ((typep L 'gp:circ)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4 (ptr L)))
+	       ((and POINT1 POINT2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3 (ptr POINT1) (ptr POINT2)))
+	       ((and V1 V2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2 (ff-pointer V1) (ff-pointer V2)))
+	       (L (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1 (ff-pointer L)))
+	       ((and (null L) (null p1) (null p2)
+		     (null V1) (null V2)
+		     (null POINT1) (null POINT2)
+		     (null S))
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_0))
+	       (t (error "Invalid arguments to constructor: ~S" initargs)))))
+    (setf (ff-pointer obj) pointer)
+    (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_MakeEdge)
+    (values)))
+
+(defmethod shape ((self BRepBuilderAPI_MakeShape))
+  (with-topods-shape (_wrap_BRepBuilderAPI_MakeShape_Shape (ff-pointer self))))
+
+#+NIL
+(defmethod initialize-instance :after ((obj BRepBuilderAPI_MakeWire) &rest initargs
+				&key E E1 E2 E3 E4 W)
+  (let ((pointer
+	 (cond ((and W E)
+		(_wrap_new_BRepBuilderAPI_MakeWire__SWIG_6 (ff-pointer W) (ff-pointer E)))
+	       (W
+		(_wrap_new_BRepBuilderAPI_MakeWire__SWIG_5 (ff-pointer W)))
+	       ((and E1 E2 E3 E4)
+		(_wrap_new_BRepBuilderAPI_MakeWire__SWIG_4 (ff-pointer E1) (ff-pointer E2) (ff-pointer E3) (ff-pointer E4)))
+	       ((and E1 E2 E3)
+		(_wrap_new_BRepBuilderAPI_MakeWire__SWIG_3 (ff-pointer E1) (ff-pointer E2) (ff-pointer E3)))
+	       ((and E1 E2)
+		(_wrap_new_BRepBuilderAPI_MakeWire__SWIG_2 (ff-pointer E1) (ff-pointer E2)))
+		(E (_wrap_new_BRepBuilderAPI_MakeWire__SWIG_1 (ff-pointer E)))
+		((and (null E1) (null E2) (null E3) (null E4))
+		 (_wrap_new_BRepBuilderAPI_MakeWire__SWIG_0))
+		(t (error "Invalid arguments to constructor: ~S" initargs)))))
+    (setf (ff-pointer obj) pointer)
+    (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_MakeWire)
+    (values)))
+
+(defmethod set-mirror ((trsf gp:trsf) (axis gp:ax1))
+  (_wrap_gp_Trsf_SetMirror (ptr trsf) (ptr axis))
+  (values))
+
+(defclass BRepBuilderAPI_Transform (BRepBuilderAPI_ModifyShape) ())
+
+(defmethod initialize-instance :after ((obj BRepBuilderAPI_Transform) &rest initargs
+				&key Trsf S Copy &allow-other-keys)
+  (let ((pointer
+	 (cond ((and S Trsf Copy)
+		(_wrap_new_BRepBuilderAPI_Transform__SWIG_1 (ff-pointer S) (ptr Trsf) (if Copy (if (eq Copy 0) 0 1) 0)))
+	       ((and S Trsf)
+		(_wrap_new_BRepBuilderAPI_Transform__SWIG_2 (ff-pointer S) (ptr Trsf)))
+	       (S (_wrap_new_BrepBuilderAPI_Transform__SWIG_0 (ptr Trsf)))
+	       (t (error "Invalid arguments to constructor ~S" initargs)))))
+    (setf (ff-pointer obj) pointer)
+    (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_Transform)
+    (values)))
+
+(defclass BRepBuilderAPI_MakeFace (BRepBuilderAPI_MakeShape) ())
+
+(defmethod initialize-instance :after ((object BRepBuilderAPI_MakeFace) &rest initargs
+				       &key W OnlyPlane F S Inside Umin Umax Vmin Vmax tolDegen)
+  (let ((pointer
+	 (cond ((and S Umin Umax Vmin Vmax tolDegen)
+		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_5 (ff-pointer S) Umin Umax Vmin Vmax tolDegen))
+	       ((and S W Inside)
+		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_3 (ff-pointer S) (ff-pointer W) (if Inside (if (eq Inside 0) 1) 0)))
+	       ((and S W)
+		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_4 (ff-pointer S) (ff-pointer W)))
+	       ((and F W)
+		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_2 (ff-pointer F) (ff-pointer W)))
+	       ((and W OnlyPlane)
+		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_0 (ff-pointer W) (if OnlyPlane (if (eq OnlyPlane 0) 1) 0)))
+	       (W (_wrap_new_BRepBuilderAPI_MakeFace__SWIG_1 (ff-pointer W)))
+	       (t (error "Invalid arguments to constructor ~S" initargs)))))
+    (setf (ff-pointer object) pointer)
+    (ff-pointer-finalize object #'_wrap_delete_BRepBuilderAPI_MakeFace)
+    (values)))
+
+(defclass BRepFilletAPI_LocalOperation (BRepBuilderAPI_MakeShape) ())
+
+(defclass BRepFilletAPI_MakeFillet (BRepFilletAPI_LocalOperation) ())
+
+(defmethod initialize-instance :after ((object BRepFilletAPI_MakeFillet) &rest initargs
+				       &key shape type)
+  (let ((pointer
+	 (cond ((and shape type)
+		(_wrap_new_BRepFilletAPI_MakeFillet__SWIG_0 (ff-pointer shape) type))
+	       (shape
+		(_wrap_new_BRepFilletAPI_MakeFillet__SWIG_1 (ff-pointer shape)))
+	       (t (error "Invalid arguments to constructor ~S" initargs)))))
+    (setf (ff-pointer object) pointer)
+    (ff-pointer-finalize object #'_wrap_delete_BRepFilletAPI_MakeFillet)
+    (values)))
+
+(defmethod add-edge ((make-fillet BRepFilletAPI_MakeFillet) (radius number) (edge TopoDS_Edge))
+  (_wrap_BRepFilletAPI_MakeFillet_Add (ff-pointer make-fillet) (coerce radius 'double-float) (ff-pointer edge)))

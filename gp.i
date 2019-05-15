@@ -178,6 +178,7 @@ class gp_Trsf
  public:
   gp_Trsf();
   gp_Trsf(const gp_Trsf2d& T);
+  void SetMirror (const gp_Ax2& A2);
   void SetRotation(const gp_Ax1& A1,const Standard_Real Ang) ;
   void SetTranslation(const gp_Vec& V) ;
   void SetValues(const Standard_Real a11,const Standard_Real a12,

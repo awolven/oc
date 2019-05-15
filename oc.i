@@ -73,10 +73,6 @@ class TopExp_Explorer
 	TopExp_Explorer();
 	TopExp_Explorer(const TopoDS_Shape& S,const TopAbs_ShapeEnum ToFind,
 		const TopAbs_ShapeEnum ToAvoid = TopAbs_SHAPE);
-	%rename(init) Init;
-	%rename(more) More;
-	%rename(next) Next;
-	%rename(current) Current;
 	void Init(const TopoDS_Shape& S, const TopAbs_ShapeEnum ToFind, 
 		const TopAbs_ShapeEnum ToAvoid = TopAbs_SHAPE) ;
 	Standard_Boolean More() const;

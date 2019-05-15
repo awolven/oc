@@ -1,30 +1,42 @@
 (cl:in-package :cl-user)
 
-(defpackage :oc
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (ql:quickload :cffi))
+
+(defpackage :gp
   (:use :cl :cffi)
-  (:export #:gp_Pnt
-	   #:gp_Pnt2d
-	   #:gp_Dir2d
-	   #:gp_Vec2d
-	   #:gp_Ax2d
-	   #:gp_Ax22d
-	   #:gp_Pln
-	   #:gp_Vec
-	   #:gp_Dir
-	   #:gp_Ax3
-	   #:gp_Ax2
-	   #:gp_Ax1
-	   #:gp_Trsf
-	   #:gp_Trsf2d
+  (:import-from :sb-ext #:finalize)
+  (:export #:ptr
+	   #:xy
+	   #:vec2d
+	   #:pnt2d
+	   #:xyz
+	   #:pnt
+	   #:dir
+	   #:vec
+	   #:ax1
+	   #:ax2
+	   #:ax3
+	   #:lin
+	   #:circ
+	   #:elips
+	   #:cone
+	   #:cylinder
+	   #:trsf
+	   #:parab
+	   #:mat
+
+	   #:x #:y #:z
+	   #:loc #:vdir #:pos))
+
+(defpackage :oc
+  (:use :cl :cffi :gp)
+  (:export #:ff-pointer
+
 	   #:setRotation
 	   #:setTranslation
 	   #:setValues
-	   #:gp_Circ
-	   #:gp_Cone
-	   #:gp_Cylinder
-	   #:gp_Parab
-	   #:gp_Hypr
-	   #:gp_Torus
+
 	   #:bounds
 	   #:readFile
 	   #:BRepPrimAPI_MakeCone))
