@@ -19,11 +19,6 @@
 class XSControl_Reader
 {
 	XSControl_Reader()=0;
-	%rename(readFile) ReadFile;
-	%rename(transferRoots) TransferRoots;
-	%rename(clearShapes) ClearShapes;
-	%rename(nbRootsForTransfer) NbRootsForTransfer;
-	%rename(oneShape) OneShape;
 	public:
 	IFSelect_ReturnStatus ReadFile(const Standard_CString filename);
 	//IFSelect_ReturnStatus ReadFile(jbyte filename[]);
@@ -31,15 +26,6 @@ class XSControl_Reader
 	void ClearShapes();
 	Standard_Integer NbRootsForTransfer();
 	TopoDS_Shape OneShape() const;
-};
-
-%extend XSControl_Reader
-{
-	//A workaround for charset encoding problems
-	IFSelect_ReturnStatus readFile(char* filename)
-	{
-		return self->ReadFile(filename);
-	}
 };
 
 class STEPControl_Reader: public XSControl_Reader
@@ -188,9 +174,6 @@ class IGESControl_Reader: public XSControl_Reader
  %}
 class STEPControl_Writer
 {
-	%rename(write) Write;
-	%rename(transfer) Transfer;
-	%rename(model) Model;
 	public:
 	STEPControl_Writer();
 	IFSelect_ReturnStatus Write(const Standard_CString filename);
@@ -232,9 +215,6 @@ enum STEPControl_StepModelType {
  %}
 class IGESControl_Writer
 {
-	%rename(write) Write;
-	%rename(addShape) AddShape;
-	%rename(computeModel) ComputeModel;
 	public:
 	IGESControl_Writer();
 	IGESControl_Writer(const Standard_CString unit, const Standard_Integer modecr = 0);
@@ -248,7 +228,6 @@ class IGESControl_Writer
  %}
 class IGESControl_Controller
 {
-	%rename(init) Init;
 	public:
 	IGESControl_Controller();
 	void Init();

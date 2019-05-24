@@ -7,10 +7,6 @@
 class ShapeAnalysis_Edge
 {
 	public:
-	
-	%rename(hasPCurve) HasPCurve;
-	%rename(isClosed3d) IsClosed3d;
-	%rename(IsSeam) IsSeam;
 
 	ShapeAnalysis_Edge();
 
@@ -23,10 +19,6 @@ class ShapeAnalysis_Edge
 class ShapeAnalysis_Surface
 {
 	public:
-	
-	%rename(hasSingularities) HasSingularities;
-	%rename(getNbSingularities) NbSingularities;
-	%rename(isDegenerated) IsDegenerated;
 
 	ShapeAnalysis_Surface (const Handle_Geom_Surface &S);
 

@@ -5,15 +5,6 @@
 
 class Poly_Triangulation
 {
-	%rename(deflection) Deflection;
-	%rename(removeUVNodes) RemoveUVNodes;
-	%rename(nbNodes) NbNodes;
-	%rename(hasUVNodes) HasUVNodes;
-	%rename(nbTriangles) NbTriangles;
-	%rename(triangles) Triangles;
-	%rename(nodes) Nodes;
-	%rename(uvNodes) UVNodes;
-	
 	public:
 	Poly_Triangulation(const Standard_Integer nbNodes,
 		const Standard_Integer nbTriangles,const Standard_Boolean UVNodes);

@@ -28,8 +28,16 @@ class BRepPrimAPI_MakeCone : public BRepBuilderAPI_MakeShape
 class BRepPrimAPI_MakeCylinder : public BRepBuilderAPI_MakeShape
 {
 	public:
-	BRepPrimAPI_MakeCylinder(const gp_Ax2& axes,const Standard_Real radius,
-		const Standard_Real height,const Standard_Real angle);
+  BRepPrimAPI_MakeCylinder(const Standard_Real R, const Standard_Real H);
+  
+  //! Make a cylinder   of  radius R  and  length H with
+  //! angle  H.
+  BRepPrimAPI_MakeCylinder(const Standard_Real R, const Standard_Real H, const Standard_Real Angle);
+  
+  //! Make a cylinder of radius R and length H.
+  BRepPrimAPI_MakeCylinder(const gp_Ax2& Axes, const Standard_Real R, const Standard_Real H);
+  BRepPrimAPI_MakeCylinder(const gp_Ax2& axes,const Standard_Real radius,
+			   const Standard_Real height,const Standard_Real angle);
 };
 
 class BRepPrimAPI_MakeTorus : public BRepBuilderAPI_MakeShape

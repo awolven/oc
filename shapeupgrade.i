@@ -10,8 +10,6 @@ class ShapeUpgrade_Tool
 class ShapeUpgrade_RemoveInternalWires : public ShapeUpgrade_Tool
 {
 	public:
-	%rename(perform) Perform;
-	%rename(getResult) GetResult;
 	ShapeUpgrade_RemoveInternalWires(const TopoDS_Shape& theShape);
 	Standard_Boolean Perform() ;
 	TopoDS_Shape GetResult() const; 
@@ -43,8 +41,6 @@ class ShapeUpgrade_RemoveInternalWires : public ShapeUpgrade_Tool
 class ShapeUpgrade_ShapeDivide
 {
 	public:
-	%rename(getResult) Result;
-	%rename(perform) Perform;
 	TopoDS_Shape Result() const;
 	Standard_Boolean Perform(const Standard_Boolean newContext = Standard_True) ;
 };

@@ -10,16 +10,6 @@
 
 class BRep_Tool
 {
-	%rename(pnt) Pnt;
-	%rename(parameters) Parameters;
-	%rename(parameter) Parameter;
-	%rename(degenerated) Degenerated;
-	%rename(hasContinuity) HasContinuity;
-	%rename(continuity) Continuity;
-	%rename(tolerance) Tolerance;
-	%rename(curve) Curve;
-	%rename(surface) Surface;
-	%rename(curveOnSurface) CurveOnSurface;
 	public:
 	static const gp_Pnt Pnt(const TopoDS_Vertex& V) ;
 	static gp_Pnt2d Parameters(const TopoDS_Vertex& V,const TopoDS_Face& F) ;
@@ -91,7 +81,6 @@ class BRep_Tool
 
 class BRep_Builder: public TopoDS_Builder
 {
-	%rename(updateVertex) UpdateVertex;
 	public:
 	BRep_Builder();
 	void MakeFace(TopoDS_Face& F) const;

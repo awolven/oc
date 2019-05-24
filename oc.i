@@ -10,6 +10,49 @@
 %typemap(lispclass) float "cl:single-float";
 %typemap(lispclass) double "cl:double-float";
 
+%{
+  EXPORT void (* signal_lisp_error) (const char* message) = 0;
+  %}
+
+%{
+#include <Standard_Failure.hxx>
+#include <Standard_ErrorHandler.hxx>
+%}
+
+%include exception.i
+
+%exception {
+  try
+    {
+      OCC_CATCH_SIGNALS
+      $action
+	}
+  catch(Standard_Failure const& error)
+    {
+      cout << "FOO!";
+      char *error_name = (char*) error.DynamicType()->Name();
+	    char *error_message = (char*) error.GetMessageString();
+	    std::string message;
+	    if (error_name) message += std::string(error_name) + "\n";
+	    if (error_message) message += std::string(error_message);
+	    // log SWIG specific debug information
+	    message += "\nwrapper details:\n  * symname: $symname\n  * wrapname: $wrapname\n  * fulldecl: $fulldecl";
+	    signal_lisp_error(message.c_str());
+    }
+ }
+
+%insert(swiglisp) %{
+(cl:in-package #:oc)
+  
+(cffi:defcvar "signal_lisp_error" :pointer)
+  
+(cffi:defcallback signal-lisp-error :void ((message :string))
+    (cl:error "~S" message))
+
+(cl:defun init-occ ()
+  (cl:setf *signal-lisp-error* (cffi:get-callback 'signal-lisp-error)))
+     %}
+
 %include "standard.i";
 %include "gp.i";
 %include "tcol.i";
@@ -45,8 +88,6 @@
 
 class TopLoc_Location
 {
-	%rename(isIdentity) IsIdentity;
-	%rename(transformation) Transformation;
 	public:
 	TopLoc_Location ();
 	TopLoc_Location (const gp_Trsf& T);
@@ -57,8 +98,6 @@ class TopLoc_Location
 class TopExp
 {
 	public:
-	%rename(vertices) Vertices;
-	%rename(commonVertex) CommonVertex;
 	static void Vertices(const TopoDS_Edge& E,TopoDS_Vertex& Vfirst,TopoDS_Vertex& Vlast,const Standard_Boolean CumOri = Standard_False) ;
 	static Standard_Boolean CommonVertex(const TopoDS_Edge& E1, const TopoDS_Edge& E2, TopoDS_Vertex& V) ;
 };
@@ -77,7 +116,7 @@ class TopExp_Explorer
 		const TopAbs_ShapeEnum ToAvoid = TopAbs_SHAPE) ;
 	Standard_Boolean More() const;
 	void Next() ;
-	const TopoDS_Shape & Current();
+	const TopoDS_Shape& Current();
 };
 
 /**
@@ -87,7 +126,6 @@ class TopExp_Explorer
 
 class Bnd_Box
 {
-	%rename(isVoid) IsVoid;
 	public:
 	Bnd_Box();
 	Standard_Boolean IsVoid() const;
@@ -109,7 +147,6 @@ class Bnd_Box
 class BRepBndLib
 {
 	public:
-	%rename(add) Add;
 	static void Add(const TopoDS_Shape& shape,Bnd_Box& bndBox);
 };
 
@@ -122,7 +159,6 @@ class Adaptor2d_Curve2d
 {		
 	Adaptor2d_Curve2d()=0;
 	public:
-	%rename(value) Value;
 	virtual gp_Pnt2d Value(const Standard_Real U) const;
 };
 
@@ -132,7 +168,6 @@ class Adaptor2d_Curve2d
 %{#include "Geom2dAdaptor_Curve.hxx"%}
 class Geom2dAdaptor_Curve: public Adaptor2d_Curve2d
 {
-	%rename(load) Load;
 	public:
 	Geom2dAdaptor_Curve();
 	Geom2dAdaptor_Curve(const Handle_Geom2d_Curve & C);
@@ -150,7 +185,6 @@ class Adaptor3d_Curve
 {		
 	Adaptor3d_Curve()=0;
 	public:
-	%rename(value) Value;
 	const gp_Pnt Value(const Standard_Real U) const;
 };
 
@@ -178,7 +212,6 @@ class Adaptor3d_Curve
 
 class GeomAdaptor_Curve: public Adaptor3d_Curve
 {
-	%rename(load) Load;
 	public:
 	GeomAdaptor_Curve();
 	GeomAdaptor_Curve(const Handle_Geom_Curve & C);
@@ -198,7 +231,6 @@ class GeomAdaptor_Curve: public Adaptor3d_Curve
  class GProp_GProps
  {
 	 public:
-	 %rename(mass) Mass;
 	 GProp_GProps();
 	 Standard_Real Mass() const;
  };
@@ -210,9 +242,6 @@ class GeomAdaptor_Curve: public Adaptor3d_Curve
 class BRepGProp
 {
 	public:
-	%rename(linearProperties) LinearProperties;
-	%rename(surfaceProperties) SurfaceProperties;
-	%rename(volumeProperties) VolumeProperties;
 	static void LinearProperties(const TopoDS_Shape& shape, GProp_GProps& properties);
         static void VolumeProperties(const TopoDS_Shape& shape, GProp_GProps& properties, const Standard_Boolean onlyClosed = Standard_False) ;
         static Standard_Real VolumeProperties(const TopoDS_Shape& shape, GProp_GProps& properties, const Standard_Real Eps, const Standard_Boolean onlyClosed = Standard_False) ;
@@ -223,11 +252,6 @@ class BRepGProp
 /**
  *
  */
-%rename(VOID) IFSelect_RetVoid;
-%rename(DONE) IFSelect_RetDone;
-%rename(ERROR) IFSelect_RetError;
-%rename(FAIL) IFSelect_RetFail;
-%rename(STOP) IFSelect_RetStop;
 enum IFSelect_ReturnStatus {
  IFSelect_RetVoid,
  IFSelect_RetDone,
@@ -239,8 +263,6 @@ enum IFSelect_ReturnStatus {
 %{#include <ShapeAnalysis_FreeBounds.hxx>%}
 class ShapeAnalysis_FreeBounds
 {
-	%rename(getClosedWires) GetClosedWires;
-	%rename(getOpenWires) GetOpenWires;
 	public:
 	ShapeAnalysis_FreeBounds(const TopoDS_Shape& shape,
 		const Standard_Boolean splitclosed = Standard_False,
@@ -252,9 +274,6 @@ class ShapeAnalysis_FreeBounds
 %{#include <GCPnts_UniformDeflection.hxx>%}
 class GCPnts_UniformDeflection
 {
-	%rename(initialize) Initialize;
-	%rename(nbPoints) NbPoints;
-	%rename(parameter) Parameter;
 	public:
 	GCPnts_UniformDeflection();
 	void Initialize(Adaptor3d_Curve& C,const Standard_Real Deflection,
@@ -267,12 +286,6 @@ class GCPnts_UniformDeflection
 %{#include <BRepMesh_DiscretRoot.hxx>%}
 class BRepMesh_DiscretRoot
 {
-	%rename(setDeflection) SetDeflection;
-	%rename(setAngle) SetAngle;
-	%rename(deflection) Deflection;
-	%rename(angle) Angle;
-	%rename(perform) Perform;
-	
 	protected:
 	BRepMesh_DiscretRoot();
 	public:
@@ -286,10 +299,6 @@ class BRepMesh_DiscretRoot
 %{#include <BRepMesh_IncrementalMesh.hxx>%}
 class BRepMesh_IncrementalMesh : public BRepMesh_DiscretRoot
 {
-	%rename(perform) Perform;
-//	%rename(update) Update;
-	%rename(isModified) IsModified;
-	
 	public:
 	BRepMesh_IncrementalMesh();
 	BRepMesh_IncrementalMesh(const TopoDS_Shape& S,const Standard_Real D,
@@ -305,13 +314,6 @@ class BRepMesh_IncrementalMesh : public BRepMesh_DiscretRoot
 
 class GeomAPI_ProjectPointOnSurf
 {
-	%rename(init) Init;
-	%rename(nbPoints) NbPoints;
-	%rename(lowerDistanceParameters) LowerDistanceParameters;
-	%rename(lowerDistance) LowerDistance;
-	%rename(point) Point;
-	%rename(parameters) Parameters;
-	%rename(nearestPoint) NearestPoint;
 	public:
 	GeomAPI_ProjectPointOnSurf(const gp_Pnt& P,
 		const Handle_Geom_Surface & Surface);
@@ -330,8 +332,6 @@ class GeomAPI_ProjectPointOnSurf
 %{#include <BRepAlgo.hxx>%}
 class BRepAlgo
 {
-	%rename(isValid) IsValid;
-	%rename(isTopologicallyValid) IsTopologicallyValid;
 	public:	
 	static Standard_Boolean IsValid(const TopoDS_Shape& S);
 	static Standard_Boolean IsTopologicallyValid(const TopoDS_Shape& S);

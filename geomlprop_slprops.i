@@ -3,23 +3,6 @@
 
 class GeomLProp_SLProps
 {
-	%rename(setParameters) SetParameters;
-	%rename(value) Value;
-	%rename(d1U) D1U;
-	%rename(d1V) D1V;
-	%rename(d2U) D2U;
-	%rename(d2V) D2V;
-	%rename(dUV) DUV;
-	%rename(isTangentUDefined) IsTangentUDefined;
-	%rename(tangentU) TangentU;
-	%rename(isTangentVDefined) IsTangentVDefined;
-	%rename(tangentV) TangentV;
-	%rename(isNormalDefined) IsNormalDefined;
-	%rename(isCurvatureDefined) IsCurvatureDefined;
-	%rename(isUmbilic) IsUmbilic;
-	%rename(meanCurvature) MeanCurvature;
-	%rename(gaussianCurvature) GaussianCurvature;
-	%rename(setSurface) SetSurface;
 
 	GeomLProp_SLProps(const Standard_Integer degree, const Standard_Real resolution);
 	void SetParameters(const Standard_Real u, const Standard_Real v) ;

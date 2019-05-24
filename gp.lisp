@@ -68,6 +68,43 @@
 (defmethod print-object ((object pnt2d) stream)
   (format stream "(pnt2d ~A ~A)" (x object) (y object)))
 
+(defcstruct gp-dir2d
+  (coord (:struct gp-xy)))
+
+(defstruct (dir2d (:include gpthing)))
+
+(defun dir2d-0 ()
+  (let* ((pointer (foreign-alloc '(:struct gp-dir2d)))
+	 (struct (make-dir2d :ptr pointer)))
+    (setf (gp-xy-x pointer) 0.0d0
+	  (gp-xy-y pointer) 0.0d0)
+    (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
+    struct))
+
+(defun dir2d-1 (&optional (v (vec2d 0.0d0 0.0d0)))
+  (let* ((pointer (foreign-alloc '(:struct gp-dir2d)))
+	 (struct (make-dir2d :ptr pointer)))
+    (setf (gp-xy-x pointer) (x v)
+	  (gp-xy-y pointer) (y v))
+    (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
+    struct))
+
+(defun dir2d-2 (&optional (coord (xy 0.0d0 0.0d0)))
+  (let* ((pointer (foreign-alloc '(:struct gp-dir2d)))
+	 (struct (make-dir2d :ptr pointer)))
+    (setf (gp-xy-x pointer) (x coord)
+	  (gp-xy-y pointer) (y coord))
+    (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
+    struct))
+    
+(defun dir2d-3 (&optional (xv 0.0d0) (yv 0.0d0))
+  (let* ((pointer (foreign-alloc '(:struct gp-dir2d)))
+	 (struct (make-dir2d :ptr pointer)))
+    (setf (gp-xy-x pointer) (coerce xv 'double-float)
+	  (gp-xy-y pointer) (coerce yv 'double-float))
+    (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
+    struct))
+
 (defcstruct gp-xyz
   (x :double)
   (y :double)
@@ -232,7 +269,6 @@
 (defstruct (ax1 (:include gpthing)))
 
 (defun ax1 (&optional (loc (pnt 0.0d0 0.0d0 0.0d0)) (vdir (dir 0.0d0 0.0d0 1.0d0)))
-  (print (z vdir))
   (let* ((pointer (foreign-alloc '(:struct gp-ax1)))
 	 (struct (make-ax1 :ptr pointer)))
     (setf (gp-ax1-loc-coord-x pointer) (x loc)
@@ -677,4 +713,41 @@
   `(mem-aref ,gp-trsf :double 13))
 
 (defstruct (trsf (:include gpthing)))
+
+#+NIL
+(defun trsf (&key scale shape mat loc)
+  (let* ((pointer (foreign-alloc '(:struct gp-trsf)))
+	 (struct (make-trsf :ptr pointer)))
+    (setf (gp-trsf-scale pointer) 1.0d0
+	  (gp-trsf-shape pointer))))
+
 (defstruct (parab (:include gpthing)))
+
+(defcstruct gp-ax2d
+  (loc (:struct gp-pnt2d))
+  (vdir (:struct gp-dir2d)))
+
+(defmacro gp-ax2d-loc-coord-x (gp-ax2d)
+  `(mem-aref ,gp-ax2d :double 0))
+
+(defmacro gp-ax2d-loc-coord-y (gp-ax2d)
+  `(mem-aref ,gp-ax2d :double 1))
+
+(defmacro gp-ax2d-vdir-coord-x (gp-ax2d)
+  `(mem-aref ,gp-ax2d :double 2))
+
+(defmacro gp-ax2d-vdir-coord-y (gp-ax2d)
+  `(mem-aref ,gp-ax2d :double 3))
+
+(defstruct (ax2d (:include gpthing)))
+
+(defun ax2d (&optional (loc (pnt2d 0.0d0 0.0d0)) (vdir (dir2d-3 1.0d0 0.0d0)))
+  (let* ((pointer (foreign-alloc '(:struct gp-ax2d)))
+	 (struct (make-ax2d :ptr pointer)))
+    (setf (gp-ax2d-loc-coord-x pointer) (x loc)
+	  (gp-ax2d-loc-coord-y pointer) (y loc)
+
+	  (gp-ax2d-vdir-coord-x pointer) (x vdir)
+	  (gp-ax2d-vdir-coord-y pointer) (y vdir))
+    (finalize struct (lambda () (print 'freeing-ax2d) (foreign-free pointer)) :dont-save t)
+    struct))

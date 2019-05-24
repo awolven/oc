@@ -10,6 +10,11 @@
 	   #:xy
 	   #:vec2d
 	   #:pnt2d
+	   #:dir2d-0
+	   #:dir2d-1
+	   #:dir2d-2
+	   #:dir2d-3
+	   #:ax2d
 	   #:xyz
 	   #:pnt
 	   #:dir

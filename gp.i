@@ -154,6 +154,7 @@ class gp_Ax2
 {
  public:
   gp_Ax2();
+  gp_Ax2(const gp_Pnt& P, const gp_Dir& V);
   gp_Ax2(const gp_Pnt& P, const gp_Dir& N, const gp_Dir& Vx);
 
 };
@@ -178,6 +179,7 @@ class gp_Trsf
  public:
   gp_Trsf();
   gp_Trsf(const gp_Trsf2d& T);
+  void SetMirror (const gp_Ax1& A1);
   void SetMirror (const gp_Ax2& A2);
   void SetRotation(const gp_Ax1& A1,const Standard_Real Ang) ;
   void SetTranslation(const gp_Vec& V) ;

@@ -5,12 +5,6 @@
 %}
 
 class APIHeaderSection_MakeHeader{
-  %rename(setName) SetName;
-  %rename(setAuthorValue) SetAuthorValue;
-  %rename(setOrganizationValue) SetOrganizationValue;
-  %rename(setOriginatingSystem) SetOriginatingSystem;
-  %rename(setDescriptionValue) SetDescriptionValue;
-  
   public:
   APIHeaderSection_MakeHeader(const Handle_StepData_StepModel& model);
   void SetName(const Handle_TCollection_HAsciiString& aName);

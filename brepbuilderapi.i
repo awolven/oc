@@ -49,7 +49,6 @@ enum BRepBuilderAPI_ShellError {
 
 class BRepBuilderAPI_Command
 {
-	%rename(isDone) IsDone;
 	BRepBuilderAPI_Command()=0;
 	public:
 	virtual Standard_Boolean  IsDone() const;
@@ -60,15 +59,12 @@ class BRepBuilderAPI_MakeShape: public BRepBuilderAPI_Command
 	//Hide the constructor to make this class abstract
 	BRepBuilderAPI_MakeShape()=0;
 	public:
-	%rename(build) Build;
-	%rename(shape) Shape;
 	virtual void Build();
 	virtual const TopoDS_Shape& Shape();
 };
 
 class BRepBuilderAPI_ModifyShape: public BRepBuilderAPI_MakeShape
 {
-	%rename(modifiedShape) ModifiedShape;
 	BRepBuilderAPI_ModifyShape()=0;
 	public:
 	virtual TopoDS_Shape ModifiedShape(const TopoDS_Shape& S) const;
@@ -76,7 +72,6 @@ class BRepBuilderAPI_ModifyShape: public BRepBuilderAPI_MakeShape
 
 class BRepBuilderAPI_Transform : public BRepBuilderAPI_ModifyShape
 {
-	%rename(perform) Perform;
 	public:
 	BRepBuilderAPI_Transform(const gp_Trsf& T);
 	BRepBuilderAPI_Transform(const TopoDS_Shape& S,	const gp_Trsf& T,
@@ -87,17 +82,13 @@ class BRepBuilderAPI_Transform : public BRepBuilderAPI_ModifyShape
 
 class BRepBuilderAPI_MakeVertex: public BRepBuilderAPI_MakeShape
 {
-	%rename(vertex) Vertex;
 	public:
 	BRepBuilderAPI_MakeVertex(const gp_Pnt& P);
-	//const TopoDS_Vertex& Vertex() const;
+	const TopoDS_Vertex& Vertex() const;
 };
 
 class BRepBuilderAPI_MakeWire : public BRepBuilderAPI_MakeShape
 {
-	%rename(wire) Wire;
-	%rename(add) Add;
-	%rename(isDone) IsDone;
 	public:
 	BRepBuilderAPI_MakeWire();
 	BRepBuilderAPI_MakeWire(const TopoDS_Edge& E);
@@ -113,25 +104,20 @@ class BRepBuilderAPI_MakeWire : public BRepBuilderAPI_MakeShape
 	void Add(const TopTools_ListOfShape & shapes);
 	Standard_Boolean IsDone() const;
 	BRepBuilderAPI_WireError Error() const;
-	//const TopoDS_Wire& Wire() const;
+	const TopoDS_Wire& Wire() const;
 };
 
 class BRepBuilderAPI_MakeShell : public BRepBuilderAPI_MakeShape
 {
-	%rename(shell) Shell;
-	%rename(add) Add;
-	%rename(isDone) IsDone;
 	public:
 	BRepBuilderAPI_MakeShell();
 	Standard_Boolean IsDone() const;
 	BRepBuilderAPI_ShellError Error() const;
-	//const TopoDS_Shell& Shell() const;
+	const TopoDS_Shell& Shell() const;
 };
 
 class BRepBuilderAPI_MakeEdge : public BRepBuilderAPI_MakeShape
 {
-	%rename(edge) Edge;
-	%rename(isDone) IsDone;
 	public:
 	BRepBuilderAPI_MakeEdge();
 	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L);
@@ -152,12 +138,11 @@ class BRepBuilderAPI_MakeEdge : public BRepBuilderAPI_MakeShape
 	BRepBuilderAPI_MakeEdge(const Handle_Geom2d_Curve& L, const Handle_Geom_Surface& S, const Standard_Real p1,const Standard_Real p2);
 	Standard_Boolean IsDone() const;
 	BRepBuilderAPI_EdgeError Error() const;
-	//const TopoDS_Edge& Edge() const;
+	const TopoDS_Edge& Edge() const;
 };
 
 class BRepBuilderAPI_MakeFace  : public BRepBuilderAPI_MakeShape
 {
-	%rename(face) Face;
 	public:
 	BRepBuilderAPI_MakeFace(const TopoDS_Wire& W,
 		const Standard_Boolean OnlyPlane = Standard_False);
@@ -167,14 +152,11 @@ class BRepBuilderAPI_MakeFace  : public BRepBuilderAPI_MakeShape
         const Standard_Real Vmin, const Standard_Real Vmax, const Standard_Real tolDegen); 
     Standard_Boolean IsDone() const;
     BRepBuilderAPI_FaceError Error() const;
-	//const TopoDS_Face& Face() const;
+    const TopoDS_Face& Face() const;
 };
 
 class BRepBuilderAPI_MakeSolid: public BRepBuilderAPI_MakeShape
 {
-	%rename(add) Add;
-	%rename(isDone) IsDone;
-	%rename(isDeleted) IsDeleted;
 	public:
 	BRepBuilderAPI_MakeSolid();
 	BRepBuilderAPI_MakeSolid(const TopoDS_CompSolid& S);
@@ -192,28 +174,6 @@ class BRepBuilderAPI_Sewing
 {
 	public:
 	
-	%rename(init) Init;
-	%rename(add) Add;
-	%rename(perform) Perform;
-	%rename(sewedShape) SewedShape;
-
-	%rename(load) Load;
-	%rename(nbFreeEdges) NbFreeEdges;
-	%rename(freeEdge) FreeEdge;
-	%rename(nbMultipleEdges) NbMultipleEdges;
-	%rename(multipleEdge) MultipleEdge;
-	%rename(nbDegeneratedShapes) NbDegeneratedShapes;
-	%rename(degeneratedShape) DegeneratedShape;
-	%rename(nbDeletedFaces) NbDeletedFaces;
-	%rename(deletedFace) DeletedFace;
-	%rename(isDegenerated) IsDegenerated;
-	%rename(isModified) IsModified;
-	%rename(modified) Modified;
-	%rename(dump) Dump;
-
-	%rename(isModifiedSubShape) IsModifiedSubShape;
-	%rename(modifiedSubShape) ModifiedSubShape;
-
 	BRepBuilderAPI_Sewing(const Standard_Real tolerance = 1.0e-06,
 		const Standard_Boolean option = Standard_True,
 		const Standard_Boolean cutting = Standard_True,
@@ -245,7 +205,6 @@ class BRepBuilderAPI_Sewing
 
 class BRepBuilderAPI_NurbsConvert : public BRepBuilderAPI_ModifyShape
 {
-	%rename(perform) Perform;
 	public:
 	BRepBuilderAPI_NurbsConvert();
 	BRepBuilderAPI_NurbsConvert(const TopoDS_Shape& S,

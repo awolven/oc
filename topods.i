@@ -16,14 +16,6 @@
 class TopoDS_Shape
 {
 	public:
-	%rename(free) Free;
-	%rename(shapeType) ShapeType;
-	%rename(nativeIsSame) IsSame;
-	%rename(nativeIsEqual) IsEqual;
-	%rename(orientation) Orientation;
-	%rename(reverse) Reverse;
-	%rename(reversed) Reversed;
-	%rename(hashCode) HashCode;
 	TopAbs_ShapeEnum ShapeType();
 	Standard_Boolean IsSame (const TopoDS_Shape& other) const ;
 	Standard_Boolean IsPartner (const TopoDS_Shape &other) const ;
@@ -98,10 +90,6 @@ class TopoDS_Vertex: public TopoDS_Shape
 
 class TopoDS_Iterator
 {
-	%rename(initialize) Initialize;
-	%rename(more) More;
-	%rename(next) Next;
-	%rename(value) Value;
 	public:
 	TopoDS_Iterator();
 	TopoDS_Iterator(const TopoDS_Shape& S,
@@ -117,10 +105,6 @@ class TopoDS_Iterator
 
 class TopoDS_Builder
 {
-	%rename(makeWire) MakeWire;
-	%rename(makeCompound) MakeCompound;
-	%rename(add) Add;
-	%rename(remove) Remove;
 	
 	TopoDS_Builder()=0;
 	public:

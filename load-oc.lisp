@@ -107,7 +107,7 @@
   (let ((lib-path *lib-path*))
     (loop for lib in *foreign-libraries*
        do (cffi:load-foreign-library (concatenate 'string lib-path lib *lib-extension*))
-       finally (cffi:load-foreign-library (concatenate 'string "~/oc/oc" *lib-extension*))
+       finally (cffi:load-foreign-library (concatenate 'string "C:\\Users\\awolven\\Documents\\Visual Studio 2015\\Projects\\oc\\x64\\Debug\\oc" *lib-extension*))
 	 (return t))))
 
 (load-oc-libraries)

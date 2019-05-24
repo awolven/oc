@@ -28,5 +28,6 @@ class TopTools_HSequenceOfShape
 %}
 class TopTools_ListOfShape {
  public:
+  TopTools_ListOfShape();
   TopoDS_Shape& Append(const TopoDS_Shape& item);
 };

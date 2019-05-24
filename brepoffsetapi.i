@@ -6,19 +6,6 @@
 class BRepOffsetAPI_NormalProjection: public BRepBuilderAPI_MakeShape
 {
 	public:
-	%rename(init) Init;
-	%rename(add) Add;
-	%rename(setParams) SetParams;
-	%rename(setMaxDistance) SetMaxDistance;
-	%rename(setLimit) SetLimit;
-	%rename(compute3d) Compute3d;
-	%rename(build) Build;
-	%rename(isDone) IsDone;
-	%rename(projection) Projection;
-	%rename(couple) Couple;
-	%rename(generated) Generated;
-	%rename(ancestor) Ancestor;
-	%rename(buildWire) BuildWire;
 	BRepOffsetAPI_NormalProjection();
 	BRepOffsetAPI_NormalProjection(const TopoDS_Shape& S);
 	void Init(const TopoDS_Shape& S) ;
@@ -34,4 +21,42 @@ class BRepOffsetAPI_NormalProjection: public BRepBuilderAPI_MakeShape
 	virtual const TopTools_ListOfShape& Generated(const TopoDS_Shape& S) ;
 	const TopoDS_Shape& Ancestor(const TopoDS_Edge& E) const;
 	Standard_Boolean BuildWire(TopTools_ListOfShape& Liste) const;
+};
+
+%{
+#include <BRepOffsetAPI_MakeOffsetShape.hxx>
+  %}
+
+class BRepOffsetAPI_MakeOffsetShape  : public BRepBuilderAPI_MakeShape
+{
+public:
+
+  BRepOffsetAPI_MakeOffsetShape();
+  BRepOffsetAPI_MakeOffsetShape(const TopoDS_Shape& S, 
+				const Standard_Real Offset, 
+				const Standard_Real Tol, 
+				const BRepOffset_Mode Mode = BRepOffset_Skin, 
+				const Standard_Boolean Intersection = Standard_False, 
+				const Standard_Boolean SelfInter = Standard_False, 
+				const GeomAbs_JoinType Join = GeomAbs_Arc,
+				const Standard_Boolean RemoveIntEdges = Standard_False);
+};
+
+%{
+#include <BRepOffsetAPI_MakeThickSolid.hxx>
+  %}
+
+class BRepOffsetAPI_MakeThickSolid  : public BRepOffsetAPI_MakeOffsetShape
+{
+ public:
+  BRepOffsetAPI_MakeThickSolid();
+  BRepOffsetAPI_MakeThickSolid(const TopoDS_Shape& S, 
+			       const TopTools_ListOfShape& ClosingFaces, 
+			       const Standard_Real Offset, 
+			       const Standard_Real Tol, 
+			       const BRepOffset_Mode Mode = BRepOffset_Skin, 
+			       const Standard_Boolean Intersection = Standard_False,
+			       const Standard_Boolean SelfInter = Standard_False, 
+			       const GeomAbs_JoinType Join = GeomAbs_Arc,
+			       const Standard_Boolean RemoveIntEdges = Standard_False);
 };

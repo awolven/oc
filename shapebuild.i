@@ -4,9 +4,6 @@
 class ShapeBuild_ReShape
 {
 	public:
-	
-	%rename(replace) Replace;
-	%rename(apply) Apply;
 
 	ShapeBuild_ReShape();
 	void Replace(const TopoDS_Shape& shape,const TopoDS_Shape& newshape,const Standard_Boolean oriented = Standard_False) ;

@@ -24,9 +24,6 @@ class ShapeFix_Root
 {
 	ShapeFix_Root()=0;
 	public:
-	%rename(setPrecision) SetPrecision;
-	%rename(getPrecision) Precision;
-	%rename(setContext) SetContext;
 	void SetPrecision(const Standard_Real preci) ;
 	Standard_Real Precision() const;
 	void SetContext(const ShapeBuild_ReShape * context) ;
@@ -46,11 +43,6 @@ class ShapeFix_Wireframe: public ShapeFix_Root
 
 	public:
 	ShapeFix_Wireframe(const TopoDS_Shape& shape);
-	%rename(fixWireGaps) FixWireGaps;
-	%rename(fixSmallEdges) FixSmallEdges;
-	%rename(setLimitAngle) SetLimitAngle;
-	%rename(getLimitAngle) LimitAngle;
-	%rename(shape) Shape;
 
 	Standard_Boolean FixWireGaps();
 
@@ -77,14 +69,6 @@ class ShapeFix_Shape
 {
 	public:
 	ShapeFix_Shape(const TopoDS_Shape& shape)=0;
-	
-	%rename(getShape) Shape;
-	%rename(perform) Perform;
-	%rename(getFixSolidTool) FixSolidTool;
-	%rename(getFixShellTool) FixShellTool;
-	%rename(getFixFaceTool) FixFaceTool;
-	%rename(getFixWireTool) FixWireTool;
-	%rename(getFixEdgeTool) FixEdgeTool;
 	
 	TopoDS_Shape Shape() const ;
 	Standard_Boolean Perform (const Handle_Message_ProgressIndicator& theProgress=0) ;
