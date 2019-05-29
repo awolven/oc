@@ -67,6 +67,7 @@
 		  (ibo (foreign-alloc :unsigned-short :count (* 3 nb-triangles))))
 	      (loop for i from nodes-lower to (get-upper nodes)
 		 do (let ((ff-pnt (ff-pointer (get-value nodes i))))
+
 		      ;; vertex
 		      (loop for j from 0 below 3
 			 do (setf (mem-aref vbo :float (+ (* 2 3 (- i nodes-lower)) j))
@@ -76,6 +77,7 @@
 			    (mem-aref vbo :float (+ (* 2 3 (- i nodes-lower)) 4)) (* (1- (/ i nb-nodes)) 0.5f0)
 			    (mem-aref vbo :float (+ (* 2 3 (- i nodes-lower)) 5)) 0.2f0)))
 	      (let ((lower (print (get-lower triangles))))
+
 		(loop for i from lower to (print (get-upper triangles))
 		   for ii from 0
 		   do (let ((tri (get-value triangles i)))
@@ -83,6 +85,85 @@
 			   do (setf (mem-aref ibo :unsigned-short (+ (* 3 ii) (1- j)))
 				     (- (get-value tri j) nodes-lower))))))
 	      (values vbo (* (foreign-type-size :float) 2 3 nb-nodes) ibo (* (foreign-type-size :unsigned-short) 3 nb-triangles)))))))))
+
+(defun make-vertex-arrays (body red green blue)
+  (make-instance 'BRepMesh_IncrementalMesh :S body :D 7.0d-3 :Relative t)
+  (let* ((float-total 0)
+	 (index-total 0)
+	 (tri-data '())
+	 (red-float (coerce red 'single-float))
+	 (green-float (coerce green 'single-float))
+	 (blue-float (coerce blue 'single-float)))
+    (let ((explorer (make-instance 'TopExp_Explorer :S body :ToFind TopAbs_FACE)))
+      (loop repeat 1 ;;while (more-p explorer)
+	 do (let* ((face (current explorer))
+		   (triangulation (allocate-instance (find-class 'Poly_Triangulation))))
+	      (setf (ff-pointer triangulation) (_wrap_BRep_Tool_Triangulation (ff-pointer face) (_wrap_new_TopLoc_Location__SWIG_0)))
+	      (let* ((vertices (get-nodes triangulation))
+		     (vertex-lower (get-lower vertices))
+		     (vertex-upper (get-upper vertices))
+		     (vertex-count (- vertex-upper vertex-lower))
+		     (float-count (+ (* 3 vertex-count) (* 3 vertex-count))) ;; 3 floats position, 3 floats color
+		     (triangles (get-triangles triangulation))
+		     (triangles-lower (get-lower triangles))
+		     (triangles-upper (get-upper triangles))
+		     (triangle-count (- triangles-upper triangles-lower)))
+		(push (list triangulation vertex-lower vertex-upper triangles-lower triangles-upper) tri-data)
+		(incf float-total float-count)
+		(incf index-total (* 3 triangle-count))))
+	   (next explorer)))	   
+    (when (> index-total 65535)
+      (error "unsigned-short too short for indices: ~S" index-total))
+    (let ((vertex-array (foreign-alloc :float :count (* float-total (foreign-type-size :float))))
+	  (index-array (foreign-alloc :unsigned-short :count index-total))
+	  (vertex-offset 0)
+	  (float-offset 0)
+	  (index-offset 0))
+      (loop for td in tri-data
+	 do
+	   (print td)
+	   (destructuring-bind (triangulation vertex-lower vertex-upper triangles-lower triangles-upper) td
+	     (let ((nodes (get-nodes triangulation))
+		   (triangles (get-triangles triangulation)))
+	       (loop for i from 0 by 6
+		  for fi from float-offset by 6
+		  for vi from vertex-lower to vertex-upper
+		  do (let ((node (get-value nodes vi)))
+		       (print node)
+		       (setf (mem-aref vertex-array :float (+ fi 0)) (coerce (x node) 'single-float)
+			     (mem-aref vertex-array :float (+ fi 1)) (coerce (y node) 'single-float)
+			     (mem-aref vertex-array :float (+ fi 2)) (coerce (z node) 'single-float)
+			     (mem-aref vertex-array :float (+ fi 3)) red-float
+			     (mem-aref vertex-array :float (+ fi 4)) green-float
+			     (mem-aref vertex-array :float (+ fi 5)) blue-float))
+		  finally (incf float-offset i))
+	       (loop for i from 0 by 3
+		  for usi from index-offset by 3
+		  for ti from triangles-lower to triangles-upper
+		  do (let ((triangle (get-value triangles ti)))
+		       (setf (mem-aref index-array :unsigned-short (+ usi 0)) (print (- (+ vertex-offset (get-value triangle 1)) vertex-lower))
+			     (mem-aref index-array :unsigned-short (+ usi 1)) (print (- (+ vertex-offset (get-value triangle 2)) vertex-lower))
+			     (mem-aref index-array :unsigned-short (+ usi 2)) (print (- (+ vertex-offset (get-value triangle 3)) vertex-lower))))
+		  finally (incf index-offset i)))
+	     (incf vertex-offset (- vertex-upper vertex-lower))))
+       (values vertex-array (* float-total (foreign-type-size :float)) index-array (* index-total (foreign-type-size :unsigned-short)) (make-array index-total)))))
+
+
+(defun run-demo (&optional (debug t))
+  (sb-thread:interrupt-thread
+   (sb-thread:main-thread)
+   (lambda ()
+     (sb-int:with-float-traps-masked
+	 (:invalid :inexact :overflow)
+       (multiple-value-bind (vktk::*vertex-data* vktk::*vertex-data-size* vktk::*index-data* vktk::*index-data-size* vktk::*indices*)
+	   (oc::make-bottle)
+	 (let* ((vktk::*debug* debug)
+		(app (make-instance 'vktk::application)))
+	   (vktk::main app)))))))
+
+
+
+  
 
 (defun make-sphere ()
   (let* ((p (gp:pnt 0.0d0 0.0d0 0.0d0))
@@ -202,6 +283,7 @@
 			       (an-ellipse1 (make-instance 'Geom2d_Ellipse :MajorAxis an-ax2d :MajorRadius a-major :MinorRadius a-minor))
 			       (an-ellipse2 (make-instance 'Geom2d_Ellipse :MajorAxis an-ax2d :MajorRadius a-major :MinorRadius (/ a-minor 4.0d0))))
 			  (values an-ellipse1 an-ellipse2)
+			  (make-vertex-arrays my-body 1.0f0 0.0f0 0.0f0)
 
 			  )))
 
