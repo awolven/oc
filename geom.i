@@ -1351,6 +1351,9 @@ class Handle_Geom_CylindricalSurface : public Handle_Geom_ElementarySurface {
 	Handle_Geom_CylindricalSurface(const gp_Ax3& A3, const Standard_Real Radius){
 		return new Handle_Geom_CylindricalSurface(new Geom_CylindricalSurface(A3, Radius));
 	}
+	Handle_Geom_CylindricalSurface(const gp_Ax2& A2, const Standard_Real Radius){
+		return new Handle_Geom_CylindricalSurface(new Geom_CylindricalSurface(A2, Radius));
+	}
 
     gp_Cylinder getCylinder()
 	{
@@ -1418,6 +1421,15 @@ class Handle_Geom2d_Curve : public Handle_Geom2d_Geometry
 
 %extend Handle_Geom2d_Curve
 {
+
+  void getD0 (const Standard_Real U, gp_Pnt2d& P)
+  { return (*self)->D0(U, P); }
+  void getD1 (const Standard_Real U, gp_Pnt2d& P, gp_Vec2d& V1)
+  { return (*self)->D1(U, P, V1); }
+  void getD2 (const Standard_Real U, gp_Pnt2d& P, gp_Vec2d& V1, gp_Vec2d& V2)
+  { return (*self)->D2(U, P, V1, V2); }
+  void getD3 (const Standard_Real U, gp_Pnt2d& P, gp_Vec2d& V1, gp_Vec2d& V2, gp_Vec2d& V3)
+  { return (*self)->D3(U, P, V1, V2, V3); }
 	Standard_Real firstParameter()
 	{
 		return (*self)->FirstParameter();
@@ -1455,7 +1467,7 @@ class Handle_Geom2d_Curve : public Handle_Geom2d_Geometry
 	
 	gp_Pnt2d getValueAt(const Standard_Real U)
 	{
-		return (*self)->Value(U);
+	  return (*self)->Value(U);
 	}
 	
 	Standard_Integer getGeometryType()

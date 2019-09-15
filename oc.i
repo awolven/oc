@@ -12,8 +12,8 @@
 
 %{
   EXPORT void (* signal_lisp_error) (const char* message) = 0;
-  %}
 
+  %}
 %{
 #include <Standard_Failure.hxx>
 #include <Standard_ErrorHandler.hxx>
@@ -29,7 +29,6 @@
 	}
   catch(Standard_Failure const& error)
     {
-      cout << "FOO!";
       char *error_name = (char*) error.DynamicType()->Name();
 	    char *error_message = (char*) error.GetMessageString();
 	    std::string message;
@@ -80,6 +79,7 @@
 %include "shapeupgrade.i";
 %include "geomapi.i";
 %include "gc.i";
+%include "gce2d.i";
 
 %{
 #include <TopExp.hxx>
@@ -337,3 +337,100 @@ class BRepAlgo
 	static Standard_Boolean IsTopologicallyValid(const TopoDS_Shape& S);
 };
 
+%insert(swiglisp)
+%{
+(cffi:defcfun ("_wrap_new_BRepOffsetAPI_MakeThickSolid__SWIG_7" _wrap_new_BRepOffsetAPI_MakeThickSolid__SWIG_7) :pointer
+  (S :pointer)
+  (ClosingFaces :pointer)
+  (Offset :double)
+  (Tol :double))
+%}
+
+%{
+EXPORT TopoDS_Shape *_wrap_TopoDS_Shape_copy_reference(TopoDS_Shape *self){
+	  TopoDS_Shape *copy = new TopoDS_Shape();
+          *copy=*self;
+	  return copy;
+	}
+#include <TopoDS.hxx>
+#include <TopTools_ListOfShape.hxx>
+#include <Standard_Handle.hxx>
+#include <TopExp_Explorer.hxx>
+#include <Geom_Surface.hxx>
+#include <Geom_Plane.hxx>
+#include <BRep_Tool.hxx>
+EXPORT TopTools_ListOfShape * _wrap_get_face_to_remove(TopoDS_Shape *sPtr) {
+	TopExp_Explorer explorer;
+	TopoDS_Face face;
+	Handle(Geom_Surface) surface;
+	Standard_Real zMax = -1.0;
+	TopoDS_Face *faceToRemove = new TopoDS_Face();
+
+	for (TopExp_Explorer aFaceExplorer(*sPtr, TopAbs_FACE); aFaceExplorer.More(); aFaceExplorer.Next()) {
+		TopoDS_Face face = TopoDS::Face(aFaceExplorer.Current());
+		// Check if <aFace> is the top face of the bottle's neck 
+		Handle(Geom_Surface) surface = BRep_Tool::Surface(face);
+		if (surface->DynamicType() == STANDARD_TYPE(Geom_Plane)) {
+			Handle(Geom_Plane) aPlane = Handle(Geom_Plane)::DownCast(surface);
+			gp_Pnt aPnt = aPlane->Location();
+			Standard_Real aZ = aPnt.Z();
+			if (aZ > zMax) {
+				zMax = aZ;
+				*faceToRemove = face;
+			}
+		}
+	}
+	TopTools_ListOfShape * facesToRemovePtr = new TopTools_ListOfShape();
+	facesToRemovePtr->Append(*faceToRemove);
+	return facesToRemovePtr;
+}
+
+EXPORT TopoDS_Shape * _wrap_create_threads(TopoDS_Shape *myBody, gp_Ax2 *neckAx2, Standard_Real myNeckRadius, Standard_Real myNeckHeight) {
+	// Threading : Create Surfaces
+	Handle(Geom_CylindricalSurface) aCyl1 = new Geom_CylindricalSurface(*neckAx2, myNeckRadius * 0.99);
+	Handle(Geom_CylindricalSurface) aCyl2 = new Geom_CylindricalSurface(*neckAx2, myNeckRadius * 1.05);
+
+	// Threading : Define 2D Curves
+	gp_Pnt2d aPnt(2. * M_PI, myNeckHeight / 2.);
+	gp_Dir2d aDir(2. * M_PI, myNeckHeight / 4.);
+	gp_Ax2d anAx2d(aPnt, aDir);
+
+	Standard_Real aMajor = 2. * M_PI;
+	Standard_Real aMinor = myNeckHeight / 10;
+
+	Handle(Geom2d_Ellipse) anEllipse1 = new Geom2d_Ellipse(anAx2d, aMajor, aMinor);
+	Handle(Geom2d_Ellipse) anEllipse2 = new Geom2d_Ellipse(anAx2d, aMajor, aMinor / 4);
+	Handle(Geom2d_TrimmedCurve) anArc1 = new Geom2d_TrimmedCurve(anEllipse1, 0, M_PI);
+	Handle(Geom2d_TrimmedCurve) anArc2 = new Geom2d_TrimmedCurve(anEllipse2, 0, M_PI);
+	gp_Pnt2d anEllipsePnt1 = anEllipse1->Value(0);
+	gp_Pnt2d anEllipsePnt2 = anEllipse1->Value(M_PI);
+
+	Handle(Geom2d_TrimmedCurve) aSegment = GCE2d_MakeSegment(anEllipsePnt1, anEllipsePnt2);
+	// Threading : Build Edges and Wires
+	TopoDS_Edge anEdge1OnSurf1 = BRepBuilderAPI_MakeEdge(anArc1, aCyl1);
+	TopoDS_Edge anEdge2OnSurf1 = BRepBuilderAPI_MakeEdge(aSegment, aCyl1);
+	TopoDS_Edge anEdge1OnSurf2 = BRepBuilderAPI_MakeEdge(anArc2, aCyl2);
+	TopoDS_Edge anEdge2OnSurf2 = BRepBuilderAPI_MakeEdge(aSegment, aCyl2);
+	TopoDS_Wire threadingWire1 = BRepBuilderAPI_MakeWire(anEdge1OnSurf1, anEdge2OnSurf1);
+	TopoDS_Wire threadingWire2 = BRepBuilderAPI_MakeWire(anEdge1OnSurf2, anEdge2OnSurf2);
+	BRepLib::BuildCurves3d(threadingWire1);
+	BRepLib::BuildCurves3d(threadingWire2);
+
+	// Create Threading 
+	BRepOffsetAPI_ThruSections aTool(Standard_True);
+	aTool.AddWire(threadingWire1);
+	aTool.AddWire(threadingWire2);
+	aTool.CheckCompatibility(Standard_False);
+
+	TopoDS_Shape myThreading = aTool.Shape();
+
+	// Building the Resulting Compound 
+	TopoDS_Compound *aRes = new TopoDS_Compound();
+	BRep_Builder aBuilder;
+	aBuilder.MakeCompound(*aRes);
+	aBuilder.Add(*aRes, *myBody);
+	aBuilder.Add(*aRes, myThreading);
+
+	return aRes;
+}
+%}

@@ -120,22 +120,39 @@ class BRepBuilderAPI_MakeEdge : public BRepBuilderAPI_MakeShape
 {
 	public:
 	BRepBuilderAPI_MakeEdge();
-	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L);
 	BRepBuilderAPI_MakeEdge(const TopoDS_Vertex& V1,const TopoDS_Vertex& V2);
-	BRepBuilderAPI_MakeEdge(const gp_Pnt& P1,const gp_Pnt& P2);
+	BRepBuilderAPI_MakeEdge(const gp_Pnt& Pnt1,const gp_Pnt& Pnt2);
+	BRepBuilderAPI_MakeEdge(const gp_Lin& L);
+	BRepBuilderAPI_MakeEdge(const gp_Lin& L, const Standard_Real param1, const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const gp_Lin& L, const gp_Pnt& Pnt1, const gp_Pnt& Pnt2);
+	BRepBuilderAPI_MakeEdge(const gp_Lin& L, const TopoDS_Vertex& V1, const TopoDS_Vertex& V2);
 	BRepBuilderAPI_MakeEdge(const gp_Circ& L);
-	BRepBuilderAPI_MakeEdge(const gp_Circ& L,const Standard_Real p1,const Standard_Real p2);
-	BRepBuilderAPI_MakeEdge(const gp_Circ& L,const gp_Pnt& P1,const gp_Pnt& P2);
+	BRepBuilderAPI_MakeEdge(const gp_Circ& L,const Standard_Real param1,const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const gp_Circ& L,const gp_Pnt& Pnt1,const gp_Pnt& Pnt2);
 	BRepBuilderAPI_MakeEdge(const gp_Circ& L,const TopoDS_Vertex& V1,const TopoDS_Vertex& V2);
+	BRepBuilderAPI_MakeEdge(const gp_Elips& L);
+	BRepBuilderAPI_MakeEdge(const gp_Elips& L, const Standard_Real param1, const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const gp_Elips& L, const gp_Pnt& Pnt1, const gp_Pnt& Pnt2);
+	BRepBuilderAPI_MakeEdge(const gp_Elips& L, const TopoDS_Vertex& V1, const TopoDS_Vertex& V2);
+	BRepBuilderAPI_MakeEdge(const gp_Hypr& L);
+	BRepBuilderAPI_MakeEdge(const gp_Hypr& L, const Standard_Real param1, const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const gp_Hypr& L, const gp_Pnt& Pnt1, const gp_Pnt& Pnt2);
+	BRepBuilderAPI_MakeEdge(const gp_Hypr& L, const TopoDS_Vertex& V1, const TopoDS_Vertex& V2);
 	BRepBuilderAPI_MakeEdge(const gp_Parab& L);
-	BRepBuilderAPI_MakeEdge(const gp_Parab& L,const Standard_Real p1,const Standard_Real p2);
-	BRepBuilderAPI_MakeEdge(const gp_Parab& L,const gp_Pnt& P1,const gp_Pnt& P2);
+	BRepBuilderAPI_MakeEdge(const gp_Parab& L,const Standard_Real param1,const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const gp_Parab& L,const gp_Pnt& Pnt1,const gp_Pnt& Pnt2);
 	BRepBuilderAPI_MakeEdge(const gp_Parab& L,const TopoDS_Vertex& V1,const TopoDS_Vertex& V2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L, const Standard_Real param1,const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L, const gp_Pnt& Pnt1, const gp_Pnt& Pnt2);	
 	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L, const TopoDS_Vertex& V1,const TopoDS_Vertex& V2);
-	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L, const TopoDS_Vertex& V1,const TopoDS_Vertex& V2,const Standard_Real p1,const Standard_Real p2);
-	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L, const Standard_Real p1,const Standard_Real p2);
-    // 2d curves
-	BRepBuilderAPI_MakeEdge(const Handle_Geom2d_Curve& L, const Handle_Geom_Surface& S, const Standard_Real p1,const Standard_Real p2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L, const gp_Pnt& Pnt1, const gp_Pnt& Pnt2, const Standard_Real param1, const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom_Curve& L, const TopoDS_Vertex& V1,const TopoDS_Vertex& V2,const Standard_Real param1,const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom2d_Curve& L, const Handle_Geom_Surface& S);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom2d_Curve& L, const Handle_Geom_Surface& S, const Standard_Real param1,const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom2d_Curve& L, const Handle_Geom_Surface& S, const TopoDS_Vertex& V1, const TopoDS_Vertex& V2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom2d_Curve& L, const Handle_Geom_Surface& S, const gp_Pnt& Pnt1, const gp_Pnt& Pnt2, const Standard_Real param1, const Standard_Real param2);
+	BRepBuilderAPI_MakeEdge(const Handle_Geom2d_Curve& L, const Handle_Geom_Surface& S, const TopoDS_Vertex& V1, const TopoDS_Vertex& V2, const Standard_Real param1, const Standard_Real param2);
 	Standard_Boolean IsDone() const;
 	BRepBuilderAPI_EdgeError Error() const;
 	const TopoDS_Edge& Edge() const;
@@ -167,6 +184,7 @@ class BRepBuilderAPI_MakeSolid: public BRepBuilderAPI_MakeShape
 	BRepBuilderAPI_MakeSolid(const TopoDS_Solid& So,const TopoDS_Shell& S);
 	void Add(const TopoDS_Shell& S) ;
 	Standard_Boolean IsDone() const;
+	const TopoDS_Solid& Solid();
 	Standard_Boolean IsDeleted(const TopoDS_Shape& S) ;
 };
 

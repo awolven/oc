@@ -229,6 +229,10 @@
   (N :pointer)
   (Vx :pointer))
 
+(cffi:defcfun ("_wrap_new_gp_Ax3__SWIG_3" _wrap_new_gp_Ax3__SWIG_3) :pointer
+  (P :pointer)
+  (V :pointer))
+
 (cffi:defcfun ("_wrap_delete_gp_Ax3" _wrap_delete_gp_Ax3) :void
   (self :pointer))
 
@@ -458,6 +462,16 @@
   (theIndex :int)
   (Value :pointer))
 
+(cffi:defcfun ("_wrap_TColStd_Array1OfInteger_Value" _wrap_TColStd_Array1OfInteger_Value) :int
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_TColStd_Array1OfInteger_Lower" _wrap_TColStd_Array1OfInteger_Lower) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_TColStd_Array1OfInteger_Upper" _wrap_TColStd_Array1OfInteger_Upper) :int
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_delete_TColStd_Array1OfInteger" _wrap_delete_TColStd_Array1OfInteger) :void
   (self :pointer))
 
@@ -545,6 +559,9 @@
   (self :pointer)
   (other :pointer))
 
+(cffi:defcfun ("_wrap_TopoDS_Shape_TShape" _wrap_TopoDS_Shape_TShape) :pointer
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_TopoDS_Shape_Location__SWIG_0" _wrap_TopoDS_Shape_Location__SWIG_0) :pointer
   (self :pointer))
 
@@ -630,6 +647,8 @@
 
 (cffi:defcfun ("_wrap_delete_TopoDS_Shape" _wrap_delete_TopoDS_Shape) :void
   (self :pointer))
+
+(cffi:defcfun ("_wrap_new_TopoDS_Compound" _wrap_new_TopoDS_Compound) :pointer)
 
 (cffi:defcfun ("_wrap_delete_TopoDS_Compound" _wrap_delete_TopoDS_Compound) :void
   (self :pointer))
@@ -809,7 +828,42 @@
   (self :pointer)
   (item :pointer))
 
+(cffi:defcfun ("_wrap_TopTools_ListOfShape_Prepend" _wrap_TopTools_ListOfShape_Prepend) :pointer
+  (self :pointer)
+  (item :pointer))
+
 (cffi:defcfun ("_wrap_delete_TopTools_ListOfShape" _wrap_delete_TopTools_ListOfShape) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_TopTools_MapOfShape" _wrap_new_TopTools_MapOfShape) :pointer)
+
+(cffi:defcfun ("_wrap_TopTools_MapOfShape_Add" _wrap_TopTools_MapOfShape_Add) :int
+  (self :pointer)
+  (aKey :pointer))
+
+(cffi:defcfun ("_wrap_TopTools_MapOfShape_Contains" _wrap_TopTools_MapOfShape_Contains) :int
+  (self :pointer)
+  (aKey :pointer))
+
+(cffi:defcfun ("_wrap_delete_TopTools_MapOfShape" _wrap_delete_TopTools_MapOfShape) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_TCollection_BasicMapIterator_More" _wrap_TCollection_BasicMapIterator_More) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_TCollection_BasicMapIterator_Next" _wrap_TCollection_BasicMapIterator_Next) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_TCollection_BasicMapIterator" _wrap_delete_TCollection_BasicMapIterator) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_TopTools_MapIteratorOfMapOfShape" _wrap_new_TopTools_MapIteratorOfMapOfShape) :pointer
+  (aMap :pointer))
+
+(cffi:defcfun ("_wrap_TopTools_MapIteratorOfMapOfShape_Key" _wrap_TopTools_MapIteratorOfMapOfShape_Key) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_TopTools_MapIteratorOfMapOfShape" _wrap_delete_TopTools_MapIteratorOfMapOfShape) :void
   (self :pointer))
 
 (cffi:defcfun ("_wrap_BRep_Tool_Pnt" _wrap_BRep_Tool_Pnt) :pointer
@@ -854,8 +908,12 @@
 (cffi:defcfun ("_wrap_BRep_Tool_IsClosed" _wrap_BRep_Tool_IsClosed) :int
   (S :pointer))
 
-(cffi:defcfun ("_wrap_BRep_Tool_triangulation" _wrap_BRep_Tool_triangulation) :pointer
+(cffi:defcfun ("_wrap_BRep_Tool_Triangulation" _wrap_BRep_Tool_Triangulation) :pointer
   (F :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Polygon3D" _wrap_BRep_Tool_Polygon3D) :pointer
+  (E :pointer)
   (L :pointer))
 
 (cffi:defcfun ("_wrap_BRep_Tool_range" _wrap_BRep_Tool_range) :void
@@ -875,6 +933,11 @@
   (F :pointer)
   (First :pointer)
   (Last :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnTriangulation" _wrap_BRep_Tool_PolygonOnTriangulation) :pointer
+  (E :pointer)
+  (t_arg1 :pointer)
+  (L :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRep_Tool" _wrap_delete_BRep_Tool) :void
   (self :pointer))
@@ -1238,74 +1301,166 @@
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_0" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_0) :pointer)
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1) :pointer
-  (L :pointer))
-
-(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2) :pointer
   (V1 :pointer)
   (V2 :pointer))
 
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2) :pointer
+  (Pnt1 :pointer)
+  (Pnt2 :pointer))
+
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3) :pointer
-  (P1 :pointer)
-  (P2 :pointer))
+  (L :pointer))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4) :pointer
-  (L :pointer))
+  (L :pointer)
+  (param1 :double)
+  (param2 :double))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5) :pointer
   (L :pointer)
-  (p1 :double)
-  (p2 :double))
+  (Pnt1 :pointer)
+  (Pnt2 :pointer))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6) :pointer
   (L :pointer)
-  (P1 :pointer)
-  (P2 :pointer))
-
-(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7) :pointer
-  (L :pointer)
   (V1 :pointer)
   (V2 :pointer))
 
-(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8) :pointer
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7) :pointer
   (L :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8) :pointer
+  (L :pointer)
+  (param1 :double)
+  (param2 :double))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9) :pointer
   (L :pointer)
-  (p1 :double)
-  (p2 :double))
+  (Pnt1 :pointer)
+  (Pnt2 :pointer))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10) :pointer
   (L :pointer)
-  (P1 :pointer)
-  (P2 :pointer))
-
-(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11) :pointer
-  (L :pointer)
   (V1 :pointer)
   (V2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11) :pointer
+  (L :pointer))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12) :pointer
   (L :pointer)
-  (V1 :pointer)
-  (V2 :pointer))
+  (param1 :double)
+  (param2 :double))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13) :pointer
   (L :pointer)
-  (V1 :pointer)
-  (V2 :pointer)
-  (p1 :double)
-  (p2 :double))
+  (Pnt1 :pointer)
+  (Pnt2 :pointer))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14) :pointer
   (L :pointer)
-  (p1 :double)
-  (p2 :double))
+  (V1 :pointer)
+  (V2 :pointer))
 
 (cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15) :pointer
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_16" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_16) :pointer
+  (L :pointer)
+  (param1 :double)
+  (param2 :double))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_17" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_17) :pointer
+  (L :pointer)
+  (Pnt1 :pointer)
+  (Pnt2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_18" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_18) :pointer
+  (L :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_19" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_19) :pointer
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_20" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_20) :pointer
+  (L :pointer)
+  (param1 :double)
+  (param2 :double))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_21" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_21) :pointer
+  (L :pointer)
+  (Pnt1 :pointer)
+  (Pnt2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_22" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_22) :pointer
+  (L :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_23" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_23) :pointer
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_24" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_24) :pointer
+  (L :pointer)
+  (param1 :double)
+  (param2 :double))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_25" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_25) :pointer
+  (L :pointer)
+  (Pnt1 :pointer)
+  (Pnt2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_26" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_26) :pointer
+  (L :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_27" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_27) :pointer
+  (L :pointer)
+  (Pnt1 :pointer)
+  (Pnt2 :pointer)
+  (param1 :double)
+  (param2 :double))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_28" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_28) :pointer
+  (L :pointer)
+  (V1 :pointer)
+  (V2 :pointer)
+  (param1 :double)
+  (param2 :double))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_29" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_29) :pointer
+  (L :pointer)
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_30" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_30) :pointer
   (L :pointer)
   (S :pointer)
-  (p1 :double)
-  (p2 :double))
+  (param1 :double)
+  (param2 :double))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_31" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_31) :pointer
+  (L :pointer)
+  (S :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_32" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_32) :pointer
+  (L :pointer)
+  (S :pointer)
+  (Pnt1 :pointer)
+  (Pnt2 :pointer)
+  (param1 :double)
+  (param2 :double))
+
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_33" _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_33) :pointer
+  (L :pointer)
+  (S :pointer)
+  (V1 :pointer)
+  (V2 :pointer)
+  (param1 :double)
+  (param2 :double))
 
 (cffi:defcfun ("_wrap_BRepBuilderAPI_MakeEdge_IsDone" _wrap_BRepBuilderAPI_MakeEdge_IsDone) :int
   (self :pointer))
@@ -1388,6 +1543,9 @@
   (S :pointer))
 
 (cffi:defcfun ("_wrap_BRepBuilderAPI_MakeSolid_IsDone" _wrap_BRepBuilderAPI_MakeSolid_IsDone) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepBuilderAPI_MakeSolid_Solid" _wrap_BRepBuilderAPI_MakeSolid_Solid) :pointer
   (self :pointer))
 
 (cffi:defcfun ("_wrap_BRepBuilderAPI_MakeSolid_IsDeleted" _wrap_BRepBuilderAPI_MakeSolid_IsDeleted) :int
@@ -1698,7 +1856,114 @@
   (Offset :double)
   (Tol :double))
 
+(cffi:defcfun ("_wrap_BRepOffsetAPI_MakeThickSolid_Build" _wrap_BRepOffsetAPI_MakeThickSolid_Build) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_MakeThickSolid_Modified" _wrap_BRepOffsetAPI_MakeThickSolid_Modified) :pointer
+  (self :pointer)
+  (S :pointer))
+
 (cffi:defcfun ("_wrap_delete_BRepOffsetAPI_MakeThickSolid" _wrap_delete_BRepOffsetAPI_MakeThickSolid) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepOffsetAPI_ThruSections__SWIG_0" _wrap_new_BRepOffsetAPI_ThruSections__SWIG_0) :pointer
+  (isSolid :int)
+  (ruled :int)
+  (pres3d :double))
+
+(cffi:defcfun ("_wrap_new_BRepOffsetAPI_ThruSections__SWIG_1" _wrap_new_BRepOffsetAPI_ThruSections__SWIG_1) :pointer
+  (isSolid :int)
+  (ruled :int))
+
+(cffi:defcfun ("_wrap_new_BRepOffsetAPI_ThruSections__SWIG_2" _wrap_new_BRepOffsetAPI_ThruSections__SWIG_2) :pointer
+  (isSolid :int))
+
+(cffi:defcfun ("_wrap_new_BRepOffsetAPI_ThruSections__SWIG_3" _wrap_new_BRepOffsetAPI_ThruSections__SWIG_3) :pointer)
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_Init__SWIG_0" _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_0) :void
+  (self :pointer)
+  (isSolid :int)
+  (ruled :int)
+  (pres3d :double))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_Init__SWIG_1" _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_1) :void
+  (self :pointer)
+  (isSolid :int)
+  (ruled :int))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_Init__SWIG_2" _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_2) :void
+  (self :pointer)
+  (isSolid :int))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_Init__SWIG_3" _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_3) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_AddWire" _wrap_BRepOffsetAPI_ThruSections_AddWire) :void
+  (self :pointer)
+  (wire :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_AddVertex" _wrap_BRepOffsetAPI_ThruSections_AddVertex) :void
+  (self :pointer)
+  (aVertex :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_0" _wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_0) :void
+  (self :pointer)
+  (check :int))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_1" _wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_1) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_SetSmoothing" _wrap_BRepOffsetAPI_ThruSections_SetSmoothing) :void
+  (self :pointer)
+  (UseSmoothing :int))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_SetParType" _wrap_BRepOffsetAPI_ThruSections_SetParType) :void
+  (self :pointer)
+  (ParType :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_SetContinuity" _wrap_BRepOffsetAPI_ThruSections_SetContinuity) :void
+  (self :pointer)
+  (C GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_SetCriteriumWeight" _wrap_BRepOffsetAPI_ThruSections_SetCriteriumWeight) :void
+  (self :pointer)
+  (W1 :double)
+  (W2 :double)
+  (W3 :double))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_SetMaxDegree" _wrap_BRepOffsetAPI_ThruSections_SetMaxDegree) :void
+  (self :pointer)
+  (MaxDeg :int))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_ParType" _wrap_BRepOffsetAPI_ThruSections_ParType) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_Continuity" _wrap_BRepOffsetAPI_ThruSections_Continuity) GeomAbs_Shape
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_MaxDegree" _wrap_BRepOffsetAPI_ThruSections_MaxDegree) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_UseSmoothing" _wrap_BRepOffsetAPI_ThruSections_UseSmoothing) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_CriteriumWeight" _wrap_BRepOffsetAPI_ThruSections_CriteriumWeight) :void
+  (self :pointer)
+  (W1 :pointer)
+  (W2 :pointer)
+  (W3 :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_FirstShape" _wrap_BRepOffsetAPI_ThruSections_FirstShape) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_LastShape" _wrap_BRepOffsetAPI_ThruSections_LastShape) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepOffsetAPI_ThruSections_GeneratedFace" _wrap_BRepOffsetAPI_ThruSections_GeneratedFace) :pointer
+  (self :pointer)
+  (Edge :pointer))
+
+(cffi:defcfun ("_wrap_delete_BRepOffsetAPI_ThruSections" _wrap_delete_BRepOffsetAPI_ThruSections) :void
   (self :pointer))
 
 (cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeBox" _wrap_new_BRepPrimAPI_MakeBox) :pointer
@@ -1874,37 +2139,35 @@
 (cffi:defcfun ("_wrap_delete_BRepAlgoAPI_Section" _wrap_delete_BRepAlgoAPI_Section) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_new_Poly_Triangulation" _wrap_new_Poly_Triangulation) :pointer
-  (nbNodes :int)
-  (nbTriangles :int)
-  (UVNodes :int))
-
-(cffi:defcfun ("_wrap_Poly_Triangulation_Deflection__SWIG_0" _wrap_Poly_Triangulation_Deflection__SWIG_0) :double
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_Shape" _wrap_BRepAlgoAPI_Algo_Shape) :pointer
   (self :pointer))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_Deflection__SWIG_1" _wrap_Poly_Triangulation_Deflection__SWIG_1) :void
+(cffi:defcfun ("_wrap_Poly_Triangulation_deflection__SWIG_0" _wrap_Poly_Triangulation_deflection__SWIG_0) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Triangulation_deflection__SWIG_1" _wrap_Poly_Triangulation_deflection__SWIG_1) :void
   (self :pointer)
   (D :double))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_RemoveUVNodes" _wrap_Poly_Triangulation_RemoveUVNodes) :void
+(cffi:defcfun ("_wrap_Poly_Triangulation_removeUVNodes" _wrap_Poly_Triangulation_removeUVNodes) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_NbNodes" _wrap_Poly_Triangulation_NbNodes) :int
+(cffi:defcfun ("_wrap_Poly_Triangulation_nbNodes" _wrap_Poly_Triangulation_nbNodes) :int
   (self :pointer))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_NbTriangles" _wrap_Poly_Triangulation_NbTriangles) :int
+(cffi:defcfun ("_wrap_Poly_Triangulation_nbTriangles" _wrap_Poly_Triangulation_nbTriangles) :int
   (self :pointer))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_HasUVNodes" _wrap_Poly_Triangulation_HasUVNodes) :int
+(cffi:defcfun ("_wrap_Poly_Triangulation_hasUVNodes" _wrap_Poly_Triangulation_hasUVNodes) :int
   (self :pointer))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_Triangles" _wrap_Poly_Triangulation_Triangles) :pointer
+(cffi:defcfun ("_wrap_Poly_Triangulation_triangles" _wrap_Poly_Triangulation_triangles) :pointer
   (self :pointer))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_Nodes" _wrap_Poly_Triangulation_Nodes) :pointer
+(cffi:defcfun ("_wrap_Poly_Triangulation_nodes" _wrap_Poly_Triangulation_nodes) :pointer
   (self :pointer))
 
-(cffi:defcfun ("_wrap_Poly_Triangulation_UVNodes" _wrap_Poly_Triangulation_UVNodes) :pointer
+(cffi:defcfun ("_wrap_Poly_Triangulation_uVNodes" _wrap_Poly_Triangulation_uVNodes) :pointer
   (self :pointer))
 
 (cffi:defcfun ("_wrap_delete_Poly_Triangulation" _wrap_delete_Poly_Triangulation) :void
@@ -1947,6 +2210,70 @@
   (Index :int))
 
 (cffi:defcfun ("_wrap_delete_Poly_Array1OfTriangle" _wrap_delete_Poly_Array1OfTriangle) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Poly_Polygon3D__SWIG_0" _wrap_new_Poly_Polygon3D__SWIG_0) :pointer
+  (Nodes :pointer))
+
+(cffi:defcfun ("_wrap_new_Poly_Polygon3D__SWIG_1" _wrap_new_Poly_Polygon3D__SWIG_1) :pointer
+  (Nodes :pointer)
+  (Parameters :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon3D_Deflection__SWIG_0" _wrap_Poly_Polygon3D_Deflection__SWIG_0) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon3D_Deflection__SWIG_1" _wrap_Poly_Polygon3D_Deflection__SWIG_1) :void
+  (self :pointer)
+  (D :double))
+
+(cffi:defcfun ("_wrap_Poly_Polygon3D_NbNodes" _wrap_Poly_Polygon3D_NbNodes) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon3D_Nodes" _wrap_Poly_Polygon3D_Nodes) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon3D_HasParameters" _wrap_Poly_Polygon3D_HasParameters) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon3D_Parameters" _wrap_Poly_Polygon3D_Parameters) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon3D_ChangeParameters" _wrap_Poly_Polygon3D_ChangeParameters) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Poly_Polygon3D" _wrap_delete_Poly_Polygon3D) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Poly_PolygonOnTriangulation__SWIG_0" _wrap_new_Poly_PolygonOnTriangulation__SWIG_0) :pointer
+  (Nodes :pointer))
+
+(cffi:defcfun ("_wrap_new_Poly_PolygonOnTriangulation__SWIG_1" _wrap_new_Poly_PolygonOnTriangulation__SWIG_1) :pointer
+  (Nodes :pointer)
+  (Parameters :pointer))
+
+(cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_Copy" _wrap_Poly_PolygonOnTriangulation_Copy) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_0" _wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_0) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_1" _wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_1) :void
+  (self :pointer)
+  (D :double))
+
+(cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_NbNodes" _wrap_Poly_PolygonOnTriangulation_NbNodes) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_Nodes" _wrap_Poly_PolygonOnTriangulation_Nodes) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_HasParameters" _wrap_Poly_PolygonOnTriangulation_HasParameters) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_Parameters" _wrap_Poly_PolygonOnTriangulation_Parameters) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Poly_PolygonOnTriangulation" _wrap_delete_Poly_PolygonOnTriangulation) :void
   (self :pointer))
 
 (cffi:defcfun ("_wrap_delete_Geom_Geometry" _wrap_delete_Geom_Geometry) :void
@@ -2740,8 +3067,12 @@
 (cffi:defcfun ("_wrap_delete_Geom_ConicalSurface" _wrap_delete_Geom_ConicalSurface) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_new_Geom_CylindricalSurface" _wrap_new_Geom_CylindricalSurface) :pointer
+(cffi:defcfun ("_wrap_new_Geom_CylindricalSurface__SWIG_0" _wrap_new_Geom_CylindricalSurface__SWIG_0) :pointer
   (A3 :pointer)
+  (Radius :double))
+
+(cffi:defcfun ("_wrap_new_Geom_CylindricalSurface__SWIG_1" _wrap_new_Geom_CylindricalSurface__SWIG_1) :pointer
+  (A2 :pointer)
   (Radius :double))
 
 (cffi:defcfun ("_wrap_Geom_CylindricalSurface_getCylinder" _wrap_Geom_CylindricalSurface_getCylinder) :pointer
@@ -2791,6 +3122,32 @@
 
 (cffi:defcfun ("_wrap_delete_Geom2d_Geometry" _wrap_delete_Geom2d_Geometry) :void
   (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD0" _wrap_Geom2d_Curve_getD0) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD1" _wrap_Geom2d_Curve_getD1) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD2" _wrap_Geom2d_Curve_getD2) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD3" _wrap_Geom2d_Curve_getD3) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer)
+  (V3 :pointer))
 
 (cffi:defcfun ("_wrap_Geom2d_Curve_firstParameter" _wrap_Geom2d_Curve_firstParameter) :double
   (self :pointer))
@@ -3132,12 +3489,164 @@
 (cffi:defcfun ("_wrap_delete_Bisector_BisecPC" _wrap_delete_Bisector_BisecPC) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_BRepLib_Precision__SWIG_0" _wrap_BRepLib_Precision__SWIG_0) :void
+  (P :double))
+
+(cffi:defcfun ("_wrap_BRepLib_Precision__SWIG_1" _wrap_BRepLib_Precision__SWIG_1) :double)
+
+(cffi:defcfun ("_wrap_BRepLib_Plane__SWIG_0" _wrap_BRepLib_Plane__SWIG_0) :void
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_Plane__SWIG_1" _wrap_BRepLib_Plane__SWIG_1) :pointer)
+
+(cffi:defcfun ("_wrap_BRepLib_CheckSameRange__SWIG_0" _wrap_BRepLib_CheckSameRange__SWIG_0) :int
+  (E :pointer)
+  (Confusion :double))
+
+(cffi:defcfun ("_wrap_BRepLib_CheckSameRange__SWIG_1" _wrap_BRepLib_CheckSameRange__SWIG_1) :int
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_SameRange__SWIG_0" _wrap_BRepLib_SameRange__SWIG_0) :void
+  (E :pointer)
+  (Tolerance :double))
+
+(cffi:defcfun ("_wrap_BRepLib_SameRange__SWIG_1" _wrap_BRepLib_SameRange__SWIG_1) :void
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurve3d__SWIG_0" _wrap_BRepLib_BuildCurve3d__SWIG_0) :int
+  (E :pointer)
+  (Tolerance :double)
+  (Continuity GeomAbs_Shape)
+  (MaxDegree :int)
+  (MaxSegment :int))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurve3d__SWIG_1" _wrap_BRepLib_BuildCurve3d__SWIG_1) :int
+  (E :pointer)
+  (Tolerance :double)
+  (Continuity GeomAbs_Shape)
+  (MaxDegree :int))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurve3d__SWIG_2" _wrap_BRepLib_BuildCurve3d__SWIG_2) :int
+  (E :pointer)
+  (Tolerance :double)
+  (Continuity GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurve3d__SWIG_3" _wrap_BRepLib_BuildCurve3d__SWIG_3) :int
+  (E :pointer)
+  (Tolerance :double))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurve3d__SWIG_4" _wrap_BRepLib_BuildCurve3d__SWIG_4) :int
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurves3d__SWIG_0" _wrap_BRepLib_BuildCurves3d__SWIG_0) :int
+  (S :pointer)
+  (Tolerance :double)
+  (Continuity GeomAbs_Shape)
+  (MaxDegree :int)
+  (MaxSegment :int))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurves3d__SWIG_1" _wrap_BRepLib_BuildCurves3d__SWIG_1) :int
+  (S :pointer)
+  (Tolerance :double)
+  (Continuity GeomAbs_Shape)
+  (MaxDegree :int))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurves3d__SWIG_2" _wrap_BRepLib_BuildCurves3d__SWIG_2) :int
+  (S :pointer)
+  (Tolerance :double)
+  (Continuity GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurves3d__SWIG_3" _wrap_BRepLib_BuildCurves3d__SWIG_3) :int
+  (S :pointer)
+  (Tolerance :double))
+
+(cffi:defcfun ("_wrap_BRepLib_BuildCurves3d__SWIG_4" _wrap_BRepLib_BuildCurves3d__SWIG_4) :int
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_UpdateEdgeTol" _wrap_BRepLib_UpdateEdgeTol) :int
+  (E :pointer)
+  (MinToleranceRequest :double)
+  (MaxToleranceToCheck :double))
+
+(cffi:defcfun ("_wrap_BRepLib_UpdateEdgeTolerance" _wrap_BRepLib_UpdateEdgeTolerance) :int
+  (S :pointer)
+  (MinToleranceRequest :double)
+  (MaxToleranceToCheck :double))
+
+(cffi:defcfun ("_wrap_BRepLib_SameParameter__SWIG_0" _wrap_BRepLib_SameParameter__SWIG_0) :void
+  (E :pointer)
+  (Tolerance :double))
+
+(cffi:defcfun ("_wrap_BRepLib_SameParameter__SWIG_1" _wrap_BRepLib_SameParameter__SWIG_1) :void
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_SameParameter__SWIG_2" _wrap_BRepLib_SameParameter__SWIG_2) :void
+  (S :pointer)
+  (Tolerance :double)
+  (forced :int))
+
+(cffi:defcfun ("_wrap_BRepLib_SameParameter__SWIG_3" _wrap_BRepLib_SameParameter__SWIG_3) :void
+  (S :pointer)
+  (Tolerance :double))
+
+(cffi:defcfun ("_wrap_BRepLib_SameParameter__SWIG_4" _wrap_BRepLib_SameParameter__SWIG_4) :void
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_UpdateTolerances__SWIG_0" _wrap_BRepLib_UpdateTolerances__SWIG_0) :void
+  (S :pointer)
+  (verifyFaceTolerance :int))
+
+(cffi:defcfun ("_wrap_BRepLib_UpdateTolerances__SWIG_1" _wrap_BRepLib_UpdateTolerances__SWIG_1) :void
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_UpdateInnerTolerances" _wrap_BRepLib_UpdateInnerTolerances) :void
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_OrientClosedSolid" _wrap_BRepLib_OrientClosedSolid) :int
+  (solid :pointer))
+
 (cffi:defcfun ("_wrap_BRepLib_EncodeRegularity__SWIG_0" _wrap_BRepLib_EncodeRegularity__SWIG_0) :void
   (S :pointer)
   (TolAng :double))
 
 (cffi:defcfun ("_wrap_BRepLib_EncodeRegularity__SWIG_1" _wrap_BRepLib_EncodeRegularity__SWIG_1) :void
   (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_EncodeRegularity__SWIG_2" _wrap_BRepLib_EncodeRegularity__SWIG_2) :void
+  (S :pointer)
+  (F1 :pointer)
+  (F2 :pointer)
+  (TolAng :double))
+
+(cffi:defcfun ("_wrap_BRepLib_EncodeRegularity__SWIG_3" _wrap_BRepLib_EncodeRegularity__SWIG_3) :void
+  (S :pointer)
+  (F1 :pointer)
+  (F2 :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_SortFaces" _wrap_BRepLib_SortFaces) :void
+  (S :pointer)
+  (LF :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_ReverseSortFaces" _wrap_BRepLib_ReverseSortFaces) :void
+  (S :pointer)
+  (LF :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_EnsureNormalConsistency__SWIG_0" _wrap_BRepLib_EnsureNormalConsistency__SWIG_0) :int
+  (S :pointer)
+  (theAngTol :double)
+  (ForceComputeNormals :int))
+
+(cffi:defcfun ("_wrap_BRepLib_EnsureNormalConsistency__SWIG_1" _wrap_BRepLib_EnsureNormalConsistency__SWIG_1) :int
+  (S :pointer)
+  (theAngTol :double))
+
+(cffi:defcfun ("_wrap_BRepLib_EnsureNormalConsistency__SWIG_2" _wrap_BRepLib_EnsureNormalConsistency__SWIG_2) :int
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepLib_BoundingVertex" _wrap_BRepLib_BoundingVertex) :void
+  (theLV :pointer)
+  (theNewCenter :pointer)
+  (theNewTol :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepLib" _wrap_delete_BRepLib) :void
   (self :pointer))
@@ -3664,6 +4173,45 @@
 (cffi:defcfun ("_wrap_delete_GC_MakeSegment" _wrap_delete_GC_MakeSegment) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_GCE2d_Root_IsDone" _wrap_GCE2d_Root_IsDone) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GCE2d_Root_Status" _wrap_GCE2d_Root_Status) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_GCE2d_Root" _wrap_delete_GCE2d_Root) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_GCE2d_MakeSegment__SWIG_0" _wrap_new_GCE2d_MakeSegment__SWIG_0) :pointer
+  (P1 :pointer)
+  (P2 :pointer))
+
+(cffi:defcfun ("_wrap_new_GCE2d_MakeSegment__SWIG_1" _wrap_new_GCE2d_MakeSegment__SWIG_1) :pointer
+  (P1 :pointer)
+  (V :pointer)
+  (P2 :pointer))
+
+(cffi:defcfun ("_wrap_new_GCE2d_MakeSegment__SWIG_2" _wrap_new_GCE2d_MakeSegment__SWIG_2) :pointer
+  (Line :pointer)
+  (U1 :double)
+  (U2 :double))
+
+(cffi:defcfun ("_wrap_new_GCE2d_MakeSegment__SWIG_3" _wrap_new_GCE2d_MakeSegment__SWIG_3) :pointer
+  (Line :pointer)
+  (Point :pointer)
+  (Ulast :double))
+
+(cffi:defcfun ("_wrap_new_GCE2d_MakeSegment__SWIG_4" _wrap_new_GCE2d_MakeSegment__SWIG_4) :pointer
+  (Line :pointer)
+  (P1 :pointer)
+  (P2 :pointer))
+
+(cffi:defcfun ("_wrap_GCE2d_MakeSegment_Value" _wrap_GCE2d_MakeSegment_Value) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_GCE2d_MakeSegment" _wrap_delete_GCE2d_MakeSegment) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_new_TopLoc_Location__SWIG_0" _wrap_new_TopLoc_Location__SWIG_0) :pointer)
 
 (cffi:defcfun ("_wrap_new_TopLoc_Location__SWIG_1" _wrap_new_TopLoc_Location__SWIG_1) :pointer
@@ -3990,5 +4538,12 @@
 
 (cffi:defcfun ("_wrap_delete_BRepAlgo" _wrap_delete_BRepAlgo) :void
   (self :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepOffsetAPI_MakeThickSolid__SWIG_7" _wrap_new_BRepOffsetAPI_MakeThickSolid__SWIG_7) :pointer
+  (S :pointer)
+  (ClosingFaces :pointer)
+  (Offset :double)
+  (Tol :double))
+
 
 

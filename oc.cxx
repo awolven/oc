@@ -188,6 +188,7 @@ template <typename T> T SwigValueInit() {
 
 
   EXPORT void (* signal_lisp_error) (const char* message) = 0;
+
   
 
 #include <Standard_Failure.hxx>
@@ -258,7 +259,6 @@ EXPORT gp_Pnt *_wrap_new_gp_Pnt__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -292,7 +292,6 @@ EXPORT gp_Pnt *_wrap_new_gp_Pnt__SWIG_1 (gp_XYZ *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -330,7 +329,6 @@ EXPORT gp_Pnt *_wrap_new_gp_Pnt__SWIG_2 (Standard_Real larg1, Standard_Real larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -364,7 +362,6 @@ EXPORT Standard_Real _wrap_gp_Pnt_X (gp_Pnt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -398,7 +395,6 @@ EXPORT Standard_Real _wrap_gp_Pnt_Y (gp_Pnt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -432,7 +428,6 @@ EXPORT Standard_Real _wrap_gp_Pnt_Z (gp_Pnt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -464,7 +459,6 @@ EXPORT void _wrap_delete_gp_Pnt (gp_Pnt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -495,7 +489,6 @@ EXPORT gp_Pnt2d *_wrap_new_gp_Pnt2d__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -529,7 +522,6 @@ EXPORT gp_Pnt2d *_wrap_new_gp_Pnt2d__SWIG_1 (gp_XY *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -565,7 +557,6 @@ EXPORT gp_Pnt2d *_wrap_new_gp_Pnt2d__SWIG_2 (Standard_Real larg1, Standard_Real 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -597,7 +588,6 @@ EXPORT void _wrap_delete_gp_Pnt2d (gp_Pnt2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -628,7 +618,6 @@ EXPORT gp_Dir2d *_wrap_new_gp_Dir2d__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -662,7 +651,6 @@ EXPORT gp_Dir2d *_wrap_new_gp_Dir2d__SWIG_1 (gp_Vec2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -696,7 +684,6 @@ EXPORT gp_Dir2d *_wrap_new_gp_Dir2d__SWIG_2 (gp_XY *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -732,7 +719,6 @@ EXPORT gp_Dir2d *_wrap_new_gp_Dir2d__SWIG_3 (Standard_Real larg1, Standard_Real 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -764,7 +750,6 @@ EXPORT void _wrap_delete_gp_Dir2d (gp_Dir2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -795,7 +780,6 @@ EXPORT gp_Vec2d *_wrap_new_gp_Vec2d__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -829,7 +813,6 @@ EXPORT gp_Vec2d *_wrap_new_gp_Vec2d__SWIG_1 (gp_Dir2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -863,7 +846,6 @@ EXPORT gp_Vec2d *_wrap_new_gp_Vec2d__SWIG_2 (gp_XY *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -899,7 +881,6 @@ EXPORT gp_Vec2d *_wrap_new_gp_Vec2d__SWIG_3 (Standard_Real larg1, Standard_Real 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -935,7 +916,6 @@ EXPORT gp_Vec2d *_wrap_new_gp_Vec2d__SWIG_4 (gp_Pnt2d *larg1, gp_Pnt2d *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -967,7 +947,6 @@ EXPORT void _wrap_delete_gp_Vec2d (gp_Vec2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -998,7 +977,6 @@ EXPORT gp_Ax2d *_wrap_new_gp_Ax2d__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1034,7 +1012,6 @@ EXPORT gp_Ax2d *_wrap_new_gp_Ax2d__SWIG_1 (gp_Pnt2d *larg1, gp_Dir2d *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1066,7 +1043,6 @@ EXPORT void _wrap_delete_gp_Ax2d (gp_Ax2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1097,7 +1073,6 @@ EXPORT gp_Ax22d *_wrap_new_gp_Ax22d__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1135,7 +1110,6 @@ EXPORT gp_Ax22d *_wrap_new_gp_Ax22d__SWIG_1 (gp_Pnt2d *larg1, gp_Dir2d *larg2, g
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1173,7 +1147,6 @@ EXPORT gp_Ax22d *_wrap_new_gp_Ax22d__SWIG_2 (gp_Pnt2d *larg1, gp_Dir2d *larg2, b
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1209,7 +1182,6 @@ EXPORT gp_Ax22d *_wrap_new_gp_Ax22d__SWIG_3 (gp_Pnt2d *larg1, gp_Dir2d *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1245,7 +1217,6 @@ EXPORT gp_Ax22d *_wrap_new_gp_Ax22d__SWIG_4 (gp_Ax2d *larg1, bool larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1279,7 +1250,6 @@ EXPORT gp_Ax22d *_wrap_new_gp_Ax22d__SWIG_5 (gp_Ax2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1311,7 +1281,6 @@ EXPORT void _wrap_delete_gp_Ax22d (gp_Ax22d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1344,7 +1313,6 @@ EXPORT gp_Pln *_wrap_new_gp_Pln__SWIG_0 (gp_Ax3 *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1380,7 +1348,6 @@ EXPORT gp_Pln *_wrap_new_gp_Pln__SWIG_1 (gp_Pnt *larg1, gp_Dir *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1420,7 +1387,6 @@ EXPORT gp_Pln *_wrap_new_gp_Pln__SWIG_2 (Standard_Real larg1, Standard_Real larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1452,7 +1418,6 @@ EXPORT void _wrap_delete_gp_Pln (gp_Pln *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1483,7 +1448,6 @@ EXPORT gp_Vec *_wrap_new_gp_Vec__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1517,7 +1481,6 @@ EXPORT gp_Vec *_wrap_new_gp_Vec__SWIG_1 (gp_Dir *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1551,7 +1514,6 @@ EXPORT gp_Vec *_wrap_new_gp_Vec__SWIG_2 (gp_XYZ *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1589,7 +1551,6 @@ EXPORT gp_Vec *_wrap_new_gp_Vec__SWIG_3 (Standard_Real larg1, Standard_Real larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1625,7 +1586,6 @@ EXPORT gp_Vec *_wrap_new_gp_Vec__SWIG_4 (gp_Pnt *larg1, gp_Pnt *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1657,7 +1617,6 @@ EXPORT void _wrap_delete_gp_Vec (gp_Vec *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1688,7 +1647,6 @@ EXPORT gp_Dir *_wrap_new_gp_Dir__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1722,7 +1680,6 @@ EXPORT gp_Dir *_wrap_new_gp_Dir__SWIG_1 (gp_Vec *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1756,7 +1713,6 @@ EXPORT gp_Dir *_wrap_new_gp_Dir__SWIG_2 (gp_XYZ *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1794,7 +1750,6 @@ EXPORT gp_Dir *_wrap_new_gp_Dir__SWIG_3 (Standard_Real larg1, Standard_Real larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1826,7 +1781,6 @@ EXPORT void _wrap_delete_gp_Dir (gp_Dir *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1857,7 +1811,6 @@ EXPORT gp_Ax3 *_wrap_new_gp_Ax3__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1891,7 +1844,6 @@ EXPORT gp_Ax3 *_wrap_new_gp_Ax3__SWIG_1 (gp_Ax2 *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1929,7 +1881,6 @@ EXPORT gp_Ax3 *_wrap_new_gp_Ax3__SWIG_2 (gp_Pnt *larg1, gp_Dir *larg2, gp_Dir *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1937,6 +1888,41 @@ EXPORT gp_Ax3 *_wrap_new_gp_Ax3__SWIG_2 (gp_Pnt *larg1, gp_Dir *larg2, gp_Dir *l
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: new_gp_Ax3\n  * wrapname: _wrap_new_gp_Ax3__SWIG_2\n  * fulldecl: gp_Ax3::gp_Ax3(gp_Pnt const &,gp_Dir const &,gp_Dir const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (gp_Ax3 *)0;
+  }
+}
+
+
+EXPORT gp_Ax3 *_wrap_new_gp_Ax3__SWIG_3 (gp_Pnt *larg1, gp_Dir *larg2) {
+  gp_Ax3 * lresult = (gp_Ax3 *)0 ;
+  gp_Pnt *arg1 = 0 ;
+  gp_Dir *arg2 = 0 ;
+  gp_Ax3 *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (gp_Ax3 *)new gp_Ax3((gp_Pnt const &)*arg1,(gp_Dir const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_gp_Ax3\n  * wrapname: _wrap_new_gp_Ax3__SWIG_3\n  * fulldecl: gp_Ax3::gp_Ax3(gp_Pnt const &,gp_Dir const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -1961,7 +1947,6 @@ EXPORT void _wrap_delete_gp_Ax3 (gp_Ax3 *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -1992,7 +1977,6 @@ EXPORT gp_Ax2 *_wrap_new_gp_Ax2__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2028,7 +2012,6 @@ EXPORT gp_Ax2 *_wrap_new_gp_Ax2__SWIG_1 (gp_Pnt *larg1, gp_Dir *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2066,7 +2049,6 @@ EXPORT gp_Ax2 *_wrap_new_gp_Ax2__SWIG_2 (gp_Pnt *larg1, gp_Dir *larg2, gp_Dir *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2098,7 +2080,6 @@ EXPORT void _wrap_delete_gp_Ax2 (gp_Ax2 *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2129,7 +2110,6 @@ EXPORT gp_Ax1 *_wrap_new_gp_Ax1__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2165,7 +2145,6 @@ EXPORT gp_Ax1 *_wrap_new_gp_Ax1__SWIG_1 (gp_Pnt *larg1, gp_Dir *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2197,7 +2176,6 @@ EXPORT void _wrap_delete_gp_Ax1 (gp_Ax1 *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2228,7 +2206,6 @@ EXPORT gp_Trsf2d *_wrap_new_gp_Trsf2d__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2262,7 +2239,6 @@ EXPORT gp_Trsf2d *_wrap_new_gp_Trsf2d__SWIG_1 (gp_Trsf *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2294,7 +2270,6 @@ EXPORT void _wrap_delete_gp_Trsf2d (gp_Trsf2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2325,7 +2300,6 @@ EXPORT gp_Trsf *_wrap_new_gp_Trsf__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2359,7 +2333,6 @@ EXPORT gp_Trsf *_wrap_new_gp_Trsf__SWIG_1 (gp_Trsf2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2393,7 +2366,6 @@ EXPORT void _wrap_gp_Trsf_SetMirror__SWIG_0 (gp_Trsf *larg1, gp_Ax1 *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2426,7 +2398,6 @@ EXPORT void _wrap_gp_Trsf_SetMirror__SWIG_1 (gp_Trsf *larg1, gp_Ax2 *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2461,7 +2432,6 @@ EXPORT void _wrap_gp_Trsf_SetRotation (gp_Trsf *larg1, gp_Ax1 *larg2, Standard_R
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2494,7 +2464,6 @@ EXPORT void _wrap_gp_Trsf_SetTranslation (gp_Trsf *larg1, gp_Vec *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2549,7 +2518,6 @@ EXPORT void _wrap_gp_Trsf_SetValues (gp_Trsf *larg1, Standard_Real larg2, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2580,7 +2548,6 @@ EXPORT void _wrap_delete_gp_Trsf (gp_Trsf *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2615,7 +2582,6 @@ EXPORT gp_Circ *_wrap_new_gp_Circ (gp_Ax2 *larg1, Standard_Real larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2647,7 +2613,6 @@ EXPORT void _wrap_delete_gp_Circ (gp_Circ *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2684,7 +2649,6 @@ EXPORT gp_Cone *_wrap_new_gp_Cone (gp_Ax3 *larg1, Standard_Real larg2, Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2716,7 +2680,6 @@ EXPORT void _wrap_delete_gp_Cone (gp_Cone *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2751,7 +2714,6 @@ EXPORT gp_Cylinder *_wrap_new_gp_Cylinder (gp_Ax3 *larg1, Standard_Real larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2783,7 +2745,6 @@ EXPORT void _wrap_delete_gp_Cylinder (gp_Cylinder *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2818,7 +2779,6 @@ EXPORT gp_Parab *_wrap_new_gp_Parab__SWIG_0 (gp_Ax2 *larg1, Standard_Real larg2)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2854,7 +2814,6 @@ EXPORT gp_Parab *_wrap_new_gp_Parab__SWIG_1 (gp_Ax1 *larg1, gp_Pnt *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2886,7 +2845,6 @@ EXPORT void _wrap_delete_gp_Parab (gp_Parab *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2923,7 +2881,6 @@ EXPORT gp_Hypr *_wrap_new_gp_Hypr (gp_Ax2 *larg1, Standard_Real larg2, Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2955,7 +2912,6 @@ EXPORT void _wrap_delete_gp_Hypr (gp_Hypr *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -2992,7 +2948,6 @@ EXPORT gp_Torus *_wrap_new_gp_Torus (gp_Ax3 *larg1, Standard_Real *larg2, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3024,7 +2979,6 @@ EXPORT void _wrap_delete_gp_Torus (gp_Torus *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3059,7 +3013,6 @@ EXPORT gp_Sphere *_wrap_new_gp_Sphere (gp_Ax3 *larg1, Standard_Real *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3091,7 +3044,6 @@ EXPORT void _wrap_delete_gp_Sphere (gp_Sphere *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3122,7 +3074,6 @@ EXPORT gp_XYZ *_wrap_new_gp_XYZ__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3160,7 +3111,6 @@ EXPORT gp_XYZ *_wrap_new_gp_XYZ__SWIG_1 (Standard_Real larg1, Standard_Real larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3192,7 +3142,6 @@ EXPORT void _wrap_delete_gp_XYZ (gp_XYZ *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3223,7 +3172,6 @@ EXPORT gp_XY *_wrap_new_gp_XY__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3259,7 +3207,6 @@ EXPORT gp_XY *_wrap_new_gp_XY__SWIG_1 (Standard_Real larg1, Standard_Real larg2)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3291,7 +3238,6 @@ EXPORT void _wrap_delete_gp_XY (gp_XY *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3322,7 +3268,6 @@ EXPORT gp_Lin2d *_wrap_new_gp_Lin2d__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3356,7 +3301,6 @@ EXPORT gp_Lin2d *_wrap_new_gp_Lin2d__SWIG_1 (gp_Ax2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3392,7 +3336,6 @@ EXPORT gp_Lin2d *_wrap_new_gp_Lin2d__SWIG_2 (gp_Pnt2d *larg1, gp_Dir2d *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3430,7 +3373,6 @@ EXPORT gp_Lin2d *_wrap_new_gp_Lin2d__SWIG_3 (Standard_Real larg1, Standard_Real 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3462,7 +3404,6 @@ EXPORT void _wrap_delete_gp_Lin2d (gp_Lin2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3503,7 +3444,6 @@ EXPORT TColgp_HArray1OfPnt *_wrap_new_TColgp_HArray1OfPnt (Standard_Integer larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3539,7 +3479,6 @@ EXPORT void _wrap_TColgp_HArray1OfPnt_SetValue (TColgp_HArray1OfPnt *larg1, Stan
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3570,7 +3509,6 @@ EXPORT void _wrap_delete_TColgp_HArray1OfPnt (TColgp_HArray1OfPnt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3601,7 +3539,6 @@ EXPORT void _wrap_delete_Handle_TColgp_HArray1OfPnt (Handle_TColgp_HArray1OfPnt 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3632,7 +3569,6 @@ EXPORT void _wrap_delete_Handle_TColStd_HArray1OfBoolean (Handle_TColStd_HArray1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3670,7 +3606,6 @@ EXPORT TColgp_Array1OfVec *_wrap_new_TColgp_Array1OfVec (Standard_Integer larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3706,7 +3641,6 @@ EXPORT void _wrap_TColgp_Array1OfVec_SetValue (TColgp_Array1OfVec *larg1, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3737,7 +3671,6 @@ EXPORT void _wrap_delete_TColgp_Array1OfVec (TColgp_Array1OfVec *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3775,7 +3708,6 @@ EXPORT TColgp_Array1OfPnt2d *_wrap_new_TColgp_Array1OfPnt2d (Standard_Integer la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3811,7 +3743,6 @@ EXPORT void _wrap_TColgp_Array1OfPnt2d_SetValue (TColgp_Array1OfPnt2d *larg1, St
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3842,7 +3773,6 @@ EXPORT void _wrap_delete_TColgp_Array1OfPnt2d (TColgp_Array1OfPnt2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3880,7 +3810,6 @@ EXPORT TColStd_Array1OfReal *_wrap_new_TColStd_Array1OfReal (Standard_Integer la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3916,7 +3845,6 @@ EXPORT void _wrap_TColStd_Array1OfReal_SetValue (TColStd_Array1OfReal *larg1, St
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3947,7 +3875,6 @@ EXPORT void _wrap_delete_TColStd_Array1OfReal (TColStd_Array1OfReal *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -3985,7 +3912,6 @@ EXPORT TColStd_Array1OfInteger *_wrap_new_TColStd_Array1OfInteger (Standard_Inte
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4021,7 +3947,6 @@ EXPORT void _wrap_TColStd_Array1OfInteger_SetValue (TColStd_Array1OfInteger *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4039,6 +3964,107 @@ EXPORT void _wrap_TColStd_Array1OfInteger_SetValue (TColStd_Array1OfInteger *lar
 }
 
 
+EXPORT Standard_Integer _wrap_TColStd_Array1OfInteger_Value (TColStd_Array1OfInteger *larg1, Standard_Integer larg2) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColStd_Array1OfInteger *arg1 = (TColStd_Array1OfInteger *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)(arg1)->Value(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColStd_Array1OfInteger_Value\n  * wrapname: _wrap_TColStd_Array1OfInteger_Value\n  * fulldecl: Standard_Integer const TColStd_Array1OfInteger::Value(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColStd_Array1OfInteger_Lower (TColStd_Array1OfInteger *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColStd_Array1OfInteger *arg1 = (TColStd_Array1OfInteger *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColStd_Array1OfInteger const *)arg1)->Lower();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColStd_Array1OfInteger_Lower\n  * wrapname: _wrap_TColStd_Array1OfInteger_Lower\n  * fulldecl: Standard_Integer TColStd_Array1OfInteger::Lower() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColStd_Array1OfInteger_Upper (TColStd_Array1OfInteger *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColStd_Array1OfInteger *arg1 = (TColStd_Array1OfInteger *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColStd_Array1OfInteger const *)arg1)->Upper();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColStd_Array1OfInteger_Upper\n  * wrapname: _wrap_TColStd_Array1OfInteger_Upper\n  * fulldecl: Standard_Integer TColStd_Array1OfInteger::Upper() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
 EXPORT void _wrap_delete_TColStd_Array1OfInteger (TColStd_Array1OfInteger *larg1) {
   TColStd_Array1OfInteger *arg1 = (TColStd_Array1OfInteger *) 0 ;
   
@@ -4052,7 +4078,6 @@ EXPORT void _wrap_delete_TColStd_Array1OfInteger (TColStd_Array1OfInteger *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4090,7 +4115,6 @@ EXPORT TColgp_Array1OfPnt *_wrap_new_TColgp_Array1OfPnt (Standard_Integer larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4126,7 +4150,6 @@ EXPORT gp_Pnt const *_wrap_TColgp_Array1OfPnt_Value (TColgp_Array1OfPnt *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4162,7 +4185,6 @@ EXPORT void _wrap_TColgp_Array1OfPnt_SetValue (TColgp_Array1OfPnt *larg1, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4195,7 +4217,6 @@ EXPORT Standard_Integer _wrap_TColgp_Array1OfPnt_Lower (TColgp_Array1OfPnt *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4229,7 +4250,6 @@ EXPORT Standard_Integer _wrap_TColgp_Array1OfPnt_Upper (TColgp_Array1OfPnt *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4261,7 +4281,6 @@ EXPORT void _wrap_delete_TColgp_Array1OfPnt (TColgp_Array1OfPnt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4303,7 +4322,6 @@ EXPORT TColgp_Array2OfPnt *_wrap_new_TColgp_Array2OfPnt (Standard_Integer larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4341,7 +4359,6 @@ EXPORT void _wrap_TColgp_Array2OfPnt_SetValue (TColgp_Array2OfPnt *larg1, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4372,7 +4389,6 @@ EXPORT void _wrap_delete_TColgp_Array2OfPnt (TColgp_Array2OfPnt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4414,7 +4430,6 @@ EXPORT TColStd_Array2OfReal *_wrap_new_TColStd_Array2OfReal (Standard_Integer la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4452,7 +4467,6 @@ EXPORT void _wrap_TColStd_Array2OfReal_SetValue (TColStd_Array2OfReal *larg1, St
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4483,7 +4497,6 @@ EXPORT void _wrap_delete_TColStd_Array2OfReal (TColStd_Array2OfReal *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4533,7 +4546,6 @@ EXPORT TopAbs_ShapeEnum _wrap_TopoDS_Shape_ShapeType (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4569,7 +4581,6 @@ EXPORT bool _wrap_TopoDS_Shape_IsSame (TopoDS_Shape *larg1, TopoDS_Shape *larg2)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4605,7 +4616,6 @@ EXPORT bool _wrap_TopoDS_Shape_IsPartner (TopoDS_Shape *larg1, TopoDS_Shape *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4641,7 +4651,6 @@ EXPORT bool _wrap_TopoDS_Shape_IsEqual (TopoDS_Shape *larg1, TopoDS_Shape *larg2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4656,6 +4665,39 @@ EXPORT bool _wrap_TopoDS_Shape_IsEqual (TopoDS_Shape *larg1, TopoDS_Shape *larg2
     return lresult;
   } catch (...) {
     return (bool)0;
+  }
+}
+
+
+EXPORT Handle_TopoDS_TShape *_wrap_TopoDS_Shape_TShape (TopoDS_Shape *larg1) {
+  Handle_TopoDS_TShape * lresult = (Handle_TopoDS_TShape *)0 ;
+  TopoDS_Shape *arg1 = (TopoDS_Shape *) 0 ;
+  Handle_TopoDS_TShape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_TopoDS_TShape *) &((TopoDS_Shape const *)arg1)->TShape();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TopoDS_Shape_TShape\n  * wrapname: _wrap_TopoDS_Shape_TShape\n  * fulldecl: Handle_TopoDS_TShape const & TopoDS_Shape::TShape() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_TopoDS_TShape *)0;
   }
 }
 
@@ -4675,7 +4717,6 @@ EXPORT TopLoc_Location *_wrap_TopoDS_Shape_Location__SWIG_0 (TopoDS_Shape *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4709,7 +4750,6 @@ EXPORT void _wrap_TopoDS_Shape_Location__SWIG_1 (TopoDS_Shape *larg1, TopLoc_Loc
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4742,7 +4782,6 @@ EXPORT TopAbs_Orientation _wrap_TopoDS_Shape_Orientation__SWIG_0 (TopoDS_Shape *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4776,7 +4815,6 @@ EXPORT void _wrap_TopoDS_Shape_Orientation__SWIG_1 (TopoDS_Shape *larg1, TopAbs_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4807,7 +4845,6 @@ EXPORT void _wrap_TopoDS_Shape_Reverse (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4840,7 +4877,6 @@ EXPORT TopoDS_Shape *_wrap_TopoDS_Shape_Reversed (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4876,7 +4912,6 @@ EXPORT Standard_Integer _wrap_TopoDS_Shape_HashCode (TopoDS_Shape *larg1, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4910,7 +4945,6 @@ EXPORT bool _wrap_TopoDS_Shape_Free__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4944,7 +4978,6 @@ EXPORT void _wrap_TopoDS_Shape_Free__SWIG_1 (TopoDS_Shape *larg1, bool larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -4977,7 +5010,6 @@ EXPORT bool _wrap_TopoDS_Shape_Locked__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5011,7 +5043,6 @@ EXPORT void _wrap_TopoDS_Shape_Locked__SWIG_1 (TopoDS_Shape *larg1, bool larg2) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5044,7 +5075,6 @@ EXPORT bool _wrap_TopoDS_Shape_Modified__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5078,7 +5108,6 @@ EXPORT void _wrap_TopoDS_Shape_Modified__SWIG_1 (TopoDS_Shape *larg1, bool larg2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5111,7 +5140,6 @@ EXPORT bool _wrap_TopoDS_Shape_Checked__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5145,7 +5173,6 @@ EXPORT void _wrap_TopoDS_Shape_Checked__SWIG_1 (TopoDS_Shape *larg1, bool larg2)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5178,7 +5205,6 @@ EXPORT bool _wrap_TopoDS_Shape_Orientable__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5212,7 +5238,6 @@ EXPORT void _wrap_TopoDS_Shape_Orientable__SWIG_1 (TopoDS_Shape *larg1, bool lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5245,7 +5270,6 @@ EXPORT bool _wrap_TopoDS_Shape_Closed__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5279,7 +5303,6 @@ EXPORT void _wrap_TopoDS_Shape_Closed__SWIG_1 (TopoDS_Shape *larg1, bool larg2) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5312,7 +5335,6 @@ EXPORT bool _wrap_TopoDS_Shape_Infinite__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5346,7 +5368,6 @@ EXPORT void _wrap_TopoDS_Shape_Infinite__SWIG_1 (TopoDS_Shape *larg1, bool larg2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5379,7 +5400,6 @@ EXPORT bool _wrap_TopoDS_Shape_Convex__SWIG_0 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5413,7 +5433,6 @@ EXPORT void _wrap_TopoDS_Shape_Convex__SWIG_1 (TopoDS_Shape *larg1, bool larg2) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5449,7 +5468,6 @@ EXPORT Handle_TopoDS_TShape *_wrap_TopoDS_Shape_getTShape (TopoDS_Shape *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5481,7 +5499,6 @@ EXPORT void _wrap_delete_TopoDS_Shape (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5499,6 +5516,37 @@ EXPORT void _wrap_delete_TopoDS_Shape (TopoDS_Shape *larg1) {
 }
 
 
+EXPORT TopoDS_Compound *_wrap_new_TopoDS_Compound () {
+  TopoDS_Compound * lresult = (TopoDS_Compound *)0 ;
+  TopoDS_Compound *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Compound *)new TopoDS_Compound();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_TopoDS_Compound\n  * wrapname: _wrap_new_TopoDS_Compound\n  * fulldecl: TopoDS_Compound::TopoDS_Compound()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Compound *)0;
+  }
+}
+
+
 EXPORT void _wrap_delete_TopoDS_Compound (TopoDS_Compound *larg1) {
   TopoDS_Compound *arg1 = (TopoDS_Compound *) 0 ;
   
@@ -5512,7 +5560,6 @@ EXPORT void _wrap_delete_TopoDS_Compound (TopoDS_Compound *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5543,7 +5590,6 @@ EXPORT void _wrap_delete_TopoDS_CompSolid (TopoDS_CompSolid *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5574,7 +5620,6 @@ EXPORT void _wrap_delete_TopoDS_Solid (TopoDS_Solid *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5605,7 +5650,6 @@ EXPORT void _wrap_delete_TopoDS_Shell (TopoDS_Shell *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5636,7 +5680,6 @@ EXPORT void _wrap_delete_TopoDS_Face (TopoDS_Face *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5667,7 +5710,6 @@ EXPORT void _wrap_delete_TopoDS_Wire (TopoDS_Wire *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5698,7 +5740,6 @@ EXPORT void _wrap_delete_TopoDS_Edge (TopoDS_Edge *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5729,7 +5770,6 @@ EXPORT void _wrap_delete_TopoDS_Vertex (TopoDS_Vertex *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5760,7 +5800,6 @@ EXPORT TopoDS_Iterator *_wrap_new_TopoDS_Iterator__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5798,7 +5837,6 @@ EXPORT TopoDS_Iterator *_wrap_new_TopoDS_Iterator__SWIG_1 (TopoDS_Shape *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5834,7 +5872,6 @@ EXPORT TopoDS_Iterator *_wrap_new_TopoDS_Iterator__SWIG_2 (TopoDS_Shape *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5868,7 +5905,6 @@ EXPORT TopoDS_Iterator *_wrap_new_TopoDS_Iterator__SWIG_3 (TopoDS_Shape *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5906,7 +5942,6 @@ EXPORT void _wrap_TopoDS_Iterator_Initialize__SWIG_0 (TopoDS_Iterator *larg1, To
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5941,7 +5976,6 @@ EXPORT void _wrap_TopoDS_Iterator_Initialize__SWIG_1 (TopoDS_Iterator *larg1, To
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -5974,7 +6008,6 @@ EXPORT void _wrap_TopoDS_Iterator_Initialize__SWIG_2 (TopoDS_Iterator *larg1, To
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6007,7 +6040,6 @@ EXPORT bool _wrap_TopoDS_Iterator_More (TopoDS_Iterator *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6039,7 +6071,6 @@ EXPORT void _wrap_TopoDS_Iterator_Next (TopoDS_Iterator *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6072,7 +6103,6 @@ EXPORT TopoDS_Shape *_wrap_TopoDS_Iterator_Value (TopoDS_Iterator *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6104,7 +6134,6 @@ EXPORT void _wrap_delete_TopoDS_Iterator (TopoDS_Iterator *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6137,7 +6166,6 @@ EXPORT void _wrap_TopoDS_Builder_MakeWire (TopoDS_Builder *larg1, TopoDS_Wire *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6170,7 +6198,6 @@ EXPORT void _wrap_TopoDS_Builder_MakeShell (TopoDS_Builder *larg1, TopoDS_Shell 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6203,7 +6230,6 @@ EXPORT void _wrap_TopoDS_Builder_MakeSolid (TopoDS_Builder *larg1, TopoDS_Solid 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6236,7 +6262,6 @@ EXPORT void _wrap_TopoDS_Builder_MakeCompSolid (TopoDS_Builder *larg1, TopoDS_Co
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6269,7 +6294,6 @@ EXPORT void _wrap_TopoDS_Builder_MakeCompound (TopoDS_Builder *larg1, TopoDS_Com
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6304,7 +6328,6 @@ EXPORT void _wrap_TopoDS_Builder_Add (TopoDS_Builder *larg1, TopoDS_Shape *larg2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6339,7 +6362,6 @@ EXPORT void _wrap_TopoDS_Builder_Remove (TopoDS_Builder *larg1, TopoDS_Shape *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6370,7 +6392,6 @@ EXPORT void _wrap_delete_TopoDS_Builder (TopoDS_Builder *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6404,7 +6425,6 @@ EXPORT TopTools_HSequenceOfShape *_wrap_new_TopTools_HSequenceOfShape () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6438,7 +6458,6 @@ EXPORT bool _wrap_TopTools_HSequenceOfShape_IsEmpty (TopTools_HSequenceOfShape *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6472,7 +6491,6 @@ EXPORT Standard_Integer _wrap_TopTools_HSequenceOfShape_Length (TopTools_HSequen
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6504,7 +6522,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_Clear (TopTools_HSequenceOfShape *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6537,7 +6554,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_Append (TopTools_HSequenceOfShape *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6570,7 +6586,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_Prepend (TopTools_HSequenceOfShape *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6601,7 +6616,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_Reverse (TopTools_HSequenceOfShape *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6636,7 +6650,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_InsertBefore (TopTools_HSequenceOfSh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6671,7 +6684,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_InsertAfter (TopTools_HSequenceOfSha
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6706,7 +6718,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_Exchange (TopTools_HSequenceOfShape 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6741,7 +6752,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_SetValue (TopTools_HSequenceOfShape 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6776,7 +6786,6 @@ EXPORT TopoDS_Shape *_wrap_TopTools_HSequenceOfShape_Value (TopTools_HSequenceOf
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6812,7 +6821,6 @@ EXPORT TopoDS_Shape *_wrap_TopTools_HSequenceOfShape_ChangeValue (TopTools_HSequ
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6846,7 +6854,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_Remove__SWIG_0 (TopTools_HSequenceOf
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6881,7 +6888,6 @@ EXPORT void _wrap_TopTools_HSequenceOfShape_Remove__SWIG_1 (TopTools_HSequenceOf
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6914,7 +6920,6 @@ EXPORT TopTools_SequenceOfShape *_wrap_TopTools_HSequenceOfShape_Sequence (TopTo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6946,7 +6951,6 @@ EXPORT void _wrap_delete_TopTools_HSequenceOfShape (TopTools_HSequenceOfShape *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -6980,7 +6984,6 @@ EXPORT TopTools_ListOfShape *_wrap_new_TopTools_ListOfShape () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7016,7 +7019,6 @@ EXPORT TopoDS_Shape *_wrap_TopTools_ListOfShape_Append (TopTools_ListOfShape *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7024,6 +7026,41 @@ EXPORT TopoDS_Shape *_wrap_TopTools_ListOfShape_Append (TopTools_ListOfShape *la
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: TopTools_ListOfShape_Append\n  * wrapname: _wrap_TopTools_ListOfShape_Append\n  * fulldecl: TopoDS_Shape & TopTools_ListOfShape::Append(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_TopTools_ListOfShape_Prepend (TopTools_ListOfShape *larg1, TopoDS_Shape *larg2) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  TopTools_ListOfShape *arg1 = (TopTools_ListOfShape *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  TopoDS_Shape *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Shape *) &(arg1)->Prepend((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TopTools_ListOfShape_Prepend\n  * wrapname: _wrap_TopTools_ListOfShape_Prepend\n  * fulldecl: TopoDS_Shape & TopTools_ListOfShape::Prepend(TopoDS_Shape const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -7048,7 +7085,6 @@ EXPORT void _wrap_delete_TopTools_ListOfShape (TopTools_ListOfShape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7056,6 +7092,333 @@ EXPORT void _wrap_delete_TopTools_ListOfShape (TopTools_ListOfShape *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: delete_TopTools_ListOfShape\n  * wrapname: _wrap_delete_TopTools_ListOfShape\n  * fulldecl: TopTools_ListOfShape::~TopTools_ListOfShape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+
+  #include <TopTools_MapOfShape.hxx>
+  
+EXPORT TopTools_MapOfShape *_wrap_new_TopTools_MapOfShape () {
+  TopTools_MapOfShape * lresult = (TopTools_MapOfShape *)0 ;
+  TopTools_MapOfShape *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_MapOfShape *)new TopTools_MapOfShape();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_TopTools_MapOfShape\n  * wrapname: _wrap_new_TopTools_MapOfShape\n  * fulldecl: TopTools_MapOfShape::TopTools_MapOfShape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_MapOfShape *)0;
+  }
+}
+
+
+EXPORT bool _wrap_TopTools_MapOfShape_Add (TopTools_MapOfShape *larg1, TopoDS_Shape *larg2) {
+  bool lresult = (bool)0 ;
+  TopTools_MapOfShape *arg1 = (TopTools_MapOfShape *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)(arg1)->Add((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TopTools_MapOfShape_Add\n  * wrapname: _wrap_TopTools_MapOfShape_Add\n  * fulldecl: Standard_Boolean TopTools_MapOfShape::Add(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_TopTools_MapOfShape_Contains (TopTools_MapOfShape *larg1, TopoDS_Shape *larg2) {
+  bool lresult = (bool)0 ;
+  TopTools_MapOfShape *arg1 = (TopTools_MapOfShape *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((TopTools_MapOfShape const *)arg1)->Contains((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TopTools_MapOfShape_Contains\n  * wrapname: _wrap_TopTools_MapOfShape_Contains\n  * fulldecl: Standard_Boolean TopTools_MapOfShape::Contains(TopoDS_Shape const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_TopTools_MapOfShape (TopTools_MapOfShape *larg1) {
+  TopTools_MapOfShape *arg1 = (TopTools_MapOfShape *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_TopTools_MapOfShape\n  * wrapname: _wrap_delete_TopTools_MapOfShape\n  * fulldecl: TopTools_MapOfShape::~TopTools_MapOfShape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+
+#include <TCollection_BasicMapIterator.hxx>
+#include <TopTools_MapIteratorOfMapOfShape.hxx>
+  
+EXPORT bool _wrap_TCollection_BasicMapIterator_More (TCollection_BasicMapIterator *larg1) {
+  bool lresult = (bool)0 ;
+  TCollection_BasicMapIterator *arg1 = (TCollection_BasicMapIterator *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((TCollection_BasicMapIterator const *)arg1)->More();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TCollection_BasicMapIterator_More\n  * wrapname: _wrap_TCollection_BasicMapIterator_More\n  * fulldecl: Standard_Boolean TCollection_BasicMapIterator::More() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_TCollection_BasicMapIterator_Next (TCollection_BasicMapIterator *larg1) {
+  TCollection_BasicMapIterator *arg1 = (TCollection_BasicMapIterator *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Next();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TCollection_BasicMapIterator_Next\n  * wrapname: _wrap_TCollection_BasicMapIterator_Next\n  * fulldecl: void TCollection_BasicMapIterator::Next()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_delete_TCollection_BasicMapIterator (TCollection_BasicMapIterator *larg1) {
+  TCollection_BasicMapIterator *arg1 = (TCollection_BasicMapIterator *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_TCollection_BasicMapIterator\n  * wrapname: _wrap_delete_TCollection_BasicMapIterator\n  * fulldecl: TCollection_BasicMapIterator::~TCollection_BasicMapIterator()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopTools_MapIteratorOfMapOfShape *_wrap_new_TopTools_MapIteratorOfMapOfShape (TopTools_MapOfShape *larg1) {
+  TopTools_MapIteratorOfMapOfShape * lresult = (TopTools_MapIteratorOfMapOfShape *)0 ;
+  TopTools_MapOfShape *arg1 = 0 ;
+  TopTools_MapIteratorOfMapOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_MapIteratorOfMapOfShape *)new TopTools_MapIteratorOfMapOfShape((TopTools_MapOfShape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_TopTools_MapIteratorOfMapOfShape\n  * wrapname: _wrap_new_TopTools_MapIteratorOfMapOfShape\n  * fulldecl: TopTools_MapIteratorOfMapOfShape::TopTools_MapIteratorOfMapOfShape(TopTools_MapOfShape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_MapIteratorOfMapOfShape *)0;
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_TopTools_MapIteratorOfMapOfShape_Key (TopTools_MapIteratorOfMapOfShape *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  TopTools_MapIteratorOfMapOfShape *arg1 = (TopTools_MapIteratorOfMapOfShape *) 0 ;
+  TopoDS_Shape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Shape *) &((TopTools_MapIteratorOfMapOfShape const *)arg1)->Key();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TopTools_MapIteratorOfMapOfShape_Key\n  * wrapname: _wrap_TopTools_MapIteratorOfMapOfShape_Key\n  * fulldecl: TopoDS_Shape const & TopTools_MapIteratorOfMapOfShape::Key() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_TopTools_MapIteratorOfMapOfShape (TopTools_MapIteratorOfMapOfShape *larg1) {
+  TopTools_MapIteratorOfMapOfShape *arg1 = (TopTools_MapIteratorOfMapOfShape *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_TopTools_MapIteratorOfMapOfShape\n  * wrapname: _wrap_delete_TopTools_MapIteratorOfMapOfShape\n  * fulldecl: TopTools_MapIteratorOfMapOfShape::~TopTools_MapIteratorOfMapOfShape()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -7089,7 +7452,6 @@ EXPORT gp_Pnt const *_wrap_BRep_Tool_Pnt (TopoDS_Vertex *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7125,7 +7487,6 @@ EXPORT gp_Pnt2d *_wrap_BRep_Tool_Parameters (TopoDS_Vertex *larg1, TopoDS_Face *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7161,7 +7522,6 @@ EXPORT Standard_Real _wrap_BRep_Tool_Parameter (TopoDS_Vertex *larg1, TopoDS_Edg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7195,7 +7555,6 @@ EXPORT bool _wrap_BRep_Tool_Degenerated (TopoDS_Edge *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7229,7 +7588,6 @@ EXPORT bool _wrap_BRep_Tool_SameParameter (TopoDS_Edge *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7263,7 +7621,6 @@ EXPORT bool _wrap_BRep_Tool_SameRange (TopoDS_Edge *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7301,7 +7658,6 @@ EXPORT bool _wrap_BRep_Tool_HasContinuity (TopoDS_Edge *larg1, TopoDS_Face *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7339,7 +7695,6 @@ EXPORT GeomAbs_Shape _wrap_BRep_Tool_Continuity (TopoDS_Edge *larg1, TopoDS_Face
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7373,7 +7728,6 @@ EXPORT Standard_Real _wrap_BRep_Tool_Tolerance__SWIG_0 (TopoDS_Face *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7407,7 +7761,6 @@ EXPORT Standard_Real _wrap_BRep_Tool_Tolerance__SWIG_1 (TopoDS_Edge *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7441,7 +7794,6 @@ EXPORT Standard_Real _wrap_BRep_Tool_Tolerance__SWIG_2 (TopoDS_Vertex *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7475,7 +7827,6 @@ EXPORT bool _wrap_BRep_Tool_IsClosed (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7494,18 +7845,11 @@ EXPORT bool _wrap_BRep_Tool_IsClosed (TopoDS_Shape *larg1) {
 }
 
 
-SWIGINTERN Poly_Triangulation *BRep_Tool_triangulation(TopoDS_Face const &F,TopLoc_Location &L){
-		Handle_Poly_Triangulation hgc=BRep_Tool::Triangulation(F,L);
-		if(hgc.IsNull())
-		  return NULL;
-		else
-		  return (Poly_Triangulation *)hgc.get();
-	}
-EXPORT Poly_Triangulation *_wrap_BRep_Tool_triangulation (TopoDS_Face *larg1, TopLoc_Location *larg2) {
-  Poly_Triangulation * lresult = (Poly_Triangulation *)0 ;
+EXPORT Handle_Poly_Triangulation *_wrap_BRep_Tool_Triangulation (TopoDS_Face *larg1, TopLoc_Location *larg2) {
+  Handle_Poly_Triangulation * lresult = (Handle_Poly_Triangulation *)0 ;
   TopoDS_Face *arg1 = 0 ;
   TopLoc_Location *arg2 = 0 ;
-  Poly_Triangulation *result = 0 ;
+  Handle_Poly_Triangulation *result = 0 ;
   
   arg1 = larg1;
   arg2 = larg2;
@@ -7514,25 +7858,66 @@ EXPORT Poly_Triangulation *_wrap_BRep_Tool_triangulation (TopoDS_Face *larg1, To
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Poly_Triangulation *)BRep_Tool_triangulation((TopoDS_Face const &)*arg1,*arg2);
+        result = (Handle_Poly_Triangulation *) &BRep_Tool::Triangulation((TopoDS_Face const &)*arg1,*arg2);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRep_Tool_triangulation\n  * wrapname: _wrap_BRep_Tool_triangulation\n  * fulldecl: Poly_Triangulation * BRep_Tool::BRep_Tool_triangulation(TopoDS_Face const &,TopLoc_Location &)";
+        message += "\nwrapper details:\n  * symname: BRep_Tool_Triangulation\n  * wrapname: _wrap_BRep_Tool_Triangulation\n  * fulldecl: Handle_Poly_Triangulation const & BRep_Tool::Triangulation(TopoDS_Face const &,TopLoc_Location &)";
         signal_lisp_error(message.c_str());
       }
     }
     lresult = result;
     return lresult;
   } catch (...) {
-    return (Poly_Triangulation *)0;
+    return (Handle_Poly_Triangulation *)0;
+  }
+}
+
+
+SWIGINTERN Poly_Polygon3D *BRep_Tool_Polygon3D(TopoDS_Edge const &E,TopLoc_Location &L){
+	  Handle_Poly_Polygon3D hgc=BRep_Tool::Polygon3D(E,L);
+	  if (hgc.IsNull())
+	    return NULL;
+	  else
+	    return (Poly_Polygon3D *)hgc.get();
+	}
+EXPORT Poly_Polygon3D *_wrap_BRep_Tool_Polygon3D (TopoDS_Edge *larg1, TopLoc_Location *larg2) {
+  Poly_Polygon3D * lresult = (Poly_Polygon3D *)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  TopLoc_Location *arg2 = 0 ;
+  Poly_Polygon3D *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Poly_Polygon3D *)BRep_Tool_Polygon3D((TopoDS_Edge const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRep_Tool_Polygon3D\n  * wrapname: _wrap_BRep_Tool_Polygon3D\n  * fulldecl: Poly_Polygon3D * BRep_Tool::BRep_Tool_Polygon3D(TopoDS_Edge const &,TopLoc_Location &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Poly_Polygon3D *)0;
   }
 }
 
@@ -7555,7 +7940,6 @@ EXPORT void _wrap_BRep_Tool_range (TopoDS_Edge *larg1, double *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7599,7 +7983,6 @@ EXPORT Handle_Geom_Curve *_wrap_BRep_Tool_curve (TopoDS_Edge *larg1, Standard_Re
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7640,7 +8023,6 @@ EXPORT Handle_Geom_Surface *_wrap_BRep_Tool_surface (TopoDS_Face *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7687,7 +8069,6 @@ EXPORT Handle_Geom2d_Curve *_wrap_BRep_Tool_curveOnSurface (TopoDS_Edge *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7706,6 +8087,50 @@ EXPORT Handle_Geom2d_Curve *_wrap_BRep_Tool_curveOnSurface (TopoDS_Edge *larg1, 
 }
 
 
+SWIGINTERN Poly_PolygonOnTriangulation *BRep_Tool_PolygonOnTriangulation(TopoDS_Edge const &E,Handle_Poly_Triangulation const &T,TopLoc_Location const &L){
+	  Handle_Poly_PolygonOnTriangulation hgc=BRep_Tool::PolygonOnTriangulation(E, T, L);
+	  if (hgc.IsNull())
+	    return (Poly_PolygonOnTriangulation *)NULL;
+	  else
+	    return (Poly_PolygonOnTriangulation *)hgc.get();
+	}
+EXPORT Poly_PolygonOnTriangulation *_wrap_BRep_Tool_PolygonOnTriangulation (TopoDS_Edge *larg1, Handle_Poly_Triangulation *larg2, TopLoc_Location *larg3) {
+  Poly_PolygonOnTriangulation * lresult = (Poly_PolygonOnTriangulation *)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Handle_Poly_Triangulation *arg2 = 0 ;
+  TopLoc_Location *arg3 = 0 ;
+  Poly_PolygonOnTriangulation *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Poly_PolygonOnTriangulation *)BRep_Tool_PolygonOnTriangulation((TopoDS_Edge const &)*arg1,(Handle_Poly_Triangulation const &)*arg2,(TopLoc_Location const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRep_Tool_PolygonOnTriangulation\n  * wrapname: _wrap_BRep_Tool_PolygonOnTriangulation\n  * fulldecl: Poly_PolygonOnTriangulation * BRep_Tool::BRep_Tool_PolygonOnTriangulation(TopoDS_Edge const &,Handle_Poly_Triangulation const &,TopLoc_Location const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Poly_PolygonOnTriangulation *)0;
+  }
+}
+
+
 EXPORT void _wrap_delete_BRep_Tool (BRep_Tool *larg1) {
   BRep_Tool *arg1 = (BRep_Tool *) 0 ;
   
@@ -7719,7 +8144,6 @@ EXPORT void _wrap_delete_BRep_Tool (BRep_Tool *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7750,7 +8174,6 @@ EXPORT BRep_Builder *_wrap_new_BRep_Builder () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7784,7 +8207,6 @@ EXPORT void _wrap_BRep_Builder_MakeFace__SWIG_0 (BRep_Builder *larg1, TopoDS_Fac
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7821,7 +8243,6 @@ EXPORT void _wrap_BRep_Builder_MakeFace__SWIG_1 (BRep_Builder *larg1, TopoDS_Fac
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7860,7 +8281,6 @@ EXPORT void _wrap_BRep_Builder_MakeFace__SWIG_2 (BRep_Builder *larg1, TopoDS_Fac
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7893,7 +8313,6 @@ EXPORT void _wrap_BRep_Builder_MakeEdge__SWIG_0 (BRep_Builder *larg1, TopoDS_Edg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7930,7 +8349,6 @@ EXPORT void _wrap_BRep_Builder_MakeEdge__SWIG_1 (BRep_Builder *larg1, TopoDS_Edg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -7969,7 +8387,6 @@ EXPORT void _wrap_BRep_Builder_MakeEdge__SWIG_2 (BRep_Builder *larg1, TopoDS_Edg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8006,7 +8423,6 @@ EXPORT void _wrap_BRep_Builder_UpdateEdge__SWIG_0 (BRep_Builder *larg1, TopoDS_E
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8045,7 +8461,6 @@ EXPORT void _wrap_BRep_Builder_UpdateEdge__SWIG_1 (BRep_Builder *larg1, TopoDS_E
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8086,7 +8501,6 @@ EXPORT void _wrap_BRep_Builder_UpdateEdge__SWIG_2 (BRep_Builder *larg1, TopoDS_E
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8119,7 +8533,6 @@ EXPORT void _wrap_BRep_Builder_MakeVertex__SWIG_0 (BRep_Builder *larg1, TopoDS_V
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8156,7 +8569,6 @@ EXPORT void _wrap_BRep_Builder_MakeVertex__SWIG_1 (BRep_Builder *larg1, TopoDS_V
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8197,7 +8609,6 @@ EXPORT void _wrap_BRep_Builder_UpdateVertex__SWIG_0 (BRep_Builder *larg1, TopoDS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8232,7 +8643,6 @@ EXPORT void _wrap_BRep_Builder_UpdateVertex__SWIG_1 (BRep_Builder *larg1, TopoDS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8267,7 +8677,6 @@ EXPORT void _wrap_BRep_Builder_Degenerated (BRep_Builder *larg1, TopoDS_Edge *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8298,7 +8707,6 @@ EXPORT void _wrap_delete_BRep_Builder (BRep_Builder *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8347,7 +8755,6 @@ EXPORT void _wrap_GeomLProp_SLProps_normal (GeomLProp_SLProps *larg1, double *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8405,7 +8812,6 @@ EXPORT void _wrap_GeomLProp_SLProps_normalArray (GeomLProp_SLProps *larg1, doubl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8444,7 +8850,6 @@ EXPORT Standard_Real _wrap_GeomLProp_SLProps_minCurvature (GeomLProp_SLProps *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8484,7 +8889,6 @@ EXPORT Standard_Real _wrap_GeomLProp_SLProps_maxCurvature (GeomLProp_SLProps *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8530,7 +8934,6 @@ EXPORT void _wrap_GeomLProp_SLProps_curvatureDirection (GeomLProp_SLProps *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8561,7 +8964,6 @@ EXPORT void _wrap_delete_GeomLProp_SLProps (GeomLProp_SLProps *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8602,7 +9004,6 @@ EXPORT bool _wrap_BRepTools_read__SWIG_0 (TopoDS_Shape *larg1, Standard_CString 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8638,7 +9039,6 @@ EXPORT bool _wrap_BRepTools_write__SWIG_0 (TopoDS_Shape *larg1, Standard_CString
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8672,7 +9072,6 @@ EXPORT void _wrap_BRepTools_write__SWIG_1 (TopoDS_Shape *larg1, Standard_OStream
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8703,7 +9102,6 @@ EXPORT void _wrap_BRepTools_clean (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8736,7 +9134,6 @@ EXPORT TopoDS_Wire *_wrap_BRepTools_getOuterWire (TopoDS_Face *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8781,7 +9178,6 @@ EXPORT bool _wrap_BRepTools_read__SWIG_1 (TopoDS_Shape *larg1, Standard_IStream 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8813,7 +9209,6 @@ EXPORT void _wrap_delete_BRepTools (BRepTools *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8847,7 +9242,6 @@ EXPORT BRepTools_WireExplorer *_wrap_new_BRepTools_WireExplorer__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8881,7 +9275,6 @@ EXPORT BRepTools_WireExplorer *_wrap_new_BRepTools_WireExplorer__SWIG_1 (TopoDS_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8917,7 +9310,6 @@ EXPORT BRepTools_WireExplorer *_wrap_new_BRepTools_WireExplorer__SWIG_2 (TopoDS_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8951,7 +9343,6 @@ EXPORT void _wrap_BRepTools_WireExplorer_init__SWIG_0 (BRepTools_WireExplorer *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -8986,7 +9377,6 @@ EXPORT void _wrap_BRepTools_WireExplorer_init__SWIG_1 (BRepTools_WireExplorer *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9019,7 +9409,6 @@ EXPORT bool _wrap_BRepTools_WireExplorer_more (BRepTools_WireExplorer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9051,7 +9440,6 @@ EXPORT void _wrap_BRepTools_WireExplorer_next (BRepTools_WireExplorer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9084,7 +9472,6 @@ EXPORT TopoDS_Edge *_wrap_BRepTools_WireExplorer_current (BRepTools_WireExplorer
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9118,7 +9505,6 @@ EXPORT TopAbs_Orientation _wrap_BRepTools_WireExplorer_orientation (BRepTools_Wi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9152,7 +9538,6 @@ EXPORT TopoDS_Vertex *_wrap_BRepTools_WireExplorer_currentVertex (BRepTools_Wire
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9184,7 +9569,6 @@ EXPORT void _wrap_BRepTools_WireExplorer_clear (BRepTools_WireExplorer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9215,7 +9599,6 @@ EXPORT void _wrap_delete_BRepTools_WireExplorer (BRepTools_WireExplorer *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9249,7 +9632,6 @@ EXPORT BRepTools_Quilt *_wrap_new_BRepTools_Quilt () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9285,7 +9667,6 @@ EXPORT void _wrap_BRepTools_Quilt_bind__SWIG_0 (BRepTools_Quilt *larg1, TopoDS_E
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9320,7 +9701,6 @@ EXPORT void _wrap_BRepTools_Quilt_bind__SWIG_1 (BRepTools_Quilt *larg1, TopoDS_V
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9353,7 +9733,6 @@ EXPORT void _wrap_BRepTools_Quilt_add (BRepTools_Quilt *larg1, TopoDS_Shape *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9388,7 +9767,6 @@ EXPORT bool _wrap_BRepTools_Quilt_isCopied (BRepTools_Quilt *larg1, TopoDS_Shape
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9424,7 +9802,6 @@ EXPORT TopoDS_Shape *_wrap_BRepTools_Quilt_copy (BRepTools_Quilt *larg1, TopoDS_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9458,7 +9835,6 @@ EXPORT TopoDS_Shape *_wrap_BRepTools_Quilt_shells (BRepTools_Quilt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9490,7 +9866,6 @@ EXPORT void _wrap_delete_BRepTools_Quilt (BRepTools_Quilt *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9542,7 +9917,6 @@ EXPORT bool _wrap_BRepBuilderAPI_Command_IsDone (BRepBuilderAPI_Command *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9574,7 +9948,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_Command (BRepBuilderAPI_Command *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9605,7 +9978,6 @@ EXPORT void _wrap_BRepBuilderAPI_MakeShape_Build (BRepBuilderAPI_MakeShape *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9638,7 +10010,6 @@ EXPORT TopoDS_Shape *_wrap_BRepBuilderAPI_MakeShape_Shape (BRepBuilderAPI_MakeSh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9670,7 +10041,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_MakeShape (BRepBuilderAPI_MakeShape *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9705,7 +10075,6 @@ EXPORT TopoDS_Shape *_wrap_BRepBuilderAPI_ModifyShape_ModifiedShape (BRepBuilder
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9737,7 +10106,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_ModifyShape (BRepBuilderAPI_ModifyShape 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9770,7 +10138,6 @@ EXPORT BRepBuilderAPI_Transform *_wrap_new_BRepBuilderAPI_Transform__SWIG_0 (gp_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9808,7 +10175,6 @@ EXPORT BRepBuilderAPI_Transform *_wrap_new_BRepBuilderAPI_Transform__SWIG_1 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9844,7 +10210,6 @@ EXPORT BRepBuilderAPI_Transform *_wrap_new_BRepBuilderAPI_Transform__SWIG_2 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9880,7 +10245,6 @@ EXPORT void _wrap_BRepBuilderAPI_Transform_Perform__SWIG_0 (BRepBuilderAPI_Trans
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9913,7 +10277,6 @@ EXPORT void _wrap_BRepBuilderAPI_Transform_Perform__SWIG_1 (BRepBuilderAPI_Trans
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9944,7 +10307,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_Transform (BRepBuilderAPI_Transform *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -9977,7 +10339,6 @@ EXPORT BRepBuilderAPI_MakeVertex *_wrap_new_BRepBuilderAPI_MakeVertex (gp_Pnt *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10011,7 +10372,6 @@ EXPORT TopoDS_Vertex *_wrap_BRepBuilderAPI_MakeVertex_Vertex (BRepBuilderAPI_Mak
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10043,7 +10403,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_MakeVertex (BRepBuilderAPI_MakeVertex *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10074,7 +10433,6 @@ EXPORT BRepBuilderAPI_MakeWire *_wrap_new_BRepBuilderAPI_MakeWire__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10108,7 +10466,6 @@ EXPORT BRepBuilderAPI_MakeWire *_wrap_new_BRepBuilderAPI_MakeWire__SWIG_1 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10144,7 +10501,6 @@ EXPORT BRepBuilderAPI_MakeWire *_wrap_new_BRepBuilderAPI_MakeWire__SWIG_2 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10182,7 +10538,6 @@ EXPORT BRepBuilderAPI_MakeWire *_wrap_new_BRepBuilderAPI_MakeWire__SWIG_3 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10222,7 +10577,6 @@ EXPORT BRepBuilderAPI_MakeWire *_wrap_new_BRepBuilderAPI_MakeWire__SWIG_4 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10256,7 +10610,6 @@ EXPORT BRepBuilderAPI_MakeWire *_wrap_new_BRepBuilderAPI_MakeWire__SWIG_5 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10292,7 +10645,6 @@ EXPORT BRepBuilderAPI_MakeWire *_wrap_new_BRepBuilderAPI_MakeWire__SWIG_6 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10326,7 +10678,6 @@ EXPORT void _wrap_BRepBuilderAPI_MakeWire_Add__SWIG_0 (BRepBuilderAPI_MakeWire *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10359,7 +10710,6 @@ EXPORT void _wrap_BRepBuilderAPI_MakeWire_Add__SWIG_1 (BRepBuilderAPI_MakeWire *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10392,7 +10742,6 @@ EXPORT void _wrap_BRepBuilderAPI_MakeWire_Add__SWIG_2 (BRepBuilderAPI_MakeWire *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10425,7 +10774,6 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeWire_IsDone (BRepBuilderAPI_MakeWire *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10459,7 +10807,6 @@ EXPORT BRepBuilderAPI_WireError _wrap_BRepBuilderAPI_MakeWire_Error (BRepBuilder
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10493,7 +10840,6 @@ EXPORT TopoDS_Wire *_wrap_BRepBuilderAPI_MakeWire_Wire (BRepBuilderAPI_MakeWire 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10525,7 +10871,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_MakeWire (BRepBuilderAPI_MakeWire *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10556,7 +10901,6 @@ EXPORT BRepBuilderAPI_MakeShell *_wrap_new_BRepBuilderAPI_MakeShell () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10590,7 +10934,6 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeShell_IsDone (BRepBuilderAPI_MakeShell *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10624,7 +10967,6 @@ EXPORT BRepBuilderAPI_ShellError _wrap_BRepBuilderAPI_MakeShell_Error (BRepBuild
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10658,7 +11000,6 @@ EXPORT TopoDS_Shell *_wrap_BRepBuilderAPI_MakeShell_Shell (BRepBuilderAPI_MakeSh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10690,7 +11031,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_MakeShell (BRepBuilderAPI_MakeShell *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10721,7 +11061,6 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -10740,41 +11079,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_0 () {
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1 (Handle_Geom_Curve *larg1) {
-  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
-  Handle_Geom_Curve *arg1 = 0 ;
-  BRepBuilderAPI_MakeEdge *result = 0 ;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom_Curve const &)*arg1);
-      }
-      catch(Standard_Failure const& error)
-      {
-        cout << "FOO!";
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &)";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = result;
-    return lresult;
-  } catch (...) {
-    return (BRepBuilderAPI_MakeEdge *)0;
-  }
-}
-
-
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2 (TopoDS_Vertex *larg1, TopoDS_Vertex *larg2) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1 (TopoDS_Vertex *larg1, TopoDS_Vertex *larg2) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   TopoDS_Vertex *arg1 = 0 ;
   TopoDS_Vertex *arg2 = 0 ;
@@ -10791,14 +11096,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(TopoDS_Vertex const &,TopoDS_Vertex const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -10810,7 +11114,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2 (TopoD
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3 (gp_Pnt *larg1, gp_Pnt *larg2) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2 (gp_Pnt *larg1, gp_Pnt *larg2) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Pnt *arg1 = 0 ;
   gp_Pnt *arg2 = 0 ;
@@ -10827,14 +11131,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3 (gp_Pn
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Pnt const &,gp_Pnt const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Pnt const &,gp_Pnt const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -10846,7 +11149,151 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3 (gp_Pn
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4 (gp_Circ *larg1) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3 (gp_Lin *larg1) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Lin *arg1 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Lin const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Lin const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4 (gp_Lin *larg1, Standard_Real larg2, Standard_Real larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Lin *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Lin const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Lin const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5 (gp_Lin *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Lin *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Lin const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Lin const &,gp_Pnt const &,gp_Pnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6 (gp_Lin *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Lin *arg1 = 0 ;
+  TopoDS_Vertex *arg2 = 0 ;
+  TopoDS_Vertex *arg3 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Lin const &)*arg1,(TopoDS_Vertex const &)*arg2,(TopoDS_Vertex const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Lin const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7 (gp_Circ *larg1) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Circ *arg1 = 0 ;
   BRepBuilderAPI_MakeEdge *result = 0 ;
@@ -10861,14 +11308,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4 (gp_Ci
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -10880,7 +11326,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4 (gp_Ci
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5 (gp_Circ *larg1, Standard_Real larg2, Standard_Real larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8 (gp_Circ *larg1, Standard_Real larg2, Standard_Real larg3) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Circ *arg1 = 0 ;
   Standard_Real arg2 ;
@@ -10899,14 +11345,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5 (gp_Ci
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &,Standard_Real const,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &,Standard_Real const,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -10918,7 +11363,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5 (gp_Ci
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6 (gp_Circ *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9 (gp_Circ *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Circ *arg1 = 0 ;
   gp_Pnt *arg2 = 0 ;
@@ -10937,14 +11382,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6 (gp_Ci
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &,gp_Pnt const &,gp_Pnt const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &,gp_Pnt const &,gp_Pnt const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -10956,7 +11400,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6 (gp_Ci
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7 (gp_Circ *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10 (gp_Circ *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Circ *arg1 = 0 ;
   TopoDS_Vertex *arg2 = 0 ;
@@ -10975,14 +11419,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7 (gp_Ci
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Circ const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -10994,7 +11437,295 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7 (gp_Ci
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8 (gp_Parab *larg1) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11 (gp_Elips *larg1) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Elips *arg1 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Elips const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Elips const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12 (gp_Elips *larg1, Standard_Real larg2, Standard_Real larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Elips *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Elips const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Elips const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13 (gp_Elips *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Elips *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Elips const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Elips const &,gp_Pnt const &,gp_Pnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14 (gp_Elips *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Elips *arg1 = 0 ;
+  TopoDS_Vertex *arg2 = 0 ;
+  TopoDS_Vertex *arg3 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Elips const &)*arg1,(TopoDS_Vertex const &)*arg2,(TopoDS_Vertex const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Elips const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15 (gp_Hypr *larg1) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Hypr *arg1 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Hypr const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Hypr const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_16 (gp_Hypr *larg1, Standard_Real larg2, Standard_Real larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Hypr *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Hypr const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_16\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Hypr const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_17 (gp_Hypr *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Hypr *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Hypr const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_17\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Hypr const &,gp_Pnt const &,gp_Pnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_18 (gp_Hypr *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  gp_Hypr *arg1 = 0 ;
+  TopoDS_Vertex *arg2 = 0 ;
+  TopoDS_Vertex *arg3 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((gp_Hypr const &)*arg1,(TopoDS_Vertex const &)*arg2,(TopoDS_Vertex const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_18\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Hypr const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_19 (gp_Parab *larg1) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Parab *arg1 = 0 ;
   BRepBuilderAPI_MakeEdge *result = 0 ;
@@ -11009,14 +11740,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8 (gp_Pa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_19\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11028,7 +11758,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8 (gp_Pa
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9 (gp_Parab *larg1, Standard_Real larg2, Standard_Real larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_20 (gp_Parab *larg1, Standard_Real larg2, Standard_Real larg3) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Parab *arg1 = 0 ;
   Standard_Real arg2 ;
@@ -11047,14 +11777,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9 (gp_Pa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &,Standard_Real const,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_20\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &,Standard_Real const,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11066,7 +11795,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9 (gp_Pa
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10 (gp_Parab *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_21 (gp_Parab *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Parab *arg1 = 0 ;
   gp_Pnt *arg2 = 0 ;
@@ -11085,14 +11814,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10 (gp_P
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &,gp_Pnt const &,gp_Pnt const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_21\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &,gp_Pnt const &,gp_Pnt const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11104,7 +11832,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10 (gp_P
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11 (gp_Parab *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_22 (gp_Parab *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   gp_Parab *arg1 = 0 ;
   TopoDS_Vertex *arg2 = 0 ;
@@ -11123,14 +11851,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11 (gp_P
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_22\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(gp_Parab const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11142,7 +11869,114 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11 (gp_P
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12 (Handle_Geom_Curve *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_23 (Handle_Geom_Curve *larg1) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom_Curve const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_23\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_24 (Handle_Geom_Curve *larg1, Standard_Real larg2, Standard_Real larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom_Curve const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_24\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_25 (Handle_Geom_Curve *larg1, gp_Pnt *larg2, gp_Pnt *larg3) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom_Curve const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_25\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,gp_Pnt const &,gp_Pnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_26 (Handle_Geom_Curve *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   Handle_Geom_Curve *arg1 = 0 ;
   TopoDS_Vertex *arg2 = 0 ;
@@ -11161,14 +11995,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12 (Hand
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_26\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11180,7 +12013,48 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12 (Hand
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13 (Handle_Geom_Curve *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3, Standard_Real larg4, Standard_Real larg5) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_27 (Handle_Geom_Curve *larg1, gp_Pnt *larg2, gp_Pnt *larg3, Standard_Real larg4, Standard_Real larg5) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  Standard_Real arg4 ;
+  Standard_Real arg5 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom_Curve const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3,arg4,arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_27\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,gp_Pnt const &,gp_Pnt const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_28 (Handle_Geom_Curve *larg1, TopoDS_Vertex *larg2, TopoDS_Vertex *larg3, Standard_Real larg4, Standard_Real larg5) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   Handle_Geom_Curve *arg1 = 0 ;
   TopoDS_Vertex *arg2 = 0 ;
@@ -11203,14 +12077,13 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13 (Hand
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,TopoDS_Vertex const &,TopoDS_Vertex const &,Standard_Real const,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_28\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,TopoDS_Vertex const &,TopoDS_Vertex const &,Standard_Real const,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11222,33 +12095,30 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13 (Hand
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14 (Handle_Geom_Curve *larg1, Standard_Real larg2, Standard_Real larg3) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_29 (Handle_Geom2d_Curve *larg1, Handle_Geom_Surface *larg2) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
-  Handle_Geom_Curve *arg1 = 0 ;
-  Standard_Real arg2 ;
-  Standard_Real arg3 ;
+  Handle_Geom2d_Curve *arg1 = 0 ;
+  Handle_Geom_Surface *arg2 = 0 ;
   BRepBuilderAPI_MakeEdge *result = 0 ;
   
   arg1 = larg1;
   arg2 = larg2;
-  arg3 = larg3;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom_Curve const &)*arg1,arg2,arg3);
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom2d_Curve const &)*arg1,(Handle_Geom_Surface const &)*arg2);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom_Curve const &,Standard_Real const,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_29\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom2d_Curve const &,Handle_Geom_Surface const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11260,7 +12130,7 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14 (Hand
 }
 
 
-EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15 (Handle_Geom2d_Curve *larg1, Handle_Geom_Surface *larg2, Standard_Real larg3, Standard_Real larg4) {
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_30 (Handle_Geom2d_Curve *larg1, Handle_Geom_Surface *larg2, Standard_Real larg3, Standard_Real larg4) {
   BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
   Handle_Geom2d_Curve *arg1 = 0 ;
   Handle_Geom_Surface *arg2 = 0 ;
@@ -11281,14 +12151,138 @@ EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15 (Hand
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom2d_Curve const &,Handle_Geom_Surface const &,Standard_Real const,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_30\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom2d_Curve const &,Handle_Geom_Surface const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_31 (Handle_Geom2d_Curve *larg1, Handle_Geom_Surface *larg2, TopoDS_Vertex *larg3, TopoDS_Vertex *larg4) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  Handle_Geom2d_Curve *arg1 = 0 ;
+  Handle_Geom_Surface *arg2 = 0 ;
+  TopoDS_Vertex *arg3 = 0 ;
+  TopoDS_Vertex *arg4 = 0 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom2d_Curve const &)*arg1,(Handle_Geom_Surface const &)*arg2,(TopoDS_Vertex const &)*arg3,(TopoDS_Vertex const &)*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_31\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom2d_Curve const &,Handle_Geom_Surface const &,TopoDS_Vertex const &,TopoDS_Vertex const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_32 (Handle_Geom2d_Curve *larg1, Handle_Geom_Surface *larg2, gp_Pnt *larg3, gp_Pnt *larg4, Standard_Real larg5, Standard_Real larg6) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  Handle_Geom2d_Curve *arg1 = 0 ;
+  Handle_Geom_Surface *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Pnt *arg4 = 0 ;
+  Standard_Real arg5 ;
+  Standard_Real arg6 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  arg6 = larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom2d_Curve const &)*arg1,(Handle_Geom_Surface const &)*arg2,(gp_Pnt const &)*arg3,(gp_Pnt const &)*arg4,arg5,arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_32\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom2d_Curve const &,Handle_Geom_Surface const &,gp_Pnt const &,gp_Pnt const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeEdge *)0;
+  }
+}
+
+
+EXPORT BRepBuilderAPI_MakeEdge *_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_33 (Handle_Geom2d_Curve *larg1, Handle_Geom_Surface *larg2, TopoDS_Vertex *larg3, TopoDS_Vertex *larg4, Standard_Real larg5, Standard_Real larg6) {
+  BRepBuilderAPI_MakeEdge * lresult = (BRepBuilderAPI_MakeEdge *)0 ;
+  Handle_Geom2d_Curve *arg1 = 0 ;
+  Handle_Geom_Surface *arg2 = 0 ;
+  TopoDS_Vertex *arg3 = 0 ;
+  TopoDS_Vertex *arg4 = 0 ;
+  Standard_Real arg5 ;
+  Standard_Real arg6 ;
+  BRepBuilderAPI_MakeEdge *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  arg6 = larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeEdge *)new BRepBuilderAPI_MakeEdge((Handle_Geom2d_Curve const &)*arg1,(Handle_Geom_Surface const &)*arg2,(TopoDS_Vertex const &)*arg3,(TopoDS_Vertex const &)*arg4,arg5,arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeEdge\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeEdge__SWIG_33\n  * fulldecl: BRepBuilderAPI_MakeEdge::BRepBuilderAPI_MakeEdge(Handle_Geom2d_Curve const &,Handle_Geom_Surface const &,TopoDS_Vertex const &,TopoDS_Vertex const &,Standard_Real const,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -11315,7 +12309,6 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeEdge_IsDone (BRepBuilderAPI_MakeEdge *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11349,7 +12342,6 @@ EXPORT BRepBuilderAPI_EdgeError _wrap_BRepBuilderAPI_MakeEdge_Error (BRepBuilder
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11383,7 +12375,6 @@ EXPORT TopoDS_Edge *_wrap_BRepBuilderAPI_MakeEdge_Edge (BRepBuilderAPI_MakeEdge 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11415,7 +12406,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_MakeEdge (BRepBuilderAPI_MakeEdge *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11450,7 +12440,6 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_0 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11484,7 +12473,6 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_1 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11520,7 +12508,6 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_2 (TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11558,7 +12545,6 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_3 (Handl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11594,7 +12580,6 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_4 (Handl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11638,7 +12623,6 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_5 (Handl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11672,7 +12656,6 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeFace_IsDone (BRepBuilderAPI_MakeFace *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11706,7 +12689,6 @@ EXPORT BRepBuilderAPI_FaceError _wrap_BRepBuilderAPI_MakeFace_Error (BRepBuilder
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11740,7 +12722,6 @@ EXPORT TopoDS_Face *_wrap_BRepBuilderAPI_MakeFace_Face (BRepBuilderAPI_MakeFace 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11772,7 +12753,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_MakeFace (BRepBuilderAPI_MakeFace *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11803,7 +12783,6 @@ EXPORT BRepBuilderAPI_MakeSolid *_wrap_new_BRepBuilderAPI_MakeSolid__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11837,7 +12816,6 @@ EXPORT BRepBuilderAPI_MakeSolid *_wrap_new_BRepBuilderAPI_MakeSolid__SWIG_1 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11871,7 +12849,6 @@ EXPORT BRepBuilderAPI_MakeSolid *_wrap_new_BRepBuilderAPI_MakeSolid__SWIG_2 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11907,7 +12884,6 @@ EXPORT BRepBuilderAPI_MakeSolid *_wrap_new_BRepBuilderAPI_MakeSolid__SWIG_3 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11945,7 +12921,6 @@ EXPORT BRepBuilderAPI_MakeSolid *_wrap_new_BRepBuilderAPI_MakeSolid__SWIG_4 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -11979,7 +12954,6 @@ EXPORT BRepBuilderAPI_MakeSolid *_wrap_new_BRepBuilderAPI_MakeSolid__SWIG_5 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12015,7 +12989,6 @@ EXPORT BRepBuilderAPI_MakeSolid *_wrap_new_BRepBuilderAPI_MakeSolid__SWIG_6 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12049,7 +13022,6 @@ EXPORT void _wrap_BRepBuilderAPI_MakeSolid_Add (BRepBuilderAPI_MakeSolid *larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12082,7 +13054,6 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeSolid_IsDone (BRepBuilderAPI_MakeSolid *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12097,6 +13068,39 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeSolid_IsDone (BRepBuilderAPI_MakeSolid *lar
     return lresult;
   } catch (...) {
     return (bool)0;
+  }
+}
+
+
+EXPORT TopoDS_Solid *_wrap_BRepBuilderAPI_MakeSolid_Solid (BRepBuilderAPI_MakeSolid *larg1) {
+  TopoDS_Solid * lresult = (TopoDS_Solid *)0 ;
+  BRepBuilderAPI_MakeSolid *arg1 = (BRepBuilderAPI_MakeSolid *) 0 ;
+  TopoDS_Solid *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Solid *) &(arg1)->Solid();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepBuilderAPI_MakeSolid_Solid\n  * wrapname: _wrap_BRepBuilderAPI_MakeSolid_Solid\n  * fulldecl: TopoDS_Solid const & BRepBuilderAPI_MakeSolid::Solid()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Solid *)0;
   }
 }
 
@@ -12118,7 +13122,6 @@ EXPORT bool _wrap_BRepBuilderAPI_MakeSolid_IsDeleted (BRepBuilderAPI_MakeSolid *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12150,7 +13153,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_MakeSolid (BRepBuilderAPI_MakeSolid *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12189,7 +13191,6 @@ EXPORT BRepBuilderAPI_Sewing *_wrap_new_BRepBuilderAPI_Sewing__SWIG_0 (Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12227,7 +13228,6 @@ EXPORT BRepBuilderAPI_Sewing *_wrap_new_BRepBuilderAPI_Sewing__SWIG_1 (Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12263,7 +13263,6 @@ EXPORT BRepBuilderAPI_Sewing *_wrap_new_BRepBuilderAPI_Sewing__SWIG_2 (Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12297,7 +13296,6 @@ EXPORT BRepBuilderAPI_Sewing *_wrap_new_BRepBuilderAPI_Sewing__SWIG_3 (Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12329,7 +13327,6 @@ EXPORT BRepBuilderAPI_Sewing *_wrap_new_BRepBuilderAPI_Sewing__SWIG_4 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12369,7 +13366,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Init__SWIG_0 (BRepBuilderAPI_Sewing *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12406,7 +13402,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Init__SWIG_1 (BRepBuilderAPI_Sewing *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12441,7 +13436,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Init__SWIG_2 (BRepBuilderAPI_Sewing *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12474,7 +13468,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Init__SWIG_3 (BRepBuilderAPI_Sewing *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12507,7 +13500,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Load (BRepBuilderAPI_Sewing *larg1, Topo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12540,7 +13532,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Add (BRepBuilderAPI_Sewing *larg1, TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12571,7 +13562,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Perform (BRepBuilderAPI_Sewing *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12604,7 +13594,6 @@ EXPORT TopoDS_Shape *_wrap_BRepBuilderAPI_Sewing_SewedShape (BRepBuilderAPI_Sewi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12638,7 +13627,6 @@ EXPORT Standard_Integer _wrap_BRepBuilderAPI_Sewing_NbFreeEdges (BRepBuilderAPI_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12674,7 +13662,6 @@ EXPORT TopoDS_Edge *_wrap_BRepBuilderAPI_Sewing_FreeEdge (BRepBuilderAPI_Sewing 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12708,7 +13695,6 @@ EXPORT Standard_Integer _wrap_BRepBuilderAPI_Sewing_NbMultipleEdges (BRepBuilder
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12744,7 +13730,6 @@ EXPORT TopoDS_Edge *_wrap_BRepBuilderAPI_Sewing_MultipleEdge (BRepBuilderAPI_Sew
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12778,7 +13763,6 @@ EXPORT Standard_Integer _wrap_BRepBuilderAPI_Sewing_NbDegeneratedShapes (BRepBui
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12814,7 +13798,6 @@ EXPORT TopoDS_Shape *_wrap_BRepBuilderAPI_Sewing_DegeneratedShape (BRepBuilderAP
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12848,7 +13831,6 @@ EXPORT Standard_Integer _wrap_BRepBuilderAPI_Sewing_NbDeletedFaces (BRepBuilderA
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12884,7 +13866,6 @@ EXPORT TopoDS_Face *_wrap_BRepBuilderAPI_Sewing_DeletedFace (BRepBuilderAPI_Sewi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12920,7 +13901,6 @@ EXPORT bool _wrap_BRepBuilderAPI_Sewing_IsDegenerated (BRepBuilderAPI_Sewing *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12956,7 +13936,6 @@ EXPORT bool _wrap_BRepBuilderAPI_Sewing_IsModified (BRepBuilderAPI_Sewing *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -12992,7 +13971,6 @@ EXPORT TopoDS_Shape *_wrap_BRepBuilderAPI_Sewing_Modified (BRepBuilderAPI_Sewing
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13024,7 +14002,6 @@ EXPORT void _wrap_BRepBuilderAPI_Sewing_Dump (BRepBuilderAPI_Sewing *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13059,7 +14036,6 @@ EXPORT bool _wrap_BRepBuilderAPI_Sewing_IsModifiedSubShape (BRepBuilderAPI_Sewin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13095,7 +14071,6 @@ EXPORT TopoDS_Shape *_wrap_BRepBuilderAPI_Sewing_ModifiedSubShape (BRepBuilderAP
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13127,7 +14102,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_Sewing (BRepBuilderAPI_Sewing *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13158,7 +14132,6 @@ EXPORT BRepBuilderAPI_NurbsConvert *_wrap_new_BRepBuilderAPI_NurbsConvert__SWIG_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13194,7 +14167,6 @@ EXPORT BRepBuilderAPI_NurbsConvert *_wrap_new_BRepBuilderAPI_NurbsConvert__SWIG_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13228,7 +14200,6 @@ EXPORT BRepBuilderAPI_NurbsConvert *_wrap_new_BRepBuilderAPI_NurbsConvert__SWIG_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13264,7 +14235,6 @@ EXPORT void _wrap_BRepBuilderAPI_NurbsConvert_Perform__SWIG_0 (BRepBuilderAPI_Nu
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13297,7 +14267,6 @@ EXPORT void _wrap_BRepBuilderAPI_NurbsConvert_Perform__SWIG_1 (BRepBuilderAPI_Nu
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13328,7 +14297,6 @@ EXPORT void _wrap_delete_BRepBuilderAPI_NurbsConvert (BRepBuilderAPI_NurbsConver
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13362,7 +14330,6 @@ EXPORT BRepOffsetAPI_NormalProjection *_wrap_new_BRepOffsetAPI_NormalProjection_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13396,7 +14363,6 @@ EXPORT BRepOffsetAPI_NormalProjection *_wrap_new_BRepOffsetAPI_NormalProjection_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13430,7 +14396,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_Init (BRepOffsetAPI_NormalProje
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13463,7 +14428,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_Add (BRepOffsetAPI_NormalProjec
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13504,7 +14468,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_SetParams (BRepOffsetAPI_Normal
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13537,7 +14500,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_SetMaxDistance (BRepOffsetAPI_N
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13570,7 +14532,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_SetLimit__SWIG_0 (BRepOffsetAPI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13601,7 +14562,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_SetLimit__SWIG_1 (BRepOffsetAPI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13634,7 +14594,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_Compute3d__SWIG_0 (BRepOffsetAP
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13665,7 +14624,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_Compute3d__SWIG_1 (BRepOffsetAP
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13696,7 +14654,6 @@ EXPORT void _wrap_BRepOffsetAPI_NormalProjection_Build (BRepOffsetAPI_NormalProj
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13729,7 +14686,6 @@ EXPORT bool _wrap_BRepOffsetAPI_NormalProjection_IsDone (BRepOffsetAPI_NormalPro
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13763,7 +14719,6 @@ EXPORT TopoDS_Shape *_wrap_BRepOffsetAPI_NormalProjection_Projection (BRepOffset
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13799,7 +14754,6 @@ EXPORT TopoDS_Shape *_wrap_BRepOffsetAPI_NormalProjection_Couple (BRepOffsetAPI_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13835,7 +14789,6 @@ EXPORT TopTools_ListOfShape *_wrap_BRepOffsetAPI_NormalProjection_Generated (BRe
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13871,7 +14824,6 @@ EXPORT TopoDS_Shape *_wrap_BRepOffsetAPI_NormalProjection_Ancestor (BRepOffsetAP
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13907,7 +14859,6 @@ EXPORT bool _wrap_BRepOffsetAPI_NormalProjection_BuildWire (BRepOffsetAPI_Normal
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13939,7 +14890,6 @@ EXPORT void _wrap_delete_BRepOffsetAPI_NormalProjection (BRepOffsetAPI_NormalPro
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -13973,7 +14923,6 @@ EXPORT BRepOffsetAPI_MakeOffsetShape *_wrap_new_BRepOffsetAPI_MakeOffsetShape__S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14021,7 +14970,6 @@ EXPORT BRepOffsetAPI_MakeOffsetShape *_wrap_new_BRepOffsetAPI_MakeOffsetShape__S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14067,7 +15015,6 @@ EXPORT BRepOffsetAPI_MakeOffsetShape *_wrap_new_BRepOffsetAPI_MakeOffsetShape__S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14111,7 +15058,6 @@ EXPORT BRepOffsetAPI_MakeOffsetShape *_wrap_new_BRepOffsetAPI_MakeOffsetShape__S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14153,7 +15099,6 @@ EXPORT BRepOffsetAPI_MakeOffsetShape *_wrap_new_BRepOffsetAPI_MakeOffsetShape__S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14193,7 +15138,6 @@ EXPORT BRepOffsetAPI_MakeOffsetShape *_wrap_new_BRepOffsetAPI_MakeOffsetShape__S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14231,7 +15175,6 @@ EXPORT BRepOffsetAPI_MakeOffsetShape *_wrap_new_BRepOffsetAPI_MakeOffsetShape__S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14263,7 +15206,6 @@ EXPORT void _wrap_delete_BRepOffsetAPI_MakeOffsetShape (BRepOffsetAPI_MakeOffset
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14297,7 +15239,6 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14347,7 +15288,6 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14395,7 +15335,6 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14441,7 +15380,6 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14485,7 +15423,6 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14527,7 +15464,6 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14567,7 +15503,6 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14586,6 +15521,71 @@ EXPORT BRepOffsetAPI_MakeThickSolid *_wrap_new_BRepOffsetAPI_MakeThickSolid__SWI
 }
 
 
+EXPORT void _wrap_BRepOffsetAPI_MakeThickSolid_Build (BRepOffsetAPI_MakeThickSolid *larg1) {
+  BRepOffsetAPI_MakeThickSolid *arg1 = (BRepOffsetAPI_MakeThickSolid *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Build();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_MakeThickSolid_Build\n  * wrapname: _wrap_BRepOffsetAPI_MakeThickSolid_Build\n  * fulldecl: void BRepOffsetAPI_MakeThickSolid::Build()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopTools_ListOfShape *_wrap_BRepOffsetAPI_MakeThickSolid_Modified (BRepOffsetAPI_MakeThickSolid *larg1, TopoDS_Shape *larg2) {
+  TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
+  BRepOffsetAPI_MakeThickSolid *arg1 = (BRepOffsetAPI_MakeThickSolid *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  TopTools_ListOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_ListOfShape *) &(arg1)->Modified((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_MakeThickSolid_Modified\n  * wrapname: _wrap_BRepOffsetAPI_MakeThickSolid_Modified\n  * fulldecl: TopTools_ListOfShape const & BRepOffsetAPI_MakeThickSolid::Modified(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_ListOfShape *)0;
+  }
+}
+
+
 EXPORT void _wrap_delete_BRepOffsetAPI_MakeThickSolid (BRepOffsetAPI_MakeThickSolid *larg1) {
   BRepOffsetAPI_MakeThickSolid *arg1 = (BRepOffsetAPI_MakeThickSolid *) 0 ;
   
@@ -14599,7 +15599,6 @@ EXPORT void _wrap_delete_BRepOffsetAPI_MakeThickSolid (BRepOffsetAPI_MakeThickSo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14607,6 +15606,866 @@ EXPORT void _wrap_delete_BRepOffsetAPI_MakeThickSolid (BRepOffsetAPI_MakeThickSo
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: delete_BRepOffsetAPI_MakeThickSolid\n  * wrapname: _wrap_delete_BRepOffsetAPI_MakeThickSolid\n  * fulldecl: BRepOffsetAPI_MakeThickSolid::~BRepOffsetAPI_MakeThickSolid()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+
+#include <BRepOffsetAPI_ThruSections.hxx>
+  
+EXPORT BRepOffsetAPI_ThruSections *_wrap_new_BRepOffsetAPI_ThruSections__SWIG_0 (bool larg1, bool larg2, Standard_Real larg3) {
+  BRepOffsetAPI_ThruSections * lresult = (BRepOffsetAPI_ThruSections *)0 ;
+  Standard_Boolean arg1 ;
+  Standard_Boolean arg2 ;
+  Standard_Real arg3 ;
+  BRepOffsetAPI_ThruSections *result = 0 ;
+  
+  arg1 = (bool)larg1;
+  arg2 = (bool)larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepOffsetAPI_ThruSections *)new BRepOffsetAPI_ThruSections(arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepOffsetAPI_ThruSections\n  * wrapname: _wrap_new_BRepOffsetAPI_ThruSections__SWIG_0\n  * fulldecl: BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections(Standard_Boolean const,Standard_Boolean const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepOffsetAPI_ThruSections *)0;
+  }
+}
+
+
+EXPORT BRepOffsetAPI_ThruSections *_wrap_new_BRepOffsetAPI_ThruSections__SWIG_1 (bool larg1, bool larg2) {
+  BRepOffsetAPI_ThruSections * lresult = (BRepOffsetAPI_ThruSections *)0 ;
+  Standard_Boolean arg1 ;
+  Standard_Boolean arg2 ;
+  BRepOffsetAPI_ThruSections *result = 0 ;
+  
+  arg1 = (bool)larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepOffsetAPI_ThruSections *)new BRepOffsetAPI_ThruSections(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepOffsetAPI_ThruSections\n  * wrapname: _wrap_new_BRepOffsetAPI_ThruSections__SWIG_1\n  * fulldecl: BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections(Standard_Boolean const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepOffsetAPI_ThruSections *)0;
+  }
+}
+
+
+EXPORT BRepOffsetAPI_ThruSections *_wrap_new_BRepOffsetAPI_ThruSections__SWIG_2 (bool larg1) {
+  BRepOffsetAPI_ThruSections * lresult = (BRepOffsetAPI_ThruSections *)0 ;
+  Standard_Boolean arg1 ;
+  BRepOffsetAPI_ThruSections *result = 0 ;
+  
+  arg1 = (bool)larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepOffsetAPI_ThruSections *)new BRepOffsetAPI_ThruSections(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepOffsetAPI_ThruSections\n  * wrapname: _wrap_new_BRepOffsetAPI_ThruSections__SWIG_2\n  * fulldecl: BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepOffsetAPI_ThruSections *)0;
+  }
+}
+
+
+EXPORT BRepOffsetAPI_ThruSections *_wrap_new_BRepOffsetAPI_ThruSections__SWIG_3 () {
+  BRepOffsetAPI_ThruSections * lresult = (BRepOffsetAPI_ThruSections *)0 ;
+  BRepOffsetAPI_ThruSections *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepOffsetAPI_ThruSections *)new BRepOffsetAPI_ThruSections();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepOffsetAPI_ThruSections\n  * wrapname: _wrap_new_BRepOffsetAPI_ThruSections__SWIG_3\n  * fulldecl: BRepOffsetAPI_ThruSections::BRepOffsetAPI_ThruSections()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepOffsetAPI_ThruSections *)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_0 (BRepOffsetAPI_ThruSections *larg1, bool larg2, bool larg3, Standard_Real larg4) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Real arg4 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  arg3 = (bool)larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Init(arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_Init\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_0\n  * fulldecl: void BRepOffsetAPI_ThruSections::Init(Standard_Boolean const,Standard_Boolean const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_1 (BRepOffsetAPI_ThruSections *larg1, bool larg2, bool larg3) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Boolean arg3 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Init(arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_Init\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_1\n  * fulldecl: void BRepOffsetAPI_ThruSections::Init(Standard_Boolean const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_2 (BRepOffsetAPI_ThruSections *larg1, bool larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Boolean arg2 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Init(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_Init\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_2\n  * fulldecl: void BRepOffsetAPI_ThruSections::Init(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_3 (BRepOffsetAPI_ThruSections *larg1) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Init();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_Init\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_Init__SWIG_3\n  * fulldecl: void BRepOffsetAPI_ThruSections::Init()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_AddWire (BRepOffsetAPI_ThruSections *larg1, TopoDS_Wire *larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  TopoDS_Wire *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->AddWire((TopoDS_Wire const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_AddWire\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_AddWire\n  * fulldecl: void BRepOffsetAPI_ThruSections::AddWire(TopoDS_Wire const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_AddVertex (BRepOffsetAPI_ThruSections *larg1, TopoDS_Vertex *larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  TopoDS_Vertex *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->AddVertex((TopoDS_Vertex const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_AddVertex\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_AddVertex\n  * fulldecl: void BRepOffsetAPI_ThruSections::AddVertex(TopoDS_Vertex const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_0 (BRepOffsetAPI_ThruSections *larg1, bool larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Boolean arg2 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->CheckCompatibility(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_CheckCompatibility\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_0\n  * fulldecl: void BRepOffsetAPI_ThruSections::CheckCompatibility(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_1 (BRepOffsetAPI_ThruSections *larg1) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->CheckCompatibility();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_CheckCompatibility\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_1\n  * fulldecl: void BRepOffsetAPI_ThruSections::CheckCompatibility()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_SetSmoothing (BRepOffsetAPI_ThruSections *larg1, bool larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Boolean arg2 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetSmoothing(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_SetSmoothing\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_SetSmoothing\n  * fulldecl: void BRepOffsetAPI_ThruSections::SetSmoothing(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_SetParType (BRepOffsetAPI_ThruSections *larg1, Approx_ParametrizationType const *larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Approx_ParametrizationType arg2 ;
+  
+  arg1 = larg1;
+  arg2 = *larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetParType(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_SetParType\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_SetParType\n  * fulldecl: void BRepOffsetAPI_ThruSections::SetParType(Approx_ParametrizationType const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_SetContinuity (BRepOffsetAPI_ThruSections *larg1, GeomAbs_Shape larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  GeomAbs_Shape arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetContinuity(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_SetContinuity\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_SetContinuity\n  * fulldecl: void BRepOffsetAPI_ThruSections::SetContinuity(GeomAbs_Shape const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_SetCriteriumWeight (BRepOffsetAPI_ThruSections *larg1, Standard_Real larg2, Standard_Real larg3, Standard_Real larg4) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetCriteriumWeight(arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_SetCriteriumWeight\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_SetCriteriumWeight\n  * fulldecl: void BRepOffsetAPI_ThruSections::SetCriteriumWeight(Standard_Real const,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_SetMaxDegree (BRepOffsetAPI_ThruSections *larg1, Standard_Integer larg2) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Integer arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetMaxDegree(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_SetMaxDegree\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_SetMaxDegree\n  * fulldecl: void BRepOffsetAPI_ThruSections::SetMaxDegree(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Approx_ParametrizationType *_wrap_BRepOffsetAPI_ThruSections_ParType (BRepOffsetAPI_ThruSections *larg1) {
+  Approx_ParametrizationType * lresult = (Approx_ParametrizationType *)0 ;
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Approx_ParametrizationType result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((BRepOffsetAPI_ThruSections const *)arg1)->ParType();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_ParType\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_ParType\n  * fulldecl: Approx_ParametrizationType BRepOffsetAPI_ThruSections::ParType() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Approx_ParametrizationType(result);
+    return lresult;
+  } catch (...) {
+    return (Approx_ParametrizationType *)0;
+  }
+}
+
+
+EXPORT GeomAbs_Shape _wrap_BRepOffsetAPI_ThruSections_Continuity (BRepOffsetAPI_ThruSections *larg1) {
+  GeomAbs_Shape lresult = (GeomAbs_Shape)0 ;
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  GeomAbs_Shape result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GeomAbs_Shape)((BRepOffsetAPI_ThruSections const *)arg1)->Continuity();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_Continuity\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_Continuity\n  * fulldecl: GeomAbs_Shape BRepOffsetAPI_ThruSections::Continuity() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GeomAbs_Shape)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_BRepOffsetAPI_ThruSections_MaxDegree (BRepOffsetAPI_ThruSections *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((BRepOffsetAPI_ThruSections const *)arg1)->MaxDegree();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_MaxDegree\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_MaxDegree\n  * fulldecl: Standard_Integer BRepOffsetAPI_ThruSections::MaxDegree() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepOffsetAPI_ThruSections_UseSmoothing (BRepOffsetAPI_ThruSections *larg1) {
+  bool lresult = (bool)0 ;
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((BRepOffsetAPI_ThruSections const *)arg1)->UseSmoothing();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_UseSmoothing\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_UseSmoothing\n  * fulldecl: Standard_Boolean BRepOffsetAPI_ThruSections::UseSmoothing() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepOffsetAPI_ThruSections_CriteriumWeight (BRepOffsetAPI_ThruSections *larg1, Standard_Real *larg2, Standard_Real *larg3, Standard_Real *larg4) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  Standard_Real *arg2 = 0 ;
+  Standard_Real *arg3 = 0 ;
+  Standard_Real *arg4 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((BRepOffsetAPI_ThruSections const *)arg1)->CriteriumWeight(*arg2,*arg3,*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_CriteriumWeight\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_CriteriumWeight\n  * fulldecl: void BRepOffsetAPI_ThruSections::CriteriumWeight(Standard_Real &,Standard_Real &,Standard_Real &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_BRepOffsetAPI_ThruSections_FirstShape (BRepOffsetAPI_ThruSections *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  TopoDS_Shape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Shape *) &((BRepOffsetAPI_ThruSections const *)arg1)->FirstShape();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_FirstShape\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_FirstShape\n  * fulldecl: TopoDS_Shape const & BRepOffsetAPI_ThruSections::FirstShape() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_BRepOffsetAPI_ThruSections_LastShape (BRepOffsetAPI_ThruSections *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  TopoDS_Shape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Shape *) &((BRepOffsetAPI_ThruSections const *)arg1)->LastShape();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_LastShape\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_LastShape\n  * fulldecl: TopoDS_Shape const & BRepOffsetAPI_ThruSections::LastShape() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_BRepOffsetAPI_ThruSections_GeneratedFace (BRepOffsetAPI_ThruSections *larg1, TopoDS_Shape *larg2) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  TopoDS_Shape result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((BRepOffsetAPI_ThruSections const *)arg1)->GeneratedFace((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepOffsetAPI_ThruSections_GeneratedFace\n  * wrapname: _wrap_BRepOffsetAPI_ThruSections_GeneratedFace\n  * fulldecl: TopoDS_Shape BRepOffsetAPI_ThruSections::GeneratedFace(TopoDS_Shape const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new TopoDS_Shape(result);
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_BRepOffsetAPI_ThruSections (BRepOffsetAPI_ThruSections *larg1) {
+  BRepOffsetAPI_ThruSections *arg1 = (BRepOffsetAPI_ThruSections *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_BRepOffsetAPI_ThruSections\n  * wrapname: _wrap_delete_BRepOffsetAPI_ThruSections\n  * fulldecl: BRepOffsetAPI_ThruSections::~BRepOffsetAPI_ThruSections()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -14645,7 +16504,6 @@ EXPORT BRepPrimAPI_MakeBox *_wrap_new_BRepPrimAPI_MakeBox (gp_Pnt *larg1, gp_Pnt
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14677,7 +16535,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeBox (BRepPrimAPI_MakeBox *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14718,7 +16575,6 @@ EXPORT BRepPrimAPI_MakeCone *_wrap_new_BRepPrimAPI_MakeCone (gp_Ax2 *larg1, Stan
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14750,7 +16606,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeCone (BRepPrimAPI_MakeCone *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14785,7 +16640,6 @@ EXPORT BRepPrimAPI_MakeCylinder *_wrap_new_BRepPrimAPI_MakeCylinder__SWIG_0 (Sta
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14823,7 +16677,6 @@ EXPORT BRepPrimAPI_MakeCylinder *_wrap_new_BRepPrimAPI_MakeCylinder__SWIG_1 (Sta
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14861,7 +16714,6 @@ EXPORT BRepPrimAPI_MakeCylinder *_wrap_new_BRepPrimAPI_MakeCylinder__SWIG_2 (gp_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14901,7 +16753,6 @@ EXPORT BRepPrimAPI_MakeCylinder *_wrap_new_BRepPrimAPI_MakeCylinder__SWIG_3 (gp_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14933,7 +16784,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeCylinder (BRepPrimAPI_MakeCylinder *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -14970,7 +16820,6 @@ EXPORT BRepPrimAPI_MakeTorus *_wrap_new_BRepPrimAPI_MakeTorus__SWIG_0 (gp_Ax2 *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15014,7 +16863,6 @@ EXPORT BRepPrimAPI_MakeTorus *_wrap_new_BRepPrimAPI_MakeTorus__SWIG_1 (gp_Ax2 *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15046,7 +16894,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeTorus (BRepPrimAPI_MakeTorus *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15081,7 +16928,6 @@ EXPORT BRepPrimAPI_MakeSphere *_wrap_new_BRepPrimAPI_MakeSphere__SWIG_0 (gp_Pnt 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15123,7 +16969,6 @@ EXPORT BRepPrimAPI_MakeSphere *_wrap_new_BRepPrimAPI_MakeSphere__SWIG_1 (gp_Ax2 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15155,7 +17000,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeSphere (BRepPrimAPI_MakeSphere *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15186,7 +17030,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeSweep (BRepPrimAPI_MakeSweep *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15225,7 +17068,6 @@ EXPORT BRepPrimAPI_MakePrism *_wrap_new_BRepPrimAPI_MakePrism__SWIG_0 (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15263,7 +17105,6 @@ EXPORT BRepPrimAPI_MakePrism *_wrap_new_BRepPrimAPI_MakePrism__SWIG_1 (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15299,7 +17140,6 @@ EXPORT BRepPrimAPI_MakePrism *_wrap_new_BRepPrimAPI_MakePrism__SWIG_2 (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15331,7 +17171,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakePrism (BRepPrimAPI_MakePrism *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15370,7 +17209,6 @@ EXPORT BRepPrimAPI_MakeRevol *_wrap_new_BRepPrimAPI_MakeRevol__SWIG_0 (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15408,7 +17246,6 @@ EXPORT BRepPrimAPI_MakeRevol *_wrap_new_BRepPrimAPI_MakeRevol__SWIG_1 (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15446,7 +17283,6 @@ EXPORT BRepPrimAPI_MakeRevol *_wrap_new_BRepPrimAPI_MakeRevol__SWIG_2 (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15482,7 +17318,6 @@ EXPORT BRepPrimAPI_MakeRevol *_wrap_new_BRepPrimAPI_MakeRevol__SWIG_3 (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15514,7 +17349,6 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeRevol (BRepPrimAPI_MakeRevol *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15549,7 +17383,6 @@ EXPORT BRepOffsetAPI_MakePipe *_wrap_new_BRepOffsetAPI_MakePipe (TopoDS_Wire *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15581,7 +17414,6 @@ EXPORT void _wrap_delete_BRepOffsetAPI_MakePipe (BRepOffsetAPI_MakePipe *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15600,6 +17432,7 @@ EXPORT void _wrap_delete_BRepOffsetAPI_MakePipe (BRepOffsetAPI_MakePipe *larg1) 
 
 
 
+#include <BRepAlgoAPI_Algo.hxx>
 #include <BRepAlgoAPI_BooleanOperation.hxx>
 #include <BRepAlgoAPI_Fuse.hxx>
 #include <BRepAlgoAPI_Common.hxx>
@@ -15623,7 +17456,6 @@ EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Modified (BRepAl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15659,7 +17491,6 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_IsDeleted (BRepAlgoAPI_BooleanOpe
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15695,7 +17526,6 @@ EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Generated (BRepA
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15729,7 +17559,6 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasModified (BRepAlgoAPI_BooleanO
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15763,7 +17592,6 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasGenerated (BRepAlgoAPI_Boolean
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15797,7 +17625,6 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasDeleted (BRepAlgoAPI_BooleanOp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15829,7 +17656,6 @@ EXPORT void _wrap_delete_BRepAlgoAPI_BooleanOperation (BRepAlgoAPI_BooleanOperat
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15864,7 +17690,6 @@ EXPORT BRepAlgoAPI_Fuse *_wrap_new_BRepAlgoAPI_Fuse (TopoDS_Shape *larg1, TopoDS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15896,7 +17721,6 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Fuse (BRepAlgoAPI_Fuse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15931,7 +17755,6 @@ EXPORT BRepAlgoAPI_Common *_wrap_new_BRepAlgoAPI_Common (TopoDS_Shape *larg1, To
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15963,7 +17786,6 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Common (BRepAlgoAPI_Common *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -15998,7 +17820,6 @@ EXPORT BRepAlgoAPI_Cut *_wrap_new_BRepAlgoAPI_Cut (TopoDS_Shape *larg1, TopoDS_S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16030,7 +17851,6 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Cut (BRepAlgoAPI_Cut *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16065,7 +17885,6 @@ EXPORT BRepAlgoAPI_Section *_wrap_new_BRepAlgoAPI_Section (TopoDS_Shape *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16097,7 +17916,6 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Section (BRepAlgoAPI_Section *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16115,50 +17933,48 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Section (BRepAlgoAPI_Section *larg1) {
 }
 
 
-
-#include <Poly_Triangulation.hxx>
-  
-EXPORT Poly_Triangulation *_wrap_new_Poly_Triangulation (Standard_Integer larg1, Standard_Integer larg2, bool larg3) {
-  Poly_Triangulation * lresult = (Poly_Triangulation *)0 ;
-  Standard_Integer arg1 ;
-  Standard_Integer arg2 ;
-  Standard_Boolean arg3 ;
-  Poly_Triangulation *result = 0 ;
+EXPORT TopoDS_Shape *_wrap_BRepAlgoAPI_Algo_Shape (BRepAlgoAPI_Algo *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
+  TopoDS_Shape *result = 0 ;
   
   arg1 = larg1;
-  arg2 = larg2;
-  arg3 = (bool)larg3;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Poly_Triangulation *)new Poly_Triangulation(arg1,arg2,arg3);
+        result = (TopoDS_Shape *) &(arg1)->Shape();
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_Poly_Triangulation\n  * wrapname: _wrap_new_Poly_Triangulation\n  * fulldecl: Poly_Triangulation::Poly_Triangulation(Standard_Integer const,Standard_Integer const,Standard_Boolean const)";
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_Shape\n  * wrapname: _wrap_BRepAlgoAPI_Algo_Shape\n  * fulldecl: TopoDS_Shape const & BRepAlgoAPI_Algo::Shape()";
         signal_lisp_error(message.c_str());
       }
     }
     lresult = result;
     return lresult;
   } catch (...) {
-    return (Poly_Triangulation *)0;
+    return (TopoDS_Shape *)0;
   }
 }
 
 
-EXPORT Standard_Real _wrap_Poly_Triangulation_Deflection__SWIG_0 (Poly_Triangulation *larg1) {
+
+#include <Poly_Triangulation.hxx>
+  
+SWIGINTERN Standard_Real Handle_Poly_Triangulation_deflection__SWIG_0(Handle_Poly_Triangulation const *self){
+    return (*self)->Deflection();
+  }
+EXPORT Standard_Real _wrap_Poly_Triangulation_deflection__SWIG_0 (Handle_Poly_Triangulation *larg1) {
   Standard_Real lresult = (Standard_Real)0 ;
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   Standard_Real result;
   
   arg1 = larg1;
@@ -16167,18 +17983,17 @@ EXPORT Standard_Real _wrap_Poly_Triangulation_Deflection__SWIG_0 (Poly_Triangula
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Real)((Poly_Triangulation const *)arg1)->Deflection();
+        result = (Standard_Real)Handle_Poly_Triangulation_deflection__SWIG_0((Handle_Poly_Triangulation const *)arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_Deflection\n  * wrapname: _wrap_Poly_Triangulation_Deflection__SWIG_0\n  * fulldecl: Standard_Real Poly_Triangulation::Deflection() const";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_deflection\n  * wrapname: _wrap_Poly_Triangulation_deflection__SWIG_0\n  * fulldecl: Standard_Real Handle_Poly_Triangulation::deflection() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16190,8 +18005,11 @@ EXPORT Standard_Real _wrap_Poly_Triangulation_Deflection__SWIG_0 (Poly_Triangula
 }
 
 
-EXPORT void _wrap_Poly_Triangulation_Deflection__SWIG_1 (Poly_Triangulation *larg1, Standard_Real larg2) {
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+SWIGINTERN void Handle_Poly_Triangulation_deflection__SWIG_1(Handle_Poly_Triangulation *self,Standard_Real const D){
+    return (*self)->Deflection(D);
+  }
+EXPORT void _wrap_Poly_Triangulation_deflection__SWIG_1 (Handle_Poly_Triangulation *larg1, Standard_Real larg2) {
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   Standard_Real arg2 ;
   
   arg1 = larg1;
@@ -16201,18 +18019,17 @@ EXPORT void _wrap_Poly_Triangulation_Deflection__SWIG_1 (Poly_Triangulation *lar
       try
       {
         OCC_CATCH_SIGNALS
-        (arg1)->Deflection(arg2);
+        Handle_Poly_Triangulation_deflection__SWIG_1(arg1,arg2);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_Deflection\n  * wrapname: _wrap_Poly_Triangulation_Deflection__SWIG_1\n  * fulldecl: void Poly_Triangulation::Deflection(Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_deflection\n  * wrapname: _wrap_Poly_Triangulation_deflection__SWIG_1\n  * fulldecl: void Handle_Poly_Triangulation::deflection(Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16223,8 +18040,11 @@ EXPORT void _wrap_Poly_Triangulation_Deflection__SWIG_1 (Poly_Triangulation *lar
 }
 
 
-EXPORT void _wrap_Poly_Triangulation_RemoveUVNodes (Poly_Triangulation *larg1) {
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+SWIGINTERN void Handle_Poly_Triangulation_removeUVNodes(Handle_Poly_Triangulation *self){
+    return (*self)->RemoveUVNodes();
+  }
+EXPORT void _wrap_Poly_Triangulation_removeUVNodes (Handle_Poly_Triangulation *larg1) {
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   
   arg1 = larg1;
   try {
@@ -16232,18 +18052,17 @@ EXPORT void _wrap_Poly_Triangulation_RemoveUVNodes (Poly_Triangulation *larg1) {
       try
       {
         OCC_CATCH_SIGNALS
-        (arg1)->RemoveUVNodes();
+        Handle_Poly_Triangulation_removeUVNodes(arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_RemoveUVNodes\n  * wrapname: _wrap_Poly_Triangulation_RemoveUVNodes\n  * fulldecl: void Poly_Triangulation::RemoveUVNodes()";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_removeUVNodes\n  * wrapname: _wrap_Poly_Triangulation_removeUVNodes\n  * fulldecl: void Handle_Poly_Triangulation::removeUVNodes()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16254,9 +18073,12 @@ EXPORT void _wrap_Poly_Triangulation_RemoveUVNodes (Poly_Triangulation *larg1) {
 }
 
 
-EXPORT Standard_Integer _wrap_Poly_Triangulation_NbNodes (Poly_Triangulation *larg1) {
+SWIGINTERN Standard_Integer Handle_Poly_Triangulation_nbNodes(Handle_Poly_Triangulation const *self){
+    return (*self)->NbNodes();
+  }
+EXPORT Standard_Integer _wrap_Poly_Triangulation_nbNodes (Handle_Poly_Triangulation *larg1) {
   Standard_Integer lresult = (Standard_Integer)0 ;
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   Standard_Integer result;
   
   arg1 = larg1;
@@ -16265,18 +18087,17 @@ EXPORT Standard_Integer _wrap_Poly_Triangulation_NbNodes (Poly_Triangulation *la
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Integer)((Poly_Triangulation const *)arg1)->NbNodes();
+        result = (Standard_Integer)Handle_Poly_Triangulation_nbNodes((Handle_Poly_Triangulation const *)arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_NbNodes\n  * wrapname: _wrap_Poly_Triangulation_NbNodes\n  * fulldecl: Standard_Integer Poly_Triangulation::NbNodes() const";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_nbNodes\n  * wrapname: _wrap_Poly_Triangulation_nbNodes\n  * fulldecl: Standard_Integer Handle_Poly_Triangulation::nbNodes() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16288,9 +18109,12 @@ EXPORT Standard_Integer _wrap_Poly_Triangulation_NbNodes (Poly_Triangulation *la
 }
 
 
-EXPORT Standard_Integer _wrap_Poly_Triangulation_NbTriangles (Poly_Triangulation *larg1) {
+SWIGINTERN Standard_Integer Handle_Poly_Triangulation_nbTriangles(Handle_Poly_Triangulation const *self){
+    return (*self)->NbTriangles();
+  }
+EXPORT Standard_Integer _wrap_Poly_Triangulation_nbTriangles (Handle_Poly_Triangulation *larg1) {
   Standard_Integer lresult = (Standard_Integer)0 ;
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   Standard_Integer result;
   
   arg1 = larg1;
@@ -16299,18 +18123,17 @@ EXPORT Standard_Integer _wrap_Poly_Triangulation_NbTriangles (Poly_Triangulation
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Integer)((Poly_Triangulation const *)arg1)->NbTriangles();
+        result = (Standard_Integer)Handle_Poly_Triangulation_nbTriangles((Handle_Poly_Triangulation const *)arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_NbTriangles\n  * wrapname: _wrap_Poly_Triangulation_NbTriangles\n  * fulldecl: Standard_Integer Poly_Triangulation::NbTriangles() const";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_nbTriangles\n  * wrapname: _wrap_Poly_Triangulation_nbTriangles\n  * fulldecl: Standard_Integer Handle_Poly_Triangulation::nbTriangles() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16322,9 +18145,12 @@ EXPORT Standard_Integer _wrap_Poly_Triangulation_NbTriangles (Poly_Triangulation
 }
 
 
-EXPORT bool _wrap_Poly_Triangulation_HasUVNodes (Poly_Triangulation *larg1) {
+SWIGINTERN Standard_Boolean Handle_Poly_Triangulation_hasUVNodes(Handle_Poly_Triangulation const *self){
+    return (*self)->HasUVNodes();
+  }
+EXPORT bool _wrap_Poly_Triangulation_hasUVNodes (Handle_Poly_Triangulation *larg1) {
   bool lresult = (bool)0 ;
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   Standard_Boolean result;
   
   arg1 = larg1;
@@ -16333,18 +18159,17 @@ EXPORT bool _wrap_Poly_Triangulation_HasUVNodes (Poly_Triangulation *larg1) {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)((Poly_Triangulation const *)arg1)->HasUVNodes();
+        result = (Standard_Boolean)Handle_Poly_Triangulation_hasUVNodes((Handle_Poly_Triangulation const *)arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_HasUVNodes\n  * wrapname: _wrap_Poly_Triangulation_HasUVNodes\n  * fulldecl: Standard_Boolean Poly_Triangulation::HasUVNodes() const";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_hasUVNodes\n  * wrapname: _wrap_Poly_Triangulation_hasUVNodes\n  * fulldecl: Standard_Boolean Handle_Poly_Triangulation::hasUVNodes() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16356,9 +18181,12 @@ EXPORT bool _wrap_Poly_Triangulation_HasUVNodes (Poly_Triangulation *larg1) {
 }
 
 
-EXPORT Poly_Array1OfTriangle *_wrap_Poly_Triangulation_Triangles (Poly_Triangulation *larg1) {
+SWIGINTERN Poly_Array1OfTriangle const &Handle_Poly_Triangulation_triangles(Handle_Poly_Triangulation const *self){
+    return (*self)->Triangles();
+  }
+EXPORT Poly_Array1OfTriangle *_wrap_Poly_Triangulation_triangles (Handle_Poly_Triangulation *larg1) {
   Poly_Array1OfTriangle * lresult = (Poly_Array1OfTriangle *)0 ;
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   Poly_Array1OfTriangle *result = 0 ;
   
   arg1 = larg1;
@@ -16367,18 +18195,17 @@ EXPORT Poly_Array1OfTriangle *_wrap_Poly_Triangulation_Triangles (Poly_Triangula
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Poly_Array1OfTriangle *) &((Poly_Triangulation const *)arg1)->Triangles();
+        result = (Poly_Array1OfTriangle *) &Handle_Poly_Triangulation_triangles((Handle_Poly_Triangulation const *)arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_Triangles\n  * wrapname: _wrap_Poly_Triangulation_Triangles\n  * fulldecl: Poly_Array1OfTriangle const & Poly_Triangulation::Triangles() const";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_triangles\n  * wrapname: _wrap_Poly_Triangulation_triangles\n  * fulldecl: Poly_Array1OfTriangle const & Handle_Poly_Triangulation::triangles() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16390,9 +18217,12 @@ EXPORT Poly_Array1OfTriangle *_wrap_Poly_Triangulation_Triangles (Poly_Triangula
 }
 
 
-EXPORT TColgp_Array1OfPnt *_wrap_Poly_Triangulation_Nodes (Poly_Triangulation *larg1) {
+SWIGINTERN TColgp_Array1OfPnt const &Handle_Poly_Triangulation_nodes(Handle_Poly_Triangulation const *self){
+    return (*self)->Nodes();
+  }
+EXPORT TColgp_Array1OfPnt *_wrap_Poly_Triangulation_nodes (Handle_Poly_Triangulation *larg1) {
   TColgp_Array1OfPnt * lresult = (TColgp_Array1OfPnt *)0 ;
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   TColgp_Array1OfPnt *result = 0 ;
   
   arg1 = larg1;
@@ -16401,18 +18231,17 @@ EXPORT TColgp_Array1OfPnt *_wrap_Poly_Triangulation_Nodes (Poly_Triangulation *l
       try
       {
         OCC_CATCH_SIGNALS
-        result = (TColgp_Array1OfPnt *) &((Poly_Triangulation const *)arg1)->Nodes();
+        result = (TColgp_Array1OfPnt *) &Handle_Poly_Triangulation_nodes((Handle_Poly_Triangulation const *)arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_Nodes\n  * wrapname: _wrap_Poly_Triangulation_Nodes\n  * fulldecl: TColgp_Array1OfPnt const & Poly_Triangulation::Nodes() const";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_nodes\n  * wrapname: _wrap_Poly_Triangulation_nodes\n  * fulldecl: TColgp_Array1OfPnt const & Handle_Poly_Triangulation::nodes() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16424,9 +18253,12 @@ EXPORT TColgp_Array1OfPnt *_wrap_Poly_Triangulation_Nodes (Poly_Triangulation *l
 }
 
 
-EXPORT TColgp_Array1OfPnt2d *_wrap_Poly_Triangulation_UVNodes (Poly_Triangulation *larg1) {
+SWIGINTERN TColgp_Array1OfPnt2d const &Handle_Poly_Triangulation_uVNodes(Handle_Poly_Triangulation const *self){
+    return (*self)->UVNodes();
+  }
+EXPORT TColgp_Array1OfPnt2d *_wrap_Poly_Triangulation_uVNodes (Handle_Poly_Triangulation *larg1) {
   TColgp_Array1OfPnt2d * lresult = (TColgp_Array1OfPnt2d *)0 ;
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   TColgp_Array1OfPnt2d *result = 0 ;
   
   arg1 = larg1;
@@ -16435,18 +18267,17 @@ EXPORT TColgp_Array1OfPnt2d *_wrap_Poly_Triangulation_UVNodes (Poly_Triangulatio
       try
       {
         OCC_CATCH_SIGNALS
-        result = (TColgp_Array1OfPnt2d *) &((Poly_Triangulation const *)arg1)->UVNodes();
+        result = (TColgp_Array1OfPnt2d *) &Handle_Poly_Triangulation_uVNodes((Handle_Poly_Triangulation const *)arg1);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Poly_Triangulation_UVNodes\n  * wrapname: _wrap_Poly_Triangulation_UVNodes\n  * fulldecl: TColgp_Array1OfPnt2d const & Poly_Triangulation::UVNodes() const";
+        message += "\nwrapper details:\n  * symname: Poly_Triangulation_uVNodes\n  * wrapname: _wrap_Poly_Triangulation_uVNodes\n  * fulldecl: TColgp_Array1OfPnt2d const & Handle_Poly_Triangulation::uVNodes() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16458,8 +18289,8 @@ EXPORT TColgp_Array1OfPnt2d *_wrap_Poly_Triangulation_UVNodes (Poly_Triangulatio
 }
 
 
-EXPORT void _wrap_delete_Poly_Triangulation (Poly_Triangulation *larg1) {
-  Poly_Triangulation *arg1 = (Poly_Triangulation *) 0 ;
+EXPORT void _wrap_delete_Poly_Triangulation (Handle_Poly_Triangulation *larg1) {
+  Handle_Poly_Triangulation *arg1 = (Handle_Poly_Triangulation *) 0 ;
   
   arg1 = larg1;
   try {
@@ -16471,14 +18302,13 @@ EXPORT void _wrap_delete_Poly_Triangulation (Poly_Triangulation *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: delete_Poly_Triangulation\n  * wrapname: _wrap_delete_Poly_Triangulation\n  * fulldecl: Poly_Triangulation::~Poly_Triangulation()";
+        message += "\nwrapper details:\n  * symname: delete_Poly_Triangulation\n  * wrapname: _wrap_delete_Poly_Triangulation\n  * fulldecl: Handle_Poly_Triangulation::~Handle_Poly_Triangulation()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16502,7 +18332,6 @@ EXPORT Poly_Triangle *_wrap_new_Poly_Triangle__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16540,7 +18369,6 @@ EXPORT Poly_Triangle *_wrap_new_Poly_Triangle__SWIG_1 (Standard_Integer larg1, S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16576,7 +18404,6 @@ EXPORT Standard_Integer _wrap_Poly_Triangle_Value (Poly_Triangle *larg1, Standar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16608,7 +18435,6 @@ EXPORT void _wrap_delete_Poly_Triangle (Poly_Triangle *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16643,7 +18469,6 @@ EXPORT Poly_Array1OfTriangle *_wrap_new_Poly_Array1OfTriangle__SWIG_0 (Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16681,7 +18506,6 @@ EXPORT Poly_Array1OfTriangle *_wrap_new_Poly_Array1OfTriangle__SWIG_1 (Poly_Tria
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16715,7 +18539,6 @@ EXPORT Standard_Integer _wrap_Poly_Array1OfTriangle_Length (Poly_Array1OfTriangl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16749,7 +18572,6 @@ EXPORT Standard_Integer _wrap_Poly_Array1OfTriangle_Lower (Poly_Array1OfTriangle
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16783,7 +18605,6 @@ EXPORT Standard_Integer _wrap_Poly_Array1OfTriangle_Upper (Poly_Array1OfTriangle
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16819,7 +18640,6 @@ EXPORT Poly_Triangle *_wrap_Poly_Array1OfTriangle_Value (Poly_Array1OfTriangle *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16851,7 +18671,6 @@ EXPORT void _wrap_delete_Poly_Array1OfTriangle (Poly_Array1OfTriangle *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16859,6 +18678,665 @@ EXPORT void _wrap_delete_Poly_Array1OfTriangle (Poly_Array1OfTriangle *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: delete_Poly_Array1OfTriangle\n  * wrapname: _wrap_delete_Poly_Array1OfTriangle\n  * fulldecl: Poly_Array1OfTriangle::~Poly_Array1OfTriangle()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Poly_Polygon3D *_wrap_new_Poly_Polygon3D__SWIG_0 (TColgp_Array1OfPnt *larg1) {
+  Poly_Polygon3D * lresult = (Poly_Polygon3D *)0 ;
+  TColgp_Array1OfPnt *arg1 = 0 ;
+  Poly_Polygon3D *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Poly_Polygon3D *)new Poly_Polygon3D((TColgp_Array1OfPnt const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_Poly_Polygon3D\n  * wrapname: _wrap_new_Poly_Polygon3D__SWIG_0\n  * fulldecl: Poly_Polygon3D::Poly_Polygon3D(TColgp_Array1OfPnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Poly_Polygon3D *)0;
+  }
+}
+
+
+EXPORT Poly_Polygon3D *_wrap_new_Poly_Polygon3D__SWIG_1 (TColgp_Array1OfPnt *larg1, TColStd_Array1OfReal *larg2) {
+  Poly_Polygon3D * lresult = (Poly_Polygon3D *)0 ;
+  TColgp_Array1OfPnt *arg1 = 0 ;
+  TColStd_Array1OfReal *arg2 = 0 ;
+  Poly_Polygon3D *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Poly_Polygon3D *)new Poly_Polygon3D((TColgp_Array1OfPnt const &)*arg1,(TColStd_Array1OfReal const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_Poly_Polygon3D\n  * wrapname: _wrap_new_Poly_Polygon3D__SWIG_1\n  * fulldecl: Poly_Polygon3D::Poly_Polygon3D(TColgp_Array1OfPnt const &,TColStd_Array1OfReal const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Poly_Polygon3D *)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_Poly_Polygon3D_Deflection__SWIG_0 (Poly_Polygon3D *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)(arg1)->Deflection();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Polygon3D_Deflection\n  * wrapname: _wrap_Poly_Polygon3D_Deflection__SWIG_0\n  * fulldecl: Standard_Real Poly_Polygon3D::Deflection()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT void _wrap_Poly_Polygon3D_Deflection__SWIG_1 (Poly_Polygon3D *larg1, Standard_Real larg2) {
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Deflection(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Polygon3D_Deflection\n  * wrapname: _wrap_Poly_Polygon3D_Deflection__SWIG_1\n  * fulldecl: void Poly_Polygon3D::Deflection(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_Poly_Polygon3D_NbNodes (Poly_Polygon3D *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((Poly_Polygon3D const *)arg1)->NbNodes();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Polygon3D_NbNodes\n  * wrapname: _wrap_Poly_Polygon3D_NbNodes\n  * fulldecl: Standard_Integer Poly_Polygon3D::NbNodes() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT TColgp_Array1OfPnt *_wrap_Poly_Polygon3D_Nodes (Poly_Polygon3D *larg1) {
+  TColgp_Array1OfPnt * lresult = (TColgp_Array1OfPnt *)0 ;
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  TColgp_Array1OfPnt *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TColgp_Array1OfPnt *) &((Poly_Polygon3D const *)arg1)->Nodes();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Polygon3D_Nodes\n  * wrapname: _wrap_Poly_Polygon3D_Nodes\n  * fulldecl: TColgp_Array1OfPnt const & Poly_Polygon3D::Nodes() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TColgp_Array1OfPnt *)0;
+  }
+}
+
+
+EXPORT bool _wrap_Poly_Polygon3D_HasParameters (Poly_Polygon3D *larg1) {
+  bool lresult = (bool)0 ;
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Poly_Polygon3D const *)arg1)->HasParameters();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Polygon3D_HasParameters\n  * wrapname: _wrap_Poly_Polygon3D_HasParameters\n  * fulldecl: Standard_Boolean Poly_Polygon3D::HasParameters() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT TColStd_Array1OfReal *_wrap_Poly_Polygon3D_Parameters (Poly_Polygon3D *larg1) {
+  TColStd_Array1OfReal * lresult = (TColStd_Array1OfReal *)0 ;
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  TColStd_Array1OfReal *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TColStd_Array1OfReal *) &((Poly_Polygon3D const *)arg1)->Parameters();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Polygon3D_Parameters\n  * wrapname: _wrap_Poly_Polygon3D_Parameters\n  * fulldecl: TColStd_Array1OfReal const & Poly_Polygon3D::Parameters() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TColStd_Array1OfReal *)0;
+  }
+}
+
+
+EXPORT TColStd_Array1OfReal *_wrap_Poly_Polygon3D_ChangeParameters (Poly_Polygon3D *larg1) {
+  TColStd_Array1OfReal * lresult = (TColStd_Array1OfReal *)0 ;
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  TColStd_Array1OfReal *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TColStd_Array1OfReal *) &((Poly_Polygon3D const *)arg1)->ChangeParameters();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Polygon3D_ChangeParameters\n  * wrapname: _wrap_Poly_Polygon3D_ChangeParameters\n  * fulldecl: TColStd_Array1OfReal & Poly_Polygon3D::ChangeParameters() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TColStd_Array1OfReal *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_Poly_Polygon3D (Poly_Polygon3D *larg1) {
+  Poly_Polygon3D *arg1 = (Poly_Polygon3D *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_Poly_Polygon3D\n  * wrapname: _wrap_delete_Poly_Polygon3D\n  * fulldecl: Poly_Polygon3D::~Poly_Polygon3D()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+
+  #include <Poly_PolygonOnTriangulation.hxx>
+  
+EXPORT Poly_PolygonOnTriangulation *_wrap_new_Poly_PolygonOnTriangulation__SWIG_0 (TColStd_Array1OfInteger *larg1) {
+  Poly_PolygonOnTriangulation * lresult = (Poly_PolygonOnTriangulation *)0 ;
+  TColStd_Array1OfInteger *arg1 = 0 ;
+  Poly_PolygonOnTriangulation *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Poly_PolygonOnTriangulation *)new Poly_PolygonOnTriangulation((TColStd_Array1OfInteger const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_Poly_PolygonOnTriangulation\n  * wrapname: _wrap_new_Poly_PolygonOnTriangulation__SWIG_0\n  * fulldecl: Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation(TColStd_Array1OfInteger const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Poly_PolygonOnTriangulation *)0;
+  }
+}
+
+
+EXPORT Poly_PolygonOnTriangulation *_wrap_new_Poly_PolygonOnTriangulation__SWIG_1 (TColStd_Array1OfInteger *larg1, TColStd_Array1OfReal *larg2) {
+  Poly_PolygonOnTriangulation * lresult = (Poly_PolygonOnTriangulation *)0 ;
+  TColStd_Array1OfInteger *arg1 = 0 ;
+  TColStd_Array1OfReal *arg2 = 0 ;
+  Poly_PolygonOnTriangulation *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Poly_PolygonOnTriangulation *)new Poly_PolygonOnTriangulation((TColStd_Array1OfInteger const &)*arg1,(TColStd_Array1OfReal const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_Poly_PolygonOnTriangulation\n  * wrapname: _wrap_new_Poly_PolygonOnTriangulation__SWIG_1\n  * fulldecl: Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation(TColStd_Array1OfInteger const &,TColStd_Array1OfReal const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Poly_PolygonOnTriangulation *)0;
+  }
+}
+
+
+EXPORT Handle_Poly_PolygonOnTriangulation *_wrap_Poly_PolygonOnTriangulation_Copy (Poly_PolygonOnTriangulation *larg1) {
+  Handle_Poly_PolygonOnTriangulation * lresult = (Handle_Poly_PolygonOnTriangulation *)0 ;
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  Handle_Poly_PolygonOnTriangulation result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((Poly_PolygonOnTriangulation const *)arg1)->Copy();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PolygonOnTriangulation_Copy\n  * wrapname: _wrap_Poly_PolygonOnTriangulation_Copy\n  * fulldecl: Handle_Poly_PolygonOnTriangulation Poly_PolygonOnTriangulation::Copy() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Poly_PolygonOnTriangulation(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Poly_PolygonOnTriangulation *)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_0 (Poly_PolygonOnTriangulation *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((Poly_PolygonOnTriangulation const *)arg1)->Deflection();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PolygonOnTriangulation_Deflection\n  * wrapname: _wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_0\n  * fulldecl: Standard_Real Poly_PolygonOnTriangulation::Deflection() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT void _wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_1 (Poly_PolygonOnTriangulation *larg1, Standard_Real larg2) {
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Deflection(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PolygonOnTriangulation_Deflection\n  * wrapname: _wrap_Poly_PolygonOnTriangulation_Deflection__SWIG_1\n  * fulldecl: void Poly_PolygonOnTriangulation::Deflection(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_Poly_PolygonOnTriangulation_NbNodes (Poly_PolygonOnTriangulation *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((Poly_PolygonOnTriangulation const *)arg1)->NbNodes();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PolygonOnTriangulation_NbNodes\n  * wrapname: _wrap_Poly_PolygonOnTriangulation_NbNodes\n  * fulldecl: Standard_Integer Poly_PolygonOnTriangulation::NbNodes() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT TColStd_Array1OfInteger *_wrap_Poly_PolygonOnTriangulation_Nodes (Poly_PolygonOnTriangulation *larg1) {
+  TColStd_Array1OfInteger * lresult = (TColStd_Array1OfInteger *)0 ;
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  TColStd_Array1OfInteger *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TColStd_Array1OfInteger *) &((Poly_PolygonOnTriangulation const *)arg1)->Nodes();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PolygonOnTriangulation_Nodes\n  * wrapname: _wrap_Poly_PolygonOnTriangulation_Nodes\n  * fulldecl: TColStd_Array1OfInteger const & Poly_PolygonOnTriangulation::Nodes() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TColStd_Array1OfInteger *)0;
+  }
+}
+
+
+EXPORT bool _wrap_Poly_PolygonOnTriangulation_HasParameters (Poly_PolygonOnTriangulation *larg1) {
+  bool lresult = (bool)0 ;
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Poly_PolygonOnTriangulation const *)arg1)->HasParameters();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PolygonOnTriangulation_HasParameters\n  * wrapname: _wrap_Poly_PolygonOnTriangulation_HasParameters\n  * fulldecl: Standard_Boolean Poly_PolygonOnTriangulation::HasParameters() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT Handle_TColStd_HArray1OfReal *_wrap_Poly_PolygonOnTriangulation_Parameters (Poly_PolygonOnTriangulation *larg1) {
+  Handle_TColStd_HArray1OfReal * lresult = (Handle_TColStd_HArray1OfReal *)0 ;
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  Handle_TColStd_HArray1OfReal result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((Poly_PolygonOnTriangulation const *)arg1)->Parameters();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PolygonOnTriangulation_Parameters\n  * wrapname: _wrap_Poly_PolygonOnTriangulation_Parameters\n  * fulldecl: Handle_TColStd_HArray1OfReal Poly_PolygonOnTriangulation::Parameters() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_TColStd_HArray1OfReal(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_TColStd_HArray1OfReal *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_Poly_PolygonOnTriangulation (Poly_PolygonOnTriangulation *larg1) {
+  Poly_PolygonOnTriangulation *arg1 = (Poly_PolygonOnTriangulation *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_Poly_PolygonOnTriangulation\n  * wrapname: _wrap_delete_Poly_PolygonOnTriangulation\n  * fulldecl: Poly_PolygonOnTriangulation::~Poly_PolygonOnTriangulation()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -16929,7 +19407,6 @@ EXPORT void _wrap_delete_Geom_Geometry (Handle_Geom_Geometry *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -16965,7 +19442,6 @@ EXPORT Standard_Real _wrap_Geom_Curve_firstParameter (Handle_Geom_Curve *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17002,7 +19478,6 @@ EXPORT Standard_Real _wrap_Geom_Curve_lastParameter (Handle_Geom_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17039,7 +19514,6 @@ EXPORT bool _wrap_Geom_Curve_isClosed (Handle_Geom_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17076,7 +19550,6 @@ EXPORT bool _wrap_Geom_Curve_isPeriodic (Handle_Geom_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17113,7 +19586,6 @@ EXPORT Standard_Real _wrap_Geom_Curve_period (Handle_Geom_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17148,7 +19620,6 @@ EXPORT void _wrap_Geom_Curve_reverse (Handle_Geom_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17186,7 +19657,6 @@ EXPORT Standard_Real _wrap_Geom_Curve_getReversedParameter (Handle_Geom_Curve *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17225,7 +19695,6 @@ EXPORT gp_Pnt *_wrap_Geom_Curve_getValueAt (Handle_Geom_Curve *larg1, Standard_R
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17299,7 +19768,6 @@ EXPORT Standard_Integer _wrap_Geom_Curve_getGeometryType (Handle_Geom_Curve *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17331,7 +19799,6 @@ EXPORT void _wrap_delete_Geom_Curve (Handle_Geom_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17371,7 +19838,6 @@ EXPORT gp_Pnt *_wrap_Geom_Surface_value (Handle_Geom_Surface *larg1, Standard_Re
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17414,7 +19880,6 @@ EXPORT void _wrap_Geom_Surface_bounds (Handle_Geom_Surface *larg1, Standard_Real
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17450,7 +19915,6 @@ EXPORT bool _wrap_Geom_Surface_isUClosed (Handle_Geom_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17487,7 +19951,6 @@ EXPORT bool _wrap_Geom_Surface_isVClosed (Handle_Geom_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17526,7 +19989,6 @@ EXPORT Handle_Geom_Curve *_wrap_Geom_Surface_uIso (Handle_Geom_Surface *larg1, S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17565,7 +20027,6 @@ EXPORT Handle_Geom_Curve *_wrap_Geom_Surface_vIso (Handle_Geom_Surface *larg1, S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17600,7 +20061,6 @@ EXPORT void _wrap_Geom_Surface_reverseU (Handle_Geom_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17638,7 +20098,6 @@ EXPORT Standard_Real _wrap_Geom_Surface_getReversedUParameter (Handle_Geom_Surfa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17673,7 +20132,6 @@ EXPORT void _wrap_Geom_Surface_reverseV (Handle_Geom_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17711,7 +20169,6 @@ EXPORT Standard_Real _wrap_Geom_Surface_getReversedVParameter (Handle_Geom_Surfa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17748,7 +20205,6 @@ EXPORT bool _wrap_Geom_Surface_isPeriodicU (Handle_Geom_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17785,7 +20241,6 @@ EXPORT Standard_Real _wrap_Geom_Surface_getPeriodU (Handle_Geom_Surface *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17822,7 +20277,6 @@ EXPORT bool _wrap_Geom_Surface_isPeriodicV (Handle_Geom_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17859,7 +20313,6 @@ EXPORT Standard_Real _wrap_Geom_Surface_getPeriodV (Handle_Geom_Surface *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17941,7 +20394,6 @@ EXPORT Standard_Integer _wrap_Geom_Surface_getGeometryType (Handle_Geom_Surface 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -17973,7 +20425,6 @@ EXPORT void _wrap_delete_Geom_Surface (Handle_Geom_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18009,7 +20460,6 @@ EXPORT gp_Pnt *_wrap_Geom_BoundedCurve_getEndPoint (Handle_Geom_BoundedCurve *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18046,7 +20496,6 @@ EXPORT gp_Pnt *_wrap_Geom_BoundedCurve_getStartPoint (Handle_Geom_BoundedCurve *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18078,7 +20527,6 @@ EXPORT void _wrap_delete_Geom_BoundedCurve (Handle_Geom_BoundedCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18114,7 +20562,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Conic_getAxis (Handle_Geom_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18151,7 +20598,6 @@ EXPORT Standard_Real _wrap_Geom_Conic_getEccentricity (Handle_Geom_Conic *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18188,7 +20634,6 @@ EXPORT gp_Pnt *_wrap_Geom_Conic_getLocation (Handle_Geom_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18225,7 +20670,6 @@ EXPORT gp_Ax2 *_wrap_Geom_Conic_getPosition (Handle_Geom_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18262,7 +20706,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Conic_getAxisX (Handle_Geom_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18299,7 +20742,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Conic_getAxisY (Handle_Geom_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18331,7 +20773,6 @@ EXPORT void _wrap_delete_Geom_Conic (Handle_Geom_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18362,7 +20803,6 @@ EXPORT void _wrap_delete_Geom_BoundedSurface (Handle_Geom_BoundedSurface *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18398,7 +20838,6 @@ EXPORT gp_Ax1 *_wrap_Geom_ElementarySurface_getAxis (Handle_Geom_ElementarySurfa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18435,7 +20874,6 @@ EXPORT gp_Pnt *_wrap_Geom_ElementarySurface_getLocation (Handle_Geom_ElementaryS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18472,7 +20910,6 @@ EXPORT gp_Ax3 *_wrap_Geom_ElementarySurface_getPosition (Handle_Geom_ElementaryS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18504,7 +20941,6 @@ EXPORT void _wrap_delete_Geom_ElementarySurface (Handle_Geom_ElementarySurface *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18540,7 +20976,6 @@ EXPORT gp_Dir *_wrap_Geom_SweptSurface_getDirection (Handle_Geom_SweptSurface *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18577,7 +21012,6 @@ EXPORT Handle_Geom_Curve *_wrap_Geom_SweptSurface_getBasisCurve (Handle_Geom_Swe
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18609,7 +21043,6 @@ EXPORT void _wrap_delete_Geom_SweptSurface (Handle_Geom_SweptSurface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18647,7 +21080,6 @@ EXPORT Handle_Geom_BezierCurve *_wrap_new_Geom_BezierCurve__SWIG_0 (TColgp_Array
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18684,7 +21116,6 @@ EXPORT Handle_Geom_BezierCurve *_wrap_new_Geom_BezierCurve__SWIG_1 (TColgp_Array
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18721,7 +21152,6 @@ EXPORT bool _wrap_Geom_BezierCurve_isPeriodic (Handle_Geom_BezierCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18758,7 +21188,6 @@ EXPORT bool _wrap_Geom_BezierCurve_isRational (Handle_Geom_BezierCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18795,7 +21224,6 @@ EXPORT Standard_Integer _wrap_Geom_BezierCurve_getDegree (Handle_Geom_BezierCurv
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18834,7 +21262,6 @@ EXPORT void _wrap_Geom_BezierCurve_getResolution (Handle_Geom_BezierCurve *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18870,7 +21297,6 @@ EXPORT Standard_Integer _wrap_Geom_BezierCurve_getControlPointsCount (Handle_Geo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18909,7 +21335,6 @@ EXPORT gp_Pnt *_wrap_Geom_BezierCurve_getControlPoint (Handle_Geom_BezierCurve *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18948,7 +21373,6 @@ EXPORT Standard_Real _wrap_Geom_BezierCurve_getWeight (Handle_Geom_BezierCurve *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -18980,7 +21404,6 @@ EXPORT void _wrap_delete_Geom_BezierCurve (Handle_Geom_BezierCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19029,7 +21452,6 @@ EXPORT Handle_Geom_BSplineCurve *_wrap_new_Geom_BSplineCurve__SWIG_0 (TColgp_Arr
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19073,7 +21495,6 @@ EXPORT Handle_Geom_BSplineCurve *_wrap_new_Geom_BSplineCurve__SWIG_1 (TColgp_Arr
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19115,7 +21536,6 @@ EXPORT Handle_Geom_BSplineCurve *_wrap_new_Geom_BSplineCurve__SWIG_2 (TColgp_Arr
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19161,7 +21581,6 @@ EXPORT Handle_Geom_BSplineCurve *_wrap_new_Geom_BSplineCurve__SWIG_3 (TColgp_Arr
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19201,7 +21620,6 @@ EXPORT Handle_Geom_BSplineCurve *_wrap_new_Geom_BSplineCurve__SWIG_4 (TColgp_Arr
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19240,7 +21658,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setKnot__SWIG_0 (Handle_Geom_BSplineCurve *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19280,7 +21697,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setKnot__SWIG_1 (Handle_Geom_BSplineCurve *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19314,7 +21730,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setPeriodic (Handle_Geom_BSplineCurve *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19348,7 +21763,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setNotPeriodic (Handle_Geom_BSplineCurve *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19384,7 +21798,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setOrigin__SWIG_0 (Handle_Geom_BSplineCurve 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19422,7 +21835,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setOrigin__SWIG_1 (Handle_Geom_BSplineCurve 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19460,7 +21872,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setPole__SWIG_0 (Handle_Geom_BSplineCurve *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19500,7 +21911,6 @@ EXPORT void _wrap_Geom_BSplineCurve_setPole__SWIG_1 (Handle_Geom_BSplineCurve *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19546,7 +21956,6 @@ EXPORT void _wrap_Geom_BSplineCurve_movePoint (Handle_Geom_BSplineCurve *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19593,7 +22002,6 @@ EXPORT void _wrap_Geom_BSplineCurve_movePointAndTangent (Handle_Geom_BSplineCurv
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19629,7 +22037,6 @@ EXPORT bool _wrap_Geom_BSplineCurve_isRational (Handle_Geom_BSplineCurve *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19666,7 +22073,6 @@ EXPORT GeomAbs_Shape _wrap_Geom_BSplineCurve_continuity (Handle_Geom_BSplineCurv
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19703,7 +22109,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineCurve_getDegree (Handle_Geom_BSplineCu
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19746,7 +22151,6 @@ EXPORT gp_Pnt *_wrap_Geom_BSplineCurve_localValue (Handle_Geom_BSplineCurve *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19783,7 +22187,6 @@ EXPORT gp_Pnt *_wrap_Geom_BSplineCurve_endPoint (Handle_Geom_BSplineCurve *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19820,7 +22223,6 @@ EXPORT gp_Pnt *_wrap_Geom_BSplineCurve_startPoint (Handle_Geom_BSplineCurve *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19857,7 +22259,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineCurve_getKnotsCount (Handle_Geom_BSpli
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19894,7 +22295,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineCurve_getControlPointsCount (Handle_Ge
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19933,7 +22333,6 @@ EXPORT gp_Pnt *_wrap_Geom_BSplineCurve_getControlPoint (Handle_Geom_BSplineCurve
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -19970,7 +22369,6 @@ EXPORT void _wrap_Geom_BSplineCurve_getControlPoints (Handle_Geom_BSplineCurve *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20008,7 +22406,6 @@ EXPORT Standard_Real _wrap_Geom_BSplineCurve_getWeight (Handle_Geom_BSplineCurve
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20047,7 +22444,6 @@ EXPORT Standard_Real _wrap_Geom_BSplineCurve_getKnot (Handle_Geom_BSplineCurve *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20084,7 +22480,6 @@ EXPORT void _wrap_Geom_BSplineCurve_getKnots (Handle_Geom_BSplineCurve *larg1, T
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20122,7 +22517,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineCurve_getMultiplicity (Handle_Geom_BSp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20154,7 +22548,6 @@ EXPORT void _wrap_delete_Geom_BSplineCurve (Handle_Geom_BSplineCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20192,7 +22585,6 @@ EXPORT Handle_Geom_Circle *_wrap_new_Geom_Circle (gp_Ax2 *larg1, Standard_Real l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20229,7 +22621,6 @@ EXPORT Standard_Real _wrap_Geom_Circle_getRadius (Handle_Geom_Circle *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20261,7 +22652,6 @@ EXPORT void _wrap_delete_Geom_Circle (Handle_Geom_Circle *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20301,7 +22691,6 @@ EXPORT Handle_Geom_Ellipse *_wrap_new_Geom_Ellipse (gp_Ax2 *larg1, Standard_Real
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20338,7 +22727,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Ellipse_getDirectrix1 (Handle_Geom_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20375,7 +22763,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Ellipse_getDirectrix2 (Handle_Geom_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20412,7 +22799,6 @@ EXPORT Standard_Real _wrap_Geom_Ellipse_getFocalDistance (Handle_Geom_Ellipse *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20449,7 +22835,6 @@ EXPORT gp_Pnt *_wrap_Geom_Ellipse_getFocus1 (Handle_Geom_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20486,7 +22871,6 @@ EXPORT gp_Pnt *_wrap_Geom_Ellipse_getFocus2 (Handle_Geom_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20523,7 +22907,6 @@ EXPORT Standard_Real _wrap_Geom_Ellipse_getMajorRadius (Handle_Geom_Ellipse *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20560,7 +22943,6 @@ EXPORT Standard_Real _wrap_Geom_Ellipse_getMinorRadius (Handle_Geom_Ellipse *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20597,7 +22979,6 @@ EXPORT Standard_Real _wrap_Geom_Ellipse_getParameter (Handle_Geom_Ellipse *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20629,7 +23010,6 @@ EXPORT void _wrap_delete_Geom_Ellipse (Handle_Geom_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20671,7 +23051,6 @@ EXPORT Handle_Geom_TrimmedCurve *_wrap_new_Geom_TrimmedCurve__SWIG_0 (Handle_Geo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20709,7 +23088,6 @@ EXPORT Handle_Geom_TrimmedCurve *_wrap_new_Geom_TrimmedCurve__SWIG_1 (Handle_Geo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20746,7 +23124,6 @@ EXPORT Handle_Geom_Curve *_wrap_Geom_TrimmedCurve_getBasisCurve (Handle_Geom_Tri
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20778,7 +23155,6 @@ EXPORT void _wrap_delete_Geom_TrimmedCurve (Handle_Geom_TrimmedCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20818,7 +23194,6 @@ EXPORT Handle_Geom_OffsetCurve *_wrap_new_Geom_OffsetCurve (Handle_Geom_Curve *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20855,7 +23230,6 @@ EXPORT gp_Dir *_wrap_Geom_OffsetCurve_getDirection (Handle_Geom_OffsetCurve *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20892,7 +23266,6 @@ EXPORT Standard_Real _wrap_Geom_OffsetCurve_getOffset (Handle_Geom_OffsetCurve *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20929,7 +23302,6 @@ EXPORT Handle_Geom_Curve *_wrap_Geom_OffsetCurve_getBasisCurve (Handle_Geom_Offs
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -20961,7 +23333,6 @@ EXPORT void _wrap_delete_Geom_OffsetCurve (Handle_Geom_OffsetCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21001,7 +23372,6 @@ EXPORT Handle_Geom_Hyperbola *_wrap_new_Geom_Hyperbola (gp_Ax2 *larg1, Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21038,7 +23408,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Hyperbola_getAsymptote1 (Handle_Geom_Hyperbola *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21075,7 +23444,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Hyperbola_getAsymptote2 (Handle_Geom_Hyperbola *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21112,7 +23480,6 @@ EXPORT gp_Hypr *_wrap_Geom_Hyperbola_getConjugateBranch1 (Handle_Geom_Hyperbola 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21149,7 +23516,6 @@ EXPORT gp_Hypr *_wrap_Geom_Hyperbola_getConjugateBranch2 (Handle_Geom_Hyperbola 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21186,7 +23552,6 @@ EXPORT gp_Hypr *_wrap_Geom_Hyperbola_getOtherBranch (Handle_Geom_Hyperbola *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21223,7 +23588,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Hyperbola_getDirectrix1 (Handle_Geom_Hyperbola *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21260,7 +23624,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Hyperbola_getDirectrix2 (Handle_Geom_Hyperbola *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21297,7 +23660,6 @@ EXPORT Standard_Real _wrap_Geom_Hyperbola_getFocalDistance (Handle_Geom_Hyperbol
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21334,7 +23696,6 @@ EXPORT gp_Pnt *_wrap_Geom_Hyperbola_getFocus1 (Handle_Geom_Hyperbola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21371,7 +23732,6 @@ EXPORT gp_Pnt *_wrap_Geom_Hyperbola_getFocus2 (Handle_Geom_Hyperbola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21408,7 +23768,6 @@ EXPORT Standard_Real _wrap_Geom_Hyperbola_getMajorRadius (Handle_Geom_Hyperbola 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21445,7 +23804,6 @@ EXPORT Standard_Real _wrap_Geom_Hyperbola_getMinorRadius (Handle_Geom_Hyperbola 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21482,7 +23840,6 @@ EXPORT Standard_Real _wrap_Geom_Hyperbola_getParameter (Handle_Geom_Hyperbola *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21514,7 +23871,6 @@ EXPORT void _wrap_delete_Geom_Hyperbola (Handle_Geom_Hyperbola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21550,7 +23906,6 @@ EXPORT Handle_Geom_Line *_wrap_new_Geom_Line__SWIG_0 (gp_Ax1 *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21589,7 +23944,6 @@ EXPORT Handle_Geom_Line *_wrap_new_Geom_Line__SWIG_1 (gp_Pnt *larg1, gp_Dir *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21626,7 +23980,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Line_getPosition (Handle_Geom_Line *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21663,7 +24016,6 @@ EXPORT gp_Lin *_wrap_Geom_Line_getLin (Handle_Geom_Line *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21695,7 +24047,6 @@ EXPORT void _wrap_delete_Geom_Line (Handle_Geom_Line *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21733,7 +24084,6 @@ EXPORT Handle_Geom_Parabola *_wrap_new_Geom_Parabola (gp_Ax2 *larg1, Standard_Re
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21770,7 +24120,6 @@ EXPORT gp_Ax1 *_wrap_Geom_Parabola_getDirectrix (Handle_Geom_Parabola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21807,7 +24156,6 @@ EXPORT Standard_Real _wrap_Geom_Parabola_getFocalDistance (Handle_Geom_Parabola 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21844,7 +24192,6 @@ EXPORT gp_Pnt *_wrap_Geom_Parabola_getFocus (Handle_Geom_Parabola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21881,7 +24228,6 @@ EXPORT Standard_Real _wrap_Geom_Parabola_getParameter (Handle_Geom_Parabola *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21913,7 +24259,6 @@ EXPORT void _wrap_delete_Geom_Parabola (Handle_Geom_Parabola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21951,7 +24296,6 @@ EXPORT Handle_Geom_BezierSurface *_wrap_new_Geom_BezierSurface (TColgp_Array2OfP
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -21988,7 +24332,6 @@ EXPORT Standard_Integer _wrap_Geom_BezierSurface_getControlPointsUCount (Handle_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22025,7 +24368,6 @@ EXPORT Standard_Integer _wrap_Geom_BezierSurface_getControlPointsVCount (Handle_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22062,7 +24404,6 @@ EXPORT Standard_Integer _wrap_Geom_BezierSurface_getDegreeU (Handle_Geom_BezierS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22099,7 +24440,6 @@ EXPORT Standard_Integer _wrap_Geom_BezierSurface_getDegreeV (Handle_Geom_BezierS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22140,7 +24480,6 @@ EXPORT gp_Pnt *_wrap_Geom_BezierSurface_getControlPoint (Handle_Geom_BezierSurfa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22181,7 +24520,6 @@ EXPORT Standard_Real _wrap_Geom_BezierSurface_getWeight (Handle_Geom_BezierSurfa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22218,7 +24556,6 @@ EXPORT bool _wrap_Geom_BezierSurface_isRationalU (Handle_Geom_BezierSurface *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22255,7 +24592,6 @@ EXPORT bool _wrap_Geom_BezierSurface_isRationalV (Handle_Geom_BezierSurface *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22292,7 +24628,6 @@ EXPORT Standard_Integer _wrap_Geom_BezierSurface_getMaxDegree (Handle_Geom_Bezie
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22333,7 +24668,6 @@ EXPORT void _wrap_Geom_BezierSurface_getResolution (Handle_Geom_BezierSurface *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22364,7 +24698,6 @@ EXPORT void _wrap_delete_Geom_BezierSurface (Handle_Geom_BezierSurface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22419,7 +24752,6 @@ EXPORT Handle_Geom_BSplineSurface *_wrap_new_Geom_BSplineSurface__SWIG_0 (TColgp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22469,7 +24801,6 @@ EXPORT Handle_Geom_BSplineSurface *_wrap_new_Geom_BSplineSurface__SWIG_1 (TColgp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22517,7 +24848,6 @@ EXPORT Handle_Geom_BSplineSurface *_wrap_new_Geom_BSplineSurface__SWIG_2 (TColgp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22554,7 +24884,6 @@ EXPORT bool _wrap_Geom_BSplineSurface_isRationalU (Handle_Geom_BSplineSurface *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22591,7 +24920,6 @@ EXPORT bool _wrap_Geom_BSplineSurface_isRationalV (Handle_Geom_BSplineSurface *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22628,7 +24956,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getIndexOfFirstKnotU (Handle_G
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22665,7 +24992,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getIndexOfFirstKnotV (Handle_G
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22702,7 +25028,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getIndexOfLastKnotU (Handle_Ge
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22739,7 +25064,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getIndexOfLastKnotV (Handle_Ge
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22776,7 +25100,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getControlPointsUCount (Handle
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22813,7 +25136,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getControlPointsVCount (Handle
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22850,7 +25172,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getKnotsUCount (Handle_Geom_BS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22887,7 +25208,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getKnotsVCount (Handle_Geom_BS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22928,7 +25248,6 @@ EXPORT gp_Pnt *_wrap_Geom_BSplineSurface_getControlPoint (Handle_Geom_BSplineSur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -22965,7 +25284,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getDegreeU (Handle_Geom_BSplin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23002,7 +25320,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getDegreeV (Handle_Geom_BSplin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23041,7 +25358,6 @@ EXPORT Standard_Real _wrap_Geom_BSplineSurface_getKnotU (Handle_Geom_BSplineSurf
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23080,7 +25396,6 @@ EXPORT Standard_Real _wrap_Geom_BSplineSurface_getKnotV (Handle_Geom_BSplineSurf
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23119,7 +25434,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getMultiplicityU (Handle_Geom_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23158,7 +25472,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getMultiplicityV (Handle_Geom_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23199,7 +25512,6 @@ EXPORT Standard_Real _wrap_Geom_BSplineSurface_getWeight (Handle_Geom_BSplineSur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23236,7 +25548,6 @@ EXPORT Standard_Integer _wrap_Geom_BSplineSurface_getMaxDegree (Handle_Geom_BSpl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23277,7 +25588,6 @@ EXPORT void _wrap_Geom_BSplineSurface_getResolution (Handle_Geom_BSplineSurface 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23308,7 +25618,6 @@ EXPORT void _wrap_delete_Geom_BSplineSurface (Handle_Geom_BSplineSurface *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23356,7 +25665,6 @@ EXPORT Handle_Geom_RectangularTrimmedSurface *_wrap_new_Geom_RectangularTrimmedS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23400,7 +25708,6 @@ EXPORT Handle_Geom_RectangularTrimmedSurface *_wrap_new_Geom_RectangularTrimmedS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23442,7 +25749,6 @@ EXPORT Handle_Geom_RectangularTrimmedSurface *_wrap_new_Geom_RectangularTrimmedS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23479,7 +25785,6 @@ EXPORT Handle_Geom_Surface *_wrap_Geom_RectangularTrimmedSurface_getBasisSurface
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23522,7 +25827,6 @@ EXPORT void _wrap_Geom_RectangularTrimmedSurface_bounds (Handle_Geom_Rectangular
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23553,7 +25857,6 @@ EXPORT void _wrap_delete_Geom_RectangularTrimmedSurface (Handle_Geom_Rectangular
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23591,7 +25894,6 @@ EXPORT Handle_Geom_SphericalSurface *_wrap_new_Geom_SphericalSurface (gp_Ax3 *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23628,7 +25930,6 @@ EXPORT gp_Sphere *_wrap_Geom_SphericalSurface_getSphere (Handle_Geom_SphericalSu
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23665,7 +25966,6 @@ EXPORT Standard_Real _wrap_Geom_SphericalSurface_getArea (Handle_Geom_SphericalS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23720,7 +26020,6 @@ EXPORT void _wrap_Geom_SphericalSurface_getCoefficients (Handle_Geom_SphericalSu
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23756,7 +26055,6 @@ EXPORT Standard_Real _wrap_Geom_SphericalSurface_getRadius (Handle_Geom_Spherica
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23793,7 +26091,6 @@ EXPORT Standard_Real _wrap_Geom_SphericalSurface_getVolume (Handle_Geom_Spherica
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23825,7 +26122,6 @@ EXPORT void _wrap_delete_Geom_SphericalSurface (Handle_Geom_SphericalSurface *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23865,7 +26161,6 @@ EXPORT Handle_Geom_ToroidalSurface *_wrap_new_Geom_ToroidalSurface (gp_Ax3 *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23902,7 +26197,6 @@ EXPORT gp_Torus *_wrap_Geom_ToroidalSurface_getTorus (Handle_Geom_ToroidalSurfac
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23939,7 +26233,6 @@ EXPORT Standard_Real _wrap_Geom_ToroidalSurface_getArea (Handle_Geom_ToroidalSur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -23976,7 +26269,6 @@ EXPORT Standard_Real _wrap_Geom_ToroidalSurface_getMajorRadius (Handle_Geom_Toro
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24013,7 +26305,6 @@ EXPORT Standard_Real _wrap_Geom_ToroidalSurface_getMinorRadius (Handle_Geom_Toro
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24050,7 +26341,6 @@ EXPORT Standard_Real _wrap_Geom_ToroidalSurface_getVolume (Handle_Geom_ToroidalS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24082,7 +26372,6 @@ EXPORT void _wrap_delete_Geom_ToroidalSurface (Handle_Geom_ToroidalSurface *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24120,7 +26409,6 @@ EXPORT Handle_Geom_OffsetSurface *_wrap_new_Geom_OffsetSurface (Handle_Geom_Surf
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24157,7 +26445,6 @@ EXPORT Standard_Real _wrap_Geom_OffsetSurface_getOffset (Handle_Geom_OffsetSurfa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24194,7 +26481,6 @@ EXPORT Handle_Geom_Surface *_wrap_Geom_OffsetSurface_getBasisSurface (Handle_Geo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24226,7 +26512,6 @@ EXPORT void _wrap_delete_Geom_OffsetSurface (Handle_Geom_OffsetSurface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24264,7 +26549,6 @@ EXPORT Handle_Geom_SurfaceOfRevolution *_wrap_new_Geom_SurfaceOfRevolution (Hand
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24301,7 +26585,6 @@ EXPORT gp_Ax1 *_wrap_Geom_SurfaceOfRevolution_getAxis (Handle_Geom_SurfaceOfRevo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24338,7 +26621,6 @@ EXPORT gp_Pnt *_wrap_Geom_SurfaceOfRevolution_getLocation (Handle_Geom_SurfaceOf
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24375,7 +26657,6 @@ EXPORT gp_Ax2 *_wrap_Geom_SurfaceOfRevolution_getReferencePlane (Handle_Geom_Sur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24407,7 +26688,6 @@ EXPORT void _wrap_delete_Geom_SurfaceOfRevolution (Handle_Geom_SurfaceOfRevoluti
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24447,7 +26727,6 @@ EXPORT Handle_Geom_ConicalSurface *_wrap_new_Geom_ConicalSurface (gp_Ax3 *larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24484,7 +26763,6 @@ EXPORT gp_Cone *_wrap_Geom_ConicalSurface_getCone (Handle_Geom_ConicalSurface *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24521,7 +26799,6 @@ EXPORT gp_Pnt *_wrap_Geom_ConicalSurface_getApex (Handle_Geom_ConicalSurface *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24576,7 +26853,6 @@ EXPORT void _wrap_Geom_ConicalSurface_getCoefficients (Handle_Geom_ConicalSurfac
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24612,7 +26888,6 @@ EXPORT Standard_Real _wrap_Geom_ConicalSurface_getReferenceRadius (Handle_Geom_C
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24649,7 +26924,6 @@ EXPORT Standard_Real _wrap_Geom_ConicalSurface_getSemiAngle (Handle_Geom_Conical
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24681,7 +26955,6 @@ EXPORT void _wrap_delete_Geom_ConicalSurface (Handle_Geom_ConicalSurface *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24699,10 +26972,10 @@ EXPORT void _wrap_delete_Geom_ConicalSurface (Handle_Geom_ConicalSurface *larg1)
 }
 
 
-SWIGINTERN Handle_Geom_CylindricalSurface *new_Handle_Geom_CylindricalSurface(gp_Ax3 const &A3,Standard_Real const Radius){
+SWIGINTERN Handle_Geom_CylindricalSurface *new_Handle_Geom_CylindricalSurface__SWIG_0(gp_Ax3 const &A3,Standard_Real const Radius){
 		return new Handle_Geom_CylindricalSurface(new Geom_CylindricalSurface(A3, Radius));
 	}
-EXPORT Handle_Geom_CylindricalSurface *_wrap_new_Geom_CylindricalSurface (gp_Ax3 *larg1, Standard_Real larg2) {
+EXPORT Handle_Geom_CylindricalSurface *_wrap_new_Geom_CylindricalSurface__SWIG_0 (gp_Ax3 *larg1, Standard_Real larg2) {
   Handle_Geom_CylindricalSurface * lresult = (Handle_Geom_CylindricalSurface *)0 ;
   gp_Ax3 *arg1 = 0 ;
   Standard_Real arg2 ;
@@ -24715,18 +26988,55 @@ EXPORT Handle_Geom_CylindricalSurface *_wrap_new_Geom_CylindricalSurface (gp_Ax3
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Handle_Geom_CylindricalSurface *)new_Handle_Geom_CylindricalSurface((gp_Ax3 const &)*arg1,arg2);
+        result = (Handle_Geom_CylindricalSurface *)new_Handle_Geom_CylindricalSurface__SWIG_0((gp_Ax3 const &)*arg1,arg2);
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_Geom_CylindricalSurface\n  * wrapname: _wrap_new_Geom_CylindricalSurface\n  * fulldecl: Handle_Geom_CylindricalSurface::Handle_Geom_CylindricalSurface(gp_Ax3 const &,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_Geom_CylindricalSurface\n  * wrapname: _wrap_new_Geom_CylindricalSurface__SWIG_0\n  * fulldecl: Handle_Geom_CylindricalSurface::Handle_Geom_CylindricalSurface(gp_Ax3 const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_Geom_CylindricalSurface *)0;
+  }
+}
+
+
+SWIGINTERN Handle_Geom_CylindricalSurface *new_Handle_Geom_CylindricalSurface__SWIG_1(gp_Ax2 const &A2,Standard_Real const Radius){
+		return new Handle_Geom_CylindricalSurface(new Geom_CylindricalSurface(A2, Radius));
+	}
+EXPORT Handle_Geom_CylindricalSurface *_wrap_new_Geom_CylindricalSurface__SWIG_1 (gp_Ax2 *larg1, Standard_Real larg2) {
+  Handle_Geom_CylindricalSurface * lresult = (Handle_Geom_CylindricalSurface *)0 ;
+  gp_Ax2 *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Handle_Geom_CylindricalSurface *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_Geom_CylindricalSurface *)new_Handle_Geom_CylindricalSurface__SWIG_1((gp_Ax2 const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_Geom_CylindricalSurface\n  * wrapname: _wrap_new_Geom_CylindricalSurface__SWIG_1\n  * fulldecl: Handle_Geom_CylindricalSurface::Handle_Geom_CylindricalSurface(gp_Ax2 const &,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -24756,7 +27066,6 @@ EXPORT gp_Cylinder *_wrap_Geom_CylindricalSurface_getCylinder (Handle_Geom_Cylin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24811,7 +27120,6 @@ EXPORT void _wrap_Geom_CylindricalSurface_getCoefficients (Handle_Geom_Cylindric
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24847,7 +27155,6 @@ EXPORT Standard_Real _wrap_Geom_CylindricalSurface_getRadius (Handle_Geom_Cylind
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24879,7 +27186,6 @@ EXPORT void _wrap_delete_Geom_CylindricalSurface (Handle_Geom_CylindricalSurface
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24917,7 +27223,6 @@ EXPORT Handle_Geom_SurfaceOfLinearExtrusion *_wrap_new_Geom_SurfaceOfLinearExtru
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24949,7 +27254,6 @@ EXPORT void _wrap_delete_Geom_SurfaceOfLinearExtrusion (Handle_Geom_SurfaceOfLin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -24985,7 +27289,6 @@ EXPORT Handle_Geom_Plane *_wrap_new_Geom_Plane (gp_Ax3 *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25022,7 +27325,6 @@ EXPORT gp_Pln *_wrap_Geom_Plane_getPlane (Handle_Geom_Plane *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25065,7 +27367,6 @@ EXPORT void _wrap_Geom_Plane_getCoefficients (Handle_Geom_Plane *larg1, Standard
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25096,7 +27397,6 @@ EXPORT void _wrap_delete_Geom_Plane (Handle_Geom_Plane *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25127,7 +27427,6 @@ EXPORT void _wrap_delete_Geom2d_Geometry (Handle_Geom2d_Geometry *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25135,6 +27434,158 @@ EXPORT void _wrap_delete_Geom2d_Geometry (Handle_Geom2d_Geometry *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: delete_Geom2d_Geometry\n  * wrapname: _wrap_delete_Geom2d_Geometry\n  * fulldecl: Handle_Geom2d_Geometry::~Handle_Geom2d_Geometry()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_Geom2d_Curve_getD0(Handle_Geom2d_Curve *self,Standard_Real const U,gp_Pnt2d &P){ return (*self)->D0(U, P); }
+EXPORT void _wrap_Geom2d_Curve_getD0 (Handle_Geom2d_Curve *larg1, Standard_Real larg2, gp_Pnt2d *larg3) {
+  Handle_Geom2d_Curve *arg1 = (Handle_Geom2d_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt2d *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_Geom2d_Curve_getD0(arg1,arg2,*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Geom2d_Curve_getD0\n  * wrapname: _wrap_Geom2d_Curve_getD0\n  * fulldecl: void Handle_Geom2d_Curve::getD0(Standard_Real const,gp_Pnt2d &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_Geom2d_Curve_getD1(Handle_Geom2d_Curve *self,Standard_Real const U,gp_Pnt2d &P,gp_Vec2d &V1){ return (*self)->D1(U, P, V1); }
+EXPORT void _wrap_Geom2d_Curve_getD1 (Handle_Geom2d_Curve *larg1, Standard_Real larg2, gp_Pnt2d *larg3, gp_Vec2d *larg4) {
+  Handle_Geom2d_Curve *arg1 = (Handle_Geom2d_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt2d *arg3 = 0 ;
+  gp_Vec2d *arg4 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_Geom2d_Curve_getD1(arg1,arg2,*arg3,*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Geom2d_Curve_getD1\n  * wrapname: _wrap_Geom2d_Curve_getD1\n  * fulldecl: void Handle_Geom2d_Curve::getD1(Standard_Real const,gp_Pnt2d &,gp_Vec2d &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_Geom2d_Curve_getD2(Handle_Geom2d_Curve *self,Standard_Real const U,gp_Pnt2d &P,gp_Vec2d &V1,gp_Vec2d &V2){ return (*self)->D2(U, P, V1, V2); }
+EXPORT void _wrap_Geom2d_Curve_getD2 (Handle_Geom2d_Curve *larg1, Standard_Real larg2, gp_Pnt2d *larg3, gp_Vec2d *larg4, gp_Vec2d *larg5) {
+  Handle_Geom2d_Curve *arg1 = (Handle_Geom2d_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt2d *arg3 = 0 ;
+  gp_Vec2d *arg4 = 0 ;
+  gp_Vec2d *arg5 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_Geom2d_Curve_getD2(arg1,arg2,*arg3,*arg4,*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Geom2d_Curve_getD2\n  * wrapname: _wrap_Geom2d_Curve_getD2\n  * fulldecl: void Handle_Geom2d_Curve::getD2(Standard_Real const,gp_Pnt2d &,gp_Vec2d &,gp_Vec2d &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_Geom2d_Curve_getD3(Handle_Geom2d_Curve *self,Standard_Real const U,gp_Pnt2d &P,gp_Vec2d &V1,gp_Vec2d &V2,gp_Vec2d &V3){ return (*self)->D3(U, P, V1, V2, V3); }
+EXPORT void _wrap_Geom2d_Curve_getD3 (Handle_Geom2d_Curve *larg1, Standard_Real larg2, gp_Pnt2d *larg3, gp_Vec2d *larg4, gp_Vec2d *larg5, gp_Vec2d *larg6) {
+  Handle_Geom2d_Curve *arg1 = (Handle_Geom2d_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt2d *arg3 = 0 ;
+  gp_Vec2d *arg4 = 0 ;
+  gp_Vec2d *arg5 = 0 ;
+  gp_Vec2d *arg6 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  arg6 = larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_Geom2d_Curve_getD3(arg1,arg2,*arg3,*arg4,*arg5,*arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Geom2d_Curve_getD3\n  * wrapname: _wrap_Geom2d_Curve_getD3\n  * fulldecl: void Handle_Geom2d_Curve::getD3(Standard_Real const,gp_Pnt2d &,gp_Vec2d &,gp_Vec2d &,gp_Vec2d &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -25163,7 +27614,6 @@ EXPORT Standard_Real _wrap_Geom2d_Curve_firstParameter (Handle_Geom2d_Curve *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25200,7 +27650,6 @@ EXPORT Standard_Real _wrap_Geom2d_Curve_lastParameter (Handle_Geom2d_Curve *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25237,7 +27686,6 @@ EXPORT bool _wrap_Geom2d_Curve_isClosed (Handle_Geom2d_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25274,7 +27722,6 @@ EXPORT bool _wrap_Geom2d_Curve_isPeriodic (Handle_Geom2d_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25311,7 +27758,6 @@ EXPORT Standard_Real _wrap_Geom2d_Curve_period (Handle_Geom2d_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25346,7 +27792,6 @@ EXPORT void _wrap_Geom2d_Curve_reverse (Handle_Geom2d_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25384,7 +27829,6 @@ EXPORT Standard_Real _wrap_Geom2d_Curve_getReversedParameter (Handle_Geom2d_Curv
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25404,7 +27848,7 @@ EXPORT Standard_Real _wrap_Geom2d_Curve_getReversedParameter (Handle_Geom2d_Curv
 
 
 SWIGINTERN gp_Pnt2d Handle_Geom2d_Curve_getValueAt(Handle_Geom2d_Curve *self,Standard_Real const U){
-		return (*self)->Value(U);
+	  return (*self)->Value(U);
 	}
 EXPORT gp_Pnt2d *_wrap_Geom2d_Curve_getValueAt (Handle_Geom2d_Curve *larg1, Standard_Real larg2) {
   gp_Pnt2d * lresult = (gp_Pnt2d *)0 ;
@@ -25423,7 +27867,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Curve_getValueAt (Handle_Geom2d_Curve *larg1, Stan
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25509,7 +27952,6 @@ EXPORT Standard_Integer _wrap_Geom2d_Curve_getGeometryType (Handle_Geom2d_Curve 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25541,7 +27983,6 @@ EXPORT void _wrap_delete_Geom2d_Curve (Handle_Geom2d_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25577,7 +28018,6 @@ EXPORT Handle_Geom2d_Line *_wrap_new_Geom2d_Line__SWIG_0 (gp_Ax2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25614,7 +28054,6 @@ EXPORT Handle_Geom2d_Line *_wrap_new_Geom2d_Line__SWIG_1 (gp_Lin2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25653,7 +28092,6 @@ EXPORT Handle_Geom2d_Line *_wrap_new_Geom2d_Line__SWIG_2 (gp_Pnt2d *larg1, gp_Di
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25690,7 +28128,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Line_getLocation (Handle_Geom2d_Line *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25727,7 +28164,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Line_getPosition (Handle_Geom2d_Line *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25759,7 +28195,6 @@ EXPORT void _wrap_delete_Geom2d_Line (Handle_Geom2d_Line *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25797,7 +28232,6 @@ EXPORT Handle_Geom2d_OffsetCurve *_wrap_new_Geom2d_OffsetCurve (Handle_Geom2d_Cu
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25834,7 +28268,6 @@ EXPORT Handle_Geom2d_Curve *_wrap_Geom2d_OffsetCurve_getBasisCurve (Handle_Geom2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25871,7 +28304,6 @@ EXPORT Standard_Real _wrap_Geom2d_OffsetCurve_getOffset (Handle_Geom2d_OffsetCur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25903,7 +28335,6 @@ EXPORT void _wrap_delete_Geom2d_OffsetCurve (Handle_Geom2d_OffsetCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25939,7 +28370,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Conic_getXAxis (Handle_Geom2d_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -25976,7 +28406,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Conic_getYAxis (Handle_Geom2d_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26013,7 +28442,6 @@ EXPORT Standard_Real _wrap_Geom2d_Conic_getEccentricity (Handle_Geom2d_Conic *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26050,7 +28478,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Conic_getLocation (Handle_Geom2d_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26087,7 +28514,6 @@ EXPORT gp_Ax22d *_wrap_Geom2d_Conic_getPosition (Handle_Geom2d_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26119,7 +28545,6 @@ EXPORT void _wrap_delete_Geom2d_Conic (Handle_Geom2d_Conic *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26157,7 +28582,6 @@ EXPORT Handle_Geom2d_Circle *_wrap_new_Geom2d_Circle (gp_Ax22d *larg1, Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26194,7 +28618,6 @@ EXPORT Standard_Real _wrap_Geom2d_Circle_getRadius (Handle_Geom2d_Circle *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26226,7 +28649,6 @@ EXPORT void _wrap_delete_Geom2d_Circle (Handle_Geom2d_Circle *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26268,7 +28690,6 @@ EXPORT Handle_Geom2d_Ellipse *_wrap_new_Geom2d_Ellipse__SWIG_0 (gp_Ax2d *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26306,7 +28727,6 @@ EXPORT Handle_Geom2d_Ellipse *_wrap_new_Geom2d_Ellipse__SWIG_1 (gp_Ax2d *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26347,7 +28767,6 @@ EXPORT Handle_Geom2d_Ellipse *_wrap_new_Geom2d_Ellipse__SWIG_2 (gp_Ax22d *larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26384,7 +28803,6 @@ EXPORT Standard_Real _wrap_Geom2d_Ellipse_getMajorRadius (Handle_Geom2d_Ellipse 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26421,7 +28839,6 @@ EXPORT Standard_Real _wrap_Geom2d_Ellipse_getMinorRadius (Handle_Geom2d_Ellipse 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26458,7 +28875,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Ellipse_getDirectrix1 (Handle_Geom2d_Ellipse *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26495,7 +28911,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Ellipse_getDirectrix2 (Handle_Geom2d_Ellipse *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26532,7 +28947,6 @@ EXPORT Standard_Real _wrap_Geom2d_Ellipse_getFocalDistance (Handle_Geom2d_Ellips
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26569,7 +28983,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Ellipse_getFocus1 (Handle_Geom2d_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26606,7 +29019,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Ellipse_getFocus2 (Handle_Geom2d_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26638,7 +29050,6 @@ EXPORT void _wrap_delete_Geom2d_Ellipse (Handle_Geom2d_Ellipse *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26678,7 +29089,6 @@ EXPORT Handle_Geom2d_Hyperbola *_wrap_new_Geom2d_Hyperbola (gp_Ax22d *larg1, Sta
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26715,7 +29125,6 @@ EXPORT Standard_Real _wrap_Geom2d_Hyperbola_getMajorRadius (Handle_Geom2d_Hyperb
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26752,7 +29161,6 @@ EXPORT Standard_Real _wrap_Geom2d_Hyperbola_getMinorRadius (Handle_Geom2d_Hyperb
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26789,7 +29197,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Hyperbola_getDirectrix1 (Handle_Geom2d_Hyperbola *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26826,7 +29233,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Hyperbola_getDirectrix2 (Handle_Geom2d_Hyperbola *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26863,7 +29269,6 @@ EXPORT Standard_Real _wrap_Geom2d_Hyperbola_getFocalDistance (Handle_Geom2d_Hype
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26900,7 +29305,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Hyperbola_getFocus1 (Handle_Geom2d_Hyperbola *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26937,7 +29341,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Hyperbola_getFocus2 (Handle_Geom2d_Hyperbola *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -26969,7 +29372,6 @@ EXPORT void _wrap_delete_Geom2d_Hyperbola (Handle_Geom2d_Hyperbola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27007,7 +29409,6 @@ EXPORT Handle_Geom2d_Parabola *_wrap_new_Geom2d_Parabola__SWIG_0 (gp_Ax22d *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27046,7 +29447,6 @@ EXPORT Handle_Geom2d_Parabola *_wrap_new_Geom2d_Parabola__SWIG_1 (gp_Ax2d *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27083,7 +29483,6 @@ EXPORT Standard_Real _wrap_Geom2d_Parabola_getFocalDistance (Handle_Geom2d_Parab
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27120,7 +29519,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_Parabola_getFocus (Handle_Geom2d_Parabola *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27157,7 +29555,6 @@ EXPORT gp_Ax2d *_wrap_Geom2d_Parabola_getDirectrix (Handle_Geom2d_Parabola *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27189,7 +29586,6 @@ EXPORT void _wrap_delete_Geom2d_Parabola (Handle_Geom2d_Parabola *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27225,7 +29621,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_BoundedCurve_getEndPoint (Handle_Geom2d_BoundedCur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27262,7 +29657,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_BoundedCurve_getStartPoint (Handle_Geom2d_BoundedC
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27294,7 +29688,6 @@ EXPORT void _wrap_delete_Geom2d_BoundedCurve (Handle_Geom2d_BoundedCurve *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27332,7 +29725,6 @@ EXPORT Handle_Geom2d_BezierCurve *_wrap_new_Geom2d_BezierCurve (TColgp_Array1OfP
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27369,7 +29761,6 @@ EXPORT Standard_Integer _wrap_Geom2d_BezierCurve_getControlPointsCount (Handle_G
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27408,7 +29799,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_BezierCurve_getControlPoint (Handle_Geom2d_BezierC
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27447,7 +29837,6 @@ EXPORT Standard_Real _wrap_Geom2d_BezierCurve_getWeight (Handle_Geom2d_BezierCur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27479,7 +29868,6 @@ EXPORT void _wrap_delete_Geom2d_BezierCurve (Handle_Geom2d_BezierCurve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27524,7 +29912,6 @@ EXPORT Handle_Geom2d_BSplineCurve *_wrap_new_Geom2d_BSplineCurve__SWIG_0 (TColgp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27564,7 +29951,6 @@ EXPORT Handle_Geom2d_BSplineCurve *_wrap_new_Geom2d_BSplineCurve__SWIG_1 (TColgp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27612,7 +29998,6 @@ EXPORT Handle_Geom2d_BSplineCurve *_wrap_new_Geom2d_BSplineCurve__SWIG_2 (TColgp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27654,7 +30039,6 @@ EXPORT Handle_Geom2d_BSplineCurve *_wrap_new_Geom2d_BSplineCurve__SWIG_3 (TColgp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27691,7 +30075,6 @@ EXPORT Standard_Integer _wrap_Geom2d_BSplineCurve_getDegree (Handle_Geom2d_BSpli
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27730,7 +30113,6 @@ EXPORT gp_Pnt2d *_wrap_Geom2d_BSplineCurve_getControlPoint (Handle_Geom2d_BSplin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27769,7 +30151,6 @@ EXPORT Standard_Real _wrap_Geom2d_BSplineCurve_getWeight (Handle_Geom2d_BSplineC
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27808,7 +30189,6 @@ EXPORT Standard_Real _wrap_Geom2d_BSplineCurve_getKnot (Handle_Geom2d_BSplineCur
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27847,7 +30227,6 @@ EXPORT Standard_Integer _wrap_Geom2d_BSplineCurve_getMultiplicity (Handle_Geom2d
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27884,7 +30263,6 @@ EXPORT Standard_Integer _wrap_Geom2d_BSplineCurve_getKnotsCount (Handle_Geom2d_B
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27921,7 +30299,6 @@ EXPORT Standard_Integer _wrap_Geom2d_BSplineCurve_getControlPointsCount (Handle_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27953,7 +30330,6 @@ EXPORT void _wrap_delete_Geom2d_BSplineCurve (Handle_Geom2d_BSplineCurve *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -27995,7 +30371,6 @@ EXPORT Handle_Geom2d_TrimmedCurve *_wrap_new_Geom2d_TrimmedCurve__SWIG_0 (Handle
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28033,7 +30408,6 @@ EXPORT Handle_Geom2d_TrimmedCurve *_wrap_new_Geom2d_TrimmedCurve__SWIG_1 (Handle
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28070,7 +30444,6 @@ EXPORT Handle_Geom2d_Curve *_wrap_Geom2d_TrimmedCurve_getBasisCurve (Handle_Geom
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28102,7 +30475,6 @@ EXPORT void _wrap_delete_Geom2d_TrimmedCurve (Handle_Geom2d_TrimmedCurve *larg1)
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28140,7 +30512,6 @@ EXPORT Standard_Real _wrap_Bisector_Curve_getParameter (Handle_Bisector_Curve *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28177,7 +30548,6 @@ EXPORT bool _wrap_Bisector_Curve_isExtendAtStart (Handle_Bisector_Curve *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28214,7 +30584,6 @@ EXPORT bool _wrap_Bisector_Curve_isExtendAtEnd (Handle_Bisector_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28251,7 +30620,6 @@ EXPORT Standard_Integer _wrap_Bisector_Curve_getNumberOfIntervals (Handle_Bisect
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28290,7 +30658,6 @@ EXPORT Standard_Real _wrap_Bisector_Curve_getIntervalFirst (Handle_Bisector_Curv
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28329,7 +30696,6 @@ EXPORT Standard_Real _wrap_Bisector_Curve_getIntervalLast (Handle_Bisector_Curve
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28361,7 +30727,6 @@ EXPORT void _wrap_delete_Bisector_Curve (Handle_Bisector_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28392,7 +30757,6 @@ EXPORT void _wrap_delete_Bisector_BisecAna (Handle_Bisector_BisecAna *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28438,7 +30802,6 @@ EXPORT Handle_Bisector_BisecCC *_wrap_new_Bisector_BisecCC__SWIG_0 (Handle_Geom2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28480,7 +30843,6 @@ EXPORT Handle_Bisector_BisecCC *_wrap_new_Bisector_BisecCC__SWIG_1 (Handle_Geom2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28512,7 +30874,6 @@ EXPORT void _wrap_delete_Bisector_BisecCC (Handle_Bisector_BisecCC *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28554,7 +30915,6 @@ EXPORT Handle_Bisector_BisecPC *_wrap_new_Bisector_BisecPC__SWIG_0 (Handle_Geom2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28592,7 +30952,6 @@ EXPORT Handle_Bisector_BisecPC *_wrap_new_Bisector_BisecPC__SWIG_1 (Handle_Geom2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28624,7 +30983,6 @@ EXPORT void _wrap_delete_Bisector_BisecPC (Handle_Bisector_BisecPC *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28645,6 +31003,985 @@ EXPORT void _wrap_delete_Bisector_BisecPC (Handle_Bisector_BisecPC *larg1) {
 
 #include <BRepLib.hxx>
 
+EXPORT void _wrap_BRepLib_Precision__SWIG_0 (Standard_Real larg1) {
+  Standard_Real arg1 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::Precision(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_Precision\n  * wrapname: _wrap_BRepLib_Precision__SWIG_0\n  * fulldecl: void BRepLib::Precision(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Real _wrap_BRepLib_Precision__SWIG_1 () {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Standard_Real result;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)BRepLib::Precision();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_Precision\n  * wrapname: _wrap_BRepLib_Precision__SWIG_1\n  * fulldecl: Standard_Real BRepLib::Precision()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_Plane__SWIG_0 (Handle_Geom_Plane *larg1) {
+  Handle_Geom_Plane *arg1 = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::Plane((Handle_Geom_Plane const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_Plane\n  * wrapname: _wrap_BRepLib_Plane__SWIG_0\n  * fulldecl: void BRepLib::Plane(Handle_Geom_Plane const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Handle_Geom_Plane *_wrap_BRepLib_Plane__SWIG_1 () {
+  Handle_Geom_Plane * lresult = (Handle_Geom_Plane *)0 ;
+  Handle_Geom_Plane *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_Geom_Plane *) &BRepLib::Plane();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_Plane\n  * wrapname: _wrap_BRepLib_Plane__SWIG_1\n  * fulldecl: Handle_Geom_Plane const & BRepLib::Plane()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_Geom_Plane *)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_CheckSameRange__SWIG_0 (TopoDS_Edge *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::CheckSameRange((TopoDS_Edge const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_CheckSameRange\n  * wrapname: _wrap_BRepLib_CheckSameRange__SWIG_0\n  * fulldecl: Standard_Boolean BRepLib::CheckSameRange(TopoDS_Edge const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_CheckSameRange__SWIG_1 (TopoDS_Edge *larg1) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::CheckSameRange((TopoDS_Edge const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_CheckSameRange\n  * wrapname: _wrap_BRepLib_CheckSameRange__SWIG_1\n  * fulldecl: Standard_Boolean BRepLib::CheckSameRange(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SameRange__SWIG_0 (TopoDS_Edge *larg1, Standard_Real larg2) {
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SameRange((TopoDS_Edge const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SameRange\n  * wrapname: _wrap_BRepLib_SameRange__SWIG_0\n  * fulldecl: void BRepLib::SameRange(TopoDS_Edge const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SameRange__SWIG_1 (TopoDS_Edge *larg1) {
+  TopoDS_Edge *arg1 = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SameRange((TopoDS_Edge const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SameRange\n  * wrapname: _wrap_BRepLib_SameRange__SWIG_1\n  * fulldecl: void BRepLib::SameRange(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurve3d__SWIG_0 (TopoDS_Edge *larg1, Standard_Real larg2, GeomAbs_Shape larg3, Standard_Integer larg4, Standard_Integer larg5) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  GeomAbs_Shape arg3 ;
+  Standard_Integer arg4 ;
+  Standard_Integer arg5 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurve3d((TopoDS_Edge const &)*arg1,arg2,arg3,arg4,arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurve3d\n  * wrapname: _wrap_BRepLib_BuildCurve3d__SWIG_0\n  * fulldecl: Standard_Boolean BRepLib::BuildCurve3d(TopoDS_Edge const &,Standard_Real const,GeomAbs_Shape const,Standard_Integer const,Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurve3d__SWIG_1 (TopoDS_Edge *larg1, Standard_Real larg2, GeomAbs_Shape larg3, Standard_Integer larg4) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  GeomAbs_Shape arg3 ;
+  Standard_Integer arg4 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurve3d((TopoDS_Edge const &)*arg1,arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurve3d\n  * wrapname: _wrap_BRepLib_BuildCurve3d__SWIG_1\n  * fulldecl: Standard_Boolean BRepLib::BuildCurve3d(TopoDS_Edge const &,Standard_Real const,GeomAbs_Shape const,Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurve3d__SWIG_2 (TopoDS_Edge *larg1, Standard_Real larg2, GeomAbs_Shape larg3) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  GeomAbs_Shape arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurve3d((TopoDS_Edge const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurve3d\n  * wrapname: _wrap_BRepLib_BuildCurve3d__SWIG_2\n  * fulldecl: Standard_Boolean BRepLib::BuildCurve3d(TopoDS_Edge const &,Standard_Real const,GeomAbs_Shape const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurve3d__SWIG_3 (TopoDS_Edge *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurve3d((TopoDS_Edge const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurve3d\n  * wrapname: _wrap_BRepLib_BuildCurve3d__SWIG_3\n  * fulldecl: Standard_Boolean BRepLib::BuildCurve3d(TopoDS_Edge const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurve3d__SWIG_4 (TopoDS_Edge *larg1) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurve3d((TopoDS_Edge const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurve3d\n  * wrapname: _wrap_BRepLib_BuildCurve3d__SWIG_4\n  * fulldecl: Standard_Boolean BRepLib::BuildCurve3d(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurves3d__SWIG_0 (TopoDS_Shape *larg1, Standard_Real larg2, GeomAbs_Shape larg3, Standard_Integer larg4, Standard_Integer larg5) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  GeomAbs_Shape arg3 ;
+  Standard_Integer arg4 ;
+  Standard_Integer arg5 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurves3d((TopoDS_Shape const &)*arg1,arg2,arg3,arg4,arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurves3d\n  * wrapname: _wrap_BRepLib_BuildCurves3d__SWIG_0\n  * fulldecl: Standard_Boolean BRepLib::BuildCurves3d(TopoDS_Shape const &,Standard_Real const,GeomAbs_Shape const,Standard_Integer const,Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurves3d__SWIG_1 (TopoDS_Shape *larg1, Standard_Real larg2, GeomAbs_Shape larg3, Standard_Integer larg4) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  GeomAbs_Shape arg3 ;
+  Standard_Integer arg4 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurves3d((TopoDS_Shape const &)*arg1,arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurves3d\n  * wrapname: _wrap_BRepLib_BuildCurves3d__SWIG_1\n  * fulldecl: Standard_Boolean BRepLib::BuildCurves3d(TopoDS_Shape const &,Standard_Real const,GeomAbs_Shape const,Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurves3d__SWIG_2 (TopoDS_Shape *larg1, Standard_Real larg2, GeomAbs_Shape larg3) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  GeomAbs_Shape arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurves3d((TopoDS_Shape const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurves3d\n  * wrapname: _wrap_BRepLib_BuildCurves3d__SWIG_2\n  * fulldecl: Standard_Boolean BRepLib::BuildCurves3d(TopoDS_Shape const &,Standard_Real const,GeomAbs_Shape const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurves3d__SWIG_3 (TopoDS_Shape *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurves3d((TopoDS_Shape const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurves3d\n  * wrapname: _wrap_BRepLib_BuildCurves3d__SWIG_3\n  * fulldecl: Standard_Boolean BRepLib::BuildCurves3d(TopoDS_Shape const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_BuildCurves3d__SWIG_4 (TopoDS_Shape *larg1) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::BuildCurves3d((TopoDS_Shape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BuildCurves3d\n  * wrapname: _wrap_BRepLib_BuildCurves3d__SWIG_4\n  * fulldecl: Standard_Boolean BRepLib::BuildCurves3d(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_UpdateEdgeTol (TopoDS_Edge *larg1, Standard_Real larg2, Standard_Real larg3) {
+  bool lresult = (bool)0 ;
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::UpdateEdgeTol((TopoDS_Edge const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_UpdateEdgeTol\n  * wrapname: _wrap_BRepLib_UpdateEdgeTol\n  * fulldecl: Standard_Boolean BRepLib::UpdateEdgeTol(TopoDS_Edge const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_UpdateEdgeTolerance (TopoDS_Shape *larg1, Standard_Real larg2, Standard_Real larg3) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::UpdateEdgeTolerance((TopoDS_Shape const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_UpdateEdgeTolerance\n  * wrapname: _wrap_BRepLib_UpdateEdgeTolerance\n  * fulldecl: Standard_Boolean BRepLib::UpdateEdgeTolerance(TopoDS_Shape const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SameParameter__SWIG_0 (TopoDS_Edge *larg1, Standard_Real larg2) {
+  TopoDS_Edge *arg1 = 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SameParameter((TopoDS_Edge const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SameParameter\n  * wrapname: _wrap_BRepLib_SameParameter__SWIG_0\n  * fulldecl: void BRepLib::SameParameter(TopoDS_Edge const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SameParameter__SWIG_1 (TopoDS_Edge *larg1) {
+  TopoDS_Edge *arg1 = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SameParameter((TopoDS_Edge const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SameParameter\n  * wrapname: _wrap_BRepLib_SameParameter__SWIG_1\n  * fulldecl: void BRepLib::SameParameter(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SameParameter__SWIG_2 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3) {
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean arg3 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SameParameter((TopoDS_Shape const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SameParameter\n  * wrapname: _wrap_BRepLib_SameParameter__SWIG_2\n  * fulldecl: void BRepLib::SameParameter(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SameParameter__SWIG_3 (TopoDS_Shape *larg1, Standard_Real larg2) {
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SameParameter((TopoDS_Shape const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SameParameter\n  * wrapname: _wrap_BRepLib_SameParameter__SWIG_3\n  * fulldecl: void BRepLib::SameParameter(TopoDS_Shape const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SameParameter__SWIG_4 (TopoDS_Shape *larg1) {
+  TopoDS_Shape *arg1 = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SameParameter((TopoDS_Shape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SameParameter\n  * wrapname: _wrap_BRepLib_SameParameter__SWIG_4\n  * fulldecl: void BRepLib::SameParameter(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_UpdateTolerances__SWIG_0 (TopoDS_Shape *larg1, bool larg2) {
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Boolean arg2 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::UpdateTolerances((TopoDS_Shape const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_UpdateTolerances\n  * wrapname: _wrap_BRepLib_UpdateTolerances__SWIG_0\n  * fulldecl: void BRepLib::UpdateTolerances(TopoDS_Shape const &,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_UpdateTolerances__SWIG_1 (TopoDS_Shape *larg1) {
+  TopoDS_Shape *arg1 = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::UpdateTolerances((TopoDS_Shape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_UpdateTolerances\n  * wrapname: _wrap_BRepLib_UpdateTolerances__SWIG_1\n  * fulldecl: void BRepLib::UpdateTolerances(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_UpdateInnerTolerances (TopoDS_Shape *larg1) {
+  TopoDS_Shape *arg1 = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::UpdateInnerTolerances((TopoDS_Shape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_UpdateInnerTolerances\n  * wrapname: _wrap_BRepLib_UpdateInnerTolerances\n  * fulldecl: void BRepLib::UpdateInnerTolerances(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_OrientClosedSolid (TopoDS_Solid *larg1) {
+  bool lresult = (bool)0 ;
+  TopoDS_Solid *arg1 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::OrientClosedSolid(*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_OrientClosedSolid\n  * wrapname: _wrap_BRepLib_OrientClosedSolid\n  * fulldecl: Standard_Boolean BRepLib::OrientClosedSolid(TopoDS_Solid &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
 EXPORT void _wrap_BRepLib_EncodeRegularity__SWIG_0 (TopoDS_Shape *larg1, Standard_Real larg2) {
   TopoDS_Shape *arg1 = 0 ;
   Standard_Real arg2 ;
@@ -28660,7 +31997,6 @@ EXPORT void _wrap_BRepLib_EncodeRegularity__SWIG_0 (TopoDS_Shape *larg1, Standar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28691,7 +32027,6 @@ EXPORT void _wrap_BRepLib_EncodeRegularity__SWIG_1 (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28699,6 +32034,279 @@ EXPORT void _wrap_BRepLib_EncodeRegularity__SWIG_1 (TopoDS_Shape *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: BRepLib_EncodeRegularity\n  * wrapname: _wrap_BRepLib_EncodeRegularity__SWIG_1\n  * fulldecl: void BRepLib::EncodeRegularity(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_EncodeRegularity__SWIG_2 (TopoDS_Edge *larg1, TopoDS_Face *larg2, TopoDS_Face *larg3, Standard_Real larg4) {
+  TopoDS_Edge *arg1 = 0 ;
+  TopoDS_Face *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Real arg4 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::EncodeRegularity(*arg1,(TopoDS_Face const &)*arg2,(TopoDS_Face const &)*arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_EncodeRegularity\n  * wrapname: _wrap_BRepLib_EncodeRegularity__SWIG_2\n  * fulldecl: void BRepLib::EncodeRegularity(TopoDS_Edge &,TopoDS_Face const &,TopoDS_Face const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_EncodeRegularity__SWIG_3 (TopoDS_Edge *larg1, TopoDS_Face *larg2, TopoDS_Face *larg3) {
+  TopoDS_Edge *arg1 = 0 ;
+  TopoDS_Face *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::EncodeRegularity(*arg1,(TopoDS_Face const &)*arg2,(TopoDS_Face const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_EncodeRegularity\n  * wrapname: _wrap_BRepLib_EncodeRegularity__SWIG_3\n  * fulldecl: void BRepLib::EncodeRegularity(TopoDS_Edge &,TopoDS_Face const &,TopoDS_Face const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_SortFaces (TopoDS_Shape *larg1, TopTools_ListOfShape *larg2) {
+  TopoDS_Shape *arg1 = 0 ;
+  TopTools_ListOfShape *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::SortFaces((TopoDS_Shape const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_SortFaces\n  * wrapname: _wrap_BRepLib_SortFaces\n  * fulldecl: void BRepLib::SortFaces(TopoDS_Shape const &,TopTools_ListOfShape &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_ReverseSortFaces (TopoDS_Shape *larg1, TopTools_ListOfShape *larg2) {
+  TopoDS_Shape *arg1 = 0 ;
+  TopTools_ListOfShape *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::ReverseSortFaces((TopoDS_Shape const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_ReverseSortFaces\n  * wrapname: _wrap_BRepLib_ReverseSortFaces\n  * fulldecl: void BRepLib::ReverseSortFaces(TopoDS_Shape const &,TopTools_ListOfShape &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_EnsureNormalConsistency__SWIG_0 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::EnsureNormalConsistency((TopoDS_Shape const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_EnsureNormalConsistency\n  * wrapname: _wrap_BRepLib_EnsureNormalConsistency__SWIG_0\n  * fulldecl: Standard_Boolean BRepLib::EnsureNormalConsistency(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_EnsureNormalConsistency__SWIG_1 (TopoDS_Shape *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::EnsureNormalConsistency((TopoDS_Shape const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_EnsureNormalConsistency\n  * wrapname: _wrap_BRepLib_EnsureNormalConsistency__SWIG_1\n  * fulldecl: Standard_Boolean BRepLib::EnsureNormalConsistency(TopoDS_Shape const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepLib_EnsureNormalConsistency__SWIG_2 (TopoDS_Shape *larg1) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)BRepLib::EnsureNormalConsistency((TopoDS_Shape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_EnsureNormalConsistency\n  * wrapname: _wrap_BRepLib_EnsureNormalConsistency__SWIG_2\n  * fulldecl: Standard_Boolean BRepLib::EnsureNormalConsistency(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepLib_BoundingVertex (NCollection_List< TopoDS_Shape > *larg1, gp_Pnt *larg2, Standard_Real *larg3) {
+  NCollection_List< TopoDS_Shape > *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  Standard_Real *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BRepLib::BoundingVertex((NCollection_List< TopoDS_Shape > const &)*arg1,*arg2,*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepLib_BoundingVertex\n  * wrapname: _wrap_BRepLib_BoundingVertex\n  * fulldecl: void BRepLib::BoundingVertex(NCollection_List< TopoDS_Shape > const &,gp_Pnt &,Standard_Real &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -28722,7 +32330,6 @@ EXPORT void _wrap_delete_BRepLib (BRepLib *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28757,7 +32364,6 @@ EXPORT void _wrap_delete_BRepFilletAPI_LocalOperation (BRepFilletAPI_LocalOperat
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28792,7 +32398,6 @@ EXPORT BRepFilletAPI_MakeFillet *_wrap_new_BRepFilletAPI_MakeFillet__SWIG_0 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28826,7 +32431,6 @@ EXPORT BRepFilletAPI_MakeFillet *_wrap_new_BRepFilletAPI_MakeFillet__SWIG_1 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28862,7 +32466,6 @@ EXPORT void _wrap_BRepFilletAPI_MakeFillet_Add (BRepFilletAPI_MakeFillet *larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28893,7 +32496,6 @@ EXPORT void _wrap_delete_BRepFilletAPI_MakeFillet (BRepFilletAPI_MakeFillet *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28926,7 +32528,6 @@ EXPORT BRepFilletAPI_MakeChamfer *_wrap_new_BRepFilletAPI_MakeChamfer (TopoDS_Sh
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28964,7 +32565,6 @@ EXPORT void _wrap_BRepFilletAPI_MakeChamfer_Add (BRepFilletAPI_MakeChamfer *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -28995,7 +32595,6 @@ EXPORT void _wrap_delete_BRepFilletAPI_MakeChamfer (BRepFilletAPI_MakeChamfer *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29031,7 +32630,6 @@ EXPORT BRepCheck_Analyzer *_wrap_new_BRepCheck_Analyzer__SWIG_0 (TopoDS_Shape *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29065,7 +32663,6 @@ EXPORT BRepCheck_Analyzer *_wrap_new_BRepCheck_Analyzer__SWIG_1 (TopoDS_Shape *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29101,7 +32698,6 @@ EXPORT void _wrap_BRepCheck_Analyzer_Init__SWIG_0 (BRepCheck_Analyzer *larg1, To
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29134,7 +32730,6 @@ EXPORT void _wrap_BRepCheck_Analyzer_Init__SWIG_1 (BRepCheck_Analyzer *larg1, To
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29167,7 +32762,6 @@ EXPORT bool _wrap_BRepCheck_Analyzer_IsValid (BRepCheck_Analyzer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29199,7 +32793,6 @@ EXPORT void _wrap_delete_BRepCheck_Analyzer (BRepCheck_Analyzer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29231,7 +32824,6 @@ EXPORT ShapeBuild_ReShape *_wrap_new_ShapeBuild_ReShape () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29269,7 +32861,6 @@ EXPORT void _wrap_ShapeBuild_ReShape_Replace__SWIG_0 (ShapeBuild_ReShape *larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29304,7 +32895,6 @@ EXPORT void _wrap_ShapeBuild_ReShape_Replace__SWIG_1 (ShapeBuild_ReShape *larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29341,7 +32931,6 @@ EXPORT TopoDS_Shape *_wrap_ShapeBuild_ReShape_Apply__SWIG_0 (ShapeBuild_ReShape 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29377,7 +32966,6 @@ EXPORT TopoDS_Shape *_wrap_ShapeBuild_ReShape_Apply__SWIG_1 (ShapeBuild_ReShape 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29409,7 +32997,6 @@ EXPORT void _wrap_delete_ShapeBuild_ReShape (ShapeBuild_ReShape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29458,7 +33045,6 @@ EXPORT IFSelect_ReturnStatus _wrap_XSControl_Reader_ReadFile (XSControl_Reader *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29492,7 +33078,6 @@ EXPORT Standard_Integer _wrap_XSControl_Reader_TransferRoots (XSControl_Reader *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29524,7 +33109,6 @@ EXPORT void _wrap_XSControl_Reader_ClearShapes (XSControl_Reader *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29557,7 +33141,6 @@ EXPORT Standard_Integer _wrap_XSControl_Reader_NbRootsForTransfer (XSControl_Rea
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29591,7 +33174,6 @@ EXPORT TopoDS_Shape *_wrap_XSControl_Reader_OneShape (XSControl_Reader *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29623,7 +33205,6 @@ EXPORT void _wrap_delete_XSControl_Reader (XSControl_Reader *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29654,7 +33235,6 @@ EXPORT STEPControl_Reader *_wrap_new_STEPControl_Reader () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29721,7 +33301,6 @@ EXPORT char *_wrap_STEPControl_Reader_getLabel (STEPControl_Reader *larg1, TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29753,7 +33332,6 @@ EXPORT void _wrap_delete_STEPControl_Reader (STEPControl_Reader *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29784,7 +33362,6 @@ EXPORT IGESControl_Reader *_wrap_new_IGESControl_Reader () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29850,7 +33427,6 @@ EXPORT char *_wrap_IGESControl_Reader_getLabel (IGESControl_Reader *larg1, TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29914,7 +33490,6 @@ EXPORT TopoDS_Shape *_wrap_IGESControl_Reader_getShape (IGESControl_Reader *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29960,7 +33535,6 @@ EXPORT void _wrap_IGESControl_Reader_dumpLabels (IGESControl_Reader *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -29991,7 +33565,6 @@ EXPORT void _wrap_delete_IGESControl_Reader (IGESControl_Reader *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30025,7 +33598,6 @@ EXPORT STEPControl_Writer *_wrap_new_STEPControl_Writer () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30061,7 +33633,6 @@ EXPORT IFSelect_ReturnStatus _wrap_STEPControl_Writer_Write (STEPControl_Writer 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30099,7 +33670,6 @@ EXPORT IFSelect_ReturnStatus _wrap_STEPControl_Writer_Transfer (STEPControl_Writ
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30131,7 +33701,6 @@ EXPORT void _wrap_delete_STEPControl_Writer (STEPControl_Writer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30165,7 +33734,6 @@ EXPORT IGESControl_Writer *_wrap_new_IGESControl_Writer__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30201,7 +33769,6 @@ EXPORT IGESControl_Writer *_wrap_new_IGESControl_Writer__SWIG_1 (Standard_CStrin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30235,7 +33802,6 @@ EXPORT IGESControl_Writer *_wrap_new_IGESControl_Writer__SWIG_2 (Standard_CStrin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30271,7 +33837,6 @@ EXPORT bool _wrap_IGESControl_Writer_Write (IGESControl_Writer *larg1, Standard_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30307,7 +33872,6 @@ EXPORT bool _wrap_IGESControl_Writer_AddShape (IGESControl_Writer *larg1, TopoDS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30339,7 +33903,6 @@ EXPORT void _wrap_IGESControl_Writer_ComputeModel (IGESControl_Writer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30370,7 +33933,6 @@ EXPORT void _wrap_delete_IGESControl_Writer (IGESControl_Writer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30404,7 +33966,6 @@ EXPORT IGESControl_Controller *_wrap_new_IGESControl_Controller () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30436,7 +33997,6 @@ EXPORT void _wrap_IGESControl_Controller_Init (IGESControl_Controller *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30467,7 +34027,6 @@ EXPORT void _wrap_delete_IGESControl_Controller (IGESControl_Controller *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30512,7 +34071,6 @@ EXPORT void _wrap_ShapeFix_Root_SetPrecision (ShapeFix_Root *larg1, Standard_Rea
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30545,7 +34103,6 @@ EXPORT Standard_Real _wrap_ShapeFix_Root_Precision (ShapeFix_Root *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30579,7 +34136,6 @@ EXPORT void _wrap_ShapeFix_Root_SetContext (ShapeFix_Root *larg1, ShapeBuild_ReS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30616,7 +34172,6 @@ EXPORT Handle_ShapeBuild_ReShape *_wrap_ShapeFix_Root_getContext (ShapeFix_Root 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30648,7 +34203,6 @@ EXPORT void _wrap_delete_ShapeFix_Root (ShapeFix_Root *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30681,7 +34235,6 @@ EXPORT ShapeFix_Wireframe *_wrap_new_ShapeFix_Wireframe (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30715,7 +34268,6 @@ EXPORT bool _wrap_ShapeFix_Wireframe_FixWireGaps (ShapeFix_Wireframe *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30749,7 +34301,6 @@ EXPORT bool _wrap_ShapeFix_Wireframe_FixSmallEdges (ShapeFix_Wireframe *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30783,7 +34334,6 @@ EXPORT void _wrap_ShapeFix_Wireframe_SetLimitAngle (ShapeFix_Wireframe *larg1, S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30816,7 +34366,6 @@ EXPORT Standard_Real _wrap_ShapeFix_Wireframe_LimitAngle (ShapeFix_Wireframe *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30850,7 +34399,6 @@ EXPORT TopoDS_Shape *_wrap_ShapeFix_Wireframe_Shape (ShapeFix_Wireframe *larg1) 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30887,7 +34435,6 @@ EXPORT void _wrap_ShapeFix_Wireframe_setDropSmallEdges (ShapeFix_Wireframe *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30923,7 +34470,6 @@ EXPORT bool _wrap_ShapeFix_Wireframe_getDropSmallEdges (ShapeFix_Wireframe *larg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30955,7 +34501,6 @@ EXPORT void _wrap_delete_ShapeFix_Wireframe (ShapeFix_Wireframe *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -30988,7 +34533,6 @@ EXPORT ShapeFix_Shape *_wrap_new_ShapeFix_Shape (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31022,7 +34566,6 @@ EXPORT TopoDS_Shape *_wrap_ShapeFix_Shape_Shape (ShapeFix_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31058,7 +34601,6 @@ EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_0 (ShapeFix_Shape *larg1, Handle_
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31092,7 +34634,6 @@ EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_1 (ShapeFix_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31126,7 +34667,6 @@ EXPORT Handle_ShapeFix_Solid *_wrap_ShapeFix_Shape_FixSolidTool (ShapeFix_Shape 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31160,7 +34700,6 @@ EXPORT Handle_ShapeFix_Shell *_wrap_ShapeFix_Shape_FixShellTool (ShapeFix_Shape 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31194,7 +34733,6 @@ EXPORT Handle_ShapeFix_Face *_wrap_ShapeFix_Shape_FixFaceTool (ShapeFix_Shape *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31228,7 +34766,6 @@ EXPORT Handle_ShapeFix_Wire *_wrap_ShapeFix_Shape_FixWireTool (ShapeFix_Shape *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31262,7 +34799,6 @@ EXPORT Handle_ShapeFix_Edge *_wrap_ShapeFix_Shape_FixEdgeTool (ShapeFix_Shape *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31294,7 +34830,6 @@ EXPORT void _wrap_delete_ShapeFix_Shape (ShapeFix_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31325,7 +34860,6 @@ EXPORT void _wrap_delete_Message_ProgressIndicator (Handle_Message_ProgressIndic
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31360,7 +34894,6 @@ EXPORT ShapeAnalysis_Edge *_wrap_new_ShapeAnalysis_Edge () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31396,7 +34929,6 @@ EXPORT bool _wrap_ShapeAnalysis_Edge_IsClosed3d (ShapeAnalysis_Edge *larg1, Topo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31434,7 +34966,6 @@ EXPORT bool _wrap_ShapeAnalysis_Edge_HasPCurve (ShapeAnalysis_Edge *larg1, TopoD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31472,7 +35003,6 @@ EXPORT bool _wrap_ShapeAnalysis_Edge_IsSeam (ShapeAnalysis_Edge *larg1, TopoDS_E
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31504,7 +35034,6 @@ EXPORT void _wrap_delete_ShapeAnalysis_Edge (ShapeAnalysis_Edge *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31537,7 +35066,6 @@ EXPORT ShapeAnalysis_Surface *_wrap_new_ShapeAnalysis_Surface (Handle_Geom_Surfa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31573,7 +35101,6 @@ EXPORT bool _wrap_ShapeAnalysis_Surface_HasSingularities (ShapeAnalysis_Surface 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31609,7 +35136,6 @@ EXPORT Standard_Integer _wrap_ShapeAnalysis_Surface_NbSingularities (ShapeAnalys
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31647,7 +35173,6 @@ EXPORT bool _wrap_ShapeAnalysis_Surface_IsDegenerated (ShapeAnalysis_Surface *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31679,7 +35204,6 @@ EXPORT void _wrap_delete_ShapeAnalysis_Surface (ShapeAnalysis_Surface *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31716,7 +35240,6 @@ EXPORT APIHeaderSection_MakeHeader *_wrap_new_APIHeaderSection_MakeHeader (Handl
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31750,7 +35273,6 @@ EXPORT void _wrap_APIHeaderSection_MakeHeader_SetName (APIHeaderSection_MakeHead
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31785,7 +35307,6 @@ EXPORT void _wrap_APIHeaderSection_MakeHeader_SetAuthorValue (APIHeaderSection_M
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31820,7 +35341,6 @@ EXPORT void _wrap_APIHeaderSection_MakeHeader_SetOrganizationValue (APIHeaderSec
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31853,7 +35373,6 @@ EXPORT void _wrap_APIHeaderSection_MakeHeader_SetOriginatingSystem (APIHeaderSec
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31888,7 +35407,6 @@ EXPORT void _wrap_APIHeaderSection_MakeHeader_SetDescriptionValue (APIHeaderSect
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31919,7 +35437,6 @@ EXPORT void _wrap_delete_APIHeaderSection_MakeHeader (APIHeaderSection_MakeHeade
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31953,7 +35470,6 @@ EXPORT void _wrap_delete_ShapeUpgrade_Tool (ShapeUpgrade_Tool *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -31986,7 +35502,6 @@ EXPORT ShapeUpgrade_RemoveInternalWires *_wrap_new_ShapeUpgrade_RemoveInternalWi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32020,7 +35535,6 @@ EXPORT bool _wrap_ShapeUpgrade_RemoveInternalWires_Perform (ShapeUpgrade_RemoveI
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32054,7 +35568,6 @@ EXPORT TopoDS_Shape *_wrap_ShapeUpgrade_RemoveInternalWires_GetResult (ShapeUpgr
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32091,7 +35604,6 @@ EXPORT void _wrap_ShapeUpgrade_RemoveInternalWires_setMinArea (ShapeUpgrade_Remo
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32127,7 +35639,6 @@ EXPORT double _wrap_ShapeUpgrade_RemoveInternalWires_getMinArea (ShapeUpgrade_Re
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32164,7 +35675,6 @@ EXPORT void _wrap_ShapeUpgrade_RemoveInternalWires_setRemoveFaceMode (ShapeUpgra
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32200,7 +35710,6 @@ EXPORT bool _wrap_ShapeUpgrade_RemoveInternalWires_getRemoveFaceMode (ShapeUpgra
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32232,7 +35741,6 @@ EXPORT void _wrap_delete_ShapeUpgrade_RemoveInternalWires (ShapeUpgrade_RemoveIn
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32265,7 +35773,6 @@ EXPORT TopoDS_Shape *_wrap_ShapeUpgrade_ShapeDivide_Result (ShapeUpgrade_ShapeDi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32301,7 +35808,6 @@ EXPORT bool _wrap_ShapeUpgrade_ShapeDivide_Perform__SWIG_0 (ShapeUpgrade_ShapeDi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32335,7 +35841,6 @@ EXPORT bool _wrap_ShapeUpgrade_ShapeDivide_Perform__SWIG_1 (ShapeUpgrade_ShapeDi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32367,7 +35872,6 @@ EXPORT void _wrap_delete_ShapeUpgrade_ShapeDivide (ShapeUpgrade_ShapeDivide *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32400,7 +35904,6 @@ EXPORT ShapeUpgrade_ShapeDivideArea *_wrap_new_ShapeUpgrade_ShapeDivideArea (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32437,7 +35940,6 @@ EXPORT void _wrap_ShapeUpgrade_ShapeDivideArea_setMaxArea (ShapeUpgrade_ShapeDiv
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32473,7 +35975,6 @@ EXPORT double _wrap_ShapeUpgrade_ShapeDivideArea_getMaxArea (ShapeUpgrade_ShapeD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32505,7 +36006,6 @@ EXPORT void _wrap_delete_ShapeUpgrade_ShapeDivideArea (ShapeUpgrade_ShapeDivideA
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32538,7 +36038,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32580,7 +36079,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_1 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32620,7 +36118,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_2 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32658,7 +36155,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_3 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32694,7 +36190,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_4 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32728,7 +36223,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_5 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32772,7 +36266,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_6 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32814,7 +36307,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_7 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32854,7 +36346,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_8 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32892,7 +36383,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_9 (TColg
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32928,7 +36418,6 @@ EXPORT GeomAPI_PointsToBSpline *_wrap_new_GeomAPI_PointsToBSpline__SWIG_10 (TCol
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32962,7 +36451,6 @@ EXPORT Handle_Geom_BSplineCurve *_wrap_GeomAPI_PointsToBSpline_Curve (GeomAPI_Po
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -32994,7 +36482,6 @@ EXPORT void _wrap_delete_GeomAPI_PointsToBSpline (GeomAPI_PointsToBSpline *larg1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33031,7 +36518,6 @@ EXPORT GeomAPI_Interpolate *_wrap_new_GeomAPI_Interpolate (Handle_TColgp_HArray1
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33069,7 +36555,6 @@ EXPORT void _wrap_GeomAPI_Interpolate_Load__SWIG_0 (GeomAPI_Interpolate *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33104,7 +36589,6 @@ EXPORT void _wrap_GeomAPI_Interpolate_Load__SWIG_1 (GeomAPI_Interpolate *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33135,7 +36619,6 @@ EXPORT void _wrap_GeomAPI_Interpolate_Perform (GeomAPI_Interpolate *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33168,7 +36651,6 @@ EXPORT Handle_Geom_BSplineCurve *_wrap_GeomAPI_Interpolate_Curve (GeomAPI_Interp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33200,7 +36682,6 @@ EXPORT void _wrap_delete_GeomAPI_Interpolate (GeomAPI_Interpolate *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33234,7 +36715,6 @@ EXPORT bool _wrap_GC_Root_IsDone (GC_Root *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33268,7 +36748,6 @@ EXPORT int _wrap_GC_Root_Status (GC_Root *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33300,7 +36779,6 @@ EXPORT void _wrap_delete_GC_Root (GC_Root *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33338,7 +36816,6 @@ EXPORT GC_MakeArcOfCircle *_wrap_new_GC_MakeArcOfCircle__SWIG_0 (gp_Pnt *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33378,7 +36855,6 @@ EXPORT GC_MakeArcOfCircle *_wrap_new_GC_MakeArcOfCircle__SWIG_1 (gp_Circ *larg1,
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33412,7 +36888,6 @@ EXPORT Handle_Geom_TrimmedCurve *_wrap_GC_MakeArcOfCircle_Value (GC_MakeArcOfCir
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33444,7 +36919,6 @@ EXPORT void _wrap_delete_GC_MakeArcOfCircle (GC_MakeArcOfCircle *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33480,7 +36954,6 @@ EXPORT GC_MakeSegment *_wrap_new_GC_MakeSegment__SWIG_0 (gp_Pnt *larg1, gp_Pnt *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33518,7 +36991,6 @@ EXPORT GC_MakeSegment *_wrap_new_GC_MakeSegment__SWIG_1 (gp_Lin *larg1, Standard
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33556,7 +37028,6 @@ EXPORT GC_MakeSegment *_wrap_new_GC_MakeSegment__SWIG_2 (gp_Lin *larg1, gp_Pnt *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33594,7 +37065,6 @@ EXPORT GC_MakeSegment *_wrap_new_GC_MakeSegment__SWIG_3 (gp_Lin *larg1, gp_Pnt *
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33628,7 +37098,6 @@ EXPORT Handle_Geom_TrimmedCurve *_wrap_GC_MakeSegment_Value (GC_MakeSegment *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33660,7 +37129,6 @@ EXPORT void _wrap_delete_GC_MakeSegment (GC_MakeSegment *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33668,6 +37136,350 @@ EXPORT void _wrap_delete_GC_MakeSegment (GC_MakeSegment *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: delete_GC_MakeSegment\n  * wrapname: _wrap_delete_GC_MakeSegment\n  * fulldecl: GC_MakeSegment::~GC_MakeSegment()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+#include <GCE2d_Root.hxx>
+EXPORT bool _wrap_GCE2d_Root_IsDone (GCE2d_Root *larg1) {
+  bool lresult = (bool)0 ;
+  GCE2d_Root *arg1 = (GCE2d_Root *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((GCE2d_Root const *)arg1)->IsDone();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GCE2d_Root_IsDone\n  * wrapname: _wrap_GCE2d_Root_IsDone\n  * fulldecl: Standard_Boolean GCE2d_Root::IsDone() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT gce_ErrorType *_wrap_GCE2d_Root_Status (GCE2d_Root *larg1) {
+  gce_ErrorType * lresult = (gce_ErrorType *)0 ;
+  GCE2d_Root *arg1 = (GCE2d_Root *) 0 ;
+  gce_ErrorType result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GCE2d_Root const *)arg1)->Status();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GCE2d_Root_Status\n  * wrapname: _wrap_GCE2d_Root_Status\n  * fulldecl: gce_ErrorType GCE2d_Root::Status() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gce_ErrorType(result);
+    return lresult;
+  } catch (...) {
+    return (gce_ErrorType *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_GCE2d_Root (GCE2d_Root *larg1) {
+  GCE2d_Root *arg1 = (GCE2d_Root *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_GCE2d_Root\n  * wrapname: _wrap_delete_GCE2d_Root\n  * fulldecl: GCE2d_Root::~GCE2d_Root()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+#include <GCE2d_MakeSegment.hxx>
+EXPORT GCE2d_MakeSegment *_wrap_new_GCE2d_MakeSegment__SWIG_0 (gp_Pnt2d *larg1, gp_Pnt2d *larg2) {
+  GCE2d_MakeSegment * lresult = (GCE2d_MakeSegment *)0 ;
+  gp_Pnt2d *arg1 = 0 ;
+  gp_Pnt2d *arg2 = 0 ;
+  GCE2d_MakeSegment *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GCE2d_MakeSegment *)new GCE2d_MakeSegment((gp_Pnt2d const &)*arg1,(gp_Pnt2d const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GCE2d_MakeSegment\n  * wrapname: _wrap_new_GCE2d_MakeSegment__SWIG_0\n  * fulldecl: GCE2d_MakeSegment::GCE2d_MakeSegment(gp_Pnt2d const &,gp_Pnt2d const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GCE2d_MakeSegment *)0;
+  }
+}
+
+
+EXPORT GCE2d_MakeSegment *_wrap_new_GCE2d_MakeSegment__SWIG_1 (gp_Pnt2d *larg1, gp_Dir2d *larg2, gp_Pnt2d *larg3) {
+  GCE2d_MakeSegment * lresult = (GCE2d_MakeSegment *)0 ;
+  gp_Pnt2d *arg1 = 0 ;
+  gp_Dir2d *arg2 = 0 ;
+  gp_Pnt2d *arg3 = 0 ;
+  GCE2d_MakeSegment *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GCE2d_MakeSegment *)new GCE2d_MakeSegment((gp_Pnt2d const &)*arg1,(gp_Dir2d const &)*arg2,(gp_Pnt2d const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GCE2d_MakeSegment\n  * wrapname: _wrap_new_GCE2d_MakeSegment__SWIG_1\n  * fulldecl: GCE2d_MakeSegment::GCE2d_MakeSegment(gp_Pnt2d const &,gp_Dir2d const &,gp_Pnt2d const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GCE2d_MakeSegment *)0;
+  }
+}
+
+
+EXPORT GCE2d_MakeSegment *_wrap_new_GCE2d_MakeSegment__SWIG_2 (gp_Lin2d *larg1, Standard_Real larg2, Standard_Real larg3) {
+  GCE2d_MakeSegment * lresult = (GCE2d_MakeSegment *)0 ;
+  gp_Lin2d *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  GCE2d_MakeSegment *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GCE2d_MakeSegment *)new GCE2d_MakeSegment((gp_Lin2d const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GCE2d_MakeSegment\n  * wrapname: _wrap_new_GCE2d_MakeSegment__SWIG_2\n  * fulldecl: GCE2d_MakeSegment::GCE2d_MakeSegment(gp_Lin2d const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GCE2d_MakeSegment *)0;
+  }
+}
+
+
+EXPORT GCE2d_MakeSegment *_wrap_new_GCE2d_MakeSegment__SWIG_3 (gp_Lin2d *larg1, gp_Pnt2d *larg2, Standard_Real larg3) {
+  GCE2d_MakeSegment * lresult = (GCE2d_MakeSegment *)0 ;
+  gp_Lin2d *arg1 = 0 ;
+  gp_Pnt2d *arg2 = 0 ;
+  Standard_Real arg3 ;
+  GCE2d_MakeSegment *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GCE2d_MakeSegment *)new GCE2d_MakeSegment((gp_Lin2d const &)*arg1,(gp_Pnt2d const &)*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GCE2d_MakeSegment\n  * wrapname: _wrap_new_GCE2d_MakeSegment__SWIG_3\n  * fulldecl: GCE2d_MakeSegment::GCE2d_MakeSegment(gp_Lin2d const &,gp_Pnt2d const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GCE2d_MakeSegment *)0;
+  }
+}
+
+
+EXPORT GCE2d_MakeSegment *_wrap_new_GCE2d_MakeSegment__SWIG_4 (gp_Lin2d *larg1, gp_Pnt2d *larg2, gp_Pnt2d *larg3) {
+  GCE2d_MakeSegment * lresult = (GCE2d_MakeSegment *)0 ;
+  gp_Lin2d *arg1 = 0 ;
+  gp_Pnt2d *arg2 = 0 ;
+  gp_Pnt2d *arg3 = 0 ;
+  GCE2d_MakeSegment *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GCE2d_MakeSegment *)new GCE2d_MakeSegment((gp_Lin2d const &)*arg1,(gp_Pnt2d const &)*arg2,(gp_Pnt2d const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GCE2d_MakeSegment\n  * wrapname: _wrap_new_GCE2d_MakeSegment__SWIG_4\n  * fulldecl: GCE2d_MakeSegment::GCE2d_MakeSegment(gp_Lin2d const &,gp_Pnt2d const &,gp_Pnt2d const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GCE2d_MakeSegment *)0;
+  }
+}
+
+
+EXPORT Handle_Geom2d_TrimmedCurve *_wrap_GCE2d_MakeSegment_Value (GCE2d_MakeSegment *larg1) {
+  Handle_Geom2d_TrimmedCurve * lresult = (Handle_Geom2d_TrimmedCurve *)0 ;
+  GCE2d_MakeSegment *arg1 = (GCE2d_MakeSegment *) 0 ;
+  Handle_Geom2d_TrimmedCurve *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_Geom2d_TrimmedCurve *) &((GCE2d_MakeSegment const *)arg1)->Value();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GCE2d_MakeSegment_Value\n  * wrapname: _wrap_GCE2d_MakeSegment_Value\n  * fulldecl: Handle_Geom2d_TrimmedCurve const & GCE2d_MakeSegment::Value() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_Geom2d_TrimmedCurve *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_GCE2d_MakeSegment (GCE2d_MakeSegment *larg1) {
+  GCE2d_MakeSegment *arg1 = (GCE2d_MakeSegment *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_GCE2d_MakeSegment\n  * wrapname: _wrap_delete_GCE2d_MakeSegment\n  * fulldecl: GCE2d_MakeSegment::~GCE2d_MakeSegment()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -33694,7 +37506,6 @@ EXPORT TopLoc_Location *_wrap_new_TopLoc_Location__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33728,7 +37539,6 @@ EXPORT TopLoc_Location *_wrap_new_TopLoc_Location__SWIG_1 (gp_Trsf *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33762,7 +37572,6 @@ EXPORT bool _wrap_TopLoc_Location_IsIdentity (TopLoc_Location *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33796,7 +37605,6 @@ EXPORT gp_Trsf *_wrap_TopLoc_Location_Transformation (TopLoc_Location *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33828,7 +37636,6 @@ EXPORT void _wrap_delete_TopLoc_Location (TopLoc_Location *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33865,7 +37672,6 @@ EXPORT void _wrap_TopExp_Vertices__SWIG_0 (TopoDS_Edge *larg1, TopoDS_Vertex *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33900,7 +37706,6 @@ EXPORT void _wrap_TopExp_Vertices__SWIG_1 (TopoDS_Edge *larg1, TopoDS_Vertex *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33937,7 +37742,6 @@ EXPORT bool _wrap_TopExp_CommonVertex (TopoDS_Edge *larg1, TopoDS_Edge *larg2, T
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -33969,7 +37773,6 @@ EXPORT void _wrap_delete_TopExp (TopExp *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34001,7 +37804,6 @@ EXPORT TopExp_Explorer *_wrap_new_TopExp_Explorer__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34039,7 +37841,6 @@ EXPORT TopExp_Explorer *_wrap_new_TopExp_Explorer__SWIG_1 (TopoDS_Shape *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34075,7 +37876,6 @@ EXPORT TopExp_Explorer *_wrap_new_TopExp_Explorer__SWIG_2 (TopoDS_Shape *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34113,7 +37913,6 @@ EXPORT void _wrap_TopExp_Explorer_Init__SWIG_0 (TopExp_Explorer *larg1, TopoDS_S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34148,7 +37947,6 @@ EXPORT void _wrap_TopExp_Explorer_Init__SWIG_1 (TopExp_Explorer *larg1, TopoDS_S
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34181,7 +37979,6 @@ EXPORT bool _wrap_TopExp_Explorer_More (TopExp_Explorer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34213,7 +38010,6 @@ EXPORT void _wrap_TopExp_Explorer_Next (TopExp_Explorer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34246,7 +38042,6 @@ EXPORT TopoDS_Shape *_wrap_TopExp_Explorer_Current (TopExp_Explorer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34278,7 +38073,6 @@ EXPORT void _wrap_delete_TopExp_Explorer (TopExp_Explorer *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34310,7 +38104,6 @@ EXPORT Bnd_Box *_wrap_new_Bnd_Box () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34344,7 +38137,6 @@ EXPORT bool _wrap_Bnd_Box_IsVoid (Bnd_Box *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34382,7 +38174,6 @@ EXPORT void _wrap_Bnd_Box_get (Bnd_Box *larg1, double *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34413,7 +38204,6 @@ EXPORT void _wrap_delete_Bnd_Box (Bnd_Box *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34447,7 +38237,6 @@ EXPORT void _wrap_BRepBndLib_Add (TopoDS_Shape *larg1, Bnd_Box *larg2) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34478,7 +38267,6 @@ EXPORT void _wrap_delete_BRepBndLib (BRepBndLib *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34514,7 +38302,6 @@ EXPORT gp_Pnt2d *_wrap_Adaptor2d_Curve2d_Value (Adaptor2d_Curve2d *larg1, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34546,7 +38333,6 @@ EXPORT void _wrap_delete_Adaptor2d_Curve2d (Adaptor2d_Curve2d *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34578,7 +38364,6 @@ EXPORT Geom2dAdaptor_Curve *_wrap_new_Geom2dAdaptor_Curve__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34612,7 +38397,6 @@ EXPORT Geom2dAdaptor_Curve *_wrap_new_Geom2dAdaptor_Curve__SWIG_1 (Handle_Geom2d
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34650,7 +38434,6 @@ EXPORT Geom2dAdaptor_Curve *_wrap_new_Geom2dAdaptor_Curve__SWIG_2 (Handle_Geom2d
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34684,7 +38467,6 @@ EXPORT void _wrap_Geom2dAdaptor_Curve_Load__SWIG_0 (Geom2dAdaptor_Curve *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34721,7 +38503,6 @@ EXPORT void _wrap_Geom2dAdaptor_Curve_Load__SWIG_1 (Geom2dAdaptor_Curve *larg1, 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34752,7 +38533,6 @@ EXPORT void _wrap_delete_Geom2dAdaptor_Curve (Geom2dAdaptor_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34788,7 +38568,6 @@ EXPORT gp_Pnt const *_wrap_Adaptor3d_Curve_Value (Adaptor3d_Curve *larg1, Standa
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34833,7 +38612,6 @@ EXPORT void _wrap_Adaptor3d_Curve_arrayValues (Adaptor3d_Curve *larg1, int larg2
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34864,7 +38642,6 @@ EXPORT void _wrap_delete_Adaptor3d_Curve (Adaptor3d_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34896,7 +38673,6 @@ EXPORT GeomAdaptor_Curve *_wrap_new_GeomAdaptor_Curve__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34930,7 +38706,6 @@ EXPORT GeomAdaptor_Curve *_wrap_new_GeomAdaptor_Curve__SWIG_1 (Handle_Geom_Curve
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -34968,7 +38743,6 @@ EXPORT GeomAdaptor_Curve *_wrap_new_GeomAdaptor_Curve__SWIG_2 (Handle_Geom_Curve
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35002,7 +38776,6 @@ EXPORT void _wrap_GeomAdaptor_Curve_Load__SWIG_0 (GeomAdaptor_Curve *larg1, Hand
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35039,7 +38812,6 @@ EXPORT void _wrap_GeomAdaptor_Curve_Load__SWIG_1 (GeomAdaptor_Curve *larg1, Hand
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35070,7 +38842,6 @@ EXPORT void _wrap_delete_GeomAdaptor_Curve (GeomAdaptor_Curve *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35102,7 +38873,6 @@ EXPORT GProp_GProps *_wrap_new_GProp_GProps () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35136,7 +38906,6 @@ EXPORT Standard_Real _wrap_GProp_GProps_Mass (GProp_GProps *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35168,7 +38937,6 @@ EXPORT void _wrap_delete_GProp_GProps (GProp_GProps *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35202,7 +38970,6 @@ EXPORT void _wrap_BRepGProp_LinearProperties (TopoDS_Shape *larg1, GProp_GProps 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35237,7 +39004,6 @@ EXPORT void _wrap_BRepGProp_VolumeProperties__SWIG_0 (TopoDS_Shape *larg1, GProp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35270,7 +39036,6 @@ EXPORT void _wrap_BRepGProp_VolumeProperties__SWIG_1 (TopoDS_Shape *larg1, GProp
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35309,7 +39074,6 @@ EXPORT Standard_Real _wrap_BRepGProp_VolumeProperties__SWIG_2 (TopoDS_Shape *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35347,7 +39111,6 @@ EXPORT Standard_Real _wrap_BRepGProp_VolumeProperties__SWIG_3 (TopoDS_Shape *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35381,7 +39144,6 @@ EXPORT void _wrap_BRepGProp_SurfaceProperties__SWIG_0 (TopoDS_Shape *larg1, GPro
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35418,7 +39180,6 @@ EXPORT Standard_Real _wrap_BRepGProp_SurfaceProperties__SWIG_1 (TopoDS_Shape *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35450,7 +39211,6 @@ EXPORT void _wrap_delete_BRepGProp (BRepGProp *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35488,7 +39248,6 @@ EXPORT ShapeAnalysis_FreeBounds *_wrap_new_ShapeAnalysis_FreeBounds__SWIG_0 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35524,7 +39283,6 @@ EXPORT ShapeAnalysis_FreeBounds *_wrap_new_ShapeAnalysis_FreeBounds__SWIG_1 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35558,7 +39316,6 @@ EXPORT ShapeAnalysis_FreeBounds *_wrap_new_ShapeAnalysis_FreeBounds__SWIG_2 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35592,7 +39349,6 @@ EXPORT TopoDS_Compound *_wrap_ShapeAnalysis_FreeBounds_GetClosedWires (ShapeAnal
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35626,7 +39382,6 @@ EXPORT TopoDS_Compound *_wrap_ShapeAnalysis_FreeBounds_GetOpenWires (ShapeAnalys
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35658,7 +39413,6 @@ EXPORT void _wrap_delete_ShapeAnalysis_FreeBounds (ShapeAnalysis_FreeBounds *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35690,7 +39444,6 @@ EXPORT GCPnts_UniformDeflection *_wrap_new_GCPnts_UniformDeflection () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35732,7 +39485,6 @@ EXPORT void _wrap_GCPnts_UniformDeflection_Initialize__SWIG_0 (GCPnts_UniformDef
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35771,7 +39523,6 @@ EXPORT void _wrap_GCPnts_UniformDeflection_Initialize__SWIG_1 (GCPnts_UniformDef
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35804,7 +39555,6 @@ EXPORT Standard_Integer _wrap_GCPnts_UniformDeflection_NbPoints (GCPnts_UniformD
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35840,7 +39590,6 @@ EXPORT Standard_Real _wrap_GCPnts_UniformDeflection_Parameter (GCPnts_UniformDef
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35872,7 +39621,6 @@ EXPORT void _wrap_delete_GCPnts_UniformDeflection (GCPnts_UniformDeflection *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35904,7 +39652,6 @@ EXPORT void _wrap_BRepMesh_DiscretRoot_Perform (BRepMesh_DiscretRoot *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35935,7 +39682,6 @@ EXPORT void _wrap_delete_BRepMesh_DiscretRoot (BRepMesh_DiscretRoot *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -35967,7 +39713,6 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_0 () {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36007,7 +39752,6 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_1 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36045,7 +39789,6 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_2 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36081,7 +39824,6 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_3 (Top
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36113,7 +39855,6 @@ EXPORT void _wrap_BRepMesh_IncrementalMesh_Perform (BRepMesh_IncrementalMesh *la
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36146,7 +39887,6 @@ EXPORT bool _wrap_BRepMesh_IncrementalMesh_IsModified (BRepMesh_IncrementalMesh 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36178,7 +39918,6 @@ EXPORT void _wrap_delete_BRepMesh_IncrementalMesh (BRepMesh_IncrementalMesh *lar
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36214,7 +39953,6 @@ EXPORT GeomAPI_ProjectPointOnSurf *_wrap_new_GeomAPI_ProjectPointOnSurf (gp_Pnt 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36250,7 +39988,6 @@ EXPORT void _wrap_GeomAPI_ProjectPointOnSurf_Init (GeomAPI_ProjectPointOnSurf *l
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36283,7 +40020,6 @@ EXPORT Standard_Integer _wrap_GeomAPI_ProjectPointOnSurf_NbPoints (GeomAPI_Proje
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36317,7 +40053,6 @@ EXPORT Quantity_Length _wrap_GeomAPI_ProjectPointOnSurf_LowerDistance (GeomAPI_P
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36353,7 +40088,6 @@ EXPORT gp_Pnt const *_wrap_GeomAPI_ProjectPointOnSurf_Point (GeomAPI_ProjectPoin
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36389,7 +40123,6 @@ EXPORT void _wrap_GeomAPI_ProjectPointOnSurf_LowerDistanceParameters (GeomAPI_Pr
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36426,7 +40159,6 @@ EXPORT void _wrap_GeomAPI_ProjectPointOnSurf_Parameters (GeomAPI_ProjectPointOnS
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36459,7 +40191,6 @@ EXPORT gp_Pnt *_wrap_GeomAPI_ProjectPointOnSurf_NearestPoint (GeomAPI_ProjectPoi
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36491,7 +40222,6 @@ EXPORT void _wrap_delete_GeomAPI_ProjectPointOnSurf (GeomAPI_ProjectPointOnSurf 
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36525,7 +40255,6 @@ EXPORT bool _wrap_BRepAlgo_IsValid (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36559,7 +40288,6 @@ EXPORT bool _wrap_BRepAlgo_IsTopologicallyValid (TopoDS_Shape *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36591,7 +40319,6 @@ EXPORT void _wrap_delete_BRepAlgo (BRepAlgo *larg1) {
       }
       catch(Standard_Failure const& error)
       {
-        cout << "FOO!";
         char *error_name = (char*) error.DynamicType()->Name();
         char *error_message = (char*) error.GetMessageString();
         std::string message;
@@ -36608,4 +40335,92 @@ EXPORT void _wrap_delete_BRepAlgo (BRepAlgo *larg1) {
   }
 }
 
+
+
+EXPORT TopoDS_Shape *_wrap_TopoDS_Shape_copy_reference(TopoDS_Shape *self){
+	  TopoDS_Shape *copy = new TopoDS_Shape();
+          *copy=*self;
+	  return copy;
+	}
+#include <TopoDS.hxx>
+#include <TopTools_ListOfShape.hxx>
+#include <Standard_Handle.hxx>
+#include <TopExp_Explorer.hxx>
+#include <Geom_Surface.hxx>
+#include <Geom_Plane.hxx>
+#include <BRep_Tool.hxx>
+EXPORT TopTools_ListOfShape * _wrap_get_face_to_remove(TopoDS_Shape *sPtr) {
+	TopExp_Explorer explorer;
+	TopoDS_Face face;
+	Handle(Geom_Surface) surface;
+	Standard_Real zMax = -1.0;
+	TopoDS_Face *faceToRemove = new TopoDS_Face();
+
+	for (TopExp_Explorer aFaceExplorer(*sPtr, TopAbs_FACE); aFaceExplorer.More(); aFaceExplorer.Next()) {
+		TopoDS_Face face = TopoDS::Face(aFaceExplorer.Current());
+		// Check if <aFace> is the top face of the bottle's neck 
+		Handle(Geom_Surface) surface = BRep_Tool::Surface(face);
+		if (surface->DynamicType() == STANDARD_TYPE(Geom_Plane)) {
+			Handle(Geom_Plane) aPlane = Handle(Geom_Plane)::DownCast(surface);
+			gp_Pnt aPnt = aPlane->Location();
+			Standard_Real aZ = aPnt.Z();
+			if (aZ > zMax) {
+				zMax = aZ;
+				*faceToRemove = face;
+			}
+		}
+	}
+	TopTools_ListOfShape * facesToRemovePtr = new TopTools_ListOfShape();
+	facesToRemovePtr->Append(*faceToRemove);
+	return facesToRemovePtr;
+}
+
+EXPORT TopoDS_Shape * _wrap_create_threads(TopoDS_Shape *myBody, gp_Ax2 *neckAx2, Standard_Real myNeckRadius, Standard_Real myNeckHeight) {
+	// Threading : Create Surfaces
+	Handle(Geom_CylindricalSurface) aCyl1 = new Geom_CylindricalSurface(*neckAx2, myNeckRadius * 0.99);
+	Handle(Geom_CylindricalSurface) aCyl2 = new Geom_CylindricalSurface(*neckAx2, myNeckRadius * 1.05);
+
+	// Threading : Define 2D Curves
+	gp_Pnt2d aPnt(2. * M_PI, myNeckHeight / 2.);
+	gp_Dir2d aDir(2. * M_PI, myNeckHeight / 4.);
+	gp_Ax2d anAx2d(aPnt, aDir);
+
+	Standard_Real aMajor = 2. * M_PI;
+	Standard_Real aMinor = myNeckHeight / 10;
+
+	Handle(Geom2d_Ellipse) anEllipse1 = new Geom2d_Ellipse(anAx2d, aMajor, aMinor);
+	Handle(Geom2d_Ellipse) anEllipse2 = new Geom2d_Ellipse(anAx2d, aMajor, aMinor / 4);
+	Handle(Geom2d_TrimmedCurve) anArc1 = new Geom2d_TrimmedCurve(anEllipse1, 0, M_PI);
+	Handle(Geom2d_TrimmedCurve) anArc2 = new Geom2d_TrimmedCurve(anEllipse2, 0, M_PI);
+	gp_Pnt2d anEllipsePnt1 = anEllipse1->Value(0);
+	gp_Pnt2d anEllipsePnt2 = anEllipse1->Value(M_PI);
+
+	Handle(Geom2d_TrimmedCurve) aSegment = GCE2d_MakeSegment(anEllipsePnt1, anEllipsePnt2);
+	// Threading : Build Edges and Wires
+	TopoDS_Edge anEdge1OnSurf1 = BRepBuilderAPI_MakeEdge(anArc1, aCyl1);
+	TopoDS_Edge anEdge2OnSurf1 = BRepBuilderAPI_MakeEdge(aSegment, aCyl1);
+	TopoDS_Edge anEdge1OnSurf2 = BRepBuilderAPI_MakeEdge(anArc2, aCyl2);
+	TopoDS_Edge anEdge2OnSurf2 = BRepBuilderAPI_MakeEdge(aSegment, aCyl2);
+	TopoDS_Wire threadingWire1 = BRepBuilderAPI_MakeWire(anEdge1OnSurf1, anEdge2OnSurf1);
+	TopoDS_Wire threadingWire2 = BRepBuilderAPI_MakeWire(anEdge1OnSurf2, anEdge2OnSurf2);
+	BRepLib::BuildCurves3d(threadingWire1);
+	BRepLib::BuildCurves3d(threadingWire2);
+
+	// Create Threading 
+	BRepOffsetAPI_ThruSections aTool(Standard_True);
+	aTool.AddWire(threadingWire1);
+	aTool.AddWire(threadingWire2);
+	aTool.CheckCompatibility(Standard_False);
+
+	TopoDS_Shape myThreading = aTool.Shape();
+
+	// Building the Resulting Compound 
+	TopoDS_Compound *aRes = new TopoDS_Compound();
+	BRep_Builder aBuilder;
+	aBuilder.MakeCompound(*aRes);
+	aBuilder.Add(*aRes, *myBody);
+	aBuilder.Add(*aRes, myThreading);
+
+	return aRes;
+}
 

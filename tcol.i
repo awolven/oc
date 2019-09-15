@@ -63,6 +63,9 @@ class TColStd_Array1OfInteger {
  public:
   TColStd_Array1OfInteger(const Standard_Integer theLower, const Standard_Integer theUpper);
   void SetValue(const Standard_Integer theIndex, const Standard_Integer& Value);
+    const Standard_Integer Value(const Standard_Integer Index);
+    Standard_Integer Lower (void) const;
+    Standard_Integer Upper (void) const;
 };
 %{
 #include <TColgp_Array1OfPnt.hxx>

@@ -23,7 +23,7 @@ class BRep_Tool
 	static Standard_Real Tolerance(const TopoDS_Edge& E) ;
 	static Standard_Real Tolerance(const TopoDS_Vertex& V) ;
 	static Standard_Boolean IsClosed(const TopoDS_Shape &S) ;
-	
+	static const Handle_Poly_Triangulation& Triangulation (const TopoDS_Face& F, TopLoc_Location& L);
 /*	static Handle_Geom_Curve Curve(const TopoDS_Edge& E, Standard_Real& First,Standard_Real& Last) ;
 	static Handle_Geom_Surface Surface(const TopoDS_Face& F) ;
 	static Handle_Geom2d_Curve CurveOnSurface(const TopoDS_Edge& E, const TopoDS_Face& F,Standard_Real& First,Standard_Real& Last) ;
@@ -34,6 +34,7 @@ class BRep_Tool
 // Handle because Java do the memory managment for us.
 %extend BRep_Tool
 {
+  /*
 	static Poly_Triangulation * triangulation(const TopoDS_Face& F,TopLoc_Location& L)
 	{
 		Handle_Poly_Triangulation hgc=BRep_Tool::Triangulation(F,L);
@@ -42,6 +43,15 @@ class BRep_Tool
 		else
 		  return (Poly_Triangulation *)hgc.get();
 	}
+  */
+	static Poly_Polygon3D *	Polygon3D (const TopoDS_Edge &E, TopLoc_Location &L)
+	{
+	  Handle_Poly_Polygon3D hgc=BRep_Tool::Polygon3D(E,L);
+	  if (hgc.IsNull())
+	    return NULL;
+	  else
+	    return (Poly_Polygon3D *)hgc.get();
+	}							 
 
 	static void range(const TopoDS_Edge& E, double range[2])
 	{
@@ -77,6 +87,16 @@ class BRep_Tool
 		else
 			return hgc;
 	}
+
+	static Poly_PolygonOnTriangulation * PolygonOnTriangulation (const TopoDS_Edge &E, const Handle_Poly_Triangulation &T, const TopLoc_Location &L)
+	{
+	  Handle_Poly_PolygonOnTriangulation hgc=BRep_Tool::PolygonOnTriangulation(E, T, L);
+	  if (hgc.IsNull())
+	    return (Poly_PolygonOnTriangulation *)NULL;
+	  else
+	    return (Poly_PolygonOnTriangulation *)hgc.get();
+	}
+	
 };
 
 class BRep_Builder: public TopoDS_Builder

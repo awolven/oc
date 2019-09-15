@@ -30,4 +30,29 @@ class TopTools_ListOfShape {
  public:
   TopTools_ListOfShape();
   TopoDS_Shape& Append(const TopoDS_Shape& item);
+  TopoDS_Shape& Prepend(const TopoDS_Shape& item);
+};
+%{
+  #include <TopTools_MapOfShape.hxx>
+  %}
+class TopTools_MapOfShape {
+ public:
+  TopTools_MapOfShape();
+  Standard_Boolean Add(const TopoDS_Shape &aKey);
+  Standard_Boolean Contains(const TopoDS_Shape &aKey) const;
+};
+%{
+#include <TCollection_BasicMapIterator.hxx>
+#include <TopTools_MapIteratorOfMapOfShape.hxx>
+  %}
+class TCollection_BasicMapIterator {
+ public:
+  Standard_Boolean More() const;
+  void Next();
+};
+
+class TopTools_MapIteratorOfMapOfShape : public TCollection_BasicMapIterator {
+ public:
+  TopTools_MapIteratorOfMapOfShape (const TopTools_MapOfShape &aMap);
+  const TopoDS_Shape & 	Key () const;
 };

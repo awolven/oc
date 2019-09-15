@@ -59,4 +59,36 @@ class BRepOffsetAPI_MakeThickSolid  : public BRepOffsetAPI_MakeOffsetShape
 			       const Standard_Boolean SelfInter = Standard_False, 
 			       const GeomAbs_JoinType Join = GeomAbs_Arc,
 			       const Standard_Boolean RemoveIntEdges = Standard_False);
+  virtual void Build();
+  
+  //! Returns the list  of shapes modified from the shape
+  //! <S>.
+  virtual const TopTools_ListOfShape& Modified (const TopoDS_Shape& S);
+};
+
+%{
+#include <BRepOffsetAPI_ThruSections.hxx>
+  %}
+
+class BRepOffsetAPI_ThruSections  : public BRepBuilderAPI_MakeShape
+{
+ public:
+  BRepOffsetAPI_ThruSections(const Standard_Boolean isSolid = Standard_False, const Standard_Boolean ruled = Standard_False, const Standard_Real pres3d = 1.0e-06);
+  void Init (const Standard_Boolean isSolid = Standard_False, const Standard_Boolean ruled = Standard_False, const Standard_Real pres3d = 1.0e-06);
+  void AddWire (const TopoDS_Wire& wire);
+  void AddVertex (const TopoDS_Vertex& aVertex);
+  void CheckCompatibility (const Standard_Boolean check = Standard_True);
+  void SetSmoothing (const Standard_Boolean UseSmoothing);
+  void SetParType (const Approx_ParametrizationType ParType);
+  void SetContinuity (const GeomAbs_Shape C);
+  void SetCriteriumWeight (const Standard_Real W1, const Standard_Real W2, const Standard_Real W3);
+  void SetMaxDegree (const Standard_Integer MaxDeg);
+  Approx_ParametrizationType ParType() const;
+  GeomAbs_Shape Continuity() const;
+  Standard_Integer MaxDegree() const;
+  Standard_Boolean UseSmoothing() const;
+  void CriteriumWeight (Standard_Real& W1, Standard_Real& W2, Standard_Real& W3) const;
+  const TopoDS_Shape& FirstShape() const;
+  const TopoDS_Shape& LastShape() const;
+  TopoDS_Shape GeneratedFace (const TopoDS_Shape& Edge) const;
 };

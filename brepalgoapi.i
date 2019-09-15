@@ -1,5 +1,6 @@
 
 %{
+#include <BRepAlgoAPI_Algo.hxx>
 #include <BRepAlgoAPI_BooleanOperation.hxx>
 #include <BRepAlgoAPI_Fuse.hxx>
 #include <BRepAlgoAPI_Common.hxx>
@@ -43,3 +44,9 @@ class BRepAlgoAPI_Section: public BRepAlgoAPI_BooleanOperation
 	BRepAlgoAPI_Section(const TopoDS_Shape& S1,const TopoDS_Shape& S2);
 };
 
+%nodefaultdtor BRepAlgoAPI_Algo;
+class BRepAlgoAPI_Algo  : public BRepBuilderAPI_MakeShape
+{
+ public:
+  const TopoDS_Shape& Shape();
+};

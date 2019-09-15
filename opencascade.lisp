@@ -134,6 +134,12 @@
 
 (defclass TopoDS_Compound (TopoDS_Shape) ())
 
+(defmethod initialize-instance :after ((object TopoDS_Compound) &rest initargs)
+  (let ((pointer (_wrap_new_TopoDS_Compound)))
+    (setf (ff-pointer object) pointer)
+    (ff-pointer-finalize object #'_wrap_delete_TopoDS_Compound)
+    (values)))
+
 (defclass TopoDS_Compsolid (TopoDS_Shape) ())
 
 (defmacro with-topods-shape (&body ff-call)
@@ -154,10 +160,6 @@
 	  (shape (when shape-class (allocate-instance shape-class))))
      (when shape-class (setf (ff-pointer shape) ff-shape))
      shape))
-
-
-
-
 
 (defclass Geom_BoundedSurface (Geom_Surface) ())
 
@@ -184,10 +186,12 @@
 (defclass Geom_CylindricalSurface (Geom_ElementarySurface) ())
 
 (defmethod initialize-instance :after ((object Geom_CylindricalSurface) &rest initargs
-				       &key A3 Radius C &allow-other-keys)
+				       &key A3 A2 Radius C &allow-other-keys)
   (let ((pointer
 	 (cond ((and A3 Radius)
-		(_wrap_new_Geom_CylindricalSurface (ptr A3) (coerce Radius 'double-float)))
+		(_wrap_new_Geom_CylindricalSurface__SWIG_0 (ptr A3) (coerce Radius 'double-float)))
+	       ((and A2 Radius)
+		(_wrap_new_Geom_CylindricalSurface__SWIG_1 (ptr A2) (coerce Radius 'double-float)))
 	       (C (error "unimplemented constructor"))
 	       (t (error "Invalid arguments to constructor: ~S" initargs)))))
     (setf (ff-pointer object) pointer) ;; do we need to finalize objects using handle?
@@ -431,6 +435,7 @@
     (setf (ff-pointer wire) (_wrap_BrepBuilderAPI_MakeWire_Wire (ff-pointer self)))
     wire))
 
+#+NIL
 (defmethod initialize-instance :after ((obj BRepBuilderAPI_MakeEdge) &rest initargs
 				       &key L S V1 V2 POINT1 POINT2 param1 param2 &allow-other-keys)
   (declare (ignore initargs))
@@ -487,7 +492,71 @@
   
 	      (t (error "Invalid arguments to make-instance of BRepBuilderAPI_MakeEdge (2)."))))
   (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_MakeEdge)
-  (values))
+	       (values))
+
+
+(defmethod initialize-instance :after ((obj BRepBuilderAPI_MakeEdge) &rest initargs
+				       &key L S V1 V2 Pnt1 Pnt2 param1 param2 &allow-other-keys)
+  (let ((pointer
+	 (cond ((and L S V1 V2 param1 param2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_33 (ff-pointer L) (ff-pointer S) (ff-pointer V1) (ff-pointer V2) (coerce param1 'double-float) (coerce param2 'double-float)))
+	       ((and L S Pnt1 Pnt2 param1 param2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_32 (ff-pointer L) (ff-pointer S) (ptr Pnt1) (ptr Pnt2) (coerce param1 'double-float) (coerce param2 'double-float)))
+	       ((and L S V1 V2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_31 (ff-pointer L) (ff-pointer S) (ff-pointer V1) (ff-pointer V2)))
+	       ((and L S param1 param2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_30 (ff-pointer L) (ff-pointer S) (coerce param1 'double-float) (coerce param2 'double-float)))
+	       ((and L S)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_29 (ff-pointer L) (ff-pointer S)))
+	       ((and L V1 V2 param1 param2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_28 (ff-pointer L) (ff-pointer V1) (ff-pointer V2) (coerce param1 'double-float) (coerce param2 'double-float)))
+	       ((and L Pnt1 Pnt2 param1 param2)
+		(typecase L
+		  (Geom2d_Curve (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_27 (ff-pointer L) (ptr Pnt1) (ptr Pnt2) (coerce param1 'double-float) (coerce param2 'double-float)))
+		  (t (error "Invalid arguments to make-instance of BRepBuilderAPI_MakeEdge (1): ~S." initargs))))
+	       ((and L V1 V2)
+		(typecase L
+		  (Geom_Curve (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_26 (ff-pointer L) (ff-pointer V1) (ff-pointer V2)))
+		  (gp:parab (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_22 (ptr L) (ff-pointer V1) (ff-pointer V2)))
+		  (gp:hypr (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_18 (ptr L) (ff-pointer V1) (ff-pointer V2)))
+		  (gp:elips (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_14 (ptr L) (ff-pointer V1) (ff-pointer V2)))
+		  (gp:circ (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_10 (ptr L) (ff-pointer V1) (ff-pointer V2)))
+		  (gp:lin (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_6 (ptr L) (ff-pointer V1) (ff-pointer V2)))
+		  (t (error "Invalid arguments to make-instance of BRepBuilderAPI_MakeEdge (2): ~S." initargs))))			    
+	       ((and L Pnt1 Pnt2)
+		(typecase L
+		  (Geom_Curve (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_25 (ff-pointer L) (ptr Pnt1) (ptr Pnt2)))
+		  (gp:parab (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_21 (ptr L) (ptr Pnt1) (ptr Pnt2)))
+		  (gp:hypr (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_17 (ptr L) (ptr Pnt1) (ptr Pnt2)))
+		  (gp:elips (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_13 (ptr L) (ptr Pnt1) (ptr Pnt2)))
+		  (gp:circ (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_9 (ptr L) (ptr Pnt1) (ptr Pnt2)))
+		  (gp:lin (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_5 (ptr L) (ptr Pnt1) (ptr Pnt2)))
+		  (t (error "Invalid arguments to make-instance of BRepBuilderAPI_MakeEdge (3): ~S." initargs))))
+	       ((and L param1 param2)
+		(typecase L
+		  (Geom_Curve (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_24 (ff-pointer L) (coerce param1 'double-float) (coerce param2 'double-float)))
+		  (gp:parab (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_20 (ptr L) (coerce param1 'double-float) (coerce param2 'double-float)))
+		  (gp:hypr (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_16 (ptr L) (coerce param1 'double-float) (coerce param2 'double-float)))
+		  (gp:elips (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_12 (ptr L) (coerce param1 'double-float) (coerce param2 'double-float)))
+		  (gp:circ (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_8 (ptr L) (coerce param1 'double-float) (coerce param2 'double-float)))
+		  (gp:lin (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_4 (ptr L) (coerce param1 'double-float) (coerce param2 'double-float)))
+		  (t (error "Invalid arguments to make-instance of BRepBuilderAPI_MakeEdge (4): ~S." initargs))))
+	       ((typep L 'Geom_Curve) (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_23 (ff-pointer L)))
+	       ((typep L 'gp:parab) (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_19 (ptr L)))
+	       ((typep L 'gp:hypr) (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_15 (ptr L)))
+	       ((typep L 'gp:elips) (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_11 (ptr L)))
+	       ((typep L 'gp:circ) (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_7 (ptr L)))
+	       ((typep L 'gp:lin) (_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_3 (ptr L)))
+	       ((and V1 V2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_1 (ff-pointer V1) (ff-pointer V2)))
+	       ((and Pnt1 Pnt2)
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_2 (ptr Pnt1) (ptr Pnt2)))
+	       ((null (or L S V1 V2 param1 param2))
+		(_wrap_new_BRepBuilderAPI_MakeEdge__SWIG_0))
+	       (t (error "Invalid arguments to make-instance of BRepBuilderAPI_MakeEdge (5): ~S." initargs)))))
+    (setf (ff-pointer obj) pointer)
+    (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_MakeEdge)
+    (values)))
 
 (defmethod initialize-instance :after ((obj BRepBuilderAPI_MakeWire) &rest initargs
 				       &key E E1 E2 E3 E4 W &allow-other-keys)
@@ -539,8 +608,11 @@
   (if (zerop (_wrap_TopExp_Explorer_more (ff-pointer self)))
       nil t))  
 
+(cffi:defcfun ("_wrap_TopoDS_Shape_copy_reference" oc::_wrap_TopoDS_Shape_copy_reference) :pointer
+  (ptr :pointer))
+
 (defmethod current ((self TopExp_Explorer))
-  (with-topods-shape (_wrap_TopExp_Explorer_Current (ff-pointer self))))
+  (with-topods-shape (_wrap_TopoDS_Shape_copy_reference (_wrap_TopExp_Explorer_Current (ff-pointer self)))))
 
 (defmethod next ((self TopExp_Explorer))
   (_wrap_TopExp_Explorer_Next (ff-pointer self)))
@@ -616,6 +688,7 @@
 
 (defclass TColgp_Array1OfPnt (ff-pointer-mixin) ())
 
+
 (defmethod get-nb-nodes ((self Poly_Triangulation))
   (_wrap_Poly_Triangulation_nbNodes (ff-pointer self)))
 
@@ -662,7 +735,10 @@
   (values))
 
 (defmethod list-append ((self TopTools_ListOfShape) (item TopoDS_Shape))
-  (setf (ff-pointer self) (_wrap_TopTools_ListOfShape_Append (ff-pointer self) (ff-pointer item)))
+  #+NIL
+  (setf (ff-pointer self) (_wrap_TopTools_ListOfShape_Append (ff-pointer self) (ff-pointer item))
+	)
+  (_wrap_TopTools_ListOfShape_Append (ff-pointer self) (ff-pointer item))
   (values))
 
 (defclass GC_MakeArcOfCircle (ff-pointer-mixin) ())
@@ -853,6 +929,9 @@
 
 (defclass BRepAlgoAPI_Algo (BRepBuilderAPI_MakeShape) ())
 
+(defmethod shape ((self BRepAlgoAPI_Algo))
+  (with-topods-shape (_wrap_BRepAlgoAPI_Algo_shape (ff-pointer self))))
+
 (defclass BRepAlgoAPI_BuilderAlgo  (BRepAlgoAPI_Algo) ())
 
 (defclass BRepAlgoAPI_BooleanOperation (BRepAlgoAPI_BuilderAlgo) ())
@@ -913,3 +992,160 @@
     (setf (ff-pointer object) pointer)
     (values)))
 		      
+(defclass Poly_Polygon3D (ff-pointer-mixin) ())
+
+(defmethod get-poly-polygon-3d ((edge TopoDS_EDGE) p-top-loc)
+  (let ((pointer (_wrap_BRep_Tool_Polygon3D (ff-pointer edge) (_wrap_new_TopLoc_Location__SWIG_0))))
+    (if (null-pointer-p pointer)
+	nil
+	(let ((poly-polygon-3d (allocate-instance (load-time-value (find-class 'Poly_Polygon3D)))))
+	  (setf (ff-pointer poly-polygon-3d) pointer)
+	  poly-polygon-3d))))
+
+(defmethod get-nodes ((self Poly_Polygon3D))
+  (let ((nodes (allocate-instance (load-time-value (find-class 'TColgp_Array1OfPnt)))))
+    (setf (ff-pointer nodes) (_wrap_Poly_Polygon3D_Nodes (ff-pointer self)))
+    nodes))
+
+(defmethod get-nb-nodes ((self Poly_Polygon3D))
+  (_wrap_Poly_Polygon3D_NbNodes (ff-pointer self)))
+
+(defclass Poly_PolygonOnTriangulation (ff-pointer-mixin) ())
+
+(defclass TColStd_Array1OfInteger (ff-pointer-mixin) ())
+
+(defmethod get-value ((self TColStd_Array1OfInteger) (index integer))
+  (_wrap_TColStd_Array1OfInteger_value (ff-pointer self) index))
+
+(defmethod get-lower ((self TColStd_Array1OfInteger))
+  (_wrap_TColStd_Array1OfInteger_Lower (ff-pointer self)))
+
+(defmethod get-upper ((self TColStd_Array1OfInteger))
+  (_wrap_TColStd_Array1OfInteger_Upper (ff-pointer self)))
+
+(defmethod get-polygon-on-triangulation ((edge TopoDS_Edge) (triangulation Poly_Triangulation) p-top-loc)
+  (let ((poly-polygon-on-triangulation (allocate-instance (find-class 'Poly_PolygonOnTriangulation))))
+    (setf (ff-pointer poly-polygon-on-triangulation) (_wrap_BRep_Tool_PolygonOnTriangulation (ff-pointer edge) (ff-pointer triangulation) p-top-loc))
+    poly-polygon-on-triangulation))
+
+(defmethod get-nodes ((self Poly_PolygonOnTriangulation))
+  (let ((nodes (allocate-instance (load-time-value (find-class 'TColStd_Array1OfInteger)))))
+    (setf (ff-pointer nodes) (_wrap_Poly_PolygonOnTriangulation_Nodes (ff-pointer self)))
+    nodes))
+
+(defclass Geom2d_BoundedCurve (Geom2d_Curve) ())
+
+(defclass Geom2d_TrimmedCurve (Geom2d_BoundedCurve) ())
+
+(defmethod initialize-instance :after ((object Geom2d_TrimmedCurve) &rest initargs
+				       &key C U1 U2 Sense &allow-other-keys)
+  (let ((pointer
+	 (cond ((and C U1 U2 Sense)
+		(_wrap_new_Geom2d_TrimmedCurve__SWIG_0 (ff-pointer C) (coerce U1 'double-float)
+						       (coerce U2 'double-float)
+						       (if Sense (if (zerop Sense) 0 1) 0)))
+	       ((and C U1 U2)
+		(_wrap_new_Geom2d_TrimmedCurve__SWIG_1 (ff-pointer C) (coerce U1 'double-float)
+						       (coerce U2 'double-float)))
+	       (t (error "Invalid arguments to constructor ~S" initargs)))))
+    (setf (ff-pointer object) pointer)
+    (values)))
+
+(defmethod get-value-at ((curve Geom2d_Curve) u)
+  (gp::make-pnt2d :ptr (_wrap_Geom2d_Curve_getValueAt (ff-pointer curve) (coerce u 'double-float))))
+
+(defclass GCE2d_Root (ff-pointer-mixin) ())
+(defclass GCE2d_MakeSegment (GCE2d_Root) ())
+
+(defmethod initialize-instance :after ((object GCE2d_MakeSegment) &rest initargs
+				       &key P1 P2 V Line U1 U2 Point ULast &allow-other-keys)
+  (let ((pointer
+	 (cond ((and Line P1 P2)
+		(_wrap_new_GCE2d_MakeSegment__SWIG_4 (ff-pointer Line) (ptr P1) (ptr P2)))
+	       ((and Line Point ULast)
+		(_wrap_new_GCE2d_MakeSegment__SWIG_3 (ff-pointer Line) (ptr Point) (coerce ULast 'double-float)))
+	       ((and Line U1 U2)
+		(_wrap_new_GCE2d_MakeSegment__SWIG_2 (ff-pointer Line) (coerce U1 'double-float) (coerce U2 'double-float)))
+	       ((and P1 V P2)
+		(_wrap_new_GCE2d_MakeSegment__SWIG_1 (ptr P1) (ptr V) (ptr P2)))
+	       ((and P1 P2)
+		(_wrap_new_GCE2d_MakeSegment__SWIG_0 (ptr P1) (ptr P2)))
+	       (t (error "Invalid arguments to constructor ~S" initargs)))))
+    (setf (ff-pointer object) pointer)
+    (ff-pointer-finalize object #'_wrap_delete_GCE2d_MakeSegment)
+    (values)))
+
+(defmethod value ((self GCE2d_MakeSegment))
+  (let ((trimmed-curve (allocate-instance (find-class 'Geom2d_TrimmedCurve))))
+    (setf (ff-pointer trimmed-curve) (_wrap_GCE2d_MakeSegment_Value (ff-pointer self)))
+    trimmed-curve))
+
+(defmethod build-curves-3d ((s TopoDS_Shape) &optional tolerance continuity max-degree max-segment)
+  (if (eq 0 (cond ((and tolerance continuity max-degree max-segment)
+		   (_wrap_BRepLib_BuildCurves3d__SWIG_0 (ff-pointer s) tolerance continuity max-degree max-segment))
+		  ((and tolerance continuity max-degree)
+		   (_wrap_BRepLib_BuildCurves3d__SWIG_1 (ff-pointer s) tolerance continuity max-degree))
+		  ((and tolerance continuity)
+		   (_wrap_BRepLib_BuildCurves3d__SWIG_2 (ff-pointer s) tolerance continuity))
+		  (tolerance
+		   (_wrap_BRepLib_BuildCurves3d__SWIG_3 (ff-pointer s) tolerance))
+		  (t (_wrap_BRepLib_BuildCurves3d__SWIG_4 (ff-pointer s)))))
+      nil t))
+					       
+(defclass BRepOffsetAPI_ThruSections (BRepBuilderAPI_MakeShape) ())
+
+(defmethod initialize-instance :after ((object BRepOffsetAPI_ThruSections) &rest initargs
+				       &key (isSolid nil isSolid-present-p) (ruled nil ruled-present-p) pres3d &allow-other-keys)
+  (let ((pointer
+	 (cond ((and isSolid-present-p ruled-present-p pres3d)
+		(_wrap_new_BRepOffsetAPI_ThruSections__SWIG_0 (if isSolid (if (eq 0 isSolid) 0 1) 0) (if ruled (if (eq 0 ruled) 0 1) 0) pres3d))
+	       ((and isSolid-present-p ruled-present-p)
+		(_wrap_new_BRepOffsetAPI_ThruSections__SWIG_1 (if isSolid (if (eq 0 isSolid) 0 1) 0) (if ruled (if (eq 0 ruled) 0 1) 0)))
+	       ((and isSolid-present-p)
+		(_wrap_new_BRepOffsetAPI_ThruSections__SWIG_2 (if isSolid (if (eq 0 isSolid) 0 1) 0)))
+	       ((and (not isSolid-present-p) (not ruled-present-p) (not pres3d))
+		(_wrap_new_BRepOffsetAPI_ThruSections__SWIG_3))
+	       (t (error "Invalid arguments to constructor ~S" initargs)))))
+    (setf (ff-pointer object) pointer)
+    (ff-pointer-finalize object #'_wrap_delete_BRepOffsetAPI_ThruSections)
+    (values)))
+
+(defmethod get-location ((self Geom_ElementarySurface))
+  (gp::make-pnt :ptr (_wrap_Geom_ElementarySurface_getLocation (ff-pointer self))))
+
+(defclass TopTools_MapOfShape (ff-pointer-mixin)
+  ())
+
+(defmethod initialize-instance :after ((instance TopTools_MapOfShape) &rest initargs &key &allow-other-keys)
+  (declare (ignore initargs))
+  (setf (ff-pointer instance) (_wrap_new_TopTools_MapOfShape))
+  (values))
+
+(defmethod add ((map TopTools_MapOfShape) (akey TopoDS_Shape))
+  (if (zerop (_wrap_TopTools_MapOfShape_Add (ff-pointer map) (ff-pointer akey)))
+      nil t))
+
+(defmethod contains ((map TopTools_MapOfShape) (akey TopoDS_Shape))
+  (if (zerop (_wrap_TopTools_MapOfShape_Contains (ff-pointer map) (ff-pointer akey)))
+      nil t))	     
+
+(defclass TCollection_BasicMapIterator ()
+  ())
+
+(defmethod more-p ((collection TCollection_BasicMapIterator))
+  (if (zerop (_wrap_TCollection_BasicMapIterator_More (ff-pointer collection)))
+      nil t))
+
+(defmethod next ((collection TCollection_BasicMapIterator))
+  (_wrap_TCollection_BasicMapIterator_Next collection))
+
+(defclass TopTools_MapIteratorOfMapOfShape (TCollection_BasicMapIterator ff-pointer-mixin)
+  ())
+
+(defmethod initialize-instance :after ((instance TopTools_MapIteratorOfMapOfShape) &rest initargs &key aMap &allow-other-keys)
+  (declare (ignore initargs))
+  (setf (ff-pointer instance) (_wrap_new_TopTools_MapIteratorOfMapOfShape aMap))
+  (values))
+
+(defmethod map-of-shape-key ((map-iterator TopTools_MapIteratorOfMapOfShape))
+  (with-topods-shape (_wrap_TopTools_MapIteratorOfMapOfShape_Key (ff-pointer map-iterator))))

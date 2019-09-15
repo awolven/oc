@@ -1,4 +1,51 @@
 (in-package :gp)
+
+#|
+  Name                        defcstruct macro-accessors defstruct constructor accessors methods constructor-wrapped methods-wrapped
+---------------------------------------------------------------------------------------------------------------------------------------
+  gp_Ax1                      X          X               X         X
+  gp_Ax22d                    X          X               X         X
+  gp_Ax2d                     X          X               X         X
+  gp_Ax2                      X          X               X         X
+  gp_Ax3                      X          X               X         X
+  gp_Circ2d                   X          X               X         X
+  gp_Circ                     X          X               X         X
+  gp_Cone                     X          X               X
+  gp_Cylinder                 X          X               X
+  gp_Dir2d                    X                          X         X
+  gp_Dir                      X                          X
+  gp_Elips2d
+  gp_Elips                    X          X
+  gp_EulerSequence
+  gp_GTrsf2d
+  gp_GTrsf
+  gp
+  gp_Hypr2d
+  gp_Hypr
+  gp_Lin2d
+  gp_Lin                      X          X               X         X
+  gp_Mat2d
+  gp_Mat                      X          X               X
+  gp_Parab2d
+  gp_Parab
+  gp_Pln                      X          X               X         X
+  gp_Pnt2d                    X                          X         X
+  gp_Pnt                      X                          X         X
+  gp_Quaternion
+  gp_QuaternionNLerp
+  gp_QuaternionSLerp
+  gp_Sphere
+  gp_Torus
+  gp_Trsf2d
+  gp_TrsfForm
+  gp_Trsf                     X                          X
+  gp_TrsfNLerp
+  gp_Vec2d                    X                          X         X
+  gp_Vec                      X                          X         X
+  gp_VectorWithNullMagnitude
+  gp_XY                       X          X               X         X
+  gp_XYZ                      X          X               X         X
+|#
 	   
 (deftype pointer () #+SBCL 'sb-sys:system-area-pointer)
 
@@ -90,6 +137,8 @@
     struct))
 
 (defun dir2d-2 (&optional (coord (xy 0.0d0 0.0d0)))
+
+  ;; wrong.
   (let* ((pointer (foreign-alloc '(:struct gp-dir2d)))
 	 (struct (make-dir2d :ptr pointer)))
     (setf (gp-xy-x pointer) (x coord)
@@ -97,13 +146,16 @@
     (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
     struct))
     
-(defun dir2d-3 (&optional (xv 0.0d0) (yv 0.0d0))
+(defun dir2d (&optional (xv 0.0d0) (yv 0.0d0))
   (let* ((pointer (foreign-alloc '(:struct gp-dir2d)))
 	 (struct (make-dir2d :ptr pointer)))
-    (setf (gp-xy-x pointer) (coerce xv 'double-float)
-	  (gp-xy-y pointer) (coerce yv 'double-float))
-    (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
-    struct))
+    (let* ((df-xv (coerce xv 'double-float))
+	   (df-yv (coerce yv 'double-float))
+	   (d (sqrt (+ (* df-xv df-xv) (* df-yv df-yv)))))
+      (setf (gp-xy-x pointer) (/ df-xv d)
+	    (gp-xy-y pointer) (/ df-yv d))
+      (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
+      struct)))
 
 (defcstruct gp-xyz
   (x :double)
@@ -379,7 +431,75 @@
 	    (gp-ax2-vxdir-coord-x pointer)
 	    (gp-ax2-vxdir-coord-y pointer)
 	    (gp-ax2-vxdir-coord-z pointer))))
-	  
+
+(defcstruct gp-ax22d
+  (point (:struct gp-pnt2d))
+  (vydir (:struct gp-dir2d))
+  (vxdir (:struct gp-dir2d)))
+
+(defmacro gp-ax22d-point-coord-x (gp-ax22d)
+  `(mem-aref ,gp-ax22d :double 0))
+
+(defmacro gp-ax22d-point-coord-y (gp-ax22d)
+  `(mem-aref ,gp-ax22d :double 1))
+
+(defmacro gp-ax22d-vydir-coord-x (gp-ax22d)
+  `(mem-aref ,gp-ax22d :double 2))
+
+(defmacro gp-ax22d-vydir-coord-y (gp-ax22d)
+  `(mem-aref ,gp-ax22d :double 3))
+
+(defmacro gp-ax22d-vxdir-coord-x (gp-ax22d)
+  `(mem-aref ,gp-ax22d :double 4))
+
+(defmacro gp-ax22d-vxdir-coord-y (gp-ax22d)
+  `(mem-aref ,gp-ax22d :double 5))
+
+(defstruct (ax22d (:include gpthing)))
+
+(defun ax22d (&rest args &key P Vx Vy V A (Sense t Sense-arg-provided-p))
+  (let ((ptr (foreign-alloc '(:struct gp-ax22d))))
+    (cond ((null args) (setf (gp-ax22d-point-coord-x ptr) 0.0d0
+			     (gp-ax22d-point-coord-y ptr) 0.0d0
+			     (gp-ax22d-vydir-coord-x ptr) 0.0d0
+			     (gp-ax22d-vydir-coord-y ptr) 1.0d0
+			     (gp-ax22d-vxdir-coord-x ptr) 1.0d0
+			     (gp-ax22d-vxdir-coord-y ptr) 0.0d0))
+	  ((and P Vx Vy (not (or A Sense-arg-provided-p)))
+	   (setf (gp-ax22d-vxdir-coord-x ptr) (x Vx)
+		 (gp-ax22d-vxdir-coord-y ptr) (y Vx))
+	   (flet ((cross-2d (v1 v2) (- (* (x v1) (y v2)) (* (y v1) (x v2)))))
+	     (let ((value (cross-2d Vx Vy)))
+	       (if (>= value 0.0d0) 
+		   (setf (gp-ax22d-vydir-coord-x ptr) (- (gp-ax22d-vxdir-coord-y ptr))
+			 (gp-ax22d-vydir-coord-y ptr) (gp-ax22d-vxdir-coord-x ptr))
+		   (setf (gp-ax22d-vydir-coord-x ptr) (gp-ax22d-vxdir-coord-y ptr)
+			 (gp-ax22d-vydir-coord-y ptr) (- (gp-ax22d-vxdir-coord-x ptr)))))))
+	  ((and P V Sense-arg-provided-p (not (or Vx A)))
+	   (setf (gp-ax22d-point-coord-x ptr) (x P)
+		 (gp-ax22d-point-coord-y ptr) (y P)
+		 (gp-ax22d-vxdir-coord-x ptr) (x V)
+		 (gp-ax22d-vxdir-coord-y ptr) (y V))
+	   (if Sense
+	       (setf (gp-ax22d-vydir-coord-x ptr) (- (gp-ax22d-vxdir-coord-y ptr))
+		     (gp-ax22d-vydir-coord-y ptr) (gp-ax22d-vxdir-coord-x ptr))
+	       (setf (gp-ax22d-vydir-coord-x ptr) (gp-ax22d-vxdir-coord-y ptr)
+		     (gp-ax22d-vydir-coord-y ptr) (- (gp-ax22d-vxdir-coord-x ptr)))))
+	  ((and (typep A 'ax2d) Sense-arg-provided-p (not (or P Vx Vy V)))
+	   (setf (gp-ax22d-point-coord-x ptr) (gp-ax2d-loc-coord-x (ptr A))
+		 (gp-ax22d-point-coord-y ptr) (gp-ax2d-loc-coord-y (ptr A))
+		 (gp-ax22d-vxdir-coord-x ptr) (gp-ax2d-vdir-coord-x (ptr A))
+		 (gp-ax22d-vxdir-coord-y ptr) (gp-ax2d-vdir-coord-y (ptr A)))
+	   (if Sense
+	       (setf (gp-ax22d-vydir-coord-x ptr) (- (gp-ax22d-vxdir-coord-y ptr))
+		     (gp-ax22d-vydir-coord-y ptr) (gp-ax22d-vxdir-coord-x ptr))
+	       (setf (gp-ax22d-vydir-coord-x ptr) (gp-ax22d-vxdir-coord-y ptr)
+		     (gp-ax22d-vydir-coord-y ptr) (- (gp-ax22d-vxdir-coord-x ptr)))))
+	  (t "Invalid arguments to ax22d: ~S" args))
+    (let ((struct (make-ax22d :ptr ptr)))
+      (finalize struct (lambda () (print 'freeing-ax22d) (foreign-free ptr)))
+      struct)))
+
 (defcstruct gp-ax3
   (axis (:struct gp-ax1))
   (vydir (:struct gp-dir))
@@ -422,6 +542,36 @@
   `(mem-aref ,gp-ax3 :double 11))
 
 (defstruct (ax3 (:include gpthing)))
+
+(defmethod vxdir ((ax3 ax3))
+  (make-dir :ptr (mem-aptr (ptr ax3) :double 9)))
+
+(defmethod vydir ((ax3 ax3))
+  (make-dir :ptr (mem-aptr (ptr ax3) :double 6)))
+
+(defun ax3 (&key P N Vx)
+  (let ((gp-ax3 (foreign-alloc '(:struct gp-ax3))))
+    (setf (gp-ax3-axis-loc-coord-x gp-ax3) (x P)
+	  (gp-ax3-axis-loc-coord-y gp-ax3) (y P)
+	  (gp-ax3-axis-loc-coord-z gp-ax3) (z P)
+
+	  (gp-ax3-axis-vdir-coord-x gp-ax3) (x N)
+	  (gp-ax3-axis-vdir-coord-y gp-ax3) (y N)
+	  (gp-ax3-axis-vdir-coord-z gp-ax3) (z N))
+
+    (let* ((vxdir (cross-cross N Vx N))
+	   (vydir (cross N vxdir)))
+	  
+      (setf (gp-ax3-vxdir-coord-x gp-ax3) (x vxdir)
+	    (gp-ax3-vxdir-coord-y gp-ax3) (y vxdir)
+	    (gp-ax3-vxdir-coord-z gp-ax3) (z vxdir)
+
+	    (gp-ax3-vydir-coord-x gp-ax3) (x vydir)
+	    (gp-ax3-vydir-coord-y gp-ax3) (y vydir)
+	    (gp-ax3-vydir-coord-z gp-ax3) (z vydir)))
+    (let ((struct (make-ax3 :ptr gp-ax3)))
+      (finalize struct (lambda () (print 'freeingax3) (foreign-free gp-ax3)))
+      struct)))	    
 
 (defcstruct gp-lin
   (pos (:struct gp-ax1)))
@@ -537,6 +687,43 @@
 (defmethod print-object ((object circ) stream)
   (let ((A2 (make-ax2 :ptr (foreign-slot-pointer (ptr object) '(:struct gp-circ) 'pos))))
     (format stream "(circ :A2 ~A :R ~A)" A2 (gp-circ-radius (ptr object)))))
+
+(defcstruct gp-circ2d
+  (pos (:struct gp-ax22d))
+  (radius :double))
+
+(defmacro gp-circ2d-pos-loc-coord-x (gp-circ2d)
+  `(mem-aref ,gp-circ2d :double 0))
+
+(defmacro gp-circ2d-pos-loc-coord-y (gp-circ2d)
+  `(mem-aref ,gp-circ2d :double 1))
+
+(defmacro gp-circ2d-pos-vdir-coord-x (gp-circ2d)
+  `(mem-aref ,gp-circ2d :double 2))
+
+(defmacro gp-circ2d-pos-vdir-coord-y (gp-circ2d)
+  `(mem-aref ,gp-circ2d :double 3))
+
+(defmacro gp-circ2d-radius (gp-circ2d)
+  `(mem-aref ,gp-circ2d :double 4))
+
+(defstruct (circ2d (:include gpthing)))
+
+(defun circ2d (&rest args &key (XAxis (ax2d)) (Radius most-positive-double-float) (Sense t) (Axis (ax22d :A XAxis :Sense Sense)))
+  (let ((ptr (foreign-alloc '(:struct gp-circ2d))))
+    (cond ((and XAxis Radius (typep Axis 'ax22d))
+	   (if (< Radius 0)
+	       (error "Radius cannot be negative: ~S" Radius)
+	       (setf (gp-circ2d-pos-loc-coord-x ptr) (gp-ax2d-loc-coord-x (ptr Axis))
+		     (gp-circ2d-pos-loc-coord-y ptr) (gp-ax2d-loc-coord-y (ptr Axis))
+		     (gp-circ2d-pos-vdir-coord-x ptr) (gp-ax2d-vdir-coord-x (ptr Axis))
+		     (gp-circ2d-pos-vdir-coord-y ptr) (gp-ax2d-vdir-coord-y (ptr Axis))
+		     
+		     (gp-circ2d-radius ptr) (coerce Radius 'double-float))))
+	  (t (error "Invalid arguments to circ2d: ~S" args)))
+    (let ((struct (make-circ2d :ptr ptr)))
+      (finalize struct (lambda () (print 'freeingcirc2d) (foreign-free ptr)))
+      struct)))	       
 
 (defcstruct gp-cone
   (pos (:struct gp-ax3))
@@ -741,7 +928,7 @@
 
 (defstruct (ax2d (:include gpthing)))
 
-(defun ax2d (&optional (loc (pnt2d 0.0d0 0.0d0)) (vdir (dir2d-3 1.0d0 0.0d0)))
+(defun ax2d (&optional (loc (pnt2d 0.0d0 0.0d0)) (vdir (dir2d 1.0d0 0.0d0)))
   (let* ((pointer (foreign-alloc '(:struct gp-ax2d)))
 	 (struct (make-ax2d :ptr pointer)))
     (setf (gp-ax2d-loc-coord-x pointer) (x loc)
@@ -751,3 +938,163 @@
 	  (gp-ax2d-vdir-coord-y pointer) (y vdir))
     (finalize struct (lambda () (print 'freeing-ax2d) (foreign-free pointer)) :dont-save t)
     struct))
+
+(defmethod location ((ax2d ax2d))
+  (make-pnt2d :ptr (ptr ax2d)))
+
+(defmethod direction ((ax2d ax2d))
+  (make-dir2d :ptr (mem-aptr (ptr ax2d) :double 2)))
+
+(defstruct (hypr (:include gpthing)))
+
+(defcstruct gp-pln
+  (pos (:struct gp-ax3)))
+
+(defmacro gp-pln-pos-axis-loc-coord-x (gp-pln)
+  `(mem-aref ,gp-pln :double 0))
+
+(defmacro gp-pln-pos-axis-loc-coord-y (gp-pln)
+  `(mem-aref ,gp-pln :double 1))
+
+(defmacro gp-pln-pos-axis-loc-coord-z (gp-pln)
+  `(mem-aref ,gp-pln :double 2))
+
+(defmacro gp-pln-pos-axis-vdir-coord-x (gp-pln)
+  `(mem-aref ,gp-pln :double 3))
+
+(defmacro gp-pln-pos-axis-vdir-coord-y (gp-pln)
+  `(mem-aref ,gp-pln :double 4))
+
+(defmacro gp-pln-pos-axis-vdir-coord-z (gp-pln)
+  `(mem-aref ,gp-pln :double 5))
+
+(defmacro gp-pln-pos-vydir-coord-x (gp-pln)
+  `(mem-aref ,gp-pln :double 6))
+
+(defmacro gp-pln-pos-vydir-coord-y (gp-pln)
+  `(mem-aref ,gp-pln :double 7))
+
+(defmacro gp-pln-pos-vydir-coord-z (gp-pln)
+  `(mem-aref ,gp-pln :double 8))
+
+(defmacro gp-pln-pos-vxdir-coord-x (gp-pln)
+  `(mem-aref ,gp-pln :double 9))
+
+(defmacro gp-pln-pos-vxdir-coord-y (gp-pln)
+  `(mem-aref ,gp-pln :double 10))
+
+(defmacro gp-pln-pos-vxdir-coord-z (gp-pln)
+  `(mem-aref ,gp-pln :double 11))
+
+(defstruct (pln (:include gpthing)))
+
+(defun pln (&rest args &key ax3 P V A B C D)
+  (let ((pln-ptr (foreign-alloc '(:struct gp-pln))))
+    (flet ((copy-ax3-into-pln (ax3-ptr pln-ptr)
+	     (setf (gp-pln-pos-axis-loc-coord-x pln-ptr) (gp-ax3-axis-loc-coord-x ax3-ptr)
+		   (gp-pln-pos-axis-loc-coord-y pln-ptr) (gp-ax3-axis-loc-coord-y ax3-ptr)
+		   (gp-pln-pos-axis-loc-coord-z pln-ptr) (gp-ax3-axis-loc-coord-z ax3-ptr)
+		   
+		   (gp-pln-pos-axis-vdir-coord-x pln-ptr) (gp-ax3-axis-vdir-coord-x ax3-ptr)
+		   (gp-pln-pos-axis-vdir-coord-y pln-ptr) (gp-ax3-axis-vdir-coord-y ax3-ptr)
+		   (gp-pln-pos-axis-vdir-coord-z pln-ptr) (gp-ax3-axis-vdir-coord-z ax3-ptr)
+		   
+		   (gp-pln-pos-vydir-coord-x pln-ptr) (gp-ax3-vydir-coord-x ax3-ptr)
+		   (gp-pln-pos-vydir-coord-y pln-ptr) (gp-ax3-vydir-coord-y ax3-ptr)
+		   (gp-pln-pos-vydir-coord-z pln-ptr) (gp-ax3-vydir-coord-z ax3-ptr)
+		   
+		   (gp-pln-pos-vxdir-coord-x pln-ptr) (gp-ax3-vxdir-coord-x ax3-ptr)
+		   (gp-pln-pos-vxdir-coord-y pln-ptr) (gp-ax3-vxdir-coord-y ax3-ptr)
+		   (gp-pln-pos-vxdir-coord-z pln-ptr) (gp-ax3-vxdir-coord-z ax3-ptr))))
+  
+    (cond ((and ax3 (not (or P V A B C D)))
+	   (let ((ax3-ptr (ptr ax3)))
+	     (copy-ax3-into-pln ax3-ptr pln-ptr)))
+	
+	  ((and P V (not (or ax3 A B C D)))
+	   (let ((pos))
+	     (setq A (x V)
+		   B (y V)
+		   C (z V))
+	     (let ((A-abs (abs A))
+		   (B-abs (abs B))
+		   (C-abs (abs C)))
+	       (if (and (<= B-abs A-abs) (<= B-abs C-abs))
+		   (if (> A-abs C-abs)
+		       (setq pos (ax3 :P P :N V :Vx (dir (- C) 0.0d0 A)))
+		       (setq pos (ax3 :P P :N V :Vx (dir C 0.0d0 (- A)))))
+		   (if (and (<= A-abs B-abs) (<= A-abs C-abs))
+		       (if (> B-abs C-abs)
+			   (setq pos (ax3 :P P :N V :Vx (dir 0.0d0 (- C) B)))
+			   (setq pos (ax3 :P P :N V :Vx (dir 0.0d0 C (- B)))))
+		       (if (> A-abs B-abs)
+			   (setq pos (ax3 :P P :N V :Vx (dir (- B) A 0.0d0)))
+			   (setq pos (ax3 :P P :N V :Vx (dir B (- A) 0.0d0))))))
+
+	       (copy-ax3-into-pln (ptr pos) pln-ptr))))
+	  ((and A B C D (not (or ax3 P V)))
+	   (let ((A-abs (abs A))
+		 (B-abs (abs B))
+		 (C-abs (abs C))
+		 (pos))
+	     (if (and (<= B-abs A-abs) (<= B-abs C-abs))
+		 (if (> A-abs C-abs)
+		     (setq pos (ax3 :P (pnt (- (/ D A)) 0.0d0 0.0d0)
+				    :N (dir A B C)
+				    :Vx (dir (- C) 0.0d0 A)))
+		     (setq pos (ax3 :P (pnt 0.0d0 0.0d0 (- (/ D C)))
+				    :N (dir A B C)
+				    :Vx (dir (- C) 0.0d0 A))))
+		 (if (and (<= A-abs B-abs) (<= A-abs C-abs))
+		     (if (> B-abs C-abs)
+			 (setq pos (ax3 :P (pnt 0.0d0 (- (/ D B)) 0.0d0)
+					:N (dir A B C)
+					:Vx (dir 0.0d0 (- C) B)))
+			 (setq pos (ax3 :P (pnt 0.0d0 0.0d0 (- (/ D C)))
+					:N (dir A B C)
+					:Vx (dir 0.0d0 C (- B)))))
+		     (if (> A-abs B-abs)
+			 (setq pos (ax3 :P (pnt (- (/ D A)) 0.0d0 0.0d0)
+					:N (dir A B C)
+					:Vx (dir (- B) A 0.0d0)))
+			 (setq pos (ax3 :P (pnt 0.0d0 (- (/ D B)) 0.0d0)
+					:N (dir A B C)
+					:Vx (dir B (- A) 0.0d0))))))
+	     (copy-ax3-into-pln (ptr pos) pln-ptr)))
+	  (t "Invalid arguments to pln: ~S" args)))
+    (let ((struct (make-pln :ptr pln-ptr)))
+      (finalize struct (lambda () (print 'freeing-pln) (foreign-free pln-ptr)) :dont-save t)
+      struct)))
+
+
+(defmethod pos ((pln pln))
+  (make-ax3 :ptr (ptr pln)))
+
+(defmethod axis ((ax3 ax3))
+  (make-ax1 :ptr (ptr ax3)))
+
+(defmethod direction ((ax3 ax3))
+  (let ((axis (axis ax3)))
+    (vdir axis)))
+
+(defmethod location ((ax3 ax3))
+  (loc (axis ax3)))
+
+(defmethod direct-p ((ax3 ax3))
+  (> (dot (cross (vxdir ax3) (vydir ax3)) (direction (axis ax3))) 0.0d0))
+
+(defun coefficients (pln)
+  (let* ((pos (pos pln))
+	 (dir (direction pos))
+	 (a) (b) (c) (d))
+    (if (direct-p pos)
+	(setq a (x dir)
+	      b (y dir)
+	      c (z dir))
+	(setq a (- (x dir))
+	      b (- (y dir))
+	      c (- (z dir))))
+    (let ((p (location pos)))
+      (setq d (- (+ (* a (x p)) (* b (y p)) (* c (z p))))))
+    (values a b c d)))
+      

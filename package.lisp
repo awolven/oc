@@ -13,7 +13,8 @@
 	   #:dir2d-0
 	   #:dir2d-1
 	   #:dir2d-2
-	   #:dir2d-3
+;;	   #:dir2d-3
+	   #:dir2d
 	   #:ax2d
 	   #:xyz
 	   #:pnt
@@ -29,6 +30,7 @@
 	   #:cylinder
 	   #:trsf
 	   #:parab
+	   #:hypr
 	   #:mat
 
 	   #:x #:y #:z

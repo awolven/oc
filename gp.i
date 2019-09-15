@@ -147,7 +147,7 @@ class gp_Ax3
   gp_Ax3();
   gp_Ax3(const gp_Ax2& A);
   gp_Ax3(const gp_Pnt& P, const gp_Dir& N, const gp_Dir& Vx);
-
+  gp_Ax3(const gp_Pnt& P, const gp_Dir& V);
 };
 
 class gp_Ax2

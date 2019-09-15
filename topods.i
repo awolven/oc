@@ -20,6 +20,7 @@ class TopoDS_Shape
 	Standard_Boolean IsSame (const TopoDS_Shape& other) const ;
 	Standard_Boolean IsPartner (const TopoDS_Shape &other) const ;
 	Standard_Boolean IsEqual (const TopoDS_Shape &other) const ;
+	const Handle_TopoDS_TShape& TShape() const;
 	const TopLoc_Location& Location () const ;
 	void Location (const TopLoc_Location& Loc) ;
 	TopAbs_Orientation Orientation() const ;
@@ -53,11 +54,13 @@ class TopoDS_Shape
 	Handle_TopoDS_TShape getTShape()
 	{
 		return (Handle_TopoDS_TShape)&*self->TShape();
-	}	
+	}
 }
 
 class TopoDS_Compound: public TopoDS_Shape
 {
+ public:
+  TopoDS_Compound();
 };
 
 class TopoDS_CompSolid: public TopoDS_Shape
