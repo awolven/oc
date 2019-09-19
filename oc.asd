@@ -1,10 +1,12 @@
-(defsystem :oc
-  :description "Lisp OpenCascade bindings."
+(defsystem oc
+  :description "A wrapper library for using OpenCASCADE with Lisp."
   :depends-on (:cffi)
   :author "Andrew K Wolven <awolven@gmail.com>"
   :components
-  ((:file "load-oc")
+  ((:file "foreign-libraries")
    (:file "package")
    (:file "oc")
-   (:file "opencascade")))
-	  
+   (:file "gp")
+   (:file "opencascade")
+   (:file "init")
+   (:file "examples")))
