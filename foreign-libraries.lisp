@@ -90,7 +90,7 @@
    "oc"))
 
 (defparameter *lib-path*
-  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/windows/debug/" #+darwin "lib/macos/")))
+  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/windows/debug/" #+darwin "lib/MacOSX/debug/")))
 
 (defparameter *lib-extension*
   #+windows ".dll"
