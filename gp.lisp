@@ -167,12 +167,7 @@
 
 (defstruct (xyz (:include gpthing)))
 
-(defun z (xyz)
-  (assert (or (typep xyz 'xyz)
-	      (typep xyz 'pnt)
-	      (typep xyz 'dir)
-	      (typep xyz 'vec)))
-  (gp-xyz-z (ptr xyz)))
+
 
 (defun xyz (&optional (x 0.0d0) (y 0.0d0) (z 0.0d0))
   (let* ((pointer (foreign-alloc '(:struct gp-xyz)))
@@ -192,23 +187,9 @@
 	(zresult (- (* (x v1) (y v2)) (* (y v1) (x v2)))))
     (+ (* (x v0) xresult) (* (y v0) yresult) (* (z v0) zresult))))
 
-(defun cross (v1 v2)
-  (let ((xresult (- (* (y v1) (z v2)) (* (z v1) (y v2))))
-	(yresult (- (* (z v1) (x v2)) (* (x v1) (z v2))))
-	(zresult (- (* (x v1) (y v2)) (* (y v1) (x v2)))))
-    (etypecase v1
-      (vec (vec xresult yresult zresult))
-      (dir (dir xresult yresult zresult))
-      (xyz (xyz xresult yresult zresult)))))
 
-(defun cross-cross (v0 v1 v2)
-  (let ((xresult (- (* (y v0) (- (* (x v1) (y v2)) (* (y v1) (x v2)))) (* (z v0) (- (* (z v1) (x v2)) (* (x v1) (z v2))))))
-	(yresult (- (* (z v0) (- (* (y v1) (z v2)) (* (z v1) (y v2)))) (* (x v0) (- (* (x v1) (y v2)) (* (y v1) (x v2))))))
-	(zresult (- (* (x v0) (- (* (z v1) (x v2)) (* (x v1) (z v2)))) (* (y v0) (- (* (y v1) (z v2)) (* (z v1) (y v2)))))))
-    (etypecase v0
-      (dir (dir xresult yresult zresult))
-      (vec (vec xresult yresult zresult))
-      (xyz (xyz xresult yresult zresult)))))
+
+
 
 (defmethod multiply ((v xy) scalar)
   (let ((new-x (* (x v) scalar))
@@ -221,11 +202,7 @@
 (defmethod multiply ((v xyz) scalar)
   (xyz (* (x v) scalar) (* (y v) scalar) (* (z v) scalar)))
 
-(defmethod multiply ((v vec) scalar)
-  (vec (* (x v) scalar) (* (y v) scalar) (* (z v) scalar)))
 
-(defmethod multiply ((v dir) scalar)
-  (dir (* (x v) scalar) (* (y v) scalar) (* (z v) scalar)))
 
 (defmethod divide ((v xy) scalar)
   (xy (/ (x v) scalar) (/ (y v) scalar)))
@@ -235,12 +212,6 @@
 
 (defmethod divide ((v xyz) scalar)
   (xyz (/ (x v) scalar) (/ (y v) scalar) (/ (z v) scalar)))
-
-(defmethod divide ((v vec) scalar)
-  (vec (/ (x v) scalar) (/ (y v) scalar) (/ (z v) scalar)))
-
-(defmethod divide ((v dir) scalar)
-  (dir (/ (x v) scalar) (/ (y v) scalar) (/ (z v) scalar)))
 
 (defmethod print-object ((object xyz) stream)
   (format stream "(xyz ~A ~A ~A)" (x object) (y object) (z object)))
@@ -295,6 +266,43 @@
 
 (defmethod print-object ((object vec) stream)
   (format stream "(vec ~A ~A ~A)" (x object) (y object) (z object)))
+
+(defun z (xyz)
+  (assert (or (typep xyz 'xyz)
+	      (typep xyz 'pnt)
+	      (typep xyz 'dir)
+	      (typep xyz 'vec)))
+  (gp-xyz-z (ptr xyz)))
+
+(defun cross (v1 v2)
+  (let ((xresult (- (* (y v1) (z v2)) (* (z v1) (y v2))))
+	(yresult (- (* (z v1) (x v2)) (* (x v1) (z v2))))
+	(zresult (- (* (x v1) (y v2)) (* (y v1) (x v2)))))
+    (etypecase v1
+      (vec (vec xresult yresult zresult))
+      (dir (dir xresult yresult zresult))
+      (xyz (xyz xresult yresult zresult)))))
+
+(defun cross-cross (v0 v1 v2)
+  (let ((xresult (- (* (y v0) (- (* (x v1) (y v2)) (* (y v1) (x v2)))) (* (z v0) (- (* (z v1) (x v2)) (* (x v1) (z v2))))))
+	(yresult (- (* (z v0) (- (* (y v1) (z v2)) (* (z v1) (y v2)))) (* (x v0) (- (* (x v1) (y v2)) (* (y v1) (x v2))))))
+	(zresult (- (* (x v0) (- (* (z v1) (x v2)) (* (x v1) (z v2)))) (* (y v0) (- (* (y v1) (z v2)) (* (z v1) (y v2)))))))
+    (etypecase v0
+      (dir (dir xresult yresult zresult))
+      (vec (vec xresult yresult zresult))
+      (xyz (xyz xresult yresult zresult)))))
+
+(defmethod multiply ((v vec) scalar)
+  (vec (* (x v) scalar) (* (y v) scalar) (* (z v) scalar)))
+
+(defmethod multiply ((v dir) scalar)
+  (dir (* (x v) scalar) (* (y v) scalar) (* (z v) scalar)))
+
+(defmethod divide ((v vec) scalar)
+  (vec (/ (x v) scalar) (/ (y v) scalar) (/ (z v) scalar)))
+
+(defmethod divide ((v dir) scalar)
+  (dir (/ (x v) scalar) (/ (y v) scalar) (/ (z v) scalar)))
 
 (defcstruct gp-ax1
   (loc (:struct gp-pnt))
