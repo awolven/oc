@@ -6,6 +6,7 @@
   ((:file "foreign-libraries")
    (:file "package")
    (:file "oc")
+   (:file "gp-macros")
    (:file "gp")
    (:file "opencascade")
    (:file "init")

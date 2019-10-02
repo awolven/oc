@@ -2276,6 +2276,455 @@
 (cffi:defcfun ("_wrap_delete_Poly_PolygonOnTriangulation" _wrap_delete_Poly_PolygonOnTriangulation) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Mirror__SWIG_0" _wrap_Geom2d_Geometry_Mirror__SWIG_0) :void
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Mirror__SWIG_1" _wrap_Geom2d_Geometry_Mirror__SWIG_1) :void
+  (self :pointer)
+  (A :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Rotate" _wrap_Geom2d_Geometry_Rotate) :void
+  (self :pointer)
+  (P :pointer)
+  (Ang :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Scale" _wrap_Geom2d_Geometry_Scale) :void
+  (self :pointer)
+  (P :pointer)
+  (S :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Translate__SWIG_0" _wrap_Geom2d_Geometry_Translate__SWIG_0) :void
+  (self :pointer)
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Translate__SWIG_1" _wrap_Geom2d_Geometry_Translate__SWIG_1) :void
+  (self :pointer)
+  (P1 :pointer)
+  (P2 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Mirrored__SWIG_0" _wrap_Geom2d_Geometry_Mirrored__SWIG_0) :pointer
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Mirrored__SWIG_1" _wrap_Geom2d_Geometry_Mirrored__SWIG_1) :pointer
+  (self :pointer)
+  (A :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Rotated" _wrap_Geom2d_Geometry_Rotated) :pointer
+  (self :pointer)
+  (P :pointer)
+  (Ang :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Scaled" _wrap_Geom2d_Geometry_Scaled) :pointer
+  (self :pointer)
+  (P :pointer)
+  (S :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Transformed" _wrap_Geom2d_Geometry_Transformed) :pointer
+  (self :pointer)
+  (t_arg1 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Translated__SWIG_0" _wrap_Geom2d_Geometry_Translated__SWIG_0) :pointer
+  (self :pointer)
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Geometry_Translated__SWIG_1" _wrap_Geom2d_Geometry_Translated__SWIG_1) :pointer
+  (self :pointer)
+  (P1 :pointer)
+  (P2 :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Geometry" _wrap_delete_Geom2d_Geometry) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD0" _wrap_Geom2d_Curve_getD0) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD1" _wrap_Geom2d_Curve_getD1) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD2" _wrap_Geom2d_Curve_getD2) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getD3" _wrap_Geom2d_Curve_getD3) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer)
+  (V3 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_firstParameter" _wrap_Geom2d_Curve_firstParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_lastParameter" _wrap_Geom2d_Curve_lastParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_isClosed" _wrap_Geom2d_Curve_isClosed) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_isPeriodic" _wrap_Geom2d_Curve_isPeriodic) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_period" _wrap_Geom2d_Curve_period) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_reverse" _wrap_Geom2d_Curve_reverse) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getReversedParameter" _wrap_Geom2d_Curve_getReversedParameter) :double
+  (self :pointer)
+  (U :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getValueAt" _wrap_Geom2d_Curve_getValueAt) :pointer
+  (self :pointer)
+  (U :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Curve_getGeometryType" _wrap_Geom2d_Curve_getGeometryType) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Curve" _wrap_delete_Geom2d_Curve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bisector_Curve_getParameter" _wrap_Bisector_Curve_getParameter) :double
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Bisector_Curve_isExtendAtStart" _wrap_Bisector_Curve_isExtendAtStart) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bisector_Curve_isExtendAtEnd" _wrap_Bisector_Curve_isExtendAtEnd) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bisector_Curve_getNumberOfIntervals" _wrap_Bisector_Curve_getNumberOfIntervals) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bisector_Curve_getIntervalFirst" _wrap_Bisector_Curve_getIntervalFirst) :double
+  (self :pointer)
+  (index :int))
+
+(cffi:defcfun ("_wrap_Bisector_Curve_getIntervalLast" _wrap_Bisector_Curve_getIntervalLast) :double
+  (self :pointer)
+  (index :int))
+
+(cffi:defcfun ("_wrap_delete_Bisector_Curve" _wrap_delete_Bisector_Curve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Bisector_BisecAna" _wrap_delete_Bisector_BisecAna) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Bisector_BisecCC__SWIG_0" _wrap_new_Bisector_BisecCC__SWIG_0) :pointer
+  (Cu1 :pointer)
+  (Cu2 :pointer)
+  (Side1 :double)
+  (Side2 :double)
+  (Origin :pointer)
+  (DistMax :double))
+
+(cffi:defcfun ("_wrap_new_Bisector_BisecCC__SWIG_1" _wrap_new_Bisector_BisecCC__SWIG_1) :pointer
+  (Cu1 :pointer)
+  (Cu2 :pointer)
+  (Side1 :double)
+  (Side2 :double)
+  (Origin :pointer))
+
+(cffi:defcfun ("_wrap_delete_Bisector_BisecCC" _wrap_delete_Bisector_BisecCC) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Bisector_BisecPC__SWIG_0" _wrap_new_Bisector_BisecPC__SWIG_0) :pointer
+  (Cu :pointer)
+  (P :pointer)
+  (Side :double)
+  (DistMax :double))
+
+(cffi:defcfun ("_wrap_new_Bisector_BisecPC__SWIG_1" _wrap_new_Bisector_BisecPC__SWIG_1) :pointer
+  (Cu :pointer)
+  (P :pointer)
+  (Side :double))
+
+(cffi:defcfun ("_wrap_delete_Bisector_BisecPC" _wrap_delete_Bisector_BisecPC) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Line__SWIG_0" _wrap_new_Geom2d_Line__SWIG_0) :pointer
+  (A :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Line__SWIG_1" _wrap_new_Geom2d_Line__SWIG_1) :pointer
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Line__SWIG_2" _wrap_new_Geom2d_Line__SWIG_2) :pointer
+  (P :pointer)
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_SetLin2d" _wrap_Geom2d_Line_SetLin2d) :void
+  (self :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_SetDirection" _wrap_Geom2d_Line_SetDirection) :void
+  (self :pointer)
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_Direction" _wrap_Geom2d_Line_Direction) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_SetLocation" _wrap_Geom2d_Line_SetLocation) :void
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_Location" _wrap_Geom2d_Line_Location) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_SetPosition" _wrap_Geom2d_Line_SetPosition) :void
+  (self :pointer)
+  (A :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_Position" _wrap_Geom2d_Line_Position) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Line_Lin2d" _wrap_Geom2d_Line_Lin2d) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Line" _wrap_delete_Geom2d_Line) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_OffsetCurve" _wrap_new_Geom2d_OffsetCurve) :pointer
+  (C :pointer)
+  (Offset :double))
+
+(cffi:defcfun ("_wrap_Geom2d_OffsetCurve_getBasisCurve" _wrap_Geom2d_OffsetCurve_getBasisCurve) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_OffsetCurve_getOffset" _wrap_Geom2d_OffsetCurve_getOffset) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_OffsetCurve" _wrap_delete_Geom2d_OffsetCurve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Conic_getXAxis" _wrap_Geom2d_Conic_getXAxis) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Conic_getYAxis" _wrap_Geom2d_Conic_getYAxis) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Conic_getEccentricity" _wrap_Geom2d_Conic_getEccentricity) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Conic_getLocation" _wrap_Geom2d_Conic_getLocation) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Conic_getPosition" _wrap_Geom2d_Conic_getPosition) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Conic" _wrap_delete_Geom2d_Conic) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Circle" _wrap_new_Geom2d_Circle) :pointer
+  (A :pointer)
+  (R :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Circle_getRadius" _wrap_Geom2d_Circle_getRadius) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Circle" _wrap_delete_Geom2d_Circle) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Ellipse__SWIG_0" _wrap_new_Geom2d_Ellipse__SWIG_0) :pointer
+  (MajorAxis :pointer)
+  (MajorRadius :double)
+  (MinorRadius :double)
+  (Sense :int))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Ellipse__SWIG_1" _wrap_new_Geom2d_Ellipse__SWIG_1) :pointer
+  (MajorAxis :pointer)
+  (MajorRadius :double)
+  (MinorRadius :double))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Ellipse__SWIG_2" _wrap_new_Geom2d_Ellipse__SWIG_2) :pointer
+  (Axis :pointer)
+  (MajorRadius :double)
+  (MinorRadius :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Ellipse_getMajorRadius" _wrap_Geom2d_Ellipse_getMajorRadius) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Ellipse_getMinorRadius" _wrap_Geom2d_Ellipse_getMinorRadius) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Ellipse_getDirectrix1" _wrap_Geom2d_Ellipse_getDirectrix1) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Ellipse_getDirectrix2" _wrap_Geom2d_Ellipse_getDirectrix2) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Ellipse_getFocalDistance" _wrap_Geom2d_Ellipse_getFocalDistance) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Ellipse_getFocus1" _wrap_Geom2d_Ellipse_getFocus1) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Ellipse_getFocus2" _wrap_Geom2d_Ellipse_getFocus2) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Ellipse" _wrap_delete_Geom2d_Ellipse) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Hyperbola" _wrap_new_Geom2d_Hyperbola) :pointer
+  (Axis :pointer)
+  (MajorRadius :double)
+  (MinorRadius :double))
+
+(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getMajorRadius" _wrap_Geom2d_Hyperbola_getMajorRadius) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getMinorRadius" _wrap_Geom2d_Hyperbola_getMinorRadius) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getDirectrix1" _wrap_Geom2d_Hyperbola_getDirectrix1) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getDirectrix2" _wrap_Geom2d_Hyperbola_getDirectrix2) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getFocalDistance" _wrap_Geom2d_Hyperbola_getFocalDistance) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getFocus1" _wrap_Geom2d_Hyperbola_getFocus1) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getFocus2" _wrap_Geom2d_Hyperbola_getFocus2) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Hyperbola" _wrap_delete_Geom2d_Hyperbola) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Parabola__SWIG_0" _wrap_new_Geom2d_Parabola__SWIG_0) :pointer
+  (Axis :pointer)
+  (Focal :double))
+
+(cffi:defcfun ("_wrap_new_Geom2d_Parabola__SWIG_1" _wrap_new_Geom2d_Parabola__SWIG_1) :pointer
+  (D :pointer)
+  (F :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Parabola_getFocalDistance" _wrap_Geom2d_Parabola_getFocalDistance) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Parabola_getFocus" _wrap_Geom2d_Parabola_getFocus) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_Parabola_getDirectrix" _wrap_Geom2d_Parabola_getDirectrix) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_Parabola" _wrap_delete_Geom2d_Parabola) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_BoundedCurve_getEndPoint" _wrap_Geom2d_BoundedCurve_getEndPoint) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_BoundedCurve_getStartPoint" _wrap_Geom2d_BoundedCurve_getStartPoint) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_BoundedCurve" _wrap_delete_Geom2d_BoundedCurve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_BezierCurve" _wrap_new_Geom2d_BezierCurve) :pointer
+  (CurvePoles :pointer)
+  (PoleWeights :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_BezierCurve_getControlPointsCount" _wrap_Geom2d_BezierCurve_getControlPointsCount) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_BezierCurve_getControlPoint" _wrap_Geom2d_BezierCurve_getControlPoint) :pointer
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_Geom2d_BezierCurve_getWeight" _wrap_Geom2d_BezierCurve_getWeight) :double
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_BezierCurve" _wrap_delete_Geom2d_BezierCurve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_0" _wrap_new_Geom2d_BSplineCurve__SWIG_0) :pointer
+  (Poles :pointer)
+  (Knots :pointer)
+  (Multiplicities :pointer)
+  (Degree :int)
+  (Periodic :int))
+
+(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_1" _wrap_new_Geom2d_BSplineCurve__SWIG_1) :pointer
+  (Poles :pointer)
+  (Knots :pointer)
+  (Multiplicities :pointer)
+  (Degree :int))
+
+(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_2" _wrap_new_Geom2d_BSplineCurve__SWIG_2) :pointer
+  (Poles :pointer)
+  (Weights :pointer)
+  (Knots :pointer)
+  (Multiplicities :pointer)
+  (Degree :int)
+  (Periodic :int))
+
+(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_3" _wrap_new_Geom2d_BSplineCurve__SWIG_3) :pointer
+  (Poles :pointer)
+  (Weights :pointer)
+  (Knots :pointer)
+  (Multiplicities :pointer)
+  (Degree :int))
+
+(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getDegree" _wrap_Geom2d_BSplineCurve_getDegree) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getControlPoint" _wrap_Geom2d_BSplineCurve_getControlPoint) :pointer
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getWeight" _wrap_Geom2d_BSplineCurve_getWeight) :double
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getKnot" _wrap_Geom2d_BSplineCurve_getKnot) :double
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getMultiplicity" _wrap_Geom2d_BSplineCurve_getMultiplicity) :int
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getKnotsCount" _wrap_Geom2d_BSplineCurve_getKnotsCount) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getControlPointsCount" _wrap_Geom2d_BSplineCurve_getControlPointsCount) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_BSplineCurve" _wrap_delete_Geom2d_BSplineCurve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2d_TrimmedCurve__SWIG_0" _wrap_new_Geom2d_TrimmedCurve__SWIG_0) :pointer
+  (C :pointer)
+  (U1 :double)
+  (U2 :double)
+  (Sense :int))
+
+(cffi:defcfun ("_wrap_new_Geom2d_TrimmedCurve__SWIG_1" _wrap_new_Geom2d_TrimmedCurve__SWIG_1) :pointer
+  (C :pointer)
+  (U1 :double)
+  (U2 :double))
+
+(cffi:defcfun ("_wrap_Geom2d_TrimmedCurve_getBasisCurve" _wrap_Geom2d_TrimmedCurve_getBasisCurve) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2d_TrimmedCurve" _wrap_delete_Geom2d_TrimmedCurve) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_delete_Geom_Geometry" _wrap_delete_Geom_Geometry) :void
   (self :pointer))
 
@@ -3120,375 +3569,6 @@
 (cffi:defcfun ("_wrap_delete_Geom_Plane" _wrap_delete_Geom_Plane) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_delete_Geom2d_Geometry" _wrap_delete_Geom2d_Geometry) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_getD0" _wrap_Geom2d_Curve_getD0) :void
-  (self :pointer)
-  (U :double)
-  (P :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_getD1" _wrap_Geom2d_Curve_getD1) :void
-  (self :pointer)
-  (U :double)
-  (P :pointer)
-  (V1 :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_getD2" _wrap_Geom2d_Curve_getD2) :void
-  (self :pointer)
-  (U :double)
-  (P :pointer)
-  (V1 :pointer)
-  (V2 :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_getD3" _wrap_Geom2d_Curve_getD3) :void
-  (self :pointer)
-  (U :double)
-  (P :pointer)
-  (V1 :pointer)
-  (V2 :pointer)
-  (V3 :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_firstParameter" _wrap_Geom2d_Curve_firstParameter) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_lastParameter" _wrap_Geom2d_Curve_lastParameter) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_isClosed" _wrap_Geom2d_Curve_isClosed) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_isPeriodic" _wrap_Geom2d_Curve_isPeriodic) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_period" _wrap_Geom2d_Curve_period) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_reverse" _wrap_Geom2d_Curve_reverse) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_getReversedParameter" _wrap_Geom2d_Curve_getReversedParameter) :double
-  (self :pointer)
-  (U :double))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_getValueAt" _wrap_Geom2d_Curve_getValueAt) :pointer
-  (self :pointer)
-  (U :double))
-
-(cffi:defcfun ("_wrap_Geom2d_Curve_getGeometryType" _wrap_Geom2d_Curve_getGeometryType) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_Curve" _wrap_delete_Geom2d_Curve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Line__SWIG_0" _wrap_new_Geom2d_Line__SWIG_0) :pointer
-  (A :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Line__SWIG_1" _wrap_new_Geom2d_Line__SWIG_1) :pointer
-  (L :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Line__SWIG_2" _wrap_new_Geom2d_Line__SWIG_2) :pointer
-  (P :pointer)
-  (V :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Line_getLocation" _wrap_Geom2d_Line_getLocation) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Line_getPosition" _wrap_Geom2d_Line_getPosition) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_Line" _wrap_delete_Geom2d_Line) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_OffsetCurve" _wrap_new_Geom2d_OffsetCurve) :pointer
-  (C :pointer)
-  (Offset :double))
-
-(cffi:defcfun ("_wrap_Geom2d_OffsetCurve_getBasisCurve" _wrap_Geom2d_OffsetCurve_getBasisCurve) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_OffsetCurve_getOffset" _wrap_Geom2d_OffsetCurve_getOffset) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_OffsetCurve" _wrap_delete_Geom2d_OffsetCurve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Conic_getXAxis" _wrap_Geom2d_Conic_getXAxis) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Conic_getYAxis" _wrap_Geom2d_Conic_getYAxis) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Conic_getEccentricity" _wrap_Geom2d_Conic_getEccentricity) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Conic_getLocation" _wrap_Geom2d_Conic_getLocation) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Conic_getPosition" _wrap_Geom2d_Conic_getPosition) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_Conic" _wrap_delete_Geom2d_Conic) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Circle" _wrap_new_Geom2d_Circle) :pointer
-  (A :pointer)
-  (R :double))
-
-(cffi:defcfun ("_wrap_Geom2d_Circle_getRadius" _wrap_Geom2d_Circle_getRadius) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_Circle" _wrap_delete_Geom2d_Circle) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Ellipse__SWIG_0" _wrap_new_Geom2d_Ellipse__SWIG_0) :pointer
-  (MajorAxis :pointer)
-  (MajorRadius :double)
-  (MinorRadius :double)
-  (Sense :int))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Ellipse__SWIG_1" _wrap_new_Geom2d_Ellipse__SWIG_1) :pointer
-  (MajorAxis :pointer)
-  (MajorRadius :double)
-  (MinorRadius :double))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Ellipse__SWIG_2" _wrap_new_Geom2d_Ellipse__SWIG_2) :pointer
-  (Axis :pointer)
-  (MajorRadius :double)
-  (MinorRadius :double))
-
-(cffi:defcfun ("_wrap_Geom2d_Ellipse_getMajorRadius" _wrap_Geom2d_Ellipse_getMajorRadius) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Ellipse_getMinorRadius" _wrap_Geom2d_Ellipse_getMinorRadius) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Ellipse_getDirectrix1" _wrap_Geom2d_Ellipse_getDirectrix1) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Ellipse_getDirectrix2" _wrap_Geom2d_Ellipse_getDirectrix2) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Ellipse_getFocalDistance" _wrap_Geom2d_Ellipse_getFocalDistance) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Ellipse_getFocus1" _wrap_Geom2d_Ellipse_getFocus1) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Ellipse_getFocus2" _wrap_Geom2d_Ellipse_getFocus2) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_Ellipse" _wrap_delete_Geom2d_Ellipse) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Hyperbola" _wrap_new_Geom2d_Hyperbola) :pointer
-  (Axis :pointer)
-  (MajorRadius :double)
-  (MinorRadius :double))
-
-(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getMajorRadius" _wrap_Geom2d_Hyperbola_getMajorRadius) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getMinorRadius" _wrap_Geom2d_Hyperbola_getMinorRadius) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getDirectrix1" _wrap_Geom2d_Hyperbola_getDirectrix1) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getDirectrix2" _wrap_Geom2d_Hyperbola_getDirectrix2) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getFocalDistance" _wrap_Geom2d_Hyperbola_getFocalDistance) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getFocus1" _wrap_Geom2d_Hyperbola_getFocus1) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Hyperbola_getFocus2" _wrap_Geom2d_Hyperbola_getFocus2) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_Hyperbola" _wrap_delete_Geom2d_Hyperbola) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Parabola__SWIG_0" _wrap_new_Geom2d_Parabola__SWIG_0) :pointer
-  (Axis :pointer)
-  (Focal :double))
-
-(cffi:defcfun ("_wrap_new_Geom2d_Parabola__SWIG_1" _wrap_new_Geom2d_Parabola__SWIG_1) :pointer
-  (D :pointer)
-  (F :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Parabola_getFocalDistance" _wrap_Geom2d_Parabola_getFocalDistance) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Parabola_getFocus" _wrap_Geom2d_Parabola_getFocus) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_Parabola_getDirectrix" _wrap_Geom2d_Parabola_getDirectrix) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_Parabola" _wrap_delete_Geom2d_Parabola) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_BoundedCurve_getEndPoint" _wrap_Geom2d_BoundedCurve_getEndPoint) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_BoundedCurve_getStartPoint" _wrap_Geom2d_BoundedCurve_getStartPoint) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_BoundedCurve" _wrap_delete_Geom2d_BoundedCurve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_BezierCurve" _wrap_new_Geom2d_BezierCurve) :pointer
-  (CurvePoles :pointer)
-  (PoleWeights :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_BezierCurve_getControlPointsCount" _wrap_Geom2d_BezierCurve_getControlPointsCount) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_BezierCurve_getControlPoint" _wrap_Geom2d_BezierCurve_getControlPoint) :pointer
-  (self :pointer)
-  (Index :int))
-
-(cffi:defcfun ("_wrap_Geom2d_BezierCurve_getWeight" _wrap_Geom2d_BezierCurve_getWeight) :double
-  (self :pointer)
-  (Index :int))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_BezierCurve" _wrap_delete_Geom2d_BezierCurve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_0" _wrap_new_Geom2d_BSplineCurve__SWIG_0) :pointer
-  (Poles :pointer)
-  (Knots :pointer)
-  (Multiplicities :pointer)
-  (Degree :int)
-  (Periodic :int))
-
-(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_1" _wrap_new_Geom2d_BSplineCurve__SWIG_1) :pointer
-  (Poles :pointer)
-  (Knots :pointer)
-  (Multiplicities :pointer)
-  (Degree :int))
-
-(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_2" _wrap_new_Geom2d_BSplineCurve__SWIG_2) :pointer
-  (Poles :pointer)
-  (Weights :pointer)
-  (Knots :pointer)
-  (Multiplicities :pointer)
-  (Degree :int)
-  (Periodic :int))
-
-(cffi:defcfun ("_wrap_new_Geom2d_BSplineCurve__SWIG_3" _wrap_new_Geom2d_BSplineCurve__SWIG_3) :pointer
-  (Poles :pointer)
-  (Weights :pointer)
-  (Knots :pointer)
-  (Multiplicities :pointer)
-  (Degree :int))
-
-(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getDegree" _wrap_Geom2d_BSplineCurve_getDegree) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getControlPoint" _wrap_Geom2d_BSplineCurve_getControlPoint) :pointer
-  (self :pointer)
-  (Index :int))
-
-(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getWeight" _wrap_Geom2d_BSplineCurve_getWeight) :double
-  (self :pointer)
-  (Index :int))
-
-(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getKnot" _wrap_Geom2d_BSplineCurve_getKnot) :double
-  (self :pointer)
-  (Index :int))
-
-(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getMultiplicity" _wrap_Geom2d_BSplineCurve_getMultiplicity) :int
-  (self :pointer)
-  (Index :int))
-
-(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getKnotsCount" _wrap_Geom2d_BSplineCurve_getKnotsCount) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Geom2d_BSplineCurve_getControlPointsCount" _wrap_Geom2d_BSplineCurve_getControlPointsCount) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_BSplineCurve" _wrap_delete_Geom2d_BSplineCurve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2d_TrimmedCurve__SWIG_0" _wrap_new_Geom2d_TrimmedCurve__SWIG_0) :pointer
-  (C :pointer)
-  (U1 :double)
-  (U2 :double)
-  (Sense :int))
-
-(cffi:defcfun ("_wrap_new_Geom2d_TrimmedCurve__SWIG_1" _wrap_new_Geom2d_TrimmedCurve__SWIG_1) :pointer
-  (C :pointer)
-  (U1 :double)
-  (U2 :double))
-
-(cffi:defcfun ("_wrap_Geom2d_TrimmedCurve_getBasisCurve" _wrap_Geom2d_TrimmedCurve_getBasisCurve) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Geom2d_TrimmedCurve" _wrap_delete_Geom2d_TrimmedCurve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Bisector_Curve_getParameter" _wrap_Bisector_Curve_getParameter) :double
-  (self :pointer)
-  (P :pointer))
-
-(cffi:defcfun ("_wrap_Bisector_Curve_isExtendAtStart" _wrap_Bisector_Curve_isExtendAtStart) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Bisector_Curve_isExtendAtEnd" _wrap_Bisector_Curve_isExtendAtEnd) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Bisector_Curve_getNumberOfIntervals" _wrap_Bisector_Curve_getNumberOfIntervals) :int
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Bisector_Curve_getIntervalFirst" _wrap_Bisector_Curve_getIntervalFirst) :double
-  (self :pointer)
-  (index :int))
-
-(cffi:defcfun ("_wrap_Bisector_Curve_getIntervalLast" _wrap_Bisector_Curve_getIntervalLast) :double
-  (self :pointer)
-  (index :int))
-
-(cffi:defcfun ("_wrap_delete_Bisector_Curve" _wrap_delete_Bisector_Curve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_Bisector_BisecAna" _wrap_delete_Bisector_BisecAna) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Bisector_BisecCC__SWIG_0" _wrap_new_Bisector_BisecCC__SWIG_0) :pointer
-  (Cu1 :pointer)
-  (Cu2 :pointer)
-  (Side1 :double)
-  (Side2 :double)
-  (Origin :pointer)
-  (DistMax :double))
-
-(cffi:defcfun ("_wrap_new_Bisector_BisecCC__SWIG_1" _wrap_new_Bisector_BisecCC__SWIG_1) :pointer
-  (Cu1 :pointer)
-  (Cu2 :pointer)
-  (Side1 :double)
-  (Side2 :double)
-  (Origin :pointer))
-
-(cffi:defcfun ("_wrap_delete_Bisector_BisecCC" _wrap_delete_Bisector_BisecCC) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Bisector_BisecPC__SWIG_0" _wrap_new_Bisector_BisecPC__SWIG_0) :pointer
-  (Cu :pointer)
-  (P :pointer)
-  (Side :double)
-  (DistMax :double))
-
-(cffi:defcfun ("_wrap_new_Bisector_BisecPC__SWIG_1" _wrap_new_Bisector_BisecPC__SWIG_1) :pointer
-  (Cu :pointer)
-  (P :pointer)
-  (Side :double))
-
-(cffi:defcfun ("_wrap_delete_Bisector_BisecPC" _wrap_delete_Bisector_BisecPC) :void
-  (self :pointer))
-
 (cffi:defcfun ("_wrap_BRepLib_Precision__SWIG_0" _wrap_BRepLib_Precision__SWIG_0) :void
   (P :double))
 
@@ -4212,6 +4292,341 @@
 (cffi:defcfun ("_wrap_delete_GCE2d_MakeSegment" _wrap_delete_GCE2d_MakeSegment) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_Adaptor2d_Curve2d_Value" _wrap_Adaptor2d_Curve2d_Value) :pointer
+  (self :pointer)
+  (U :double))
+
+(cffi:defcfun ("_wrap_delete_Adaptor2d_Curve2d" _wrap_delete_Adaptor2d_Curve2d) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2dAdaptor_Curve__SWIG_0" _wrap_new_Geom2dAdaptor_Curve__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_Geom2dAdaptor_Curve__SWIG_1" _wrap_new_Geom2dAdaptor_Curve__SWIG_1) :pointer
+  (C :pointer))
+
+(cffi:defcfun ("_wrap_new_Geom2dAdaptor_Curve__SWIG_2" _wrap_new_Geom2dAdaptor_Curve__SWIG_2) :pointer
+  (C :pointer)
+  (UFirst :double)
+  (ULast :double))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Load__SWIG_0" _wrap_Geom2dAdaptor_Curve_Load__SWIG_0) :void
+  (self :pointer)
+  (C :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Load__SWIG_1" _wrap_Geom2dAdaptor_Curve_Load__SWIG_1) :void
+  (self :pointer)
+  (C :pointer)
+  (UFirst :double)
+  (ULast :double))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Curve" _wrap_Geom2dAdaptor_Curve_Curve) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_FirstParameter" _wrap_Geom2dAdaptor_Curve_FirstParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_LastParameter" _wrap_Geom2dAdaptor_Curve_LastParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Continuity" _wrap_Geom2dAdaptor_Curve_Continuity) GeomAbs_Shape
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_NbIntervals" _wrap_Geom2dAdaptor_Curve_NbIntervals) :int
+  (self :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Intervals" _wrap_Geom2dAdaptor_Curve_Intervals) :void
+  (self :pointer)
+  (t_arg1 :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Trim" _wrap_Geom2dAdaptor_Curve_Trim) :pointer
+  (self :pointer)
+  (First :double)
+  (Last :double)
+  (Tol :double))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_IsClosed" _wrap_Geom2dAdaptor_Curve_IsClosed) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_IsPeriodic" _wrap_Geom2dAdaptor_Curve_IsPeriodic) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Period" _wrap_Geom2dAdaptor_Curve_Period) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Value" _wrap_Geom2dAdaptor_Curve_Value) :pointer
+  (self :pointer)
+  (U :double))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_D0" _wrap_Geom2dAdaptor_Curve_D0) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_D1" _wrap_Geom2dAdaptor_Curve_D1) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_D2" _wrap_Geom2dAdaptor_Curve_D2) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_D3" _wrap_Geom2dAdaptor_Curve_D3) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer)
+  (V3 :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_DN" _wrap_Geom2dAdaptor_Curve_DN) :pointer
+  (self :pointer)
+  (U :double)
+  (N :int))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Resolution" _wrap_Geom2dAdaptor_Curve_Resolution) :double
+  (self :pointer)
+  (Ruv :double))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_GetType" _wrap_Geom2dAdaptor_Curve_GetType) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Line" _wrap_Geom2dAdaptor_Curve_Line) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Circle" _wrap_Geom2dAdaptor_Curve_Circle) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Ellipse" _wrap_Geom2dAdaptor_Curve_Ellipse) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Hyperbola" _wrap_Geom2dAdaptor_Curve_Hyperbola) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Parabola" _wrap_Geom2dAdaptor_Curve_Parabola) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Degree" _wrap_Geom2dAdaptor_Curve_Degree) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_IsRational" _wrap_Geom2dAdaptor_Curve_IsRational) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_NbPoles" _wrap_Geom2dAdaptor_Curve_NbPoles) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_NbKnots" _wrap_Geom2dAdaptor_Curve_NbKnots) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_NbSamples" _wrap_Geom2dAdaptor_Curve_NbSamples) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Bezier" _wrap_Geom2dAdaptor_Curve_Bezier) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_BSpline" _wrap_Geom2dAdaptor_Curve_BSpline) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Geom2dAdaptor_Curve" _wrap_delete_Geom2dAdaptor_Curve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Curve2d" _wrap_Adaptor2d_HCurve2d_Curve2d) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_FirstParameter" _wrap_Adaptor2d_HCurve2d_FirstParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_LastParameter" _wrap_Adaptor2d_HCurve2d_LastParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Continuity" _wrap_Adaptor2d_HCurve2d_Continuity) GeomAbs_Shape
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_NbIntervals" _wrap_Adaptor2d_HCurve2d_NbIntervals) :int
+  (self :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Intervals" _wrap_Adaptor2d_HCurve2d_Intervals) :void
+  (self :pointer)
+  (t_arg1 :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Trim" _wrap_Adaptor2d_HCurve2d_Trim) :pointer
+  (self :pointer)
+  (First :double)
+  (Last :double)
+  (Tol :double))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_IsClosed" _wrap_Adaptor2d_HCurve2d_IsClosed) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_IsPeriodic" _wrap_Adaptor2d_HCurve2d_IsPeriodic) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Period" _wrap_Adaptor2d_HCurve2d_Period) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Value" _wrap_Adaptor2d_HCurve2d_Value) :pointer
+  (self :pointer)
+  (U :double))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_D0" _wrap_Adaptor2d_HCurve2d_D0) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_D1" _wrap_Adaptor2d_HCurve2d_D1) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_D2" _wrap_Adaptor2d_HCurve2d_D2) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_D3" _wrap_Adaptor2d_HCurve2d_D3) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer)
+  (V3 :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_DN" _wrap_Adaptor2d_HCurve2d_DN) :pointer
+  (self :pointer)
+  (U :double)
+  (N :int))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Resolution" _wrap_Adaptor2d_HCurve2d_Resolution) :double
+  (self :pointer)
+  (R3d :double))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_GetType" _wrap_Adaptor2d_HCurve2d_GetType) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Line" _wrap_Adaptor2d_HCurve2d_Line) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Circle" _wrap_Adaptor2d_HCurve2d_Circle) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Ellipse" _wrap_Adaptor2d_HCurve2d_Ellipse) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Hyperbola" _wrap_Adaptor2d_HCurve2d_Hyperbola) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Parabola" _wrap_Adaptor2d_HCurve2d_Parabola) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Degree" _wrap_Adaptor2d_HCurve2d_Degree) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_IsRational" _wrap_Adaptor2d_HCurve2d_IsRational) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_NbPoles" _wrap_Adaptor2d_HCurve2d_NbPoles) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_NbKnots" _wrap_Adaptor2d_HCurve2d_NbKnots) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor2d_HCurve2d_Bezier" _wrap_Adaptor2d_HCurve2d_Bezier) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Adaptor2d_HCurve2d" _wrap_delete_Adaptor2d_HCurve2d) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_0" _wrap_new_CPnts_UniformDeflection__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_1" _wrap_new_CPnts_UniformDeflection__SWIG_1) :pointer
+  (C :pointer)
+  (Deflection :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_2" _wrap_new_CPnts_UniformDeflection__SWIG_2) :pointer
+  (C :pointer)
+  (Deflection :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_3" _wrap_new_CPnts_UniformDeflection__SWIG_3) :pointer
+  (C :pointer)
+  (Deflection :double)
+  (U1 :double)
+  (U2 :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_4" _wrap_new_CPnts_UniformDeflection__SWIG_4) :pointer
+  (C :pointer)
+  (Deflection :double)
+  (U1 :double)
+  (U2 :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_Initialize__SWIG_0" _wrap_CPnts_UniformDeflection_Initialize__SWIG_0) :void
+  (self :pointer)
+  (C :pointer)
+  (Deflection :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_Initialize__SWIG_1" _wrap_CPnts_UniformDeflection_Initialize__SWIG_1) :void
+  (self :pointer)
+  (C :pointer)
+  (Deflection :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_Initialize__SWIG_2" _wrap_CPnts_UniformDeflection_Initialize__SWIG_2) :void
+  (self :pointer)
+  (C :pointer)
+  (Deflection :double)
+  (U1 :double)
+  (U2 :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_Initialize__SWIG_3" _wrap_CPnts_UniformDeflection_Initialize__SWIG_3) :void
+  (self :pointer)
+  (C :pointer)
+  (Deflection :double)
+  (U1 :double)
+  (U2 :double)
+  (Resolution :double)
+  (WithControl :int))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_IsAllDone" _wrap_CPnts_UniformDeflection_IsAllDone) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_Next" _wrap_CPnts_UniformDeflection_Next) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_More" _wrap_CPnts_UniformDeflection_More) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_Value" _wrap_CPnts_UniformDeflection_Value) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_CPnts_UniformDeflection_Point" _wrap_CPnts_UniformDeflection_Point) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_CPnts_UniformDeflection" _wrap_delete_CPnts_UniformDeflection) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_new_TopLoc_Location__SWIG_0" _wrap_new_TopLoc_Location__SWIG_0) :pointer)
 
 (cffi:defcfun ("_wrap_new_TopLoc_Location__SWIG_1" _wrap_new_TopLoc_Location__SWIG_1) :pointer
@@ -4296,71 +4711,6 @@
   (bndBox :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepBndLib" _wrap_delete_BRepBndLib) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Adaptor2d_Curve2d_Value" _wrap_Adaptor2d_Curve2d_Value) :pointer
-  (self :pointer)
-  (U :double))
-
-(cffi:defcfun ("_wrap_delete_Adaptor2d_Curve2d" _wrap_delete_Adaptor2d_Curve2d) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2dAdaptor_Curve__SWIG_0" _wrap_new_Geom2dAdaptor_Curve__SWIG_0) :pointer)
-
-(cffi:defcfun ("_wrap_new_Geom2dAdaptor_Curve__SWIG_1" _wrap_new_Geom2dAdaptor_Curve__SWIG_1) :pointer
-  (C :pointer))
-
-(cffi:defcfun ("_wrap_new_Geom2dAdaptor_Curve__SWIG_2" _wrap_new_Geom2dAdaptor_Curve__SWIG_2) :pointer
-  (C :pointer)
-  (UFirst :double)
-  (ULast :double))
-
-(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Load__SWIG_0" _wrap_Geom2dAdaptor_Curve_Load__SWIG_0) :void
-  (self :pointer)
-  (C :pointer))
-
-(cffi:defcfun ("_wrap_Geom2dAdaptor_Curve_Load__SWIG_1" _wrap_Geom2dAdaptor_Curve_Load__SWIG_1) :void
-  (self :pointer)
-  (C :pointer)
-  (UFirst :double)
-  (ULast :double))
-
-(cffi:defcfun ("_wrap_delete_Geom2dAdaptor_Curve" _wrap_delete_Geom2dAdaptor_Curve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Adaptor3d_Curve_Value" _wrap_Adaptor3d_Curve_Value) :pointer
-  (self :pointer)
-  (U :double))
-
-(cffi:defcfun ("_wrap_Adaptor3d_Curve_arrayValues" _wrap_Adaptor3d_Curve_arrayValues) :void
-  (self :pointer)
-  (size :int)
-  (u :pointer))
-
-(cffi:defcfun ("_wrap_delete_Adaptor3d_Curve" _wrap_delete_Adaptor3d_Curve) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_GeomAdaptor_Curve__SWIG_0" _wrap_new_GeomAdaptor_Curve__SWIG_0) :pointer)
-
-(cffi:defcfun ("_wrap_new_GeomAdaptor_Curve__SWIG_1" _wrap_new_GeomAdaptor_Curve__SWIG_1) :pointer
-  (C :pointer))
-
-(cffi:defcfun ("_wrap_new_GeomAdaptor_Curve__SWIG_2" _wrap_new_GeomAdaptor_Curve__SWIG_2) :pointer
-  (C :pointer)
-  (UFirst :double)
-  (ULast :double))
-
-(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Load__SWIG_0" _wrap_GeomAdaptor_Curve_Load__SWIG_0) :void
-  (self :pointer)
-  (C :pointer))
-
-(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Load__SWIG_1" _wrap_GeomAdaptor_Curve_Load__SWIG_1) :void
-  (self :pointer)
-  (C :pointer)
-  (UFirst :double)
-  (ULast :double))
-
-(cffi:defcfun ("_wrap_delete_GeomAdaptor_Curve" _wrap_delete_GeomAdaptor_Curve) :void
   (self :pointer))
 
 (cffi:defcfun ("_wrap_new_GProp_GProps" _wrap_new_GProp_GProps) :pointer)

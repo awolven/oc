@@ -417,7 +417,8 @@
 						  (coerce MinorRadius 'double-float)))
 	       (t "Invalid arguments to constructor: ~S" initargs))))
     (setf (ff-pointer object) pointer)
-    (ff-pointer-finalize object #'_wrap_delete_Geom2d_Ellipse)
+    ;; do we need to free Handle() objects?
+    ;;(ff-pointer-finalize object #'_wrap_delete_Geom2d_Ellipse)
     (values)))
 
 (defclass BRepBuilderAPI_ModifyShape (BRepBuilderAPI_MakeShape) ())
@@ -1149,3 +1150,127 @@
 
 (defmethod map-of-shape-key ((map-iterator TopTools_MapIteratorOfMapOfShape))
   (with-topods-shape (_wrap_TopTools_MapIteratorOfMapOfShape_Key (ff-pointer map-iterator))))
+
+(defclass Adaptor2d_Curve2d () ())
+
+(defclass Geom2dAdaptor_Curve (Adaptor2d_Curve2d ff-pointer-mixin)
+  ())
+
+(defmethod initialize-instance :after ((instance Geom2dAdaptor_Curve) &rest initargs
+				       &key C UFirst ULast &allow-other-keys)
+  (setf (ff-pointer instance) (cond ((null initargs) (_wrap_new_Geom2dAdaptor_Curve__SWIG_0))
+				    ((and (typep C 'Geom2d_Curve) (null UFirst) (null ULast)) (_wrap_new_Geom2dAdaptor_Curve__SWIG_1 (ff-pointer C)))
+				    ((and (typep C 'Geom2d_Curve) UFirst ULast) (_wrap_new_Geom2dAdaptor_Curve__SWIG_2 (ff-pointer C)
+														       (coerce UFirst 'double-float)
+														       (coerce ULast 'double-float)))
+				    (t (error "Invalid initargs to constructor: ~S" initargs))))
+  (ff-pointer-finalize instance #'_wrap_delete_Geom2dAdaptor_Curve)
+  (values))
+
+(defclass Adaptor3d_Curve () ())
+
+(defclass GeomAdaptor_Curve (Adaptor3d_Curve ff-pointer-mixin) ())
+
+(defclass CPnts_UniformDeflection (ff-pointer-mixin)
+  ())
+
+(defmethod initialize-instance :after ((instance CPnts_UniformDeflection) &rest initargs
+				       &key C Deflection U1 U2 Resolution (WithControl nil WithControl-supplied-p) &allow-other-keys)
+  (let ((ptr (cond ((null initargs) (_wrap_new_CPnts_UniformDeflection__SWIG_0))
+		   ((and (typep C 'Adaptor3d_Curve) Deflection Resolution WithControl-supplied-p)
+		    (_wrap_new_CPnts_UniformDeflection__SWIG_1 (ff-pointer C)
+							       (coerce Deflection 'double-float)
+							       (coerce Resolution 'double-float)
+							       (if WithControl (if (eq 0 WithControl) 0 1) 0)))
+		   ((and (typep C 'Adaptor2d_Curve2d) Deflection Resolution WithControl-supplied-p)
+		    (_wrap_new_CPnts_UniformDeflection__SWIG_2 (ff-pointer C)
+							       (coerce Deflection 'double-float)
+							       (coerce Resolution 'double-float)
+							       (if WithControl (if (eq 0 WithControl) 0 1) 0)))
+		   ((and (typep C 'Adaptor3d_Curve) Deflection U1 U2 Resolution WithControl-supplied-p)
+		    (_wrap_new_CPnts_UniformDeflection__SWIG_3 (ff-pointer C)
+							       (coerce Deflection 'double-float)
+							       (coerce U1 'double-float)
+							       (coerce U2 'double-float)
+							       (coerce Resolution 'double-float)
+							       (if WithControl (if (eq 0 WithControl) 0 1) 0)))
+		   ((and (typep C 'Adaptor2d_Curve2d) Deflection U1 U2 Resolution WithControl-supplied-p)
+		    (_wrap_new_CPnts_UniformDeflection__SWIG_4 (ff-pointer C)
+							       (coerce Deflection 'double-float)
+							       (coerce U1 'double-float)
+							       (coerce U2 'double-float)
+							       (coerce Resolution 'double-float)
+							       (if WithControl (if (eq 0 WithControl) 0 1) 0))))))
+    (setf (ff-pointer instance) ptr)
+    (ff-pointer-finalize instance #'_wrap_delete_CPnts_UniformDeflection)
+    (values)))
+		   
+(defmethod next ((self CPnts_UniformDeflection))
+  (_wrap_CPnts_UniformDeflection_Next (ff-pointer self)))
+
+(defmethod more-p ((self CPnts_UniformDeflection))
+  (if (zerop (_wrap_CPnts_UniformDeflection_More (ff-pointer self)))
+      nil t))
+
+(defmethod get-point ((self CPnts_UniformDeflection))
+  (gp::make-pnt :ptr (_wrap_CPnts_UniformDeflection_Point (ff-pointer self))))
+
+(defmethod value ((self CPnts_UniformDeflection))
+  (_wrap_CPnts_UniformDeflection_Value (ff-pointer self)))
+
+(defmethod done-p ((self CPnts_UniformDeflection))
+  (if (zerop (_wrap_CPnts_UniformDeflection_IsAllDone (ff-pointer self)))
+      nil t))
+
+(defclass Geom2d_Line (Geom2d_Curve) ())
+
+(defclass Geom2d_BezierCurve (Geom2d_BoundedCurve) ())
+
+(defclass Geom2d_BSplineCurve (Geom2d_BoundedCurve) ())
+
+(defmethod initialize-instance :after ((instance Geom2d_Line) &rest initargs &key A L P V &allow-other-keys)
+  (let ((ff-pointer (cond ((and (typep A 'gp:ax2d) (null L) (null P) (null V)) (_wrap_new_Geom2d_Line__SWIG_0 (ptr A)))
+			  ((and (typep L 'gp::Lin2d) (null A) (null P) (null V)) (_wrap_new_Geom2d_Line__SWIG_1 (ptr L)))
+			  ((and (typep P 'gp:pnt2d) (typep V 'gp:dir2d) (null A) (null L))
+			   (_wrap_new_Geom2d_Line__SWIG_2 (ptr P) (ptr V)))
+			  (t (error "Invalid arguments to constructor: ~S" initargs)))))
+    (setf (ff-pointer instance) ff-pointer)
+    (values)))
+
+(defmethod get-direction ((self Geom2d_Line))
+  (gp::make-dir2d :ptr (_wrap_Geom2d_Line_Direction (ff-pointer self))))
+
+(defmethod get-lin2d ((self Geom2d_Line))
+  (gp::make-lin2d :ptr (_wrap_Geom2d_Line_Direction (ff-pointer self))))
+
+(defmethod get-location ((self Geom2d_Line))
+  (gp::make-pnt2d :ptr (_wrap_Geom2d_Line_Location (ff-pointer self))))
+
+(defmethod get-position ((self Geom2d_Line))
+  (gp::make-ax2d :ptr (_wrap_Geom2d_Line_Position (ff-pointer self))))
+
+(defmethod (setf direction) ((dir gp:dir2d) (self Geom2d_Line))
+  (_wrap_Geom2d_Line_SetDirection (ff-pointer self) (ptr dir))
+  dir)
+
+(defmethod (setf lin2d) ((lin gp::lin2d) (self Geom2d_Line))
+  (_wrap_Geom2d_Line_SetLin2d (ff-pointer self) (ptr lin))
+  lin)
+
+(defmethod (setf location) ((pnt gp:pnt2d) (self Geom2d_Line))
+  (_wrap_Geom2d_Line_SetLocation (ff-pointer self) (ptr pnt))
+  pnt)
+
+(defmethod (setf line-position) ((ax2d gp:ax2d) (self Geom2d_Line))
+  (_wrap_Geom2d_Line_SetPosition (ff-pointer self) (ptr ax2d))
+  ax2d)
+
+(defclass Geom2d_Circle (Geom2d_Conic) ())
+
+(defmethod initialize-instance :after ((instance Geom2d_Circle) &rest initargs &key A R &allow-other-keys)
+  (declare (ignore initargs))
+  (assert (typep A 'gp::ax22d))
+  (assert (typep R 'number))
+  (let ((ff-pointer (_wrap_new_Geom2d_Circle (ptr A) (coerce R 'double-float))))
+    (setf (ff-pointer instance) ff-pointer)
+    (values)))

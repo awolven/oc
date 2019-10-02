@@ -67,6 +67,7 @@
 %include "brepprimapi.i";
 %include "brepalgoapi.i";
 %include "poly.i";
+%include "geom2d.i";
 %include "geom.i";
 %include "breplib.i";
 %include "brepfilletapi.i";
@@ -80,6 +81,9 @@
 %include "geomapi.i";
 %include "gc.i";
 %include "gce2d.i";
+%include "adaptor2d.i"
+#include "adaptor3d.i"
+%include "cpnts.i";
 
 %{
 #include <TopExp.hxx>
@@ -149,80 +153,6 @@ class BRepBndLib
 	public:
 	static void Add(const TopoDS_Shape& shape,Bnd_Box& bndBox);
 };
-
-/**
- * Adaptor2d_Curve2d
- */
-%{#include "Adaptor2d_Curve2d.hxx"%}
-
-class Adaptor2d_Curve2d
-{		
-	Adaptor2d_Curve2d()=0;
-	public:
-	virtual gp_Pnt2d Value(const Standard_Real U) const;
-};
-
-/**
- * Geom2dAdaptor_Curve
- */
-%{#include "Geom2dAdaptor_Curve.hxx"%}
-class Geom2dAdaptor_Curve: public Adaptor2d_Curve2d
-{
-	public:
-	Geom2dAdaptor_Curve();
-	Geom2dAdaptor_Curve(const Handle_Geom2d_Curve & C);
-	Geom2dAdaptor_Curve(const Handle_Geom2d_Curve & C,const Standard_Real UFirst,const Standard_Real ULast);
-	void Load(const Handle_Geom2d_Curve & C) ;
-	void Load(const Handle_Geom2d_Curve & C,const Standard_Real UFirst,const Standard_Real ULast) ;
-};
-
-/**
- * Adaptor3d_Curve
- */
-%{#include "Adaptor3d_Curve.hxx"%}
-
-class Adaptor3d_Curve
-{		
-	Adaptor3d_Curve()=0;
-	public:
-	const gp_Pnt Value(const Standard_Real U) const;
-};
-
-//extends the Adaptor3d_Curve class to reduce the JNI overhead when
-//calling a lot of Adaptor3d_Curve.Value
-%extend Adaptor3d_Curve
-{
-	public:
-	void arrayValues(int size, double u[])
-	{
-		for (int i = 0; i < size; i++)
-		{
-			gp_Pnt gp=self->Value(u[3*i]);
-			u[3*i]   = gp.X();
-			u[3*i+1] = gp.Y();
-			u[3*i+2] = gp.Z();
-		}	
-	}
-};
-
-/**
- * GeomAdaptor_Curve
- */
-%{#include "GeomAdaptor_Curve.hxx"%}
-
-class GeomAdaptor_Curve: public Adaptor3d_Curve
-{
-	public:
-	GeomAdaptor_Curve();
-	GeomAdaptor_Curve(const Handle_Geom_Curve & C);
-	GeomAdaptor_Curve(const Handle_Geom_Curve & C,
-		const Standard_Real UFirst,const Standard_Real ULast);
-	void Load(const Handle_Geom_Curve & C) ;
-	void Load(const Handle_Geom_Curve & C,
-		const Standard_Real UFirst,const Standard_Real ULast) ;
-
-};
-
 
 /**
  * GProp_GProps
