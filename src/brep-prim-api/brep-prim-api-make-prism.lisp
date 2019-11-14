@@ -1,0 +1,20 @@
+(in-package :oc)
+
+(defmethod initialize-instance :after ((object brep-prim-api-make-prism) &rest initargs
+				       &key baseShape extrudeDirection (Copy nil) (Canonize t) &allow-other-keys)
+  (let ((pointer
+	 (cond ((and Canonize Copy extrudeDirection baseShape)
+		(_wrap_new_BRepPrimAPI_MakePrism__SWIG_0 (ff-pointer baseShape)
+							 (ptr extrudeDirection)
+							 (if Copy (if (eq Copy 0) 0 1)  0)
+							 (if Canonize (if (eq Canonize 0) 0 1) 0)))
+	       ((and Copy extrudeDirection baseShape)
+		(_wrap_new_BRepPrimAPI_MakePrism__SWIG_1 (ff-pointer baseShape)
+							 (ptr extrudeDirection)
+							 (if Copy (if (eq Copy 0) 0 1)  0)))
+	       ((and extrudeDirection baseShape)
+		(_wrap_new_BRepPrimAPI_MakePrism__SWIG_2 (ff-pointer baseShape) (ptr extrudeDirection)))
+	       (t (error "Invalid arguments for BRepPrimAPI_MakePrism constructor: ~S." initargs)))))
+    (setf (ff-pointer object) pointer)
+    (ff-pointer-finalize object #'_wrap_delete_BRepPrimAPI_MakePrism)
+    (values)))

@@ -1,0 +1,11 @@
+(in-package :oc)
+
+(defconstant TopAbs_COMPOUND 0)
+(defconstant TopAbs_COMPSOLID 1)
+(defconstant TopAbs_SOLID 2)
+(defconstant TopAbs_SHELL 3)
+(defconstant TopAbs_FACE 4)
+(defconstant TopAbs_WIRE 5)
+(defconstant TopAbs_EDGE 6)
+(defconstant TopAbs_VERTEX 7)
+(defconstant TopAbs_SHAPE 8)

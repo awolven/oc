@@ -1,3 +1,0 @@
-#!/bin/bash
-
-gcc -I ../opencascade-7.1.0/inc/ -undefined dynamic_lookup -dynamic -fpic oc.cxx -std=c++11 -o oc.dylib
