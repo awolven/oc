@@ -25,7 +25,7 @@
    "TKFillet"
    "TKIGES"
    ;; "TKV3d"
-   ;;"oc"
+   "oc"
    ))
 
 #+darwin
@@ -105,4 +105,4 @@
 
 (load-oc-libraries)
 
-(cffi:load-foreign-library "C:/Users/awolven/Documents/Visual Studio 2015/Projects/oc/x64/Debug/oc.dll")
+;;(cffi:load-foreign-library "C:/Users/awolven/Documents/Visual Studio 2015/Projects/oc/x64/Debug/oc.dll")
