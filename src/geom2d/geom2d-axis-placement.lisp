@@ -34,10 +34,10 @@
   (_wrap_Geom2d_AxisPlacement_SetAxis (ff-pointer geometry) (ptr A)))
 
 (defmethod (setf direction) ((V gp:dir2d) (self geom2d-axis-placement))
-  (_wrap_Geom2d_AxisPlacement_SetDirection (ff-pointer geometry) (ptr V)))
+  (_wrap_Geom2d_AxisPlacement_SetDirection (ff-pointer self) (ptr V)))
 
 (defmethod (setf location) ((P gp:pnt2d) (self geom2d-axis-placement))
-  (_wrap_Geom2d_AxisPlacement_SetLocation (ff-pointer geometry) (ptr P)))
+  (_wrap_Geom2d_AxisPlacement_SetLocation (ff-pointer self) (ptr P)))
 
 (defmethod angle ((axis-placement1 geom2d-axis-placement)
 		  (axis-placement2 geom2d-axis-placement))
@@ -46,7 +46,7 @@
 
 (defmethod processor ((axis-placement geom2d-axis-placement))
   (let* ((ptr (_wrap_Geom2d_AxisPlacement_Ax2d (ff-pointer axis-placement)))
-	 (struct (make-ax2d :ptr ptr)))
+	 (struct (gp:make-ax2d :ptr ptr)))
     (sb-ext:finalize struct (lambda ()
 				(_wrap_delete_gp_Ax2d ptr))
 		     :dont-save t)
@@ -54,7 +54,7 @@
 
 (defmethod direction ((axis-placement geom2d-axis-placement))
   (let* ((ptr (_wrap_Geom2d_AxisPlacement_Direction (ff-pointer axis-placement)))
-	 (struct (make-dir2d :ptr ptr)))
+	 (struct (gp:make-dir2d :ptr ptr)))
     (sb-ext:finalize struct (lambda ()
 				(_wrap_delete_gp_Dir2d ptr))
 		     :dont-save t)
@@ -62,7 +62,7 @@
 
 (defmethod location ((axis-placement geom2d-axis-placement))
   (let* ((ptr (_wrap_Geom2d_AxisPlacement_Location (ff-pointer axis-placement)))
-	 (struct (make-pnt2d :ptr ptr)))
+	 (struct (gp:make-pnt2d :ptr ptr)))
     (sb-ext:finalize struct (lambda ()
 				(_wrap_delete_gp_Pnt2d ptr))
 		     :dont-save t)

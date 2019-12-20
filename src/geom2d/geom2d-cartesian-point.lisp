@@ -4,7 +4,7 @@
 				       &key P X Y)
   (let ((ff-pointer
 	 (cond ((and (gp:pnt2d-p P) (not X) (not Y))
-		(_wrap_new_Geom2d_CartesianPoint__SWIG_0 (pnt P)))
+		(_wrap_new_Geom2d_CartesianPoint__SWIG_0 (ptr P)))
 	       ((and (null P) X Y)
 		(_wrap_new_Geom2d_CartesianPoint__SWIG_1 (coerce X 'double-float) (coerce Y 'double-float)))
 	       (t (error "Invalid initargs to Geom2d_CartesianPoint: ~S" initargs)))))
