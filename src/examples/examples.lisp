@@ -1,9 +1,9 @@
 (in-package :oc)
 
 (defun make-bucket ()
-  (let* ((bucket-location (pnt 0 0 0))
-	 (bucket-axis (dir 0 0 1))
-	 (bucket-ax2 (gp::make-ax2 :ptr (_wrap_new_gp_Ax2__SWIG_1 (ptr bucket-location) (ptr bucket-axis))))
+  (let* ((bucket-location (gp:pnt 0 0 0))
+	 (bucket-axis (gp:dir 0 0 1))
+	 (bucket-ax2 (gp:make-ax2 :ptr (_wrap_new_gp_Ax2__SWIG_2 (ptr bucket-location) (ptr bucket-axis))))
 	 (mk-cylinder
 	  (make-instance 'BRep-Prim-API-Make-Cylinder
 			 :Axes bucket-ax2
@@ -35,11 +35,11 @@
     
 
 (defun make-bottle (&optional (my-width 50) (my-height 70) (my-thickness 30))
-  (let* ((a-pnt1 (pnt (/ (- my-width) 2) 0 0))
-	 (a-pnt2 (pnt (/ (- my-width) 2) (/ (- my-thickness) 4) 0))
-	 (a-pnt3 (pnt 0 (/ (- my-thickness) 2) 0))
-	 (a-pnt4 (pnt (/ my-width 2) (/ (- my-thickness) 4) 0))
-	 (a-pnt5 (pnt (/ my-width 2) 0 0))
+  (let* ((a-pnt1 (gp:pnt (/ (- my-width) 2) 0 0))
+	 (a-pnt2 (gp:pnt (/ (- my-width) 2) (/ (- my-thickness) 4) 0))
+	 (a-pnt3 (gp:pnt 0 (/ (- my-thickness) 2) 0))
+	 (a-pnt4 (gp:pnt (/ my-width 2) (/ (- my-thickness) 4) 0))
+	 (a-pnt5 (gp:pnt (/ my-width 2) 0 0))
 	 (a-arc-of-circle (value (make-instance 'gc-make-arc-of-circle :P1 a-pnt2 :P2 a-pnt3 :P3 a-pnt4)))
 	 (a-segment1 (value (make-instance 'gc-make-segment :P1 a-pnt1 :P2 a-pnt2)))
 	 (a-segment2 (value (make-instance 'gc-make-segment :P1 a-pnt4 :P2 a-pnt5)))
@@ -47,11 +47,11 @@
 	 (edge2 (edge (make-instance 'BRep-Builder-API-Make-Edge :L a-arc-of-circle)))
 	 (edge3 (edge (make-instance 'BRep-Builder-API-Make-Edge :L a-segment2)))
 	 (a-wire (wire (make-instance 'BRep-Builder-API-Make-Wire :E1 edge1 :E2 edge2 :E3 edge3)))
-	 (a-origin (pnt 0 0 0))
-	 (x-dir (dir 1 0 0))
-	 (x-axis (ax1 a-origin x-dir))
-	 (a-trsf (gp::make-trsf :ptr (_wrap_new_gp_Trsf__SWIG_0))))
-    (gp::set-mirror a-trsf x-axis)
+	 (a-origin (gp:pnt 0 0 0))
+	 (x-dir (gp:dir 1 0 0))
+	 (x-axis (gp:ax1 a-origin x-dir))
+	 (a-trsf (gp:make-trsf :ptr (_wrap_new_gp_Trsf__SWIG_0))))
+    (setf (mirror a-trsf) x-axis)
     (let ((a-mirrored-wire (shape (make-instance 'BRep-Builder-API-Transform :S a-wire :Trsf a-trsf)))
 	  (make-wire (make-instance 'BRep-Builder-API-Make-Wire)))
       (add make-wire a-wire)
@@ -59,7 +59,7 @@
       (let* ((my-body
 	      (shape (make-instance 'BRep-Prim-API-Make-prism :baseShape
 				    (face (make-instance 'Brep-Builder-API-Make-Face :W (wire make-wire)))
-				    :extrudeDirection (vec 0 0 my-height))))
+				    :extrudeDirection (gp:vec 0 0 my-height))))
 	     (mk-fillet	(make-instance 'BRep-Fillet-API-Make-Fillet :shape my-body)))
 	(let ((explorer (make-instance 'Top-Exp-Explorer :S my-body :ToFind TopAbs_EDGE))
 	      (radius (coerce (/ my-thickness 12) 'double-float)))
@@ -71,9 +71,9 @@
 		
 	(setq my-body (shape mk-fillet))
 		
-	(let* ((neck-location (pnt 0 0 my-height))
-	       (neck-axis (dir 0 0 1))
-	       (neck-ax2 (gp::make-ax2 :ptr (_wrap_new_gp_Ax2__SWIG_1 (ptr neck-location) (ptr neck-axis))))
+	(let* ((neck-location (gp:pnt 0 0 my-height))
+	       (neck-axis (gp:dir 0 0 1))
+	       (neck-ax2 (gp:make-ax2 :ptr (_wrap_new_gp_Ax2__SWIG_2 (ptr neck-location) (ptr neck-axis))))
 	       (my-neck-radius (coerce (/ my-thickness 4) 'double-float))
 	       (my-neck-height (coerce (/ my-height 10) 'double-float))
 	       (mk-cylinder (make-instance 'BRep-Prim-API-Make-Cylinder
@@ -109,9 +109,9 @@
 		  
 	  (let* ((a-cyl1 (make-instance 'Geom-Cylindrical-Surface :A2 neck-ax2 :Radius (* my-neck-radius 0.99d0)))
 		 (a-cyl2 (make-instance 'Geom-Cylindrical-Surface :A2 neck-ax2 :Radius (* my-neck-radius 1.05d0)))
-		 (a-pnt (pnt2d (* 2 pi) (/ my-neck-height 2)))
-		 (a-dir (dir2d (* 2 pi) (/ my-neck-height 4)))
-		 (an-ax2d (ax2d a-pnt a-dir))
+		 (a-pnt (gp:pnt2d (* 2 pi) (/ my-neck-height 2)))
+		 (a-dir (gp:dir2d (* 2 pi) (/ my-neck-height 4)))
+		 (an-ax2d (gp:ax2d a-pnt a-dir))
 		 (a-major (* 2 pi))
 		 (a-minor (/ my-neck-height 10.0d0))
 		 (an-ellipse1 (make-instance 'Geom2d-Ellipse :MajorAxis an-ax2d :MajorRadius a-major :MinorRadius a-minor))

@@ -66,3 +66,15 @@
 	(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-surface))
       :dont-save t)
      surface))
+
+(defmacro with-geom2d-vector (&body ff-call)
+  (let ((pointer-sym (gensym "POINTER-")))
+    `(let* ((,pointer-sym ,@ff-call)
+	    (instance (ecase (_wrap_Geom2d_Vector_GeometryType ,pointer-sym)
+			(312 (allocate-instance (load-time-value (find-class 'geom2d-vector-with-magnitude))))
+			(313 (allocate-instance (load-time-value (find-class 'geom2d-direction)))))))
+       (setf (ff-pointer instance) ,pointer-sym)
+       (sb-ext:finalize instance
+			(lambda ()
+			  (_wrap_Handle_MMgt_TShared_DecrementRefCounter ,pointer-sym)))
+       instance)))

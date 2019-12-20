@@ -15,13 +15,13 @@
 		    (typep D 'double-float)
 		    (null Ang)
 		    Relative-present-p)
-	       (_wrap_new_BRepMesh_IncrementalMesh__SWIG_2 (ff-pointer S) D (if Relative 1 0)))
+	       (_wrap_new_BRepMesh_IncrementalMesh__SWIG_2 (ff-pointer S) D Relative))
 	      
 	      ((and (typep S 'topods-shape)
 		    (typep D 'double-float)
 		    (typep Ang 'double-float)
 		    relative-present-p)
-	       (_wrap_new_BrepMesh_IncrementalMesh__SWIG_1 (ff-pointer S) D (if Relative 1 0) Ang))
+	       (_wrap_new_BrepMesh_IncrementalMesh__SWIG_1 (ff-pointer S) D Relative Ang))
 	      
 	      (t (error "Invalid arguments to initialize-instance of BRepMesh_IncrementalMesh."))))
   (ff-pointer-finalize obj #'_wrap_delete_BRepMesh_IncrementalMesh)

@@ -65,12 +65,21 @@
 
 ;;
 
+(defclass geom2d-transformation (mmgt-tshared) ())
 
 (defclass geom2d-geometry (mmgt-tshared) ())
 
 (defclass geom2d-point (geom2d-geometry) ())
 
 (defclass geom2d-cartesian-point (geom2d-point) ())
+
+(defclass geom2d-vector (geom2d-geometry) ())
+
+(defclass geom2d-vector-with-magnitude (geom2d-vector) ())
+
+(defclass geom2d-direction (geom2d-vector) ())
+
+(defclass geom2d-axis-placement (geom2d-geometry) ())
 
 (defclass geom2d-curve (geom2d-geometry) ())
 
@@ -107,7 +116,11 @@
 
 (defclass geom-curve (geom-geometry) ())
 
-(defclass geom-trimmed-curve (geom-curve) ())
+(defclass geom-bounded-curve (geom-curve) ())
+
+(defclass geom-bezier-curve (geom-curve) ())
+
+(defclass geom-trimmed-curve (geom-bounded-curve) ())
 
 (defclass geom-surface (geom-geometry) ())
 
@@ -208,6 +221,8 @@
 ;;
 
 (defclass poly-triangulation (ff-pointer-mixin) ())
+
+(defclass poly-polygon-on-triangulation (ff-pointer-mixin) ())
 
 (defclass poly-triangle (ff-pointer-mixin) ())
 

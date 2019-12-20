@@ -1,6 +1,7 @@
 
 %{
 #include <Geom_Curve.hxx>
+#include <gp_GTrsf2d.hxx>
 #include <Geom_Surface.hxx>
 #include <Geom_Geometry.hxx>
 #include <Geom_BoundedCurve.hxx>
@@ -74,7 +75,7 @@
 %rename(Geom_Plane) Handle_Geom_Plane;
 
 
-class Handle_Geom_Geometry
+class Handle_Geom_Geometry : public Handle_MMgt_TShared
 {
   Handle_Geom_Geometry()=0;
 };
@@ -102,6 +103,9 @@ class Handle_Geom_Geometry
   void Translate (const gp_Pnt& P1, const gp_Pnt& P2) {
     (*self)->Translate(P1, P2);
   }
+  void Transform (const gp_Trsf& T) {
+    (*self)->Transform(T);
+  }
   Handle_Geom_Geometry Mirrored (const gp_Pnt& P) {
     return (*self)->Mirrored(P);
   }
@@ -126,6 +130,10 @@ class Handle_Geom_Geometry
   Handle_Geom_Geometry Translated (const gp_Pnt& P1, const gp_Pnt& P2) {
     return (*self)->Translated(P1, P2);
   }
+  Handle_Geom_Geometry Copy() {
+    return (*self)->Copy();
+  }
+    
 }
 
 class Handle_Geom_Curve: public Handle_Geom_Geometry
@@ -135,46 +143,60 @@ class Handle_Geom_Curve: public Handle_Geom_Geometry
 
 %extend Handle_Geom_Curve
 {
-  Standard_Real FirstParameter()
-  {
+  void Reverse() {
+    (*self)->Reverse();
+  }
+  Standard_Real ReversedParameter (const Standard_Real U) {
+    return (*self)->ReversedParameter(U);
+  }
+  Standard_Real TransformedParameter (const Standard_Real U, const gp_Trsf& T) {
+    return (*self)->TransformedParameter(U, T);
+  }
+  Standard_Real ParametricTransformation (const gp_Trsf& T) {
+    return (*self)->ParametricTransformation(T);
+  }
+  Handle_Geom_Curve Reversed() {
+    return (*self)->Reversed();
+  }
+  Standard_Real FirstParameter() {
     return (*self)->FirstParameter();
-  }
-  
-  Standard_Real LastParameter()
-  {
+  }  
+  Standard_Real LastParameter() {
     return (*self)->LastParameter();
-  }
-  
-  Standard_Boolean IsClosed()
-  {
+  }  
+  Standard_Boolean IsClosed() {
     return (*self)->IsClosed();
-  }
-  
-  Standard_Boolean IsPeriodic()
-  {
+  }  
+  Standard_Boolean IsPeriodic() {
     return (*self)->IsPeriodic();
-  }
-  
-  Standard_Real Period()
-  {
+  }  
+  Standard_Real Period() {
     return (*self)->Period();
   }
-  
-  void Reverse()
-  {
-    return (*self)->Reverse();
-  }	
-  
-  Standard_Real ReversedParameter(const Standard_Real U)
-  {
-    return (*self)->ReversedParameter(U);
-  }	
-  
-  gp_Pnt Value(const Standard_Real U)
-  {
+  GeomAbs_Shape Continuity() {
+    return (*self)->Continuity();
+  }
+  Standard_Boolean IsCN (const Standard_Integer N) {
+    return (*self)->IsCN(N);
+  }
+  void D0 (const Standard_Real U, gp_Pnt& P) {
+    (*self)->D0(U, P);
+  }
+  void D1 (const Standard_Real U, gp_Pnt& P, gp_Vec& V1) {
+    (*self)->D1(U, P, V1);
+  }
+  void D2 (const Standard_Real U, gp_Pnt& P, gp_Vec& V1, gp_Vec& V2) {
+    (*self)->D2(U, P, V1, V2);
+  }
+  void D3 (const Standard_Real U, gp_Pnt& P, gp_Vec& V1, gp_Vec& V2, gp_Vec& V3) {
+    (*self)->D3(U, P, V1, V2, V3);
+  }
+  gp_Vec DN (const Standard_Real U, const Standard_Integer N) {
+    return (*self)->DN(U, N);
+  }
+  gp_Pnt Value(const Standard_Real U) {
     return (*self)->Value(U);
   }
-  
   Standard_Integer GeometryType()
   {
     if (STANDARD_TYPE(Geom_BezierCurve) == (*self)->DynamicType())
@@ -226,76 +248,78 @@ class Handle_Geom_Surface: public Handle_Geom_Geometry
 
 %extend Handle_Geom_Surface
 {
-  gp_Pnt Value(const Standard_Real U,const Standard_Real V) const
-  {
-    return (*self)->Value(U, V);
+  void UReverse() {
+    (*self)->UReverse();
   }
-  
-  void Bounds(Standard_Real& U1,Standard_Real& U2,Standard_Real& V1,Standard_Real& V2) const
-  {
-    (*self)->Bounds(U1,U2,V1,V2);
+  Handle_Geom_Surface UReversed() {
+    return (*self)->UReversed();
   }
-	
-  Standard_Boolean IsUClosed() const
-  {
-    return (*self)->IsUClosed();
-  }
-  
-  Standard_Boolean IsVClosed() const
-  {
-    return (*self)->IsVClosed();
-  }
-  
-  Handle_Geom_Curve UIso(const Standard_Real U) const
-  {
-    return (*self)->UIso(U);
-  }
-  
-  Handle_Geom_Curve VIso(const Standard_Real V) const
-  {
-    return (*self)->VIso(V);
-  }
-  
-  void UReverse()
-  {
-    return (*self)->UReverse();
-  }
-  
-  Standard_Real UReversedParameter(const Standard_Real U)
-  {
+  Standard_Real UReversedParameter(const Standard_Real U) {
     return (*self)->UReversedParameter(U);
   }
-  
-  void VReverse()
-  {
-    return (*self)->VReverse();
+  void VReverse() {
+    (*self)->VReverse();
   }
-  
-  Standard_Real VReversedParameter(const Standard_Real V)
-  {
+  Standard_Real VReversedParameter(const Standard_Real V) {
     return (*self)->VReversedParameter(V);
   }
-  
-  Standard_Boolean IsUPeriodic()
-  {
+  void TransformParameters (Standard_Real& U, Standard_Real& V, const gp_Trsf& T) {
+    (*self)->TransformParameters(U, V, T);
+  }
+  gp_GTrsf2d ParametricTransformation (const gp_Trsf& T) {
+    return (*self)->ParametricTransformation(T);
+  }
+  void Bounds (Standard_Real& U1, Standard_Real& U2, Standard_Real& V1, Standard_Real& V2) {
+    (*self)->Bounds(U1, U2, V1, V2);
+  }
+  Standard_Boolean IsUClosed() {
+    return (*self)->IsUClosed();
+  }  
+  Standard_Boolean IsVClosed() {
+    return (*self)->IsVClosed();
+  }
+  Standard_Boolean IsUPeriodic() {
     return (*self)->IsUPeriodic();
-  }
-  
-  Standard_Real UPeriod()
-  {
+  }  
+  Standard_Real UPeriod() {
     return (*self)->UPeriod();
-  }
-  
-  Standard_Boolean IsVPeriodic()
-  {
+  }  
+  Standard_Boolean IsVPeriodic() {
     return (*self)->IsVPeriodic();
-  }
-  
-  Standard_Real VPeriod()
-  {
+  }  
+  Standard_Real VPeriod() {
     return (*self)->VPeriod();
   }
-  
+  Handle_Geom_Curve UIso(const Standard_Real U) {
+    return (*self)->UIso(U);
+  }
+  Handle_Geom_Curve VIso(const Standard_Real V) {
+    return (*self)->VIso(V);
+  }
+  GeomAbs_Shape Continuity() {
+    return (*self)->Continuity();
+  }
+  Standard_Boolean IsCNu (const Standard_Integer N) {
+    return (*self)->IsCNu(N);
+  }
+  Standard_Boolean IsCNv (const Standard_Integer N) {
+    return (*self)->IsCNv(N);
+  }
+  void D0 (const Standard_Real U, const Standard_Real V, gp_Pnt& P) {
+    (*self)->D0(U, V, P);
+  }
+  void D1 (const Standard_Real U, const Standard_Real V, gp_Pnt& P, gp_Vec& D1U, gp_Vec& D1V) {
+    (*self)->D1(U, V, P, D1U, D1V);
+  }
+  void D3 (const Standard_Real U, const Standard_Real V, gp_Pnt& P, gp_Vec& D1U, gp_Vec& D1V, gp_Vec& D2U, gp_Vec& D2V, gp_Vec& D2UV, gp_Vec& D3U, gp_Vec& D3V, gp_Vec& D3UUV, gp_Vec& D3UVV) {
+    (*self)->D3(U, V, P, D1U, D1V, D2U, D2V, D2UV, D3U, D3V, D3UUV, D3UVV);
+  }
+  gp_Vec DN (const Standard_Real U, const Standard_Real V, const Standard_Integer Nu, const Standard_Integer Nv) {
+    return (*self)->DN(U, V, Nu, Nv);
+  }
+  gp_Pnt Value(const Standard_Real U,const Standard_Real V) {
+    return (*self)->Value(U, V);
+  }  
   Standard_Integer GeometryType()
   {
     if (STANDARD_TYPE(Geom_BezierSurface) == (*self)->DynamicType())
@@ -354,16 +378,12 @@ class Handle_Geom_BoundedCurve : public Handle_Geom_Curve
 
 %extend Handle_Geom_BoundedCurve
 {
-	gp_Pnt EndPoint()
-	{
-		return (*self)->EndPoint();
+	gp_Pnt EndPoint()	{
+	  return (*self)->EndPoint();
+	}	
+	gp_Pnt StartPoint() {
+	  return (*self)->StartPoint();
 	}
-	
-	gp_Pnt StartPoint()
-	{
-		return (*self)->StartPoint();
-	}
-
 }
 
 class Handle_Geom_Conic : public Handle_Geom_Curve
@@ -373,36 +393,33 @@ class Handle_Geom_Conic : public Handle_Geom_Curve
 
 %extend Handle_Geom_Conic
 {
-	gp_Ax1 Axis()
-	{
-		return (*self)->Axis();
-	}
-	
-	Standard_Real Eccentricity()
-	{
-		return (*self)->Eccentricity();
-	}
-
-	gp_Pnt Location()
-	{
-		return (*self)->Location();
-	}
-
-	gp_Ax2 Position()
-	{
-		return (*self)->Position();
-	}
-	
-	gp_Ax1 XAxis()
-	{
-		return (*self)->XAxis();
-	}
-	
-	gp_Ax1 YAxis()
-	{
-		return (*self)->YAxis();
-	}
-	
+  void SetAxis (const gp_Ax1& A1) {
+    (*self)->SetAxis(A1);
+  }
+  void SetLocation (const gp_Pnt& P) {
+    (*self)->SetLocation(P);
+  }
+  void SetPosition (const gp_Ax2& A2) {
+    (*self)->SetPosition(A2);
+  }
+  gp_Ax1 Axis() {
+    return (*self)->Axis();
+  }
+  Standard_Real Eccentricity() {
+    return (*self)->Eccentricity();
+  }
+  gp_Pnt Location() {
+    return (*self)->Location();
+  }
+  gp_Ax2 Position() {
+    return (*self)->Position();
+  }
+  gp_Ax1 XAxis() {
+    return (*self)->XAxis();
+  }
+  gp_Ax1 YAxis() {
+    return (*self)->YAxis();
+  }
 }
 
 class Handle_Geom_BoundedSurface : public Handle_Geom_Surface
@@ -457,60 +474,75 @@ class Handle_Geom_SweptSurface : public Handle_Geom_Surface
 
 class Handle_Geom_BezierCurve : public Handle_Geom_BoundedCurve {
     Handle_Geom_BezierCurve()=0;
-};
 
+};
 
 %extend Handle_Geom_BezierCurve
 {
+  Handle_Geom_BezierCurve(const TColgp_Array1OfPnt& CurvePoles){
+    return new Handle_Geom_BezierCurve(new Geom_BezierCurve(CurvePoles));
+  }
+  Handle_Geom_BezierCurve(const TColgp_Array1OfPnt& CurvePoles, const TColStd_Array1OfReal& PoleWeights){
+    return new Handle_Geom_BezierCurve(new Geom_BezierCurve(CurvePoles, PoleWeights));
+  }
+  void Increase (const Standard_Integer Degree) {
+    (*self)->Increase(Degree);
+  }
+  void InsertPoleAfter (const Standard_Integer Index, const gp_Pnt& P) {
+    (*self)->InsertPoleAfter(Index, P);
+  }
+  void InsertPoleAfter (const Standard_Integer Index, const gp_Pnt& P, const Standard_Real Weight) {
 
-    Handle_Geom_BezierCurve(const TColgp_Array1OfPnt& CurvePoles, const TColStd_Array1OfReal& PoleWeights){
-          return new Handle_Geom_BezierCurve(new Geom_BezierCurve(CurvePoles, PoleWeights));
-    }
-
-    Handle_Geom_BezierCurve(const TColgp_Array1OfPnt& CurvePoles){
-          return new Handle_Geom_BezierCurve(new Geom_BezierCurve(CurvePoles));
-    }
-
-    Standard_Boolean IsPeriodic()
-    {
-        return (*self)->IsPeriodic();
-    }
-    
-    Standard_Boolean IsRational()
-	{
-		return (*self)->IsRational();
-	}
-
-    Standard_Integer Degree()
-	{
-		return (*self)->Degree();
-	}
-
-    void Resolution(Standard_Real tolerance3d, Standard_Real& toleranceU)
-    {
-        return (*self)->Resolution(tolerance3d, toleranceU);
-    }
-
-    Standard_Integer NbPoles()
-    {
-        return (*self)->NbPoles();
-    }
-   
-    gp_Pnt Pole(const Standard_Integer Index)
-    {
-        return (*self)->Pole(Index);
-    }
-
-    Standard_Real Weight(const Standard_Integer Index)
-    {
-        return (*self)->Weight(Index);
-    }
-
-//    void getControlPoints(TColgp_Array1OfPnt& outArray)
-//    {
-//        (*self)->Poles(outArray);
-//    }
-    
+    (*self)->InsertPoleAfter(Index, P, Weight);
+  }
+  void InsertPoleBefore (const Standard_Integer Index, const gp_Pnt& P) {
+    (*self)->InsertPoleBefore(Index, P);
+  }
+  void InsertPoleBefore (const Standard_Integer Index, const gp_Pnt& P, const Standard_Real Weight) {
+    (*self)->InsertPoleBefore(Index, P, Weight);
+  }
+  void RemovePole (const Standard_Integer Index) {
+    (*self)->RemovePole(Index);
+  }
+  void Segment (const Standard_Real U1, const Standard_Real U2) {
+    (*self)->Segment(U1, U2);
+  }
+  void SetPole (const Standard_Integer Index, const gp_Pnt& P) {
+    (*self)->SetPole(Index, P);
+  }
+  void SetPole (const Standard_Integer Index, const gp_Pnt& P, const Standard_Real Weight) {
+    (*self)->SetPole(Index, P, Weight);
+  }
+  void SetWeight (const Standard_Integer Index, const Standard_Real Weight) {
+    (*self)->SetWeight(Index, Weight);
+  }
+  Standard_Boolean IsRational() {
+    return (*self)->IsRational();
+  }
+  Standard_Integer Degree() {
+    return (*self)->Degree();
+  }
+  Standard_Integer NbPoles() {
+    return (*self)->NbPoles();
+  }
+  gp_Pnt Pole(const Standard_Integer Index) {
+    return (*self)->Pole(Index);
+  }
+  const TColgp_Array1OfPnt& Poles () {
+    return (*self)->Poles();
+  }
+  Standard_Real Weight(const Standard_Integer Index) {
+    return (*self)->Weight(Index);
+  }
+  const TColStd_Array1OfReal* Weights() {
+    return (*self)->Weights();
+  }
+  void Resolution(Standard_Real Tolerance3d, Standard_Real& UTolerance) {
+    return (*self)->Resolution(Tolerance3d, UTolerance);
+  }
+  static Standard_Integer MaxDegree() {
+    return Geom_BezierCurve::MaxDegree();
+  }
 }
 
 
@@ -992,12 +1024,9 @@ class Handle_Geom_BezierSurface : public Handle_Geom_BoundedSurface {
     {
         return (*self)->IsVRational();
     }
-    
-    Standard_Integer MaxDegree()
-    {
-        return (*self)->MaxDegree();
+    static Standard_Integer MaxDegree() {
+      return Geom_BezierSurface::MaxDegree();
     }
-    
     void Resolution(Standard_Real tolerance3d, Standard_Real& toleranceU, Standard_Real& toleranceV)
     {
         return (*self)->Resolution(tolerance3d, toleranceU, toleranceV);
@@ -1158,12 +1187,9 @@ class Handle_Geom_BSplineSurface : public Handle_Geom_BoundedSurface  {
     //{
     //    return (*self)->Weights(outArray);
     //}
-    
-    Standard_Integer getMaxDegree()
-    {
-        return (*self)->MaxDegree();
+    static Standard_Integer MaxDegree() {
+      return Geom_BSplineSurface::MaxDegree();
     }
-
     void Resolution(Standard_Real tolerance3d, Standard_Real& toleranceU, Standard_Real& toleranceV)
     {
       (*self)->Resolution(tolerance3d, toleranceU, toleranceV);

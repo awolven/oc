@@ -5,7 +5,7 @@
     (_wrap_Geom2d_Point_Coord (ff-pointer point) p-x p-y)
     (values (mem-aref p-x :double) (mem-aref p-y :double))))
 
-(defmethod point-pnt2d ((point geom2d-point))
+(defmethod processor ((point geom2d-point))
   (let* ((pointer (_wrap_Geom2d_Point_Pnt2d (ff-pointer point)))
 	 (struct (gp::make-pnt2d :ptr pointer)))
     (sb-ext:finalize struct (lambda () (_wrap_delete_gp_Pnt2d pointer)) :dont-save t)

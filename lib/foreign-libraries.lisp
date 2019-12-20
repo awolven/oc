@@ -25,7 +25,7 @@
    "TKFillet"
    "TKIGES"
    ;; "TKV3d"
-   "oc"
+   ;;"oc"
    ))
 
 #+darwin
@@ -91,7 +91,7 @@
    "oc"))
 
 (defparameter *lib-path*
-  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/windows/debug/" #+darwin "lib/MacOSX/debug/")))
+  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/Windows/debug/" #+darwin "lib/MacOSX/debug/")))
 
 (defparameter *lib-extension*
   #+windows ".dll"
@@ -105,4 +105,5 @@
 
 (load-oc-libraries)
 
-;;(cffi:load-foreign-library "C:/Users/awolven/Documents/Visual Studio 2015/Projects/oc/x64/Debug/oc.dll")
+(cffi:load-foreign-library "C:/Users/awolven/Documents/Visual Studio 2015/Projects/oc/x64/Debug/oc.dll")
+

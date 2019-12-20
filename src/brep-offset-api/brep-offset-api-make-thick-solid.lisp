@@ -1,29 +1,35 @@
 (in-package :oc)
 
 (defmethod initialize-instance :after ((object brep-offset-api-make-thick-solid) &rest initargs
-				       &key S ClosingFaces Offset Tol Mode Intersection
-					 SelfInter Join RemoveIntEdges &allow-other-keys)
+				       &key S ClosingFaces Offset Tol Mode
+					 (Intersection nil Intersection-supplied-p)
+					 (SelfInter nil SelfInter-supplied-p)
+					 (Join nil Join-supplied-p)
+					 (RemoveIntEdges nil RemoveIntEdges-supplied-p)
+					 &allow-other-keys)
   (let ((pointer
-	 (cond ((and S ClosingFaces Offset Tol Mode Intersection SelfInter Join RemoveIntEdges)
+	 (cond ((and S ClosingFaces Offset Tol Mode Intersection-supplied-p
+		     SelfInter-supplied-p Join-supplied-p RemoveIntEdges-supplied-p)
 		(_wrap_new_BrepOffsetAPI_MakeThickSolid__SWIG_1 (ff-pointer S) (ff-pointer ClosingFaces)
 								(coerce Offset 'double-float) (coerce Tol 'double-float)
-								Mode (if Intersection (if (eq Intersection 0) 0 1) 0)
-								(if SelfInter (if (eq SelfInter 0) 0 1) 0) Join
-								(if RemoveIntEdges (if (eq RemoveIntEdges 0) 0 1) 0)))
-	       ((and S ClosingFaces Offset Tol Mode Intersection SelfInter Join)
+								Mode Intersection
+								SelfInter Join
+								RemoveIntEdges))
+	       ((and S ClosingFaces Offset Tol Mode Intersection-supplied-p
+		     SelfInter-supplied-p Join-supplied-p)
 		(_wrap_new_BrepOffsetAPI_MakeThickSolid__SWIG_2 (ff-pointer S) (ff-pointer ClosingFaces)
 								(coerce Offset 'double-float) (coerce Tol 'double-float)
-								Mode (if Intersection (if (eq Intersection 0) 0 1) 0)
-								(if SelfInter (if (eq SelfInter 0) 0 1) 0) Join))
-	       ((and S ClosingFaces Offset Tol Mode Intersection SelfInter)
+								Mode Intersection
+								SelfInter Join))
+	       ((and S ClosingFaces Offset Tol Mode Intersection-supplied-p SelfInter-supplied-p)
 		(_wrap_new_BrepOffsetAPI_MakeThickSolid__SWIG_3 (ff-pointer S) (ff-pointer ClosingFaces)
 								(coerce Offset 'double-float) (coerce Tol 'double-float)
-								Mode (if Intersection (if (eq Intersection 0) 0 1) 0)
-								(if SelfInter (if (eq SelfInter 0) 0 1) 0)))
-	       ((and S ClosingFaces Offset Tol Mode Intersection)
+								Mode Intersection
+								SelfInter))
+	       ((and S ClosingFaces Offset Tol Mode Intersection-supplied-p)
 		(_wrap_new_BrepOffsetAPI_MakeThickSolid__SWIG_4 (ff-pointer S) (ff-pointer ClosingFaces)
 								(coerce Offset 'double-float) (coerce Tol 'double-float)
-								Mode (if Intersection (if (eq Intersection 0) 0 1) 0)))
+								Mode Intersection))
 	       ((and S ClosingFaces Offset Tol Mode)
 		(_wrap_new_BrepOffsetAPI_MakeThickSolid__SWIG_5 (ff-pointer S) (ff-pointer ClosingFaces)
 								(coerce Offset 'double-float) (coerce Tol 'double-float)

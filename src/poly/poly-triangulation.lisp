@@ -1,12 +1,14 @@
 (in-package :oc)
 
 (defmethod initialize-instance :after ((obj poly-triangulation) &rest initargs
-				       &key nbNodes nbTriangles UVNodes &allow-other-keys)
+				       &key nbNodes nbTriangles
+					 UVNodes
+					 &allow-other-keys)
   (declare (ignore initargs))
   (assert (typep nbNodes 'integer))
   (assert (typep nbTriangles 'integer))
   (setf (ff-pointer obj)
-	(_wrap_new_Poly_Triangulation nbNodes nbTriangles (if UVNodes 1 0)))
+	(_wrap_new_Poly_Triangulation nbNodes nbTriangles UvNodes))
   (ff-pointer-finalize obj #'_wrap_delete_Poly_Triangulation)
   (values))
 

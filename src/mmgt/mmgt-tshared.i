@@ -11,6 +11,7 @@ class MMgt_TShared
 class Handle_MMgt_TShared
 {
   Handle_MMgt_TShared()=0;
+
 };
 
 %extend Handle_MMgt_TShared
@@ -23,6 +24,9 @@ class Handle_MMgt_TShared
   }
   Standard_Integer DecrementRefCounter() {
     return (* self)->DecrementRefCounter();
+  }
+  MMgt_TShared *get() {
+    return self->get();
   }
 }
 
