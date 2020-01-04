@@ -10333,6 +10333,217 @@
 (cffi:defcfun ("_wrap_delete_GCE2d_MakeSegment" _wrap_delete_GCE2d_MakeSegment) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_new_Bnd_Box" _wrap_new_Bnd_Box) :pointer)
+
+(cffi:defcfun ("_wrap_Bnd_Box_SetWhole" _wrap_Bnd_Box_SetWhole) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_SetVoid" _wrap_Bnd_Box_SetVoid) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Set__SWIG_0" _wrap_Bnd_Box_Set__SWIG_0) :void
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Set__SWIG_1" _wrap_Bnd_Box_Set__SWIG_1) :void
+  (self :pointer)
+  (P :pointer)
+  (D :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Update" _wrap_Bnd_Box_Update) :void
+  (self :pointer)
+  (aXmin :double)
+  (aYmin :double)
+  (aZmin :double)
+  (aXmax :double)
+  (aYmax :double)
+  (aZmax :double))
+
+(cffi:defcfun ("_wrap_Bnd_Box_GetGap" _wrap_Bnd_Box_GetGap) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_SetGap" _wrap_Bnd_Box_SetGap) :void
+  (self :pointer)
+  (Tol :double))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Enlarge" _wrap_Bnd_Box_Enlarge) :void
+  (self :pointer)
+  (Tol :double))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Get" _wrap_Bnd_Box_Get) :void
+  (self :pointer)
+  (theXmin :pointer)
+  (theYmin :pointer)
+  (theZmin :pointer)
+  (theXmax :pointer)
+  (theYmax :pointer)
+  (theZmax :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_CornerMin" _wrap_Bnd_Box_CornerMin) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_CornerMax" _wrap_Bnd_Box_CornerMax) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_OpenXmin" _wrap_Bnd_Box_OpenXmin) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_OpenXmax" _wrap_Bnd_Box_OpenXmax) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_OpenYmin" _wrap_Bnd_Box_OpenYmin) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_OpenYmax" _wrap_Bnd_Box_OpenYmax) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_OpenZmin" _wrap_Bnd_Box_OpenZmin) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_OpenZmax" _wrap_Bnd_Box_OpenZmax) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOpenXmin" _wrap_Bnd_Box_IsOpenXmin) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOpenXmax" _wrap_Bnd_Box_IsOpenXmax) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOpenYmin" _wrap_Bnd_Box_IsOpenYmin) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOpenYmax" _wrap_Bnd_Box_IsOpenYmax) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOpenZmin" _wrap_Bnd_Box_IsOpenZmin) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOpenZmax" _wrap_Bnd_Box_IsOpenZmax) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsWhole" _wrap_Bnd_Box_IsWhole) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsVoid" _wrap_Bnd_Box_IsVoid) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsXThin" _wrap_Bnd_Box_IsXThin) :bool
+  (self :pointer)
+  (tol :double))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsYThin" _wrap_Bnd_Box_IsYThin) :bool
+  (self :pointer)
+  (tol :double))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsZThin" _wrap_Bnd_Box_IsZThin) :bool
+  (self :pointer)
+  (tol :double))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsThin" _wrap_Bnd_Box_IsThin) :bool
+  (self :pointer)
+  (tol :double))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Transformed" _wrap_Bnd_Box_Transformed) :pointer
+  (self :pointer)
+  (t_arg1 :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Add__SWIG_0" _wrap_Bnd_Box_Add__SWIG_0) :void
+  (self :pointer)
+  (Other :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Add__SWIG_1" _wrap_Bnd_Box_Add__SWIG_1) :void
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Add__SWIG_2" _wrap_Bnd_Box_Add__SWIG_2) :void
+  (self :pointer)
+  (P :pointer)
+  (D :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Add__SWIG_3" _wrap_Bnd_Box_Add__SWIG_3) :void
+  (self :pointer)
+  (D :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOut__SWIG_0" _wrap_Bnd_Box_IsOut__SWIG_0) :bool
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOut__SWIG_1" _wrap_Bnd_Box_IsOut__SWIG_1) :bool
+  (self :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOut__SWIG_2" _wrap_Bnd_Box_IsOut__SWIG_2) :bool
+  (self :pointer)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOut__SWIG_3" _wrap_Bnd_Box_IsOut__SWIG_3) :bool
+  (self :pointer)
+  (Other :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOut__SWIG_4" _wrap_Bnd_Box_IsOut__SWIG_4) :bool
+  (self :pointer)
+  (Other :pointer)
+  (t_arg2 :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOut__SWIG_5" _wrap_Bnd_Box_IsOut__SWIG_5) :bool
+  (self :pointer)
+  (T1 :pointer)
+  (Other :pointer)
+  (T2 :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_IsOut__SWIG_6" _wrap_Bnd_Box_IsOut__SWIG_6) :bool
+  (self :pointer)
+  (P1 :pointer)
+  (P2 :pointer)
+  (D :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Distance" _wrap_Bnd_Box_Distance) :double
+  (self :pointer)
+  (Other :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_Dump" _wrap_Bnd_Box_Dump) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Bnd_Box_SquareExtent" _wrap_Bnd_Box_SquareExtent) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Bnd_Box" _wrap_delete_Bnd_Box) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BndLib_Add3dCurve_Add__SWIG_0" _wrap_BndLib_Add3dCurve_Add__SWIG_0) :void
+  (C :pointer)
+  (Tol :double)
+  (B :pointer))
+
+(cffi:defcfun ("_wrap_BndLib_Add3dCurve_Add__SWIG_1" _wrap_BndLib_Add3dCurve_Add__SWIG_1) :void
+  (C :pointer)
+  (U1 :double)
+  (U2 :double)
+  (Tol :double)
+  (B :pointer))
+
+(cffi:defcfun ("_wrap_BndLib_Add3dCurve_AddOptimal__SWIG_0" _wrap_BndLib_Add3dCurve_AddOptimal__SWIG_0) :void
+  (C :pointer)
+  (Tol :double)
+  (B :pointer))
+
+(cffi:defcfun ("_wrap_BndLib_Add3dCurve_AddOptimal__SWIG_1" _wrap_BndLib_Add3dCurve_AddOptimal__SWIG_1) :void
+  (C :pointer)
+  (U1 :double)
+  (U2 :double)
+  (Tol :double)
+  (B :pointer))
+
+(cffi:defcfun ("_wrap_BndLib_Add3dCurve_AddGenCurv" _wrap_BndLib_Add3dCurve_AddGenCurv) :void
+  (C :pointer)
+  (UMin :double)
+  (UMax :double)
+  (Tol :double)
+  (B :pointer))
+
+(cffi:defcfun ("_wrap_delete_BndLib_Add3dCurve" _wrap_delete_BndLib_Add3dCurve) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_Adaptor2d_Curve2d_Value" _wrap_Adaptor2d_Curve2d_Value) :pointer
   (self :pointer)
   (U :double))
@@ -10588,6 +10799,150 @@
 (cffi:defcfun ("_wrap_delete_Adaptor2d_HCurve2d" _wrap_delete_Adaptor2d_HCurve2d) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_Adaptor3d_Curve_Value" _wrap_Adaptor3d_Curve_Value) :pointer
+  (self :pointer)
+  (U :double))
+
+(cffi:defcfun ("_wrap_delete_Adaptor3d_Curve" _wrap_delete_Adaptor3d_Curve) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Curve__SWIG_0" _wrap_new_GeomAdaptor_Curve__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Curve__SWIG_1" _wrap_new_GeomAdaptor_Curve__SWIG_1) :pointer
+  (C :pointer))
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Curve__SWIG_2" _wrap_new_GeomAdaptor_Curve__SWIG_2) :pointer
+  (C :pointer)
+  (UFirst :double)
+  (ULast :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Load__SWIG_0" _wrap_GeomAdaptor_Curve_Load__SWIG_0) :void
+  (self :pointer)
+  (C :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Load__SWIG_1" _wrap_GeomAdaptor_Curve_Load__SWIG_1) :void
+  (self :pointer)
+  (C :pointer)
+  (UFirst :double)
+  (ULast :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Curve" _wrap_GeomAdaptor_Curve_Curve) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_FirstParameter" _wrap_GeomAdaptor_Curve_FirstParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_LastParameter" _wrap_GeomAdaptor_Curve_LastParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Continuity" _wrap_GeomAdaptor_Curve_Continuity) GeomAbs_Shape
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_NbIntervals" _wrap_GeomAdaptor_Curve_NbIntervals) :int
+  (self :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Intervals" _wrap_GeomAdaptor_Curve_Intervals) :void
+  (self :pointer)
+  (t_arg1 :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Trim" _wrap_GeomAdaptor_Curve_Trim) :pointer
+  (self :pointer)
+  (First :double)
+  (Last :double)
+  (Tol :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_IsClosed" _wrap_GeomAdaptor_Curve_IsClosed) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_IsPeriodic" _wrap_GeomAdaptor_Curve_IsPeriodic) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Period" _wrap_GeomAdaptor_Curve_Period) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Value" _wrap_GeomAdaptor_Curve_Value) :pointer
+  (self :pointer)
+  (U :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_D0" _wrap_GeomAdaptor_Curve_D0) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_D1" _wrap_GeomAdaptor_Curve_D1) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_D2" _wrap_GeomAdaptor_Curve_D2) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_D3" _wrap_GeomAdaptor_Curve_D3) :void
+  (self :pointer)
+  (U :double)
+  (P :pointer)
+  (V1 :pointer)
+  (V2 :pointer)
+  (V3 :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_DN" _wrap_GeomAdaptor_Curve_DN) :pointer
+  (self :pointer)
+  (U :double)
+  (N :int))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Resolution" _wrap_GeomAdaptor_Curve_Resolution) :double
+  (self :pointer)
+  (R3d :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_GetType" _wrap_GeomAdaptor_Curve_GetType) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Line" _wrap_GeomAdaptor_Curve_Line) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Circle" _wrap_GeomAdaptor_Curve_Circle) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Ellipse" _wrap_GeomAdaptor_Curve_Ellipse) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Hyperbola" _wrap_GeomAdaptor_Curve_Hyperbola) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Parabola" _wrap_GeomAdaptor_Curve_Parabola) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Degree" _wrap_GeomAdaptor_Curve_Degree) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_IsRational" _wrap_GeomAdaptor_Curve_IsRational) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_NbPoles" _wrap_GeomAdaptor_Curve_NbPoles) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_NbKnots" _wrap_GeomAdaptor_Curve_NbKnots) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_Bezier" _wrap_GeomAdaptor_Curve_Bezier) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_BSpline" _wrap_GeomAdaptor_Curve_BSpline) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Curve_OffsetCurve" _wrap_GeomAdaptor_Curve_OffsetCurve) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_GeomAdaptor_Curve" _wrap_delete_GeomAdaptor_Curve) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_0" _wrap_new_CPnts_UniformDeflection__SWIG_0) :pointer)
 
 (cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_1" _wrap_new_CPnts_UniformDeflection__SWIG_1) :pointer
@@ -10733,18 +11088,6 @@
   (self :pointer))
 
 (cffi:defcfun ("_wrap_delete_TopExp_Explorer" _wrap_delete_TopExp_Explorer) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_Bnd_Box" _wrap_new_Bnd_Box) :pointer)
-
-(cffi:defcfun ("_wrap_Bnd_Box_IsVoid" _wrap_Bnd_Box_IsVoid) :bool
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_Bnd_Box_get" _wrap_Bnd_Box_get) :void
-  (self :pointer)
-  (box :pointer))
-
-(cffi:defcfun ("_wrap_delete_Bnd_Box" _wrap_delete_Bnd_Box) :void
   (self :pointer))
 
 (cffi:defcfun ("_wrap_BRepBndLib_Add" _wrap_BRepBndLib_Add) :void

@@ -230,6 +230,10 @@
 
 ;;
 
+(defclass bnd-box (ff-pointer-mixin) ())
+
+;;
+
 (defclass adaptor2d-curve2d () ())
 
 (defclass geom2d-adaptor-curve (adaptor2d-curve2d ff-pointer-mixin) ())

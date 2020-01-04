@@ -1,0 +1,15 @@
+(in-package :oc)
+
+(defun bnd-lib-add-3d-curve (c tol b &rest args &key u1 u2)
+  (cond ((and (realp u1) (realp u2))
+	 (_wrap_BndLib_Add3dCurve_Add__SWIG_1 (ff-pointer c) u1 u2 tol (ff-pointer b)))
+	((and (null u1) (null u2))
+	 (_wrap_BndLib_Add3dCurve_Add__SWIG_0 (ff-pointer c) tol (ff-pointer b)))
+	(t (error "Invalid keyword arguments: ~S" args))))
+
+(defun bnd-lib-add-3d-curve-optimal (c tol b &rest args &key u1 u2)
+  (cond ((and (realp u1) (realp u2))
+	 (_wrap_BndLib_Add3dCurve_AddOptimal__SWIG_1 (ff-pointer c) u1 u2 tol (ff-pointer b)))
+	((and (null u1) (null u2))
+	 (_wrap_BndLib_Add3dCurve_AddOptimal__SWIG_0 (ff-pointer c) tol (ff-pointer b)))
+	(t (error "Invalid keyword arguments: ~S" args))))

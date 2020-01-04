@@ -2,8 +2,8 @@
 
 %nodefaultctor;
 
-%typemap(cin) bool ":int";
-%typemap(cout) bool ":int";
+%typemap(cin) bool ":bool";
+%typemap(cout) bool ":bool";
 %typemap(ctype) bool "bool";
 %typemap(out) bool "$result = (bool)$1;";
 %typemap(lispclass) bool "cl:boolean";
@@ -84,8 +84,10 @@
 %include "geom-api/geomapi.i";
 %include "gc/gc.i";
 %include "gce2d/gce2d.i";
-%include "cpnts/adaptor2d.i"
-#include "cpnts/adaptor3d.i"
+%include "bnd/bnd-box.i";
+%include "bnd-lib/bnd-lib.i";
+%include "cpnts/adaptor2d.i";
+%include "cpnts/adaptor3d.i";
 %include "cpnts/cpnts.i";
 
 %{
@@ -124,27 +126,6 @@ class TopExp_Explorer
 	Standard_Boolean More() const;
 	void Next() ;
 	const TopoDS_Shape& Current();
-};
-
-/**
- * Bnd_Box
- */
-%{#include "Bnd_Box.hxx"%}
-
-class Bnd_Box
-{
-	public:
-	Bnd_Box();
-	Standard_Boolean IsVoid() const;
-};
-
-%extend Bnd_Box
-{
-	void get(double box[6])
-	{
-		if(!self->IsVoid())
-			self->Get(box[0], box[1], box[2], box[3], box[4], box[5]);
-	}
 };
 
 /**

@@ -53,3 +53,13 @@
 
 (defmethod gp:divided ((v vec) scalar)
   (vec (/ (x v) scalar) (/ (y v) scalar) (/ (z v) scalar)))
+
+(defmethod oc:subtracted ((xyz1 vec) (xyz2 vec))
+  (let* ((p-result (oc::_wrap_gp_Vec_Subtracted (ptr xyz1) (ptr xyz2)))
+	 (result (make-vec :ptr p-result)))
+    (finalize result (lambda ()
+		       (oc::_wrap_delete_gp_Vec p-result)) :dont-save t)
+    result))
+
+(defmethod oc:multiply! ((xyz vec) (scalar real))
+  (oc::_wrap_gp_Vec_Multiply (ptr xyz) (coerce scalar 'double-float)))

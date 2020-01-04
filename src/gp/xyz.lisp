@@ -269,3 +269,10 @@
        
 (defmethod oc:dot ((xyz1 xyz) (xyz2 xyz))
   (xyz-dot xyz1 xyz2))
+
+(defmethod oc:subtracted ((xyz1 xyz) (xyz2 xyz))
+  (let* ((p-result (oc::_wrap_gp_XYZ_Subtracted (ptr xyz1) (ptr xyz2)))
+	 (result (make-xyz :ptr p-result)))
+    (finalize result (lambda ()
+		       (oc::_wrap_delete_gp_XYZ p-result)) :dont-save t)
+    result))

@@ -1,0 +1,23 @@
+(in-package :oc)
+
+(defmethod initialize-instance :after ((instance bnd-box) &rest initargs &key &allow-other-keys)
+  (declare (ignorable initargs))
+  (setf (ff-pointer instance) (_wrap_new_Bnd_Box))
+  (values))
+
+
+(defmethod bnd-box-bounds (bbox)
+  (with-foreign-objects ((&xmin :double)
+			 (&xmax :double)
+			 (&ymin :double)
+			 (&ymax :double)
+			 (&zmin :double)
+			 (&zmax :double))
+    ;; might need to check (not isvoid)
+    (_wrap_Bnd_Box_Get (ff-pointer bbox) &xmin &ymin &zmin &xmax &ymax &zmax)
+    (values (mem-aref &xmin :double)
+	    (mem-aref &ymin :double)
+	    (mem-aref &zmin :double)
+	    (mem-aref &xmax :double)
+	    (mem-aref &ymax :double)
+	    (mem-aref &zmax :double))))

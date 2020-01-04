@@ -88793,6 +88793,1760 @@ EXPORT void _wrap_delete_GCE2d_MakeSegment (GCE2d_MakeSegment *larg1) {
 
 
 
+#include <Bnd_Box.hxx>
+  
+EXPORT Bnd_Box *_wrap_new_Bnd_Box () {
+  Bnd_Box * lresult = (Bnd_Box *)0 ;
+  Bnd_Box *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Bnd_Box *)new Bnd_Box();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_Bnd_Box\n  * wrapname: _wrap_new_Bnd_Box\n  * fulldecl: Bnd_Box::Bnd_Box()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Bnd_Box *)0;
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_SetWhole (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetWhole();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_SetWhole\n  * wrapname: _wrap_Bnd_Box_SetWhole\n  * fulldecl: void Bnd_Box::SetWhole()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_SetVoid (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetVoid();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_SetVoid\n  * wrapname: _wrap_Bnd_Box_SetVoid\n  * fulldecl: void Bnd_Box::SetVoid()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Set__SWIG_0 (Bnd_Box *larg1, gp_Pnt *larg2) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Set((gp_Pnt const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Set\n  * wrapname: _wrap_Bnd_Box_Set__SWIG_0\n  * fulldecl: void Bnd_Box::Set(gp_Pnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Set__SWIG_1 (Bnd_Box *larg1, gp_Pnt *larg2, gp_Dir *larg3) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Dir *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Set((gp_Pnt const &)*arg2,(gp_Dir const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Set\n  * wrapname: _wrap_Bnd_Box_Set__SWIG_1\n  * fulldecl: void Bnd_Box::Set(gp_Pnt const &,gp_Dir const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Update (Bnd_Box *larg1, Standard_Real larg2, Standard_Real larg3, Standard_Real larg4, Standard_Real larg5, Standard_Real larg6, Standard_Real larg7) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  Standard_Real arg5 ;
+  Standard_Real arg6 ;
+  Standard_Real arg7 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  arg6 = larg6;
+  arg7 = larg7;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Update(arg2,arg3,arg4,arg5,arg6,arg7);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Update\n  * wrapname: _wrap_Bnd_Box_Update\n  * fulldecl: void Bnd_Box::Update(Standard_Real const,Standard_Real const,Standard_Real const,Standard_Real const,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Real _wrap_Bnd_Box_GetGap (Bnd_Box *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((Bnd_Box const *)arg1)->GetGap();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_GetGap\n  * wrapname: _wrap_Bnd_Box_GetGap\n  * fulldecl: Standard_Real Bnd_Box::GetGap() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_SetGap (Bnd_Box *larg1, Standard_Real larg2) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetGap(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_SetGap\n  * wrapname: _wrap_Bnd_Box_SetGap\n  * fulldecl: void Bnd_Box::SetGap(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Enlarge (Bnd_Box *larg1, Standard_Real larg2) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Enlarge(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Enlarge\n  * wrapname: _wrap_Bnd_Box_Enlarge\n  * fulldecl: void Bnd_Box::Enlarge(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Get (Bnd_Box *larg1, Standard_Real *larg2, Standard_Real *larg3, Standard_Real *larg4, Standard_Real *larg5, Standard_Real *larg6, Standard_Real *larg7) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real *arg2 = 0 ;
+  Standard_Real *arg3 = 0 ;
+  Standard_Real *arg4 = 0 ;
+  Standard_Real *arg5 = 0 ;
+  Standard_Real *arg6 = 0 ;
+  Standard_Real *arg7 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  arg6 = larg6;
+  arg7 = larg7;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((Bnd_Box const *)arg1)->Get(*arg2,*arg3,*arg4,*arg5,*arg6,*arg7);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Get\n  * wrapname: _wrap_Bnd_Box_Get\n  * fulldecl: void Bnd_Box::Get(Standard_Real &,Standard_Real &,Standard_Real &,Standard_Real &,Standard_Real &,Standard_Real &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT gp_Pnt *_wrap_Bnd_Box_CornerMin (Bnd_Box *larg1) {
+  gp_Pnt * lresult = (gp_Pnt *)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((Bnd_Box const *)arg1)->CornerMin();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_CornerMin\n  * wrapname: _wrap_Bnd_Box_CornerMin\n  * fulldecl: gp_Pnt Bnd_Box::CornerMin() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Pnt(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Pnt *)0;
+  }
+}
+
+
+EXPORT gp_Pnt *_wrap_Bnd_Box_CornerMax (Bnd_Box *larg1) {
+  gp_Pnt * lresult = (gp_Pnt *)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((Bnd_Box const *)arg1)->CornerMax();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_CornerMax\n  * wrapname: _wrap_Bnd_Box_CornerMax\n  * fulldecl: gp_Pnt Bnd_Box::CornerMax() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Pnt(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Pnt *)0;
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_OpenXmin (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->OpenXmin();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_OpenXmin\n  * wrapname: _wrap_Bnd_Box_OpenXmin\n  * fulldecl: void Bnd_Box::OpenXmin()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_OpenXmax (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->OpenXmax();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_OpenXmax\n  * wrapname: _wrap_Bnd_Box_OpenXmax\n  * fulldecl: void Bnd_Box::OpenXmax()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_OpenYmin (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->OpenYmin();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_OpenYmin\n  * wrapname: _wrap_Bnd_Box_OpenYmin\n  * fulldecl: void Bnd_Box::OpenYmin()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_OpenYmax (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->OpenYmax();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_OpenYmax\n  * wrapname: _wrap_Bnd_Box_OpenYmax\n  * fulldecl: void Bnd_Box::OpenYmax()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_OpenZmin (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->OpenZmin();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_OpenZmin\n  * wrapname: _wrap_Bnd_Box_OpenZmin\n  * fulldecl: void Bnd_Box::OpenZmin()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_OpenZmax (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->OpenZmax();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_OpenZmax\n  * wrapname: _wrap_Bnd_Box_OpenZmax\n  * fulldecl: void Bnd_Box::OpenZmax()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOpenXmin (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOpenXmin();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOpenXmin\n  * wrapname: _wrap_Bnd_Box_IsOpenXmin\n  * fulldecl: Standard_Boolean Bnd_Box::IsOpenXmin() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOpenXmax (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOpenXmax();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOpenXmax\n  * wrapname: _wrap_Bnd_Box_IsOpenXmax\n  * fulldecl: Standard_Boolean Bnd_Box::IsOpenXmax() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOpenYmin (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOpenYmin();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOpenYmin\n  * wrapname: _wrap_Bnd_Box_IsOpenYmin\n  * fulldecl: Standard_Boolean Bnd_Box::IsOpenYmin() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOpenYmax (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOpenYmax();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOpenYmax\n  * wrapname: _wrap_Bnd_Box_IsOpenYmax\n  * fulldecl: Standard_Boolean Bnd_Box::IsOpenYmax() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOpenZmin (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOpenZmin();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOpenZmin\n  * wrapname: _wrap_Bnd_Box_IsOpenZmin\n  * fulldecl: Standard_Boolean Bnd_Box::IsOpenZmin() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOpenZmax (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOpenZmax();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOpenZmax\n  * wrapname: _wrap_Bnd_Box_IsOpenZmax\n  * fulldecl: Standard_Boolean Bnd_Box::IsOpenZmax() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsWhole (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsWhole();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsWhole\n  * wrapname: _wrap_Bnd_Box_IsWhole\n  * fulldecl: Standard_Boolean Bnd_Box::IsWhole() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsVoid (Bnd_Box *larg1) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsVoid();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsVoid\n  * wrapname: _wrap_Bnd_Box_IsVoid\n  * fulldecl: Standard_Boolean Bnd_Box::IsVoid() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsXThin (Bnd_Box *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsXThin(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsXThin\n  * wrapname: _wrap_Bnd_Box_IsXThin\n  * fulldecl: Standard_Boolean Bnd_Box::IsXThin(Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsYThin (Bnd_Box *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsYThin(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsYThin\n  * wrapname: _wrap_Bnd_Box_IsYThin\n  * fulldecl: Standard_Boolean Bnd_Box::IsYThin(Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsZThin (Bnd_Box *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsZThin(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsZThin\n  * wrapname: _wrap_Bnd_Box_IsZThin\n  * fulldecl: Standard_Boolean Bnd_Box::IsZThin(Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsThin (Bnd_Box *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsThin(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsThin\n  * wrapname: _wrap_Bnd_Box_IsThin\n  * fulldecl: Standard_Boolean Bnd_Box::IsThin(Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT Bnd_Box *_wrap_Bnd_Box_Transformed (Bnd_Box *larg1, gp_Trsf *larg2) {
+  Bnd_Box * lresult = (Bnd_Box *)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Trsf *arg2 = 0 ;
+  Bnd_Box result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((Bnd_Box const *)arg1)->Transformed((gp_Trsf const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Transformed\n  * wrapname: _wrap_Bnd_Box_Transformed\n  * fulldecl: Bnd_Box Bnd_Box::Transformed(gp_Trsf const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Bnd_Box(result);
+    return lresult;
+  } catch (...) {
+    return (Bnd_Box *)0;
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Add__SWIG_0 (Bnd_Box *larg1, Bnd_Box *larg2) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Bnd_Box *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Add((Bnd_Box const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Add\n  * wrapname: _wrap_Bnd_Box_Add__SWIG_0\n  * fulldecl: void Bnd_Box::Add(Bnd_Box const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Add__SWIG_1 (Bnd_Box *larg1, gp_Pnt *larg2) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Add((gp_Pnt const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Add\n  * wrapname: _wrap_Bnd_Box_Add__SWIG_1\n  * fulldecl: void Bnd_Box::Add(gp_Pnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Add__SWIG_2 (Bnd_Box *larg1, gp_Pnt *larg2, gp_Dir *larg3) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Dir *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Add((gp_Pnt const &)*arg2,(gp_Dir const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Add\n  * wrapname: _wrap_Bnd_Box_Add__SWIG_2\n  * fulldecl: void Bnd_Box::Add(gp_Pnt const &,gp_Dir const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Add__SWIG_3 (Bnd_Box *larg1, gp_Dir *larg2) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Dir *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Add((gp_Dir const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Add\n  * wrapname: _wrap_Bnd_Box_Add__SWIG_3\n  * fulldecl: void Bnd_Box::Add(gp_Dir const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOut__SWIG_0 (Bnd_Box *larg1, gp_Pnt *larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOut((gp_Pnt const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOut\n  * wrapname: _wrap_Bnd_Box_IsOut__SWIG_0\n  * fulldecl: Standard_Boolean Bnd_Box::IsOut(gp_Pnt const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOut__SWIG_1 (Bnd_Box *larg1, gp_Lin *larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Lin *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOut((gp_Lin const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOut\n  * wrapname: _wrap_Bnd_Box_IsOut__SWIG_1\n  * fulldecl: Standard_Boolean Bnd_Box::IsOut(gp_Lin const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOut__SWIG_2 (Bnd_Box *larg1, gp_Pln *larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pln *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOut((gp_Pln const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOut\n  * wrapname: _wrap_Bnd_Box_IsOut__SWIG_2\n  * fulldecl: Standard_Boolean Bnd_Box::IsOut(gp_Pln const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOut__SWIG_3 (Bnd_Box *larg1, Bnd_Box *larg2) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Bnd_Box *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOut((Bnd_Box const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOut\n  * wrapname: _wrap_Bnd_Box_IsOut__SWIG_3\n  * fulldecl: Standard_Boolean Bnd_Box::IsOut(Bnd_Box const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOut__SWIG_4 (Bnd_Box *larg1, Bnd_Box *larg2, gp_Trsf *larg3) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Bnd_Box *arg2 = 0 ;
+  gp_Trsf *arg3 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOut((Bnd_Box const &)*arg2,(gp_Trsf const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOut\n  * wrapname: _wrap_Bnd_Box_IsOut__SWIG_4\n  * fulldecl: Standard_Boolean Bnd_Box::IsOut(Bnd_Box const &,gp_Trsf const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOut__SWIG_5 (Bnd_Box *larg1, gp_Trsf *larg2, Bnd_Box *larg3, gp_Trsf *larg4) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Trsf *arg2 = 0 ;
+  Bnd_Box *arg3 = 0 ;
+  gp_Trsf *arg4 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOut((gp_Trsf const &)*arg2,(Bnd_Box const &)*arg3,(gp_Trsf const &)*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOut\n  * wrapname: _wrap_Bnd_Box_IsOut__SWIG_5\n  * fulldecl: Standard_Boolean Bnd_Box::IsOut(gp_Trsf const &,Bnd_Box const &,gp_Trsf const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_Bnd_Box_IsOut__SWIG_6 (Bnd_Box *larg1, gp_Pnt *larg2, gp_Pnt *larg3, gp_Dir *larg4) {
+  bool lresult = (bool)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Dir *arg4 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsOut((gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3,(gp_Dir const &)*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_IsOut\n  * wrapname: _wrap_Bnd_Box_IsOut__SWIG_6\n  * fulldecl: Standard_Boolean Bnd_Box::IsOut(gp_Pnt const &,gp_Pnt const &,gp_Dir const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_Bnd_Box_Distance (Bnd_Box *larg1, Bnd_Box *larg2) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Bnd_Box *arg2 = 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((Bnd_Box const *)arg1)->Distance((Bnd_Box const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Distance\n  * wrapname: _wrap_Bnd_Box_Distance\n  * fulldecl: Standard_Real Bnd_Box::Distance(Bnd_Box const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT void _wrap_Bnd_Box_Dump (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((Bnd_Box const *)arg1)->Dump();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_Dump\n  * wrapname: _wrap_Bnd_Box_Dump\n  * fulldecl: void Bnd_Box::Dump() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Real _wrap_Bnd_Box_SquareExtent (Bnd_Box *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((Bnd_Box const *)arg1)->SquareExtent();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Bnd_Box_SquareExtent\n  * wrapname: _wrap_Bnd_Box_SquareExtent\n  * fulldecl: Standard_Real Bnd_Box::SquareExtent() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_Bnd_Box (Bnd_Box *larg1) {
+  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_Bnd_Box\n  * wrapname: _wrap_delete_Bnd_Box\n  * fulldecl: Bnd_Box::~Bnd_Box()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+
+#include <BndLib_Add3dCurve.hxx>
+  
+EXPORT void _wrap_BndLib_Add3dCurve_Add__SWIG_0 (Adaptor3d_Curve *larg1, Standard_Real larg2, Bnd_Box *larg3) {
+  Adaptor3d_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Bnd_Box *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BndLib_Add3dCurve::Add((Adaptor3d_Curve const &)*arg1,arg2,*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BndLib_Add3dCurve_Add\n  * wrapname: _wrap_BndLib_Add3dCurve_Add__SWIG_0\n  * fulldecl: void BndLib_Add3dCurve::Add(Adaptor3d_Curve const &,Standard_Real const,Bnd_Box &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BndLib_Add3dCurve_Add__SWIG_1 (Adaptor3d_Curve *larg1, Standard_Real larg2, Standard_Real larg3, Standard_Real larg4, Bnd_Box *larg5) {
+  Adaptor3d_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  Bnd_Box *arg5 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BndLib_Add3dCurve::Add((Adaptor3d_Curve const &)*arg1,arg2,arg3,arg4,*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BndLib_Add3dCurve_Add\n  * wrapname: _wrap_BndLib_Add3dCurve_Add__SWIG_1\n  * fulldecl: void BndLib_Add3dCurve::Add(Adaptor3d_Curve const &,Standard_Real const,Standard_Real const,Standard_Real const,Bnd_Box &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BndLib_Add3dCurve_AddOptimal__SWIG_0 (Adaptor3d_Curve *larg1, Standard_Real larg2, Bnd_Box *larg3) {
+  Adaptor3d_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Bnd_Box *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BndLib_Add3dCurve::AddOptimal((Adaptor3d_Curve const &)*arg1,arg2,*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BndLib_Add3dCurve_AddOptimal\n  * wrapname: _wrap_BndLib_Add3dCurve_AddOptimal__SWIG_0\n  * fulldecl: void BndLib_Add3dCurve::AddOptimal(Adaptor3d_Curve const &,Standard_Real const,Bnd_Box &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BndLib_Add3dCurve_AddOptimal__SWIG_1 (Adaptor3d_Curve *larg1, Standard_Real larg2, Standard_Real larg3, Standard_Real larg4, Bnd_Box *larg5) {
+  Adaptor3d_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  Bnd_Box *arg5 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BndLib_Add3dCurve::AddOptimal((Adaptor3d_Curve const &)*arg1,arg2,arg3,arg4,*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BndLib_Add3dCurve_AddOptimal\n  * wrapname: _wrap_BndLib_Add3dCurve_AddOptimal__SWIG_1\n  * fulldecl: void BndLib_Add3dCurve::AddOptimal(Adaptor3d_Curve const &,Standard_Real const,Standard_Real const,Standard_Real const,Bnd_Box &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BndLib_Add3dCurve_AddGenCurv (Adaptor3d_Curve *larg1, Standard_Real larg2, Standard_Real larg3, Standard_Real larg4, Bnd_Box *larg5) {
+  Adaptor3d_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  Bnd_Box *arg5 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        BndLib_Add3dCurve::AddGenCurv((Adaptor3d_Curve const &)*arg1,arg2,arg3,arg4,*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BndLib_Add3dCurve_AddGenCurv\n  * wrapname: _wrap_BndLib_Add3dCurve_AddGenCurv\n  * fulldecl: void BndLib_Add3dCurve::AddGenCurv(Adaptor3d_Curve const &,Standard_Real const,Standard_Real const,Standard_Real const,Bnd_Box &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_delete_BndLib_Add3dCurve (BndLib_Add3dCurve *larg1) {
+  BndLib_Add3dCurve *arg1 = (BndLib_Add3dCurve *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_BndLib_Add3dCurve\n  * wrapname: _wrap_delete_BndLib_Add3dCurve\n  * fulldecl: BndLib_Add3dCurve::~BndLib_Add3dCurve()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+
   #include <Adaptor2d_Curve2d.hxx>
   #include <Geom2dAdaptor_Curve.hxx>
   #include <Adaptor2d_HCurve2d.hxx>
@@ -91073,6 +92827,1298 @@ EXPORT void _wrap_delete_Adaptor2d_HCurve2d (Adaptor2d_HCurve2d *larg1) {
 
 
   #include <Adaptor3d_Curve.hxx>
+  #include <Adaptor3d_HCurve.hxx>  
+  #include <GeomAdaptor_Curve.hxx>
+  
+EXPORT gp_Pnt const *_wrap_Adaptor3d_Curve_Value (Adaptor3d_Curve *larg1, Standard_Real larg2) {
+  gp_Pnt const * lresult = (gp_Pnt const *)0 ;
+  Adaptor3d_Curve *arg1 = (Adaptor3d_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((Adaptor3d_Curve const *)arg1)->Value(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Adaptor3d_Curve_Value\n  * wrapname: _wrap_Adaptor3d_Curve_Value\n  * fulldecl: gp_Pnt const Adaptor3d_Curve::Value(Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Pnt const(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Pnt const *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_Adaptor3d_Curve (Adaptor3d_Curve *larg1) {
+  Adaptor3d_Curve *arg1 = (Adaptor3d_Curve *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_Adaptor3d_Curve\n  * wrapname: _wrap_delete_Adaptor3d_Curve\n  * fulldecl: Adaptor3d_Curve::~Adaptor3d_Curve()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT GeomAdaptor_Curve *_wrap_new_GeomAdaptor_Curve__SWIG_0 () {
+  GeomAdaptor_Curve * lresult = (GeomAdaptor_Curve *)0 ;
+  GeomAdaptor_Curve *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GeomAdaptor_Curve *)new GeomAdaptor_Curve();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GeomAdaptor_Curve\n  * wrapname: _wrap_new_GeomAdaptor_Curve__SWIG_0\n  * fulldecl: GeomAdaptor_Curve::GeomAdaptor_Curve()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GeomAdaptor_Curve *)0;
+  }
+}
+
+
+EXPORT GeomAdaptor_Curve *_wrap_new_GeomAdaptor_Curve__SWIG_1 (Handle_Geom_Curve *larg1) {
+  GeomAdaptor_Curve * lresult = (GeomAdaptor_Curve *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  GeomAdaptor_Curve *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GeomAdaptor_Curve *)new GeomAdaptor_Curve((Handle_Geom_Curve const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GeomAdaptor_Curve\n  * wrapname: _wrap_new_GeomAdaptor_Curve__SWIG_1\n  * fulldecl: GeomAdaptor_Curve::GeomAdaptor_Curve(Handle_Geom_Curve const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GeomAdaptor_Curve *)0;
+  }
+}
+
+
+EXPORT GeomAdaptor_Curve *_wrap_new_GeomAdaptor_Curve__SWIG_2 (Handle_Geom_Curve *larg1, Standard_Real larg2, Standard_Real larg3) {
+  GeomAdaptor_Curve * lresult = (GeomAdaptor_Curve *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  GeomAdaptor_Curve *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GeomAdaptor_Curve *)new GeomAdaptor_Curve((Handle_Geom_Curve const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GeomAdaptor_Curve\n  * wrapname: _wrap_new_GeomAdaptor_Curve__SWIG_2\n  * fulldecl: GeomAdaptor_Curve::GeomAdaptor_Curve(Handle_Geom_Curve const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GeomAdaptor_Curve *)0;
+  }
+}
+
+
+EXPORT void _wrap_GeomAdaptor_Curve_Load__SWIG_0 (GeomAdaptor_Curve *larg1, Handle_Geom_Curve *larg2) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Handle_Geom_Curve *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Load((Handle_Geom_Curve const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Load\n  * wrapname: _wrap_GeomAdaptor_Curve_Load__SWIG_0\n  * fulldecl: void GeomAdaptor_Curve::Load(Handle_Geom_Curve const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_GeomAdaptor_Curve_Load__SWIG_1 (GeomAdaptor_Curve *larg1, Handle_Geom_Curve *larg2, Standard_Real larg3, Standard_Real larg4) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Handle_Geom_Curve *arg2 = 0 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Load((Handle_Geom_Curve const &)*arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Load\n  * wrapname: _wrap_GeomAdaptor_Curve_Load__SWIG_1\n  * fulldecl: void GeomAdaptor_Curve::Load(Handle_Geom_Curve const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Handle_Geom_Curve *_wrap_GeomAdaptor_Curve_Curve (GeomAdaptor_Curve *larg1) {
+  Handle_Geom_Curve * lresult = (Handle_Geom_Curve *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Handle_Geom_Curve *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_Geom_Curve *) &((GeomAdaptor_Curve const *)arg1)->Curve();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Curve\n  * wrapname: _wrap_GeomAdaptor_Curve_Curve\n  * fulldecl: Handle_Geom_Curve const & GeomAdaptor_Curve::Curve() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_Geom_Curve *)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_GeomAdaptor_Curve_FirstParameter (GeomAdaptor_Curve *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((GeomAdaptor_Curve const *)arg1)->FirstParameter();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_FirstParameter\n  * wrapname: _wrap_GeomAdaptor_Curve_FirstParameter\n  * fulldecl: Standard_Real GeomAdaptor_Curve::FirstParameter() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_GeomAdaptor_Curve_LastParameter (GeomAdaptor_Curve *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((GeomAdaptor_Curve const *)arg1)->LastParameter();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_LastParameter\n  * wrapname: _wrap_GeomAdaptor_Curve_LastParameter\n  * fulldecl: Standard_Real GeomAdaptor_Curve::LastParameter() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT GeomAbs_Shape _wrap_GeomAdaptor_Curve_Continuity (GeomAdaptor_Curve *larg1) {
+  GeomAbs_Shape lresult = (GeomAbs_Shape)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  GeomAbs_Shape result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GeomAbs_Shape)((GeomAdaptor_Curve const *)arg1)->Continuity();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Continuity\n  * wrapname: _wrap_GeomAdaptor_Curve_Continuity\n  * fulldecl: GeomAbs_Shape GeomAdaptor_Curve::Continuity() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GeomAbs_Shape)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_GeomAdaptor_Curve_NbIntervals (GeomAdaptor_Curve *larg1, GeomAbs_Shape larg2) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  GeomAbs_Shape arg2 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((GeomAdaptor_Curve const *)arg1)->NbIntervals(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_NbIntervals\n  * wrapname: _wrap_GeomAdaptor_Curve_NbIntervals\n  * fulldecl: Standard_Integer GeomAdaptor_Curve::NbIntervals(GeomAbs_Shape const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT void _wrap_GeomAdaptor_Curve_Intervals (GeomAdaptor_Curve *larg1, TColStd_Array1OfReal *larg2, GeomAbs_Shape larg3) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  TColStd_Array1OfReal *arg2 = 0 ;
+  GeomAbs_Shape arg3 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((GeomAdaptor_Curve const *)arg1)->Intervals(*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Intervals\n  * wrapname: _wrap_GeomAdaptor_Curve_Intervals\n  * fulldecl: void GeomAdaptor_Curve::Intervals(TColStd_Array1OfReal &,GeomAbs_Shape const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Handle_Adaptor3d_HCurve *_wrap_GeomAdaptor_Curve_Trim (GeomAdaptor_Curve *larg1, Standard_Real larg2, Standard_Real larg3, Standard_Real larg4) {
+  Handle_Adaptor3d_HCurve * lresult = (Handle_Adaptor3d_HCurve *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  Handle_Adaptor3d_HCurve result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Trim(arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Trim\n  * wrapname: _wrap_GeomAdaptor_Curve_Trim\n  * fulldecl: Handle_Adaptor3d_HCurve GeomAdaptor_Curve::Trim(Standard_Real const,Standard_Real const,Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Adaptor3d_HCurve(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Adaptor3d_HCurve *)0;
+  }
+}
+
+
+EXPORT bool _wrap_GeomAdaptor_Curve_IsClosed (GeomAdaptor_Curve *larg1) {
+  bool lresult = (bool)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((GeomAdaptor_Curve const *)arg1)->IsClosed();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_IsClosed\n  * wrapname: _wrap_GeomAdaptor_Curve_IsClosed\n  * fulldecl: Standard_Boolean GeomAdaptor_Curve::IsClosed() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_GeomAdaptor_Curve_IsPeriodic (GeomAdaptor_Curve *larg1) {
+  bool lresult = (bool)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((GeomAdaptor_Curve const *)arg1)->IsPeriodic();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_IsPeriodic\n  * wrapname: _wrap_GeomAdaptor_Curve_IsPeriodic\n  * fulldecl: Standard_Boolean GeomAdaptor_Curve::IsPeriodic() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_GeomAdaptor_Curve_Period (GeomAdaptor_Curve *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((GeomAdaptor_Curve const *)arg1)->Period();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Period\n  * wrapname: _wrap_GeomAdaptor_Curve_Period\n  * fulldecl: Standard_Real GeomAdaptor_Curve::Period() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT gp_Pnt *_wrap_GeomAdaptor_Curve_Value (GeomAdaptor_Curve *larg1, Standard_Real larg2) {
+  gp_Pnt * lresult = (gp_Pnt *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Value(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Value\n  * wrapname: _wrap_GeomAdaptor_Curve_Value\n  * fulldecl: gp_Pnt GeomAdaptor_Curve::Value(Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Pnt(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Pnt *)0;
+  }
+}
+
+
+EXPORT void _wrap_GeomAdaptor_Curve_D0 (GeomAdaptor_Curve *larg1, Standard_Real larg2, gp_Pnt *larg3) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((GeomAdaptor_Curve const *)arg1)->D0(arg2,*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_D0\n  * wrapname: _wrap_GeomAdaptor_Curve_D0\n  * fulldecl: void GeomAdaptor_Curve::D0(Standard_Real const,gp_Pnt &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_GeomAdaptor_Curve_D1 (GeomAdaptor_Curve *larg1, Standard_Real larg2, gp_Pnt *larg3, gp_Vec *larg4) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Vec *arg4 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((GeomAdaptor_Curve const *)arg1)->D1(arg2,*arg3,*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_D1\n  * wrapname: _wrap_GeomAdaptor_Curve_D1\n  * fulldecl: void GeomAdaptor_Curve::D1(Standard_Real const,gp_Pnt &,gp_Vec &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_GeomAdaptor_Curve_D2 (GeomAdaptor_Curve *larg1, Standard_Real larg2, gp_Pnt *larg3, gp_Vec *larg4, gp_Vec *larg5) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Vec *arg4 = 0 ;
+  gp_Vec *arg5 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((GeomAdaptor_Curve const *)arg1)->D2(arg2,*arg3,*arg4,*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_D2\n  * wrapname: _wrap_GeomAdaptor_Curve_D2\n  * fulldecl: void GeomAdaptor_Curve::D2(Standard_Real const,gp_Pnt &,gp_Vec &,gp_Vec &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_GeomAdaptor_Curve_D3 (GeomAdaptor_Curve *larg1, Standard_Real larg2, gp_Pnt *larg3, gp_Vec *larg4, gp_Vec *larg5, gp_Vec *larg6) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Vec *arg4 = 0 ;
+  gp_Vec *arg5 = 0 ;
+  gp_Vec *arg6 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  arg6 = larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((GeomAdaptor_Curve const *)arg1)->D3(arg2,*arg3,*arg4,*arg5,*arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_D3\n  * wrapname: _wrap_GeomAdaptor_Curve_D3\n  * fulldecl: void GeomAdaptor_Curve::D3(Standard_Real const,gp_Pnt &,gp_Vec &,gp_Vec &,gp_Vec &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT gp_Vec *_wrap_GeomAdaptor_Curve_DN (GeomAdaptor_Curve *larg1, Standard_Real larg2, Standard_Integer larg3) {
+  gp_Vec * lresult = (gp_Vec *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Integer arg3 ;
+  gp_Vec result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->DN(arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_DN\n  * wrapname: _wrap_GeomAdaptor_Curve_DN\n  * fulldecl: gp_Vec GeomAdaptor_Curve::DN(Standard_Real const,Standard_Integer const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Vec(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Vec *)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_GeomAdaptor_Curve_Resolution (GeomAdaptor_Curve *larg1, Standard_Real larg2) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((GeomAdaptor_Curve const *)arg1)->Resolution(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Resolution\n  * wrapname: _wrap_GeomAdaptor_Curve_Resolution\n  * fulldecl: Standard_Real GeomAdaptor_Curve::Resolution(Standard_Real const) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT GeomAbs_CurveType *_wrap_GeomAdaptor_Curve_GetType (GeomAdaptor_Curve *larg1) {
+  GeomAbs_CurveType * lresult = (GeomAbs_CurveType *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  GeomAbs_CurveType result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->GetType();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_GetType\n  * wrapname: _wrap_GeomAdaptor_Curve_GetType\n  * fulldecl: GeomAbs_CurveType GeomAdaptor_Curve::GetType() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new GeomAbs_CurveType(result);
+    return lresult;
+  } catch (...) {
+    return (GeomAbs_CurveType *)0;
+  }
+}
+
+
+EXPORT gp_Lin *_wrap_GeomAdaptor_Curve_Line (GeomAdaptor_Curve *larg1) {
+  gp_Lin * lresult = (gp_Lin *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  gp_Lin result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Line();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Line\n  * wrapname: _wrap_GeomAdaptor_Curve_Line\n  * fulldecl: gp_Lin GeomAdaptor_Curve::Line() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Lin(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Lin *)0;
+  }
+}
+
+
+EXPORT gp_Circ *_wrap_GeomAdaptor_Curve_Circle (GeomAdaptor_Curve *larg1) {
+  gp_Circ * lresult = (gp_Circ *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  gp_Circ result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Circle();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Circle\n  * wrapname: _wrap_GeomAdaptor_Curve_Circle\n  * fulldecl: gp_Circ GeomAdaptor_Curve::Circle() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Circ(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Circ *)0;
+  }
+}
+
+
+EXPORT gp_Elips *_wrap_GeomAdaptor_Curve_Ellipse (GeomAdaptor_Curve *larg1) {
+  gp_Elips * lresult = (gp_Elips *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  gp_Elips result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Ellipse();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Ellipse\n  * wrapname: _wrap_GeomAdaptor_Curve_Ellipse\n  * fulldecl: gp_Elips GeomAdaptor_Curve::Ellipse() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Elips(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Elips *)0;
+  }
+}
+
+
+EXPORT gp_Hypr *_wrap_GeomAdaptor_Curve_Hyperbola (GeomAdaptor_Curve *larg1) {
+  gp_Hypr * lresult = (gp_Hypr *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  gp_Hypr result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Hyperbola();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Hyperbola\n  * wrapname: _wrap_GeomAdaptor_Curve_Hyperbola\n  * fulldecl: gp_Hypr GeomAdaptor_Curve::Hyperbola() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Hypr(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Hypr *)0;
+  }
+}
+
+
+EXPORT gp_Parab *_wrap_GeomAdaptor_Curve_Parabola (GeomAdaptor_Curve *larg1) {
+  gp_Parab * lresult = (gp_Parab *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  gp_Parab result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Parabola();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Parabola\n  * wrapname: _wrap_GeomAdaptor_Curve_Parabola\n  * fulldecl: gp_Parab GeomAdaptor_Curve::Parabola() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Parab(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Parab *)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_GeomAdaptor_Curve_Degree (GeomAdaptor_Curve *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((GeomAdaptor_Curve const *)arg1)->Degree();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Degree\n  * wrapname: _wrap_GeomAdaptor_Curve_Degree\n  * fulldecl: Standard_Integer GeomAdaptor_Curve::Degree() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT bool _wrap_GeomAdaptor_Curve_IsRational (GeomAdaptor_Curve *larg1) {
+  bool lresult = (bool)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((GeomAdaptor_Curve const *)arg1)->IsRational();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_IsRational\n  * wrapname: _wrap_GeomAdaptor_Curve_IsRational\n  * fulldecl: Standard_Boolean GeomAdaptor_Curve::IsRational() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_GeomAdaptor_Curve_NbPoles (GeomAdaptor_Curve *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((GeomAdaptor_Curve const *)arg1)->NbPoles();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_NbPoles\n  * wrapname: _wrap_GeomAdaptor_Curve_NbPoles\n  * fulldecl: Standard_Integer GeomAdaptor_Curve::NbPoles() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_GeomAdaptor_Curve_NbKnots (GeomAdaptor_Curve *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((GeomAdaptor_Curve const *)arg1)->NbKnots();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_NbKnots\n  * wrapname: _wrap_GeomAdaptor_Curve_NbKnots\n  * fulldecl: Standard_Integer GeomAdaptor_Curve::NbKnots() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Handle_Geom_BezierCurve *_wrap_GeomAdaptor_Curve_Bezier (GeomAdaptor_Curve *larg1) {
+  Handle_Geom_BezierCurve * lresult = (Handle_Geom_BezierCurve *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  SwigValueWrapper< Handle_Geom_BezierCurve > result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->Bezier();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_Bezier\n  * wrapname: _wrap_GeomAdaptor_Curve_Bezier\n  * fulldecl: Handle_Geom_BezierCurve GeomAdaptor_Curve::Bezier() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Geom_BezierCurve(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Geom_BezierCurve *)0;
+  }
+}
+
+
+EXPORT Handle_Geom_BSplineCurve *_wrap_GeomAdaptor_Curve_BSpline (GeomAdaptor_Curve *larg1) {
+  Handle_Geom_BSplineCurve * lresult = (Handle_Geom_BSplineCurve *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  SwigValueWrapper< Handle_Geom_BSplineCurve > result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->BSpline();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_BSpline\n  * wrapname: _wrap_GeomAdaptor_Curve_BSpline\n  * fulldecl: Handle_Geom_BSplineCurve GeomAdaptor_Curve::BSpline() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Geom_BSplineCurve(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Geom_BSplineCurve *)0;
+  }
+}
+
+
+EXPORT Handle_Geom_OffsetCurve *_wrap_GeomAdaptor_Curve_OffsetCurve (GeomAdaptor_Curve *larg1) {
+  Handle_Geom_OffsetCurve * lresult = (Handle_Geom_OffsetCurve *)0 ;
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  SwigValueWrapper< Handle_Geom_OffsetCurve > result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GeomAdaptor_Curve const *)arg1)->OffsetCurve();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GeomAdaptor_Curve_OffsetCurve\n  * wrapname: _wrap_GeomAdaptor_Curve_OffsetCurve\n  * fulldecl: Handle_Geom_OffsetCurve GeomAdaptor_Curve::OffsetCurve() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Geom_OffsetCurve(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Geom_OffsetCurve *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_GeomAdaptor_Curve (GeomAdaptor_Curve *larg1) {
+  GeomAdaptor_Curve *arg1 = (GeomAdaptor_Curve *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_GeomAdaptor_Curve\n  * wrapname: _wrap_delete_GeomAdaptor_Curve\n  * fulldecl: GeomAdaptor_Curve::~GeomAdaptor_Curve()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+
+  #include <Adaptor3d_Curve.hxx>
   #include <Adaptor2d_Curve2d.hxx>
   #include <CPnts_UniformDeflection.hxx>
   
@@ -92213,137 +95259,6 @@ EXPORT void _wrap_delete_TopExp_Explorer (TopExp_Explorer *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: delete_TopExp_Explorer\n  * wrapname: _wrap_delete_TopExp_Explorer\n  * fulldecl: TopExp_Explorer::~TopExp_Explorer()";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    
-  } catch (...) {
-    
-  }
-}
-
-
-#include "Bnd_Box.hxx"
-EXPORT Bnd_Box *_wrap_new_Bnd_Box () {
-  Bnd_Box * lresult = (Bnd_Box *)0 ;
-  Bnd_Box *result = 0 ;
-  
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = (Bnd_Box *)new Bnd_Box();
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_Bnd_Box\n  * wrapname: _wrap_new_Bnd_Box\n  * fulldecl: Bnd_Box::Bnd_Box()";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = result;
-    return lresult;
-  } catch (...) {
-    return (Bnd_Box *)0;
-  }
-}
-
-
-EXPORT bool _wrap_Bnd_Box_IsVoid (Bnd_Box *larg1) {
-  bool lresult = (bool)0 ;
-  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
-  Standard_Boolean result;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)((Bnd_Box const *)arg1)->IsVoid();
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Bnd_Box_IsVoid\n  * wrapname: _wrap_Bnd_Box_IsVoid\n  * fulldecl: Standard_Boolean Bnd_Box::IsVoid() const";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = (bool)result;
-    return lresult;
-  } catch (...) {
-    return (bool)0;
-  }
-}
-
-
-SWIGINTERN void Bnd_Box_get(Bnd_Box *self,double box[6]){
-		if(!self->IsVoid())
-			self->Get(box[0], box[1], box[2], box[3], box[4], box[5]);
-	}
-EXPORT void _wrap_Bnd_Box_get (Bnd_Box *larg1, double *larg2) {
-  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
-  double *arg2 ;
-  
-  arg1 = larg1;
-  arg2 = larg2;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        Bnd_Box_get(arg1,arg2);
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: Bnd_Box_get\n  * wrapname: _wrap_Bnd_Box_get\n  * fulldecl: void Bnd_Box::get(double [6])";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    
-  } catch (...) {
-    
-  }
-}
-
-
-EXPORT void _wrap_delete_Bnd_Box (Bnd_Box *larg1) {
-  Bnd_Box *arg1 = (Bnd_Box *) 0 ;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        delete arg1;
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: delete_Bnd_Box\n  * wrapname: _wrap_delete_Bnd_Box\n  * fulldecl: Bnd_Box::~Bnd_Box()";
         signal_lisp_error(message.c_str());
       }
     }

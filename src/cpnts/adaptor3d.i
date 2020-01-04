@@ -1,5 +1,6 @@
 %{
   #include <Adaptor3d_Curve.hxx>
+  #include <Adaptor3d_HCurve.hxx>  
   #include <GeomAdaptor_Curve.hxx>
   %}
 

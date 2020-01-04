@@ -42,6 +42,9 @@
     (finalize struct (lambda () (foreign-free pointer)) :dont-save t)
     struct))
 
+(defmethod oc:multiply! ((trsf1 trsf) (trsf2 trsf))
+  (oc::_wrap_gp_Trsf_Multiply (ptr trsf1) (ptr trsf2)))
+
 (defmethod (setf oc:mirror) ((axis ax1) (trsf trsf))
   (oc::_wrap_gp_Trsf_SetMirror__SWIG_0 (ptr trsf) (ptr axis))
   axis)
@@ -189,7 +192,7 @@
     (orthogonalize! (make-trsf :ptr p-trsf))
     (values))))
 
-(defmethod oc::set-values ((trsf trsf) &rest args)
+(defmethod gp::set-values ((trsf trsf) &rest args)
   (destructuring-bind (a11
 		       a12 a13 a14
 		       a21 a22 a23 a24

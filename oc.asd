@@ -156,6 +156,9 @@
    (:file "src/cpnts/cpnts-uniform-deflection")
 
    (:file "src/xscontrol/xscontrol-reader")
+
+   (:file "src/bnd/bnd-box")
+   (:file "src/bnd-lib/bnd-lib")
    
    (:file "src/init")
    (:file "src/examples/examples")))
