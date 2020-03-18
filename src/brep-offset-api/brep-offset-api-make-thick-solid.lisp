@@ -41,4 +41,5 @@
 		(_wrap_new_BRepOffsetAPI_MakeThickSolid__SWIG_0))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer object) pointer)
+    (oc:finalize object)
     (values)))

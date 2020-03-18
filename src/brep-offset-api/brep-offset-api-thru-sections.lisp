@@ -13,5 +13,5 @@
 		(_wrap_new_BRepOffsetAPI_ThruSections__SWIG_3))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer object) pointer)
-    (ff-pointer-finalize object #'_wrap_delete_BRepOffsetAPI_ThruSections)
+    (oc:finalize object)
     (values)))

@@ -9,11 +9,11 @@
   (assert (typep nbTriangles 'integer))
   (setf (ff-pointer obj)
 	(_wrap_new_Poly_Triangulation nbNodes nbTriangles UvNodes))
-  (ff-pointer-finalize obj #'_wrap_delete_Poly_Triangulation)
+  (oc:finalize obj)
   (values))
 
 (defmethod number-of-triangles ((self poly-triangulation))
-  (_wrap_Poly_Triangulation_nbTriangles (ff-pointer self)))
+  (_wrap_Poly_Triangulation_NbTriangles (ff-pointer self)))
 
 (defmethod get-triangles ((self poly-triangulation))
   (let ((array (allocate-instance (load-time-value (find-class 'poly-array1-of-triangle)))))
@@ -21,7 +21,7 @@
     array))
 
 (defmethod number-of-nodes ((self poly-triangulation))
-  (_wrap_Poly_Triangulation_nbNodes (ff-pointer self)))
+  (_wrap_Poly_Triangulation_NbNodes (ff-pointer self)))
 
 (defmethod get-nodes ((self poly-triangulation))
   (let ((array (allocate-instance (load-time-value (find-class 'tcol-gp-array1-of-pnt)))))

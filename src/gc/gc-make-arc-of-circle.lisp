@@ -14,10 +14,11 @@
 	       (assert (gp:pnt-p P3))
 	       (_wrap_new_GC_MakeArcOfCircle__SWIG_0 (ptr P1) (ptr P2) (ptr P3)))
 	      (t (error "Insufficient arguments to constructor."))))
-  (ff-pointer-finalize obj #'_wrap_delete_GC_MakeArcOfCircle)
+  (oc:finalize obj)
   (values))
 
 (defmethod value ((self gc-make-arc-of-circle))
   (let ((curve (allocate-instance (load-time-value (find-class 'geom-trimmed-curve)))))
     (setf (ff-pointer curve) (_wrap_GC_MakeArcOfCircle_Value (ff-pointer self)))
+    (oc:finalize curve)
     curve))

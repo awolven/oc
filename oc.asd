@@ -4,9 +4,11 @@
   :author "Andrew K Wolven <awolven@gmail.com>"
   :serial t
   :components
-  ((:file "lib/foreign-libraries")
+  ((:file "src/features")
+   (:file "lib/foreign-libraries")
    
    (:file "src/package")
+   (:file "src/generic-functions")
    
    (:file "src/oc")
    
@@ -37,7 +39,7 @@
    
    (:file "src/classes")
    (:file "src/macros")
-   (:file "src/functions")
+   (:file "src/finalizations")
 
    (:file "src/top-abs/top-abs")
    

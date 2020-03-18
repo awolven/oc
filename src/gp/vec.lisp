@@ -6,7 +6,7 @@
     (setf (gp-xy-x pointer) (coerce x 'double-float)
 	  (gp-xy-y pointer) (coerce y 'double-float)
 	  (gp-xyz-z pointer) (coerce z 'double-float))
-    (finalize struct (lambda () (print 'freeing-vec) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object vec) stream)
@@ -57,8 +57,7 @@
 (defmethod oc:subtracted ((xyz1 vec) (xyz2 vec))
   (let* ((p-result (oc::_wrap_gp_Vec_Subtracted (ptr xyz1) (ptr xyz2)))
 	 (result (make-vec :ptr p-result)))
-    (finalize result (lambda ()
-		       (oc::_wrap_delete_gp_Vec p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod oc:multiply! ((xyz vec) (scalar real))

@@ -7,96 +7,57 @@
 #include <TopLoc_Location.hxx>
 #include <Poly_Triangulation.hxx>
 %}
-
+%nodefaultctor BRep_Tool;
+%nodefaultdtor BRep_Tool;
 class BRep_Tool
 {
-	public:
-	static const gp_Pnt Pnt(const TopoDS_Vertex& V) ;
-	static gp_Pnt2d Parameters(const TopoDS_Vertex& V,const TopoDS_Face& F) ;
-	static Standard_Real Parameter(const TopoDS_Vertex& V,const TopoDS_Edge& E) ;
-	static Standard_Boolean Degenerated(const TopoDS_Edge& E) ;
-	static Standard_Boolean SameParameter(const TopoDS_Edge& E) ;
-	static Standard_Boolean SameRange(const TopoDS_Edge& E) ;
-	static Standard_Boolean HasContinuity(const TopoDS_Edge& E,const TopoDS_Face& F1,const TopoDS_Face& F2) ;
-	static GeomAbs_Shape Continuity(const TopoDS_Edge& E,const TopoDS_Face& F1,const TopoDS_Face& F2) ;
-	static Standard_Real Tolerance(const TopoDS_Face& F) ;
-	static Standard_Real Tolerance(const TopoDS_Edge& E) ;
-	static Standard_Real Tolerance(const TopoDS_Vertex& V) ;
-	static Standard_Boolean IsClosed(const TopoDS_Shape &S) ;
-	static const Handle_Poly_Triangulation& Triangulation (const TopoDS_Face& F, TopLoc_Location& L);
-/*	static Handle_Geom_Curve Curve(const TopoDS_Edge& E, Standard_Real& First,Standard_Real& Last) ;
-	static Handle_Geom_Surface Surface(const TopoDS_Face& F) ;
-	static Handle_Geom2d_Curve CurveOnSurface(const TopoDS_Edge& E, const TopoDS_Face& F,Standard_Real& First,Standard_Real& Last) ;
-*/
+ public:
+  static Standard_Boolean IsClosed(const TopoDS_Shape &S);
+  static Handle_Geom_Surface Surface(const TopoDS_Face& F);
+  static const gp_Pnt Pnt(const TopoDS_Vertex& V);
+  static gp_Pnt2d Parameters(const TopoDS_Vertex& V,const TopoDS_Face& F);
+  static Standard_Real Parameter(const TopoDS_Vertex& V,const TopoDS_Edge& E);
+  static Standard_Boolean Degenerated(const TopoDS_Edge& E);
+  static Standard_Boolean SameParameter(const TopoDS_Edge& E);
+  static Standard_Boolean SameRange(const TopoDS_Edge& E);
+  static Standard_Boolean HasContinuity(const TopoDS_Edge& E,const TopoDS_Face& F1,const TopoDS_Face& F2);
+  static GeomAbs_Shape Continuity(const TopoDS_Edge& E,const TopoDS_Face& F1,const TopoDS_Face& F2);
+  static Standard_Real Tolerance(const TopoDS_Face& F);
+  static Standard_Real Tolerance(const TopoDS_Edge& E);
+  static Standard_Real Tolerance(const TopoDS_Vertex& V);
+  static const Handle_Poly_Triangulation& Triangulation (const TopoDS_Face& F, TopLoc_Location& L);
+
+  static Handle_Geom_Curve Curve(const TopoDS_Edge& E, Standard_Real& First, Standard_Real& Last);
+
+  static Handle_Geom2d_Curve CurveOnSurface(const TopoDS_Edge& E, const TopoDS_Face& F, Standard_Real& First, Standard_Real& Last);
+  static void Range(const TopoDS_Edge& E, Standard_Real& First, Standard_Real& Last);
 };
 
-// Publish methods which return pointer instead of Handle. We do not need
-// Handle because Java do the memory managment for us.
 %extend BRep_Tool
 {
   /*
-	static Poly_Triangulation * triangulation(const TopoDS_Face& F,TopLoc_Location& L)
-	{
-		Handle_Poly_Triangulation hgc=BRep_Tool::Triangulation(F,L);
-		if(hgc.IsNull())
-		  return NULL;
-		else
-		  return (Poly_Triangulation *)hgc.get();
-	}
+  static Poly_Triangulation * Triangulation(const TopoDS_Face& F, TopLoc_Location& L) {
+    Handle_Poly_Triangulation h = BRep_Tool::Triangulation(F, L);
+    if(h.IsNull())
+      return (Poly_Triangulation *) NULL;
+    else
+      return (Poly_Triangulation *)h.get();
+  }
   */
-	static Poly_Polygon3D *	Polygon3D (const TopoDS_Edge &E, TopLoc_Location &L)
-	{
-	  Handle_Poly_Polygon3D hgc=BRep_Tool::Polygon3D(E,L);
-	  if (hgc.IsNull())
-	    return NULL;
-	  else
-	    return (Poly_Polygon3D *)hgc.get();
-	}							 
-
-	static void range(const TopoDS_Edge& E, double range[2])
-	{
-		BRep_Tool::Range(E, range[0], range[1]);
-	}
-	
-	// new Handle is a little memory leak as this handle is never deleted
-	static Handle_Geom_Curve * curve(const TopoDS_Edge& E,
-		Standard_Real& First,Standard_Real& Last)
-	{
-		Handle_Geom_Curve * hgc=new Handle_Geom_Curve(BRep_Tool::Curve(E, First, Last));
-		if(hgc->IsNull())
-			return NULL;
-		else
-			return hgc;
-	}
-	
-	static Handle_Geom_Surface * surface(const TopoDS_Face& F)
-	{
-		Handle_Geom_Surface * hgc=new Handle_Geom_Surface(BRep_Tool::Surface(F));
-		if(hgc->IsNull())
-			return NULL;
-		else
-			return hgc;
-	}
-	
-	static Handle_Geom2d_Curve * curveOnSurface(const TopoDS_Edge& E,
-		const TopoDS_Face& F,Standard_Real& First,Standard_Real& Last)
-	{
-		Handle_Geom2d_Curve * hgc=new Handle_Geom2d_Curve(BRep_Tool::CurveOnSurface(E, F, First, Last));
-		if(hgc->IsNull())
-			return NULL;
-		else
-			return hgc;
-	}
-
-	static Poly_PolygonOnTriangulation * PolygonOnTriangulation (const TopoDS_Edge &E, const Handle_Poly_Triangulation &T, const TopLoc_Location &L)
-	{
-	  Handle_Poly_PolygonOnTriangulation hgc=BRep_Tool::PolygonOnTriangulation(E, T, L);
-	  if (hgc.IsNull())
-	    return (Poly_PolygonOnTriangulation *)NULL;
-	  else
-	    return (Poly_PolygonOnTriangulation *)hgc.get();
-	}
-	
+  static Poly_Polygon3D *Polygon3D (const TopoDS_Edge &E, TopLoc_Location &L) {
+    Handle_Poly_Polygon3D h = BRep_Tool::Polygon3D(E, L);
+    if (h.IsNull())
+      return (Poly_Polygon3D *) NULL;
+    else
+      return (Poly_Polygon3D *)h.get();
+  }							 
+  static Poly_PolygonOnTriangulation * PolygonOnTriangulation (const TopoDS_Edge &E, const Handle_Poly_Triangulation &T, const TopLoc_Location &L) {
+    Handle_Poly_PolygonOnTriangulation h = BRep_Tool::PolygonOnTriangulation(E, T, L);
+    if (h.IsNull())
+      return (Poly_PolygonOnTriangulation *) NULL;
+    else
+      return (Poly_PolygonOnTriangulation *)h.get();
+  }
 };
 
 class BRep_Builder: public TopoDS_Builder

@@ -75,15 +75,15 @@
 	     (copy-ax3-into-pln (ptr pos) pln-ptr)))
 	  (t "Invalid arguments to pln: ~S" args)))
     (let ((struct (make-pln :ptr pln-ptr)))
-      (finalize struct (lambda () (print 'freeing-pln) (foreign-free pln-ptr)) :dont-save t)
+      (oc:finalize struct :native)
       struct)))
 
 
 (defmethod pos ((pln pln))
-  (make-ax3 :ptr (ptr pln)))
+  (make-ax3 :ptr (ptr pln) :own pln))
 
 (defmethod gp:position ((pln pln))
-  (make-ax3 :ptr (ptr pln)))
+  (make-ax3 :ptr (ptr pln) :own pln))
 
 (defun gp:coefficients (pln)
   (let* ((pos (oc:position pln))

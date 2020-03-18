@@ -37,8 +37,7 @@
 (defmethod geom-processor ((vector geom2d-vector))
   (let* ((pointer (_wrap_Geom2d_Vector_Vec2d (ff-pointer vector)))
 	 (struct (gp::make-vec2d :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Vec2d pointer)))
+    (oc:finalize struct)
     struct))
 
 

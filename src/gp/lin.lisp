@@ -15,7 +15,7 @@
 	  (gp-lin-pos-vdir-coord-x pointer) (x N)
 	  (gp-lin-pos-vdir-coord-y pointer) (y N)
 	  (gp-lin-pos-vdir-coord-z pointer) (z N))
-    (finalize struct (lambda () (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object lin) stream)

@@ -24,7 +24,7 @@
 	       (_wrap_new_BrepMesh_IncrementalMesh__SWIG_1 (ff-pointer S) D Relative Ang))
 	      
 	      (t (error "Invalid arguments to initialize-instance of BRepMesh_IncrementalMesh."))))
-  (ff-pointer-finalize obj #'_wrap_delete_BRepMesh_IncrementalMesh)
+  (oc:finalize obj)
   (values))
 
 (defmethod perform ((self brep-mesh-incremental-mesh))

@@ -9,5 +9,5 @@
   (assert (typep height 'double-float))
   (assert (typep angle 'double-float))
   (setf (ff-pointer obj) (_wrap_new_BRepPrimAPI_MakeCone (ff-pointer axes) baseRadius topRadius height angle))
-  (ff-pointer-finalize obj #'_wrap_delete_BRepPrimAPI_MakeCone)
+  (oc:finalize obj)
   (values))

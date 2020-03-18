@@ -21,7 +21,7 @@
 					    (* (x N) (gp-ax2-vxdir-coord-z pointer)))
 	  (gp-ax2-vydir-coord-z pointer) (- (* (x N) (gp-ax2-vxdir-coord-y pointer))
 					    (* (y N) (gp-ax2-vxdir-coord-x pointer))))
-    (finalize struct (lambda () (print 'freeing-ax2) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object ax2) stream)

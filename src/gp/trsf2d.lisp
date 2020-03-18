@@ -13,7 +13,7 @@
     (setf (mem-aref p-loc :double 0) 0.0d0
 	  (mem-aref p-loc :double 1) 0.0d0)
     (let ((new (make-trsf2d :ptr p-trsf2d)))
-      (finalize new (lambda () (foreign-free p-trsf2d)) :dont-save t)
+      (oc:finalize new :native)
       new)))
 
 (defmethod print-object ((object trsf2d) stream)
@@ -136,7 +136,7 @@
 (defmethod oc:translation-part ((trsf trsf2d))
   (let* ((p-result (oc::_wrap_gp_Trsf2d_TranslationPart (ptr trsf)))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod (setf gp:translation-part) ((loc vec2d) (trsf trsf2d))
@@ -157,7 +157,7 @@
 (defmethod oc:homogeneous-vectorial-part ((trsf trsf2d))
   (let* ((p-result (oc::_wrap_gp_Trsf2d_HVectorialPart (ptr trsf)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod (setf gp:homogeneous-vectorial-part) ((mat mat2d) (trsf trsf2d))
@@ -204,7 +204,7 @@
 (defmethod oc:multiplied ((trsf1 trsf2d) (trsf2 trsf2d))
   (let* ((p-result (oc::_wrap_gp_Trsf2d_Multiplied (ptr trsf1) (ptr trsf2)))
 	 (result (make-trsf2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Trsf2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
   
 (defmethod gp::orthogonalize! ((trsf trsf2d))

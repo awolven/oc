@@ -18,5 +18,5 @@
 		(_wrap_new_BRepPrimAPI_MakePrism__SWIG_2 (ff-pointer baseShape) (ptr extrudeDirection)))
 	       (t (error "Invalid arguments for BRepPrimAPI_MakePrism constructor: ~S." initargs)))))
     (setf (ff-pointer object) pointer)
-    (ff-pointer-finalize object #'_wrap_delete_BRepPrimAPI_MakePrism)
+    (oc:finalize object)
     (values)))

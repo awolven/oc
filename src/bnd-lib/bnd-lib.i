@@ -1,7 +1,7 @@
 %{
 #include <BndLib_Add3dCurve.hxx>
   %}
-
+%nodefaultdtor BndLib_Add3dCurve;
 class BndLib_Add3dCurve
 {
  public:

@@ -39,7 +39,7 @@
 	       (when (eq (gp-trsf-shape pointer) +trsf-ax1-mirror+)
 		 (setf (gp-trsf-scale pointer) 1.0d0)
 		 (gp-mat-multiply!-with-scalar p-mat -1.0d0))))))
-    (finalize struct (lambda () (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod oc:multiply! ((trsf1 trsf) (trsf2 trsf))

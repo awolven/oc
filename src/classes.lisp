@@ -116,11 +116,27 @@
 
 (defclass geom-curve (geom-geometry) ())
 
+(defclass geom-line (geom-curve) ())
+
+(defclass geom-conic (geom-curve) ())
+
+(defclass geom-circle (geom-conic) ())
+
+(defclass geom-ellipse (geom-conic) ())
+
+(defclass geom-hyperbola (geom-conic) ())
+
+(defclass geom-parabola (geom-conic) ())
+
 (defclass geom-bounded-curve (geom-curve) ())
 
 (defclass geom-bezier-curve (geom-curve) ())
 
+(defclass geom-bspline-curve (geom-curve) ())
+
 (defclass geom-trimmed-curve (geom-bounded-curve) ())
+
+(defclass geom-offset-curve (geom-curve) ())
 
 (defclass geom-surface (geom-geometry) ())
 
@@ -204,6 +220,10 @@
 
 (defclass brep-fillet-api-make-fillet (brep-fillet-api-local-operation) ())
 
+(defclass brep-algo (ff-pointer-mixin) ())
+
+(defclass brep-algo-api (brep-builder-api-make-shape) ())
+
 (defclass brep-algo-api-algo (brep-builder-api-make-shape) ())
 
 (defclass brep-algo-api-builder-algo  (brep-algo-api-algo) ())
@@ -211,6 +231,12 @@
 (defclass brep-algo-api-boolean-operation (brep-algo-api-builder-algo) ())
 
 (defclass brep-algo-api-fuse (brep-algo-api-boolean-operation) ())
+
+(defclass brep-algo-api-common (brep-algo-api-boolean-operation) ())
+
+(defclass brep-algo-api-cut (brep-algo-api-boolean-operation) ())
+
+(defclass brep-algo-api-section (brep-algo-api-boolean-operation) ())
 
 ;;
 
@@ -236,14 +262,20 @@
 
 (defclass adaptor2d-curve2d () ())
 
-(defclass geom2d-adaptor-curve (adaptor2d-curve2d ff-pointer-mixin) ())
+(defclass geom2d-adaptor-curve (adaptor2d-curve2d ff-pointer-mixin)
+  ((curve)))
 
 (defclass adaptor3d-curve () ())
 
 (defclass geom-adaptor-curve (adaptor3d-curve ff-pointer-mixin) ())
 
-(defclass cpnts-uniform-deflection (ff-pointer-mixin) ())
+(defclass cpnts-uniform-deflection (ff-pointer-mixin)
+  ((curve)))
 
 ;;
 
 (defclass xscontrol-reader (ff-pointer-mixin) ())
+
+;;
+
+

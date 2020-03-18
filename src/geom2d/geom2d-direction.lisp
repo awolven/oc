@@ -11,9 +11,7 @@
 		(_wrap_new_Geom2d_Direction__SWIG_1 (ptr V)))
 	       (t "Invalid arguments to constructor: ~S" initargs))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize instance
-		     (lambda ()
-		       (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer)))
+    (oc:finalize instance)
     (values)))
 
 ;; maybe rename this generic function (setf coordinate)
@@ -35,8 +33,5 @@
 (defmethod geom-processor ((vector geom2d-direction))
   (let* ((pointer (_wrap_Geom2d_Direction_Dir2d (ff-pointer vector)))
 	 (struct (gp::make-dir2d :ptr pointer)))
-    (sb-ext:finalize struct
-		     (lambda ()
-		       (_wrap_delete_gp_Dir2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))

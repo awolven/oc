@@ -6,5 +6,5 @@
   (assert (typep P 'gp:pnt))
   (setf (ff-pointer obj)
 	(_wrap_new_BRepBuilderAPI_MakeVertex (ff-pointer P)))
-  (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_MakeVertex)
+  (oc:finalize obj)
   (values))

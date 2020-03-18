@@ -74,7 +74,7 @@
 %rename(Geom_SurfaceOfLinearExtrusion) Handle_Geom_SurfaceOfLinearExtrusion;
 %rename(Geom_Plane) Handle_Geom_Plane;
 
-
+%nodefaultdtor Handle_Geom_Geometry;
 class Handle_Geom_Geometry : public Handle_MMgt_TShared
 {
   Handle_Geom_Geometry()=0;
@@ -135,10 +135,10 @@ class Handle_Geom_Geometry : public Handle_MMgt_TShared
   }
     
 }
-
+%nodefaultdtor Handle_Geom_Curve;
 class Handle_Geom_Curve: public Handle_Geom_Geometry
 {
-  Handle_Geom_Curve()=0;	
+  Handle_Geom_Curve()=0;
 };
 
 %extend Handle_Geom_Curve
@@ -240,7 +240,7 @@ class Handle_Geom_Curve: public Handle_Geom_Geometry
   }
   
 }
-
+%nodefaultdtor Handle_Geom_Surface;
 class Handle_Geom_Surface: public Handle_Geom_Geometry
 {
   Handle_Geom_Surface()=0;
@@ -370,10 +370,10 @@ class Handle_Geom_Surface: public Handle_Geom_Geometry
     return -1;
   }
 }
-
+%nodefaultdtor Handle_Geom_BoundedCurve;
 class Handle_Geom_BoundedCurve : public Handle_Geom_Curve
 {
-	Handle_Geom_BoundedCurve()=0;
+  Handle_Geom_BoundedCurve()=0;
 };
 
 %extend Handle_Geom_BoundedCurve
@@ -385,10 +385,10 @@ class Handle_Geom_BoundedCurve : public Handle_Geom_Curve
 	  return (*self)->StartPoint();
 	}
 }
-
+%nodefaultdtor Handle_Geom_Conic;
 class Handle_Geom_Conic : public Handle_Geom_Curve
 {
-	Handle_Geom_Conic()=0;
+  Handle_Geom_Conic()=0;
 };
 
 %extend Handle_Geom_Conic
@@ -421,15 +421,15 @@ class Handle_Geom_Conic : public Handle_Geom_Curve
     return (*self)->YAxis();
   }
 }
-
+%nodefaultdtor Handle_Geom_BoundedSurface;
 class Handle_Geom_BoundedSurface : public Handle_Geom_Surface
 {
-	Handle_Geom_BoundedSurface()=0;
+  Handle_Geom_BoundedSurface()=0;
 };
-
+%nodefaultdtor Handle_Geom_ElementarySurface;
 class Handle_Geom_ElementarySurface : public Handle_Geom_Surface
 {
-	Handle_Geom_ElementarySurface()=0;
+  Handle_Geom_ElementarySurface()=0;
 };
 
 %extend Handle_Geom_ElementarySurface
@@ -451,10 +451,10 @@ class Handle_Geom_ElementarySurface : public Handle_Geom_Surface
 	}
 	
 }
-
+%nodefaultdtor Handle_Geom_SweptSurface;
 class Handle_Geom_SweptSurface : public Handle_Geom_Surface
 {
-	Handle_Geom_SweptSurface()=0;
+  Handle_Geom_SweptSurface()=0;
 };
 
 %extend Handle_Geom_SweptSurface
@@ -471,10 +471,9 @@ class Handle_Geom_SweptSurface : public Handle_Geom_Surface
 	}
 
 }
-
+%nodefaultdtor Handle_Geom_BezierCurve;
 class Handle_Geom_BezierCurve : public Handle_Geom_BoundedCurve {
-    Handle_Geom_BezierCurve()=0;
-
+  Handle_Geom_BezierCurve()=0;
 };
 
 %extend Handle_Geom_BezierCurve
@@ -485,6 +484,9 @@ class Handle_Geom_BezierCurve : public Handle_Geom_BoundedCurve {
   Handle_Geom_BezierCurve(const TColgp_Array1OfPnt& CurvePoles, const TColStd_Array1OfReal& PoleWeights){
     return new Handle_Geom_BezierCurve(new Geom_BezierCurve(CurvePoles, PoleWeights));
   }
+  void Delete() {
+    self->~Handle_Geom_BezierCurve();
+  }  
   void Increase (const Standard_Integer Degree) {
     (*self)->Increase(Degree);
   }
@@ -546,7 +548,7 @@ class Handle_Geom_BezierCurve : public Handle_Geom_BoundedCurve {
 }
 
 
-
+%nodefaultdtor Handle_Geom_BSplineCurve;
 class Handle_Geom_BSplineCurve : public Handle_Geom_BoundedCurve {
     Handle_Geom_BSplineCurve()=0;
 };
@@ -569,8 +571,9 @@ class Handle_Geom_BSplineCurve : public Handle_Geom_BoundedCurve {
         return new Handle_Geom_BSplineCurve(new Geom_BSplineCurve(Poles, Knots, Multiplicities, 
             Degree, Periodic));
     }
-
-
+    void Delete() {
+    self->~Handle_Geom_BSplineCurve();
+  }  
   void SetKnot(const Standard_Integer Index,const Standard_Real K)
   {
     (*self)->SetKnot(Index,K);
@@ -701,35 +704,38 @@ class Handle_Geom_BSplineCurve : public Handle_Geom_BoundedCurve {
   }
   
 }
-
+%nodefaultdtor Handle_Geom_Circle;
 class Handle_Geom_Circle : public Handle_Geom_Conic {
-    Handle_Geom_Circle()=0;
+  Handle_Geom_Circle()=0;
 };
 %extend Handle_Geom_Circle
 {
 	//TODO check that this is not a big memory leak
-	Handle_Geom_Circle(const gp_Ax2& A2, const Standard_Real R){
-		return new Handle_Geom_Circle(new Geom_Circle(A2, R));
-	}
-
+  Handle_Geom_Circle(const gp_Ax2& A2, const Standard_Real R){
+    return new Handle_Geom_Circle(new Geom_Circle(A2, R));
+  }
+  void Delete() {
+    self->~Handle_Geom_Circle();
+  }  
   Standard_Real Radius()
   {
     return (*self)->Radius();
   }
 
 }
-
+%nodefaultdtor Handle_Geom_Ellipse;
 class Handle_Geom_Ellipse : public Handle_Geom_Conic {
-    Handle_Geom_Ellipse()=0;
+  Handle_Geom_Ellipse()=0;
 };
 
 %extend Handle_Geom_Ellipse
 {
-	//TODO check that this is not a big memory leak
-	Handle_Geom_Ellipse(const gp_Ax2& A2, const Standard_Real majorRadius, const Standard_Real minorRadius){
-		return new Handle_Geom_Ellipse(new Geom_Ellipse(A2, majorRadius, minorRadius));
-	}
-
+  Handle_Geom_Ellipse(const gp_Ax2& A2, const Standard_Real majorRadius, const Standard_Real minorRadius){
+    return new Handle_Geom_Ellipse(new Geom_Ellipse(A2, majorRadius, minorRadius));
+  }
+  void Delete() {
+    self->~Handle_Geom_Ellipse();
+  }  
     gp_Ax1 Directrix1()
 	{
 		return (*self)->Directrix1();
@@ -773,9 +779,9 @@ class Handle_Geom_Ellipse : public Handle_Geom_Conic {
 	}
 
 }
-
+%nodefaultdtor Handle_Geom_TrimmedCurve;
 class Handle_Geom_TrimmedCurve : public Handle_Geom_BoundedCurve {
-    Handle_Geom_TrimmedCurve()=0;
+  Handle_Geom_TrimmedCurve()=0;
 };
 
 %extend Handle_Geom_TrimmedCurve
@@ -785,15 +791,17 @@ class Handle_Geom_TrimmedCurve : public Handle_Geom_BoundedCurve {
         const Standard_Boolean Sense = Standard_True){
           return new Handle_Geom_TrimmedCurve(new Geom_TrimmedCurve(C, U1, U2, Sense));
     }
-
+  void Delete() {
+    self->~Handle_Geom_TrimmedCurve();
+  }  
     Handle_Geom_Curve BasisCurve()
 	{
 		return (*self)->BasisCurve();
 	}
 }
-
+%nodefaultdtor Handle_Geom_OffsetCurve;
 class Handle_Geom_OffsetCurve : public Handle_Geom_Curve {
-    Handle_Geom_OffsetCurve()=0;
+  Handle_Geom_OffsetCurve()=0;
 };
 
 %extend Handle_Geom_OffsetCurve
@@ -802,7 +810,9 @@ class Handle_Geom_OffsetCurve : public Handle_Geom_Curve {
     Handle_Geom_OffsetCurve(const Handle_Geom_Curve& C, const Standard_Real Offset, const gp_Dir& V){
           return new Handle_Geom_OffsetCurve(new Geom_OffsetCurve(C, Offset, V));
     }
-
+    void Delete() {
+      self->~Handle_Geom_OffsetCurve();
+    }  
     gp_Dir Direction()
     {
     	return (*self)->Direction();
@@ -824,7 +834,7 @@ class Handle_Geom_OffsetCurve : public Handle_Geom_Curve {
     }    
 
 }
-
+%nodefaultdtor Handle_Geom_Hyperbola;
 class Handle_Geom_Hyperbola : public Handle_Geom_Conic {
     Handle_Geom_Hyperbola()=0;
 };
@@ -836,7 +846,9 @@ class Handle_Geom_Hyperbola : public Handle_Geom_Conic {
 	Handle_Geom_Hyperbola(const gp_Ax2& A2, const Standard_Real majorRadius, const Standard_Real minorRadius){
 		return new Handle_Geom_Hyperbola(new Geom_Hyperbola(A2, majorRadius, minorRadius));
 	}
-
+	void Delete() {
+	  self->~Handle_Geom_Hyperbola();
+	}  
     gp_Ax1 Asymptote1()
 	{
 		return (*self)->Asymptote1();
@@ -904,7 +916,7 @@ class Handle_Geom_Hyperbola : public Handle_Geom_Conic {
 
     
 }
-
+%nodefaultdtor Handle_Geom_Line;
 class Handle_Geom_Line : public Handle_Geom_Curve {
     Handle_Geom_Line()=0;
 };
@@ -921,7 +933,9 @@ class Handle_Geom_Line : public Handle_Geom_Curve {
 	Handle_Geom_Line(const gp_Pnt& P, const gp_Dir& V){
 		return new Handle_Geom_Line(new Geom_Line(P, V));
 	}
-
+	void Delete() {
+	  self->~Handle_Geom_Line();
+	}  
 	gp_Ax1 Position()
 	{
 		return (*self)->Position();
@@ -933,9 +947,9 @@ class Handle_Geom_Line : public Handle_Geom_Curve {
 	}
 
 }
-
+%nodefaultdtor Handle_Geom_Parabola;
 class Handle_Geom_Parabola : public Handle_Geom_Conic {
-	Handle_Geom_Parabola()=0;
+  Handle_Geom_Parabola()=0;
 };
 
 
@@ -945,7 +959,9 @@ class Handle_Geom_Parabola : public Handle_Geom_Conic {
 	Handle_Geom_Parabola(const gp_Ax2& A2, const Standard_Real Focal){
 		return new Handle_Geom_Parabola(new Geom_Parabola(A2, Focal));
 	}
-
+	void Delete() {
+	  self->~Handle_Geom_Parabola();
+	}  
 	gp_Ax1 Directrix()
 	{
 		return (*self)->Directrix();
@@ -967,8 +983,9 @@ class Handle_Geom_Parabola : public Handle_Geom_Conic {
 	}
 
 }
+%nodefaultdtor Handle_Geom_BezierSurface;
 class Handle_Geom_BezierSurface : public Handle_Geom_BoundedSurface {
-	Handle_Geom_BezierSurface()=0;
+  Handle_Geom_BezierSurface()=0;
 };
 
 %extend Handle_Geom_BezierSurface
@@ -977,6 +994,9 @@ class Handle_Geom_BezierSurface : public Handle_Geom_BoundedSurface {
 	Handle_Geom_BezierSurface(const TColgp_Array2OfPnt& SurfacePoles, const TColStd_Array2OfReal& PoleWeights){
 		return new Handle_Geom_BezierSurface(new Geom_BezierSurface(SurfacePoles, PoleWeights));
 	}
+	void Delete() {
+	  self->~Handle_Geom_BezierSurface();
+	}  
 
 	Standard_Integer NbUPoles()
     {
@@ -1033,9 +1053,9 @@ class Handle_Geom_BezierSurface : public Handle_Geom_BoundedSurface {
     }
 
 }
-
+%nodefaultdtor Handle_Geom_BSplineSurface;
 class Handle_Geom_BSplineSurface : public Handle_Geom_BoundedSurface  {
-	Handle_Geom_BSplineSurface()=0;
+  Handle_Geom_BSplineSurface()=0;
 };
 
 %extend Handle_Geom_BSplineSurface
@@ -1048,6 +1068,9 @@ class Handle_Geom_BSplineSurface : public Handle_Geom_BoundedSurface  {
         return new Handle_Geom_BSplineSurface(new Geom_BSplineSurface(Poles, Weights, UKnots, VKnots, UMults, VMults,
             UDegree, VDegree, UPeriodic, VPeriodic));
     }
+    void Delete() {
+	  self->~Handle_Geom_BSplineSurface();
+	}  
 
 	Standard_Boolean IsURational()
     {
@@ -1196,8 +1219,9 @@ class Handle_Geom_BSplineSurface : public Handle_Geom_BoundedSurface  {
     }
 
 }
+%nodefaultdtor Handle_Geom_RectangularTrimmedSurface;
 class Handle_Geom_RectangularTrimmedSurface : public Handle_Geom_BoundedSurface  {
-    Handle_Geom_RectangularTrimmedSurface()=0;
+  Handle_Geom_RectangularTrimmedSurface()=0;
 };
 
 
@@ -1209,6 +1233,9 @@ class Handle_Geom_RectangularTrimmedSurface : public Handle_Geom_BoundedSurface 
             const Standard_Boolean VSense = Standard_True){
         return new Handle_Geom_RectangularTrimmedSurface(new Geom_RectangularTrimmedSurface(S, U1, U2, V1, V2, USense, VSense));
      }
+    void Delete() {
+	  self->~Handle_Geom_RectangularTrimmedSurface();
+	}  
 
     Handle_Geom_Surface BasisSurface()
 	{
@@ -1222,9 +1249,9 @@ class Handle_Geom_RectangularTrimmedSurface : public Handle_Geom_BoundedSurface 
 
 
 }
-
+%nodefaultdtor Handle_Geom_SphericalSurface;
 class Handle_Geom_SphericalSurface : public Handle_Geom_ElementarySurface {
-    Handle_Geom_SphericalSurface()=0;
+  Handle_Geom_SphericalSurface()=0;
 };
 
 %extend Handle_Geom_SphericalSurface
@@ -1233,6 +1260,9 @@ class Handle_Geom_SphericalSurface : public Handle_Geom_ElementarySurface {
     Handle_Geom_SphericalSurface(const gp_Ax3& A3, const Standard_Real Radius){
         return new Handle_Geom_SphericalSurface(new Geom_SphericalSurface(A3, Radius));
     }
+    void Delete() {
+      self->~Handle_Geom_SphericalSurface();
+    }  
 
     gp_Sphere Sphere()
 	{
@@ -1260,9 +1290,9 @@ class Handle_Geom_SphericalSurface : public Handle_Geom_ElementarySurface {
 	}
 
 }
-
+%nodefaultdtor Handle_Geom_ToroidalSurface;
 class Handle_Geom_ToroidalSurface : public Handle_Geom_ElementarySurface {
-    Handle_Geom_ToroidalSurface()=0;
+    Handle_Geom_ToroidalSurface()=0;    
 };
 
 %extend Handle_Geom_ToroidalSurface
@@ -1271,7 +1301,9 @@ class Handle_Geom_ToroidalSurface : public Handle_Geom_ElementarySurface {
     Handle_Geom_ToroidalSurface(const gp_Ax3& A3, const Standard_Real MajorRadius, const Standard_Real MinorRadius){
         return new Handle_Geom_ToroidalSurface(new Geom_ToroidalSurface(A3, MajorRadius, MinorRadius));
     }
-
+    void Delete() {
+      self->~Handle_Geom_ToroidalSurface();
+    }  
     gp_Torus Torus()
 	{
 	    return (*self)->Torus();	
@@ -1304,9 +1336,9 @@ class Handle_Geom_ToroidalSurface : public Handle_Geom_ElementarySurface {
 	}
         
 }
-
+%nodefaultdtor Handle_Geom_OffsetSurface;
 class Handle_Geom_OffsetSurface : public Handle_Geom_Surface {
-	Handle_Geom_OffsetSurface()=0;
+  Handle_Geom_OffsetSurface()=0;
 };
 
 %extend Handle_Geom_OffsetSurface
@@ -1314,7 +1346,9 @@ class Handle_Geom_OffsetSurface : public Handle_Geom_Surface {
     Handle_Geom_OffsetSurface(const Handle_Geom_Surface& S, const Standard_Real Offset){
         return new Handle_Geom_OffsetSurface(new Geom_OffsetSurface(S, Offset)); 
     }
-
+    void Delete() {
+      self->~Handle_Geom_OffsetSurface();
+    }  
     Standard_Real Offset()
 	{
 		return (*self)->Offset();	
@@ -1326,9 +1360,9 @@ class Handle_Geom_OffsetSurface : public Handle_Geom_Surface {
 	}
 	
 }
-
+%nodefaultdtor Handle_Geom_SurfaceOfRevolution;
 class Handle_Geom_SurfaceOfRevolution : public Handle_Geom_SweptSurface {
-	Handle_Geom_SurfaceOfRevolution()=0;
+  Handle_Geom_SurfaceOfRevolution()=0;
 };
 
 %extend Handle_Geom_SurfaceOfRevolution
@@ -1337,7 +1371,9 @@ class Handle_Geom_SurfaceOfRevolution : public Handle_Geom_SweptSurface {
     Handle_Geom_SurfaceOfRevolution(const Handle_Geom_Curve& C, const gp_Ax1& A1){
         return new Handle_Geom_SurfaceOfRevolution(new Geom_SurfaceOfRevolution(C, A1));
     }
-
+    void Delete() {
+      self->~Handle_Geom_SurfaceOfRevolution();
+    }  
 	gp_Ax1 Axis()
 	{
 		return (*self)->Axis();	
@@ -1356,9 +1392,9 @@ class Handle_Geom_SurfaceOfRevolution : public Handle_Geom_SweptSurface {
     /* FIXME TODO @fixme @todo missing base curve getter for constructor */
 
 }
-
+%nodefaultdtor Handle_Geom_ConicalSurface;
 class Handle_Geom_ConicalSurface : public Handle_Geom_ElementarySurface {
-	Handle_Geom_ConicalSurface()=0;
+  Handle_Geom_ConicalSurface()=0;
 };
 
 %extend Handle_Geom_ConicalSurface
@@ -1368,7 +1404,9 @@ class Handle_Geom_ConicalSurface : public Handle_Geom_ElementarySurface {
 	Handle_Geom_ConicalSurface(const gp_Ax3& A3, const Standard_Real Ang, const Standard_Real Radius){
 		return new Handle_Geom_ConicalSurface(new Geom_ConicalSurface(A3, Ang, Radius));
 	}
-
+    void Delete() {
+      self->~Handle_Geom_ConicalSurface();
+    }  
     gp_Cone Cone()
 	{
 		return (*self)->Cone();	
@@ -1395,9 +1433,9 @@ class Handle_Geom_ConicalSurface : public Handle_Geom_ElementarySurface {
 	}
 
 }
-
+%nodefaultdtor Handle_Geom_CylindricalSurface;
 class Handle_Geom_CylindricalSurface : public Handle_Geom_ElementarySurface {
-    Handle_Geom_CylindricalSurface()=0;
+  Handle_Geom_CylindricalSurface()=0;
 };
 
 %extend Handle_Geom_CylindricalSurface
@@ -1410,7 +1448,9 @@ class Handle_Geom_CylindricalSurface : public Handle_Geom_ElementarySurface {
 	Handle_Geom_CylindricalSurface(const gp_Ax2& A2, const Standard_Real Radius){
 		return new Handle_Geom_CylindricalSurface(new Geom_CylindricalSurface(A2, Radius));
 	}
-
+    void Delete() {
+      self->~Handle_Geom_CylindricalSurface();
+    }  
     gp_Cylinder Cylinder()
 	{
 		return (*self)->Cylinder();	
@@ -1426,9 +1466,9 @@ class Handle_Geom_CylindricalSurface : public Handle_Geom_ElementarySurface {
 		return (*self)->Radius();	
 	}
 }
-
+%nodefaultdtor Handle_Geom_SurfaceOfLinearExtrusion;
 class Handle_Geom_SurfaceOfLinearExtrusion : public Handle_Geom_SweptSurface {
-    Handle_Geom_SurfaceOfLinearExtrusion()=0;
+  Handle_Geom_SurfaceOfLinearExtrusion()=0;
 };
 
 %extend Handle_Geom_SurfaceOfLinearExtrusion 
@@ -1436,13 +1476,13 @@ class Handle_Geom_SurfaceOfLinearExtrusion : public Handle_Geom_SweptSurface {
     Handle_Geom_SurfaceOfLinearExtrusion(const Handle_Geom_Curve& C, const gp_Dir& V){
         return new Handle_Geom_SurfaceOfLinearExtrusion(new Geom_SurfaceOfLinearExtrusion(C, V));
     }
-
-    /* TODO FIXME @todo @fixme missing important getters for constructor */
-
+    void Delete() {
+      self->~Handle_Geom_SurfaceOfLinearExtrusion();
+    }  
 }
-
+%nodefaultdtor Handle_Geom_Plane;
 class Handle_Geom_Plane : public Handle_Geom_ElementarySurface {
-    Handle_Geom_Plane()=0;
+  Handle_Geom_Plane()=0;
 };
 
 %extend Handle_Geom_Plane
@@ -1452,7 +1492,9 @@ class Handle_Geom_Plane : public Handle_Geom_ElementarySurface {
 	Handle_Geom_Plane(const gp_Ax3& A3){
 		return new Handle_Geom_Plane(new Geom_Plane(A3));
 	}
-
+    void Delete() {
+      self->~Handle_Geom_Plane();
+    }  
     gp_Pln Plane()
 	{
 		return (*self)->Pln();	

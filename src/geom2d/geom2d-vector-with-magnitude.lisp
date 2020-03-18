@@ -19,8 +19,7 @@
 
 	       (t (error "Invalid initargs to constructor: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize instance (lambda () (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer))
-		     :dont-save t)
+    (oc:finalize instance)
     (values)))
 
 (defmethod (setf coord2) ((x real) (y real) (vector geom2d-vector-with-magnitude))

@@ -25,5 +25,5 @@
 		   (gp-lin2d-pos-vdir-coord-x pointer) (- B)
 		   (gp-lin2d-pos-vdir-coord-y pointer) A)))
 	  (t (error "Invalid arguments to constructor: ~S" args)))
-    (finalize struct (lambda () (print 'freeing-lin2d) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))

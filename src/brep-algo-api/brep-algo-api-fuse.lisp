@@ -7,5 +7,5 @@
 		(_wrap_new_BRepAlgoAPI_Fuse (ff-pointer S1) (ff-pointer S2)))
 	       (t (error "Not fully implemented ~S" initargs)))))
     (setf (ff-pointer object) pointer)
-    (ff-pointer-finalize object #'_wrap_delete_BRepAlgoAPI_Fuse)
+    (oc:finalize object)
     (values)))

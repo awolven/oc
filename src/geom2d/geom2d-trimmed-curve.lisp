@@ -12,11 +12,7 @@
 						       (coerce U2 'double-float)))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer object) pointer)
-    (sb-ext:finalize
-     object
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize object)
     (values)))
 
 (defmethod basis-curve ((curve geom2d-trimmed-curve))

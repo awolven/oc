@@ -27,11 +27,7 @@
 	       
 	       (t "Invalid arguments to constructor: ~S" initargs))))
     (setf (ff-pointer object) pointer)
-    (sb-ext:finalize
-     object
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize object)
     (values)))
 
 (defmethod (setf geom-processor) ((E gp::elips2d) (ellipse geom2d-ellipse))
@@ -50,27 +46,19 @@
 (defmethod geom-processor ((ellipse geom2d-ellipse))
   (let* ((pointer (_wrap_Geom2d_Ellipse_Elips2d (ff-pointer ellipse)))
 	 (struct (gp::make-elips2d :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Elips2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod directrix1 ((ellipse geom2d-ellipse))
   (let* ((pointer (_wrap_Geom2d_Ellipse_Directrix1 (ff-pointer ellipse)))
 	 (struct (gp::make-ax2d :ptr pointer)))
-    (sb-ext:finalize struct
-		     (lambda ()
-		       (_wrap_delete_gp_Ax2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod directrix2 ((ellipse geom2d-ellipse))
   (let* ((pointer (_wrap_Geom2d_Ellipse_Directrix2 (ff-pointer ellipse)))
 	 (struct (gp::make-ax2d :ptr pointer)))
-    (sb-ext:finalize struct
-		     (lambda ()
-		       (_wrap_delete_gp_Ax2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod focal-length ((ellipse geom2d-ellipse))
@@ -79,19 +67,13 @@
 (defmethod focus1 ((ellipse geom2d-ellipse))
   (let* ((pointer (_wrap_Geom2d_Ellipse_Focus1 (ff-pointer ellipse)))
 	 (struct (gp::make-pnt2d :ptr pointer)))
-    (sb-ext:finalize struct
-		     (lambda ()
-		       (_wrap_delete_gp_Pnt2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod focus2 ((ellipse geom2d-ellipse))
   (let* ((pointer (_wrap_Geom2d_Ellipse_Focus2 (ff-pointer ellipse)))
 	 (struct (gp::make-pnt2d :ptr pointer)))
-    (sb-ext:finalize struct
-		     (lambda ()
-		       (_wrap_delete_gp_Pnt2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod major-radius ((ellipse geom2d-ellipse))

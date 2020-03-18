@@ -36,12 +36,7 @@
 			 (311 (load-time-value (find-class 'bisector-bisecpc)))))
 	  (curve (when curve-class (allocate-instance curve-class))))
      (setf (ff-pointer curve) ff-curve)
-     (_wrap_Handle_MMgt_TShared_IncrementRefCounter ff-curve)
-     (sb-ext:finalize
-      curve
-      (lambda ()
-	(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-curve))
-      :dont-save t)
+     (oc:finalize curve)
      curve))
 
 (defmacro with-geom-surface (&body ff-call)
@@ -60,11 +55,7 @@
 			   (210 (load-time-value (find-class 'geom-plane)))))
 	  (surface (when surface-class (allocate-instance surface-class))))
      (setf (ff-pointer surface) ff-surface)
-     (sb-ext:finalize
-      surface
-      (lambda ()
-	(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-surface))
-      :dont-save t)
+     (oc:finalize surface)
      surface))
 
 (defmacro with-geom2d-vector (&body ff-call)
@@ -74,7 +65,5 @@
 			(312 (allocate-instance (load-time-value (find-class 'geom2d-vector-with-magnitude))))
 			(313 (allocate-instance (load-time-value (find-class 'geom2d-direction)))))))
        (setf (ff-pointer instance) ,pointer-sym)
-       (sb-ext:finalize instance
-			(lambda ()
-			  (_wrap_Handle_MMgt_TShared_DecrementRefCounter ,pointer-sym)))
+       (oc:finalize instance)
        instance)))

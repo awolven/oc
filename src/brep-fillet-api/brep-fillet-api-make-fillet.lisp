@@ -9,7 +9,7 @@
 		(_wrap_new_BRepFilletAPI_MakeFillet__SWIG_1 (ff-pointer shape)))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer object) pointer)
-    (ff-pointer-finalize object #'_wrap_delete_BRepFilletAPI_MakeFillet)
+    (oc:finalize object)
     (values)))
 
 (defmethod add-shape ((make-fillet brep-fillet-api-make-fillet) (radius number) (edge topods-edge))

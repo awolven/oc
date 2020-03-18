@@ -10,7 +10,7 @@
 	      ((and S ToFind ToAvoid)
 	       (_wrap_new_TopExp_Explorer__SWIG_1 (ff-pointer S) ToFind ToAvoid))
 	      (t (error "Invalid arguments for TopExp_Explorer constructor."))))
-  (ff-pointer-finalize obj #'_wrap_delete_TopExp_Explorer)
+  (oc:finalize obj)
   (values))
 
 (defmethod init ((self top-exp-explorer) (S topods-shape) &key ToFind ToAvoid &allow-other-keys)

@@ -9,11 +9,7 @@
 		(_wrap_new_Geom2d_CartesianPoint__SWIG_1 (coerce X 'double-float) (coerce Y 'double-float)))
 	       (t (error "Invalid initargs to Geom2d_CartesianPoint: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer))
-     :dont-save t)
+    (oc:finalize instance)
     (values)))
 
 (defmethod (setf coord2) ((x real) (y real) (point geom2d-cartesian-point))

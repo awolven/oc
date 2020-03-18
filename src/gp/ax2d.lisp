@@ -19,7 +19,7 @@
 		     (gp-ax2d-vdir-coord-x pointer) (gp-xy-x (ptr vdir))
 		     (gp-ax2d-vdir-coord-y pointer) (gp-xy-y (ptr vdir))))))
 
-    (finalize struct (lambda () (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object ax2d) stream)
@@ -30,7 +30,7 @@
 (defmethod oc:location ((ax2d ax2d))
   (let* ((p-result (oc::_wrap_gp_Ax2d_Location (ptr ax2d)))
 	 (result (make-pnt2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Pnt2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:direction ((ax2d ax2d))
@@ -39,7 +39,7 @@
 (defmethod oc:direction ((ax2d ax2d))
   (let* ((p-result (oc::_wrap_gp_Ax2d_Direction (ptr ax2d)))
 	 (result (make-dir2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Dir2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 

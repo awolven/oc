@@ -6,7 +6,7 @@
     (setf (gp-xy-x pointer) (coerce x 'double-float)
 	  (gp-xy-y pointer) (coerce y 'double-float)
 	  (gp-xyz-z pointer) (coerce z 'double-float))
-    (finalize struct (lambda () (print 'freeingpnt) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object pnt) stream)

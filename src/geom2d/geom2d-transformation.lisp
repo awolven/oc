@@ -8,9 +8,7 @@
 		(_wrap_new_Geom2d_Transformation__SWIG_1 (ptr Trsf)))
 	       (t (error "Invalid initargs to constructor: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize instance (lambda ()
-				(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer))
-		     :dont-save t)
+    (oc:finalize instance)
     (values)))
 
 (defmethod (setf mirror) ((P gp::pnt2d) (transform geom2d-transformation))
@@ -60,8 +58,7 @@
 (defmethod geom-processor ((transform geom2d-transformation))
   (let* ((pointer (_wrap_Geom2d_Transformation_Trsf2d (ff-pointer transform)))
 	 (struct (gp::make-trsf2d :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Trsf2d pointer)) :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod get-value2 ((transform geom2d-transformation) (row integer) (col integer))
@@ -76,9 +73,7 @@
   (let ((ff-pointer (_wrap_Geom2d_Transformation_Inverted (ff-pointer transform)))
 	(result (allocate-instance (load-time-value (find-class 'geom2d-transformation)))))
     (setf (ff-pointer result) ff-pointer)
-    (sb-ext:finalize result
-		     (lambda ()
-		       (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer)))
+    (oc:finalize result)
     result))
 
 (defmethod multiplied ((transform geom2d-transformation) (other geom2d-transformation))
@@ -86,9 +81,7 @@
 							    (ff-pointer other)))
 	(result (allocate-instance (load-time-value (find-class 'geom2d-transformation)))))
     (setf (ff-pointer result) ff-pointer)
-    (sb-ext:finalize result
-		     (lambda ()
-		       (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer)))
+    (oc:finalize result)
     result))
     
 (defmethod multiply! ((transform geom2d-transformation) (other geom2d-transformation))
@@ -101,9 +94,7 @@
   (let ((ff-pointer (_wrap_Geom2d_Transformation_Powered (ff-pointer transform) N))
 	(result (allocate-instance (load-time-value (find-class 'geom2d-transformation)))))
     (setf (ff-pointer result) ff-pointer)
-    (sb-ext:finalize result
-		     (lambda ()
-		       (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer)))
+    (oc:finalize result)
     result))
 
 (defmethod pre-multiply! ((transform geom2d-transformation) (other geom2d-transformation))
@@ -121,7 +112,5 @@
   (let ((ff-pointer (_wrap_Geom2d_Transformation_Copy (ff-pointer transform)))
 	(result (allocate-instance (load-time-value (find-class 'geom2d-transformation)))))
     (setf (ff-pointer result) ff-pointer)
-    (sb-ext:finalize result
-		     (lambda ()
-		       (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer)))
+    (oc:finalize result)
     result))

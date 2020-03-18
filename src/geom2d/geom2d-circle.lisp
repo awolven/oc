@@ -22,11 +22,7 @@
 
 	       (t (error "Invalid initargs to constructor: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer))
-     :dont-save t)
+    (oc:finalize instance)
     (values)))
 
 (defmethod (setf geom-processor) ((C gp::circ2d) (circle geom2d-circle))
@@ -40,9 +36,7 @@
 (defmethod geom-processor ((circle geom2d-circle))
   (let* ((pointer (_wrap_Geom2d_Circle_Circ2d (ff-pointer circle)))
 	 (struct (gp::make-circ2d :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Circ2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod radius ((circle geom2d-circle))

@@ -6,8 +6,7 @@
   ;; this needs a finalizer.
   (let* ((pointer (_wrap_Geom_Curve_Value (ff-pointer curve) (coerce U 'double-float)))
 	 (struct (gp::make-pnt :ptr pointer)))
-    #+SBCL
-    (sb-ext:finalize struct (lambda () (_wrap_delete_gp_Pnt pointer)) :dont-save t)
+    (oc:finalize struct)
     struct))
 
 

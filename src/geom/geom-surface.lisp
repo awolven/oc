@@ -19,6 +19,5 @@
   ;; this needs a finalizer.
   (let* ((pointer (_wrap_Geom_Surface_Value (ff-pointer surface) (coerce U 'double-float) (coerce V 'double-float)))
 	 (struct (gp::make-pnt :ptr pointer)))
-    #+SBCL
-    (sb-ext:finalize struct (lambda () (_wrap_delete_gp_Pnt pointer)) :dont-save t)
+    (oc:finalize struct)
     struct))

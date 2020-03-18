@@ -10,5 +10,5 @@
 	       (S (_wrap_new_BrepBuilderAPI_Transform__SWIG_0 (ptr Trsf)))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer obj) pointer)
-    (ff-pointer-finalize obj #'_wrap_delete_BRepBuilderAPI_Transform)
+    (oc:finalize obj)
     (values)))

@@ -21,7 +21,9 @@
 %{
 #include <Standard_Failure.hxx>
 #include <Standard_ErrorHandler.hxx>
-%}
+  %}
+
+
 
 %include exception.i
 
@@ -132,6 +134,8 @@ class TopExp_Explorer
  * BRepBndLib
  */
 %{#include "BRepBndLib.hxx"%}
+%nodefaultctor BRepBndLib;
+%nodefaultdtor BRepBndLib;
 class BRepBndLib
 {
 	public:

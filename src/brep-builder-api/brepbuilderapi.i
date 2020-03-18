@@ -60,7 +60,7 @@ class BRepBuilderAPI_MakeShape: public BRepBuilderAPI_Command
 	BRepBuilderAPI_MakeShape()=0;
 	public:
 	virtual void Build();
-	virtual const TopoDS_Shape& Shape();
+	virtual const TopoDS_Shape& Shape(); 
 };
 
 class BRepBuilderAPI_ModifyShape: public BRepBuilderAPI_MakeShape

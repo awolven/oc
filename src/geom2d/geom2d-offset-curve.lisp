@@ -10,8 +10,7 @@
 
 	       (t (error "Invalid initargs to constructor: ~S" initargs)))))
     (setf (ff-pointer curve) ff-pointer)
-    (sb-ext:finalize curve (lambda ()
-			     (_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer)))
+    (oc:finalize curve)
     (values)))
 
 (defmethod (setf basis-curve) ((c geom2d-curve) (offset-curve geom2d-offset-curve))

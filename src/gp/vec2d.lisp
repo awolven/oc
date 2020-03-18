@@ -61,11 +61,11 @@
 			(setf (gp-xy-x pointer) (- (gp-xy-x p-p2) (gp-xy-x p-p1))
 			      (gp-xy-y pointer) (- (gp-xy-y p-p2) (gp-xy-y p-p1)))))))))
 
-    (finalize struct (lambda () (print 'freeing-vec2d) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object vec2d) stream)
-  (format stream "(~S ~A ~A)" (type-of object) (x object) (oc:y object)))
+  (format stream "(~S ~A ~A)" (type-of object) (x object) (y object)))
 
 (defmethod x ((vec vec2d))
   (gp-xy-x (ptr vec)))
@@ -115,7 +115,7 @@
 (defmethod oc:crossed ((vec1 vec2d) (vec2 vec2d))
   (let* ((p-result (oc::_wrap_gp_Vec2d_Crossed (ptr vec1) (ptr vec2)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:cross-magnitude ((vec1 vec2d) (vec2 vec2d))
@@ -180,7 +180,7 @@
 	 (result (funcall result-constructor :ptr p-result)))
     (setf (gp-xy-x p-result) (gp-xy-y p-xy)
 	  (gp-xy-y p-result) (- (gp-xy-x p-xy)))
-    (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+    (oc:finalize result :native)
     result))
     
 (defmethod gp:normal ((vec vec2d))
@@ -189,7 +189,7 @@
 (defmethod oc:normal ((vec vec2d))
   (let* ((p-result (oc::_wrap_gp_Vec2d_GetNormal (ptr vec)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
   
 (defmethod gp:normal? ((vec1 vec2d) (vec2 vec2d) &optional (angular-tolerance 1.0d-36))
@@ -225,7 +225,7 @@
 (defmethod oc:added ((vec1 vec2d) (vec2 vec2d))
   (let* ((p-result (oc::_wrap_gp_Vec2d_Added (ptr vec1) (ptr vec2)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:divide! ((vec vec2d) (scalar real))
@@ -246,7 +246,7 @@
 (defmethod oc:divided ((vec vec2d) (scalar real))
   (let* ((p-result (oc::_wrap_gp_Vec2d_Divided (ptr vec) (coerce scalar 'double-float)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:multiplied ((vec vec2d) (scalar real))
@@ -256,13 +256,13 @@
 	 (coef (coerce scalar 'double-float)))
     (setf (gp-xy-x p2) (/ (gp-xy-x p1) coef)
 	  (gp-xy-y p2) (/ (gp-xy-y p1) coef))
-    (finalize result (lambda () (foreign-free p2)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:multiplied ((vec vec2d) (scalar real))
   (let* ((p-result (oc::_wrap_gp_Vec2d_Multiplied (ptr vec) (coerce scalar 'double-float)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:normalize! ((vec vec2d))
@@ -280,7 +280,7 @@
 (defmethod oc:normalized ((vec vec2d))
   (let* ((p-result (oc::_wrap_gp_Vec2d_Normalized (ptr vec)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
   
 (defmethod gp:reverse! ((vec vec2d))
@@ -295,13 +295,13 @@
 	 (result (make-vec2d :ptr p-result)))
     (setf (gp-xy-x p-result) (- (gp-xy-x p-xy))
 	  (gp-xy-y p-result) (- (gp-xy-y p-xy)))
-    (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:reversed ((vec vec2d))
   (let* ((p-result (oc::_wrap_gp_Vec2d_Reversed (ptr vec)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:subtract! ((vec vec2d) (right vec2d))
@@ -321,13 +321,13 @@
 	 (p-right (ptr right)))
     (setf (gp-xy-x p-result) (- (gp-xy-x p-vec) (gp-xy-x p-right))
 	  (gp-xy-y p-result) (- (gp-xy-y p-vec) (gp-xy-y p-right)))
-    (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:subtracted ((vec vec2d) (right vec2d))
   (let* ((p-result (oc::_wrap_gp_Vec2d_Subtracted (ptr vec) (ptr right)))
 	 (result (make-vec2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Vec2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 

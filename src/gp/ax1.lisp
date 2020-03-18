@@ -10,7 +10,7 @@
 	  (gp-ax1-vdir-coord-x pointer) (x vdir)
 	  (gp-ax1-vdir-coord-y pointer) (y vdir)
 	  (gp-ax1-vdir-coord-z pointer) (z vdir))
-    (finalize struct (lambda () (print 'freeing-ax1) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object ax1) stream)

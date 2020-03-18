@@ -54,6 +54,7 @@
 %rename(Bisector_BisecCC) Handle_Bisector_BisecCC;
 %rename(Bisector_BisecPC) Handle_Bisector_BisecPC;
 
+%nodefaultdtor Handle_Geom2d_Geometry;
 class Handle_Geom2d_Geometry : public Handle_MMgt_TShared
 {
   Handle_Geom_Geometry()=0;
@@ -109,7 +110,7 @@ class Handle_Geom2d_Geometry : public Handle_MMgt_TShared
     return (*self)->Copy();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_Point;
 class Handle_Geom2d_Point : public Handle_Geom2d_Geometry
 {
   Handle_Geom2d_Point()=0;
@@ -136,7 +137,7 @@ class Handle_Geom2d_Point : public Handle_Geom2d_Geometry
     return (*self)->Y();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_CartesianPoint;
 class Handle_Geom2d_CartesianPoint : public Handle_Geom2d_Point
 {
   Handle_Geom2d_CartesianPoint()=0;
@@ -149,6 +150,9 @@ class Handle_Geom2d_CartesianPoint : public Handle_Geom2d_Point
   }
   Handle_Geom2d_CartesianPoint(const Standard_Real X, const Standard_Real Y) {
     return new Handle_Geom2d_CartesianPoint(new Geom2d_CartesianPoint(X, Y));
+  }
+  void Delete() {
+    self->~Handle_Geom2d_CartesianPoint();
   }
   void SetCoord (const Standard_Real X, const Standard_Real Y) {
     (*self)->SetCoord(X, Y);
@@ -163,7 +167,7 @@ class Handle_Geom2d_CartesianPoint : public Handle_Geom2d_Point
     (*self)->SetY(Y);
   }
 }
-
+%nodefaultdtor Handle_Geom2d_Vector;
 class Handle_Geom2d_Vector : public Handle_Geom2d_Geometry
 {
   Handle_Geom2d_Vector()=0;
@@ -217,7 +221,7 @@ class Handle_Geom2d_Vector : public Handle_Geom2d_Geometry
     return -1;
   }
 }
-
+%nodefaultdtor Handle_Geom2d_VectorWithMagnitude;
 class Handle_Geom2d_VectorWithMagnitude : public Handle_Geom2d_Vector
 {
   Handle_Geom2d_VectorWithMagnitude()=0;
@@ -233,6 +237,9 @@ class Handle_Geom2d_VectorWithMagnitude : public Handle_Geom2d_Vector
   }
   Handle_Geom2d_VectorWithMagnitude(const gp_Pnt2d& P1, const gp_Pnt2d& P2) {
     return new Handle_Geom2d_VectorWithMagnitude(new Geom2d_VectorWithMagnitude(P1, P2));
+  }
+  void Delete() {
+    self->~Handle_Geom2d_VectorWithMagnitude();
   }
   void SetCoord (const Standard_Real X, const Standard_Real Y) {
     (*self)->SetCoord(X, Y);
@@ -283,7 +290,7 @@ class Handle_Geom2d_VectorWithMagnitude : public Handle_Geom2d_Vector
     return (*self)->Copy();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_Direction;
 class Handle_Geom2d_Direction : public Handle_Geom2d_Vector
 {
   Handle_Geom2d_Direction()=0;
@@ -297,6 +304,9 @@ class Handle_Geom2d_Direction : public Handle_Geom2d_Vector
   Handle_Geom2d_Direction(const gp_Dir2d& V) {
     return new Handle_Geom2d_Direction(new Geom2d_Direction(V));
   }
+  void Delete() {
+    self->~Handle_Geom2d_Direction();
+  }  
   void SetCoord (const Standard_Real X, const Standard_Real Y) {
     (*self)->SetCoord(X, Y);
   }
@@ -313,7 +323,7 @@ class Handle_Geom2d_Direction : public Handle_Geom2d_Vector
     return (*self)->Dir2d();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_AxisPlacement;
 class Handle_Geom2d_AxisPlacement : public Handle_Geom2d_Geometry
 {
   Handle_Geom2d_AxisPlacement()=0;
@@ -328,7 +338,9 @@ class Handle_Geom2d_AxisPlacement : public Handle_Geom2d_Geometry
   Handle_Geom2d_AxisPlacement(const gp_Pnt2d& P, const gp_Dir2d& V) {
     return new Handle_Geom2d_AxisPlacement(new Geom2d_AxisPlacement(P, V));
   }
-
+  void Delete() {
+    self->~Handle_Geom2d_AxisPlacement();
+  }  
   void Reverse() {
     (*self)->Reverse();
   }
@@ -358,7 +370,7 @@ class Handle_Geom2d_AxisPlacement : public Handle_Geom2d_Geometry
   }
 }
 		
-  
+%nodefaultdtor Handle_Geom2d_Transformation;  
 class Handle_Geom2d_Transformation : public Handle_MMgt_TShared
 {
   Handle_Geom2d_Transformation()=0;
@@ -372,6 +384,9 @@ class Handle_Geom2d_Transformation : public Handle_MMgt_TShared
   Handle_Geom2d_Transformation(const gp_Trsf2d& T) {
     return new Handle_Geom2d_Transformation(new Geom2d_Transformation(T));
   }
+  void Delete() {
+    self->~Handle_Geom2d_Transformation();
+  }  
   void SetMirror (const gp_Pnt2d& P) {
     (*self)->SetMirror(P);
   }
@@ -443,12 +458,12 @@ class Handle_Geom2d_Transformation : public Handle_MMgt_TShared
   }
 }
   
-
+%nodefaultdtor Handle_Geom2d_Curve;  
 class Handle_Geom2d_Curve : public Handle_Geom2d_Geometry
 {
 	Handle_Geom2d_Curve()=0;
 };
-
+%nodefaultdtor Handle_Bisector_Curve;  
 class Handle_Bisector_Curve : public Handle_Geom2d_Curve
 {
 	Handle_Bisector_Curve()=0;
@@ -486,7 +501,7 @@ class Handle_Bisector_Curve : public Handle_Geom2d_Curve
 		return (*self)->IntervalLast(index);
 	}
 }
-
+%nodefaultdtor Handle_Bisector_BisecAna;  
 class Handle_Bisector_BisecAna : public Handle_Bisector_Curve
 {
 	Handle_Bisector_BisecAna()=0;
@@ -497,7 +512,7 @@ class Handle_Bisector_BisecAna : public Handle_Bisector_Curve
 
 
 }
-
+%nodefaultdtor Handle_Bisector_BisecCC;  
 class Handle_Bisector_BisecCC : public Handle_Bisector_Curve
 {
 	Handle_Bisector_BisecCC()=0;
@@ -511,7 +526,7 @@ class Handle_Bisector_BisecCC : public Handle_Bisector_Curve
     }
 
 }
-
+%nodefaultdtor Handle_Bisector_BisecPC;
 class Handle_Bisector_BisecPC : public Handle_Bisector_Curve
 {
 	Handle_Bisector_BisecPC()=0;
@@ -639,7 +654,7 @@ class Handle_Bisector_BisecPC : public Handle_Bisector_Curve
   }
 	
 }
-
+%nodefaultdtor Handle_Geom2d_Line;
 class Handle_Geom2d_Line : public Handle_Geom2d_Curve
 {
 	Handle_Geom2d_Line()=0;
@@ -656,7 +671,9 @@ class Handle_Geom2d_Line : public Handle_Geom2d_Curve
 	Handle_Geom2d_Line(const gp_Pnt2d& P, const gp_Dir2d& V){
 		return new Handle_Geom2d_Line(new Geom2d_Line(P, V));
 	}
-
+	void Delete() {
+	  self->~Handle_Geom2d_Line();
+	}  
 	gp_Lin2d Lin2d() {
 	  return (*self)->Lin2d();
 	}	
@@ -724,7 +741,7 @@ class Handle_Geom2d_Line : public Handle_Geom2d_Curve
 	}
 
 }
-
+%nodefaultdtor Handle_Geom2d_OffsetCurve;
 class Handle_Geom2d_OffsetCurve : public Handle_Geom2d_Curve
 {
 	Handle_Geom2d_OffsetCurve()=0;
@@ -736,6 +753,9 @@ class Handle_Geom2d_OffsetCurve : public Handle_Geom2d_Curve
 	Handle_Geom2d_OffsetCurve(const Handle_Geom2d_Curve& C, const Standard_Real Offset){
 		return new Handle_Geom2d_OffsetCurve(new Geom2d_OffsetCurve(C, Offset));
 	}
+	void Delete() {
+	  self->~Handle_Geom2d_OffsetCurve();
+	}  
 	void SetBasisCurve (const Handle_Geom2d_Curve& C, const Standard_Boolean isNotCheckC0 = Standard_False) {
 	  (*self)->SetBasisCurve(C, isNotCheckC0);
 
@@ -753,7 +773,7 @@ class Handle_Geom2d_OffsetCurve : public Handle_Geom2d_Curve
 	  return (*self)->GetBasisCurveContinuity();
 	}	
 }
-
+%nodefaultdtor Handle_Geom2d_Conic;
 class Handle_Geom2d_Conic : public Handle_Geom2d_Curve
 {
 	Handle_Geom2d_Conic()=0;
@@ -799,7 +819,7 @@ class Handle_Geom2d_Conic : public Handle_Geom2d_Curve
 	}
 
 }
-
+%nodefaultdtor Handle_Geom2d_Circle;
 class Handle_Geom2d_Circle : public Handle_Geom2d_Conic
 {
 	Handle_Geom2d_Circle()=0;
@@ -816,6 +836,9 @@ class Handle_Geom2d_Circle : public Handle_Geom2d_Conic
   Handle_Geom2d_Circle(const gp_Ax22d& A, const Standard_Real R){
     return new Handle_Geom2d_Circle(new Geom2d_Circle(A, R));
   }
+  void Delete() {
+    self->~Handle_Geom2d_Circle();
+  }  
   void SetCirc2d(const gp_Circ2d& C) {
     (*self)->SetCirc2d(C);
   }
@@ -829,10 +852,10 @@ class Handle_Geom2d_Circle : public Handle_Geom2d_Conic
     return (*self)->Radius();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_Ellipse;
 class Handle_Geom2d_Ellipse : public Handle_Geom2d_Conic
 {
-	Handle_Geom2d_Ellipse()=0;
+  Handle_Geom2d_Ellipse()=0;
 };
 
 %extend Handle_Geom2d_Ellipse
@@ -846,6 +869,9 @@ class Handle_Geom2d_Ellipse : public Handle_Geom2d_Conic
   Handle_Geom2d_Ellipse(const gp_Ax22d& Axis, const Standard_Real MajorRadius, const Standard_Real MinorRadius) {
     return new Handle_Geom2d_Ellipse(new Geom2d_Ellipse(Axis, MajorRadius, MinorRadius));
   }
+  void Delete() {
+    self->~Handle_Geom2d_Ellipse();
+  }  
   void SetElips2d(const gp_Elips2d& E) {
     (*self)->SetElips2d(E);
   }
@@ -890,7 +916,7 @@ class Handle_Geom2d_Ellipse : public Handle_Geom2d_Conic
     return (*self)->Parameter();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_Hyperbola;
 class Handle_Geom2d_Hyperbola : public Handle_Geom2d_Conic
 {
   Handle_Geom2d_Hyperbola()=0;
@@ -907,6 +933,9 @@ class Handle_Geom2d_Hyperbola : public Handle_Geom2d_Conic
   Handle_Geom2d_Hyperbola(const gp_Ax22d& Axis, const Standard_Real MajorRadius, const Standard_Real MinorRadius){
     return new Handle_Geom2d_Hyperbola(new Geom2d_Hyperbola(Axis, MajorRadius, MinorRadius));
   }
+  void Delete() {
+    self->~Handle_Geom2d_Hyperbola();
+  }  
   void SetHypr2d (const gp_Hypr2d& H) {
     (*self)->SetHypr2d(H);
   }
@@ -959,10 +988,10 @@ class Handle_Geom2d_Hyperbola : public Handle_Geom2d_Conic
     return (*self)->Parameter();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_Parabola;
 class Handle_Geom2d_Parabola : public Handle_Geom2d_Conic
 {
-	Handle_Geom2d_Parabola()=0;
+  Handle_Geom2d_Parabola()=0;
 };
 
 %extend Handle_Geom2d_Parabola
@@ -979,6 +1008,9 @@ class Handle_Geom2d_Parabola : public Handle_Geom2d_Conic
   Handle_Geom2d_Parabola(const gp_Ax2d& D, const gp_Pnt2d& F){
     return new Handle_Geom2d_Parabola(new Geom2d_Parabola(D, F));
   }
+  void Delete() {
+    self->~Handle_Geom2d_Parabola();
+  }  
   void SetFocal(const Standard_Real Focal) {
     (*self)->SetFocal(Focal);
   }
@@ -1001,10 +1033,10 @@ class Handle_Geom2d_Parabola : public Handle_Geom2d_Conic
     return (*self)->Parameter();
   }
 }
-
+%nodefaultdtor Handle_Geom2d_BoundedCurve;
 class Handle_Geom2d_BoundedCurve : public Handle_Geom2d_Curve
 {
-	Handle_Geom2d_BoundedCurve()=0;
+  Handle_Geom2d_BoundedCurve()=0;
 };
 
 %extend Handle_Geom2d_BoundedCurve
@@ -1019,10 +1051,10 @@ class Handle_Geom2d_BoundedCurve : public Handle_Geom2d_Curve
 		return (*self)->StartPoint();
 	}
 }
-
+%nodefaultdtor Handle_Geom2d_BezierCurve;
 class Handle_Geom2d_BezierCurve : public Handle_Geom2d_BoundedCurve
 {
-	Handle_Geom2d_BezierCurve()=0;
+  Handle_Geom2d_BezierCurve()=0;
 };
 
 %extend Handle_Geom2d_BezierCurve
@@ -1033,6 +1065,9 @@ class Handle_Geom2d_BezierCurve : public Handle_Geom2d_BoundedCurve
   Handle_Geom2d_BezierCurve(const TColgp_Array1OfPnt2d& CurvePoles, const TColStd_Array1OfReal& PoleWeights){
     return new Handle_Geom2d_BezierCurve(new Geom2d_BezierCurve(CurvePoles, PoleWeights));
   }
+  void Delete() {
+    self->~Handle_Geom2d_BezierCurve();
+  }  
   void Increase (const Standard_Integer Degree) {
     (*self)->Increase(Degree);
   }
@@ -1085,10 +1120,10 @@ class Handle_Geom2d_BezierCurve : public Handle_Geom2d_BoundedCurve
     (*self)->Resolution(ToleranceUV, UTolerance);
   }
 }
-
+%nodefaultdtor Handle_Geom2d_BSplineCurve;
 class Handle_Geom2d_BSplineCurve : public Handle_Geom2d_BoundedCurve
 {
-	Handle_Geom2d_BSplineCurve()=0;
+  Handle_Geom2d_BSplineCurve()=0;
 };
 
 %extend Handle_Geom2d_BSplineCurve
@@ -1106,6 +1141,9 @@ class Handle_Geom2d_BSplineCurve : public Handle_Geom2d_BoundedCurve
         return new Handle_Geom2d_BSplineCurve(new Geom2d_BSplineCurve(Poles, Weights, Knots, 
             Multiplicities, Degree, Periodic));
     }
+    void Delete() {
+      self->~Handle_Geom2d_BSplineCurve();
+    }  
     void IncreaseDegree (const Standard_Integer Degree) {
       (*self)->IncreaseDegree(Degree);
     }
@@ -1254,10 +1292,10 @@ class Handle_Geom2d_BSplineCurve : public Handle_Geom2d_BoundedCurve
       (*self)->Resolution(ToleranceUV, UTolerance);
     }
 }
-
+%nodefaultdtor Handle_Geom2d_TrimmedCurve;
 class Handle_Geom2d_TrimmedCurve : public Handle_Geom2d_BoundedCurve
 {
-	Handle_Geom2d_TrimmedCurve()=0;
+  Handle_Geom2d_TrimmedCurve()=0;
 };
 
 %extend Handle_Geom2d_TrimmedCurve
@@ -1266,7 +1304,9 @@ class Handle_Geom2d_TrimmedCurve : public Handle_Geom2d_BoundedCurve
     {
       return new Handle_Geom2d_TrimmedCurve(new Geom2d_TrimmedCurve(C, U1, U2, Sense));
     }
-
+  void Delete() {
+    self->~Handle_Geom2d_TrimmedCurve();
+  }  
   Handle_Geom2d_Curve BasisCurve() {
     return (*self)->BasisCurve();
   }

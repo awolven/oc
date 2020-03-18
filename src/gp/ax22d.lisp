@@ -40,5 +40,5 @@
 		     (gp-ax22d-vydir-coord-y ptr) (- (gp-ax22d-vxdir-coord-x ptr)))))
 	  (t "Invalid arguments to ax22d: ~S" args))
     (let ((struct (make-ax22d :ptr ptr)))
-      (finalize struct (lambda () (print 'freeing-ax22d) (foreign-free ptr)))
+      (oc:finalize struct :native)
       struct)))

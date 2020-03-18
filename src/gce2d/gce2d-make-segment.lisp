@@ -15,7 +15,7 @@
 		(_wrap_new_GCE2d_MakeSegment__SWIG_0 (ptr P1) (ptr P2)))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer object) pointer)
-    (ff-pointer-finalize object #'_wrap_delete_GCE2d_MakeSegment)
+    (oc:finalize object)
     (values)))
 
 (defmethod value ((self gce2d-make-segment))

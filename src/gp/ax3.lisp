@@ -21,7 +21,7 @@
 	    (gp-ax3-vydir-coord-y gp-ax3) (y vydir)
 	    (gp-ax3-vydir-coord-z gp-ax3) (z vydir)))
     (let ((struct (make-ax3 :ptr gp-ax3)))
-      (finalize struct (lambda () (print 'freeingax3) (foreign-free gp-ax3)))
+      (oc:finalize struct :native)
       struct)))
 
 (defmethod vxdir ((ax3 ax3))

@@ -29,7 +29,7 @@
 
 	  (t (error "Invalid initargs to constructor: ~S" args)))
 	   
-    (finalize struct (lambda () (print 'freeing-pnt2d) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object pnt2d) stream)

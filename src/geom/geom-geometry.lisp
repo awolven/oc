@@ -28,77 +28,49 @@
   (let ((pointer (_wrap_Geom_Geometry_Mirrored__SWIG_0 (ff-pointer geometry) (ptr p)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod mirrored ((geometry geom-geometry) (a1 gp:ax1))
   (let ((pointer (_wrap_Geom_Geometry_Mirrored__SWIG_1 (ff-pointer geometry) (ptr a1)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod mirrored ((geometry geom-geometry) (a2 gp:ax2))
   (let ((pointer (_wrap_Geom_Geometry_Mirrored__SWIG_2 (ff-pointer geometry) (ptr a2)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)    
+    (oc:finalize instance)    
     instance))
 
 (defmethod rotated ((geometry geom-geometry) (a1 gp:ax1) (ang real))
   (let ((pointer (_wrap_Geom_Geometry_Rotated (ff-pointer geometry) (ptr a1) (coerce ang 'double-float)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod scaled ((geometry geom-geometry) (p gp:pnt) (s real))
   (let ((pointer (_wrap_Geom_Geometry_Scaled (ff-pointer geometry) (ptr p) (coerce s 'double-float)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod transformed ((geometry geom-geometry) (trsf gp:trsf))
   (let ((pointer (_wrap_Geom_Geometry_Transformed (ff-pointer geometry) (ptr trsf)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod translated ((geometry geom-geometry) (v gp:vec))
   (let ((pointer (_wrap_Geom_Geometry_Translated__SWIG_0 (ff-pointer geometry) (ptr v)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod translated2 ((geometry geom-geometry) (p1 gp:pnt) (p2 gp:pnt))
@@ -106,20 +78,12 @@
 	 (_wrap_Geom_Geometry_Translated__SWIG_1 (ff-pointer geometry) (ptr p1) (ptr p2)))
 	(instance (allocate-instance (class-of geometry))))
     (setf (ff-pointer instance) pointer)
-    (sb-ext:finalize
-     instance
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod copy ((point geom-geometry))
   (let ((pointer (_wrap_Geom_Geometry_Copy (ff-pointer point)))
 	(copy (allocate-instance (class-of point))))
     (setf (ff-pointer copy) pointer)
-    (sb-ext:finalize
-     copy
-     (lambda ()
-       (_wrap_Handle_MMgt_TShared_DecrementRefCounter pointer))
-     :dont-save t)
+    (oc:finalize copy)
     copy))

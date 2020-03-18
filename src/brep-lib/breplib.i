@@ -2,7 +2,8 @@
 %{
 #include <BRepLib.hxx>
 %}
-
+%nodefaultctor BRepLib;
+%nodefaultdtor BRepLib;
 class BRepLib
 {
  public:

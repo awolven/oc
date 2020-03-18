@@ -6,7 +6,7 @@
     (setf (gp-xy-x pointer) (coerce x 'double-float)
 	  (gp-xy-y pointer) (coerce y 'double-float)
 	  (gp-xyz-z pointer) (coerce z 'double-float))
-    (finalize struct (lambda () (print 'freeing-xyz) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object xyz) stream)
@@ -102,7 +102,7 @@
     (setf (gp-xy-x p3) (+ (gp-xy-x p1) (gp-xy-x p2))
 	  (gp-xy-y p3) (+ (gp-xy-y p1) (gp-xy-y p2))
 	  (gp-xyz-z p3) (+ (gp-xyz-z p1) (gp-xyz-z p2)))
-    (finalize xyz3 (lambda () (foreign-free p3)) :dont-save t)
+    (oc:finalize xyz3 :native)
     xyz3))
 
 (defmethod gp:added ((xyz1 xyz) (xyz2 xyz))
@@ -111,8 +111,7 @@
 (defmethod oc:added ((xyz1 xyz) (xyz2 xyz))
   (let* ((p-result (oc::_wrap_gp_XYZ_Added (ptr xyz1) (ptr xyz2)))
 	 (result (make-xyz :ptr p-result)))
-    (finalize result (lambda ()
-		       (oc::_wrap_delete_gp_XYZ p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (declaim (inline gp-xyz-dot))
@@ -153,7 +152,7 @@
 			  (* (gp-xy-x p1) (gp-xyz-z p2)))
 	  (gp-xyz-z p3) (- (* (gp-xy-x p1) (gp-xy-y p2))
 			   (* (gp-xy-y p1) (gp-xy-x p2))))
-    (finalize xyz3 (lambda () (foreign-free p3)) :dont-save t)
+    (oc:finalize xyz3 :native)
     xyz3))
 
 (defmethod oc:crossed ((xyz1 xyz) (xyz2 xyz))
@@ -164,8 +163,7 @@
 (defmethod oc:crossed ((xyz1 xyz) (xyz2 xyz))
   (let* ((p-result (oc::_wrap_gp_XYZ_Crossed (ptr xyz1) (ptr xyz2)))
 	 (result (make-xyz :ptr p-result)))
-    (finalize result (lambda ()
-		       (oc::_wrap_delete_gp_XYZ p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (declaim (inline gp-xyz-cross-square-magnitude))
@@ -223,14 +221,13 @@
   (let* ((p0 (foreign-alloc '(:struct gp-xyz)))
 	 (xyz (make-xyz :ptr p0)))
     (gp-xyz-cross-crossed p0 (ptr xyz1) (ptr xyz2) (ptr xyz3))
-    (sb-ext:finalize xyz (lambda () (foreign-free p0)) :dont-save t)
+    (oc:finalize xyz :native)
     xyz))
 
 (defmethod oc:cross-crossed ((xyz1 xyz) (xyz2 xyz) (xyz3 xyz))
   (let* ((p-result (oc::_wrap_gp_XYZ_CrossCrossed (ptr xyz1) (ptr xyz2) (ptr xyz3)))
 	 (result (make-xyz :ptr p-result)))
-    (finalize result (lambda ()
-		       (oc::_wrap_delete_gp_XYZ p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 	     
 (defun gp:dot-cross (v0 v1 v2)
@@ -273,6 +270,5 @@
 (defmethod oc:subtracted ((xyz1 xyz) (xyz2 xyz))
   (let* ((p-result (oc::_wrap_gp_XYZ_Subtracted (ptr xyz1) (ptr xyz2)))
 	 (result (make-xyz :ptr p-result)))
-    (finalize result (lambda ()
-		       (oc::_wrap_delete_gp_XYZ p-result)) :dont-save t)
+    (oc:finalize result)
     result))

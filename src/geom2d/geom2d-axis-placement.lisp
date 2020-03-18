@@ -13,9 +13,7 @@
 
 	       (t (error "Invalid initargs to constructor: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize instance (lambda ()
-				(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer))
-		     :dont-save t)
+    (oc:finalize instance)
     (values)))
 
 (defmethod reverse! ((geometry geom2d-axis-placement))
@@ -25,9 +23,7 @@
   (let ((ff-pointer (_wrap_Geom2d_AxisPlacement_Reversed (ff-pointer geometry)))
 	(instance (allocate-instance (load-time-value (find-class 'geom2d-axis-placement)))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize instance (lambda ()
-				(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer))
-		     :dont-save t)
+    (oc:finalize instance)
     instance))
 
 (defmethod (setf axis) ((A gp:ax2d) (geometry geom2d-axis-placement))
@@ -47,25 +43,19 @@
 (defmethod processor ((axis-placement geom2d-axis-placement))
   (let* ((ptr (_wrap_Geom2d_AxisPlacement_Ax2d (ff-pointer axis-placement)))
 	 (struct (gp:make-ax2d :ptr ptr)))
-    (sb-ext:finalize struct (lambda ()
-				(_wrap_delete_gp_Ax2d ptr))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod direction ((axis-placement geom2d-axis-placement))
   (let* ((ptr (_wrap_Geom2d_AxisPlacement_Direction (ff-pointer axis-placement)))
 	 (struct (gp:make-dir2d :ptr ptr)))
-    (sb-ext:finalize struct (lambda ()
-				(_wrap_delete_gp_Dir2d ptr))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod location ((axis-placement geom2d-axis-placement))
   (let* ((ptr (_wrap_Geom2d_AxisPlacement_Location (ff-pointer axis-placement)))
 	 (struct (gp:make-pnt2d :ptr ptr)))
-    (sb-ext:finalize struct (lambda ()
-				(_wrap_delete_gp_Pnt2d ptr))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 

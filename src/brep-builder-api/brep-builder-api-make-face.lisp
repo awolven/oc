@@ -16,10 +16,11 @@
 	       (W (_wrap_new_BRepBuilderAPI_MakeFace__SWIG_1 (ff-pointer W)))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer object) pointer)
-    (ff-pointer-finalize object #'_wrap_delete_BRepBuilderAPI_MakeFace)
+    (oc:finalize object)
     (values)))
 
 (defmethod face ((self brep-builder-api-make-face))
   (let ((face (allocate-instance (load-time-value (find-class 'topods-face)))))
-    (setf (ff-pointer face) (_wrap_BrepBuilderAPI_MakeFace_Face (ff-pointer self)))
+    (setf (ff-pointer face) (_wrap_TopoDS_Shape_copy_reference
+			     (_wrap_BrepBuilderAPI_MakeFace_Face (ff-pointer self))))
     face))

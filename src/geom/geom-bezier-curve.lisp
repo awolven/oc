@@ -16,9 +16,7 @@
 	       (t (error "Invalid arguments to constructor: ~S" initargs)))))
 
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize instance (lambda ()
-				(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer))
-		     :dont-save t)
+;;    (oc:finalize instance)
     (values)))
 
 (defmethod increase-degree ((curve geom-bezier-curve) (degree integer))
@@ -69,16 +67,14 @@
 (defmethod pole ((curve geom-bezier-curve) (index integer))
   (let* ((pointer (_wrap_Geom_BezierCurve_Pole (ff-pointer curve) index))
 	 (struct (gp::make-pnt :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Pnt pointer)))
+    (oc:finalize struct)
     struct))
 
 (defmethod poles ((curve geom-bezier-curve))
   (let* ((ff-pointer (_wrap_Geom_BezierCurve_Poles (ff-pointer curve)))
 	 (array (allocate-instance (load-time-value (find-class 'tcol-gp-array1-of-pnt)))))
     (setf (ff-pointer array) ff-pointer)
-    (sb-ext:finalize array (lambda ()
-			     (_wrap_delete_TColgp_Array1OfPnt ff-pointer)))
+    (oc:finalize array)
     array))
 
 (defmethod weight ((curve geom-bezier-curve) (index integer))
@@ -88,8 +84,7 @@
   (let* ((ff-pointer (_wrap_Geom_BezierCurve_Weights (ff-pointer curve)))
 	 (array (allocate-instance (load-time-value (find-class 'tcol-std-array1-of-real)))))
     (setf (ff-pointer array) ff-pointer)
-    (sb-ext:finalize array (lambda ()
-			     (_wrap_delete_TColStd_Array1OfReal ff-pointer)))
+    (oc:finalize array)
     array))
 
 (defun max-3d-bezier-curve-degree ()

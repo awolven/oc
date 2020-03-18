@@ -18,7 +18,7 @@
 	       (_wrap_new_TopoDS_Iterator__SWIG_2 (ff-pointer S) cumOri))
 	      (S (_wrap_new_TopoDS_Iterator__SWIG_3 (ff-pointer S)))
 	      (t (_wrap_new_TopoDS_Iterator__SWIG_0))))
-  (ff-pointer-finalize obj #'_wrap_delete_TopoDS_Iterator)
+  (oc:finalize obj)
   (values))
 
 (defmethod more-p ((self topods-iterator))

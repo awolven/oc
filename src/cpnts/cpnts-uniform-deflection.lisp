@@ -28,7 +28,8 @@
 							       (coerce Resolution 'double-float)
 							       WithControl)))))
     (setf (ff-pointer instance) ptr)
-    (ff-pointer-finalize instance #'_wrap_delete_CPnts_UniformDeflection)
+    (setf (slot-value instance 'curve) C)
+    (oc:finalize instance)
     (values)))
 		   
 (defmethod next ((self cpnts-uniform-deflection))

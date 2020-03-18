@@ -5,11 +5,11 @@
 	 (struct (make-xy :ptr pointer)))
     (setf (gp-xy-x pointer) (coerce x 'double-float)
 	  (gp-xy-y pointer) (coerce y 'double-float))
-    (finalize struct (lambda () (print 'freeing-xy) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object xy) stream)
-  (format stream "(~S ~A ~A)" (type-of object) (x object) (oc:y object)))
+  (format stream "(~S ~A ~A)" (type-of object) (x object) (y object)))
 
 (defmethod x ((xy xy))
   (gp-xy-x (ptr xy)))
@@ -94,7 +94,7 @@
 	 (xy3 (funcall result-constructor :ptr p3)))
     (setf (gp-xy-x p3) (+ (gp-xy-x p1) (gp-xy-x p2))
 	  (gp-xy-y p3) (+ (gp-xy-y p1) (gp-xy-y p2)))
-    (finalize xy3 (lambda () (foreign-free p3)) :dont-save t)
+    (oc:finalize xy3 :native)
     xy3))
 
 (defmethod gp:added ((xy1 xy) (xy2 xy))
@@ -148,7 +148,7 @@
 	 (result (funcall result-constructor :ptr p2)))
     (setf (gp-xy-x p2) (/ (gp-xy-x p1) divisor)
 	  (gp-xy-y p2) (/ (gp-xy-y p1) divisor))
-    (finalize result (lambda () (foreign-free p2)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod gp:divided ((xy xy) (scalar real))
@@ -216,7 +216,7 @@
 	 (coef (coerce scalar 'double-float)))
     (setf (gp-xy-x p2) (* (gp-xy-x p1) coef)
 	  (gp-xy-y p2) (* (gp-xy-y p1) coef))
-    (finalize result (lambda () (foreign-free p2)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:multiplied ((xy xy) (scalar real))
@@ -224,7 +224,7 @@
 	 (coef (coerce scalar 'double-float))
 	 (p-result (oc::_wrap_gp_XY_Multiplied__SWIG_0 p1 coef))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:multiplied ((xy xy) (xy2 xy))
@@ -234,7 +234,7 @@
 	 (result (make-xy :ptr p3)))
     (setf (gp-xy-x p3) (* (gp-xy-x p1) (gp-xy-x p2))
 	  (gp-xy-y p3) (* (gp-xy-y p1) (gp-xy-y p2)))
-    (finalize result (lambda () (foreign-free p2)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:multiplied ((xy xy) (xy2 xy))
@@ -242,7 +242,7 @@
 	 (p2 (ptr xy2))
 	 (p-result (oc::_wrap_gp_XY_Multiplied__SWIG_1 p1 p2))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
     
 (defmethod gp:multiplied ((xy xy) (mat mat2d))
@@ -256,7 +256,7 @@
 	  (gp-xy-y p-result) (+ (* (mem-aref p-mat :double 0) (gp-xy-x p-xy))
 				(* (mem-aref p-mat :double 2) (gp-xy-y p-xy))))
     
-    (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:multiplied ((xy xy) (mat mat2d))
@@ -264,7 +264,7 @@
 	 (p-mat (ptr mat))
 	 (p-result (oc::_wrap_gp_XY_Multiplied__SWIG_2 p-xy p-mat))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (declaim (inline gp-xy-normalize!))
@@ -287,13 +287,13 @@
 	   (result (make-xy :ptr p-result)))
       (setf (gp-xy-x p-result) (/ (gp-xy-x p) d)
 	    (gp-xy-y p-result) (/ (gp-xy-y p) d))
-      (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+      (oc:finalize result :native)
       result)))
 
 (defmethod oc:normalized ((xy xy))
   (let* ((p-result (oc::_wrap_gp_XY_Normalized (ptr xy)))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (declaim (inline gp-xy-reverse!))
@@ -308,19 +308,19 @@
 (defmethod oc:reverse! ((xy xy))
   (oc::_wrap_gp_XY_Reverse (ptr xy)))
 
-(defmethod oc:reversed ((xy xy))
+(defmethod gp:reversed ((xy xy))
   (let* ((p-xy (ptr xy))
 	 (p-result (foreign-alloc '(:struct gp-xy)))
 	 (result (make-xy :ptr p-result)))
     (setf (gp-xy-x p-result) (- (gp-xy-x p-xy))
 	  (gp-xy-y p-result) (- (gp-xy-y p-xy)))
-    (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:reversed ((xy xy))
   (let* ((p-result (oc::_wrap_gp_XY_Reversed (ptr xy)))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:subtract! ((xy xy) (right xy))
@@ -340,11 +340,11 @@
 	 (p-right (ptr right)))
     (setf (gp-xy-x p-result) (- (gp-xy-x p-xy) (gp-xy-x p-right))
 	  (gp-xy-y p-result) (- (gp-xy-y p-xy) (gp-xy-y p-right)))
-    (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+    (oc:finalize result :native)
     result))
 
 (defmethod oc:subtracted ((xy xy) (right xy))
   (let* ((p-result (oc::_wrap_gp_XY_Subtracted (ptr xy) (ptr right)))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))

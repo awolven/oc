@@ -27,7 +27,7 @@
 			      (mem-aref pointer :double 2) (gp-xy-y p-col1)
 			      (mem-aref pointer :double 3) (gp-xy-y p-col2))))))))
 
-    (finalize struct (lambda () (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (declaim (inline gp-mat2d-get-value2))
@@ -164,7 +164,7 @@
 (defmethod oc:column ((matrix mat2d) (index integer))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Column (ptr matrix) index))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:diagonal ((matrix mat2d))
@@ -174,7 +174,7 @@
 (defmethod oc:diagonal ((matrix mat2d))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Diagonal (ptr matrix)))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:row ((matrix mat2d) (index integer))
@@ -188,7 +188,7 @@
 (defmethod oc:row ((matrix mat2d) (index integer))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Row (ptr matrix) index))
 	 (result (make-xy :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_XY p-result)) :dont-save t)
+    (oc:finalize result)
     result))
   
 (defmethod gp:invert! ((mat mat2d))
@@ -221,7 +221,7 @@
 	  (mem-aref p-dst :double 1) (mem-aref p-src :double 1)
 	  (mem-aref p-dst :double 2) (mem-aref p-src :double 2)
 	  (mem-aref p-dst :double 3) (mem-aref p-src :double 3))
-    (finalize new-mat (lambda () (foreign-free p-dst)) :dont-save t)
+    (oc:finalize new-mat :native)
     new-mat))
 
 (defmethod gp:exponentiate! ((mat mat2d) (power integer))
@@ -273,13 +273,13 @@
 	  (mem-aref p3 :double 2) (+ (mem-aref p1 :double 2) (mem-aref p2 :double 2))
 	  (mem-aref p3 :double 3) (+ (mem-aref p1 :double 3) (mem-aref p2 :double 3)))
     (let ((result (make-mat2d :ptr p3)))
-      (finalize result (lambda () (foreign-free p3)) :dont-save t)
+      (oc:finalize result :native)
       result)))
 
 (defmethod oc:added ((mat1 mat2d) (mat2 mat2d))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Added (ptr mat1) (ptr mat2)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:divide! ((mat mat2d) (scalar real))
@@ -303,13 +303,13 @@
 	  (mem-aref p2 :double 2) (/ (mem-aref p1 :double 2) divisor)
 	  (mem-aref p2 :double 3) (/ (mem-aref p1 :double 3) divisor))
     (let ((result (make-mat2d :ptr p2)))
-      (finalize result (lambda () (foreign-free p2)) :dont-save t)
+      (oc:finalize result :native)
       result)))
 
 (defmethod oc:divided ((mat mat2d) (scalar real))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Divided (ptr mat) (coerce scalar 'double-float)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:inverted ((mat mat2d))
@@ -320,7 +320,7 @@
 (defmethod oc:inverted ((mat mat2d))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Inverted (ptr mat)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:multiply! ((mat mat2d) (other mat2d))
@@ -353,7 +353,7 @@
 (defmethod oc:multiplied ((mat mat2d) (other mat2d))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Multiplied__SWIG_0 (ptr mat) (ptr other)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:pre-multiply! ((mat mat2d) (other mat2d))
@@ -391,7 +391,7 @@
 (defmethod oc:multiplied ((mat mat2d) (scalar real))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Multiplied__SWIG_1 (ptr mat) (coerce scalar 'double-float)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:multiply! ((mat mat2d) (scalar real))
@@ -414,7 +414,7 @@
 (defmethod oc:exponentiated ((mat mat2d) (power integer))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Powered (ptr mat) power))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:subtract! ((mat1 mat2d) (mat2 mat2d))
@@ -438,13 +438,13 @@
 	  (mem-aref p3 :double 2) (- (mem-aref p1 :double 2) (mem-aref p2 :double 2))
 	  (mem-aref p3 :double 3) (- (mem-aref p1 :double 3) (mem-aref p2 :double 3)))
     (let ((result (make-mat2d :ptr p3)))
-      (finalize result (lambda () (foreign-free p3)) :dont-save t)
+      (oc:finalize result :native)
       result)))
 
 (defmethod oc:subtracted ((mat1 mat2d) (mat2 mat2d))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Subtracted (ptr mat1) (ptr mat2)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod gp:transpose! ((mat mat2d))
@@ -465,13 +465,13 @@
 	  (mem-aref p-result :double 2) (mem-aref p-mat :double 1)
 	  (mem-aref p-result :double 3) (mem-aref p-mat :double 3))
     (let ((result (make-mat2d :ptr p-result)))
-      (finalize result (lambda () (foreign-free p-result)) :dont-save t)
+      (oc:finalize result :native)
       result)))
 
 (defmethod oc:transposed ((mat mat2d))
   (let* ((p-result (oc::_wrap_gp_Mat2d_Transposed (ptr mat)))
 	 (result (make-mat2d :ptr p-result)))
-    (finalize result (lambda () (oc::_wrap_delete_gp_Mat2d p-result)) :dont-save t)
+    (oc:finalize result)
     result))
 
 (defmethod print-object ((object mat2d) stream)

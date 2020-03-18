@@ -55,7 +55,7 @@
 
 	  (t (error "Invalid arguments to constructor: ~S" args)))
     
-    (finalize struct (lambda () (print 'freeing-dir2d) (foreign-free pointer)) :dont-save t)
+    (oc:finalize struct :native)
     struct))
 
 (defmethod print-object ((object dir2d) stream)

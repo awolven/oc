@@ -13,5 +13,5 @@
 		(_wrap_new_BRepPrimAPI_MakeCylinder__SWIG_0 R H))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
     (setf (ff-pointer obj) pointer)
-    (ff-pointer-finalize obj #'_wrap_delete_BRepPrimAPI_MakeCylinder)
+    (oc:finalize obj)
     (values)))

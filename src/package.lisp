@@ -6,7 +6,6 @@
 (defpackage :gp
   (:use :cl :cffi)
   (:shadow #:position)
-  (:import-from :sb-ext #:finalize)
   (:export #:ptr
 	   
 	   #:xy
@@ -260,7 +259,7 @@
   (:shadow #:position)
   (:import-from :gp #:ptr)
   (:export #:ff-pointer
-
+	   #:finalize
 	   #:mirror
 	   #:rotation
 	   #:rotation2
@@ -440,7 +439,6 @@
 (defpackage :gp
   (:use :cl :cffi)
   (:shadow #:position)
-  (:import-from :sb-ext #:finalize)
   (:import-from :oc #:x #:y #:z)
   (:export #:ptr
 	   

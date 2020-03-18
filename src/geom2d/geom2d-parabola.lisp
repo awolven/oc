@@ -27,8 +27,7 @@
 
 	       (t (error "Invalid initargs to constructor: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
-    (sb-ext:finalize instance (lambda ()
-				(_wrap_Handle_MMgt_TShared_DecrementRefCounter ff-pointer)))
+    (oc:finalize instance)
     (values)))
 
 (defmethod (setf focal-length) ((focal number) (parabola geom2d-parabola))
@@ -40,25 +39,19 @@
 (defmethod geom-processor ((parabola geom2d-parabola))
   (let* ((pointer (_wrap_Geom2d_Parabola_Parab2d (ff-pointer parabola)))
 	 (struct (gp::make-parab2d :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Parab pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod directrix ((parabola geom2d-parabola))
   (let* ((pointer (_wrap_Geom2d_Parabola_Directrix (ff-pointer parabola)))
 	 (struct (gp::make-ax2d :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Ax2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 
 (defmethod focus ((parabola geom2d-parabola))
   (let* ((pointer (_wrap_Geom2d_Parabola_Focus (ff-pointer parabola)))
 	 (struct (gp::make-pnt2d :ptr pointer)))
-    (sb-ext:finalize struct (lambda ()
-			      (_wrap_delete_gp_Pnt2d pointer))
-		     :dont-save t)
+    (oc:finalize struct)
     struct))
 			      
 (defmethod focal-length ((parabola geom2d-parabola))

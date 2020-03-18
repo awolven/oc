@@ -12,39 +12,39 @@ class Handle_Poly_Triangulation
 
 %extend Handle_Poly_Triangulation
 {
-  Standard_Real deflection() const
+  Standard_Real Deflection() const
   {
     return (*self)->Deflection();
   }
-  void deflection(const Standard_Real D)
+  void Deflection(const Standard_Real D)
   {
     return (*self)->Deflection(D);
   }
-  void removeUVNodes()
+  void RemoveUVNodes()
   {
     return (*self)->RemoveUVNodes();
   }
-  Standard_Integer nbNodes() const
+  Standard_Integer NbNodes() const
   {
     return (*self)->NbNodes();
   }
-  Standard_Integer nbTriangles() const
+  Standard_Integer NbTriangles() const
   {
     return (*self)->NbTriangles();
   }
-  Standard_Boolean hasUVNodes() const
+  Standard_Boolean HasUVNodes() const
   {
     return (*self)->HasUVNodes();
   }
-  const Poly_Array1OfTriangle& triangles() const
+  const Poly_Array1OfTriangle& Triangles() const
   {
     return (*self)->Triangles();
   }
-  const TColgp_Array1OfPnt& nodes() const
+  const TColgp_Array1OfPnt& Nodes() const
   {
     return (*self)->Nodes();
   }
-  const TColgp_Array1OfPnt2d& uVNodes() const
+  const TColgp_Array1OfPnt2d& UVNodes() const
   {
     return (*self)->UVNodes();
   }

@@ -7,7 +7,7 @@
 	(cond (S (assert (typep S 'topods-shape))
 		 (_wrap_new_BRepOffsetAPI_NormalProjection__SWIG_1 (ff-pointer S)))
 	      (t (_wrap_new_BRepOffsetAPI_NormalProjection__SWIG_0))))
-  (ff-pointer-finalize obj #'_wrap_delete_BRepOffsetAPI_NormalProjection)
+  (oc:finalize obj)
   (values))
 
 (defmethod init ((self brep-offset-api-normal-projection) (S topods-shape) &key &allow-other-keys)

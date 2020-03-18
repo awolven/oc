@@ -13,5 +13,5 @@
 		     (gp-circ2d-radius ptr) (coerce Radius 'double-float))))
 	  (t (error "Invalid arguments to circ2d: ~S" args)))
     (let ((struct (make-circ2d :ptr ptr)))
-      (finalize struct (lambda () (print 'freeingcirc2d) (foreign-free ptr)))
+      (oc:finalize struct :native)
       struct)))
