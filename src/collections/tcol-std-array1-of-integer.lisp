@@ -9,6 +9,7 @@
 		(_wrap_new_TColStd_Array1OfInteger theLower theUpper))
 	       (t (error "Invalid initargs: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
+    (oc:finalize instance)
     (values)))
 
 (defmethod set-value ((object tcol-std-array1-of-integer) (theIndex integer) (theValue integer))

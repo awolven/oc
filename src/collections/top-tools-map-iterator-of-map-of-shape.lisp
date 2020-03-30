@@ -3,6 +3,7 @@
 (defmethod initialize-instance :after ((instance top-tools-map-iterator-of-map-of-shape) &rest initargs &key aMap &allow-other-keys)
   (declare (ignore initargs))
   (setf (ff-pointer instance) (_wrap_new_TopTools_MapIteratorOfMapOfShape aMap))
+  ;;(oc:finalize instance)
   (values))
 
 (defmethod map-of-shape-key ((map-iterator top-tools-map-iterator-of-map-of-shape))

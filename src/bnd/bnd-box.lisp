@@ -3,6 +3,7 @@
 (defmethod initialize-instance :after ((instance bnd-box) &rest initargs &key &allow-other-keys)
   (declare (ignorable initargs))
   (setf (ff-pointer instance) (_wrap_new_Bnd_Box))
+  (oc:finalize instance)
   (values))
 
 

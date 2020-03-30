@@ -4,6 +4,7 @@
   (let ((edge (allocate-instance (load-time-value (find-class 'topods-edge)))))
     (setf (ff-pointer edge) (_wrap_TopoDS_Shape_copy_reference
 			     (_wrap_BrepBuilderAPI_MakeEdge_Edge (ff-pointer self))))
+    (oc:finalize edge)
     edge))
 
 (defmethod initialize-instance :after ((obj brep-builder-api-make-edge) &rest initargs

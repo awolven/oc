@@ -9,6 +9,7 @@
 		(_wrap_new_TColgp_Array1OfPnt2d theLower theUpper))
 	       (t (error "Invalid initargs: ~S" initargs)))))
     (setf (ff-pointer instance) ff-pointer)
+    ;;(oc:finalize instance)
     (values)))
 
 (defmethod set-value ((object tcol-gp-array1-of-pnt2d) (theIndex integer) (theValue gp::pnt2d))

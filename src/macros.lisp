@@ -16,7 +16,9 @@
 		 (:TopAbs_VERTEX (load-time-value (find-class 'topods-vertex)))
 		 (:TopAbs_SHAPE (load-time-value (find-class 'topods-shape))))))
 	  (shape (when shape-class (allocate-instance shape-class))))
-     (when shape-class (setf (ff-pointer shape) ff-shape))
+     (when shape-class
+       (setf (ff-pointer shape) ff-shape)
+       #+NIL(oc:finalize shape))	   
      shape))
 
 (defmacro with-geom2d-curve (&body ff-call)

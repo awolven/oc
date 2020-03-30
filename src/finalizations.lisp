@@ -21,7 +21,7 @@
 
 (defun finalize-gpthing-foreign (gpthing)
   (declare (ignorable gpthing))
-  #+foreign-unmanaged-finalizations
+  #+unmanaged-finalizations
   (let ((type (type-of gpthing))
 	(ptr (gp:ptr gpthing))
 	(free-fn (foreign-free-fn gpthing)))
@@ -515,3 +515,36 @@
 
 (defmethod foreign-free-fn ((object cpnts-uniform-deflection))
   #'_wrap_delete_CPnts_UniformDeflection)
+
+(defmethod foreign-free-fn ((object topods-edge))
+  #'_wrap_delete_TopoDS_Edge)
+
+(defmethod foreign-free-fn ((object topods-face))
+  #'_wrap_delete_TopoDS_Face)
+
+(defmethod foreign-free-fn ((object topods-vertex))
+  #'_wrap_delete_TopoDS_Vertex)
+
+(defmethod foreign-free-fn ((object topods-wire))
+  #'_wrap_delete_TopoDS_Wire)
+
+(defmethod foreign-free-fn ((object topods-solid))
+  #'_wrap_delete_TopoDS_Solid)
+
+(defmethod foreign-free-fn ((object topods-shell))
+  #'_wrap_delete_TopoDS_Shell)
+
+(defmethod foreign-free-fn ((object tcol-gp-array1-of-pnt))
+  #'_wrap_TColgp_Array1OfPnt_Delete)
+
+(defmethod foreign-free-fn ((object poly-array1-of-triangle))
+  #'_wrap_Poly_Array1OfTriangle_Delete)
+
+(defmethod foreign-free-fn ((object poly-polygon-on-triangulation))
+  #'_wrap_Poly_PolygonOnTriangulation_Delete)
+
+(defmethod foreign-free-fn ((object tcol-std-array1-of-integer))
+  #'_wrap_TColStd_Array1OfInteger_Delete)
+
+(defmethod foreign-free-fn ((object tcol-std-array1-of-real))
+  #'_wrap_TColStd_Array1OfReal_Delete)

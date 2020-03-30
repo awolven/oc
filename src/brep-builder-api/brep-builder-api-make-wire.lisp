@@ -33,4 +33,5 @@
   (let ((wire (allocate-instance (load-time-value (find-class 'topods-wire)))))
     (setf (ff-pointer wire) (_wrap_TopoDS_Shape_copy_reference
 			     (_wrap_BrepBuilderAPI_MakeWire_Wire (ff-pointer self))))
+    (oc:finalize wire)
     wire))

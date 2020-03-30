@@ -39,7 +39,9 @@
   (_wrap_CPnts_UniformDeflection_More (ff-pointer self)))
 
 (defmethod get-point ((self cpnts-uniform-deflection))
-  (gp::make-pnt :ptr (_wrap_CPnts_UniformDeflection_Point (ff-pointer self))))
+  (let ((pnt (gp::make-pnt :ptr (_wrap_CPnts_UniformDeflection_Point (ff-pointer self)))))
+    (oc:finalize pnt)
+    pnt))	
 
 (defmethod value ((self cpnts-uniform-deflection))
   (_wrap_CPnts_UniformDeflection_Value (ff-pointer self)))

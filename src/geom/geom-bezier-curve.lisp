@@ -16,7 +16,7 @@
 	       (t (error "Invalid arguments to constructor: ~S" initargs)))))
 
     (setf (ff-pointer instance) ff-pointer)
-;;    (oc:finalize instance)
+    (oc:finalize instance)
     (values)))
 
 (defmethod increase-degree ((curve geom-bezier-curve) (degree integer))

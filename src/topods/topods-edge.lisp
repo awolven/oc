@@ -6,9 +6,11 @@
 	nil
 	(let ((poly-polygon-3d (allocate-instance (load-time-value (find-class 'poly-polygon3d)))))
 	  (setf (ff-pointer poly-polygon-3d) pointer)
+	  ;;(oc:finalize poly-polygon-3d)
 	  poly-polygon-3d))))
 
 (defmethod get-polygon-on-triangulation ((edge topods-edge) (triangulation poly-triangulation) p-top-loc)
   (let ((poly-polygon-on-triangulation (allocate-instance (find-class 'poly-polygon-on-triangulation))))
     (setf (ff-pointer poly-polygon-on-triangulation) (_wrap_BRep_Tool_PolygonOnTriangulation (ff-pointer edge) (ff-pointer triangulation) p-top-loc))
+    ;;(oc:finalize poly-polygon-on-triangulation)
     poly-polygon-on-triangulation))

@@ -12,6 +12,9 @@ class Handle_Poly_Triangulation
 
 %extend Handle_Poly_Triangulation
 {
+  void Delete() {
+    self->~Handle_Poly_Triangulation();
+  }
   Standard_Real Deflection() const
   {
     return (*self)->Deflection();
@@ -74,6 +77,7 @@ class Poly_Triangle {
   Standard_Integer Value(const Standard_Integer Index) const;
 };
 
+%nodefaultdtor Poly_Array1OfTriangle;
 class Poly_Array1OfTriangle {
  public:
   Poly_Array1OfTriangle(const Standard_Integer Low, const Standard_Integer Up);
@@ -83,7 +87,12 @@ class Poly_Array1OfTriangle {
   Standard_Integer Upper();
   const Poly_Triangle & Value(const Standard_Integer Index) const;
 };
-
+%extend Poly_Array1OfTriangle
+{
+  void Delete() {
+    self->~Poly_Array1OfTriangle();
+  }
+}
 class Poly_Polygon3D
 {
  public:
@@ -101,7 +110,7 @@ class Poly_Polygon3D
 %{
   #include <Poly_PolygonOnTriangulation.hxx>
   %}
-
+%nodefaultdtor Poly_PolygonOnTriangulation;
 class Poly_PolygonOnTriangulation
 {
  public:
@@ -115,4 +124,9 @@ class Poly_PolygonOnTriangulation
   Standard_Boolean HasParameters() const;
   Handle_TColStd_HArray1OfReal Parameters() const;
 };
-
+%extend Poly_PolygonOnTriangulation
+{
+  void Delete() {
+    self->~Poly_PolygonOnTriangulation();
+  }
+}
