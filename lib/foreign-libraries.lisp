@@ -1,7 +1,17 @@
 (in-package :cl-user)
 
+(defparameter *oc-swig-lib*
+  #+windows "oc.dll"
+  #+darwin "oc.dylib"
+  #+linux "oc.so")
+
+(defparameter *freetype-lib*
+  #+windows nil
+  #+darwin "libfreetype.dylib"
+  #+linux "libfreetype.so.6.9.0")
+
 #+windows
-(defparameter *foreign-libraries*
+(defparameter *opencascade-libraries*
   (list
    "TKernel"
    "TKMath"
@@ -23,85 +33,84 @@
    "TKBool"
    "TKOffset"
    "TKFillet"
-   "TKIGES"
-   ;; "TKV3d"
-   "oc"
-   ))
+   "TKIGES"))
 
-#+darwin
-(defparameter *foreign-libraries*
+#+(or darwin linux)
+(defparameter *opencascade-libraries*
   (list
-   "libfreetype"
-   "libTKernel.7.1.0"
-   "libTKXmlXCAF.7.1.0"
-   "libTKXmlTObj.7.1.0"
-   "libTKXmlL.7.1.0"
-   "libTKXml.7.1.0"
-   "libTKXSDRAW.7.1.0"
-   "libTKXSBase.7.1.0"
-   "libTKXMesh.7.1.0"
-   "libTKXDESTEP.7.1.0"
-   "libTKXDEIGES.7.1.0"
-   "libTKXDEDRAW.7.1.0"
-   "libTKXCAF.7.1.0"
-   "libTKViewerTest.7.1.0"
-   "libTKVRML.7.1.0"
-   "libTKVCAF.7.1.0"
-   "libTKV3d.7.1.0"
-   "libTKTopTest.7.1.0"
-   "libTKTopAlgo.7.1.0"
-   "libTKTObjDRAW.7.1.0"
-   "libTKTObj.7.1.0"
-   "libTKStdL.7.1.0"
-   "libTKStd.7.1.0"
-   "libTKShHealing.7.1.0"
-   "libTKService.7.1.0"
-   "libTKSTL.7.1.0"
-   "libTKSTEPBase.7.1.0"
-   "libTKSTEPAttr.7.1.0"
-   "libTKSTEP209.7.1.0"
-   "libTKSTEP.7.1.0"
-   "libTKQADraw.7.1.0"
-   "libTKPrim.7.1.0"
-   "libTKOpenGl.7.1.0"
-   "libTKOffset.7.1.0"
-   "libTKMeshVS.7.1.0"
-   "libTKMesh.7.1.0"
-   "libTKMath.7.1.0"
-   "libTKLCAF.7.1.0"
-   "libTKIGES.7.1.0"
-   "libTKHLR.7.1.0"
-   "libTKGeomBase.7.1.0"
-   "libTKGeomAlgo.7.1.0"
-   "libTKG3d.7.1.0"
-   "libTKG2d.7.1.0"
-   "libTKFillet.7.1.0"
-   "libTKFeat.7.1.0"
-   "libTKDraw.7.1.0"
-   "libTKDCAF.7.1.0"
-   "libTKCDF.7.1.0"
-   "libTKCAF.7.1.0"
-   "libTKBool.7.1.0"
-   "libTKBinXCAF.7.1.0"
-   "libTKBinTObj.7.1.0"
-   "libTKBinL.7.1.0"
-   "libTKBin.7.1.0"
-   "libTKBRep.7.1.0"
-   "libTKBO.7.1.0"
-   "oc"))
+   "libTKernel"
+   "libTKXmlXCAF"
+   "libTKXmlTObj"
+   "libTKXmlL"
+   "libTKXml"
+   "libTKXSDRAW"
+   "libTKXSBase"
+   "libTKXMesh"
+   "libTKXDESTEP"
+   "libTKXDEIGES"
+   "libTKXDEDRAW"
+   "libTKXCAF"
+   "libTKViewerTest"
+   "libTKVRML"
+   "libTKVCAF"
+   "libTKV3d"
+   "libTKTopTest"
+   "libTKTopAlgo"
+   "libTKTObjDRAW"
+   "libTKTObj"
+   "libTKStdL"
+   "libTKStd"
+   "libTKShHealing"
+   "libTKService"
+   "libTKSTL"
+   "libTKSTEPBase"
+   "libTKSTEPAttr"
+   "libTKSTEP209"
+   "libTKSTEP"
+   "libTKQADraw"
+   "libTKPrim"
+   "libTKOpenGl"
+   "libTKOffset"
+   "libTKMeshVS"
+   "libTKMesh"
+   "libTKMath"
+   "libTKLCAF"
+   "libTKIGES"
+   "libTKHLR"
+   "libTKGeomBase"
+   "libTKGeomAlgo"
+   "libTKG3d"
+   "libTKG2d"
+   "libTKFillet"
+   "libTKFeat"
+   "libTKDraw"
+   "libTKDCAF"
+   "libTKCDF"
+   "libTKCAF"
+   "libTKBool"
+   "libTKBinXCAF"
+   "libTKBinTObj"
+   "libTKBinL"
+   "libTKBin"
+   "libTKBRep"
+   "libTKBO"))
+
 
 (defparameter *lib-path*
-  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/Windows/debug/" #+darwin "lib/MacOSX/debug/")))
+  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/Windows/debug/" #+darwin "lib/MacOSX/debug/" #+linux "lib/Linux/AMD64/debug/")))
 
-(defparameter *lib-extension*
+(defparameter *opencascade-lib-extension*
   #+windows ".dll"
-  #+darwin ".dylib")
+  #+darwin "7.1.0.dylib"
+  #+linux ".so.7.1.0")
 
 (defun load-oc-libraries ()
   (let ((lib-path *lib-path*))
-    (loop for lib in *foreign-libraries*
-       do (cffi:load-foreign-library (concatenate 'string lib-path lib *lib-extension*))
-       finally (return t))))
+    (when *freetype-lib*
+      (cffi:load-foreign-library (concatenate 'string lib-path *freetype-lib*)))
+    (loop for lib in *opencascade-libraries*
+       do (cffi:load-foreign-library (concatenate 'string lib-path lib *opencascade-lib-extension*))
+       finally (cffi:load-foreign-library (concatenate 'string lib-path *oc-swig-lib*)))))
 
 (load-oc-libraries)
 
