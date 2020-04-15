@@ -101,7 +101,7 @@
 
 (defparameter *opencascade-lib-extension*
   #+windows ".dll"
-  #+darwin "7.1.0.dylib"
+  #+darwin ".7.1.0.dylib"
   #+linux ".so.7.1.0")
 
 (defun load-oc-libraries ()
