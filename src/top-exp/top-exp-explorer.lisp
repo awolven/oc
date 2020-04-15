@@ -22,9 +22,12 @@
   (_wrap_TopExp_Explorer_more (ff-pointer self)))
 
 (defmethod current ((self top-exp-explorer))
-  (with-topods-shape
-    (_wrap_TopoDS_Shape_copy_reference
-     (_wrap_TopExp_Explorer_Current (ff-pointer self)))))
+  (let ((shape-copy
+	 (with-topods-shape
+	   (_wrap_TopoDS_Shape_copy_reference
+	    (_wrap_TopExp_Explorer_Current (ff-pointer self))))))
+    (oc:finalize shape-copy)
+    shape-copy))
 
 (defmethod next ((self top-exp-explorer))
   (_wrap_TopExp_Explorer_Next (ff-pointer self)))

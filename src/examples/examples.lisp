@@ -50,8 +50,9 @@
 	 (a-origin (gp:pnt 0 0 0))
 	 (x-dir (gp:dir 1 0 0))
 	 (x-axis (gp:ax1 a-origin x-dir))
-	 (a-trsf (gp:make-trsf :ptr (_wrap_new_gp_Trsf__SWIG_0))))
+	 (a-trsf (oc::trsf)))
     (setf (mirror a-trsf) x-axis)
+
     (let ((a-mirrored-wire (shape (make-instance 'BRep-Builder-API-Transform :S a-wire :Trsf a-trsf)))
 	  (make-wire (make-instance 'BRep-Builder-API-Make-Wire)))
       (add make-wire a-wire)
@@ -73,7 +74,7 @@
 		
 	(let* ((neck-location (gp:pnt 0 0 my-height))
 	       (neck-axis (gp:dir 0 0 1))
-	       (neck-ax2 (gp:make-ax2 :ptr (_wrap_new_gp_Ax2__SWIG_2 (ptr neck-location) (ptr neck-axis))))
+	       (neck-ax2 (oc::ax2 :P neck-location :Vx neck-axis))
 	       (my-neck-radius (coerce (/ my-thickness 4) 'double-float))
 	       (my-neck-height (coerce (/ my-height 10) 'double-float))
 	       (mk-cylinder (make-instance 'BRep-Prim-API-Make-Cylinder
@@ -134,17 +135,20 @@
 
 	    (build-curves-3d threading-wire1)
 	    (build-curves-3d threading-wire2)
-	    (let ((a-tool (make-instance 'BRep-Offset-API-Thru-Sections :isSolid t ;;:ruled nil :pres3d 1.0d-6
-					 )))
-	      (_wrap_BRepOffsetAPI_ThruSections_AddWire (ff-pointer a-tool) (ff-pointer threading-wire1))
-	      (_wrap_BRepOffsetAPI_ThruSections_AddWire (ff-pointer a-tool) (ff-pointer threading-wire2))
-	      (_wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_0 (ff-pointer a-tool) 0)
+	    (let ((a-tool
+		   (make-instance 'BRep-Offset-API-Thru-Sections :isSolid t)))
+
+	      (add-wire a-tool threading-wire1)
+	      (add-wire a-tool threading-wire2)
+	      (check-compatibility a-tool nil)
+	      
 	      (let ((my-threading (shape a-tool))
 		    (a-res (make-instance 'TopoDS-Compound))
-		    (a-builder (_wrap_new_BRep_Builder)))
+		    (a-builder (make-instance 'brep-builder)))
 
-		(_wrap_TopoDS_Builder_MakeCompound a-builder (ff-pointer a-res))
-		(_wrap_topods_builder_add a-builder (ff-pointer a-res) (ff-pointer my-body))
-		(_wrap_topods_builder_add a-builder (ff-pointer a-res) (ff-pointer my-threading))
+		(make-compound a-builder a-res)
+		(topods-builder-add a-builder a-res my-body)
+		(topods-builder-add a-builder a-res my-threading)
+
 		a-res))))))))
 	  

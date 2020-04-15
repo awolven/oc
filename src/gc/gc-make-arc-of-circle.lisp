@@ -19,6 +19,7 @@
 
 (defmethod value ((self gc-make-arc-of-circle))
   (let ((curve (allocate-instance (load-time-value (find-class 'geom-trimmed-curve)))))
-    (setf (ff-pointer curve) (_wrap_GC_MakeArcOfCircle_Value (ff-pointer self)))
+    (setf (ff-pointer curve) (_wrap_Geom_Geometry_Copy
+			      (_wrap_GC_MakeArcOfCircle_Value (ff-pointer self))))
     (oc:finalize curve)
     curve))

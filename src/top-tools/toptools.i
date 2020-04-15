@@ -32,6 +32,12 @@ class TopTools_ListOfShape {
   TopoDS_Shape& Append(const TopoDS_Shape& item);
   TopoDS_Shape& Prepend(const TopoDS_Shape& item);
 };
+%extend TopTools_ListOfShape
+{
+  void Delete() {
+    self->~TopTools_ListOfShape();
+  }
+}
 %{
   #include <TopTools_MapOfShape.hxx>
   %}

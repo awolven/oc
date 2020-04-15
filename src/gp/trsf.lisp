@@ -1,5 +1,11 @@
 (in-package :gp)
 
+(defun oc::trsf ()
+  (let* ((pointer (oc::_wrap_new_gp_Trsf__SWIG_0))
+	 (struct (make-trsf :ptr pointer)))
+    (oc:finalize struct)
+    struct))
+
 (defun trsf (&optional trsf2d)
   (let* ((pointer (foreign-alloc '(:struct gp-trsf)))
 	 (struct (make-trsf :ptr pointer)))

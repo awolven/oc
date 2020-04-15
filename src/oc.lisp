@@ -5705,6 +5705,9 @@
   (self :pointer)
   (item :pointer))
 
+(cffi:defcfun ("_wrap_TopTools_ListOfShape_Delete" _wrap_TopTools_ListOfShape_Delete) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_delete_TopTools_ListOfShape" _wrap_delete_TopTools_ListOfShape) :void
   (self :pointer))
 

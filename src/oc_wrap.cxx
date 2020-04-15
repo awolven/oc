@@ -47541,6 +47541,39 @@ EXPORT TopoDS_Shape *_wrap_TopTools_ListOfShape_Prepend (TopTools_ListOfShape *l
 }
 
 
+SWIGINTERN void TopTools_ListOfShape_Delete(TopTools_ListOfShape *self){
+    self->~TopTools_ListOfShape();
+  }
+EXPORT void _wrap_TopTools_ListOfShape_Delete (TopTools_ListOfShape *larg1) {
+  TopTools_ListOfShape *arg1 = (TopTools_ListOfShape *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        TopTools_ListOfShape_Delete(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TopTools_ListOfShape_Delete\n  * wrapname: _wrap_TopTools_ListOfShape_Delete\n  * fulldecl: void TopTools_ListOfShape::Delete()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
 EXPORT void _wrap_delete_TopTools_ListOfShape (TopTools_ListOfShape *larg1) {
   TopTools_ListOfShape *arg1 = (TopTools_ListOfShape *) 0 ;
   

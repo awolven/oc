@@ -1,5 +1,11 @@
 (in-package :gp)
 
+(defun oc::ax2 (&key (P (pnt 0.0d0 0.0d0 0.0d0)) (Vx (dir 1.0d0 0.0d0 0.0d0)))
+  (let* ((pointer (oc::_wrap_new_gp_Ax2__SWIG_2 (ptr P) (ptr Vx)))
+	 (struct (gp:make-ax2 :ptr pointer)))
+    (oc:finalize struct)
+    struct))
+
 (defun ax2 (&key (P (pnt 0.0d0 0.0d0 0.0d0)) (N (dir 0.0d0 0.0d0 1.0d0)) (Vx (dir 1.0d0 0.0d0 0.0d0)))
   (let* ((pointer (foreign-alloc '(:struct gp-ax2)))
 	 (struct (make-ax2 :ptr pointer)))

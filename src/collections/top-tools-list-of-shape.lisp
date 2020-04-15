@@ -4,6 +4,7 @@
 				       &key &allow-other-keys)
   (declare (ignore initargs))
   (setf (ff-pointer object) (_wrap_new_TopTools_ListOfShape))
+  (oc:finalize object)
   (values))
 
 (defmethod list-append ((self top-tools-list-of-shape) (item topods-shape))

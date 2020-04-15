@@ -537,6 +537,9 @@
 (defmethod foreign-free-fn ((object tcol-gp-array1-of-pnt))
   #'_wrap_TColgp_Array1OfPnt_Delete)
 
+(defmethod foreign-free-fn ((object tcol-gp-array1-of-pnt2d))
+  #'_wrap_TColgp_Array1OfPnt2d_Delete)
+
 (defmethod foreign-free-fn ((object poly-array1-of-triangle))
   #'_wrap_Poly_Array1OfTriangle_Delete)
 
@@ -548,3 +551,6 @@
 
 (defmethod foreign-free-fn ((object tcol-std-array1-of-real))
   #'_wrap_TColStd_Array1OfReal_Delete)
+
+(defmethod foreign-free-fn ((object top-tools-list-of-shape))
+  #'_wrap_TopTools_ListOfShape_Delete)

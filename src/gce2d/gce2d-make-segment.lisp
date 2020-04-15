@@ -20,5 +20,7 @@
 
 (defmethod value ((self gce2d-make-segment))
   (let ((trimmed-curve (allocate-instance (find-class 'geom2d-trimmed-curve))))
-    (setf (ff-pointer trimmed-curve) (_wrap_GCE2d_MakeSegment_Value (ff-pointer self)))
+    (setf (ff-pointer trimmed-curve) (_wrap_Geom2d_Geometry_Copy
+				      (_wrap_GCE2d_MakeSegment_Value (ff-pointer self))))
+    (oc:finalize trimmed-curve)
     trimmed-curve))

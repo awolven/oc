@@ -15,3 +15,13 @@
     (setf (ff-pointer object) pointer)
     (oc:finalize object)
     (values)))
+
+(defmethod add-wire ((self brep-offset-api-thru-sections) (wire topods-wire))
+  (_wrap_BRepOffsetAPI_ThruSections_AddWire (ff-pointer self) (ff-pointer wire)))
+
+(defmethod check-compatibility ((self brep-offset-api-thru-sections) &optional (check t))
+  (if check
+      (if (not (zerop check))
+	  (_wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_1 (ff-pointer self))
+	  (_wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_0 (ff-pointer self) nil))
+      (_wrap_BRepOffsetAPI_ThruSections_CheckCompatibility__SWIG_0 (ff-pointer self) nil)))

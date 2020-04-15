@@ -5,6 +5,7 @@
 
 #+NIL(pushnew :debug *features*)
 
+(setf (sb-ext:bytes-consed-between-gcs) 150000000)
 
 (pushnew :foreign-managed-finalizations *features*)
 

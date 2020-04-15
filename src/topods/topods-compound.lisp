@@ -4,5 +4,5 @@
   (declare (ignore initargs))
   (let ((pointer (_wrap_new_TopoDS_Compound)))
     (setf (ff-pointer object) pointer)
-;;    (oc:finalize object)
+    (oc:finalize object)
     (values)))
