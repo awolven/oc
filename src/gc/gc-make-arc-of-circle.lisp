@@ -1,15 +1,16 @@
 (in-package :oc)
 
 (defmethod initialize-instance :after ((obj gc-make-arc-of-circle) &rest initargs
-				       &key P1 P2 Circ Sense P3 &allow-other-keys)
+				       &key P1 P2 Circ (Sense nil Sense-supplied-p)
+					 P3 &allow-other-keys)
   (declare (ignore initargs))
   (assert (gp:pnt-p P1))
   (assert (gp:pnt-p P2))
   (setf (ff-pointer obj)
-	(cond ((and Circ Sense)
+	(cond ((and Circ Sense-supplied-p)
 	       (assert (gp:circ-p Circ))
 	       (assert (typep Sense 'boolean))
-	       (_wrap_new_GC_MakeArcOfCircle__SWIG_1 Circ (ptr P1) (ptr P2) Sense))
+	       (_wrap_new_GC_MakeArcOfCircle__SWIG_1 (ptr Circ) (ptr P1) (ptr P2) Sense))
 	      (P3
 	       (assert (gp:pnt-p P3))
 	       (_wrap_new_GC_MakeArcOfCircle__SWIG_0 (ptr P1) (ptr P2) (ptr P3)))

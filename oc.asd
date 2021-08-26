@@ -157,6 +157,8 @@
    (:file "src/cpnts/geom-adaptor-curve")
    (:file "src/cpnts/cpnts-uniform-deflection")
 
+   (:file "src/shape-fix/shape-fix-wire")
+
    (:file "src/xscontrol/xscontrol-reader")
 
    (:file "src/bnd/bnd-box")

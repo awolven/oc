@@ -274,6 +274,11 @@
 
 ;;
 
+(defclass shape-fix-root () ())
+(defclass shape-fix-wire (shape-fix-root ff-pointer-mixin) ())
+
+;;
+
 (defclass xscontrol-reader (ff-pointer-mixin) ())
 
 ;;

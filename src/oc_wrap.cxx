@@ -44723,6 +44723,50 @@ EXPORT void _wrap_TColgp_Array1OfPnt_Delete (TColgp_Array1OfPnt *larg1) {
 }
 
 
+SWIGINTERN void TColgp_Array1OfPnt_GetPoint(TColgp_Array1OfPnt *self,Standard_Integer const Index,Standard_Real &x,Standard_Real &y,Standard_Real &z){
+    gp_Pnt result = (self)->Value(Index);
+    x = result.X();
+    y = result.Y();
+    z = result.Z();
+  }
+EXPORT void _wrap_TColgp_Array1OfPnt_GetPoint (TColgp_Array1OfPnt *larg1, Standard_Integer larg2, Standard_Real *larg3, Standard_Real *larg4, Standard_Real *larg5) {
+  TColgp_Array1OfPnt *arg1 = (TColgp_Array1OfPnt *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Real *arg3 = 0 ;
+  Standard_Real *arg4 = 0 ;
+  Standard_Real *arg5 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        TColgp_Array1OfPnt_GetPoint(arg1,arg2,*arg3,*arg4,*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColgp_Array1OfPnt_GetPoint\n  * wrapname: _wrap_TColgp_Array1OfPnt_GetPoint\n  * fulldecl: void TColgp_Array1OfPnt::GetPoint(Standard_Integer const,Standard_Real &,Standard_Real &,Standard_Real &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
 
 #include <TColgp_Array2OfPnt.hxx>
   
@@ -50744,7 +50788,7 @@ EXPORT TopoDS_Vertex *_wrap_BRepBuilderAPI_MakeVertex_Vertex (BRepBuilderAPI_Mak
       try
       {
         OCC_CATCH_SIGNALS
-        result = (TopoDS_Vertex *) &((BRepBuilderAPI_MakeVertex *)arg1)->Vertex();
+        result = (TopoDS_Vertex *) &(arg1)->Vertex();
       }
       catch(Standard_Failure const& error)
       {
@@ -51212,7 +51256,7 @@ EXPORT TopoDS_Wire *_wrap_BRepBuilderAPI_MakeWire_Wire (BRepBuilderAPI_MakeWire 
       try
       {
         OCC_CATCH_SIGNALS
-        result = (TopoDS_Wire *) &((BRepBuilderAPI_MakeWire *)arg1)->Wire();
+        result = (TopoDS_Wire *) &(arg1)->Wire();
       }
       catch(Standard_Failure const& error)
       {
@@ -52747,7 +52791,7 @@ EXPORT TopoDS_Edge *_wrap_BRepBuilderAPI_MakeEdge_Edge (BRepBuilderAPI_MakeEdge 
       try
       {
         OCC_CATCH_SIGNALS
-        result = (TopoDS_Edge *) &((BRepBuilderAPI_MakeEdge *)arg1)->Edge();
+        result = (TopoDS_Edge *) &(arg1)->Edge();
       }
       catch(Standard_Failure const& error)
       {
@@ -84797,19 +84841,27 @@ EXPORT void _wrap_delete_IGESControl_Controller (IGESControl_Controller *larg1) 
 #include <ShapeFix_Face.hxx>
 #include <ShapeFix_Wire.hxx>
 #include <ShapeFix_Edge.hxx>
+#include <ShapeFix_EdgeProjAux.hxx>
+#include <ShapeConstruct_ProjectCurveOnSurface.hxx>
+#include <ShapeAnalysis_Surface.hxx>
 
-EXPORT void _wrap_ShapeFix_Root_SetPrecision (ShapeFix_Root *larg1, Standard_Real larg2) {
-  ShapeFix_Root *arg1 = (ShapeFix_Root *) 0 ;
-  Standard_Real arg2 ;
+
+#include <ShapeFix.hxx>
+  
+EXPORT bool _wrap_ShapeFix_SameParameter__SWIG_0 (TopoDS_Shape *larg1, bool larg2) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Boolean result;
   
   arg1 = larg1;
-  arg2 = larg2;
+  arg2 = (bool)larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        (arg1)->SetPrecision(arg2);
+        result = (Standard_Boolean)ShapeFix::SameParameter((TopoDS_Shape const &)*arg1,arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -84819,7 +84871,157 @@ EXPORT void _wrap_ShapeFix_Root_SetPrecision (ShapeFix_Root *larg1, Standard_Rea
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SetPrecision\n  * wrapname: _wrap_ShapeFix_Root_SetPrecision\n  * fulldecl: void ShapeFix_Root::SetPrecision(Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: ShapeFix_SameParameter\n  * wrapname: _wrap_ShapeFix_SameParameter__SWIG_0\n  * fulldecl: Standard_Boolean ShapeFix::SameParameter(TopoDS_Shape const &,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_SameParameter__SWIG_1 (TopoDS_Shape *larg1, bool larg2, Standard_Real larg3) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Real arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)ShapeFix::SameParameter((TopoDS_Shape const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_SameParameter\n  * wrapname: _wrap_ShapeFix_SameParameter__SWIG_1\n  * fulldecl: Standard_Boolean ShapeFix::SameParameter(TopoDS_Shape const &,Standard_Boolean const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_SameParameter__SWIG_2 (TopoDS_Shape *larg1, bool larg2, Standard_Real larg3, Handle_Message_ProgressIndicator *larg4) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Real arg3 ;
+  Handle_Message_ProgressIndicator *arg4 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)ShapeFix::SameParameter((TopoDS_Shape const &)*arg1,arg2,arg3,(Handle_Message_ProgressIndicator const &)*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_SameParameter\n  * wrapname: _wrap_ShapeFix_SameParameter__SWIG_2\n  * fulldecl: Standard_Boolean ShapeFix::SameParameter(TopoDS_Shape const &,Standard_Boolean const,Standard_Real const,Handle_Message_ProgressIndicator const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_SameParameter__SWIG_3 (TopoDS_Shape *larg1, bool larg2, Standard_Real larg3, Handle_Message_ProgressIndicator *larg4, Handle_ShapeExtend_BasicMsgRegistrator *larg5) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Real arg3 ;
+  Handle_Message_ProgressIndicator *arg4 = 0 ;
+  Handle_ShapeExtend_BasicMsgRegistrator *arg5 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)ShapeFix::SameParameter((TopoDS_Shape const &)*arg1,arg2,arg3,(Handle_Message_ProgressIndicator const &)*arg4,(Handle_ShapeExtend_BasicMsgRegistrator const &)*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_SameParameter\n  * wrapname: _wrap_ShapeFix_SameParameter__SWIG_3\n  * fulldecl: Standard_Boolean ShapeFix::SameParameter(TopoDS_Shape const &,Standard_Boolean const,Standard_Real const,Handle_Message_ProgressIndicator const &,Handle_ShapeExtend_BasicMsgRegistrator const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_ShapeFix_EncodeRegularity__SWIG_0 (TopoDS_Shape *larg1, Standard_Real larg2) {
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ShapeFix::EncodeRegularity((TopoDS_Shape const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EncodeRegularity\n  * wrapname: _wrap_ShapeFix_EncodeRegularity__SWIG_0\n  * fulldecl: void ShapeFix::EncodeRegularity(TopoDS_Shape const &,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -84830,10 +85032,8 @@ EXPORT void _wrap_ShapeFix_Root_SetPrecision (ShapeFix_Root *larg1, Standard_Rea
 }
 
 
-EXPORT Standard_Real _wrap_ShapeFix_Root_Precision (ShapeFix_Root *larg1) {
-  Standard_Real lresult = (Standard_Real)0 ;
-  ShapeFix_Root *arg1 = (ShapeFix_Root *) 0 ;
-  Standard_Real result;
+EXPORT void _wrap_ShapeFix_EncodeRegularity__SWIG_1 (TopoDS_Shape *larg1) {
+  TopoDS_Shape *arg1 = 0 ;
   
   arg1 = larg1;
   try {
@@ -84841,7 +85041,7 @@ EXPORT Standard_Real _wrap_ShapeFix_Root_Precision (ShapeFix_Root *larg1) {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Real)((ShapeFix_Root const *)arg1)->Precision();
+        ShapeFix::EncodeRegularity((TopoDS_Shape const &)*arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -84851,7 +85051,113 @@ EXPORT Standard_Real _wrap_ShapeFix_Root_Precision (ShapeFix_Root *larg1) {
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Root_Precision\n  * wrapname: _wrap_ShapeFix_Root_Precision\n  * fulldecl: Standard_Real ShapeFix_Root::Precision() const";
+        message += "\nwrapper details:\n  * symname: ShapeFix_EncodeRegularity\n  * wrapname: _wrap_ShapeFix_EncodeRegularity__SWIG_1\n  * fulldecl: void ShapeFix::EncodeRegularity(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_ShapeFix_RemoveSmallEdges (TopoDS_Shape *larg1, Standard_Real larg2, Handle_ShapeBuild_ReShape *larg3) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Handle_ShapeBuild_ReShape *arg3 = 0 ;
+  TopoDS_Shape result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ShapeFix::RemoveSmallEdges(*arg1,arg2,*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_RemoveSmallEdges\n  * wrapname: _wrap_ShapeFix_RemoveSmallEdges\n  * fulldecl: TopoDS_Shape ShapeFix::RemoveSmallEdges(TopoDS_Shape &,Standard_Real const,Handle_ShapeBuild_ReShape &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new TopoDS_Shape(result);
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_FixVertexPosition (TopoDS_Shape *larg1, Standard_Real larg2, Handle_ShapeBuild_ReShape *larg3) {
+  bool lresult = (bool)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Handle_ShapeBuild_ReShape *arg3 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)ShapeFix::FixVertexPosition(*arg1,arg2,(Handle_ShapeBuild_ReShape const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_FixVertexPosition\n  * wrapname: _wrap_ShapeFix_FixVertexPosition\n  * fulldecl: Standard_Boolean ShapeFix::FixVertexPosition(TopoDS_Shape &,Standard_Real const,Handle_ShapeBuild_ReShape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_ShapeFix_LeastEdgeSize (TopoDS_Shape *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)ShapeFix::LeastEdgeSize(*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_LeastEdgeSize\n  * wrapname: _wrap_ShapeFix_LeastEdgeSize\n  * fulldecl: Standard_Real ShapeFix::LeastEdgeSize(TopoDS_Shape &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -84863,9 +85169,12 @@ EXPORT Standard_Real _wrap_ShapeFix_Root_Precision (ShapeFix_Root *larg1) {
 }
 
 
-EXPORT void _wrap_ShapeFix_Root_SetContext (ShapeFix_Root *larg1, ShapeBuild_ReShape *larg2) {
-  ShapeFix_Root *arg1 = (ShapeFix_Root *) 0 ;
-  ShapeBuild_ReShape *arg2 = (ShapeBuild_ReShape *) 0 ;
+SWIGINTERN void Handle_ShapeFix_Root_Set(Handle_ShapeFix_Root *self,Handle_ShapeFix_Root const &Root){
+    (*self)->Set(Root);
+  }
+EXPORT void _wrap_ShapeFix_Root_Set (Handle_ShapeFix_Root *larg1, Handle_ShapeFix_Root *larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Handle_ShapeFix_Root *arg2 = 0 ;
   
   arg1 = larg1;
   arg2 = larg2;
@@ -84874,7 +85183,7 @@ EXPORT void _wrap_ShapeFix_Root_SetContext (ShapeFix_Root *larg1, ShapeBuild_ReS
       try
       {
         OCC_CATCH_SIGNALS
-        (arg1)->SetContext((ShapeBuild_ReShape const *)arg2);
+        Handle_ShapeFix_Root_Set(arg1,(Handle_ShapeFix_Root const &)*arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -84884,7 +85193,7 @@ EXPORT void _wrap_ShapeFix_Root_SetContext (ShapeFix_Root *larg1, ShapeBuild_ReS
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SetContext\n  * wrapname: _wrap_ShapeFix_Root_SetContext\n  * fulldecl: void ShapeFix_Root::SetContext(ShapeBuild_ReShape const *)";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_Set\n  * wrapname: _wrap_ShapeFix_Root_Set\n  * fulldecl: void Handle_ShapeFix_Root::Set(Handle_ShapeFix_Root const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -84895,22 +85204,21 @@ EXPORT void _wrap_ShapeFix_Root_SetContext (ShapeFix_Root *larg1, ShapeBuild_ReS
 }
 
 
-SWIGINTERN Handle_ShapeBuild_ReShape ShapeFix_Root_getContext(ShapeFix_Root *self){
-        Handle_ShapeBuild_ReShape p = self->Context();
-        return p;
-    }
-EXPORT Handle_ShapeBuild_ReShape *_wrap_ShapeFix_Root_getContext (ShapeFix_Root *larg1) {
-  Handle_ShapeBuild_ReShape * lresult = (Handle_ShapeBuild_ReShape *)0 ;
-  ShapeFix_Root *arg1 = (ShapeFix_Root *) 0 ;
-  Handle_ShapeBuild_ReShape result;
+SWIGINTERN void Handle_ShapeFix_Root_SetContext(Handle_ShapeFix_Root *self,Handle_ShapeBuild_ReShape const &context){
+    (*self)->SetContext(context);
+  }
+EXPORT void _wrap_ShapeFix_Root_SetContext (Handle_ShapeFix_Root *larg1, Handle_ShapeBuild_ReShape *larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Handle_ShapeBuild_ReShape *arg2 = 0 ;
   
   arg1 = larg1;
+  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = ShapeFix_Root_getContext(arg1);
+        Handle_ShapeFix_Root_SetContext(arg1,(Handle_ShapeBuild_ReShape const &)*arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -84920,7 +85228,42 @@ EXPORT Handle_ShapeBuild_ReShape *_wrap_ShapeFix_Root_getContext (ShapeFix_Root 
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Root_getContext\n  * wrapname: _wrap_ShapeFix_Root_getContext\n  * fulldecl: Handle_ShapeBuild_ReShape ShapeFix_Root::getContext()";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SetContext\n  * wrapname: _wrap_ShapeFix_Root_SetContext\n  * fulldecl: void Handle_ShapeFix_Root::SetContext(Handle_ShapeBuild_ReShape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Handle_ShapeBuild_ReShape Handle_ShapeFix_Root_Context(Handle_ShapeFix_Root *self){
+    return (*self)->Context();
+  }
+EXPORT Handle_ShapeBuild_ReShape *_wrap_ShapeFix_Root_Context (Handle_ShapeFix_Root *larg1) {
+  Handle_ShapeBuild_ReShape * lresult = (Handle_ShapeBuild_ReShape *)0 ;
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Handle_ShapeBuild_ReShape result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Handle_ShapeFix_Root_Context(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_Context\n  * wrapname: _wrap_ShapeFix_Root_Context\n  * fulldecl: Handle_ShapeBuild_ReShape Handle_ShapeFix_Root::Context()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -84932,16 +85275,21 @@ EXPORT Handle_ShapeBuild_ReShape *_wrap_ShapeFix_Root_getContext (ShapeFix_Root 
 }
 
 
-EXPORT void _wrap_delete_ShapeFix_Root (ShapeFix_Root *larg1) {
-  ShapeFix_Root *arg1 = (ShapeFix_Root *) 0 ;
+SWIGINTERN void Handle_ShapeFix_Root_SetMsgRegistrator(Handle_ShapeFix_Root *self,Handle_ShapeExtend_BasicMsgRegistrator const &msgreg){
+    (*self)->SetMsgRegistrator(msgreg);
+  }
+EXPORT void _wrap_ShapeFix_Root_SetMsgRegistrator (Handle_ShapeFix_Root *larg1, Handle_ShapeExtend_BasicMsgRegistrator *larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Handle_ShapeExtend_BasicMsgRegistrator *arg2 = 0 ;
   
   arg1 = larg1;
+  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        delete arg1;
+        Handle_ShapeFix_Root_SetMsgRegistrator(arg1,(Handle_ShapeExtend_BasicMsgRegistrator const &)*arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -84951,7 +85299,7 @@ EXPORT void _wrap_delete_ShapeFix_Root (ShapeFix_Root *larg1) {
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: delete_ShapeFix_Root\n  * wrapname: _wrap_delete_ShapeFix_Root\n  * fulldecl: ShapeFix_Root::~ShapeFix_Root()";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SetMsgRegistrator\n  * wrapname: _wrap_ShapeFix_Root_SetMsgRegistrator\n  * fulldecl: void Handle_ShapeFix_Root::SetMsgRegistrator(Handle_ShapeExtend_BasicMsgRegistrator const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -84962,10 +85310,13 @@ EXPORT void _wrap_delete_ShapeFix_Root (ShapeFix_Root *larg1) {
 }
 
 
-EXPORT ShapeFix_Wireframe *_wrap_new_ShapeFix_Wireframe (TopoDS_Shape *larg1) {
-  ShapeFix_Wireframe * lresult = (ShapeFix_Wireframe *)0 ;
-  TopoDS_Shape *arg1 = 0 ;
-  ShapeFix_Wireframe *result = 0 ;
+SWIGINTERN Handle_ShapeExtend_BasicMsgRegistrator Handle_ShapeFix_Root_MsgRegistrator(Handle_ShapeFix_Root *self){
+    return (*self)->MsgRegistrator();
+  }
+EXPORT Handle_ShapeExtend_BasicMsgRegistrator *_wrap_ShapeFix_Root_MsgRegistrator (Handle_ShapeFix_Root *larg1) {
+  Handle_ShapeExtend_BasicMsgRegistrator * lresult = (Handle_ShapeExtend_BasicMsgRegistrator *)0 ;
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Handle_ShapeExtend_BasicMsgRegistrator result;
   
   arg1 = larg1;
   try {
@@ -84973,7 +85324,7 @@ EXPORT ShapeFix_Wireframe *_wrap_new_ShapeFix_Wireframe (TopoDS_Shape *larg1) {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (ShapeFix_Wireframe *)new ShapeFix_Wireframe((TopoDS_Shape const &)*arg1);
+        result = Handle_ShapeFix_Root_MsgRegistrator(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -84983,86 +85334,23 @@ EXPORT ShapeFix_Wireframe *_wrap_new_ShapeFix_Wireframe (TopoDS_Shape *larg1) {
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_ShapeFix_Wireframe\n  * wrapname: _wrap_new_ShapeFix_Wireframe\n  * fulldecl: ShapeFix_Wireframe::ShapeFix_Wireframe(TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_MsgRegistrator\n  * wrapname: _wrap_ShapeFix_Root_MsgRegistrator\n  * fulldecl: Handle_ShapeExtend_BasicMsgRegistrator Handle_ShapeFix_Root::MsgRegistrator()";
         signal_lisp_error(message.c_str());
       }
     }
-    lresult = result;
+    lresult = new Handle_ShapeExtend_BasicMsgRegistrator(result);
     return lresult;
   } catch (...) {
-    return (ShapeFix_Wireframe *)0;
+    return (Handle_ShapeExtend_BasicMsgRegistrator *)0;
   }
 }
 
 
-EXPORT bool _wrap_ShapeFix_Wireframe_FixWireGaps (ShapeFix_Wireframe *larg1) {
-  bool lresult = (bool)0 ;
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
-  Standard_Boolean result;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)(arg1)->FixWireGaps();
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_FixWireGaps\n  * wrapname: _wrap_ShapeFix_Wireframe_FixWireGaps\n  * fulldecl: Standard_Boolean ShapeFix_Wireframe::FixWireGaps()";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = (bool)result;
-    return lresult;
-  } catch (...) {
-    return (bool)0;
+SWIGINTERN void Handle_ShapeFix_Root_SetPrecision(Handle_ShapeFix_Root *self,Standard_Real const preci){
+    (*self)->SetPrecision(preci);
   }
-}
-
-
-EXPORT bool _wrap_ShapeFix_Wireframe_FixSmallEdges (ShapeFix_Wireframe *larg1) {
-  bool lresult = (bool)0 ;
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
-  Standard_Boolean result;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)(arg1)->FixSmallEdges();
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_FixSmallEdges\n  * wrapname: _wrap_ShapeFix_Wireframe_FixSmallEdges\n  * fulldecl: Standard_Boolean ShapeFix_Wireframe::FixSmallEdges()";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = (bool)result;
-    return lresult;
-  } catch (...) {
-    return (bool)0;
-  }
-}
-
-
-EXPORT void _wrap_ShapeFix_Wireframe_SetLimitAngle (ShapeFix_Wireframe *larg1, Standard_Real larg2) {
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
+EXPORT void _wrap_ShapeFix_Root_SetPrecision (Handle_ShapeFix_Root *larg1, Standard_Real larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
   Standard_Real arg2 ;
   
   arg1 = larg1;
@@ -85072,7 +85360,7 @@ EXPORT void _wrap_ShapeFix_Wireframe_SetLimitAngle (ShapeFix_Wireframe *larg1, S
       try
       {
         OCC_CATCH_SIGNALS
-        (arg1)->SetLimitAngle(arg2);
+        Handle_ShapeFix_Root_SetPrecision(arg1,arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -85082,7 +85370,7 @@ EXPORT void _wrap_ShapeFix_Wireframe_SetLimitAngle (ShapeFix_Wireframe *larg1, S
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_SetLimitAngle\n  * wrapname: _wrap_ShapeFix_Wireframe_SetLimitAngle\n  * fulldecl: void ShapeFix_Wireframe::SetLimitAngle(Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SetPrecision\n  * wrapname: _wrap_ShapeFix_Root_SetPrecision\n  * fulldecl: void Handle_ShapeFix_Root::SetPrecision(Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85093,9 +85381,12 @@ EXPORT void _wrap_ShapeFix_Wireframe_SetLimitAngle (ShapeFix_Wireframe *larg1, S
 }
 
 
-EXPORT Standard_Real _wrap_ShapeFix_Wireframe_LimitAngle (ShapeFix_Wireframe *larg1) {
+SWIGINTERN Standard_Real Handle_ShapeFix_Root_Precision(Handle_ShapeFix_Root *self){
+    return (*self)->Precision();
+  }
+EXPORT Standard_Real _wrap_ShapeFix_Root_Precision (Handle_ShapeFix_Root *larg1) {
   Standard_Real lresult = (Standard_Real)0 ;
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
   Standard_Real result;
   
   arg1 = larg1;
@@ -85104,7 +85395,7 @@ EXPORT Standard_Real _wrap_ShapeFix_Wireframe_LimitAngle (ShapeFix_Wireframe *la
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Real)((ShapeFix_Wireframe const *)arg1)->LimitAngle();
+        result = (Standard_Real)Handle_ShapeFix_Root_Precision(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -85114,7 +85405,7 @@ EXPORT Standard_Real _wrap_ShapeFix_Wireframe_LimitAngle (ShapeFix_Wireframe *la
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_LimitAngle\n  * wrapname: _wrap_ShapeFix_Wireframe_LimitAngle\n  * fulldecl: Standard_Real ShapeFix_Wireframe::LimitAngle() const";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_Precision\n  * wrapname: _wrap_ShapeFix_Root_Precision\n  * fulldecl: Standard_Real Handle_ShapeFix_Root::Precision()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85126,18 +85417,21 @@ EXPORT Standard_Real _wrap_ShapeFix_Wireframe_LimitAngle (ShapeFix_Wireframe *la
 }
 
 
-EXPORT TopoDS_Shape *_wrap_ShapeFix_Wireframe_Shape (ShapeFix_Wireframe *larg1) {
-  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
-  TopoDS_Shape result;
+SWIGINTERN void Handle_ShapeFix_Root_SetMinTolerance(Handle_ShapeFix_Root *self,Standard_Real const mintol){
+    (*self)->SetMinTolerance(mintol);
+  }
+EXPORT void _wrap_ShapeFix_Root_SetMinTolerance (Handle_ShapeFix_Root *larg1, Standard_Real larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Standard_Real arg2 ;
   
   arg1 = larg1;
+  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (arg1)->Shape();
+        Handle_ShapeFix_Root_SetMinTolerance(arg1,arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -85147,33 +85441,70 @@ EXPORT TopoDS_Shape *_wrap_ShapeFix_Wireframe_Shape (ShapeFix_Wireframe *larg1) 
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_Shape\n  * wrapname: _wrap_ShapeFix_Wireframe_Shape\n  * fulldecl: TopoDS_Shape ShapeFix_Wireframe::Shape()";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SetMinTolerance\n  * wrapname: _wrap_ShapeFix_Root_SetMinTolerance\n  * fulldecl: void Handle_ShapeFix_Root::SetMinTolerance(Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
-    lresult = new TopoDS_Shape(result);
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Standard_Real Handle_ShapeFix_Root_MaxTolerance(Handle_ShapeFix_Root *self){
+    return (*self)->MaxTolerance();
+  }
+EXPORT Standard_Real _wrap_ShapeFix_Root_MaxTolerance (Handle_ShapeFix_Root *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)Handle_ShapeFix_Root_MaxTolerance(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_MaxTolerance\n  * wrapname: _wrap_ShapeFix_Root_MaxTolerance\n  * fulldecl: Standard_Real Handle_ShapeFix_Root::MaxTolerance()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
     return lresult;
   } catch (...) {
-    return (TopoDS_Shape *)0;
+    return (Standard_Real)0;
   }
 }
 
 
-SWIGINTERN void ShapeFix_Wireframe_setDropSmallEdges(ShapeFix_Wireframe *self,bool b){
-		self->ModeDropSmallEdges()=b;
-	}
-EXPORT void _wrap_ShapeFix_Wireframe_setDropSmallEdges (ShapeFix_Wireframe *larg1, bool larg2) {
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
-  bool arg2 ;
+SWIGINTERN Standard_Real Handle_ShapeFix_Root_LimitTolerance(Handle_ShapeFix_Root *self,Standard_Real const toler){
+    return (*self)->LimitTolerance(toler);
+  }
+EXPORT Standard_Real _wrap_ShapeFix_Root_LimitTolerance (Handle_ShapeFix_Root *larg1, Standard_Real larg2) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real result;
   
   arg1 = larg1;
-  arg2 = (bool)larg2;
+  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        ShapeFix_Wireframe_setDropSmallEdges(arg1,arg2);
+        result = (Standard_Real)Handle_ShapeFix_Root_LimitTolerance(arg1,arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -85183,7 +85514,47 @@ EXPORT void _wrap_ShapeFix_Wireframe_setDropSmallEdges (ShapeFix_Wireframe *larg
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_setDropSmallEdges\n  * wrapname: _wrap_ShapeFix_Wireframe_setDropSmallEdges\n  * fulldecl: void ShapeFix_Wireframe::setDropSmallEdges(bool)";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_LimitTolerance\n  * wrapname: _wrap_ShapeFix_Root_LimitTolerance\n  * fulldecl: Standard_Real Handle_ShapeFix_Root::LimitTolerance(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Root_SendMsg__SWIG_0(Handle_ShapeFix_Root *self,TopoDS_Shape const &shape,Message_Msg const &message,Message_Gravity const gravity=Message_Info){
+    (*self)->SendMsg(shape, message, gravity);
+  }
+EXPORT void _wrap_ShapeFix_Root_SendMsg__SWIG_0 (Handle_ShapeFix_Root *larg1, TopoDS_Shape *larg2, Message_Msg *larg3, Message_Gravity const *larg4) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  Message_Msg *arg3 = 0 ;
+  Message_Gravity arg4 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = *larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Root_SendMsg__SWIG_0(arg1,(TopoDS_Shape const &)*arg2,(Message_Msg const &)*arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendMsg\n  * wrapname: _wrap_ShapeFix_Root_SendMsg__SWIG_0\n  * fulldecl: void Handle_ShapeFix_Root::SendMsg(TopoDS_Shape const &,Message_Msg const &,Message_Gravity const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85194,21 +85565,20 @@ EXPORT void _wrap_ShapeFix_Wireframe_setDropSmallEdges (ShapeFix_Wireframe *larg
 }
 
 
-SWIGINTERN bool ShapeFix_Wireframe_getDropSmallEdges(ShapeFix_Wireframe *self){
-        return self->ModeDropSmallEdges()!=0;
-	}
-EXPORT bool _wrap_ShapeFix_Wireframe_getDropSmallEdges (ShapeFix_Wireframe *larg1) {
-  bool lresult = (bool)0 ;
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
-  bool result;
+EXPORT void _wrap_ShapeFix_Root_SendMsg__SWIG_1 (Handle_ShapeFix_Root *larg1, TopoDS_Shape *larg2, Message_Msg *larg3) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  Message_Msg *arg3 = 0 ;
   
   arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (bool)ShapeFix_Wireframe_getDropSmallEdges(arg1);
+        Handle_ShapeFix_Root_SendMsg__SWIG_0(arg1,(TopoDS_Shape const &)*arg2,(Message_Msg const &)*arg3);
       }
       catch(Standard_Failure const& error)
       {
@@ -85218,7 +85588,360 @@ EXPORT bool _wrap_ShapeFix_Wireframe_getDropSmallEdges (ShapeFix_Wireframe *larg
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_getDropSmallEdges\n  * wrapname: _wrap_ShapeFix_Wireframe_getDropSmallEdges\n  * fulldecl: bool ShapeFix_Wireframe::getDropSmallEdges()";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendMsg\n  * wrapname: _wrap_ShapeFix_Root_SendMsg__SWIG_1\n  * fulldecl: void Handle_ShapeFix_Root::SendMsg(TopoDS_Shape const &,Message_Msg const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Root_SendMsg__SWIG_2(Handle_ShapeFix_Root *self,Message_Msg const &message,Message_Gravity const gravity=Message_Info){
+    (*self)->SendMsg(message, gravity);
+  }
+EXPORT void _wrap_ShapeFix_Root_SendMsg__SWIG_2 (Handle_ShapeFix_Root *larg1, Message_Msg *larg2, Message_Gravity const *larg3) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Message_Msg *arg2 = 0 ;
+  Message_Gravity arg3 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = *larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Root_SendMsg__SWIG_2(arg1,(Message_Msg const &)*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendMsg\n  * wrapname: _wrap_ShapeFix_Root_SendMsg__SWIG_2\n  * fulldecl: void Handle_ShapeFix_Root::SendMsg(Message_Msg const &,Message_Gravity const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_ShapeFix_Root_SendMsg__SWIG_3 (Handle_ShapeFix_Root *larg1, Message_Msg *larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Message_Msg *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Root_SendMsg__SWIG_2(arg1,(Message_Msg const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendMsg\n  * wrapname: _wrap_ShapeFix_Root_SendMsg__SWIG_3\n  * fulldecl: void Handle_ShapeFix_Root::SendMsg(Message_Msg const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Root_SendWarning__SWIG_0(Handle_ShapeFix_Root *self,TopoDS_Shape const &shape,Message_Msg const &message){
+    (*self)->SendWarning(shape, message);
+  }
+EXPORT void _wrap_ShapeFix_Root_SendWarning__SWIG_0 (Handle_ShapeFix_Root *larg1, TopoDS_Shape *larg2, Message_Msg *larg3) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  Message_Msg *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Root_SendWarning__SWIG_0(arg1,(TopoDS_Shape const &)*arg2,(Message_Msg const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendWarning\n  * wrapname: _wrap_ShapeFix_Root_SendWarning__SWIG_0\n  * fulldecl: void Handle_ShapeFix_Root::SendWarning(TopoDS_Shape const &,Message_Msg const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Root_SendWarning__SWIG_1(Handle_ShapeFix_Root *self,Message_Msg const &message){
+    (*self)->SendWarning(message);
+  }
+EXPORT void _wrap_ShapeFix_Root_SendWarning__SWIG_1 (Handle_ShapeFix_Root *larg1, Message_Msg *larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Message_Msg *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Root_SendWarning__SWIG_1(arg1,(Message_Msg const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendWarning\n  * wrapname: _wrap_ShapeFix_Root_SendWarning__SWIG_1\n  * fulldecl: void Handle_ShapeFix_Root::SendWarning(Message_Msg const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Root_SendFail__SWIG_0(Handle_ShapeFix_Root *self,TopoDS_Shape const &shape,Message_Msg const &message){
+    (*self)->SendFail(shape, message);
+  }
+EXPORT void _wrap_ShapeFix_Root_SendFail__SWIG_0 (Handle_ShapeFix_Root *larg1, TopoDS_Shape *larg2, Message_Msg *larg3) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  Message_Msg *arg3 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Root_SendFail__SWIG_0(arg1,(TopoDS_Shape const &)*arg2,(Message_Msg const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendFail\n  * wrapname: _wrap_ShapeFix_Root_SendFail__SWIG_0\n  * fulldecl: void Handle_ShapeFix_Root::SendFail(TopoDS_Shape const &,Message_Msg const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Root_SendFail__SWIG_1(Handle_ShapeFix_Root *self,Message_Msg const &message){
+    (*self)->SendFail(message);
+  }
+EXPORT void _wrap_ShapeFix_Root_SendFail__SWIG_1 (Handle_ShapeFix_Root *larg1, Message_Msg *larg2) {
+  Handle_ShapeFix_Root *arg1 = (Handle_ShapeFix_Root *) 0 ;
+  Message_Msg *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Root_SendFail__SWIG_1(arg1,(Message_Msg const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Root_SendFail\n  * wrapname: _wrap_ShapeFix_Root_SendFail__SWIG_1\n  * fulldecl: void Handle_ShapeFix_Root::SendFail(Message_Msg const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_Shape *new_Handle_ShapeFix_Shape__SWIG_0(){
+    return new Handle_ShapeFix_Shape(new ShapeFix_Shape());
+  }
+EXPORT Handle_ShapeFix_Shape *_wrap_new_ShapeFix_Shape__SWIG_0 () {
+  Handle_ShapeFix_Shape * lresult = (Handle_ShapeFix_Shape *)0 ;
+  Handle_ShapeFix_Shape *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_Shape *)new_Handle_ShapeFix_Shape__SWIG_0();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_Shape\n  * wrapname: _wrap_new_ShapeFix_Shape__SWIG_0\n  * fulldecl: Handle_ShapeFix_Shape::Handle_ShapeFix_Shape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_Shape *)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_Shape *new_Handle_ShapeFix_Shape__SWIG_1(TopoDS_Shape const &shape){
+    return new Handle_ShapeFix_Shape(new ShapeFix_Shape(shape));
+  }
+EXPORT Handle_ShapeFix_Shape *_wrap_new_ShapeFix_Shape__SWIG_1 (TopoDS_Shape *larg1) {
+  Handle_ShapeFix_Shape * lresult = (Handle_ShapeFix_Shape *)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Handle_ShapeFix_Shape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_Shape *)new_Handle_ShapeFix_Shape__SWIG_1((TopoDS_Shape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_Shape\n  * wrapname: _wrap_new_ShapeFix_Shape__SWIG_1\n  * fulldecl: Handle_ShapeFix_Shape::Handle_ShapeFix_Shape(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_Shape *)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Shape_Init(Handle_ShapeFix_Shape *self,TopoDS_Shape const &shape){
+    (*self)->Init(shape);
+  }
+EXPORT void _wrap_ShapeFix_Shape_Init (Handle_ShapeFix_Shape *larg1, TopoDS_Shape *larg2) {
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Shape_Init(arg1,(TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Init\n  * wrapname: _wrap_ShapeFix_Shape_Init\n  * fulldecl: void Handle_ShapeFix_Shape::Init(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Shape_Perform__SWIG_0(Handle_ShapeFix_Shape *self){
+    return (*self)->Perform();
+  }
+EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_0 (Handle_ShapeFix_Shape *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Shape_Perform__SWIG_0(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Perform\n  * wrapname: _wrap_ShapeFix_Shape_Perform__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Shape::Perform()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85230,105 +85953,12 @@ EXPORT bool _wrap_ShapeFix_Wireframe_getDropSmallEdges (ShapeFix_Wireframe *larg
 }
 
 
-EXPORT void _wrap_delete_ShapeFix_Wireframe (ShapeFix_Wireframe *larg1) {
-  ShapeFix_Wireframe *arg1 = (ShapeFix_Wireframe *) 0 ;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        delete arg1;
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: delete_ShapeFix_Wireframe\n  * wrapname: _wrap_delete_ShapeFix_Wireframe\n  * fulldecl: ShapeFix_Wireframe::~ShapeFix_Wireframe()";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    
-  } catch (...) {
-    
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Shape_Perform__SWIG_1(Handle_ShapeFix_Shape *self,Handle_Message_ProgressIndicator const &theProgress){
+    return (*self)->Perform(theProgress);
   }
-}
-
-
-EXPORT ShapeFix_Shape *_wrap_new_ShapeFix_Shape (TopoDS_Shape *larg1) {
-  ShapeFix_Shape * lresult = (ShapeFix_Shape *)0 ;
-  TopoDS_Shape *arg1 = 0 ;
-  ShapeFix_Shape *result = 0 ;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = (ShapeFix_Shape *)new ShapeFix_Shape((TopoDS_Shape const &)*arg1);
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_ShapeFix_Shape\n  * wrapname: _wrap_new_ShapeFix_Shape\n  * fulldecl: ShapeFix_Shape::ShapeFix_Shape(TopoDS_Shape const &)";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = result;
-    return lresult;
-  } catch (...) {
-    return (ShapeFix_Shape *)0;
-  }
-}
-
-
-EXPORT TopoDS_Shape *_wrap_ShapeFix_Shape_Shape (ShapeFix_Shape *larg1) {
-  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
-  TopoDS_Shape result;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = ((ShapeFix_Shape const *)arg1)->Shape();
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Shape\n  * wrapname: _wrap_ShapeFix_Shape_Shape\n  * fulldecl: TopoDS_Shape ShapeFix_Shape::Shape() const";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = new TopoDS_Shape(result);
-    return lresult;
-  } catch (...) {
-    return (TopoDS_Shape *)0;
-  }
-}
-
-
-EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_0 (ShapeFix_Shape *larg1, Handle_Message_ProgressIndicator *larg2) {
+EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_1 (Handle_ShapeFix_Shape *larg1, Handle_Message_ProgressIndicator *larg2) {
   bool lresult = (bool)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
   Handle_Message_ProgressIndicator *arg2 = 0 ;
   Standard_Boolean result;
   
@@ -85339,7 +85969,7 @@ EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_0 (ShapeFix_Shape *larg1, Handle_
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)(arg1)->Perform((Handle_Message_ProgressIndicator const &)*arg2);
+        result = (Standard_Boolean)Handle_ShapeFix_Shape_Perform__SWIG_1(arg1,(Handle_Message_ProgressIndicator const &)*arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -85349,7 +85979,7 @@ EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_0 (ShapeFix_Shape *larg1, Handle_
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Perform\n  * wrapname: _wrap_ShapeFix_Shape_Perform__SWIG_0\n  * fulldecl: Standard_Boolean ShapeFix_Shape::Perform(Handle_Message_ProgressIndicator const &)";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Perform\n  * wrapname: _wrap_ShapeFix_Shape_Perform__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Shape::Perform(Handle_Message_ProgressIndicator const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85361,10 +85991,13 @@ EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_0 (ShapeFix_Shape *larg1, Handle_
 }
 
 
-EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_1 (ShapeFix_Shape *larg1) {
-  bool lresult = (bool)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
-  Standard_Boolean result;
+SWIGINTERN TopoDS_Shape Handle_ShapeFix_Shape_Shape(Handle_ShapeFix_Shape *self){
+    return (*self)->Shape();
+  }
+EXPORT TopoDS_Shape *_wrap_ShapeFix_Shape_Shape (Handle_ShapeFix_Shape *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
+  TopoDS_Shape result;
   
   arg1 = larg1;
   try {
@@ -85372,7 +86005,7 @@ EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_1 (ShapeFix_Shape *larg1) {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)(arg1)->Perform();
+        result = Handle_ShapeFix_Shape_Shape(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -85382,21 +86015,24 @@ EXPORT bool _wrap_ShapeFix_Shape_Perform__SWIG_1 (ShapeFix_Shape *larg1) {
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Perform\n  * wrapname: _wrap_ShapeFix_Shape_Perform__SWIG_1\n  * fulldecl: Standard_Boolean ShapeFix_Shape::Perform()";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Shape\n  * wrapname: _wrap_ShapeFix_Shape_Shape\n  * fulldecl: TopoDS_Shape Handle_ShapeFix_Shape::Shape()";
         signal_lisp_error(message.c_str());
       }
     }
-    lresult = (bool)result;
+    lresult = new TopoDS_Shape(result);
     return lresult;
   } catch (...) {
-    return (bool)0;
+    return (TopoDS_Shape *)0;
   }
 }
 
 
-EXPORT Handle_ShapeFix_Solid *_wrap_ShapeFix_Shape_FixSolidTool (ShapeFix_Shape *larg1) {
+SWIGINTERN Handle_ShapeFix_Solid Handle_ShapeFix_Shape_FixSolidTool(Handle_ShapeFix_Shape *self){
+    return (*self)->FixSolidTool();
+  }
+EXPORT Handle_ShapeFix_Solid *_wrap_ShapeFix_Shape_FixSolidTool (Handle_ShapeFix_Shape *larg1) {
   Handle_ShapeFix_Solid * lresult = (Handle_ShapeFix_Solid *)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
   Handle_ShapeFix_Solid result;
   
   arg1 = larg1;
@@ -85405,7 +86041,7 @@ EXPORT Handle_ShapeFix_Solid *_wrap_ShapeFix_Shape_FixSolidTool (ShapeFix_Shape 
       try
       {
         OCC_CATCH_SIGNALS
-        result = ((ShapeFix_Shape const *)arg1)->FixSolidTool();
+        result = Handle_ShapeFix_Shape_FixSolidTool(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -85415,7 +86051,7 @@ EXPORT Handle_ShapeFix_Solid *_wrap_ShapeFix_Shape_FixSolidTool (ShapeFix_Shape 
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixSolidTool\n  * wrapname: _wrap_ShapeFix_Shape_FixSolidTool\n  * fulldecl: Handle_ShapeFix_Solid ShapeFix_Shape::FixSolidTool() const";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixSolidTool\n  * wrapname: _wrap_ShapeFix_Shape_FixSolidTool\n  * fulldecl: Handle_ShapeFix_Solid Handle_ShapeFix_Shape::FixSolidTool()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85427,9 +86063,12 @@ EXPORT Handle_ShapeFix_Solid *_wrap_ShapeFix_Shape_FixSolidTool (ShapeFix_Shape 
 }
 
 
-EXPORT Handle_ShapeFix_Shell *_wrap_ShapeFix_Shape_FixShellTool (ShapeFix_Shape *larg1) {
+SWIGINTERN Handle_ShapeFix_Shell Handle_ShapeFix_Shape_FixShellTool(Handle_ShapeFix_Shape *self){
+    return (*self)->FixShellTool();
+  }
+EXPORT Handle_ShapeFix_Shell *_wrap_ShapeFix_Shape_FixShellTool (Handle_ShapeFix_Shape *larg1) {
   Handle_ShapeFix_Shell * lresult = (Handle_ShapeFix_Shell *)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
   Handle_ShapeFix_Shell result;
   
   arg1 = larg1;
@@ -85438,7 +86077,7 @@ EXPORT Handle_ShapeFix_Shell *_wrap_ShapeFix_Shape_FixShellTool (ShapeFix_Shape 
       try
       {
         OCC_CATCH_SIGNALS
-        result = ((ShapeFix_Shape const *)arg1)->FixShellTool();
+        result = Handle_ShapeFix_Shape_FixShellTool(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -85448,7 +86087,7 @@ EXPORT Handle_ShapeFix_Shell *_wrap_ShapeFix_Shape_FixShellTool (ShapeFix_Shape 
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixShellTool\n  * wrapname: _wrap_ShapeFix_Shape_FixShellTool\n  * fulldecl: Handle_ShapeFix_Shell ShapeFix_Shape::FixShellTool() const";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixShellTool\n  * wrapname: _wrap_ShapeFix_Shape_FixShellTool\n  * fulldecl: Handle_ShapeFix_Shell Handle_ShapeFix_Shape::FixShellTool()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85460,9 +86099,12 @@ EXPORT Handle_ShapeFix_Shell *_wrap_ShapeFix_Shape_FixShellTool (ShapeFix_Shape 
 }
 
 
-EXPORT Handle_ShapeFix_Face *_wrap_ShapeFix_Shape_FixFaceTool (ShapeFix_Shape *larg1) {
+SWIGINTERN Handle_ShapeFix_Face Handle_ShapeFix_Shape_FixFaceTool(Handle_ShapeFix_Shape *self){
+    return (*self)->FixFaceTool();
+  }
+EXPORT Handle_ShapeFix_Face *_wrap_ShapeFix_Shape_FixFaceTool (Handle_ShapeFix_Shape *larg1) {
   Handle_ShapeFix_Face * lresult = (Handle_ShapeFix_Face *)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
   Handle_ShapeFix_Face result;
   
   arg1 = larg1;
@@ -85471,7 +86113,7 @@ EXPORT Handle_ShapeFix_Face *_wrap_ShapeFix_Shape_FixFaceTool (ShapeFix_Shape *l
       try
       {
         OCC_CATCH_SIGNALS
-        result = ((ShapeFix_Shape const *)arg1)->FixFaceTool();
+        result = Handle_ShapeFix_Shape_FixFaceTool(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -85481,7 +86123,7 @@ EXPORT Handle_ShapeFix_Face *_wrap_ShapeFix_Shape_FixFaceTool (ShapeFix_Shape *l
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixFaceTool\n  * wrapname: _wrap_ShapeFix_Shape_FixFaceTool\n  * fulldecl: Handle_ShapeFix_Face ShapeFix_Shape::FixFaceTool() const";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixFaceTool\n  * wrapname: _wrap_ShapeFix_Shape_FixFaceTool\n  * fulldecl: Handle_ShapeFix_Face Handle_ShapeFix_Shape::FixFaceTool()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85493,10 +86135,13 @@ EXPORT Handle_ShapeFix_Face *_wrap_ShapeFix_Shape_FixFaceTool (ShapeFix_Shape *l
 }
 
 
-EXPORT Handle_ShapeFix_Wire *_wrap_ShapeFix_Shape_FixWireTool (ShapeFix_Shape *larg1) {
+SWIGINTERN Handle_ShapeFix_Wire Handle_ShapeFix_Shape_FixWireTool(Handle_ShapeFix_Shape *self){
+    return (*self)->FixWireTool();
+  }
+EXPORT Handle_ShapeFix_Wire *_wrap_ShapeFix_Shape_FixWireTool (Handle_ShapeFix_Shape *larg1) {
   Handle_ShapeFix_Wire * lresult = (Handle_ShapeFix_Wire *)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
-  Handle_ShapeFix_Wire result;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
+  SwigValueWrapper< Handle_ShapeFix_Wire > result;
   
   arg1 = larg1;
   try {
@@ -85504,7 +86149,7 @@ EXPORT Handle_ShapeFix_Wire *_wrap_ShapeFix_Shape_FixWireTool (ShapeFix_Shape *l
       try
       {
         OCC_CATCH_SIGNALS
-        result = ((ShapeFix_Shape const *)arg1)->FixWireTool();
+        result = Handle_ShapeFix_Shape_FixWireTool(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -85514,7 +86159,7 @@ EXPORT Handle_ShapeFix_Wire *_wrap_ShapeFix_Shape_FixWireTool (ShapeFix_Shape *l
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixWireTool\n  * wrapname: _wrap_ShapeFix_Shape_FixWireTool\n  * fulldecl: Handle_ShapeFix_Wire ShapeFix_Shape::FixWireTool() const";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixWireTool\n  * wrapname: _wrap_ShapeFix_Shape_FixWireTool\n  * fulldecl: Handle_ShapeFix_Wire Handle_ShapeFix_Shape::FixWireTool()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85526,10 +86171,13 @@ EXPORT Handle_ShapeFix_Wire *_wrap_ShapeFix_Shape_FixWireTool (ShapeFix_Shape *l
 }
 
 
-EXPORT Handle_ShapeFix_Edge *_wrap_ShapeFix_Shape_FixEdgeTool (ShapeFix_Shape *larg1) {
+SWIGINTERN Handle_ShapeFix_Edge Handle_ShapeFix_Shape_FixEdgeTool(Handle_ShapeFix_Shape *self){
+    return (*self)->FixEdgeTool();
+  }
+EXPORT Handle_ShapeFix_Edge *_wrap_ShapeFix_Shape_FixEdgeTool (Handle_ShapeFix_Shape *larg1) {
   Handle_ShapeFix_Edge * lresult = (Handle_ShapeFix_Edge *)0 ;
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
-  Handle_ShapeFix_Edge result;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
+  SwigValueWrapper< Handle_ShapeFix_Edge > result;
   
   arg1 = larg1;
   try {
@@ -85537,7 +86185,7 @@ EXPORT Handle_ShapeFix_Edge *_wrap_ShapeFix_Shape_FixEdgeTool (ShapeFix_Shape *l
       try
       {
         OCC_CATCH_SIGNALS
-        result = ((ShapeFix_Shape const *)arg1)->FixEdgeTool();
+        result = Handle_ShapeFix_Shape_FixEdgeTool(arg1);
       }
       catch(Standard_Failure const& error)
       {
@@ -85547,7 +86195,7 @@ EXPORT Handle_ShapeFix_Edge *_wrap_ShapeFix_Shape_FixEdgeTool (ShapeFix_Shape *l
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixEdgeTool\n  * wrapname: _wrap_ShapeFix_Shape_FixEdgeTool\n  * fulldecl: Handle_ShapeFix_Edge ShapeFix_Shape::FixEdgeTool() const";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_FixEdgeTool\n  * wrapname: _wrap_ShapeFix_Shape_FixEdgeTool\n  * fulldecl: Handle_ShapeFix_Edge Handle_ShapeFix_Shape::FixEdgeTool()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85559,16 +86207,23 @@ EXPORT Handle_ShapeFix_Edge *_wrap_ShapeFix_Shape_FixEdgeTool (ShapeFix_Shape *l
 }
 
 
-EXPORT void _wrap_delete_ShapeFix_Shape (ShapeFix_Shape *larg1) {
-  ShapeFix_Shape *arg1 = (ShapeFix_Shape *) 0 ;
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Shape_Status(Handle_ShapeFix_Shape *self,ShapeExtend_Status const status){
+    return (*self)->Status(status);
+  }
+EXPORT bool _wrap_ShapeFix_Shape_Status (Handle_ShapeFix_Shape *larg1, ShapeExtend_Status const *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Shape *arg1 = (Handle_ShapeFix_Shape *) 0 ;
+  ShapeExtend_Status arg2 ;
+  Standard_Boolean result;
   
   arg1 = larg1;
+  arg2 = *larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        delete arg1;
+        result = (Standard_Boolean)Handle_ShapeFix_Shape_Status(arg1,arg2);
       }
       catch(Standard_Failure const& error)
       {
@@ -85578,7 +86233,113 @@ EXPORT void _wrap_delete_ShapeFix_Shape (ShapeFix_Shape *larg1) {
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: delete_ShapeFix_Shape\n  * wrapname: _wrap_delete_ShapeFix_Shape\n  * fulldecl: ShapeFix_Shape::~ShapeFix_Shape()";
+        message += "\nwrapper details:\n  * symname: ShapeFix_Shape_Status\n  * wrapname: _wrap_ShapeFix_Shape_Status\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Shape::Status(ShapeExtend_Status const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_EdgeProjAux *new_Handle_ShapeFix_EdgeProjAux__SWIG_0(){
+    return new Handle_ShapeFix_EdgeProjAux(new ShapeFix_EdgeProjAux());
+  }
+EXPORT Handle_ShapeFix_EdgeProjAux *_wrap_new_ShapeFix_EdgeProjAux__SWIG_0 () {
+  Handle_ShapeFix_EdgeProjAux * lresult = (Handle_ShapeFix_EdgeProjAux *)0 ;
+  Handle_ShapeFix_EdgeProjAux *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_EdgeProjAux *)new_Handle_ShapeFix_EdgeProjAux__SWIG_0();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_EdgeProjAux\n  * wrapname: _wrap_new_ShapeFix_EdgeProjAux__SWIG_0\n  * fulldecl: Handle_ShapeFix_EdgeProjAux::Handle_ShapeFix_EdgeProjAux()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_EdgeProjAux *)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_EdgeProjAux *new_Handle_ShapeFix_EdgeProjAux__SWIG_1(TopoDS_Face const &F,TopoDS_Edge const &E){
+    return new Handle_ShapeFix_EdgeProjAux(new ShapeFix_EdgeProjAux(F, E));
+  }
+EXPORT Handle_ShapeFix_EdgeProjAux *_wrap_new_ShapeFix_EdgeProjAux__SWIG_1 (TopoDS_Face *larg1, TopoDS_Edge *larg2) {
+  Handle_ShapeFix_EdgeProjAux * lresult = (Handle_ShapeFix_EdgeProjAux *)0 ;
+  TopoDS_Face *arg1 = 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Handle_ShapeFix_EdgeProjAux *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_EdgeProjAux *)new_Handle_ShapeFix_EdgeProjAux__SWIG_1((TopoDS_Face const &)*arg1,(TopoDS_Edge const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_EdgeProjAux\n  * wrapname: _wrap_new_ShapeFix_EdgeProjAux__SWIG_1\n  * fulldecl: Handle_ShapeFix_EdgeProjAux::Handle_ShapeFix_EdgeProjAux(TopoDS_Face const &,TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_EdgeProjAux *)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_EdgeProjAux_Delete(Handle_ShapeFix_EdgeProjAux *self){
+    self->~Handle_ShapeFix_EdgeProjAux();
+  }
+EXPORT void _wrap_ShapeFix_EdgeProjAux_Delete (Handle_ShapeFix_EdgeProjAux *larg1) {
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_EdgeProjAux_Delete(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_Delete\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_Delete\n  * fulldecl: void Handle_ShapeFix_EdgeProjAux::Delete()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -85589,16 +86350,23 @@ EXPORT void _wrap_delete_ShapeFix_Shape (ShapeFix_Shape *larg1) {
 }
 
 
-EXPORT void _wrap_delete_Message_ProgressIndicator (Handle_Message_ProgressIndicator *larg1) {
-  Handle_Message_ProgressIndicator *arg1 = (Handle_Message_ProgressIndicator *) 0 ;
+SWIGINTERN void Handle_ShapeFix_EdgeProjAux_Init(Handle_ShapeFix_EdgeProjAux *self,TopoDS_Face const &F,TopoDS_Edge const &E){
+    (*self)->Init(F, E);
+  }
+EXPORT void _wrap_ShapeFix_EdgeProjAux_Init (Handle_ShapeFix_EdgeProjAux *larg1, TopoDS_Face *larg2, TopoDS_Edge *larg3) {
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  TopoDS_Face *arg2 = 0 ;
+  TopoDS_Edge *arg3 = 0 ;
   
   arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        delete arg1;
+        Handle_ShapeFix_EdgeProjAux_Init(arg1,(TopoDS_Face const &)*arg2,(TopoDS_Edge const &)*arg3);
       }
       catch(Standard_Failure const& error)
       {
@@ -85608,13 +86376,3110 @@ EXPORT void _wrap_delete_Message_ProgressIndicator (Handle_Message_ProgressIndic
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: delete_Message_ProgressIndicator\n  * wrapname: _wrap_delete_Message_ProgressIndicator\n  * fulldecl: Handle_Message_ProgressIndicator::~Handle_Message_ProgressIndicator()";
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_Init\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_Init\n  * fulldecl: void Handle_ShapeFix_EdgeProjAux::Init(TopoDS_Face const &,TopoDS_Edge const &)";
         signal_lisp_error(message.c_str());
       }
     }
     
   } catch (...) {
     
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_EdgeProjAux_Compute(Handle_ShapeFix_EdgeProjAux *self,Standard_Real const preci){
+    (*self)->Compute(preci);
+  }
+EXPORT void _wrap_ShapeFix_EdgeProjAux_Compute (Handle_ShapeFix_EdgeProjAux *larg1, Standard_Real larg2) {
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_EdgeProjAux_Compute(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_Compute\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_Compute\n  * fulldecl: void Handle_ShapeFix_EdgeProjAux::Compute(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_EdgeProjAux_IsFirstDone(Handle_ShapeFix_EdgeProjAux *self){
+    return (*self)->IsFirstDone();
+  }
+EXPORT bool _wrap_ShapeFix_EdgeProjAux_IsFirstDone (Handle_ShapeFix_EdgeProjAux *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_EdgeProjAux_IsFirstDone(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_IsFirstDone\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_IsFirstDone\n  * fulldecl: Standard_Boolean Handle_ShapeFix_EdgeProjAux::IsFirstDone()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_EdgeProjAux_IsLastDone(Handle_ShapeFix_EdgeProjAux *self){
+    return (*self)->IsLastDone();
+  }
+EXPORT bool _wrap_ShapeFix_EdgeProjAux_IsLastDone (Handle_ShapeFix_EdgeProjAux *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_EdgeProjAux_IsLastDone(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_IsLastDone\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_IsLastDone\n  * fulldecl: Standard_Boolean Handle_ShapeFix_EdgeProjAux::IsLastDone()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Real Handle_ShapeFix_EdgeProjAux_FirstParam(Handle_ShapeFix_EdgeProjAux *self){
+    return (*self)->FirstParam();
+  }
+EXPORT Standard_Real _wrap_ShapeFix_EdgeProjAux_FirstParam (Handle_ShapeFix_EdgeProjAux *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)Handle_ShapeFix_EdgeProjAux_FirstParam(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_FirstParam\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_FirstParam\n  * fulldecl: Standard_Real Handle_ShapeFix_EdgeProjAux::FirstParam()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+SWIGINTERN Standard_Real Handle_ShapeFix_EdgeProjAux_LastParam(Handle_ShapeFix_EdgeProjAux *self){
+    return (*self)->LastParam();
+  }
+EXPORT Standard_Real _wrap_ShapeFix_EdgeProjAux_LastParam (Handle_ShapeFix_EdgeProjAux *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)Handle_ShapeFix_EdgeProjAux_LastParam(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_LastParam\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_LastParam\n  * fulldecl: Standard_Real Handle_ShapeFix_EdgeProjAux::LastParam()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_EdgeProjAux_IsIso(Handle_ShapeFix_EdgeProjAux *self,Handle_Geom2d_Curve const &C){
+    return (*self)->IsIso(C);
+  }
+EXPORT bool _wrap_ShapeFix_EdgeProjAux_IsIso (Handle_ShapeFix_EdgeProjAux *larg1, Handle_Geom2d_Curve *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_EdgeProjAux *arg1 = (Handle_ShapeFix_EdgeProjAux *) 0 ;
+  Handle_Geom2d_Curve *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_EdgeProjAux_IsIso(arg1,(Handle_Geom2d_Curve const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_EdgeProjAux_IsIso\n  * wrapname: _wrap_ShapeFix_EdgeProjAux_IsIso\n  * fulldecl: Standard_Boolean Handle_ShapeFix_EdgeProjAux::IsIso(Handle_Geom2d_Curve const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_Edge *new_Handle_ShapeFix_Edge(){
+    return new Handle_ShapeFix_Edge(new ShapeFix_Edge());
+  }
+EXPORT Handle_ShapeFix_Edge *_wrap_new_ShapeFix_Edge () {
+  Handle_ShapeFix_Edge * lresult = (Handle_ShapeFix_Edge *)0 ;
+  Handle_ShapeFix_Edge *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_Edge *)new_Handle_ShapeFix_Edge();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_Edge\n  * wrapname: _wrap_new_ShapeFix_Edge\n  * fulldecl: Handle_ShapeFix_Edge::Handle_ShapeFix_Edge()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_Edge *)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Edge_Delete(Handle_ShapeFix_Edge *self){
+    self->~Handle_ShapeFix_Edge();
+  }
+EXPORT void _wrap_ShapeFix_Edge_Delete (Handle_ShapeFix_Edge *larg1) {
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Edge_Delete(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_Delete\n  * wrapname: _wrap_ShapeFix_Edge_Delete\n  * fulldecl: void Handle_ShapeFix_Edge::Delete()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Handle_ShapeConstruct_ProjectCurveOnSurface Handle_ShapeFix_Edge_Projector(Handle_ShapeFix_Edge *self){
+    return (*self)->Projector();
+  }
+EXPORT Handle_ShapeConstruct_ProjectCurveOnSurface *_wrap_ShapeFix_Edge_Projector (Handle_ShapeFix_Edge *larg1) {
+  Handle_ShapeConstruct_ProjectCurveOnSurface * lresult = (Handle_ShapeConstruct_ProjectCurveOnSurface *)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  Handle_ShapeConstruct_ProjectCurveOnSurface result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Handle_ShapeFix_Edge_Projector(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_Projector\n  * wrapname: _wrap_ShapeFix_Edge_Projector\n  * fulldecl: Handle_ShapeConstruct_ProjectCurveOnSurface Handle_ShapeFix_Edge::Projector()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_ShapeConstruct_ProjectCurveOnSurface(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeConstruct_ProjectCurveOnSurface *)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixRemovePCurve__SWIG_0(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,TopoDS_Face const &face){
+    return (*self)->FixRemovePCurve(edge, face);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_0 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixRemovePCurve__SWIG_0(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixRemovePCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixRemovePCurve(TopoDS_Edge const &,TopoDS_Face const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixRemovePCurve__SWIG_1(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,Handle_Geom_Surface const &surface,TopLoc_Location const &location){
+    return (*self)->FixRemovePCurve(edge, surface, location);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_1 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, Handle_Geom_Surface *larg3, TopLoc_Location *larg4) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Handle_Geom_Surface *arg3 = 0 ;
+  TopLoc_Location *arg4 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixRemovePCurve__SWIG_1(arg1,(TopoDS_Edge const &)*arg2,(Handle_Geom_Surface const &)*arg3,(TopLoc_Location const &)*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixRemovePCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixRemovePCurve(TopoDS_Edge const &,Handle_Geom_Surface const &,TopLoc_Location const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixRemoveCurve3d(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge){
+    return (*self)->FixRemoveCurve3d(edge);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixRemoveCurve3d (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixRemoveCurve3d(arg1,(TopoDS_Edge const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixRemoveCurve3d\n  * wrapname: _wrap_ShapeFix_Edge_FixRemoveCurve3d\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixRemoveCurve3d(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixAddPCurve__SWIG_0(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,TopoDS_Face const &face,Standard_Boolean const isSeam,Standard_Real const prec=0.0){
+    return (*self)->FixAddPCurve(edge, face, isSeam, prec);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_0 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3, bool larg4, Standard_Real larg5) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean arg4 ;
+  Standard_Real arg5 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = (bool)larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_0(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3,arg4,arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,TopoDS_Face const &,Standard_Boolean const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_1 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3, bool larg4) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean arg4 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = (bool)larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_0(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,TopoDS_Face const &,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixAddPCurve__SWIG_2(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,Handle_Geom_Surface const &surface,TopLoc_Location const &location,Standard_Boolean const isSeam,Standard_Real const prec=0.0){
+    return (*self)->FixAddPCurve(edge, surface, location, isSeam, prec);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_2 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, Handle_Geom_Surface *larg3, TopLoc_Location *larg4, bool larg5, Standard_Real larg6) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Handle_Geom_Surface *arg3 = 0 ;
+  TopLoc_Location *arg4 = 0 ;
+  Standard_Boolean arg5 ;
+  Standard_Real arg6 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = (bool)larg5;
+  arg6 = larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_2(arg1,(TopoDS_Edge const &)*arg2,(Handle_Geom_Surface const &)*arg3,(TopLoc_Location const &)*arg4,arg5,arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_2\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,Handle_Geom_Surface const &,TopLoc_Location const &,Standard_Boolean const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_3 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, Handle_Geom_Surface *larg3, TopLoc_Location *larg4, bool larg5) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Handle_Geom_Surface *arg3 = 0 ;
+  TopLoc_Location *arg4 = 0 ;
+  Standard_Boolean arg5 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = (bool)larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_2(arg1,(TopoDS_Edge const &)*arg2,(Handle_Geom_Surface const &)*arg3,(TopLoc_Location const &)*arg4,arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_3\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,Handle_Geom_Surface const &,TopLoc_Location const &,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixAddPCurve__SWIG_4(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,TopoDS_Face const &face,Standard_Boolean const isSeam,Handle_ShapeAnalysis_Surface const &surfana,Standard_Real const prec=0.0){
+    return (*self)->FixAddPCurve(edge, face, isSeam, surfana, prec);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_4 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3, bool larg4, Handle_ShapeAnalysis_Surface *larg5, Standard_Real larg6) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean arg4 ;
+  Handle_ShapeAnalysis_Surface *arg5 = 0 ;
+  Standard_Real arg6 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = (bool)larg4;
+  arg5 = larg5;
+  arg6 = larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_4(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3,arg4,(Handle_ShapeAnalysis_Surface const &)*arg5,arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_4\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,TopoDS_Face const &,Standard_Boolean const,Handle_ShapeAnalysis_Surface const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_5 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3, bool larg4, Handle_ShapeAnalysis_Surface *larg5) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean arg4 ;
+  Handle_ShapeAnalysis_Surface *arg5 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = (bool)larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_4(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3,arg4,(Handle_ShapeAnalysis_Surface const &)*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_5\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,TopoDS_Face const &,Standard_Boolean const,Handle_ShapeAnalysis_Surface const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixAddPCurve__SWIG_6(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,Handle_Geom_Surface const &surface,TopLoc_Location const &location,Standard_Boolean const isSeam,Handle_ShapeAnalysis_Surface const &surfana,Standard_Real const prec=0.0){
+    return (*self)->FixAddPCurve(edge, surface, location, isSeam, surfana, prec);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_6 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, Handle_Geom_Surface *larg3, TopLoc_Location *larg4, bool larg5, Handle_ShapeAnalysis_Surface *larg6, Standard_Real larg7) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Handle_Geom_Surface *arg3 = 0 ;
+  TopLoc_Location *arg4 = 0 ;
+  Standard_Boolean arg5 ;
+  Handle_ShapeAnalysis_Surface *arg6 = 0 ;
+  Standard_Real arg7 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = (bool)larg5;
+  arg6 = larg6;
+  arg7 = larg7;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_6(arg1,(TopoDS_Edge const &)*arg2,(Handle_Geom_Surface const &)*arg3,(TopLoc_Location const &)*arg4,arg5,(Handle_ShapeAnalysis_Surface const &)*arg6,arg7);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_6\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,Handle_Geom_Surface const &,TopLoc_Location const &,Standard_Boolean const,Handle_ShapeAnalysis_Surface const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_7 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, Handle_Geom_Surface *larg3, TopLoc_Location *larg4, bool larg5, Handle_ShapeAnalysis_Surface *larg6) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Handle_Geom_Surface *arg3 = 0 ;
+  TopLoc_Location *arg4 = 0 ;
+  Standard_Boolean arg5 ;
+  Handle_ShapeAnalysis_Surface *arg6 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = (bool)larg5;
+  arg6 = larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddPCurve__SWIG_6(arg1,(TopoDS_Edge const &)*arg2,(Handle_Geom_Surface const &)*arg3,(TopLoc_Location const &)*arg4,arg5,(Handle_ShapeAnalysis_Surface const &)*arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddPCurve\n  * wrapname: _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_7\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddPCurve(TopoDS_Edge const &,Handle_Geom_Surface const &,TopLoc_Location const &,Standard_Boolean const,Handle_ShapeAnalysis_Surface const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixAddCurve3d(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge){
+    return (*self)->FixAddCurve3d(edge);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixAddCurve3d (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixAddCurve3d(arg1,(TopoDS_Edge const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixAddCurve3d\n  * wrapname: _wrap_ShapeFix_Edge_FixAddCurve3d\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixAddCurve3d(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixVertexTolerance__SWIG_0(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,TopoDS_Face const &face){
+    return (*self)->FixVertexTolerance(edge, face);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_0 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixVertexTolerance__SWIG_0(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixVertexTolerance\n  * wrapname: _wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixVertexTolerance(TopoDS_Edge const &,TopoDS_Face const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixVertexTolerance__SWIG_1(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge){
+    return (*self)->FixVertexTolerance(edge);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_1 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixVertexTolerance__SWIG_1(arg1,(TopoDS_Edge const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixVertexTolerance\n  * wrapname: _wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixVertexTolerance(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixReversed2d__SWIG_0(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,TopoDS_Face const &face){
+    return (*self)->FixReversed2d(edge, face);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixReversed2d__SWIG_0 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixReversed2d__SWIG_0(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixReversed2d\n  * wrapname: _wrap_ShapeFix_Edge_FixReversed2d__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixReversed2d(TopoDS_Edge const &,TopoDS_Face const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixReversed2d__SWIG_1(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,Handle_Geom_Surface const &surface,TopLoc_Location const &location){
+    return (*self)->FixReversed2d(edge, surface, location);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixReversed2d__SWIG_1 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, Handle_Geom_Surface *larg3, TopLoc_Location *larg4) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Handle_Geom_Surface *arg3 = 0 ;
+  TopLoc_Location *arg4 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixReversed2d__SWIG_1(arg1,(TopoDS_Edge const &)*arg2,(Handle_Geom_Surface const &)*arg3,(TopLoc_Location const &)*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixReversed2d\n  * wrapname: _wrap_ShapeFix_Edge_FixReversed2d__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixReversed2d(TopoDS_Edge const &,Handle_Geom_Surface const &,TopLoc_Location const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixSameParameter__SWIG_0(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,Standard_Real const tolerance=0.0){
+    return (*self)->FixSameParameter(edge, tolerance);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixSameParameter__SWIG_0 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, Standard_Real larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Standard_Real arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixSameParameter__SWIG_0(arg1,(TopoDS_Edge const &)*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixSameParameter\n  * wrapname: _wrap_ShapeFix_Edge_FixSameParameter__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixSameParameter(TopoDS_Edge const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Edge_FixSameParameter__SWIG_1 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixSameParameter__SWIG_0(arg1,(TopoDS_Edge const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixSameParameter\n  * wrapname: _wrap_ShapeFix_Edge_FixSameParameter__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixSameParameter(TopoDS_Edge const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_FixSameParameter__SWIG_2(Handle_ShapeFix_Edge *self,TopoDS_Edge const &edge,TopoDS_Face const &face,Standard_Real const tolerance=0.0){
+    return (*self)->FixSameParameter(edge, face, tolerance);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_FixSameParameter__SWIG_2 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3, Standard_Real larg4) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Real arg4 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixSameParameter__SWIG_2(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixSameParameter\n  * wrapname: _wrap_ShapeFix_Edge_FixSameParameter__SWIG_2\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixSameParameter(TopoDS_Edge const &,TopoDS_Face const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Edge_FixSameParameter__SWIG_3 (Handle_ShapeFix_Edge *larg1, TopoDS_Edge *larg2, TopoDS_Face *larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  TopoDS_Edge *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_FixSameParameter__SWIG_2(arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Face const &)*arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_FixSameParameter\n  * wrapname: _wrap_ShapeFix_Edge_FixSameParameter__SWIG_3\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::FixSameParameter(TopoDS_Edge const &,TopoDS_Face const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Edge_Status(Handle_ShapeFix_Edge *self,ShapeExtend_Status const status){
+    return (*self)->Status(status);
+  }
+EXPORT bool _wrap_ShapeFix_Edge_Status (Handle_ShapeFix_Edge *larg1, ShapeExtend_Status const *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  ShapeExtend_Status arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = *larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Edge_Status(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_Status\n  * wrapname: _wrap_ShapeFix_Edge_Status\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Edge::Status(ShapeExtend_Status const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Edge_SetContext(Handle_ShapeFix_Edge *self,Handle_ShapeBuild_ReShape const &context){
+    (*self)->SetContext(context);
+  }
+EXPORT void _wrap_ShapeFix_Edge_SetContext (Handle_ShapeFix_Edge *larg1, Handle_ShapeBuild_ReShape *larg2) {
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  Handle_ShapeBuild_ReShape *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Edge_SetContext(arg1,(Handle_ShapeBuild_ReShape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_SetContext\n  * wrapname: _wrap_ShapeFix_Edge_SetContext\n  * fulldecl: void Handle_ShapeFix_Edge::SetContext(Handle_ShapeBuild_ReShape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Handle_ShapeBuild_ReShape Handle_ShapeFix_Edge_Context(Handle_ShapeFix_Edge *self){
+    return (*self)->Context();
+  }
+EXPORT Handle_ShapeBuild_ReShape *_wrap_ShapeFix_Edge_Context (Handle_ShapeFix_Edge *larg1) {
+  Handle_ShapeBuild_ReShape * lresult = (Handle_ShapeBuild_ReShape *)0 ;
+  Handle_ShapeFix_Edge *arg1 = (Handle_ShapeFix_Edge *) 0 ;
+  Handle_ShapeBuild_ReShape result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Handle_ShapeFix_Edge_Context(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Edge_Context\n  * wrapname: _wrap_ShapeFix_Edge_Context\n  * fulldecl: Handle_ShapeBuild_ReShape Handle_ShapeFix_Edge::Context()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_ShapeBuild_ReShape(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeBuild_ReShape *)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_Wire *new_Handle_ShapeFix_Wire__SWIG_0(){
+    return new Handle_ShapeFix_Wire(new ShapeFix_Wire());
+  }
+EXPORT Handle_ShapeFix_Wire *_wrap_new_ShapeFix_Wire__SWIG_0 () {
+  Handle_ShapeFix_Wire * lresult = (Handle_ShapeFix_Wire *)0 ;
+  Handle_ShapeFix_Wire *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_Wire *)new_Handle_ShapeFix_Wire__SWIG_0();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_Wire\n  * wrapname: _wrap_new_ShapeFix_Wire__SWIG_0\n  * fulldecl: Handle_ShapeFix_Wire::Handle_ShapeFix_Wire()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_Wire *)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_Wire *new_Handle_ShapeFix_Wire__SWIG_1(TopoDS_Wire const &wire,TopoDS_Face const &face,Standard_Real const prec){
+    return new Handle_ShapeFix_Wire(new ShapeFix_Wire(wire, face, prec));
+  }
+EXPORT Handle_ShapeFix_Wire *_wrap_new_ShapeFix_Wire__SWIG_1 (TopoDS_Wire *larg1, TopoDS_Face *larg2, Standard_Real larg3) {
+  Handle_ShapeFix_Wire * lresult = (Handle_ShapeFix_Wire *)0 ;
+  TopoDS_Wire *arg1 = 0 ;
+  TopoDS_Face *arg2 = 0 ;
+  Standard_Real arg3 ;
+  Handle_ShapeFix_Wire *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_Wire *)new_Handle_ShapeFix_Wire__SWIG_1((TopoDS_Wire const &)*arg1,(TopoDS_Face const &)*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_Wire\n  * wrapname: _wrap_new_ShapeFix_Wire__SWIG_1\n  * fulldecl: Handle_ShapeFix_Wire::Handle_ShapeFix_Wire(TopoDS_Wire const &,TopoDS_Face const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_Wire *)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_Delete(Handle_ShapeFix_Wire *self){
+    self->~Handle_ShapeFix_Wire();
+  }
+EXPORT void _wrap_ShapeFix_Wire_Delete (Handle_ShapeFix_Wire *larg1) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_Delete(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Delete\n  * wrapname: _wrap_ShapeFix_Wire_Delete\n  * fulldecl: void Handle_ShapeFix_Wire::Delete()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_ClearModes(Handle_ShapeFix_Wire *self){
+    (*self)->ClearModes();
+  }
+EXPORT void _wrap_ShapeFix_Wire_ClearModes (Handle_ShapeFix_Wire *larg1) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_ClearModes(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_ClearModes\n  * wrapname: _wrap_ShapeFix_Wire_ClearModes\n  * fulldecl: void Handle_ShapeFix_Wire::ClearModes()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_ClearStatuses(Handle_ShapeFix_Wire *self){
+    (*self)->ClearStatuses();
+  }
+EXPORT void _wrap_ShapeFix_Wire_ClearStatuses (Handle_ShapeFix_Wire *larg1) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_ClearStatuses(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_ClearStatuses\n  * wrapname: _wrap_ShapeFix_Wire_ClearStatuses\n  * fulldecl: void Handle_ShapeFix_Wire::ClearStatuses()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_Init__SWIG_0(Handle_ShapeFix_Wire *self,TopoDS_Wire const &wire,TopoDS_Face const &face,Standard_Real const prec){
+    (*self)->Init(wire, face, prec);
+  }
+EXPORT void _wrap_ShapeFix_Wire_Init__SWIG_0 (Handle_ShapeFix_Wire *larg1, TopoDS_Wire *larg2, TopoDS_Face *larg3, Standard_Real larg4) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  TopoDS_Wire *arg2 = 0 ;
+  TopoDS_Face *arg3 = 0 ;
+  Standard_Real arg4 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_Init__SWIG_0(arg1,(TopoDS_Wire const &)*arg2,(TopoDS_Face const &)*arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Init\n  * wrapname: _wrap_ShapeFix_Wire_Init__SWIG_0\n  * fulldecl: void Handle_ShapeFix_Wire::Init(TopoDS_Wire const &,TopoDS_Face const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_Init__SWIG_1(Handle_ShapeFix_Wire *self,Handle_ShapeAnalysis_Wire const &saw){
+    (*self)->Init(saw);
+  }
+EXPORT void _wrap_ShapeFix_Wire_Init__SWIG_1 (Handle_ShapeFix_Wire *larg1, Handle_ShapeAnalysis_Wire *larg2) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Handle_ShapeAnalysis_Wire *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_Init__SWIG_1(arg1,(Handle_ShapeAnalysis_Wire const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Init\n  * wrapname: _wrap_ShapeFix_Wire_Init__SWIG_1\n  * fulldecl: void Handle_ShapeFix_Wire::Init(Handle_ShapeAnalysis_Wire const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_Load__SWIG_0(Handle_ShapeFix_Wire *self,TopoDS_Wire const &wire){
+    (*self)->Load(wire);
+  }
+EXPORT void _wrap_ShapeFix_Wire_Load__SWIG_0 (Handle_ShapeFix_Wire *larg1, TopoDS_Wire *larg2) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  TopoDS_Wire *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_Load__SWIG_0(arg1,(TopoDS_Wire const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Load\n  * wrapname: _wrap_ShapeFix_Wire_Load__SWIG_0\n  * fulldecl: void Handle_ShapeFix_Wire::Load(TopoDS_Wire const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_Load__SWIG_1(Handle_ShapeFix_Wire *self,Handle_ShapeExtend_WireData const &sbwd){
+    (*self)->Load(sbwd);
+  }
+EXPORT void _wrap_ShapeFix_Wire_Load__SWIG_1 (Handle_ShapeFix_Wire *larg1, Handle_ShapeExtend_WireData *larg2) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Handle_ShapeExtend_WireData *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_Load__SWIG_1(arg1,(Handle_ShapeExtend_WireData const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Load\n  * wrapname: _wrap_ShapeFix_Wire_Load__SWIG_1\n  * fulldecl: void Handle_ShapeFix_Wire::Load(Handle_ShapeExtend_WireData const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_SetMaxTailAngle(Handle_ShapeFix_Wire *self,Standard_Real const theMaxTailAngle){
+    (*self)->SetMaxTailAngle(theMaxTailAngle);
+  }
+EXPORT void _wrap_ShapeFix_Wire_SetMaxTailAngle (Handle_ShapeFix_Wire *larg1, Standard_Real larg2) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_SetMaxTailAngle(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_SetMaxTailAngle\n  * wrapname: _wrap_ShapeFix_Wire_SetMaxTailAngle\n  * fulldecl: void Handle_ShapeFix_Wire::SetMaxTailAngle(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wire_SetMaxTailWidth(Handle_ShapeFix_Wire *self,Standard_Real const theMaxTailWidth){
+    (*self)->SetMaxTailWidth(theMaxTailWidth);
+  }
+EXPORT void _wrap_ShapeFix_Wire_SetMaxTailWidth (Handle_ShapeFix_Wire *larg1, Standard_Real larg2) {
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wire_SetMaxTailWidth(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_SetMaxTailWidth\n  * wrapname: _wrap_ShapeFix_Wire_SetMaxTailWidth\n  * fulldecl: void Handle_ShapeFix_Wire::SetMaxTailWidth(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Standard_Integer Handle_ShapeFix_Wire_NbEdges(Handle_ShapeFix_Wire *self){
+    return (*self)->NbEdges();
+  }
+EXPORT Standard_Integer _wrap_ShapeFix_Wire_NbEdges (Handle_ShapeFix_Wire *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)Handle_ShapeFix_Wire_NbEdges(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_NbEdges\n  * wrapname: _wrap_ShapeFix_Wire_NbEdges\n  * fulldecl: Standard_Integer Handle_ShapeFix_Wire::NbEdges()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+SWIGINTERN TopoDS_Wire Handle_ShapeFix_Wire_Wire(Handle_ShapeFix_Wire *self){
+    return (*self)->Wire();
+  }
+EXPORT TopoDS_Wire *_wrap_ShapeFix_Wire_Wire (Handle_ShapeFix_Wire *larg1) {
+  TopoDS_Wire * lresult = (TopoDS_Wire *)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  TopoDS_Wire result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Handle_ShapeFix_Wire_Wire(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Wire\n  * wrapname: _wrap_ShapeFix_Wire_Wire\n  * fulldecl: TopoDS_Wire Handle_ShapeFix_Wire::Wire()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new TopoDS_Wire(result);
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Wire *)0;
+  }
+}
+
+
+SWIGINTERN TopoDS_Wire Handle_ShapeFix_Wire_WireAPIMake(Handle_ShapeFix_Wire *self){
+    return (*self)->WireAPIMake();
+  }
+EXPORT TopoDS_Wire *_wrap_ShapeFix_Wire_WireAPIMake (Handle_ShapeFix_Wire *larg1) {
+  TopoDS_Wire * lresult = (TopoDS_Wire *)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  TopoDS_Wire result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Handle_ShapeFix_Wire_WireAPIMake(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_WireAPIMake\n  * wrapname: _wrap_ShapeFix_Wire_WireAPIMake\n  * fulldecl: TopoDS_Wire Handle_ShapeFix_Wire::WireAPIMake()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new TopoDS_Wire(result);
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Wire *)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeAnalysis_Wire Handle_ShapeFix_Wire_Analyzer(Handle_ShapeFix_Wire *self){
+    return (*self)->Analyzer();
+  }
+EXPORT Handle_ShapeAnalysis_Wire *_wrap_ShapeFix_Wire_Analyzer (Handle_ShapeFix_Wire *larg1) {
+  Handle_ShapeAnalysis_Wire * lresult = (Handle_ShapeAnalysis_Wire *)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Handle_ShapeAnalysis_Wire result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Handle_ShapeFix_Wire_Analyzer(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Analyzer\n  * wrapname: _wrap_ShapeFix_Wire_Analyzer\n  * fulldecl: Handle_ShapeAnalysis_Wire Handle_ShapeFix_Wire::Analyzer()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_ShapeAnalysis_Wire(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeAnalysis_Wire *)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_Perform(Handle_ShapeFix_Wire *self){
+    return (*self)->Perform();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_Perform (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_Perform(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_Perform\n  * wrapname: _wrap_ShapeFix_Wire_Perform\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::Perform()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixReorder__SWIG_0(Handle_ShapeFix_Wire *self){
+    return (*self)->FixReorder();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixReorder__SWIG_0 (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixReorder__SWIG_0(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixReorder\n  * wrapname: _wrap_ShapeFix_Wire_FixReorder__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixReorder()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Integer Handle_ShapeFix_Wire_FixSmall__SWIG_0(Handle_ShapeFix_Wire *self,Standard_Boolean const lockvtx,Standard_Real const precsmall=0.0){
+    return (*self)->FixSmall(lockvtx, precsmall);
+  }
+EXPORT Standard_Integer _wrap_ShapeFix_Wire_FixSmall__SWIG_0 (Handle_ShapeFix_Wire *larg1, bool larg2, Standard_Real larg3) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Real arg3 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)Handle_ShapeFix_Wire_FixSmall__SWIG_0(arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixSmall\n  * wrapname: _wrap_ShapeFix_Wire_FixSmall__SWIG_0\n  * fulldecl: Standard_Integer Handle_ShapeFix_Wire::FixSmall(Standard_Boolean const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_ShapeFix_Wire_FixSmall__SWIG_1 (Handle_ShapeFix_Wire *larg1, bool larg2) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)Handle_ShapeFix_Wire_FixSmall__SWIG_0(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixSmall\n  * wrapname: _wrap_ShapeFix_Wire_FixSmall__SWIG_1\n  * fulldecl: Standard_Integer Handle_ShapeFix_Wire::FixSmall(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixConnected__SWIG_0(Handle_ShapeFix_Wire *self,Standard_Real const prec=-1.0){
+    return (*self)->FixConnected(prec);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixConnected__SWIG_0 (Handle_ShapeFix_Wire *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixConnected__SWIG_0(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixConnected\n  * wrapname: _wrap_ShapeFix_Wire_FixConnected__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixConnected(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Wire_FixConnected__SWIG_1 (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixConnected__SWIG_0(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixConnected\n  * wrapname: _wrap_ShapeFix_Wire_FixConnected__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixConnected()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixEdgeCurves(Handle_ShapeFix_Wire *self){
+    return (*self)->FixEdgeCurves();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixEdgeCurves (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixEdgeCurves(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixEdgeCurves\n  * wrapname: _wrap_ShapeFix_Wire_FixEdgeCurves\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixEdgeCurves()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixDegenerated__SWIG_0(Handle_ShapeFix_Wire *self){
+    return (*self)->FixDegenerated();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixDegenerated__SWIG_0 (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixDegenerated__SWIG_0(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixDegenerated\n  * wrapname: _wrap_ShapeFix_Wire_FixDegenerated__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixDegenerated()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixSelfIntersection(Handle_ShapeFix_Wire *self){
+    return (*self)->FixSelfIntersection();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixSelfIntersection (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixSelfIntersection(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixSelfIntersection\n  * wrapname: _wrap_ShapeFix_Wire_FixSelfIntersection\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixSelfIntersection()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixLacking__SWIG_0(Handle_ShapeFix_Wire *self,Standard_Boolean const force=Standard_False){
+    return (*self)->FixLacking(force);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixLacking__SWIG_0 (Handle_ShapeFix_Wire *larg1, bool larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixLacking__SWIG_0(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixLacking\n  * wrapname: _wrap_ShapeFix_Wire_FixLacking__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixLacking(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Wire_FixLacking__SWIG_1 (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixLacking__SWIG_0(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixLacking\n  * wrapname: _wrap_ShapeFix_Wire_FixLacking__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixLacking()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixClosed__SWIG_0(Handle_ShapeFix_Wire *self,Standard_Real const prec=-1.0){
+    return (*self)->FixClosed(prec);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixClosed__SWIG_0 (Handle_ShapeFix_Wire *larg1, Standard_Real larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixClosed__SWIG_0(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixClosed\n  * wrapname: _wrap_ShapeFix_Wire_FixClosed__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixClosed(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Wire_FixClosed__SWIG_1 (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixClosed__SWIG_0(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixClosed\n  * wrapname: _wrap_ShapeFix_Wire_FixClosed__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixClosed()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixGaps3d(Handle_ShapeFix_Wire *self){
+    return (*self)->FixGaps3d();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixGaps3d (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixGaps3d(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixGaps3d\n  * wrapname: _wrap_ShapeFix_Wire_FixGaps3d\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixGaps3d()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixGaps2d(Handle_ShapeFix_Wire *self){
+    return (*self)->FixGaps2d();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixGaps2d (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixGaps2d(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixGaps2d\n  * wrapname: _wrap_ShapeFix_Wire_FixGaps2d\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixGaps2d()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixReorder__SWIG_1(Handle_ShapeFix_Wire *self,ShapeAnalysis_WireOrder const &wi){
+    return (*self)->FixReorder(wi);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixReorder__SWIG_1 (Handle_ShapeFix_Wire *larg1, ShapeAnalysis_WireOrder *larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  ShapeAnalysis_WireOrder *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixReorder__SWIG_1(arg1,(ShapeAnalysis_WireOrder const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixReorder\n  * wrapname: _wrap_ShapeFix_Wire_FixReorder__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixReorder(ShapeAnalysis_WireOrder const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixSmall__SWIG_2(Handle_ShapeFix_Wire *self,Standard_Integer const num,Standard_Boolean const lockvtx,Standard_Real const precsmall){
+    return (*self)->FixSmall(num, lockvtx, precsmall);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixSmall__SWIG_2 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2, bool larg3, Standard_Real larg4) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Real arg4 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixSmall__SWIG_2(arg1,arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixSmall\n  * wrapname: _wrap_ShapeFix_Wire_FixSmall__SWIG_2\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixSmall(Standard_Integer const,Standard_Boolean const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixConnected__SWIG_2(Handle_ShapeFix_Wire *self,Standard_Integer const num,Standard_Real const prec){
+    return (*self)->FixConnected(num, prec);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixConnected__SWIG_2 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2, Standard_Real larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Real arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixConnected__SWIG_2(arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixConnected\n  * wrapname: _wrap_ShapeFix_Wire_FixConnected__SWIG_2\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixConnected(Standard_Integer const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixSeam(Handle_ShapeFix_Wire *self,Standard_Integer const num){
+    return (*self)->FixSeam(num);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixSeam (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixSeam(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixSeam\n  * wrapname: _wrap_ShapeFix_Wire_FixSeam\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixSeam(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixShifted(Handle_ShapeFix_Wire *self){
+    return (*self)->FixShifted();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixShifted (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixShifted(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixShifted\n  * wrapname: _wrap_ShapeFix_Wire_FixShifted\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixShifted()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixDegenerated__SWIG_1(Handle_ShapeFix_Wire *self,Standard_Integer const num){
+    return (*self)->FixDegenerated(num);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixDegenerated__SWIG_1 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixDegenerated__SWIG_1(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixDegenerated\n  * wrapname: _wrap_ShapeFix_Wire_FixDegenerated__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixDegenerated(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixLacking__SWIG_2(Handle_ShapeFix_Wire *self,Standard_Integer const num,Standard_Boolean const force=Standard_False){
+    return (*self)->FixLacking(num, force);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixLacking__SWIG_2 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2, bool larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixLacking__SWIG_2(arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixLacking\n  * wrapname: _wrap_ShapeFix_Wire_FixLacking__SWIG_2\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixLacking(Standard_Integer const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Wire_FixLacking__SWIG_3 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixLacking__SWIG_2(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixLacking\n  * wrapname: _wrap_ShapeFix_Wire_FixLacking__SWIG_3\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixLacking(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixNotchedEdges(Handle_ShapeFix_Wire *self){
+    return (*self)->FixNotchedEdges();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixNotchedEdges (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixNotchedEdges(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixNotchedEdges\n  * wrapname: _wrap_ShapeFix_Wire_FixNotchedEdges\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixNotchedEdges()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixGap3d__SWIG_0(Handle_ShapeFix_Wire *self,Standard_Integer const num,Standard_Boolean const convert=Standard_False){
+    return (*self)->FixGap3d(num, convert);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixGap3d__SWIG_0 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2, bool larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixGap3d__SWIG_0(arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixGap3d\n  * wrapname: _wrap_ShapeFix_Wire_FixGap3d__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixGap3d(Standard_Integer const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Wire_FixGap3d__SWIG_1 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixGap3d__SWIG_0(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixGap3d\n  * wrapname: _wrap_ShapeFix_Wire_FixGap3d__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixGap3d(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixGap2d__SWIG_0(Handle_ShapeFix_Wire *self,Standard_Integer const num,Standard_Boolean const convert=Standard_False){
+    return (*self)->FixGap2d(num, convert);
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixGap2d__SWIG_0 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2, bool larg3) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixGap2d__SWIG_0(arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixGap2d\n  * wrapname: _wrap_ShapeFix_Wire_FixGap2d__SWIG_0\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixGap2d(Standard_Integer const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_ShapeFix_Wire_FixGap2d__SWIG_1 (Handle_ShapeFix_Wire *larg1, Standard_Integer larg2) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixGap2d__SWIG_0(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixGap2d\n  * wrapname: _wrap_ShapeFix_Wire_FixGap2d__SWIG_1\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixGap2d(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wire_FixTails(Handle_ShapeFix_Wire *self){
+    return (*self)->FixTails();
+  }
+EXPORT bool _wrap_ShapeFix_Wire_FixTails (Handle_ShapeFix_Wire *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wire *arg1 = (Handle_ShapeFix_Wire *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wire_FixTails(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wire_FixTails\n  * wrapname: _wrap_ShapeFix_Wire_FixTails\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wire::FixTails()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Handle_ShapeFix_Wireframe *new_Handle_ShapeFix_Wireframe(TopoDS_Shape const &shape){
+    return new Handle_ShapeFix_Wireframe(new ShapeFix_Wireframe);
+  }
+EXPORT Handle_ShapeFix_Wireframe *_wrap_new_ShapeFix_Wireframe (TopoDS_Shape *larg1) {
+  Handle_ShapeFix_Wireframe * lresult = (Handle_ShapeFix_Wireframe *)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Handle_ShapeFix_Wireframe *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Handle_ShapeFix_Wireframe *)new_Handle_ShapeFix_Wireframe((TopoDS_Shape const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_ShapeFix_Wireframe\n  * wrapname: _wrap_new_ShapeFix_Wireframe\n  * fulldecl: Handle_ShapeFix_Wireframe::Handle_ShapeFix_Wireframe(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Handle_ShapeFix_Wireframe *)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wireframe_Delete(Handle_ShapeFix_Wireframe *self){
+    self->~Handle_ShapeFix_Wireframe();
+  }
+EXPORT void _wrap_ShapeFix_Wireframe_Delete (Handle_ShapeFix_Wireframe *larg1) {
+  Handle_ShapeFix_Wireframe *arg1 = (Handle_ShapeFix_Wireframe *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wireframe_Delete(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_Delete\n  * wrapname: _wrap_ShapeFix_Wireframe_Delete\n  * fulldecl: void Handle_ShapeFix_Wireframe::Delete()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wireframe_FixWireGaps(Handle_ShapeFix_Wireframe *self){
+    return (*self)->FixWireGaps();
+  }
+EXPORT bool _wrap_ShapeFix_Wireframe_FixWireGaps (Handle_ShapeFix_Wireframe *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wireframe *arg1 = (Handle_ShapeFix_Wireframe *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wireframe_FixWireGaps(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_FixWireGaps\n  * wrapname: _wrap_ShapeFix_Wireframe_FixWireGaps\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wireframe::FixWireGaps()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN Standard_Boolean Handle_ShapeFix_Wireframe_FixSmallEdges(Handle_ShapeFix_Wireframe *self){
+    return (*self)->FixSmallEdges();
+  }
+EXPORT bool _wrap_ShapeFix_Wireframe_FixSmallEdges (Handle_ShapeFix_Wireframe *larg1) {
+  bool lresult = (bool)0 ;
+  Handle_ShapeFix_Wireframe *arg1 = (Handle_ShapeFix_Wireframe *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)Handle_ShapeFix_Wireframe_FixSmallEdges(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_FixSmallEdges\n  * wrapname: _wrap_ShapeFix_Wireframe_FixSmallEdges\n  * fulldecl: Standard_Boolean Handle_ShapeFix_Wireframe::FixSmallEdges()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+SWIGINTERN void Handle_ShapeFix_Wireframe_SetLimitAngle(Handle_ShapeFix_Wireframe *self,Standard_Real const theLimitAngle){
+    (*self)->SetLimitAngle(theLimitAngle);
+  }
+EXPORT void _wrap_ShapeFix_Wireframe_SetLimitAngle (Handle_ShapeFix_Wireframe *larg1, Standard_Real larg2) {
+  Handle_ShapeFix_Wireframe *arg1 = (Handle_ShapeFix_Wireframe *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Handle_ShapeFix_Wireframe_SetLimitAngle(arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_SetLimitAngle\n  * wrapname: _wrap_ShapeFix_Wireframe_SetLimitAngle\n  * fulldecl: void Handle_ShapeFix_Wireframe::SetLimitAngle(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+SWIGINTERN Standard_Real Handle_ShapeFix_Wireframe_LimitAngle(Handle_ShapeFix_Wireframe *self){
+    return (*self)->LimitAngle();
+  }
+EXPORT Standard_Real _wrap_ShapeFix_Wireframe_LimitAngle (Handle_ShapeFix_Wireframe *larg1) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  Handle_ShapeFix_Wireframe *arg1 = (Handle_ShapeFix_Wireframe *) 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)Handle_ShapeFix_Wireframe_LimitAngle(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_LimitAngle\n  * wrapname: _wrap_ShapeFix_Wireframe_LimitAngle\n  * fulldecl: Standard_Real Handle_ShapeFix_Wireframe::LimitAngle()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+SWIGINTERN TopoDS_Shape Handle_ShapeFix_Wireframe_Shape(Handle_ShapeFix_Wireframe *self){
+    return (*self)->Shape();
+  }
+EXPORT TopoDS_Shape *_wrap_ShapeFix_Wireframe_Shape (Handle_ShapeFix_Wireframe *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  Handle_ShapeFix_Wireframe *arg1 = (Handle_ShapeFix_Wireframe *) 0 ;
+  TopoDS_Shape result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Handle_ShapeFix_Wireframe_Shape(arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: ShapeFix_Wireframe_Shape\n  * wrapname: _wrap_ShapeFix_Wireframe_Shape\n  * fulldecl: TopoDS_Shape Handle_ShapeFix_Wireframe::Shape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new TopoDS_Shape(result);
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
   }
 }
 
@@ -95584,7 +99449,91 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_0 () {
 }
 
 
-EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_1 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3, Standard_Real larg4) {
+EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_1 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3, Standard_Real larg4, bool larg5, bool larg6) {
+  BRepMesh_IncrementalMesh * lresult = (BRepMesh_IncrementalMesh *)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Real arg4 ;
+  Standard_Boolean arg5 ;
+  Standard_Boolean arg6 ;
+  BRepMesh_IncrementalMesh *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  arg4 = larg4;
+  arg5 = (bool)larg5;
+  arg6 = (bool)larg6;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepMesh_IncrementalMesh *)new BRepMesh_IncrementalMesh((TopoDS_Shape const &)*arg1,arg2,arg3,arg4,arg5,arg6);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_1\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const,Standard_Real const,Standard_Boolean const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepMesh_IncrementalMesh *)0;
+  }
+}
+
+
+EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_2 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3, Standard_Real larg4, bool larg5) {
+  BRepMesh_IncrementalMesh * lresult = (BRepMesh_IncrementalMesh *)0 ;
+  TopoDS_Shape *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Boolean arg3 ;
+  Standard_Real arg4 ;
+  Standard_Boolean arg5 ;
+  BRepMesh_IncrementalMesh *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  arg4 = larg4;
+  arg5 = (bool)larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepMesh_IncrementalMesh *)new BRepMesh_IncrementalMesh((TopoDS_Shape const &)*arg1,arg2,arg3,arg4,arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_2\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const,Standard_Real const,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepMesh_IncrementalMesh *)0;
+  }
+}
+
+
+EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_3 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3, Standard_Real larg4) {
   BRepMesh_IncrementalMesh * lresult = (BRepMesh_IncrementalMesh *)0 ;
   TopoDS_Shape *arg1 = 0 ;
   Standard_Real arg2 ;
@@ -95611,7 +99560,7 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_1 (Top
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_1\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_3\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -95623,7 +99572,7 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_1 (Top
 }
 
 
-EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_2 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3) {
+EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_4 (TopoDS_Shape *larg1, Standard_Real larg2, bool larg3) {
   BRepMesh_IncrementalMesh * lresult = (BRepMesh_IncrementalMesh *)0 ;
   TopoDS_Shape *arg1 = 0 ;
   Standard_Real arg2 ;
@@ -95648,7 +99597,7 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_2 (Top
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_2\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const)";
+        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_4\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const,Standard_Boolean const)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -95660,7 +99609,7 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_2 (Top
 }
 
 
-EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_3 (TopoDS_Shape *larg1, Standard_Real larg2) {
+EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_5 (TopoDS_Shape *larg1, Standard_Real larg2) {
   BRepMesh_IncrementalMesh * lresult = (BRepMesh_IncrementalMesh *)0 ;
   TopoDS_Shape *arg1 = 0 ;
   Standard_Real arg2 ;
@@ -95683,7 +99632,7 @@ EXPORT BRepMesh_IncrementalMesh *_wrap_new_BRepMesh_IncrementalMesh__SWIG_3 (Top
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_3\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const)";
+        message += "\nwrapper details:\n  * symname: new_BRepMesh_IncrementalMesh\n  * wrapname: _wrap_new_BRepMesh_IncrementalMesh__SWIG_5\n  * fulldecl: BRepMesh_IncrementalMesh::BRepMesh_IncrementalMesh(TopoDS_Shape const &,Standard_Real const)";
         signal_lisp_error(message.c_str());
       }
     }

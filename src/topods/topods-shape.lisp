@@ -13,3 +13,9 @@
 	(tolerance
 	 (_wrap_BRepLib_BuildCurves3d__SWIG_3 (ff-pointer s) tolerance))
 	(t (_wrap_BRepLib_BuildCurves3d__SWIG_4 (ff-pointer s)))))
+
+(defmethod closed ((self topods-shape))
+  (_wrap_TopoDS_Shape_Closed__SWIG_0 (ff-pointer self)))
+
+(defmethod (setf closed) (value (self topods-shape))
+  (_wrap_TopoDS_Shape_Closed__SWIG_1 (ff-pointer self) (and value t)))

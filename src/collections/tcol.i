@@ -111,6 +111,15 @@ class TColgp_Array1OfPnt {
   void Delete() {
     self->~TColgp_Array1OfPnt();
   }
+  void GetPoint(const Standard_Integer Index,
+		Standard_Real& x,
+		Standard_Real& y,
+		Standard_Real& z) {
+    gp_Pnt result = (self)->Value(Index);
+    x = result.X();
+    y = result.Y();
+    z = result.Z();
+  }
 }
 %{
 #include <TColgp_Array2OfPnt.hxx>

@@ -5367,6 +5367,13 @@
 (cffi:defcfun ("_wrap_TColgp_Array1OfPnt_Delete" _wrap_TColgp_Array1OfPnt_Delete) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_TColgp_Array1OfPnt_GetPoint" _wrap_TColgp_Array1OfPnt_GetPoint) :void
+  (self :pointer)
+  (Index :int)
+  (x :pointer)
+  (y :pointer)
+  (z :pointer))
+
 (cffi:defcfun ("_wrap_new_TColgp_Array2OfPnt" _wrap_new_TColgp_Array2OfPnt) :pointer
   (theRowLower :int)
   (theRowUpper :int)
@@ -9886,6 +9893,66 @@
 (cffi:defcfun ("_wrap_delete_IGESControl_Controller" _wrap_delete_IGESControl_Controller) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_ShapeFix_SameParameter__SWIG_0" _wrap_ShapeFix_SameParameter__SWIG_0) :bool
+  (shape :pointer)
+  (enforce :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_SameParameter__SWIG_1" _wrap_ShapeFix_SameParameter__SWIG_1) :bool
+  (shape :pointer)
+  (enforce :bool)
+  (preci :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_SameParameter__SWIG_2" _wrap_ShapeFix_SameParameter__SWIG_2) :bool
+  (shape :pointer)
+  (enforce :bool)
+  (preci :double)
+  (theProgress :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_SameParameter__SWIG_3" _wrap_ShapeFix_SameParameter__SWIG_3) :bool
+  (shape :pointer)
+  (enforce :bool)
+  (preci :double)
+  (theProgress :pointer)
+  (theMsgReg :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_EncodeRegularity__SWIG_0" _wrap_ShapeFix_EncodeRegularity__SWIG_0) :void
+  (shape :pointer)
+  (tolang :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_EncodeRegularity__SWIG_1" _wrap_ShapeFix_EncodeRegularity__SWIG_1) :void
+  (shape :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_RemoveSmallEdges" _wrap_ShapeFix_RemoveSmallEdges) :pointer
+  (shape :pointer)
+  (Tolerance :double)
+  (context :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_FixVertexPosition" _wrap_ShapeFix_FixVertexPosition) :bool
+  (theshape :pointer)
+  (theTolerance :double)
+  (thecontext :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_LeastEdgeSize" _wrap_ShapeFix_LeastEdgeSize) :double
+  (theshape :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_Set" _wrap_ShapeFix_Root_Set) :void
+  (self :pointer)
+  (Root :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SetContext" _wrap_ShapeFix_Root_SetContext) :void
+  (self :pointer)
+  (context :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_Context" _wrap_ShapeFix_Root_Context) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SetMsgRegistrator" _wrap_ShapeFix_Root_SetMsgRegistrator) :void
+  (self :pointer)
+  (msgreg :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_MsgRegistrator" _wrap_ShapeFix_Root_MsgRegistrator) :pointer
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_ShapeFix_Root_SetPrecision" _wrap_ShapeFix_Root_SetPrecision) :void
   (self :pointer)
   (preci :double))
@@ -9893,56 +9960,72 @@
 (cffi:defcfun ("_wrap_ShapeFix_Root_Precision" _wrap_ShapeFix_Root_Precision) :double
   (self :pointer))
 
-(cffi:defcfun ("_wrap_ShapeFix_Root_SetContext" _wrap_ShapeFix_Root_SetContext) :void
+(cffi:defcfun ("_wrap_ShapeFix_Root_SetMinTolerance" _wrap_ShapeFix_Root_SetMinTolerance) :void
   (self :pointer)
-  (context :pointer))
+  (mintol :double))
 
-(cffi:defcfun ("_wrap_ShapeFix_Root_getContext" _wrap_ShapeFix_Root_getContext) :pointer
+(cffi:defcfun ("_wrap_ShapeFix_Root_MaxTolerance" _wrap_ShapeFix_Root_MaxTolerance) :double
   (self :pointer))
 
-(cffi:defcfun ("_wrap_delete_ShapeFix_Root" _wrap_delete_ShapeFix_Root) :void
-  (self :pointer))
+(cffi:defcfun ("_wrap_ShapeFix_Root_LimitTolerance" _wrap_ShapeFix_Root_LimitTolerance) :double
+  (self :pointer)
+  (toler :double))
 
-(cffi:defcfun ("_wrap_new_ShapeFix_Wireframe" _wrap_new_ShapeFix_Wireframe) :pointer
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendMsg__SWIG_0" _wrap_ShapeFix_Root_SendMsg__SWIG_0) :void
+  (self :pointer)
+  (shape :pointer)
+  (message :pointer)
+  (gravity :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendMsg__SWIG_1" _wrap_ShapeFix_Root_SendMsg__SWIG_1) :void
+  (self :pointer)
+  (shape :pointer)
+  (message :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendMsg__SWIG_2" _wrap_ShapeFix_Root_SendMsg__SWIG_2) :void
+  (self :pointer)
+  (message :pointer)
+  (gravity :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendMsg__SWIG_3" _wrap_ShapeFix_Root_SendMsg__SWIG_3) :void
+  (self :pointer)
+  (message :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendWarning__SWIG_0" _wrap_ShapeFix_Root_SendWarning__SWIG_0) :void
+  (self :pointer)
+  (shape :pointer)
+  (message :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendWarning__SWIG_1" _wrap_ShapeFix_Root_SendWarning__SWIG_1) :void
+  (self :pointer)
+  (message :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendFail__SWIG_0" _wrap_ShapeFix_Root_SendFail__SWIG_0) :void
+  (self :pointer)
+  (shape :pointer)
+  (message :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Root_SendFail__SWIG_1" _wrap_ShapeFix_Root_SendFail__SWIG_1) :void
+  (self :pointer)
+  (message :pointer))
+
+(cffi:defcfun ("_wrap_new_ShapeFix_Shape__SWIG_0" _wrap_new_ShapeFix_Shape__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_ShapeFix_Shape__SWIG_1" _wrap_new_ShapeFix_Shape__SWIG_1) :pointer
   (shape :pointer))
 
-(cffi:defcfun ("_wrap_ShapeFix_Wireframe_FixWireGaps" _wrap_ShapeFix_Wireframe_FixWireGaps) :bool
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_ShapeFix_Wireframe_FixSmallEdges" _wrap_ShapeFix_Wireframe_FixSmallEdges) :bool
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_ShapeFix_Wireframe_SetLimitAngle" _wrap_ShapeFix_Wireframe_SetLimitAngle) :void
+(cffi:defcfun ("_wrap_ShapeFix_Shape_Init" _wrap_ShapeFix_Shape_Init) :void
   (self :pointer)
-  (theLimitAngle :double))
-
-(cffi:defcfun ("_wrap_ShapeFix_Wireframe_LimitAngle" _wrap_ShapeFix_Wireframe_LimitAngle) :double
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_ShapeFix_Wireframe_Shape" _wrap_ShapeFix_Wireframe_Shape) :pointer
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_ShapeFix_Wireframe_setDropSmallEdges" _wrap_ShapeFix_Wireframe_setDropSmallEdges) :void
-  (self :pointer)
-  (b :bool))
-
-(cffi:defcfun ("_wrap_ShapeFix_Wireframe_getDropSmallEdges" _wrap_ShapeFix_Wireframe_getDropSmallEdges) :bool
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_delete_ShapeFix_Wireframe" _wrap_delete_ShapeFix_Wireframe) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_ShapeFix_Shape" _wrap_new_ShapeFix_Shape) :pointer
   (shape :pointer))
-
-(cffi:defcfun ("_wrap_ShapeFix_Shape_Shape" _wrap_ShapeFix_Shape_Shape) :pointer
-  (self :pointer))
 
 (cffi:defcfun ("_wrap_ShapeFix_Shape_Perform__SWIG_0" _wrap_ShapeFix_Shape_Perform__SWIG_0) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Shape_Perform__SWIG_1" _wrap_ShapeFix_Shape_Perform__SWIG_1) :bool
   (self :pointer)
   (theProgress :pointer))
 
-(cffi:defcfun ("_wrap_ShapeFix_Shape_Perform__SWIG_1" _wrap_ShapeFix_Shape_Perform__SWIG_1) :bool
+(cffi:defcfun ("_wrap_ShapeFix_Shape_Shape" _wrap_ShapeFix_Shape_Shape) :pointer
   (self :pointer))
 
 (cffi:defcfun ("_wrap_ShapeFix_Shape_FixSolidTool" _wrap_ShapeFix_Shape_FixSolidTool) :pointer
@@ -9960,10 +10043,366 @@
 (cffi:defcfun ("_wrap_ShapeFix_Shape_FixEdgeTool" _wrap_ShapeFix_Shape_FixEdgeTool) :pointer
   (self :pointer))
 
-(cffi:defcfun ("_wrap_delete_ShapeFix_Shape" _wrap_delete_ShapeFix_Shape) :void
+(cffi:defcfun ("_wrap_ShapeFix_Shape_Status" _wrap_ShapeFix_Shape_Status) :bool
+  (self :pointer)
+  (status :pointer))
+
+(cffi:defcfun ("_wrap_new_ShapeFix_EdgeProjAux__SWIG_0" _wrap_new_ShapeFix_EdgeProjAux__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_ShapeFix_EdgeProjAux__SWIG_1" _wrap_new_ShapeFix_EdgeProjAux__SWIG_1) :pointer
+  (F :pointer)
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_Delete" _wrap_ShapeFix_EdgeProjAux_Delete) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_delete_Message_ProgressIndicator" _wrap_delete_Message_ProgressIndicator) :void
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_Init" _wrap_ShapeFix_EdgeProjAux_Init) :void
+  (self :pointer)
+  (F :pointer)
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_Compute" _wrap_ShapeFix_EdgeProjAux_Compute) :void
+  (self :pointer)
+  (preci :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_IsFirstDone" _wrap_ShapeFix_EdgeProjAux_IsFirstDone) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_IsLastDone" _wrap_ShapeFix_EdgeProjAux_IsLastDone) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_FirstParam" _wrap_ShapeFix_EdgeProjAux_FirstParam) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_LastParam" _wrap_ShapeFix_EdgeProjAux_LastParam) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_EdgeProjAux_IsIso" _wrap_ShapeFix_EdgeProjAux_IsIso) :bool
+  (self :pointer)
+  (C :pointer))
+
+(cffi:defcfun ("_wrap_new_ShapeFix_Edge" _wrap_new_ShapeFix_Edge) :pointer)
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_Delete" _wrap_ShapeFix_Edge_Delete) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_Projector" _wrap_ShapeFix_Edge_Projector) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_0" _wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_1" _wrap_ShapeFix_Edge_FixRemovePCurve__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixRemoveCurve3d" _wrap_ShapeFix_Edge_FixRemoveCurve3d) :bool
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_0" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (isSeam :bool)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_1" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (isSeam :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_2" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_2) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (isSeam :bool)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_3" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_3) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (isSeam :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_4" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_4) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (isSeam :bool)
+  (surfana :pointer)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_5" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_5) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (isSeam :bool)
+  (surfana :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_6" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_6) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (isSeam :bool)
+  (surfana :pointer)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddPCurve__SWIG_7" _wrap_ShapeFix_Edge_FixAddPCurve__SWIG_7) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (isSeam :bool)
+  (surfana :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixAddCurve3d" _wrap_ShapeFix_Edge_FixAddCurve3d) :bool
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_0" _wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_1" _wrap_ShapeFix_Edge_FixVertexTolerance__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixReversed2d__SWIG_0" _wrap_ShapeFix_Edge_FixReversed2d__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixReversed2d__SWIG_1" _wrap_ShapeFix_Edge_FixReversed2d__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixSameParameter__SWIG_0" _wrap_ShapeFix_Edge_FixSameParameter__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (tolerance :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixSameParameter__SWIG_1" _wrap_ShapeFix_Edge_FixSameParameter__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixSameParameter__SWIG_2" _wrap_ShapeFix_Edge_FixSameParameter__SWIG_2) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (tolerance :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_FixSameParameter__SWIG_3" _wrap_ShapeFix_Edge_FixSameParameter__SWIG_3) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_Status" _wrap_ShapeFix_Edge_Status) :bool
+  (self :pointer)
+  (status :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_SetContext" _wrap_ShapeFix_Edge_SetContext) :void
+  (self :pointer)
+  (context :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Edge_Context" _wrap_ShapeFix_Edge_Context) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_ShapeFix_Wire__SWIG_0" _wrap_new_ShapeFix_Wire__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_ShapeFix_Wire__SWIG_1" _wrap_new_ShapeFix_Wire__SWIG_1) :pointer
+  (wire :pointer)
+  (face :pointer)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Delete" _wrap_ShapeFix_Wire_Delete) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_ClearModes" _wrap_ShapeFix_Wire_ClearModes) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_ClearStatuses" _wrap_ShapeFix_Wire_ClearStatuses) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Init__SWIG_0" _wrap_ShapeFix_Wire_Init__SWIG_0) :void
+  (self :pointer)
+  (wire :pointer)
+  (face :pointer)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Init__SWIG_1" _wrap_ShapeFix_Wire_Init__SWIG_1) :void
+  (self :pointer)
+  (saw :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Load__SWIG_0" _wrap_ShapeFix_Wire_Load__SWIG_0) :void
+  (self :pointer)
+  (wire :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Load__SWIG_1" _wrap_ShapeFix_Wire_Load__SWIG_1) :void
+  (self :pointer)
+  (sbwd :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_SetMaxTailAngle" _wrap_ShapeFix_Wire_SetMaxTailAngle) :void
+  (self :pointer)
+  (theMaxTailAngle :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_SetMaxTailWidth" _wrap_ShapeFix_Wire_SetMaxTailWidth) :void
+  (self :pointer)
+  (theMaxTailWidth :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_NbEdges" _wrap_ShapeFix_Wire_NbEdges) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Wire" _wrap_ShapeFix_Wire_Wire) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_WireAPIMake" _wrap_ShapeFix_Wire_WireAPIMake) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Analyzer" _wrap_ShapeFix_Wire_Analyzer) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_Perform" _wrap_ShapeFix_Wire_Perform) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixReorder__SWIG_0" _wrap_ShapeFix_Wire_FixReorder__SWIG_0) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixSmall__SWIG_0" _wrap_ShapeFix_Wire_FixSmall__SWIG_0) :int
+  (self :pointer)
+  (lockvtx :bool)
+  (precsmall :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixSmall__SWIG_1" _wrap_ShapeFix_Wire_FixSmall__SWIG_1) :int
+  (self :pointer)
+  (lockvtx :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixConnected__SWIG_0" _wrap_ShapeFix_Wire_FixConnected__SWIG_0) :bool
+  (self :pointer)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixConnected__SWIG_1" _wrap_ShapeFix_Wire_FixConnected__SWIG_1) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixEdgeCurves" _wrap_ShapeFix_Wire_FixEdgeCurves) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixDegenerated__SWIG_0" _wrap_ShapeFix_Wire_FixDegenerated__SWIG_0) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixSelfIntersection" _wrap_ShapeFix_Wire_FixSelfIntersection) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixLacking__SWIG_0" _wrap_ShapeFix_Wire_FixLacking__SWIG_0) :bool
+  (self :pointer)
+  (force :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixLacking__SWIG_1" _wrap_ShapeFix_Wire_FixLacking__SWIG_1) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixClosed__SWIG_0" _wrap_ShapeFix_Wire_FixClosed__SWIG_0) :bool
+  (self :pointer)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixClosed__SWIG_1" _wrap_ShapeFix_Wire_FixClosed__SWIG_1) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixGaps3d" _wrap_ShapeFix_Wire_FixGaps3d) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixGaps2d" _wrap_ShapeFix_Wire_FixGaps2d) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixReorder__SWIG_1" _wrap_ShapeFix_Wire_FixReorder__SWIG_1) :bool
+  (self :pointer)
+  (wi :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixSmall__SWIG_2" _wrap_ShapeFix_Wire_FixSmall__SWIG_2) :bool
+  (self :pointer)
+  (num :int)
+  (lockvtx :bool)
+  (precsmall :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixConnected__SWIG_2" _wrap_ShapeFix_Wire_FixConnected__SWIG_2) :bool
+  (self :pointer)
+  (num :int)
+  (prec :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixSeam" _wrap_ShapeFix_Wire_FixSeam) :bool
+  (self :pointer)
+  (num :int))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixShifted" _wrap_ShapeFix_Wire_FixShifted) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixDegenerated__SWIG_1" _wrap_ShapeFix_Wire_FixDegenerated__SWIG_1) :bool
+  (self :pointer)
+  (num :int))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixLacking__SWIG_2" _wrap_ShapeFix_Wire_FixLacking__SWIG_2) :bool
+  (self :pointer)
+  (num :int)
+  (force :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixLacking__SWIG_3" _wrap_ShapeFix_Wire_FixLacking__SWIG_3) :bool
+  (self :pointer)
+  (num :int))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixNotchedEdges" _wrap_ShapeFix_Wire_FixNotchedEdges) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixGap3d__SWIG_0" _wrap_ShapeFix_Wire_FixGap3d__SWIG_0) :bool
+  (self :pointer)
+  (num :int)
+  (convert :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixGap3d__SWIG_1" _wrap_ShapeFix_Wire_FixGap3d__SWIG_1) :bool
+  (self :pointer)
+  (num :int))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixGap2d__SWIG_0" _wrap_ShapeFix_Wire_FixGap2d__SWIG_0) :bool
+  (self :pointer)
+  (num :int)
+  (convert :bool))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixGap2d__SWIG_1" _wrap_ShapeFix_Wire_FixGap2d__SWIG_1) :bool
+  (self :pointer)
+  (num :int))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wire_FixTails" _wrap_ShapeFix_Wire_FixTails) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_ShapeFix_Wireframe" _wrap_new_ShapeFix_Wireframe) :pointer
+  (shape :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wireframe_Delete" _wrap_ShapeFix_Wireframe_Delete) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wireframe_FixWireGaps" _wrap_ShapeFix_Wireframe_FixWireGaps) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wireframe_FixSmallEdges" _wrap_ShapeFix_Wireframe_FixSmallEdges) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wireframe_SetLimitAngle" _wrap_ShapeFix_Wireframe_SetLimitAngle) :void
+  (self :pointer)
+  (theLimitAngle :double))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wireframe_LimitAngle" _wrap_ShapeFix_Wireframe_LimitAngle) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_ShapeFix_Wireframe_Shape" _wrap_ShapeFix_Wireframe_Shape) :pointer
   (self :pointer))
 
 (cffi:defcfun ("_wrap_new_ShapeAnalysis_Edge" _wrap_new_ShapeAnalysis_Edge) :pointer)
@@ -11132,19 +11571,34 @@
 (cffi:defcfun ("_wrap_new_BRepMesh_IncrementalMesh__SWIG_0" _wrap_new_BRepMesh_IncrementalMesh__SWIG_0) :pointer)
 
 (cffi:defcfun ("_wrap_new_BRepMesh_IncrementalMesh__SWIG_1" _wrap_new_BRepMesh_IncrementalMesh__SWIG_1) :pointer
-  (S :pointer)
-  (D :double)
-  (Relatif :bool)
-  (Ang :double))
+  (theShape :pointer)
+  (theLinDeflection :double)
+  (isRelative :bool)
+  (theAngDeflection :double)
+  (isInParallel :bool)
+  (adaptiveMin :bool))
 
 (cffi:defcfun ("_wrap_new_BRepMesh_IncrementalMesh__SWIG_2" _wrap_new_BRepMesh_IncrementalMesh__SWIG_2) :pointer
-  (S :pointer)
-  (D :double)
-  (Relatif :bool))
+  (theShape :pointer)
+  (theLinDeflection :double)
+  (isRelative :bool)
+  (theAngDeflection :double)
+  (isInParallel :bool))
 
 (cffi:defcfun ("_wrap_new_BRepMesh_IncrementalMesh__SWIG_3" _wrap_new_BRepMesh_IncrementalMesh__SWIG_3) :pointer
-  (S :pointer)
-  (D :double))
+  (theShape :pointer)
+  (theLinDeflection :double)
+  (isRelative :bool)
+  (theAngDeflection :double))
+
+(cffi:defcfun ("_wrap_new_BRepMesh_IncrementalMesh__SWIG_4" _wrap_new_BRepMesh_IncrementalMesh__SWIG_4) :pointer
+  (theShape :pointer)
+  (theLinDeflection :double)
+  (isRelative :bool))
+
+(cffi:defcfun ("_wrap_new_BRepMesh_IncrementalMesh__SWIG_5" _wrap_new_BRepMesh_IncrementalMesh__SWIG_5) :pointer
+  (theShape :pointer)
+  (theLinDeflection :double))
 
 (cffi:defcfun ("_wrap_BRepMesh_IncrementalMesh_Perform" _wrap_BRepMesh_IncrementalMesh_Perform) :void
   (self :pointer))

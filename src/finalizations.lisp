@@ -554,3 +554,6 @@
 
 (defmethod foreign-free-fn ((object top-tools-list-of-shape))
   #'_wrap_TopTools_ListOfShape_Delete)
+
+(defmethod foreign-free-fn ((object shape-fix-wire))
+  #'_wrap_ShapeFix_Wire_Delete)
