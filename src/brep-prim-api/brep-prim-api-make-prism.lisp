@@ -20,3 +20,9 @@
     (setf (ff-pointer object) pointer)
     (oc:finalize object)
     (values)))
+
+(defmethod last-shape ((object brep-prim-api-make-prism))
+  (with-topods-shape (oc::_wrap_BRepPrimAPI_MakePrism_LastShape (ff-pointer object))))
+
+(defmethod first-shape ((object brep-prim-api-make-prism))
+  (with-topods-shape (oc::_wrap_BRepPrimAPI_MakePrism_FirstShape (ff-pointer object))))

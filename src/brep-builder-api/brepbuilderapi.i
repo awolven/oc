@@ -51,7 +51,7 @@ class BRepBuilderAPI_Command
 {
 	BRepBuilderAPI_Command()=0;
 	public:
-	virtual Standard_Boolean  IsDone() const;
+	Standard_Boolean  IsDone() const;
 };
 
 class BRepBuilderAPI_MakeShape: public BRepBuilderAPI_Command
@@ -59,15 +59,18 @@ class BRepBuilderAPI_MakeShape: public BRepBuilderAPI_Command
 	//Hide the constructor to make this class abstract
 	BRepBuilderAPI_MakeShape()=0;
 	public:
-	virtual void Build();
-	virtual const TopoDS_Shape& Shape(); 
+	void Build();
+	const TopoDS_Shape& Shape();
+	const TopTools_ListOfShape& Generated (const TopoDS_Shape& S);
+	const TopTools_ListOfShape& Modified (const TopoDS_Shape& S);
+	Standard_Boolean IsDeleted (const TopoDS_Shape& S);
 };
 
 class BRepBuilderAPI_ModifyShape: public BRepBuilderAPI_MakeShape
 {
 	BRepBuilderAPI_ModifyShape()=0;
 	public:
-	virtual TopoDS_Shape ModifiedShape(const TopoDS_Shape& S) const;
+	TopoDS_Shape ModifiedShape(const TopoDS_Shape& S) const;
 };
 
 class BRepBuilderAPI_Transform : public BRepBuilderAPI_ModifyShape
@@ -161,15 +164,14 @@ class BRepBuilderAPI_MakeEdge : public BRepBuilderAPI_MakeShape
 class BRepBuilderAPI_MakeFace  : public BRepBuilderAPI_MakeShape
 {
 	public:
-	BRepBuilderAPI_MakeFace(const TopoDS_Wire& W,
-		const Standard_Boolean OnlyPlane = Standard_False);
-    BRepBuilderAPI_MakeFace(const TopoDS_Face& F,const TopoDS_Wire& W);
-    BRepBuilderAPI_MakeFace(const Handle_Geom_Surface& S,const TopoDS_Wire& W, const Standard_Boolean Inside = Standard_True );
-    BRepBuilderAPI_MakeFace(const Handle_Geom_Surface& S, const Standard_Real Umin, const Standard_Real Umax, 
-        const Standard_Real Vmin, const Standard_Real Vmax, const Standard_Real tolDegen); 
-    Standard_Boolean IsDone() const;
-    BRepBuilderAPI_FaceError Error() const;
-    const TopoDS_Face& Face() const;
+  BRepBuilderAPI_MakeFace(const TopoDS_Wire& W,	const Standard_Boolean OnlyPlane = Standard_False);
+  BRepBuilderAPI_MakeFace(const TopoDS_Face& F,const TopoDS_Wire& W);
+  BRepBuilderAPI_MakeFace(const Handle_Geom_Surface& S,const TopoDS_Wire& W, const Standard_Boolean Inside = Standard_True );
+  BRepBuilderAPI_MakeFace(const Handle_Geom_Surface& S, const Standard_Real Umin, const Standard_Real Umax,
+			    const Standard_Real Vmin, const Standard_Real Vmax, const Standard_Real tolDegen);
+  Standard_Boolean IsDone() const;
+  BRepBuilderAPI_FaceError Error() const;
+  const TopoDS_Face& Face() const;
 };
 
 class BRepBuilderAPI_MakeSolid: public BRepBuilderAPI_MakeShape

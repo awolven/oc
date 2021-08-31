@@ -6063,6 +6063,18 @@
 (cffi:defcfun ("_wrap_BRepBuilderAPI_MakeShape_Shape" _wrap_BRepBuilderAPI_MakeShape_Shape) :pointer
   (self :pointer))
 
+(cffi:defcfun ("_wrap_BRepBuilderAPI_MakeShape_Generated" _wrap_BRepBuilderAPI_MakeShape_Generated) :pointer
+  (self :pointer)
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepBuilderAPI_MakeShape_Modified" _wrap_BRepBuilderAPI_MakeShape_Modified) :pointer
+  (self :pointer)
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_BRepBuilderAPI_MakeShape_IsDeleted" _wrap_BRepBuilderAPI_MakeShape_IsDeleted) :bool
+  (self :pointer)
+  (S :pointer))
+
 (cffi:defcfun ("_wrap_delete_BRepBuilderAPI_MakeShape" _wrap_delete_BRepBuilderAPI_MakeShape) :void
   (self :pointer))
 
@@ -6926,6 +6938,16 @@
 (cffi:defcfun ("_wrap_new_BRepPrimAPI_MakePrism__SWIG_2" _wrap_new_BRepPrimAPI_MakePrism__SWIG_2) :pointer
   (baseShape :pointer)
   (extrudeDirection :pointer))
+
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakePrism_FirstShape" _wrap_BRepPrimAPI_MakePrism_FirstShape) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakePrism_LastShape" _wrap_BRepPrimAPI_MakePrism_LastShape) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakePrism_Generated" _wrap_BRepPrimAPI_MakePrism_Generated) :pointer
+  (self :pointer)
+  (S :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepPrimAPI_MakePrism" _wrap_delete_BRepPrimAPI_MakePrism) :void
   (self :pointer))

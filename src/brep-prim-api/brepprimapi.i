@@ -64,16 +64,11 @@ class BRepPrimAPI_MakeSweep  : public BRepBuilderAPI_MakeShape
 class BRepPrimAPI_MakePrism  : public BRepPrimAPI_MakeSweep
 {
     public:
-    BRepPrimAPI_MakePrism(const TopoDS_Shape& baseShape, const gp_Vec& extrudeDirection, const
-        Standard_Boolean Copy = Standard_False,
-        const Standard_Boolean Canonize = Standard_True);
-
-    // gp_Vec and gp_Dir are both translated to double[] so this contructor
-    // will conflict with the previous one
-    // TODO: Change the signature to avoir conflict (easy but I have no time for now)
-    // BRepPrimAPI_MakePrism(const TopoDS_Shape& S,const gp_Dir& D,const
-    //      Standard_Boolean Inf = Standard_True,const Standard_Boolean Copy =
-    //      Standard_False,const Standard_Boolean Canonize = Standard_True);
+    BRepPrimAPI_MakePrism(const TopoDS_Shape& baseShape, const gp_Vec& extrudeDirection, const Standard_Boolean Copy = Standard_False, const Standard_Boolean Canonize = Standard_True);
+    //BRepPrimAPI_MakePrism(const TopoDS_Shape& S,const gp_Dir& D, const Standard_Boolean Inf = Standard_True,const Standard_Boolean Copy = Standard_False,const Standard_Boolean Canonize = Standard_True);
+    TopoDS_Shape FirstShape();
+    TopoDS_Shape LastShape();
+    const TopTools_ListOfShape& Generated (const TopoDS_Shape& S);
 };
 
 class BRepPrimAPI_MakeRevol  : public BRepPrimAPI_MakeSweep {

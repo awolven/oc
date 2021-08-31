@@ -28,4 +28,8 @@
   (_wrap_TopoDS_Iterator_Next (ff-pointer self)))
 
 (defmethod value ((self topods-iterator))
-  (with-topods-shape (_wrap_TopoDS_Iterator_value (ff-pointer self))))
+  (let ((shape-copy (with-topods-shape
+		      (_wrap_TopoDS_Shape_copy_reference
+		       (_wrap_TopoDS_Iterator_value (ff-pointer self))))))
+    (oc:finalize shape-copy)
+    shape-copy))

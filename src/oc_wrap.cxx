@@ -50448,6 +50448,111 @@ EXPORT TopoDS_Shape *_wrap_BRepBuilderAPI_MakeShape_Shape (BRepBuilderAPI_MakeSh
 }
 
 
+EXPORT TopTools_ListOfShape *_wrap_BRepBuilderAPI_MakeShape_Generated (BRepBuilderAPI_MakeShape *larg1, TopoDS_Shape *larg2) {
+  TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
+  BRepBuilderAPI_MakeShape *arg1 = (BRepBuilderAPI_MakeShape *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  TopTools_ListOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_ListOfShape *) &(arg1)->Generated((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepBuilderAPI_MakeShape_Generated\n  * wrapname: _wrap_BRepBuilderAPI_MakeShape_Generated\n  * fulldecl: TopTools_ListOfShape const & BRepBuilderAPI_MakeShape::Generated(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_ListOfShape *)0;
+  }
+}
+
+
+EXPORT TopTools_ListOfShape *_wrap_BRepBuilderAPI_MakeShape_Modified (BRepBuilderAPI_MakeShape *larg1, TopoDS_Shape *larg2) {
+  TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
+  BRepBuilderAPI_MakeShape *arg1 = (BRepBuilderAPI_MakeShape *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  TopTools_ListOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_ListOfShape *) &(arg1)->Modified((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepBuilderAPI_MakeShape_Modified\n  * wrapname: _wrap_BRepBuilderAPI_MakeShape_Modified\n  * fulldecl: TopTools_ListOfShape const & BRepBuilderAPI_MakeShape::Modified(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_ListOfShape *)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepBuilderAPI_MakeShape_IsDeleted (BRepBuilderAPI_MakeShape *larg1, TopoDS_Shape *larg2) {
+  bool lresult = (bool)0 ;
+  BRepBuilderAPI_MakeShape *arg1 = (BRepBuilderAPI_MakeShape *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)(arg1)->IsDeleted((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepBuilderAPI_MakeShape_IsDeleted\n  * wrapname: _wrap_BRepBuilderAPI_MakeShape_IsDeleted\n  * fulldecl: Standard_Boolean BRepBuilderAPI_MakeShape::IsDeleted(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
 EXPORT void _wrap_delete_BRepBuilderAPI_MakeShape (BRepBuilderAPI_MakeShape *larg1) {
   BRepBuilderAPI_MakeShape *arg1 = (BRepBuilderAPI_MakeShape *) 0 ;
   
@@ -57574,6 +57679,107 @@ EXPORT BRepPrimAPI_MakePrism *_wrap_new_BRepPrimAPI_MakePrism__SWIG_2 (TopoDS_Sh
     return lresult;
   } catch (...) {
     return (BRepPrimAPI_MakePrism *)0;
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_BRepPrimAPI_MakePrism_FirstShape (BRepPrimAPI_MakePrism *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  BRepPrimAPI_MakePrism *arg1 = (BRepPrimAPI_MakePrism *) 0 ;
+  TopoDS_Shape result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (arg1)->FirstShape();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakePrism_FirstShape\n  * wrapname: _wrap_BRepPrimAPI_MakePrism_FirstShape\n  * fulldecl: TopoDS_Shape BRepPrimAPI_MakePrism::FirstShape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new TopoDS_Shape(result);
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_BRepPrimAPI_MakePrism_LastShape (BRepPrimAPI_MakePrism *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  BRepPrimAPI_MakePrism *arg1 = (BRepPrimAPI_MakePrism *) 0 ;
+  TopoDS_Shape result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (arg1)->LastShape();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakePrism_LastShape\n  * wrapname: _wrap_BRepPrimAPI_MakePrism_LastShape\n  * fulldecl: TopoDS_Shape BRepPrimAPI_MakePrism::LastShape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new TopoDS_Shape(result);
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT TopTools_ListOfShape *_wrap_BRepPrimAPI_MakePrism_Generated (BRepPrimAPI_MakePrism *larg1, TopoDS_Shape *larg2) {
+  TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
+  BRepPrimAPI_MakePrism *arg1 = (BRepPrimAPI_MakePrism *) 0 ;
+  TopoDS_Shape *arg2 = 0 ;
+  TopTools_ListOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_ListOfShape *) &(arg1)->Generated((TopoDS_Shape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakePrism_Generated\n  * wrapname: _wrap_BRepPrimAPI_MakePrism_Generated\n  * fulldecl: TopTools_ListOfShape const & BRepPrimAPI_MakePrism::Generated(TopoDS_Shape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_ListOfShape *)0;
   }
 }
 

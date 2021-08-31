@@ -1,7 +1,7 @@
 (in-package :oc)
 
 (defmethod initialize-instance :after ((object brep-builder-api-make-face) &rest initargs
-				       &key W OnlyPlane F S Inside Umin Umax Vmin Vmax tolDegen)
+				       &key W (OnlyPlane nil OnlyPlane-present-p) F S Inside Umin Umax Vmin Vmax tolDegen)
   (let ((pointer
 	 (cond ((and S Umin Umax Vmin Vmax tolDegen)
 		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_5 (ff-pointer S) Umin Umax Vmin Vmax tolDegen))
@@ -11,7 +11,7 @@
 		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_4 (ff-pointer S) (ff-pointer W)))
 	       ((and F W)
 		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_2 (ff-pointer F) (ff-pointer W)))
-	       ((and W OnlyPlane)
+	       ((and W OnlyPlane-present-p)
 		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_0 (ff-pointer W) OnlyPlane))
 	       (W (_wrap_new_BRepBuilderAPI_MakeFace__SWIG_1 (ff-pointer W)))
 	       (t (error "Invalid arguments to constructor ~S" initargs)))))
