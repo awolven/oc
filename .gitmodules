@@ -1,0 +1,3 @@
+[submodule "util/swig-cffi"]
+	path = util/swig-cffi
+	url = git@github.com:awolven/swig-cffi.git
