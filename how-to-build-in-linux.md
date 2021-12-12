@@ -1,10 +1,8 @@
-* install [opencascade-7.1.0](https://dev.opencascade.org/release/previous), compiled and installed it.
-
 * compile [swig-3.0.12](https://github.com/swig/swig/releases/tag/rel-3.0.12): you need replace  `swig-3.0.12/Source/Modules/cffi.cxx`with the cffi.cxx file from `oc/util/cffi.cxx`
 
 * generating `oc.lisp`, `oc_wrap.cxx` by command `swig -cffi -c++ oc.i`, the `oc_wrap.cxx` file have some issue can be fixed by manually change code.
 
-* run `oc/util/build.sh` to generate `oc.so` file, you should modify the `-I` path.
+* run `cd ./util & ./build.sh` to generate `oc.so` file.
 
 example code with sbcl:
 ```
