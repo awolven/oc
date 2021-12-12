@@ -5,7 +5,7 @@
   :serial t
   :components
   ((:file "src/features")
-   (:file "lib/foreign-libraries")
+   (:file "lib/src/foreign-libraries")
    
    (:file "src/package")
    (:file "src/generic-functions")
