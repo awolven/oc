@@ -1,0 +1,2 @@
+#!/bin/bash
+swig-cffi/swig-macos -c++ -cffi ../src/oc.i
