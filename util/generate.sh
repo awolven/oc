@@ -1,2 +1,3 @@
 #!/bin/bash
-swig-cffi/swig -c++ -cffi ../src/oc.i
+export SWIG_LIB=./swig-cffi/Lib
+swig-cffi/swig-linux -c++ -cffi ../src/oc.i
