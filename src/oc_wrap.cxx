@@ -44068,6 +44068,107 @@ EXPORT void _wrap_TColgp_Array1OfVec_SetValue (TColgp_Array1OfVec *larg1, Standa
 }
 
 
+EXPORT gp_Vec const *_wrap_TColgp_Array1OfVec_Value (TColgp_Array1OfVec *larg1, Standard_Integer larg2) {
+  gp_Vec const * lresult = (gp_Vec const *)0 ;
+  TColgp_Array1OfVec *arg1 = (TColgp_Array1OfVec *) 0 ;
+  Standard_Integer arg2 ;
+  gp_Vec result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (arg1)->Value(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColgp_Array1OfVec_Value\n  * wrapname: _wrap_TColgp_Array1OfVec_Value\n  * fulldecl: gp_Vec const TColgp_Array1OfVec::Value(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Vec const(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Vec const *)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColgp_Array1OfVec_Lower (TColgp_Array1OfVec *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColgp_Array1OfVec *arg1 = (TColgp_Array1OfVec *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColgp_Array1OfVec const *)arg1)->Lower();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColgp_Array1OfVec_Lower\n  * wrapname: _wrap_TColgp_Array1OfVec_Lower\n  * fulldecl: Standard_Integer TColgp_Array1OfVec::Lower() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColgp_Array1OfVec_Upper (TColgp_Array1OfVec *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColgp_Array1OfVec *arg1 = (TColgp_Array1OfVec *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColgp_Array1OfVec const *)arg1)->Upper();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColgp_Array1OfVec_Upper\n  * wrapname: _wrap_TColgp_Array1OfVec_Upper\n  * fulldecl: Standard_Integer TColgp_Array1OfVec::Upper() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
 SWIGINTERN void TColgp_Array1OfVec_Delete(TColgp_Array1OfVec *self){
     self->~TColgp_Array1OfVec();
   }
@@ -44173,6 +44274,107 @@ EXPORT void _wrap_TColgp_Array1OfPnt2d_SetValue (TColgp_Array1OfPnt2d *larg1, St
 }
 
 
+EXPORT gp_Pnt2d const *_wrap_TColgp_Array1OfPnt2d_Value (TColgp_Array1OfPnt2d *larg1, Standard_Integer larg2) {
+  gp_Pnt2d const * lresult = (gp_Pnt2d const *)0 ;
+  TColgp_Array1OfPnt2d *arg1 = (TColgp_Array1OfPnt2d *) 0 ;
+  Standard_Integer arg2 ;
+  gp_Pnt2d result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (arg1)->Value(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColgp_Array1OfPnt2d_Value\n  * wrapname: _wrap_TColgp_Array1OfPnt2d_Value\n  * fulldecl: gp_Pnt2d const TColgp_Array1OfPnt2d::Value(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Pnt2d const(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Pnt2d const *)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColgp_Array1OfPnt2d_Lower (TColgp_Array1OfPnt2d *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColgp_Array1OfPnt2d *arg1 = (TColgp_Array1OfPnt2d *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColgp_Array1OfPnt2d const *)arg1)->Lower();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColgp_Array1OfPnt2d_Lower\n  * wrapname: _wrap_TColgp_Array1OfPnt2d_Lower\n  * fulldecl: Standard_Integer TColgp_Array1OfPnt2d::Lower() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColgp_Array1OfPnt2d_Upper (TColgp_Array1OfPnt2d *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColgp_Array1OfPnt2d *arg1 = (TColgp_Array1OfPnt2d *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColgp_Array1OfPnt2d const *)arg1)->Upper();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColgp_Array1OfPnt2d_Upper\n  * wrapname: _wrap_TColgp_Array1OfPnt2d_Upper\n  * fulldecl: Standard_Integer TColgp_Array1OfPnt2d::Upper() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
 SWIGINTERN void TColgp_Array1OfPnt2d_Delete(TColgp_Array1OfPnt2d *self){
     self->~TColgp_Array1OfPnt2d();
   }
@@ -44274,6 +44476,107 @@ EXPORT void _wrap_TColStd_Array1OfReal_SetValue (TColStd_Array1OfReal *larg1, St
     
   } catch (...) {
     
+  }
+}
+
+
+EXPORT Standard_Real _wrap_TColStd_Array1OfReal_Value (TColStd_Array1OfReal *larg1, Standard_Integer larg2) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  TColStd_Array1OfReal *arg1 = (TColStd_Array1OfReal *) 0 ;
+  Standard_Integer arg2 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)(arg1)->Value(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColStd_Array1OfReal_Value\n  * wrapname: _wrap_TColStd_Array1OfReal_Value\n  * fulldecl: Standard_Real const TColStd_Array1OfReal::Value(Standard_Integer const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColStd_Array1OfReal_Lower (TColStd_Array1OfReal *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColStd_Array1OfReal *arg1 = (TColStd_Array1OfReal *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColStd_Array1OfReal const *)arg1)->Lower();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColStd_Array1OfReal_Lower\n  * wrapname: _wrap_TColStd_Array1OfReal_Lower\n  * fulldecl: Standard_Integer TColStd_Array1OfReal::Lower() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_TColStd_Array1OfReal_Upper (TColStd_Array1OfReal *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  TColStd_Array1OfReal *arg1 = (TColStd_Array1OfReal *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((TColStd_Array1OfReal const *)arg1)->Upper();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: TColStd_Array1OfReal_Upper\n  * wrapname: _wrap_TColStd_Array1OfReal_Upper\n  * fulldecl: Standard_Integer TColStd_Array1OfReal::Upper() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
   }
 }
 
@@ -53162,6 +53465,38 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_5 (Handl
     return lresult;
   } catch (...) {
     return (BRepBuilderAPI_MakeFace *)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepBuilderAPI_MakeFace_Add (BRepBuilderAPI_MakeFace *larg1, TopoDS_Wire *larg2) {
+  BRepBuilderAPI_MakeFace *arg1 = (BRepBuilderAPI_MakeFace *) 0 ;
+  TopoDS_Wire *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Add((TopoDS_Wire const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepBuilderAPI_MakeFace_Add\n  * wrapname: _wrap_BRepBuilderAPI_MakeFace_Add\n  * fulldecl: void BRepBuilderAPI_MakeFace::Add(TopoDS_Wire const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
   }
 }
 

@@ -36,6 +36,9 @@ class TColgp_Array1OfVec {
   public:
   TColgp_Array1OfVec(const Standard_Integer Low,const Standard_Integer Up);
   void SetValue(const Standard_Integer Index,const gp_Vec& Value);
+  const gp_Vec Value(const Standard_Integer Index);
+  Standard_Integer Lower (void) const;
+  Standard_Integer Upper (void) const;
 };
 %extend TColgp_Array1OfVec
 {
@@ -51,6 +54,9 @@ class TColgp_Array1OfPnt2d {
  public:
   TColgp_Array1OfPnt2d(const Standard_Integer theLower, const Standard_Integer theUpper);
   void SetValue(const Standard_Integer theIndex, const gp_Pnt2d& Value);
+  const gp_Pnt2d Value(const Standard_Integer Index);
+  Standard_Integer Lower (void) const;
+  Standard_Integer Upper (void) const;
 };
 %extend TColgp_Array1OfPnt2d
 {
@@ -66,6 +72,9 @@ class TColStd_Array1OfReal {
  public:
   TColStd_Array1OfReal(const Standard_Integer theLower, const Standard_Integer theUpper);
   void SetValue(const Standard_Integer theIndex, const Standard_Real& Value);
+  const Standard_Real Value(const Standard_Integer Index);
+  Standard_Integer Lower (void) const;
+  Standard_Integer Upper (void) const;
 };
 
 %extend TColStd_Array1OfReal

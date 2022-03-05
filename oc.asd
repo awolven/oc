@@ -94,6 +94,7 @@
    (:file "src/geom/geom-curve")
    (:file "src/geom/geom-bounded-curve")
    (:file "src/geom/geom-bezier-curve")
+   (:file "src/geom/geom-bspline-curve")
    (:file "src/geom/geom-trimmed-curve")
    (:file "src/geom/geom-surface")
    (:file "src/geom/geom-elementary-surface")

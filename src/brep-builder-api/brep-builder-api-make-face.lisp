@@ -25,3 +25,7 @@
 			     (_wrap_BrepBuilderAPI_MakeFace_Face (ff-pointer self))))
     (oc:finalize face)
     face))
+
+(defmethod add ((self brep-builder-api-make-face) (w topods-wire))
+  (_wrap_BRepBuilderAPI_MakeFace_Add (ff-pointer self) (ff-pointer w))
+  (values))

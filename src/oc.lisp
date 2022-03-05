@@ -5296,6 +5296,16 @@
   (Index :int)
   (Value :pointer))
 
+(cffi:defcfun ("_wrap_TColgp_Array1OfVec_Value" _wrap_TColgp_Array1OfVec_Value) :pointer
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_TColgp_Array1OfVec_Lower" _wrap_TColgp_Array1OfVec_Lower) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_TColgp_Array1OfVec_Upper" _wrap_TColgp_Array1OfVec_Upper) :int
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_TColgp_Array1OfVec_Delete" _wrap_TColgp_Array1OfVec_Delete) :void
   (self :pointer))
 
@@ -5308,6 +5318,16 @@
   (theIndex :int)
   (Value :pointer))
 
+(cffi:defcfun ("_wrap_TColgp_Array1OfPnt2d_Value" _wrap_TColgp_Array1OfPnt2d_Value) :pointer
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_TColgp_Array1OfPnt2d_Lower" _wrap_TColgp_Array1OfPnt2d_Lower) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_TColgp_Array1OfPnt2d_Upper" _wrap_TColgp_Array1OfPnt2d_Upper) :int
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_TColgp_Array1OfPnt2d_Delete" _wrap_TColgp_Array1OfPnt2d_Delete) :void
   (self :pointer))
 
@@ -5319,6 +5339,16 @@
   (self :pointer)
   (theIndex :int)
   (Value :pointer))
+
+(cffi:defcfun ("_wrap_TColStd_Array1OfReal_Value" _wrap_TColStd_Array1OfReal_Value) :double
+  (self :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_TColStd_Array1OfReal_Lower" _wrap_TColStd_Array1OfReal_Lower) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_TColStd_Array1OfReal_Upper" _wrap_TColStd_Array1OfReal_Upper) :int
+  (self :pointer))
 
 (cffi:defcfun ("_wrap_TColStd_Array1OfReal_Delete" _wrap_TColStd_Array1OfReal_Delete) :void
   (self :pointer))
@@ -6386,6 +6416,10 @@
   (Vmin :double)
   (Vmax :double)
   (tolDegen :double))
+
+(cffi:defcfun ("_wrap_BRepBuilderAPI_MakeFace_Add" _wrap_BRepBuilderAPI_MakeFace_Add) :void
+  (self :pointer)
+  (W :pointer))
 
 (cffi:defcfun ("_wrap_BRepBuilderAPI_MakeFace_IsDone" _wrap_BRepBuilderAPI_MakeFace_IsDone) :bool
   (self :pointer))

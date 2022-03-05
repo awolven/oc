@@ -17,3 +17,6 @@
     (setf (mem-aref p-value :double) (coerce theValue 'double-float))
     (_wrap_TColStd_Array1OfReal_SetValue (ff-pointer object) theIndex p-value)
     (values)))
+
+(defmethod get-value ((object tcol-std-array1-of-real) (theIndex integer))
+  (_wrap_TColStd_Array1OfReal_Value (ff-pointer object) theIndex))
