@@ -131,6 +131,9 @@
    (:file "src/brep-prim-api/brep-prim-api-make-sphere")
    (:file "src/brep-prim-api/brep-prim-api-make-sweep")
    (:file "src/brep-prim-api/brep-prim-api-make-prism")
+   (:file "src/brep-prim-api/brep-prim-api-make-revol")
+   (:file "src/brep-prim-api/brep-prim-api-make-one-axis")
+   (:file "src/brep-prim-api/brep-prim-api-make-revolution")
 
    (:file "src/brep-offset-api/brep-offset-api-normal-projection")
    (:file "src/brep-offset-api/brep-offset-api-make-thick-solid")

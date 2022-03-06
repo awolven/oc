@@ -380,18 +380,18 @@
 (defmethod foreign-free-fn ((object brep-prim-api-make-prism))
   #'_wrap_delete_BRepPrimAPI_MakePrism)
 
-#+NOTYET
 (defmethod foreign-free-fn ((object brep-prim-api-make-revol))
   #'_wrap_delete_BRepPrimAPI_MakeRevol)
 
 (defmethod foreign-free-fn ((object brep-prim-api-make-sweep))
   #'_wrap_delete_BRepPrimAPI_MakeSweep)
 
+(defmethod foreign-free-fn ((object brep-prim-api-make-revolution))
+  #'_wrap_delete_BRepPrimAPI_MakeRevolution)
+
 #+NOTYET
 (defmethod foreign-free-fn ((object brep-prim-api-make-torus))
   #'_wrap_delete_BRepPrimAPI_MakeTorus)
-
-
 
 (defmethod foreign-free-fn ((object geom2d-axis-placement))
   #'_wrap_Geom2d_AxisPlacement_Delete)

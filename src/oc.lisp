@@ -7009,6 +7009,67 @@
 (cffi:defcfun ("_wrap_delete_BRepPrimAPI_MakeRevol" _wrap_delete_BRepPrimAPI_MakeRevol) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakeOneAxis_OneAxis" _wrap_BRepPrimAPI_MakeOneAxis_OneAxis) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakeOneAxis_Face" _wrap_BRepPrimAPI_MakeOneAxis_Face) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakeOneAxis_Shell" _wrap_BRepPrimAPI_MakeOneAxis_Shell) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakeOneAxis_Solid" _wrap_BRepPrimAPI_MakeOneAxis_Solid) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_BRepPrimAPI_MakeOneAxis" _wrap_delete_BRepPrimAPI_MakeOneAxis) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_0" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_0) :pointer
+  (Meridian :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_1" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_1) :pointer
+  (Meridian :pointer)
+  (angle :double))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_2" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_2) :pointer
+  (Meridian :pointer)
+  (VMin :double)
+  (VMax :double))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_3" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_3) :pointer
+  (Meridian :pointer)
+  (VMin :double)
+  (VMax :double)
+  (angle :double))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_4" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_4) :pointer
+  (Axes :pointer)
+  (Meridian :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_5" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_5) :pointer
+  (Axes :pointer)
+  (Meridian :pointer)
+  (angle :double))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_6" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_6) :pointer
+  (Axes :pointer)
+  (Meridian :pointer)
+  (VMin :double)
+  (VMax :double))
+
+(cffi:defcfun ("_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_7" _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_7) :pointer
+  (Axes :pointer)
+  (Meridian :pointer)
+  (VMin :double)
+  (VMax :double)
+  (angle :double))
+
+(cffi:defcfun ("_wrap_BRepPrimAPI_MakeRevolution_Revolution" _wrap_BRepPrimAPI_MakeRevolution_Revolution) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_BRepPrimAPI_MakeRevolution" _wrap_delete_BRepPrimAPI_MakeRevolution) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_new_BRepOffsetAPI_MakePipe" _wrap_new_BRepOffsetAPI_MakePipe) :pointer
   (Spine :pointer)
   (Profile :pointer))

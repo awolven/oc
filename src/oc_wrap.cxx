@@ -57345,6 +57345,8 @@ EXPORT void _wrap_delete_BRepOffsetAPI_ThruSections (BRepOffsetAPI_ThruSections 
 #include <BRepPrimAPI_MakeSphere.hxx>
 #include <BRepPrimAPI_MakePrism.hxx>
 #include <BRepPrimAPI_MakeRevol.hxx>
+#include <BRepPrimAPI_MakeOneAxis.hxx>
+#include <BRepPrimAPI_MakeRevolution.hxx>
 #include <BRepOffsetAPI_MakePipe.hxx>
 
 EXPORT BRepPrimAPI_MakeBox *_wrap_new_BRepPrimAPI_MakeBox (gp_Pnt *larg1, gp_Pnt *larg2) {
@@ -58317,6 +58319,527 @@ EXPORT void _wrap_delete_BRepPrimAPI_MakeRevol (BRepPrimAPI_MakeRevol *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: delete_BRepPrimAPI_MakeRevol\n  * wrapname: _wrap_delete_BRepPrimAPI_MakeRevol\n  * fulldecl: BRepPrimAPI_MakeRevol::~BRepPrimAPI_MakeRevol()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Address *_wrap_BRepPrimAPI_MakeOneAxis_OneAxis (BRepPrimAPI_MakeOneAxis *larg1) {
+  Standard_Address * lresult = (Standard_Address *)0 ;
+  BRepPrimAPI_MakeOneAxis *arg1 = (BRepPrimAPI_MakeOneAxis *) 0 ;
+  Standard_Address result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (arg1)->OneAxis();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakeOneAxis_OneAxis\n  * wrapname: _wrap_BRepPrimAPI_MakeOneAxis_OneAxis\n  * fulldecl: Standard_Address BRepPrimAPI_MakeOneAxis::OneAxis()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Standard_Address(result);
+    return lresult;
+  } catch (...) {
+    return (Standard_Address *)0;
+  }
+}
+
+
+EXPORT TopoDS_Face *_wrap_BRepPrimAPI_MakeOneAxis_Face (BRepPrimAPI_MakeOneAxis *larg1) {
+  TopoDS_Face * lresult = (TopoDS_Face *)0 ;
+  BRepPrimAPI_MakeOneAxis *arg1 = (BRepPrimAPI_MakeOneAxis *) 0 ;
+  TopoDS_Face *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Face *) &(arg1)->Face();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakeOneAxis_Face\n  * wrapname: _wrap_BRepPrimAPI_MakeOneAxis_Face\n  * fulldecl: TopoDS_Face & BRepPrimAPI_MakeOneAxis::Face()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Face *)0;
+  }
+}
+
+
+EXPORT TopoDS_Shell *_wrap_BRepPrimAPI_MakeOneAxis_Shell (BRepPrimAPI_MakeOneAxis *larg1) {
+  TopoDS_Shell * lresult = (TopoDS_Shell *)0 ;
+  BRepPrimAPI_MakeOneAxis *arg1 = (BRepPrimAPI_MakeOneAxis *) 0 ;
+  TopoDS_Shell *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Shell *) &(arg1)->Shell();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakeOneAxis_Shell\n  * wrapname: _wrap_BRepPrimAPI_MakeOneAxis_Shell\n  * fulldecl: TopoDS_Shell & BRepPrimAPI_MakeOneAxis::Shell()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shell *)0;
+  }
+}
+
+
+EXPORT TopoDS_Solid *_wrap_BRepPrimAPI_MakeOneAxis_Solid (BRepPrimAPI_MakeOneAxis *larg1) {
+  TopoDS_Solid * lresult = (TopoDS_Solid *)0 ;
+  BRepPrimAPI_MakeOneAxis *arg1 = (BRepPrimAPI_MakeOneAxis *) 0 ;
+  TopoDS_Solid *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Solid *) &(arg1)->Solid();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakeOneAxis_Solid\n  * wrapname: _wrap_BRepPrimAPI_MakeOneAxis_Solid\n  * fulldecl: TopoDS_Solid & BRepPrimAPI_MakeOneAxis::Solid()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Solid *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_BRepPrimAPI_MakeOneAxis (BRepPrimAPI_MakeOneAxis *larg1) {
+  BRepPrimAPI_MakeOneAxis *arg1 = (BRepPrimAPI_MakeOneAxis *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_BRepPrimAPI_MakeOneAxis\n  * wrapname: _wrap_delete_BRepPrimAPI_MakeOneAxis\n  * fulldecl: BRepPrimAPI_MakeOneAxis::~BRepPrimAPI_MakeOneAxis()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_0 (Handle_Geom_Curve *larg1) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((Handle_Geom_Curve const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_0\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(Handle_Geom_Curve const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_1 (Handle_Geom_Curve *larg1, Standard_Real larg2) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((Handle_Geom_Curve const &)*arg1,arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_1\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(Handle_Geom_Curve const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_2 (Handle_Geom_Curve *larg1, Standard_Real larg2, Standard_Real larg3) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((Handle_Geom_Curve const &)*arg1,arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_2\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(Handle_Geom_Curve const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_3 (Handle_Geom_Curve *larg1, Standard_Real larg2, Standard_Real larg3, Standard_Real larg4) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  Handle_Geom_Curve *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((Handle_Geom_Curve const &)*arg1,arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_3\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(Handle_Geom_Curve const &,Standard_Real const,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_4 (gp_Ax2 *larg1, Handle_Geom_Curve *larg2) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  gp_Ax2 *arg1 = 0 ;
+  Handle_Geom_Curve *arg2 = 0 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((gp_Ax2 const &)*arg1,(Handle_Geom_Curve const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_4\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2 const &,Handle_Geom_Curve const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_5 (gp_Ax2 *larg1, Handle_Geom_Curve *larg2, Standard_Real larg3) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  gp_Ax2 *arg1 = 0 ;
+  Handle_Geom_Curve *arg2 = 0 ;
+  Standard_Real arg3 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((gp_Ax2 const &)*arg1,(Handle_Geom_Curve const &)*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_5\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2 const &,Handle_Geom_Curve const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_6 (gp_Ax2 *larg1, Handle_Geom_Curve *larg2, Standard_Real larg3, Standard_Real larg4) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  gp_Ax2 *arg1 = 0 ;
+  Handle_Geom_Curve *arg2 = 0 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((gp_Ax2 const &)*arg1,(Handle_Geom_Curve const &)*arg2,arg3,arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_6\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2 const &,Handle_Geom_Curve const &,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrimAPI_MakeRevolution *_wrap_new_BRepPrimAPI_MakeRevolution__SWIG_7 (gp_Ax2 *larg1, Handle_Geom_Curve *larg2, Standard_Real larg3, Standard_Real larg4, Standard_Real larg5) {
+  BRepPrimAPI_MakeRevolution * lresult = (BRepPrimAPI_MakeRevolution *)0 ;
+  gp_Ax2 *arg1 = 0 ;
+  Handle_Geom_Curve *arg2 = 0 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  Standard_Real arg5 ;
+  BRepPrimAPI_MakeRevolution *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrimAPI_MakeRevolution *)new BRepPrimAPI_MakeRevolution((gp_Ax2 const &)*arg1,(Handle_Geom_Curve const &)*arg2,arg3,arg4,arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_new_BRepPrimAPI_MakeRevolution__SWIG_7\n  * fulldecl: BRepPrimAPI_MakeRevolution::BRepPrimAPI_MakeRevolution(gp_Ax2 const &,Handle_Geom_Curve const &,Standard_Real const,Standard_Real const,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrimAPI_MakeRevolution *)0;
+  }
+}
+
+
+EXPORT BRepPrim_Revolution *_wrap_BRepPrimAPI_MakeRevolution_Revolution (BRepPrimAPI_MakeRevolution *larg1) {
+  BRepPrim_Revolution * lresult = (BRepPrim_Revolution *)0 ;
+  BRepPrimAPI_MakeRevolution *arg1 = (BRepPrimAPI_MakeRevolution *) 0 ;
+  BRepPrim_Revolution *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepPrim_Revolution *) &(arg1)->Revolution();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepPrimAPI_MakeRevolution_Revolution\n  * wrapname: _wrap_BRepPrimAPI_MakeRevolution_Revolution\n  * fulldecl: BRepPrim_Revolution & BRepPrimAPI_MakeRevolution::Revolution()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepPrim_Revolution *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_BRepPrimAPI_MakeRevolution (BRepPrimAPI_MakeRevolution *larg1) {
+  BRepPrimAPI_MakeRevolution *arg1 = (BRepPrimAPI_MakeRevolution *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_BRepPrimAPI_MakeRevolution\n  * wrapname: _wrap_delete_BRepPrimAPI_MakeRevolution\n  * fulldecl: BRepPrimAPI_MakeRevolution::~BRepPrimAPI_MakeRevolution()";
         signal_lisp_error(message.c_str());
       }
     }

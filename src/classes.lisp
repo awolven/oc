@@ -204,6 +204,12 @@
 
 (defclass brep-prim-api-make-prism (brep-prim-api-make-sweep) ())
 
+(defclass brep-prim-api-make-revol (brep-prim-api-make-sweep) ())
+
+(defclass brep-prim-api-make-one-axis (brep-builder-api-make-shape) ())
+
+(defclass brep-prim-api-make-revolution (brep-prim-api-make-one-axis) ())
+
 (defclass brep-offset-api-normal-projection (brep-builder-api-make-shape) ())
 
 (defclass brep-builder-api-modify-shape (brep-builder-api-make-shape) ())

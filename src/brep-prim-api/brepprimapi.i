@@ -8,6 +8,8 @@
 #include <BRepPrimAPI_MakeSphere.hxx>
 #include <BRepPrimAPI_MakePrism.hxx>
 #include <BRepPrimAPI_MakeRevol.hxx>
+#include <BRepPrimAPI_MakeOneAxis.hxx>
+#include <BRepPrimAPI_MakeRevolution.hxx>
 #include <BRepOffsetAPI_MakePipe.hxx>
 %}
 
@@ -75,6 +77,27 @@ class BRepPrimAPI_MakeRevol  : public BRepPrimAPI_MakeSweep {
     public:
     BRepPrimAPI_MakeRevol(const TopoDS_Shape& shape, const gp_Ax1& axis, const Standard_Real angle, const Standard_Boolean copy = Standard_False);
     BRepPrimAPI_MakeRevol(const TopoDS_Shape& shape, const gp_Ax1& axis, const Standard_Boolean copy = Standard_False);
+};
+
+class BRepPrimAPI_MakeOneAxis  : public BRepBuilderAPI_MakeShape {
+ public:
+  Standard_Address OneAxis();
+  TopoDS_Face& Face();
+  TopoDS_Shell& Shell();
+  TopoDS_Solid& Solid();
+};
+
+class BRepPrimAPI_MakeRevolution  : public BRepPrimAPI_MakeOneAxis {
+ public:
+  BRepPrimAPI_MakeRevolution(const Handle_Geom_Curve& Meridian);
+  BRepPrimAPI_MakeRevolution(const Handle_Geom_Curve& Meridian, const Standard_Real angle);
+  BRepPrimAPI_MakeRevolution(const Handle_Geom_Curve& Meridian, const Standard_Real VMin, const Standard_Real VMax);
+  BRepPrimAPI_MakeRevolution(const Handle_Geom_Curve& Meridian, const Standard_Real VMin, const Standard_Real VMax, const Standard_Real angle);
+  BRepPrimAPI_MakeRevolution(const gp_Ax2& Axes, const Handle_Geom_Curve& Meridian);
+  BRepPrimAPI_MakeRevolution(const gp_Ax2& Axes, const Handle_Geom_Curve& Meridian, const Standard_Real angle);
+  BRepPrimAPI_MakeRevolution(const gp_Ax2& Axes, const Handle_Geom_Curve& Meridian, const Standard_Real VMin, const Standard_Real VMax);
+  BRepPrimAPI_MakeRevolution(const gp_Ax2& Axes, const Handle_Geom_Curve& Meridian, const Standard_Real VMin, const Standard_Real VMax, const Standard_Real angle);
+  BRepPrim_Revolution& Revolution();
 };
 
 class BRepOffsetAPI_MakePipe  : public BRepPrimAPI_MakeSweep {
