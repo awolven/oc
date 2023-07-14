@@ -5779,67 +5779,36 @@
 (cffi:defcfun ("_wrap_delete_TopTools_MapIteratorOfMapOfShape" _wrap_delete_TopTools_MapIteratorOfMapOfShape) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_BRep_Tool_IsClosed" _wrap_BRep_Tool_IsClosed) :bool
+(cffi:defcfun ("_wrap_BRep_Tool_IsClosed__SWIG_0" _wrap_BRep_Tool_IsClosed__SWIG_0) :bool
   (S :pointer))
 
-(cffi:defcfun ("_wrap_BRep_Tool_Surface" _wrap_BRep_Tool_Surface) :pointer
+(cffi:defcfun ("_wrap_BRep_Tool_Surface__SWIG_0" _wrap_BRep_Tool_Surface__SWIG_0) :pointer
+  (F :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Surface__SWIG_1" _wrap_BRep_Tool_Surface__SWIG_1) :pointer
   (F :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Pnt" _wrap_BRep_Tool_Pnt) :pointer
-  (V :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Parameters" _wrap_BRep_Tool_Parameters) :pointer
-  (V :pointer)
-  (F :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Parameter" _wrap_BRep_Tool_Parameter) :double
-  (V :pointer)
-  (E :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Degenerated" _wrap_BRep_Tool_Degenerated) :bool
-  (E :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_SameParameter" _wrap_BRep_Tool_SameParameter) :bool
-  (E :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_SameRange" _wrap_BRep_Tool_SameRange) :bool
-  (E :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_HasContinuity" _wrap_BRep_Tool_HasContinuity) :bool
-  (E :pointer)
-  (F1 :pointer)
-  (F2 :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Continuity" _wrap_BRep_Tool_Continuity) GeomAbs_Shape
-  (E :pointer)
-  (F1 :pointer)
-  (F2 :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Tolerance__SWIG_0" _wrap_BRep_Tool_Tolerance__SWIG_0) :double
-  (F :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Tolerance__SWIG_1" _wrap_BRep_Tool_Tolerance__SWIG_1) :double
-  (E :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Tolerance__SWIG_2" _wrap_BRep_Tool_Tolerance__SWIG_2) :double
-  (V :pointer))
 
 (cffi:defcfun ("_wrap_BRep_Tool_Triangulation" _wrap_BRep_Tool_Triangulation) :pointer
   (F :pointer)
   (L :pointer))
 
-(cffi:defcfun ("_wrap_BRep_Tool_Curve" _wrap_BRep_Tool_Curve) :pointer
+(cffi:defcfun ("_wrap_BRep_Tool_Tolerance__SWIG_0" _wrap_BRep_Tool_Tolerance__SWIG_0) :double
+  (F :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_NaturalRestriction" _wrap_BRep_Tool_NaturalRestriction) :bool
+  (F :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_IsGeometric" _wrap_BRep_Tool_IsGeometric) :bool
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Curve__SWIG_0" _wrap_BRep_Tool_Curve__SWIG_0) :pointer
   (E :pointer)
+  (L :pointer)
   (First :pointer)
   (Last :pointer))
 
-(cffi:defcfun ("_wrap_BRep_Tool_CurveOnSurface" _wrap_BRep_Tool_CurveOnSurface) :pointer
-  (E :pointer)
-  (F :pointer)
-  (First :pointer)
-  (Last :pointer))
-
-(cffi:defcfun ("_wrap_BRep_Tool_Range" _wrap_BRep_Tool_Range) :void
+(cffi:defcfun ("_wrap_BRep_Tool_Curve__SWIG_1" _wrap_BRep_Tool_Curve__SWIG_1) :pointer
   (E :pointer)
   (First :pointer)
   (Last :pointer))
@@ -5848,10 +5817,196 @@
   (E :pointer)
   (L :pointer))
 
-(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnTriangulation" _wrap_BRep_Tool_PolygonOnTriangulation) :pointer
+(cffi:defcfun ("_wrap_BRep_Tool_CurveOnSurface__SWIG_0" _wrap_BRep_Tool_CurveOnSurface__SWIG_0) :pointer
+  (E :pointer)
+  (F :pointer)
+  (First :pointer)
+  (Last :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_CurveOnSurface__SWIG_1" _wrap_BRep_Tool_CurveOnSurface__SWIG_1) :pointer
+  (E :pointer)
+  (S :pointer)
+  (L :pointer)
+  (First :pointer)
+  (Last :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_CurveOnSurface__SWIG_2" _wrap_BRep_Tool_CurveOnSurface__SWIG_2) :void
+  (E :pointer)
+  (C :pointer)
+  (S :pointer)
+  (L :pointer)
+  (First :pointer)
+  (Last :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_CurveOnSurface__SWIG_3" _wrap_BRep_Tool_CurveOnSurface__SWIG_3) :void
+  (E :pointer)
+  (C :pointer)
+  (S :pointer)
+  (L :pointer)
+  (First :pointer)
+  (Last :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnSurface__SWIG_0" _wrap_BRep_Tool_PolygonOnSurface__SWIG_0) :pointer
+  (E :pointer)
+  (F :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnSurface__SWIG_1" _wrap_BRep_Tool_PolygonOnSurface__SWIG_1) :pointer
+  (E :pointer)
+  (S :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnSurface__SWIG_2" _wrap_BRep_Tool_PolygonOnSurface__SWIG_2) :void
+  (E :pointer)
+  (C :pointer)
+  (S :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnSurface__SWIG_3" _wrap_BRep_Tool_PolygonOnSurface__SWIG_3) :void
+  (E :pointer)
+  (C :pointer)
+  (S :pointer)
+  (L :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnTriangulation__SWIG_0" _wrap_BRep_Tool_PolygonOnTriangulation__SWIG_0) :pointer
   (E :pointer)
   (t_arg1 :pointer)
   (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnTriangulation__SWIG_1" _wrap_BRep_Tool_PolygonOnTriangulation__SWIG_1) :void
+  (E :pointer)
+  (P :pointer)
+  (t_arg2 :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_PolygonOnTriangulation__SWIG_2" _wrap_BRep_Tool_PolygonOnTriangulation__SWIG_2) :void
+  (E :pointer)
+  (P :pointer)
+  (t_arg2 :pointer)
+  (L :pointer)
+  (Index :int))
+
+(cffi:defcfun ("_wrap_BRep_Tool_IsClosed__SWIG_1" _wrap_BRep_Tool_IsClosed__SWIG_1) :bool
+  (E :pointer)
+  (F :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_IsClosed__SWIG_2" _wrap_BRep_Tool_IsClosed__SWIG_2) :bool
+  (E :pointer)
+  (S :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Tolerance__SWIG_1" _wrap_BRep_Tool_Tolerance__SWIG_1) :double
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_SameParameter" _wrap_BRep_Tool_SameParameter) :bool
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_SameRange" _wrap_BRep_Tool_SameRange) :bool
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Degenerated" _wrap_BRep_Tool_Degenerated) :bool
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Range__SWIG_0" _wrap_BRep_Tool_Range__SWIG_0) :void
+  (E :pointer)
+  (First :pointer)
+  (Last :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Range__SWIG_1" _wrap_BRep_Tool_Range__SWIG_1) :void
+  (E :pointer)
+  (S :pointer)
+  (L :pointer)
+  (First :pointer)
+  (Last :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Range__SWIG_2" _wrap_BRep_Tool_Range__SWIG_2) :void
+  (E :pointer)
+  (F :pointer)
+  (First :pointer)
+  (Last :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_UVPoints__SWIG_0" _wrap_BRep_Tool_UVPoints__SWIG_0) :void
+  (E :pointer)
+  (S :pointer)
+  (L :pointer)
+  (PFirst :pointer)
+  (PLast :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_UVPoints__SWIG_1" _wrap_BRep_Tool_UVPoints__SWIG_1) :void
+  (E :pointer)
+  (F :pointer)
+  (PFirst :pointer)
+  (PLast :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_SetUVPoints__SWIG_0" _wrap_BRep_Tool_SetUVPoints__SWIG_0) :void
+  (E :pointer)
+  (S :pointer)
+  (L :pointer)
+  (PFirst :pointer)
+  (PLast :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_SetUVPoints__SWIG_1" _wrap_BRep_Tool_SetUVPoints__SWIG_1) :void
+  (E :pointer)
+  (F :pointer)
+  (PFirst :pointer)
+  (PLast :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_HasContinuity__SWIG_0" _wrap_BRep_Tool_HasContinuity__SWIG_0) :bool
+  (E :pointer)
+  (F1 :pointer)
+  (F2 :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Continuity__SWIG_0" _wrap_BRep_Tool_Continuity__SWIG_0) GeomAbs_Shape
+  (E :pointer)
+  (F1 :pointer)
+  (F2 :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_HasContinuity__SWIG_1" _wrap_BRep_Tool_HasContinuity__SWIG_1) :bool
+  (E :pointer)
+  (S1 :pointer)
+  (S2 :pointer)
+  (L1 :pointer)
+  (L2 :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Continuity__SWIG_1" _wrap_BRep_Tool_Continuity__SWIG_1) GeomAbs_Shape
+  (E :pointer)
+  (S1 :pointer)
+  (S2 :pointer)
+  (L1 :pointer)
+  (L2 :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_HasContinuity__SWIG_2" _wrap_BRep_Tool_HasContinuity__SWIG_2) :bool
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Pnt" _wrap_BRep_Tool_Pnt) :pointer
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Tolerance__SWIG_2" _wrap_BRep_Tool_Tolerance__SWIG_2) :double
+  (V :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Parameter__SWIG_0" _wrap_BRep_Tool_Parameter__SWIG_0) :double
+  (V :pointer)
+  (E :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Parameter__SWIG_1" _wrap_BRep_Tool_Parameter__SWIG_1) :double
+  (V :pointer)
+  (E :pointer)
+  (F :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Parameter__SWIG_2" _wrap_BRep_Tool_Parameter__SWIG_2) :double
+  (V :pointer)
+  (E :pointer)
+  (S :pointer)
+  (L :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_Parameters" _wrap_BRep_Tool_Parameters) :pointer
+  (V :pointer)
+  (F :pointer))
+
+(cffi:defcfun ("_wrap_BRep_Tool_MaxTolerance" _wrap_BRep_Tool_MaxTolerance) :double
+  (theShape :pointer)
+  (theSubShape TopAbs_ShapeEnum))
 
 (cffi:defcfun ("_wrap_new_BRep_Builder" _wrap_new_BRep_Builder) :pointer)
 
@@ -7234,7 +7389,20 @@
 (cffi:defcfun ("_wrap_Poly_Polygon3D_ChangeParameters" _wrap_Poly_Polygon3D_ChangeParameters) :pointer
   (self :pointer))
 
-(cffi:defcfun ("_wrap_delete_Poly_Polygon3D" _wrap_delete_Poly_Polygon3D) :void
+(cffi:defcfun ("_wrap_new_Poly_Polygon2D" _wrap_new_Poly_Polygon2D) :pointer
+  (Nodes :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon2D_Deflection__SWIG_0" _wrap_Poly_Polygon2D_Deflection__SWIG_0) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon2D_Deflection__SWIG_1" _wrap_Poly_Polygon2D_Deflection__SWIG_1) :void
+  (self :pointer)
+  (D :double))
+
+(cffi:defcfun ("_wrap_Poly_Polygon2D_NbNodes" _wrap_Poly_Polygon2D_NbNodes) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Polygon2D_Nodes" _wrap_Poly_Polygon2D_Nodes) :pointer
   (self :pointer))
 
 (cffi:defcfun ("_wrap_new_Poly_PolygonOnTriangulation__SWIG_0" _wrap_new_Poly_PolygonOnTriangulation__SWIG_0) :pointer
@@ -10522,44 +10690,6 @@
 (cffi:defcfun ("_wrap_ShapeFix_Wireframe_Shape" _wrap_ShapeFix_Wireframe_Shape) :pointer
   (self :pointer))
 
-(cffi:defcfun ("_wrap_new_ShapeAnalysis_Edge" _wrap_new_ShapeAnalysis_Edge) :pointer)
-
-(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_IsClosed3d" _wrap_ShapeAnalysis_Edge_IsClosed3d) :bool
-  (self :pointer)
-  (edge :pointer))
-
-(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_HasPCurve" _wrap_ShapeAnalysis_Edge_HasPCurve) :bool
-  (self :pointer)
-  (edge :pointer)
-  (face :pointer))
-
-(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_IsSeam" _wrap_ShapeAnalysis_Edge_IsSeam) :bool
-  (self :pointer)
-  (edge :pointer)
-  (face :pointer))
-
-(cffi:defcfun ("_wrap_delete_ShapeAnalysis_Edge" _wrap_delete_ShapeAnalysis_Edge) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_new_ShapeAnalysis_Surface" _wrap_new_ShapeAnalysis_Surface) :pointer
-  (S :pointer))
-
-(cffi:defcfun ("_wrap_ShapeAnalysis_Surface_HasSingularities" _wrap_ShapeAnalysis_Surface_HasSingularities) :bool
-  (self :pointer)
-  (preci :double))
-
-(cffi:defcfun ("_wrap_ShapeAnalysis_Surface_NbSingularities" _wrap_ShapeAnalysis_Surface_NbSingularities) :int
-  (self :pointer)
-  (preci :double))
-
-(cffi:defcfun ("_wrap_ShapeAnalysis_Surface_IsDegenerated" _wrap_ShapeAnalysis_Surface_IsDegenerated) :bool
-  (self :pointer)
-  (P3d :pointer)
-  (preci :double))
-
-(cffi:defcfun ("_wrap_delete_ShapeAnalysis_Surface" _wrap_delete_ShapeAnalysis_Surface) :void
-  (self :pointer))
-
 (cffi:defcfun ("_wrap_new_APIHeaderSection_MakeHeader" _wrap_new_APIHeaderSection_MakeHeader) :pointer
   (model :pointer))
 
@@ -11429,6 +11559,266 @@
 (cffi:defcfun ("_wrap_delete_GeomAdaptor_Curve" _wrap_delete_GeomAdaptor_Curve) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_new_Adaptor3d_Surface" _wrap_new_Adaptor3d_Surface) :pointer)
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_FirstUParameter" _wrap_Adaptor3d_Surface_FirstUParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_LastUParameter" _wrap_Adaptor3d_Surface_LastUParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_FirstVParameter" _wrap_Adaptor3d_Surface_FirstVParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_LastVParameter" _wrap_Adaptor3d_Surface_LastVParameter) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_UContinuity" _wrap_Adaptor3d_Surface_UContinuity) GeomAbs_Shape
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_VContinuity" _wrap_Adaptor3d_Surface_VContinuity) GeomAbs_Shape
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_NbUIntervals" _wrap_Adaptor3d_Surface_NbUIntervals) :int
+  (self :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_NbVIntervals" _wrap_Adaptor3d_Surface_NbVIntervals) :int
+  (self :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_UIntervals" _wrap_Adaptor3d_Surface_UIntervals) :void
+  (self :pointer)
+  (t_arg1 :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_VIntervals" _wrap_Adaptor3d_Surface_VIntervals) :void
+  (self :pointer)
+  (t_arg1 :pointer)
+  (S GeomAbs_Shape))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_UTrim" _wrap_Adaptor3d_Surface_UTrim) :pointer
+  (self :pointer)
+  (First :double)
+  (Last :double)
+  (Tol :double))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_VTrim" _wrap_Adaptor3d_Surface_VTrim) :pointer
+  (self :pointer)
+  (First :double)
+  (Last :double)
+  (Tol :double))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_IsUClosed" _wrap_Adaptor3d_Surface_IsUClosed) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_IsVClosed" _wrap_Adaptor3d_Surface_IsVClosed) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_IsUPeriodic" _wrap_Adaptor3d_Surface_IsUPeriodic) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_UPeriod" _wrap_Adaptor3d_Surface_UPeriod) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_IsVPeriodic" _wrap_Adaptor3d_Surface_IsVPeriodic) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_VPeriod" _wrap_Adaptor3d_Surface_VPeriod) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Value" _wrap_Adaptor3d_Surface_Value) :pointer
+  (self :pointer)
+  (U :double)
+  (V :double))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_D0" _wrap_Adaptor3d_Surface_D0) :void
+  (self :pointer)
+  (U :double)
+  (V :double)
+  (P :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_D1" _wrap_Adaptor3d_Surface_D1) :void
+  (self :pointer)
+  (U :double)
+  (V :double)
+  (P :pointer)
+  (D1U :pointer)
+  (D1V :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_D2" _wrap_Adaptor3d_Surface_D2) :void
+  (self :pointer)
+  (U :double)
+  (V :double)
+  (P :pointer)
+  (D1U :pointer)
+  (D1V :pointer)
+  (D2U :pointer)
+  (D2V :pointer)
+  (D2UV :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_D3" _wrap_Adaptor3d_Surface_D3) :void
+  (self :pointer)
+  (U :double)
+  (V :double)
+  (P :pointer)
+  (D1U :pointer)
+  (D1V :pointer)
+  (D2U :pointer)
+  (D2V :pointer)
+  (D2UV :pointer)
+  (D3U :pointer)
+  (D3V :pointer)
+  (D3UUV :pointer)
+  (D3UVV :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_DN" _wrap_Adaptor3d_Surface_DN) :pointer
+  (self :pointer)
+  (U :double)
+  (V :double)
+  (Nu :int)
+  (Nv :int))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_UResolution" _wrap_Adaptor3d_Surface_UResolution) :double
+  (self :pointer)
+  (R3d :double))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_VResolution" _wrap_Adaptor3d_Surface_VResolution) :double
+  (self :pointer)
+  (R3d :double))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_GetType" _wrap_Adaptor3d_Surface_GetType) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Plane" _wrap_Adaptor3d_Surface_Plane) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Cylinder" _wrap_Adaptor3d_Surface_Cylinder) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Cone" _wrap_Adaptor3d_Surface_Cone) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Sphere" _wrap_Adaptor3d_Surface_Sphere) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Torus" _wrap_Adaptor3d_Surface_Torus) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_UDegree" _wrap_Adaptor3d_Surface_UDegree) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_NbUPoles" _wrap_Adaptor3d_Surface_NbUPoles) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_VDegree" _wrap_Adaptor3d_Surface_VDegree) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_NbVPoles" _wrap_Adaptor3d_Surface_NbVPoles) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_NbUKnots" _wrap_Adaptor3d_Surface_NbUKnots) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_NbVKnots" _wrap_Adaptor3d_Surface_NbVKnots) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_IsURational" _wrap_Adaptor3d_Surface_IsURational) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_IsVRational" _wrap_Adaptor3d_Surface_IsVRational) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Bezier" _wrap_Adaptor3d_Surface_Bezier) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_BSpline" _wrap_Adaptor3d_Surface_BSpline) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_AxeOfRevolution" _wrap_Adaptor3d_Surface_AxeOfRevolution) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_Direction" _wrap_Adaptor3d_Surface_Direction) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_BasisCurve" _wrap_Adaptor3d_Surface_BasisCurve) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_BasisSurface" _wrap_Adaptor3d_Surface_BasisSurface) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_Adaptor3d_Surface_OffsetValue" _wrap_Adaptor3d_Surface_OffsetValue) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_Adaptor3d_Surface" _wrap_delete_Adaptor3d_Surface) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Surface__SWIG_0" _wrap_new_GeomAdaptor_Surface__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Surface__SWIG_1" _wrap_new_GeomAdaptor_Surface__SWIG_1) :pointer
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Surface__SWIG_2" _wrap_new_GeomAdaptor_Surface__SWIG_2) :pointer
+  (S :pointer)
+  (UFirst :double)
+  (ULast :double)
+  (VFirst :double)
+  (VLast :double)
+  (TolU :double)
+  (TolV :double))
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Surface__SWIG_3" _wrap_new_GeomAdaptor_Surface__SWIG_3) :pointer
+  (S :pointer)
+  (UFirst :double)
+  (ULast :double)
+  (VFirst :double)
+  (VLast :double)
+  (TolU :double))
+
+(cffi:defcfun ("_wrap_new_GeomAdaptor_Surface__SWIG_4" _wrap_new_GeomAdaptor_Surface__SWIG_4) :pointer
+  (S :pointer)
+  (UFirst :double)
+  (ULast :double)
+  (VFirst :double)
+  (VLast :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Surface_Load__SWIG_0" _wrap_GeomAdaptor_Surface_Load__SWIG_0) :void
+  (self :pointer)
+  (S :pointer))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Surface_Load__SWIG_1" _wrap_GeomAdaptor_Surface_Load__SWIG_1) :void
+  (self :pointer)
+  (S :pointer)
+  (UFirst :double)
+  (ULast :double)
+  (VFirst :double)
+  (VLast :double)
+  (TolU :double)
+  (TolV :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Surface_Load__SWIG_2" _wrap_GeomAdaptor_Surface_Load__SWIG_2) :void
+  (self :pointer)
+  (S :pointer)
+  (UFirst :double)
+  (ULast :double)
+  (VFirst :double)
+  (VLast :double)
+  (TolU :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Surface_Load__SWIG_3" _wrap_GeomAdaptor_Surface_Load__SWIG_3) :void
+  (self :pointer)
+  (S :pointer)
+  (UFirst :double)
+  (ULast :double)
+  (VFirst :double)
+  (VLast :double))
+
+(cffi:defcfun ("_wrap_GeomAdaptor_Surface_Surface" _wrap_GeomAdaptor_Surface_Surface) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_delete_GeomAdaptor_Surface" _wrap_delete_GeomAdaptor_Surface) :void
+  (self :pointer))
+
 (cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_0" _wrap_new_CPnts_UniformDeflection__SWIG_0) :pointer)
 
 (cffi:defcfun ("_wrap_new_CPnts_UniformDeflection__SWIG_1" _wrap_new_CPnts_UniformDeflection__SWIG_1) :pointer
@@ -11726,6 +12116,145 @@
 (cffi:defcfun ("_wrap_delete_BRepMesh_IncrementalMesh" _wrap_delete_BRepMesh_IncrementalMesh) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_new_BRepMesh_FaceAttribute__SWIG_0" _wrap_new_BRepMesh_FaceAttribute__SWIG_0) :pointer
+  (theBoundaryVertices :pointer)
+  (theBoundaryPoints :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepMesh_FaceAttribute__SWIG_1" _wrap_new_BRepMesh_FaceAttribute__SWIG_1) :pointer
+  (theFace :pointer)
+  (theBoundaryVertices :pointer)
+  (theBoundaryPoints :pointer)
+  (theAdaptiveMin :bool))
+
+(cffi:defcfun ("_wrap_delete_BRepMesh_FaceAttribute" _wrap_delete_BRepMesh_FaceAttribute) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_Surface" _wrap_BRepMesh_FaceAttribute_Surface) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_IsInitialized" _wrap_BRepMesh_FaceAttribute_IsInitialized) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetFace" _wrap_BRepMesh_FaceAttribute_SetFace) :void
+  (self :pointer)
+  (theFace :pointer)
+  (theAdaptiveMin :bool))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_Face" _wrap_BRepMesh_FaceAttribute_Face) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetBoundaryVertices" _wrap_BRepMesh_FaceAttribute_SetBoundaryVertices) :void
+  (self :pointer)
+  (theVertices :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetBoundaryPoints" _wrap_BRepMesh_FaceAttribute_SetBoundaryPoints) :void
+  (self :pointer)
+  (theBoundaryPoints :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ToleranceU" _wrap_BRepMesh_FaceAttribute_ToleranceU) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ToleranceV" _wrap_BRepMesh_FaceAttribute_ToleranceV) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetDefFace" _wrap_BRepMesh_FaceAttribute_GetDefFace) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetDefFace" _wrap_BRepMesh_FaceAttribute_SetDefFace) :void
+  (self :pointer)
+  (theDefFace :double))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetUMin" _wrap_BRepMesh_FaceAttribute_GetUMin) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetUMin" _wrap_BRepMesh_FaceAttribute_SetUMin) :void
+  (self :pointer)
+  (theUMin :double))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetVMin" _wrap_BRepMesh_FaceAttribute_GetVMin) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetUMax" _wrap_BRepMesh_FaceAttribute_GetUMax) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetUMax" _wrap_BRepMesh_FaceAttribute_SetUMax) :void
+  (self :pointer)
+  (theUMax :double))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetVMax" _wrap_BRepMesh_FaceAttribute_GetVMax) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetVMax" _wrap_BRepMesh_FaceAttribute_SetVMax) :void
+  (self :pointer)
+  (theVMax :double))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetDeltaX" _wrap_BRepMesh_FaceAttribute_GetDeltaX) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetDeltaX" _wrap_BRepMesh_FaceAttribute_SetDeltaX) :void
+  (self :pointer)
+  (theDeltaX :double))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetDeltaY" _wrap_BRepMesh_FaceAttribute_GetDeltaY) :double
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetDeltaY" _wrap_BRepMesh_FaceAttribute_SetDeltaY) :void
+  (self :pointer)
+  (theDeltaY :double))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetStatus" _wrap_BRepMesh_FaceAttribute_GetStatus) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_SetStatus" _wrap_BRepMesh_FaceAttribute_SetStatus) :void
+  (self :pointer)
+  (theStatus :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_IsValid" _wrap_BRepMesh_FaceAttribute_IsValid) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_Clear" _wrap_BRepMesh_FaceAttribute_Clear) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ChangeLocation2D" _wrap_BRepMesh_FaceAttribute_ChangeLocation2D) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ChangeSurfacePoints" _wrap_BRepMesh_FaceAttribute_ChangeSurfacePoints) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ChangeSurfaceVertices" _wrap_BRepMesh_FaceAttribute_ChangeSurfaceVertices) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ChangeVertexEdgeMap" _wrap_BRepMesh_FaceAttribute_ChangeVertexEdgeMap) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ChangeStructure" _wrap_BRepMesh_FaceAttribute_ChangeStructure) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ChangeClassifier" _wrap_BRepMesh_FaceAttribute_ChangeClassifier) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_ChangeMeshNodes" _wrap_BRepMesh_FaceAttribute_ChangeMeshNodes) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_LastPointId" _wrap_BRepMesh_FaceAttribute_LastPointId) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetPoint__SWIG_0" _wrap_BRepMesh_FaceAttribute_GetPoint__SWIG_0) :pointer
+  (self :pointer)
+  (theVertex :pointer))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_GetPoint__SWIG_1" _wrap_BRepMesh_FaceAttribute_GetPoint__SWIG_1) :pointer
+  (self :pointer)
+  (theIndex :int))
+
+(cffi:defcfun ("_wrap_BRepMesh_FaceAttribute_AddNode" _wrap_BRepMesh_FaceAttribute_AddNode) :void
+  (self :pointer)
+  (theIndex :int)
+  (theUV :pointer)
+  (theMovability :pointer)
+  (theNodeIndex :pointer)
+  (theNodeOnEdgeIndex :pointer))
+
 (cffi:defcfun ("_wrap_new_GeomAPI_ProjectPointOnSurf" _wrap_new_GeomAPI_ProjectPointOnSurf) :pointer
   (P :pointer)
   (Surface :pointer))
@@ -11769,6 +12298,271 @@
   (S :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepAlgo" _wrap_delete_BRepAlgo) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_ShapeAnalysis_Edge" _wrap_new_ShapeAnalysis_Edge) :pointer)
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_HasCurve3d" _wrap_ShapeAnalysis_Edge_HasCurve3d) :bool
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_Curve3d__SWIG_0" _wrap_ShapeAnalysis_Edge_Curve3d__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (C3d :pointer)
+  (cf :pointer)
+  (cl :pointer)
+  (orient :bool))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_Curve3d__SWIG_1" _wrap_ShapeAnalysis_Edge_Curve3d__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (C3d :pointer)
+  (cf :pointer)
+  (cl :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_IsClosed3d" _wrap_ShapeAnalysis_Edge_IsClosed3d) :bool
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_HasPCurve__SWIG_0" _wrap_ShapeAnalysis_Edge_HasPCurve__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_HasPCurve__SWIG_1" _wrap_ShapeAnalysis_Edge_HasPCurve__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_PCurve__SWIG_0" _wrap_ShapeAnalysis_Edge_PCurve__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (C2d :pointer)
+  (cf :pointer)
+  (cl :pointer)
+  (orient :bool))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_PCurve__SWIG_1" _wrap_ShapeAnalysis_Edge_PCurve__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (C2d :pointer)
+  (cf :pointer)
+  (cl :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_PCurve__SWIG_2" _wrap_ShapeAnalysis_Edge_PCurve__SWIG_2) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (C2d :pointer)
+  (cf :pointer)
+  (cl :pointer)
+  (orient :bool))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_PCurve__SWIG_3" _wrap_ShapeAnalysis_Edge_PCurve__SWIG_3) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (C2d :pointer)
+  (cf :pointer)
+  (cl :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_BoundUV__SWIG_0" _wrap_ShapeAnalysis_Edge_BoundUV__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (first :pointer)
+  (last :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_BoundUV__SWIG_1" _wrap_ShapeAnalysis_Edge_BoundUV__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (first :pointer)
+  (last :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_IsSeam" _wrap_ShapeAnalysis_Edge_IsSeam) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_FirstVertex" _wrap_ShapeAnalysis_Edge_FirstVertex) :pointer
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_LastVertex" _wrap_ShapeAnalysis_Edge_LastVertex) :pointer
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_0" _wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (atEnd :bool)
+  (pos :pointer)
+  (tang :pointer)
+  (dparam :double))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_1" _wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (atEnd :bool)
+  (pos :pointer)
+  (tang :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_2" _wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_2) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (atEnd :bool)
+  (pos :pointer)
+  (tang :pointer)
+  (dparam :double))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_3" _wrap_ShapeAnalysis_Edge_GetEndTangent2d__SWIG_3) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (atEnd :bool)
+  (pos :pointer)
+  (tang :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithCurve3d__SWIG_0" _wrap_ShapeAnalysis_Edge_CheckVerticesWithCurve3d__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (preci :double)
+  (vtx :int))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithCurve3d__SWIG_1" _wrap_ShapeAnalysis_Edge_CheckVerticesWithCurve3d__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (preci :double))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithCurve3d__SWIG_2" _wrap_ShapeAnalysis_Edge_CheckVerticesWithCurve3d__SWIG_2) :bool
+  (self :pointer)
+  (edge :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_0" _wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (preci :double)
+  (vtx :int))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_1" _wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (preci :double))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_2" _wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_2) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_3" _wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_3) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (preci :double)
+  (vtx :int))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_4" _wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_4) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer)
+  (preci :double))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_5" _wrap_ShapeAnalysis_Edge_CheckVerticesWithPCurve__SWIG_5) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVertexTolerance__SWIG_0" _wrap_ShapeAnalysis_Edge_CheckVertexTolerance__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer)
+  (toler1 :pointer)
+  (toler2 :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckVertexTolerance__SWIG_1" _wrap_ShapeAnalysis_Edge_CheckVertexTolerance__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (toler1 :pointer)
+  (toler2 :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckCurve3dWithPCurve__SWIG_0" _wrap_ShapeAnalysis_Edge_CheckCurve3dWithPCurve__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (face :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckCurve3dWithPCurve__SWIG_1" _wrap_ShapeAnalysis_Edge_CheckCurve3dWithPCurve__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (surface :pointer)
+  (location :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_Status" _wrap_ShapeAnalysis_Edge_Status) :bool
+  (self :pointer)
+  (status :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_0" _wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_0) :bool
+  (self :pointer)
+  (edge :pointer)
+  (maxdev :pointer)
+  (NbControl :int))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_1" _wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_1) :bool
+  (self :pointer)
+  (edge :pointer)
+  (maxdev :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_2" _wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_2) :bool
+  (self :pointer)
+  (theEdge :pointer)
+  (theFace :pointer)
+  (theMaxdev :pointer)
+  (theNbControl :int))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_3" _wrap_ShapeAnalysis_Edge_CheckSameParameter__SWIG_3) :bool
+  (self :pointer)
+  (theEdge :pointer)
+  (theFace :pointer)
+  (theMaxdev :pointer))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_ComputeDeviation" _wrap_ShapeAnalysis_Edge_ComputeDeviation) :bool
+  (CRef :pointer)
+  (Other :pointer)
+  (SameParameter :bool)
+  (dev :pointer)
+  (NCONTROL :int))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckOverlapping__SWIG_0" _wrap_ShapeAnalysis_Edge_CheckOverlapping__SWIG_0) :bool
+  (self :pointer)
+  (theEdge1 :pointer)
+  (theEdge2 :pointer)
+  (theTolOverlap :pointer)
+  (theDomainDist :double))
+
+(cffi:defcfun ("_wrap_ShapeAnalysis_Edge_CheckOverlapping__SWIG_1" _wrap_ShapeAnalysis_Edge_CheckOverlapping__SWIG_1) :bool
+  (self :pointer)
+  (theEdge1 :pointer)
+  (theEdge2 :pointer)
+  (theTolOverlap :pointer))
+
+(cffi:defcfun ("_wrap_delete_ShapeAnalysis_Edge" _wrap_delete_ShapeAnalysis_Edge) :void
   (self :pointer))
 
 

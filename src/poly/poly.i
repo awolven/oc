@@ -93,6 +93,7 @@ class Poly_Array1OfTriangle {
     self->~Poly_Array1OfTriangle();
   }
 }
+%nodefaultdtor Poly_Polygon3D;
 class Poly_Polygon3D
 {
  public:
@@ -105,6 +106,21 @@ class Poly_Polygon3D
   Standard_Boolean 	HasParameters () const;
   const TColStd_Array1OfReal & 	Parameters () const;
   TColStd_Array1OfReal & 	ChangeParameters () const;
+};
+
+%{
+  #include <Poly_Polygon2D.hxx>
+  %}
+%nodefaultdtor Poly_Polygon2D;
+class Poly_Polygon2D
+{
+
+public:
+  Poly_Polygon2D(const TColgp_Array1OfPnt2d& Nodes);
+  Standard_Real Deflection();
+  void Deflection (const Standard_Real D);
+  Standard_Integer NbNodes();
+  const TColgp_Array1OfPnt2d& Nodes() const;
 };
 
 %{

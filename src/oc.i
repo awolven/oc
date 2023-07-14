@@ -92,6 +92,7 @@
 %include "cpnts/adaptor3d.i";
 %include "cpnts/cpnts.i";
 
+
 %{
 #include <TopExp.hxx>
   %}
@@ -201,38 +202,7 @@ class GCPnts_UniformDeflection
 	Standard_Real Parameter(const Standard_Integer Index) const;
 };
 
-%{#include <BRepMesh_DiscretRoot.hxx>%}
-class BRepMesh_DiscretRoot
-{
-	protected:
-	BRepMesh_DiscretRoot();
-	public:
-	/*	void SetDeflection(const Standard_Real D) ;
-	void SetAngle(const Standard_Real Ang) ;
-	Standard_Real Deflection() const;
-	Standard_Real Angle() const; */
-	virtual void Perform();
-};
-
-%{#include <BRepMesh_IncrementalMesh.hxx>%}
-class BRepMesh_IncrementalMesh : public BRepMesh_DiscretRoot
-{
-	public:
-	BRepMesh_IncrementalMesh();
-        BRepMesh_IncrementalMesh(const TopoDS_Shape&    theShape,
-                                 const Standard_Real    theLinDeflection,
-                                 const Standard_Boolean isRelative = Standard_False,
-                                 const Standard_Real    theAngDeflection = 0.5,
-                                 const Standard_Boolean isInParallel = Standard_False,
-                                 const Standard_Boolean adaptiveMin = Standard_False);
-	/* BRepMesh_IncrementalMesh(const TopoDS_Shape& S,const Standard_Real D,
-		const Standard_Boolean Relatif = Standard_False,
-		const Standard_Real Ang = 0.5);
-	*/	
-	void Perform();
-//	void Update(const TopoDS_Shape& S) ;
-	Standard_Boolean IsModified() const;
-};
+%include "brep-mesh/brep-mesh.i";
 
 %{#include <GeomAPI_ProjectPointOnSurf.hxx>%}
 
@@ -261,3 +231,5 @@ class BRepAlgo
 	static Standard_Boolean IsTopologicallyValid(const TopoDS_Shape& S);
 };
 
+
+%include "shape-analysis/shape-analysis-edge.i";
