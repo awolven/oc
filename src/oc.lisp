@@ -7437,6 +7437,67 @@
 (cffi:defcfun ("_wrap_Poly_PolygonOnTriangulation_Delete" _wrap_Poly_PolygonOnTriangulation_Delete) :void
   (self :pointer))
 
+(cffi:defcfun ("_wrap_Poly_Catenate" _wrap_Poly_Catenate) :pointer
+  (lstTri :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Write__SWIG_0" _wrap_Poly_Write__SWIG_0) :void
+  (t_arg0 :pointer)
+  (OS :pointer)
+  (Compact :bool))
+
+(cffi:defcfun ("_wrap_Poly_Write__SWIG_1" _wrap_Poly_Write__SWIG_1) :void
+  (t_arg0 :pointer)
+  (OS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Write__SWIG_2" _wrap_Poly_Write__SWIG_2) :void
+  (P :pointer)
+  (OS :pointer)
+  (Compact :bool))
+
+(cffi:defcfun ("_wrap_Poly_Write__SWIG_3" _wrap_Poly_Write__SWIG_3) :void
+  (P :pointer)
+  (OS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Write__SWIG_4" _wrap_Poly_Write__SWIG_4) :void
+  (P :pointer)
+  (OS :pointer)
+  (Compact :bool))
+
+(cffi:defcfun ("_wrap_Poly_Write__SWIG_5" _wrap_Poly_Write__SWIG_5) :void
+  (P :pointer)
+  (OS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Dump__SWIG_0" _wrap_Poly_Dump__SWIG_0) :void
+  (t_arg0 :pointer)
+  (OS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Dump__SWIG_1" _wrap_Poly_Dump__SWIG_1) :void
+  (P :pointer)
+  (OS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_Dump__SWIG_2" _wrap_Poly_Dump__SWIG_2) :void
+  (P :pointer)
+  (OS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_ReadTriangulation" _wrap_Poly_ReadTriangulation) :pointer
+  (IS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_ReadPolygon3D" _wrap_Poly_ReadPolygon3D) :pointer
+  (IS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_ReadPolygon2D" _wrap_Poly_ReadPolygon2D) :pointer
+  (IS :pointer))
+
+(cffi:defcfun ("_wrap_Poly_ComputeNormals" _wrap_Poly_ComputeNormals) :void
+  (Tri :pointer))
+
+(cffi:defcfun ("_wrap_Poly_PointOnTriangle" _wrap_Poly_PointOnTriangle) :double
+  (P1 :pointer)
+  (P2 :pointer)
+  (P3 :pointer)
+  (P :pointer)
+  (UV :pointer))
+
 (cffi:defcfun ("_wrap_Geom2d_Geometry_Mirror__SWIG_0" _wrap_Geom2d_Geometry_Mirror__SWIG_0) :void
   (self :pointer)
   (P :pointer))

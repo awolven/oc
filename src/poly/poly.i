@@ -1,5 +1,5 @@
-
 %{
+#include <Poly.hxx>  
 #include <Poly_Triangulation.hxx>
   %}
 
@@ -52,6 +52,41 @@ class Handle_Poly_Triangulation
     return (*self)->UVNodes();
   }
 }
+
+%{
+
+struct ncollection_triangles
+{ Standard_Integer myLowerBound;
+  Standard_Integer myUpperBound;
+  Standard_Boolean myDeletable;
+  Poly_Triangle* myData;
+};
+
+struct ncollection_nodes
+{ Standard_Integer myLowerBound;
+  Standard_Integer myUpperBound;
+  Standard_Boolean myDeletable;
+  gp_Pnt* myData;
+};
+
+struct ncollection_normals
+{ Standard_Integer myLowerBound;
+  Standard_Integer myUpperBound;
+  Standard_Boolean myDeletable;
+  Standard_ShortReal* myData;
+};
+  
+struct poly_triangulation_struct
+{ Standard_Real myDeflection;
+  Standard_Integer myNbNodes;
+  Standard_Integer myNbTriangles;
+  ncollection_nodes myNodes;
+  Handle(TColgp_HArray1OfPnt2d) myUVNodes;
+  ncollection_triangles myTriangles;
+  Handle(ncollection_normals) myNormals;
+};
+  
+%}
 
 /*
 class Poly_Triangulation
@@ -146,3 +181,21 @@ class Poly_PolygonOnTriangulation
     self->~Poly_PolygonOnTriangulation();
   }
 }
+%nodefaultdtor Poly;
+
+class Poly 
+{
+public:
+  static Handle_Poly_Triangulation Catenate (const Poly_ListOfTriangulation& lstTri);
+  static void Write (const Handle_Poly_Triangulation& T, Standard_OStream& OS, const Standard_Boolean Compact = Standard_True);
+  static void Write (const Handle_Poly_Polygon3D& P, Standard_OStream& OS, const Standard_Boolean Compact = Standard_True);
+  static void Write (const Handle_Poly_Polygon2D& P, Standard_OStream& OS, const Standard_Boolean Compact = Standard_True);
+  static void Dump (const Handle_Poly_Triangulation& T, Standard_OStream& OS);
+  static void Dump (const Handle_Poly_Polygon3D& P, Standard_OStream& OS);
+  static void Dump (const Handle_Poly_Polygon2D& P, Standard_OStream& OS);
+  static Handle_Poly_Triangulation ReadTriangulation (Standard_IStream& IS);
+  static Handle_Poly_Polygon3D ReadPolygon3D (Standard_IStream& IS);
+  static Handle_Poly_Polygon2D ReadPolygon2D (Standard_IStream& IS);
+  static void ComputeNormals (const Handle_Poly_Triangulation& Tri);
+  static Standard_Real PointOnTriangle (const gp_XY& P1, const gp_XY& P2, const gp_XY& P3, const gp_XY& P, gp_XY& UV);
+};

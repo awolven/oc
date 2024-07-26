@@ -10,7 +10,7 @@
 	(cond ((and Circ Sense-supplied-p)
 	       (assert (gp:circ-p Circ))
 	       (assert (typep Sense 'boolean))
-	       (_wrap_new_GC_MakeArcOfCircle__SWIG_1 (ptr Circ) (ptr P1) (ptr P2) Sense))
+	       (_wrap_new_GC_MakeArcOfCircle__SWIG_1 (ptr Circ) (ptr P1) (ptr P2) sense))
 	      (P3
 	       (assert (gp:pnt-p P3))
 	       (_wrap_new_GC_MakeArcOfCircle__SWIG_0 (ptr P1) (ptr P2) (ptr P3)))

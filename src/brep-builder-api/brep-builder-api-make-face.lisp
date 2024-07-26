@@ -20,7 +20,7 @@
     (values)))
 
 (defmethod face ((self brep-builder-api-make-face))
-  (let ((face (allocate-instance (load-time-value (find-class 'topods-face)))))
+  (let ((face (make-instance (load-time-value (find-class 'topods-face)))))
     (setf (ff-pointer face) (_wrap_TopoDS_Shape_copy_reference
 			     (_wrap_BrepBuilderAPI_MakeFace_Face (ff-pointer self))))
     (oc:finalize face)

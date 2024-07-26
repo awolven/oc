@@ -60440,6 +60440,7 @@ EXPORT TopoDS_Shape *_wrap_BRepAlgoAPI_Algo_Shape (BRepAlgoAPI_Algo *larg1) {
 
 
 
+#include <Poly.hxx>  
 #include <Poly_Triangulation.hxx>
   
 SWIGINTERN void Handle_Poly_Triangulation_Delete(Handle_Poly_Triangulation *self){
@@ -60824,6 +60825,40 @@ EXPORT void _wrap_delete_Poly_Triangulation (Handle_Poly_Triangulation *larg1) {
   }
 }
 
+
+
+
+struct ncollection_triangles
+{ Standard_Integer myLowerBound;
+  Standard_Integer myUpperBound;
+  Standard_Boolean myDeletable;
+  Poly_Triangle* myData;
+};
+
+struct ncollection_nodes
+{ Standard_Integer myLowerBound;
+  Standard_Integer myUpperBound;
+  Standard_Boolean myDeletable;
+  gp_Pnt* myData;
+};
+
+struct ncollection_normals
+{ Standard_Integer myLowerBound;
+  Standard_Integer myUpperBound;
+  Standard_Boolean myDeletable;
+  Standard_ShortReal* myData;
+};
+  
+struct poly_triangulation_struct
+{ Standard_Real myDeflection;
+  Standard_Integer myNbNodes;
+  Standard_Integer myNbTriangles;
+  ncollection_nodes myNodes;
+  Handle(TColgp_HArray1OfPnt2d) myUVNodes;
+  ncollection_triangles myTriangles;
+  Handle(ncollection_normals) myNormals;
+};
+  
 
 EXPORT Poly_Triangle *_wrap_new_Poly_Triangle__SWIG_0 () {
   Poly_Triangle * lresult = (Poly_Triangle *)0 ;
@@ -61992,6 +62027,503 @@ EXPORT void _wrap_Poly_PolygonOnTriangulation_Delete (Poly_PolygonOnTriangulatio
     
   } catch (...) {
     
+  }
+}
+
+
+EXPORT Handle_Poly_Triangulation *_wrap_Poly_Catenate (Poly_ListOfTriangulation *larg1) {
+  Handle_Poly_Triangulation * lresult = (Handle_Poly_Triangulation *)0 ;
+  Poly_ListOfTriangulation *arg1 = 0 ;
+  SwigValueWrapper< Handle_Poly_Triangulation > result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Poly::Catenate((Poly_ListOfTriangulation const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Catenate\n  * wrapname: _wrap_Poly_Catenate\n  * fulldecl: Handle_Poly_Triangulation Poly::Catenate(Poly_ListOfTriangulation const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Poly_Triangulation(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Poly_Triangulation *)0;
+  }
+}
+
+
+EXPORT void _wrap_Poly_Write__SWIG_0 (Handle_Poly_Triangulation *larg1, Standard_OStream *larg2, bool larg3) {
+  Handle_Poly_Triangulation *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  Standard_Boolean arg3 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Write((Handle_Poly_Triangulation const &)*arg1,*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Write\n  * wrapname: _wrap_Poly_Write__SWIG_0\n  * fulldecl: void Poly::Write(Handle_Poly_Triangulation const &,Standard_OStream &,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Write__SWIG_1 (Handle_Poly_Triangulation *larg1, Standard_OStream *larg2) {
+  Handle_Poly_Triangulation *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Write((Handle_Poly_Triangulation const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Write\n  * wrapname: _wrap_Poly_Write__SWIG_1\n  * fulldecl: void Poly::Write(Handle_Poly_Triangulation const &,Standard_OStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Write__SWIG_2 (Handle_Poly_Polygon3D *larg1, Standard_OStream *larg2, bool larg3) {
+  Handle_Poly_Polygon3D *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  Standard_Boolean arg3 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Write((Handle_Poly_Polygon3D const &)*arg1,*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Write\n  * wrapname: _wrap_Poly_Write__SWIG_2\n  * fulldecl: void Poly::Write(Handle_Poly_Polygon3D const &,Standard_OStream &,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Write__SWIG_3 (Handle_Poly_Polygon3D *larg1, Standard_OStream *larg2) {
+  Handle_Poly_Polygon3D *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Write((Handle_Poly_Polygon3D const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Write\n  * wrapname: _wrap_Poly_Write__SWIG_3\n  * fulldecl: void Poly::Write(Handle_Poly_Polygon3D const &,Standard_OStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Write__SWIG_4 (Handle_Poly_Polygon2D *larg1, Standard_OStream *larg2, bool larg3) {
+  Handle_Poly_Polygon2D *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  Standard_Boolean arg3 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = (bool)larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Write((Handle_Poly_Polygon2D const &)*arg1,*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Write\n  * wrapname: _wrap_Poly_Write__SWIG_4\n  * fulldecl: void Poly::Write(Handle_Poly_Polygon2D const &,Standard_OStream &,Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Write__SWIG_5 (Handle_Poly_Polygon2D *larg1, Standard_OStream *larg2) {
+  Handle_Poly_Polygon2D *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Write((Handle_Poly_Polygon2D const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Write\n  * wrapname: _wrap_Poly_Write__SWIG_5\n  * fulldecl: void Poly::Write(Handle_Poly_Polygon2D const &,Standard_OStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Dump__SWIG_0 (Handle_Poly_Triangulation *larg1, Standard_OStream *larg2) {
+  Handle_Poly_Triangulation *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Dump((Handle_Poly_Triangulation const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Dump\n  * wrapname: _wrap_Poly_Dump__SWIG_0\n  * fulldecl: void Poly::Dump(Handle_Poly_Triangulation const &,Standard_OStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Dump__SWIG_1 (Handle_Poly_Polygon3D *larg1, Standard_OStream *larg2) {
+  Handle_Poly_Polygon3D *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Dump((Handle_Poly_Polygon3D const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Dump\n  * wrapname: _wrap_Poly_Dump__SWIG_1\n  * fulldecl: void Poly::Dump(Handle_Poly_Polygon3D const &,Standard_OStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Poly_Dump__SWIG_2 (Handle_Poly_Polygon2D *larg1, Standard_OStream *larg2) {
+  Handle_Poly_Polygon2D *arg1 = 0 ;
+  Standard_OStream *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::Dump((Handle_Poly_Polygon2D const &)*arg1,*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_Dump\n  * wrapname: _wrap_Poly_Dump__SWIG_2\n  * fulldecl: void Poly::Dump(Handle_Poly_Polygon2D const &,Standard_OStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Handle_Poly_Triangulation *_wrap_Poly_ReadTriangulation (Standard_IStream *larg1) {
+  Handle_Poly_Triangulation * lresult = (Handle_Poly_Triangulation *)0 ;
+  Standard_IStream *arg1 = 0 ;
+  SwigValueWrapper< Handle_Poly_Triangulation > result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Poly::ReadTriangulation(*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_ReadTriangulation\n  * wrapname: _wrap_Poly_ReadTriangulation\n  * fulldecl: Handle_Poly_Triangulation Poly::ReadTriangulation(Standard_IStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Poly_Triangulation(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Poly_Triangulation *)0;
+  }
+}
+
+
+EXPORT Handle_Poly_Polygon3D *_wrap_Poly_ReadPolygon3D (Standard_IStream *larg1) {
+  Handle_Poly_Polygon3D * lresult = (Handle_Poly_Polygon3D *)0 ;
+  Standard_IStream *arg1 = 0 ;
+  Handle_Poly_Polygon3D result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Poly::ReadPolygon3D(*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_ReadPolygon3D\n  * wrapname: _wrap_Poly_ReadPolygon3D\n  * fulldecl: Handle_Poly_Polygon3D Poly::ReadPolygon3D(Standard_IStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Poly_Polygon3D(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Poly_Polygon3D *)0;
+  }
+}
+
+
+EXPORT Handle_Poly_Polygon2D *_wrap_Poly_ReadPolygon2D (Standard_IStream *larg1) {
+  Handle_Poly_Polygon2D * lresult = (Handle_Poly_Polygon2D *)0 ;
+  Standard_IStream *arg1 = 0 ;
+  Handle_Poly_Polygon2D result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = Poly::ReadPolygon2D(*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_ReadPolygon2D\n  * wrapname: _wrap_Poly_ReadPolygon2D\n  * fulldecl: Handle_Poly_Polygon2D Poly::ReadPolygon2D(Standard_IStream &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new Handle_Poly_Polygon2D(result);
+    return lresult;
+  } catch (...) {
+    return (Handle_Poly_Polygon2D *)0;
+  }
+}
+
+
+EXPORT void _wrap_Poly_ComputeNormals (Handle_Poly_Triangulation *larg1) {
+  Handle_Poly_Triangulation *arg1 = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        Poly::ComputeNormals((Handle_Poly_Triangulation const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_ComputeNormals\n  * wrapname: _wrap_Poly_ComputeNormals\n  * fulldecl: void Poly::ComputeNormals(Handle_Poly_Triangulation const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Real _wrap_Poly_PointOnTriangle (gp_XY *larg1, gp_XY *larg2, gp_XY *larg3, gp_XY *larg4, gp_XY *larg5) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  gp_XY *arg1 = 0 ;
+  gp_XY *arg2 = 0 ;
+  gp_XY *arg3 = 0 ;
+  gp_XY *arg4 = 0 ;
+  gp_XY *arg5 = 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)Poly::PointOnTriangle((gp_XY const &)*arg1,(gp_XY const &)*arg2,(gp_XY const &)*arg3,(gp_XY const &)*arg4,*arg5);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: Poly_PointOnTriangle\n  * wrapname: _wrap_Poly_PointOnTriangle\n  * fulldecl: Standard_Real Poly::PointOnTriangle(gp_XY const &,gp_XY const &,gp_XY const &,gp_XY const &,gp_XY &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
   }
 }
 

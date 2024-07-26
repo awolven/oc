@@ -1,7 +1,8 @@
 (in-package :oc)
 
 (defmethod reversed ((self topods-shape))
-  (with-topods-shape (_wrap_TopoDS_Shape_Reversed (ff-pointer self))))
+  (_wrap_TopoDS_Shape_Reversed (ff-pointer self))
+  self)
 
 (defmethod build-curves-3d ((s topods-shape) &optional tolerance continuity max-degree max-segment)
   (cond ((and tolerance continuity max-degree max-segment)
