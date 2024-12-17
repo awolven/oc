@@ -297,7 +297,7 @@
     result))
 
 (declaim (inline gp-xy-reverse!))
-(defun gp-xy-reverse (p)
+(defun gp-xy-reverse! (p)
   (setf (gp-xy-x p) (- (gp-xy-x p))
 	(gp-xy-y p) (- (gp-xy-y p)))
   (values))

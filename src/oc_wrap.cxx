@@ -54458,6 +54458,39 @@ EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_5 (Handl
 }
 
 
+EXPORT BRepBuilderAPI_MakeFace *_wrap_new_BRepBuilderAPI_MakeFace__SWIG_6 (TopoDS_Face *larg1) {
+  BRepBuilderAPI_MakeFace * lresult = (BRepBuilderAPI_MakeFace *)0 ;
+  TopoDS_Face *arg1 = 0 ;
+  BRepBuilderAPI_MakeFace *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepBuilderAPI_MakeFace *)new BRepBuilderAPI_MakeFace((TopoDS_Face const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepBuilderAPI_MakeFace\n  * wrapname: _wrap_new_BRepBuilderAPI_MakeFace__SWIG_6\n  * fulldecl: BRepBuilderAPI_MakeFace::BRepBuilderAPI_MakeFace(TopoDS_Face const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepBuilderAPI_MakeFace *)0;
+  }
+}
+
+
 EXPORT void _wrap_BRepBuilderAPI_MakeFace_Add (BRepBuilderAPI_MakeFace *larg1, TopoDS_Wire *larg2) {
   BRepBuilderAPI_MakeFace *arg1 = (BRepBuilderAPI_MakeFace *) 0 ;
   TopoDS_Wire *arg2 = 0 ;
@@ -59906,15 +59939,498 @@ EXPORT void _wrap_delete_BRepOffsetAPI_MakePipe (BRepOffsetAPI_MakePipe *larg1) 
 
 
 #include <BRepAlgoAPI_Algo.hxx>
+#include <BRepAlgoAPI_BuilderAlgo.hxx>
 #include <BRepAlgoAPI_BooleanOperation.hxx>
 #include <BRepAlgoAPI_Fuse.hxx>
 #include <BRepAlgoAPI_Common.hxx>
 #include <BRepAlgoAPI_Cut.hxx>
 #include <BRepAlgoAPI_Section.hxx>
      
-EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Modified (BRepAlgoAPI_BooleanOperation *larg1, TopoDS_Shape *larg2) {
+EXPORT Standard_Integer _wrap_BRepAlgoAPI_Algo_ErrorStatus (BRepAlgoAPI_Algo *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((BRepAlgoAPI_Algo const *)arg1)->ErrorStatus();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_ErrorStatus\n  * wrapname: _wrap_BRepAlgoAPI_Algo_ErrorStatus\n  * fulldecl: Standard_Integer BRepAlgoAPI_Algo::ErrorStatus() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT Standard_Integer _wrap_BRepAlgoAPI_Algo_WarningStatus (BRepAlgoAPI_Algo *larg1) {
+  Standard_Integer lresult = (Standard_Integer)0 ;
+  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
+  Standard_Integer result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Integer)((BRepAlgoAPI_Algo const *)arg1)->WarningStatus();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_WarningStatus\n  * wrapname: _wrap_BRepAlgoAPI_Algo_WarningStatus\n  * fulldecl: Standard_Integer BRepAlgoAPI_Algo::WarningStatus() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Integer)0;
+  }
+}
+
+
+EXPORT BOPCol_BaseAllocator *_wrap_BRepAlgoAPI_Algo_Allocator (BRepAlgoAPI_Algo *larg1) {
+  BOPCol_BaseAllocator * lresult = (BOPCol_BaseAllocator *)0 ;
+  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
+  BOPCol_BaseAllocator *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BOPCol_BaseAllocator *) &((BRepAlgoAPI_Algo const *)arg1)->Allocator();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_Allocator\n  * wrapname: _wrap_BRepAlgoAPI_Algo_Allocator\n  * fulldecl: BOPCol_BaseAllocator const & BRepAlgoAPI_Algo::Allocator() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BOPCol_BaseAllocator *)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_Algo_SetRunParallel (BRepAlgoAPI_Algo *larg1, bool larg2) {
+  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
+  Standard_Boolean arg2 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetRunParallel(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_SetRunParallel\n  * wrapname: _wrap_BRepAlgoAPI_Algo_SetRunParallel\n  * fulldecl: void BRepAlgoAPI_Algo::SetRunParallel(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_Algo_SetProgressIndicator (BRepAlgoAPI_Algo *larg1, Handle_Message_ProgressIndicator *larg2) {
+  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
+  Handle_Message_ProgressIndicator *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetProgressIndicator((Handle_Message_ProgressIndicator const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_SetProgressIndicator\n  * wrapname: _wrap_BRepAlgoAPI_Algo_SetProgressIndicator\n  * fulldecl: void BRepAlgoAPI_Algo::SetProgressIndicator(Handle_Message_ProgressIndicator const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopoDS_Shape *_wrap_BRepAlgoAPI_Algo_Shape (BRepAlgoAPI_Algo *larg1) {
+  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
+  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
+  TopoDS_Shape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopoDS_Shape *) &(arg1)->Shape();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_Shape\n  * wrapname: _wrap_BRepAlgoAPI_Algo_Shape\n  * fulldecl: TopoDS_Shape const & BRepAlgoAPI_Algo::Shape()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopoDS_Shape *)0;
+  }
+}
+
+
+EXPORT BRepAlgoAPI_BuilderAlgo *_wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_0 () {
+  BRepAlgoAPI_BuilderAlgo * lresult = (BRepAlgoAPI_BuilderAlgo *)0 ;
+  BRepAlgoAPI_BuilderAlgo *result = 0 ;
+  
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepAlgoAPI_BuilderAlgo *)new BRepAlgoAPI_BuilderAlgo();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_BuilderAlgo\n  * wrapname: _wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_0\n  * fulldecl: BRepAlgoAPI_BuilderAlgo::BRepAlgoAPI_BuilderAlgo()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepAlgoAPI_BuilderAlgo *)0;
+  }
+}
+
+
+EXPORT BRepAlgoAPI_BuilderAlgo *_wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_1 (BOPAlgo_PaveFiller *larg1) {
+  BRepAlgoAPI_BuilderAlgo * lresult = (BRepAlgoAPI_BuilderAlgo *)0 ;
+  BOPAlgo_PaveFiller *arg1 = 0 ;
+  BRepAlgoAPI_BuilderAlgo *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepAlgoAPI_BuilderAlgo *)new BRepAlgoAPI_BuilderAlgo((BOPAlgo_PaveFiller const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_BuilderAlgo\n  * wrapname: _wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_1\n  * fulldecl: BRepAlgoAPI_BuilderAlgo::BRepAlgoAPI_BuilderAlgo(BOPAlgo_PaveFiller const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepAlgoAPI_BuilderAlgo *)0;
+  }
+}
+
+
+EXPORT void _wrap_delete_BRepAlgoAPI_BuilderAlgo (BRepAlgoAPI_BuilderAlgo *larg1) {
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        delete arg1;
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: delete_BRepAlgoAPI_BuilderAlgo\n  * wrapname: _wrap_delete_BRepAlgoAPI_BuilderAlgo\n  * fulldecl: BRepAlgoAPI_BuilderAlgo::~BRepAlgoAPI_BuilderAlgo()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_BuilderAlgo_SetFuzzyValue (BRepAlgoAPI_BuilderAlgo *larg1, Standard_Real larg2) {
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  Standard_Real arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetFuzzyValue(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_SetFuzzyValue\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_SetFuzzyValue\n  * fulldecl: void BRepAlgoAPI_BuilderAlgo::SetFuzzyValue(Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_BuilderAlgo_SetNonDestructive (BRepAlgoAPI_BuilderAlgo *larg1, bool larg2) {
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  Standard_Boolean arg2 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetNonDestructive(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_SetNonDestructive\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_SetNonDestructive\n  * fulldecl: void BRepAlgoAPI_BuilderAlgo::SetNonDestructive(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT bool _wrap_BRepAlgoAPI_BuilderAlgo_NonDestructive (BRepAlgoAPI_BuilderAlgo *larg1) {
+  bool lresult = (bool)0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((BRepAlgoAPI_BuilderAlgo const *)arg1)->NonDestructive();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_NonDestructive\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_NonDestructive\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BuilderAlgo::NonDestructive() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_BuilderAlgo_SetArguments (BRepAlgoAPI_BuilderAlgo *larg1, TopTools_ListOfShape *larg2) {
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  TopTools_ListOfShape *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetArguments((TopTools_ListOfShape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_SetArguments\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_SetArguments\n  * fulldecl: void BRepAlgoAPI_BuilderAlgo::SetArguments(TopTools_ListOfShape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BuilderAlgo_Arguments (BRepAlgoAPI_BuilderAlgo *larg1) {
   TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
-  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  TopTools_ListOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_ListOfShape *) &((BRepAlgoAPI_BuilderAlgo const *)arg1)->Arguments();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_Arguments\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_Arguments\n  * fulldecl: TopTools_ListOfShape const & BRepAlgoAPI_BuilderAlgo::Arguments() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_ListOfShape *)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_BuilderAlgo_Build (BRepAlgoAPI_BuilderAlgo *larg1) {
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Build();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_Build\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_Build\n  * fulldecl: void BRepAlgoAPI_BuilderAlgo::Build()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BuilderAlgo_Modified (BRepAlgoAPI_BuilderAlgo *larg1, TopoDS_Shape *larg2) {
+  TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
   TopoDS_Shape *arg2 = 0 ;
   TopTools_ListOfShape *result = 0 ;
   
@@ -59935,7 +60451,7 @@ EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Modified (BRepAl
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_Modified\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_Modified\n  * fulldecl: TopTools_ListOfShape const & BRepAlgoAPI_BooleanOperation::Modified(TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_Modified\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_Modified\n  * fulldecl: TopTools_ListOfShape const & BRepAlgoAPI_BuilderAlgo::Modified(TopoDS_Shape const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -59947,9 +60463,9 @@ EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Modified (BRepAl
 }
 
 
-EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_IsDeleted (BRepAlgoAPI_BooleanOperation *larg1, TopoDS_Shape *larg2) {
+EXPORT bool _wrap_BRepAlgoAPI_BuilderAlgo_IsDeleted (BRepAlgoAPI_BuilderAlgo *larg1, TopoDS_Shape *larg2) {
   bool lresult = (bool)0 ;
-  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
   TopoDS_Shape *arg2 = 0 ;
   Standard_Boolean result;
   
@@ -59970,7 +60486,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_IsDeleted (BRepAlgoAPI_BooleanOpe
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_IsDeleted\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_IsDeleted\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BooleanOperation::IsDeleted(TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_IsDeleted\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_IsDeleted\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BuilderAlgo::IsDeleted(TopoDS_Shape const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -59982,9 +60498,9 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_IsDeleted (BRepAlgoAPI_BooleanOpe
 }
 
 
-EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Generated (BRepAlgoAPI_BooleanOperation *larg1, TopoDS_Shape *larg2) {
+EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BuilderAlgo_Generated (BRepAlgoAPI_BuilderAlgo *larg1, TopoDS_Shape *larg2) {
   TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
-  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
   TopoDS_Shape *arg2 = 0 ;
   TopTools_ListOfShape *result = 0 ;
   
@@ -60005,7 +60521,7 @@ EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Generated (BRepA
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_Generated\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_Generated\n  * fulldecl: TopTools_ListOfShape const & BRepAlgoAPI_BooleanOperation::Generated(TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_Generated\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_Generated\n  * fulldecl: TopTools_ListOfShape const & BRepAlgoAPI_BuilderAlgo::Generated(TopoDS_Shape const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60017,9 +60533,9 @@ EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Generated (BRepA
 }
 
 
-EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasModified (BRepAlgoAPI_BooleanOperation *larg1) {
+EXPORT bool _wrap_BRepAlgoAPI_BuilderAlgo_HasModified (BRepAlgoAPI_BuilderAlgo *larg1) {
   bool lresult = (bool)0 ;
-  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
   Standard_Boolean result;
   
   arg1 = larg1;
@@ -60028,7 +60544,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasModified (BRepAlgoAPI_BooleanO
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->HasModified();
+        result = (Standard_Boolean)((BRepAlgoAPI_BuilderAlgo const *)arg1)->HasModified();
       }
       catch(Standard_Failure const& error)
       {
@@ -60038,7 +60554,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasModified (BRepAlgoAPI_BooleanO
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_HasModified\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_HasModified\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BooleanOperation::HasModified() const";
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_HasModified\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_HasModified\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BuilderAlgo::HasModified() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60050,9 +60566,9 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasModified (BRepAlgoAPI_BooleanO
 }
 
 
-EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasGenerated (BRepAlgoAPI_BooleanOperation *larg1) {
+EXPORT bool _wrap_BRepAlgoAPI_BuilderAlgo_HasGenerated (BRepAlgoAPI_BuilderAlgo *larg1) {
   bool lresult = (bool)0 ;
-  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
   Standard_Boolean result;
   
   arg1 = larg1;
@@ -60061,7 +60577,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasGenerated (BRepAlgoAPI_Boolean
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->HasGenerated();
+        result = (Standard_Boolean)((BRepAlgoAPI_BuilderAlgo const *)arg1)->HasGenerated();
       }
       catch(Standard_Failure const& error)
       {
@@ -60071,7 +60587,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasGenerated (BRepAlgoAPI_Boolean
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_HasGenerated\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_HasGenerated\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BooleanOperation::HasGenerated() const";
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_HasGenerated\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_HasGenerated\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BuilderAlgo::HasGenerated() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60083,7 +60599,170 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasGenerated (BRepAlgoAPI_Boolean
 }
 
 
-EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasDeleted (BRepAlgoAPI_BooleanOperation *larg1) {
+EXPORT bool _wrap_BRepAlgoAPI_BuilderAlgo_HasDeleted (BRepAlgoAPI_BuilderAlgo *larg1) {
+  bool lresult = (bool)0 ;
+  BRepAlgoAPI_BuilderAlgo *arg1 = (BRepAlgoAPI_BuilderAlgo *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((BRepAlgoAPI_BuilderAlgo const *)arg1)->HasDeleted();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BuilderAlgo_HasDeleted\n  * wrapname: _wrap_BRepAlgoAPI_BuilderAlgo_HasDeleted\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BuilderAlgo::HasDeleted() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_BooleanOperation_SetTools (BRepAlgoAPI_BooleanOperation *larg1, TopTools_ListOfShape *larg2) {
+  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  TopTools_ListOfShape *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetTools((TopTools_ListOfShape const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_SetTools\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_SetTools\n  * fulldecl: void BRepAlgoAPI_BooleanOperation::SetTools(TopTools_ListOfShape const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_Tools (BRepAlgoAPI_BooleanOperation *larg1) {
+  TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
+  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  TopTools_ListOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_ListOfShape *) &((BRepAlgoAPI_BooleanOperation const *)arg1)->Tools();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_Tools\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_Tools\n  * fulldecl: TopTools_ListOfShape const & BRepAlgoAPI_BooleanOperation::Tools() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_ListOfShape *)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_BooleanOperation_SetOperation (BRepAlgoAPI_BooleanOperation *larg1, BOPAlgo_Operation const *larg2) {
+  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  BOPAlgo_Operation arg2 ;
+  
+  arg1 = larg1;
+  arg2 = *larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->SetOperation(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_SetOperation\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_SetOperation\n  * fulldecl: void BRepAlgoAPI_BooleanOperation::SetOperation(BOPAlgo_Operation const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT BOPAlgo_Operation *_wrap_BRepAlgoAPI_BooleanOperation_Operation (BRepAlgoAPI_BooleanOperation *larg1) {
+  BOPAlgo_Operation * lresult = (BOPAlgo_Operation *)0 ;
+  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  BOPAlgo_Operation result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((BRepAlgoAPI_BooleanOperation const *)arg1)->Operation();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_Operation\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_Operation\n  * fulldecl: BOPAlgo_Operation BRepAlgoAPI_BooleanOperation::Operation() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new BOPAlgo_Operation(result);
+    return lresult;
+  } catch (...) {
+    return (BOPAlgo_Operation *)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_BuilderCanWork (BRepAlgoAPI_BooleanOperation *larg1) {
   bool lresult = (bool)0 ;
   BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
   Standard_Boolean result;
@@ -60094,7 +60773,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasDeleted (BRepAlgoAPI_BooleanOp
       try
       {
         OCC_CATCH_SIGNALS
-        result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->HasDeleted();
+        result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->BuilderCanWork();
       }
       catch(Standard_Failure const& error)
       {
@@ -60104,7 +60783,7 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasDeleted (BRepAlgoAPI_BooleanOp
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_HasDeleted\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_HasDeleted\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BooleanOperation::HasDeleted() const";
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_BuilderCanWork\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_BuilderCanWork\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BooleanOperation::BuilderCanWork() const";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60112,6 +60791,102 @@ EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_HasDeleted (BRepAlgoAPI_BooleanOp
     return lresult;
   } catch (...) {
     return (bool)0;
+  }
+}
+
+
+EXPORT bool _wrap_BRepAlgoAPI_BooleanOperation_FuseEdges (BRepAlgoAPI_BooleanOperation *larg1) {
+  bool lresult = (bool)0 ;
+  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  Standard_Boolean result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Boolean)((BRepAlgoAPI_BooleanOperation const *)arg1)->FuseEdges();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_FuseEdges\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_FuseEdges\n  * fulldecl: Standard_Boolean BRepAlgoAPI_BooleanOperation::FuseEdges() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = (bool)result;
+    return lresult;
+  } catch (...) {
+    return (bool)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_BooleanOperation_RefineEdges (BRepAlgoAPI_BooleanOperation *larg1) {
+  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->RefineEdges();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_RefineEdges\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_RefineEdges\n  * fulldecl: void BRepAlgoAPI_BooleanOperation::RefineEdges()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT TopTools_ListOfShape *_wrap_BRepAlgoAPI_BooleanOperation_SectionEdges (BRepAlgoAPI_BooleanOperation *larg1) {
+  TopTools_ListOfShape * lresult = (TopTools_ListOfShape *)0 ;
+  BRepAlgoAPI_BooleanOperation *arg1 = (BRepAlgoAPI_BooleanOperation *) 0 ;
+  TopTools_ListOfShape *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (TopTools_ListOfShape *) &(arg1)->SectionEdges();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_BooleanOperation_SectionEdges\n  * wrapname: _wrap_BRepAlgoAPI_BooleanOperation_SectionEdges\n  * fulldecl: TopTools_ListOfShape const & BRepAlgoAPI_BooleanOperation::SectionEdges()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (TopTools_ListOfShape *)0;
   }
 }
 
@@ -60146,20 +60921,16 @@ EXPORT void _wrap_delete_BRepAlgoAPI_BooleanOperation (BRepAlgoAPI_BooleanOperat
 }
 
 
-EXPORT BRepAlgoAPI_Fuse *_wrap_new_BRepAlgoAPI_Fuse (TopoDS_Shape *larg1, TopoDS_Shape *larg2) {
+EXPORT BRepAlgoAPI_Fuse *_wrap_new_BRepAlgoAPI_Fuse__SWIG_0 () {
   BRepAlgoAPI_Fuse * lresult = (BRepAlgoAPI_Fuse *)0 ;
-  TopoDS_Shape *arg1 = 0 ;
-  TopoDS_Shape *arg2 = 0 ;
   BRepAlgoAPI_Fuse *result = 0 ;
   
-  arg1 = larg1;
-  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (BRepAlgoAPI_Fuse *)new BRepAlgoAPI_Fuse((TopoDS_Shape const &)*arg1,(TopoDS_Shape const &)*arg2);
+        result = (BRepAlgoAPI_Fuse *)new BRepAlgoAPI_Fuse();
       }
       catch(Standard_Failure const& error)
       {
@@ -60169,7 +60940,40 @@ EXPORT BRepAlgoAPI_Fuse *_wrap_new_BRepAlgoAPI_Fuse (TopoDS_Shape *larg1, TopoDS
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Fuse\n  * wrapname: _wrap_new_BRepAlgoAPI_Fuse\n  * fulldecl: BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse(TopoDS_Shape const &,TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Fuse\n  * wrapname: _wrap_new_BRepAlgoAPI_Fuse__SWIG_0\n  * fulldecl: BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepAlgoAPI_Fuse *)0;
+  }
+}
+
+
+EXPORT BRepAlgoAPI_Fuse *_wrap_new_BRepAlgoAPI_Fuse__SWIG_1 (BOPAlgo_PaveFiller *larg1) {
+  BRepAlgoAPI_Fuse * lresult = (BRepAlgoAPI_Fuse *)0 ;
+  BOPAlgo_PaveFiller *arg1 = 0 ;
+  BRepAlgoAPI_Fuse *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepAlgoAPI_Fuse *)new BRepAlgoAPI_Fuse((BOPAlgo_PaveFiller const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Fuse\n  * wrapname: _wrap_new_BRepAlgoAPI_Fuse__SWIG_1\n  * fulldecl: BRepAlgoAPI_Fuse::BRepAlgoAPI_Fuse(BOPAlgo_PaveFiller const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60211,20 +61015,16 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Fuse (BRepAlgoAPI_Fuse *larg1) {
 }
 
 
-EXPORT BRepAlgoAPI_Common *_wrap_new_BRepAlgoAPI_Common (TopoDS_Shape *larg1, TopoDS_Shape *larg2) {
+EXPORT BRepAlgoAPI_Common *_wrap_new_BRepAlgoAPI_Common__SWIG_0 () {
   BRepAlgoAPI_Common * lresult = (BRepAlgoAPI_Common *)0 ;
-  TopoDS_Shape *arg1 = 0 ;
-  TopoDS_Shape *arg2 = 0 ;
   BRepAlgoAPI_Common *result = 0 ;
   
-  arg1 = larg1;
-  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (BRepAlgoAPI_Common *)new BRepAlgoAPI_Common((TopoDS_Shape const &)*arg1,(TopoDS_Shape const &)*arg2);
+        result = (BRepAlgoAPI_Common *)new BRepAlgoAPI_Common();
       }
       catch(Standard_Failure const& error)
       {
@@ -60234,7 +61034,40 @@ EXPORT BRepAlgoAPI_Common *_wrap_new_BRepAlgoAPI_Common (TopoDS_Shape *larg1, To
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Common\n  * wrapname: _wrap_new_BRepAlgoAPI_Common\n  * fulldecl: BRepAlgoAPI_Common::BRepAlgoAPI_Common(TopoDS_Shape const &,TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Common\n  * wrapname: _wrap_new_BRepAlgoAPI_Common__SWIG_0\n  * fulldecl: BRepAlgoAPI_Common::BRepAlgoAPI_Common()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepAlgoAPI_Common *)0;
+  }
+}
+
+
+EXPORT BRepAlgoAPI_Common *_wrap_new_BRepAlgoAPI_Common__SWIG_1 (BOPAlgo_PaveFiller *larg1) {
+  BRepAlgoAPI_Common * lresult = (BRepAlgoAPI_Common *)0 ;
+  BOPAlgo_PaveFiller *arg1 = 0 ;
+  BRepAlgoAPI_Common *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepAlgoAPI_Common *)new BRepAlgoAPI_Common((BOPAlgo_PaveFiller const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Common\n  * wrapname: _wrap_new_BRepAlgoAPI_Common__SWIG_1\n  * fulldecl: BRepAlgoAPI_Common::BRepAlgoAPI_Common(BOPAlgo_PaveFiller const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60276,20 +61109,16 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Common (BRepAlgoAPI_Common *larg1) {
 }
 
 
-EXPORT BRepAlgoAPI_Cut *_wrap_new_BRepAlgoAPI_Cut (TopoDS_Shape *larg1, TopoDS_Shape *larg2) {
+EXPORT BRepAlgoAPI_Cut *_wrap_new_BRepAlgoAPI_Cut__SWIG_0 () {
   BRepAlgoAPI_Cut * lresult = (BRepAlgoAPI_Cut *)0 ;
-  TopoDS_Shape *arg1 = 0 ;
-  TopoDS_Shape *arg2 = 0 ;
   BRepAlgoAPI_Cut *result = 0 ;
   
-  arg1 = larg1;
-  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (BRepAlgoAPI_Cut *)new BRepAlgoAPI_Cut((TopoDS_Shape const &)*arg1,(TopoDS_Shape const &)*arg2);
+        result = (BRepAlgoAPI_Cut *)new BRepAlgoAPI_Cut();
       }
       catch(Standard_Failure const& error)
       {
@@ -60299,7 +61128,40 @@ EXPORT BRepAlgoAPI_Cut *_wrap_new_BRepAlgoAPI_Cut (TopoDS_Shape *larg1, TopoDS_S
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Cut\n  * wrapname: _wrap_new_BRepAlgoAPI_Cut\n  * fulldecl: BRepAlgoAPI_Cut::BRepAlgoAPI_Cut(TopoDS_Shape const &,TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Cut\n  * wrapname: _wrap_new_BRepAlgoAPI_Cut__SWIG_0\n  * fulldecl: BRepAlgoAPI_Cut::BRepAlgoAPI_Cut()";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepAlgoAPI_Cut *)0;
+  }
+}
+
+
+EXPORT BRepAlgoAPI_Cut *_wrap_new_BRepAlgoAPI_Cut__SWIG_1 (BOPAlgo_PaveFiller *larg1) {
+  BRepAlgoAPI_Cut * lresult = (BRepAlgoAPI_Cut *)0 ;
+  BOPAlgo_PaveFiller *arg1 = 0 ;
+  BRepAlgoAPI_Cut *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepAlgoAPI_Cut *)new BRepAlgoAPI_Cut((BOPAlgo_PaveFiller const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Cut\n  * wrapname: _wrap_new_BRepAlgoAPI_Cut__SWIG_1\n  * fulldecl: BRepAlgoAPI_Cut::BRepAlgoAPI_Cut(BOPAlgo_PaveFiller const &)";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60341,20 +61203,16 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Cut (BRepAlgoAPI_Cut *larg1) {
 }
 
 
-EXPORT BRepAlgoAPI_Section *_wrap_new_BRepAlgoAPI_Section (TopoDS_Shape *larg1, TopoDS_Shape *larg2) {
+EXPORT BRepAlgoAPI_Section *_wrap_new_BRepAlgoAPI_Section__SWIG_0 () {
   BRepAlgoAPI_Section * lresult = (BRepAlgoAPI_Section *)0 ;
-  TopoDS_Shape *arg1 = 0 ;
-  TopoDS_Shape *arg2 = 0 ;
   BRepAlgoAPI_Section *result = 0 ;
   
-  arg1 = larg1;
-  arg2 = larg2;
   try {
     {
       try
       {
         OCC_CATCH_SIGNALS
-        result = (BRepAlgoAPI_Section *)new BRepAlgoAPI_Section((TopoDS_Shape const &)*arg1,(TopoDS_Shape const &)*arg2);
+        result = (BRepAlgoAPI_Section *)new BRepAlgoAPI_Section();
       }
       catch(Standard_Failure const& error)
       {
@@ -60364,7 +61222,7 @@ EXPORT BRepAlgoAPI_Section *_wrap_new_BRepAlgoAPI_Section (TopoDS_Shape *larg1, 
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Section\n  * wrapname: _wrap_new_BRepAlgoAPI_Section\n  * fulldecl: BRepAlgoAPI_Section::BRepAlgoAPI_Section(TopoDS_Shape const &,TopoDS_Shape const &)";
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Section\n  * wrapname: _wrap_new_BRepAlgoAPI_Section__SWIG_0\n  * fulldecl: BRepAlgoAPI_Section::BRepAlgoAPI_Section()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -60372,6 +61230,71 @@ EXPORT BRepAlgoAPI_Section *_wrap_new_BRepAlgoAPI_Section (TopoDS_Shape *larg1, 
     return lresult;
   } catch (...) {
     return (BRepAlgoAPI_Section *)0;
+  }
+}
+
+
+EXPORT BRepAlgoAPI_Section *_wrap_new_BRepAlgoAPI_Section__SWIG_1 (BOPAlgo_PaveFiller *larg1) {
+  BRepAlgoAPI_Section * lresult = (BRepAlgoAPI_Section *)0 ;
+  BOPAlgo_PaveFiller *arg1 = 0 ;
+  BRepAlgoAPI_Section *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (BRepAlgoAPI_Section *)new BRepAlgoAPI_Section((BOPAlgo_PaveFiller const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_BRepAlgoAPI_Section\n  * wrapname: _wrap_new_BRepAlgoAPI_Section__SWIG_1\n  * fulldecl: BRepAlgoAPI_Section::BRepAlgoAPI_Section(BOPAlgo_PaveFiller const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (BRepAlgoAPI_Section *)0;
+  }
+}
+
+
+EXPORT void _wrap_BRepAlgoAPI_Section_Approximation (BRepAlgoAPI_Section *larg1, bool larg2) {
+  BRepAlgoAPI_Section *arg1 = (BRepAlgoAPI_Section *) 0 ;
+  Standard_Boolean arg2 ;
+  
+  arg1 = larg1;
+  arg2 = (bool)larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Approximation(arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Section_Approximation\n  * wrapname: _wrap_BRepAlgoAPI_Section_Approximation\n  * fulldecl: void BRepAlgoAPI_Section::Approximation(Standard_Boolean const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
   }
 }
 
@@ -60402,39 +61325,6 @@ EXPORT void _wrap_delete_BRepAlgoAPI_Section (BRepAlgoAPI_Section *larg1) {
     
   } catch (...) {
     
-  }
-}
-
-
-EXPORT TopoDS_Shape *_wrap_BRepAlgoAPI_Algo_Shape (BRepAlgoAPI_Algo *larg1) {
-  TopoDS_Shape * lresult = (TopoDS_Shape *)0 ;
-  BRepAlgoAPI_Algo *arg1 = (BRepAlgoAPI_Algo *) 0 ;
-  TopoDS_Shape *result = 0 ;
-  
-  arg1 = larg1;
-  try {
-    {
-      try
-      {
-        OCC_CATCH_SIGNALS
-        result = (TopoDS_Shape *) &(arg1)->Shape();
-      }
-      catch(Standard_Failure const& error)
-      {
-        char *error_name = (char*) error.DynamicType()->Name();
-        char *error_message = (char*) error.GetMessageString();
-        std::string message;
-        if (error_name) message += std::string(error_name) + "\n";
-        if (error_message) message += std::string(error_message);
-        // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: BRepAlgoAPI_Algo_Shape\n  * wrapname: _wrap_BRepAlgoAPI_Algo_Shape\n  * fulldecl: TopoDS_Shape const & BRepAlgoAPI_Algo::Shape()";
-        signal_lisp_error(message.c_str());
-      }
-    }
-    lresult = result;
-    return lresult;
-  } catch (...) {
-    return (TopoDS_Shape *)0;
   }
 }
 
@@ -103062,7 +103952,8 @@ EXPORT void _wrap_BRepBndLib_Add (TopoDS_Shape *larg1, Bnd_Box *larg2) {
 
 
 #include "GProp_GProps.hxx"
-EXPORT GProp_GProps *_wrap_new_GProp_GProps () {
+#include "GProp_PrincipalProps.hxx"
+EXPORT GProp_GProps *_wrap_new_GProp_GProps__SWIG_0 () {
   GProp_GProps * lresult = (GProp_GProps *)0 ;
   GProp_GProps *result = 0 ;
   
@@ -103081,7 +103972,7 @@ EXPORT GProp_GProps *_wrap_new_GProp_GProps () {
         if (error_name) message += std::string(error_name) + "\n";
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
-        message += "\nwrapper details:\n  * symname: new_GProp_GProps\n  * wrapname: _wrap_new_GProp_GProps\n  * fulldecl: GProp_GProps::GProp_GProps()";
+        message += "\nwrapper details:\n  * symname: new_GProp_GProps\n  * wrapname: _wrap_new_GProp_GProps__SWIG_0\n  * fulldecl: GProp_GProps::GProp_GProps()";
         signal_lisp_error(message.c_str());
       }
     }
@@ -103089,6 +103980,105 @@ EXPORT GProp_GProps *_wrap_new_GProp_GProps () {
     return lresult;
   } catch (...) {
     return (GProp_GProps *)0;
+  }
+}
+
+
+EXPORT GProp_GProps *_wrap_new_GProp_GProps__SWIG_1 (gp_Pnt *larg1) {
+  GProp_GProps * lresult = (GProp_GProps *)0 ;
+  gp_Pnt *arg1 = 0 ;
+  GProp_GProps *result = 0 ;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (GProp_GProps *)new GProp_GProps((gp_Pnt const &)*arg1);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: new_GProp_GProps\n  * wrapname: _wrap_new_GProp_GProps__SWIG_1\n  * fulldecl: GProp_GProps::GProp_GProps(gp_Pnt const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (GProp_GProps *)0;
+  }
+}
+
+
+EXPORT void _wrap_GProp_GProps_Add__SWIG_0 (GProp_GProps *larg1, GProp_GProps *larg2, Standard_Real larg3) {
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  GProp_GProps *arg2 = 0 ;
+  Standard_Real arg3 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Add((GProp_GProps const &)*arg2,arg3);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_Add\n  * wrapname: _wrap_GProp_GProps_Add__SWIG_0\n  * fulldecl: void GProp_GProps::Add(GProp_GProps const &,Standard_Real const)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_GProp_GProps_Add__SWIG_1 (GProp_GProps *larg1, GProp_GProps *larg2) {
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  GProp_GProps *arg2 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        (arg1)->Add((GProp_GProps const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_Add\n  * wrapname: _wrap_GProp_GProps_Add__SWIG_1\n  * fulldecl: void GProp_GProps::Add(GProp_GProps const &)";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
   }
 }
 
@@ -103115,6 +104105,211 @@ EXPORT Standard_Real _wrap_GProp_GProps_Mass (GProp_GProps *larg1) {
         if (error_message) message += std::string(error_message);
         // log SWIG specific debug information
         message += "\nwrapper details:\n  * symname: GProp_GProps_Mass\n  * wrapname: _wrap_GProp_GProps_Mass\n  * fulldecl: Standard_Real GProp_GProps::Mass() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT gp_Pnt *_wrap_GProp_GProps_CentreOfMass (GProp_GProps *larg1) {
+  gp_Pnt * lresult = (gp_Pnt *)0 ;
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  gp_Pnt result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GProp_GProps const *)arg1)->CentreOfMass();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_CentreOfMass\n  * wrapname: _wrap_GProp_GProps_CentreOfMass\n  * fulldecl: gp_Pnt GProp_GProps::CentreOfMass() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Pnt(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Pnt *)0;
+  }
+}
+
+
+EXPORT gp_Mat *_wrap_GProp_GProps_MatrixOfInertia (GProp_GProps *larg1) {
+  gp_Mat * lresult = (gp_Mat *)0 ;
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  gp_Mat result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GProp_GProps const *)arg1)->MatrixOfInertia();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_MatrixOfInertia\n  * wrapname: _wrap_GProp_GProps_MatrixOfInertia\n  * fulldecl: gp_Mat GProp_GProps::MatrixOfInertia() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new gp_Mat(result);
+    return lresult;
+  } catch (...) {
+    return (gp_Mat *)0;
+  }
+}
+
+
+EXPORT void _wrap_GProp_GProps_StaticMoments (GProp_GProps *larg1, Standard_Real *larg2, Standard_Real *larg3, Standard_Real *larg4) {
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  Standard_Real *arg2 = 0 ;
+  Standard_Real *arg3 = 0 ;
+  Standard_Real *arg4 = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        ((GProp_GProps const *)arg1)->StaticMoments(*arg2,*arg3,*arg4);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_StaticMoments\n  * wrapname: _wrap_GProp_GProps_StaticMoments\n  * fulldecl: void GProp_GProps::StaticMoments(Standard_Real &,Standard_Real &,Standard_Real &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Standard_Real _wrap_GProp_GProps_MomentOfInertia (GProp_GProps *larg1, gp_Ax1 *larg2) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  gp_Ax1 *arg2 = 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((GProp_GProps const *)arg1)->MomentOfInertia((gp_Ax1 const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_MomentOfInertia\n  * wrapname: _wrap_GProp_GProps_MomentOfInertia\n  * fulldecl: Standard_Real GProp_GProps::MomentOfInertia(gp_Ax1 const &) const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Standard_Real)0;
+  }
+}
+
+
+EXPORT GProp_PrincipalProps *_wrap_GProp_GProps_PrincipalProperties (GProp_GProps *larg1) {
+  GProp_PrincipalProps * lresult = (GProp_PrincipalProps *)0 ;
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  GProp_PrincipalProps result;
+  
+  arg1 = larg1;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = ((GProp_GProps const *)arg1)->PrincipalProperties();
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_PrincipalProperties\n  * wrapname: _wrap_GProp_GProps_PrincipalProperties\n  * fulldecl: GProp_PrincipalProps GProp_GProps::PrincipalProperties() const";
+        signal_lisp_error(message.c_str());
+      }
+    }
+    lresult = new GProp_PrincipalProps(result);
+    return lresult;
+  } catch (...) {
+    return (GProp_PrincipalProps *)0;
+  }
+}
+
+
+EXPORT Standard_Real _wrap_GProp_GProps_RadiusOfGyration (GProp_GProps *larg1, gp_Ax1 *larg2) {
+  Standard_Real lresult = (Standard_Real)0 ;
+  GProp_GProps *arg1 = (GProp_GProps *) 0 ;
+  gp_Ax1 *arg2 = 0 ;
+  Standard_Real result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    {
+      try
+      {
+        OCC_CATCH_SIGNALS
+        result = (Standard_Real)((GProp_GProps const *)arg1)->RadiusOfGyration((gp_Ax1 const &)*arg2);
+      }
+      catch(Standard_Failure const& error)
+      {
+        char *error_name = (char*) error.DynamicType()->Name();
+        char *error_message = (char*) error.GetMessageString();
+        std::string message;
+        if (error_name) message += std::string(error_name) + "\n";
+        if (error_message) message += std::string(error_message);
+        // log SWIG specific debug information
+        message += "\nwrapper details:\n  * symname: GProp_GProps_RadiusOfGyration\n  * wrapname: _wrap_GProp_GProps_RadiusOfGyration\n  * fulldecl: Standard_Real GProp_GProps::RadiusOfGyration(gp_Ax1 const &) const";
         signal_lisp_error(message.c_str());
       }
     }

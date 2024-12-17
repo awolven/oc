@@ -169,6 +169,7 @@ class BRepBuilderAPI_MakeFace  : public BRepBuilderAPI_MakeShape
   BRepBuilderAPI_MakeFace(const Handle_Geom_Surface& S,const TopoDS_Wire& W, const Standard_Boolean Inside = Standard_True );
   BRepBuilderAPI_MakeFace(const Handle_Geom_Surface& S, const Standard_Real Umin, const Standard_Real Umax,
 			    const Standard_Real Vmin, const Standard_Real Vmax, const Standard_Real tolDegen);
+  BRepBuilderAPI_MakeFace(const TopoDS_Face& F);
   void Add (const TopoDS_Wire& W);
   Standard_Boolean IsDone() const;
   BRepBuilderAPI_FaceError Error() const;

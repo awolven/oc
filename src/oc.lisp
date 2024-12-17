@@ -6572,6 +6572,9 @@
   (Vmax :double)
   (tolDegen :double))
 
+(cffi:defcfun ("_wrap_new_BRepBuilderAPI_MakeFace__SWIG_6" _wrap_new_BRepBuilderAPI_MakeFace__SWIG_6) :pointer
+  (F :pointer))
+
 (cffi:defcfun ("_wrap_BRepBuilderAPI_MakeFace_Add" _wrap_BRepBuilderAPI_MakeFace_Add) :void
   (self :pointer)
   (W :pointer))
@@ -7232,59 +7235,139 @@
 (cffi:defcfun ("_wrap_delete_BRepOffsetAPI_MakePipe" _wrap_delete_BRepOffsetAPI_MakePipe) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_Modified" _wrap_BRepAlgoAPI_BooleanOperation_Modified) :pointer
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_ErrorStatus" _wrap_BRepAlgoAPI_Algo_ErrorStatus) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_WarningStatus" _wrap_BRepAlgoAPI_Algo_WarningStatus) :int
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_Allocator" _wrap_BRepAlgoAPI_Algo_Allocator) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_SetRunParallel" _wrap_BRepAlgoAPI_Algo_SetRunParallel) :void
+  (self :pointer)
+  (theFlag :bool))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_SetProgressIndicator" _wrap_BRepAlgoAPI_Algo_SetProgressIndicator) :void
+  (self :pointer)
+  (theObj :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_Shape" _wrap_BRepAlgoAPI_Algo_Shape) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_0" _wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_1" _wrap_new_BRepAlgoAPI_BuilderAlgo__SWIG_1) :pointer
+  (thePF :pointer))
+
+(cffi:defcfun ("_wrap_delete_BRepAlgoAPI_BuilderAlgo" _wrap_delete_BRepAlgoAPI_BuilderAlgo) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_SetFuzzyValue" _wrap_BRepAlgoAPI_BuilderAlgo_SetFuzzyValue) :void
+  (self :pointer)
+  (theFuzz :double))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_SetNonDestructive" _wrap_BRepAlgoAPI_BuilderAlgo_SetNonDestructive) :void
+  (self :pointer)
+  (theFlag :bool))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_NonDestructive" _wrap_BRepAlgoAPI_BuilderAlgo_NonDestructive) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_SetArguments" _wrap_BRepAlgoAPI_BuilderAlgo_SetArguments) :void
+  (self :pointer)
+  (theLS :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_Arguments" _wrap_BRepAlgoAPI_BuilderAlgo_Arguments) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_Build" _wrap_BRepAlgoAPI_BuilderAlgo_Build) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_Modified" _wrap_BRepAlgoAPI_BuilderAlgo_Modified) :pointer
   (self :pointer)
   (aS :pointer))
 
-(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_IsDeleted" _wrap_BRepAlgoAPI_BooleanOperation_IsDeleted) :bool
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_IsDeleted" _wrap_BRepAlgoAPI_BuilderAlgo_IsDeleted) :bool
   (self :pointer)
   (aS :pointer))
 
-(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_Generated" _wrap_BRepAlgoAPI_BooleanOperation_Generated) :pointer
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_Generated" _wrap_BRepAlgoAPI_BuilderAlgo_Generated) :pointer
   (self :pointer)
   (S :pointer))
 
-(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_HasModified" _wrap_BRepAlgoAPI_BooleanOperation_HasModified) :bool
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_HasModified" _wrap_BRepAlgoAPI_BuilderAlgo_HasModified) :bool
   (self :pointer))
 
-(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_HasGenerated" _wrap_BRepAlgoAPI_BooleanOperation_HasGenerated) :bool
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_HasGenerated" _wrap_BRepAlgoAPI_BuilderAlgo_HasGenerated) :bool
   (self :pointer))
 
-(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_HasDeleted" _wrap_BRepAlgoAPI_BooleanOperation_HasDeleted) :bool
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BuilderAlgo_HasDeleted" _wrap_BRepAlgoAPI_BuilderAlgo_HasDeleted) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_SetTools" _wrap_BRepAlgoAPI_BooleanOperation_SetTools) :void
+  (self :pointer)
+  (theLS :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_Tools" _wrap_BRepAlgoAPI_BooleanOperation_Tools) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_SetOperation" _wrap_BRepAlgoAPI_BooleanOperation_SetOperation) :void
+  (self :pointer)
+  (anOp :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_Operation" _wrap_BRepAlgoAPI_BooleanOperation_Operation) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_BuilderCanWork" _wrap_BRepAlgoAPI_BooleanOperation_BuilderCanWork) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_FuseEdges" _wrap_BRepAlgoAPI_BooleanOperation_FuseEdges) :bool
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_RefineEdges" _wrap_BRepAlgoAPI_BooleanOperation_RefineEdges) :void
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_BooleanOperation_SectionEdges" _wrap_BRepAlgoAPI_BooleanOperation_SectionEdges) :pointer
   (self :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepAlgoAPI_BooleanOperation" _wrap_delete_BRepAlgoAPI_BooleanOperation) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Fuse" _wrap_new_BRepAlgoAPI_Fuse) :pointer
-  (S1 :pointer)
-  (S2 :pointer))
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Fuse__SWIG_0" _wrap_new_BRepAlgoAPI_Fuse__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Fuse__SWIG_1" _wrap_new_BRepAlgoAPI_Fuse__SWIG_1) :pointer
+  (PF :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepAlgoAPI_Fuse" _wrap_delete_BRepAlgoAPI_Fuse) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Common" _wrap_new_BRepAlgoAPI_Common) :pointer
-  (S1 :pointer)
-  (S2 :pointer))
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Common__SWIG_0" _wrap_new_BRepAlgoAPI_Common__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Common__SWIG_1" _wrap_new_BRepAlgoAPI_Common__SWIG_1) :pointer
+  (PF :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepAlgoAPI_Common" _wrap_delete_BRepAlgoAPI_Common) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Cut" _wrap_new_BRepAlgoAPI_Cut) :pointer
-  (S1 :pointer)
-  (S2 :pointer))
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Cut__SWIG_0" _wrap_new_BRepAlgoAPI_Cut__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Cut__SWIG_1" _wrap_new_BRepAlgoAPI_Cut__SWIG_1) :pointer
+  (PF :pointer))
 
 (cffi:defcfun ("_wrap_delete_BRepAlgoAPI_Cut" _wrap_delete_BRepAlgoAPI_Cut) :void
   (self :pointer))
 
-(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Section" _wrap_new_BRepAlgoAPI_Section) :pointer
-  (S1 :pointer)
-  (S2 :pointer))
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Section__SWIG_0" _wrap_new_BRepAlgoAPI_Section__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_BRepAlgoAPI_Section__SWIG_1" _wrap_new_BRepAlgoAPI_Section__SWIG_1) :pointer
+  (PF :pointer))
+
+(cffi:defcfun ("_wrap_BRepAlgoAPI_Section_Approximation" _wrap_BRepAlgoAPI_Section_Approximation) :void
+  (self :pointer)
+  (B :bool))
 
 (cffi:defcfun ("_wrap_delete_BRepAlgoAPI_Section" _wrap_delete_BRepAlgoAPI_Section) :void
-  (self :pointer))
-
-(cffi:defcfun ("_wrap_BRepAlgoAPI_Algo_Shape" _wrap_BRepAlgoAPI_Algo_Shape) :pointer
   (self :pointer))
 
 (cffi:defcfun ("_wrap_Poly_Triangulation_Delete" _wrap_Poly_Triangulation_Delete) :void
@@ -12031,10 +12114,45 @@
   (shape :pointer)
   (bndBox :pointer))
 
-(cffi:defcfun ("_wrap_new_GProp_GProps" _wrap_new_GProp_GProps) :pointer)
+(cffi:defcfun ("_wrap_new_GProp_GProps__SWIG_0" _wrap_new_GProp_GProps__SWIG_0) :pointer)
+
+(cffi:defcfun ("_wrap_new_GProp_GProps__SWIG_1" _wrap_new_GProp_GProps__SWIG_1) :pointer
+  (SystemLocation :pointer))
+
+(cffi:defcfun ("_wrap_GProp_GProps_Add__SWIG_0" _wrap_GProp_GProps_Add__SWIG_0) :void
+  (self :pointer)
+  (Item :pointer)
+  (Density :double))
+
+(cffi:defcfun ("_wrap_GProp_GProps_Add__SWIG_1" _wrap_GProp_GProps_Add__SWIG_1) :void
+  (self :pointer)
+  (Item :pointer))
 
 (cffi:defcfun ("_wrap_GProp_GProps_Mass" _wrap_GProp_GProps_Mass) :double
   (self :pointer))
+
+(cffi:defcfun ("_wrap_GProp_GProps_CentreOfMass" _wrap_GProp_GProps_CentreOfMass) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GProp_GProps_MatrixOfInertia" _wrap_GProp_GProps_MatrixOfInertia) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GProp_GProps_StaticMoments" _wrap_GProp_GProps_StaticMoments) :void
+  (self :pointer)
+  (Ix :pointer)
+  (Iy :pointer)
+  (Iz :pointer))
+
+(cffi:defcfun ("_wrap_GProp_GProps_MomentOfInertia" _wrap_GProp_GProps_MomentOfInertia) :double
+  (self :pointer)
+  (A :pointer))
+
+(cffi:defcfun ("_wrap_GProp_GProps_PrincipalProperties" _wrap_GProp_GProps_PrincipalProperties) :pointer
+  (self :pointer))
+
+(cffi:defcfun ("_wrap_GProp_GProps_RadiusOfGyration" _wrap_GProp_GProps_RadiusOfGyration) :double
+  (self :pointer)
+  (A :pointer))
 
 (cffi:defcfun ("_wrap_delete_GProp_GProps" _wrap_delete_GProp_GProps) :void
   (self :pointer))

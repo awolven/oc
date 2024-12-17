@@ -110,8 +110,8 @@
 		  
 	  (let* ((a-cyl1 (make-instance 'Geom-Cylindrical-Surface :A2 neck-ax2 :Radius (* my-neck-radius 0.99d0)))
 		 (a-cyl2 (make-instance 'Geom-Cylindrical-Surface :A2 neck-ax2 :Radius (* my-neck-radius 1.05d0)))
-		 (a-pnt (gp:pnt2d (* 2 pi) (/ my-neck-height 2)))
-		 (a-dir (gp:dir2d (* 2 pi) (/ my-neck-height 4)))
+		 (a-pnt (gp:pnt2d :Xp (* 2 pi) :Yp (/ my-neck-height 2)))
+		 (a-dir (gp:dir2d :xv (* 2 pi) :yv (/ my-neck-height 4)))
 		 (an-ax2d (gp:ax2d a-pnt a-dir))
 		 (a-major (* 2 pi))
 		 (a-minor (/ my-neck-height 10.0d0))

@@ -11,6 +11,8 @@
 		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_4 (ff-pointer S) (ff-pointer W)))
 	       ((and F W)
 		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_2 (ff-pointer F) (ff-pointer W)))
+	       (F
+		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_6 (ff-pointer F)))
 	       ((and W OnlyPlane-present-p)
 		(_wrap_new_BRepBuilderAPI_MakeFace__SWIG_0 (ff-pointer W) OnlyPlane))
 	       (W (_wrap_new_BRepBuilderAPI_MakeFace__SWIG_1 (ff-pointer W)))

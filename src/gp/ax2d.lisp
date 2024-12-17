@@ -12,7 +12,7 @@
 		 (gp-ax2d-vdir-coord-x pointer) (gp-xy-x (ptr (cadr args)))
 		 (gp-ax2d-vdir-coord-y pointer) (gp-xy-y (ptr (cadr args)))))
 	  
-	  (t (destructuring-bind (&key (loc (pnt2d 0.0d0 0.0d0)) (vdir (dir2d 1.0d0 0.0d0))) args
+	  (t (destructuring-bind (&key (loc (pnt2d :Xp 0.0d0 :Yp 0.0d0)) (vdir (dir2d :xv 1.0d0 :yv 0.0d0))) args
 	       (setf (gp-ax2d-loc-coord-x pointer) (gp-xy-x (ptr loc))
 		     (gp-ax2d-loc-coord-y pointer) (gp-xy-y (ptr loc))
 		     

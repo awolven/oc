@@ -18,13 +18,13 @@
    "TKG2d"
    "TKG3d"
    "TKGeomBase"
-   "TKBrep"
+   "TKBREP"
    "TKGeomAlgo"
    "TKTopAlgo"
    "TKShHealing"
    "TKXSBase"
    "TKPrim"
-   "TkMesh"
+   "TkMESH"
    "TKBO"
    "TKSTEPBase"
    "TKSTEPAttr"
@@ -109,10 +109,10 @@
 
 
 (defparameter *occt-lib-path*
-  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/occt/Windows/AMD64/vc14/bind/" #+darwin "lib/occt/macos/AMD64/clang/debug/" #+linux "lib/occt/Linux/AMD64/gcc/debug/")))
+  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/occt/Windows/AMD64/vc14/bin/" #+darwin "lib/occt/macos/AMD64/clang/debug/" #+linux "lib/occt/Linux/AMD64/gcc/debug/")))
 
 (defparameter *oc-lib-path*
-  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/oc/Windows/AMD64/vc/bind/" #+darwin "lib/oc/macos/AMD64/clang/debug/" #+linux "lib/oc/Linux/AMD64/gcc/debug/")))
+  (namestring (asdf/system:system-relative-pathname :oc #+windows "lib/oc/Windows/AMD64/vc/bin/" #+darwin "lib/oc/macos/AMD64/clang/debug/" #+linux "lib/oc/Linux/AMD64/gcc/debug/")))
 
 (defparameter *opencascade-lib-extension*
   #+windows ".dll"
